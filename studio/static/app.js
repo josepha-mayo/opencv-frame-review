@@ -295,7 +295,12 @@
     regions.forEach((region, index) => {
       const [x,y,w,h] = region.xywh;
       const box = element("div", null, "protection-box protection-color-" + index);
-      box.setAttribute("style", "left:" + (100*x/ui.image.naturalWidth) + "%;top:" + (100*y/ui.image.naturalHeight) + "%;width:" + (100*w/ui.image.naturalWidth) + "%;height:" + (100*h/ui.image.naturalHeight) + "%;");
+      // Individual CSSOM properties are permitted by our strict style-src CSP.
+      // Parsing an inline style attribute is blocked and collapsed these boxes.
+      box.style.left = (100*x/ui.image.naturalWidth) + "%";
+      box.style.top = (100*y/ui.image.naturalHeight) + "%";
+      box.style.width = (100*w/ui.image.naturalWidth) + "%";
+      box.style.height = (100*h/ui.image.naturalHeight) + "%";
       box.append(element("span", (index + 1) + ". " + region.label, "protection-box-label"));
       ui.protectOverlays.append(box);
     });

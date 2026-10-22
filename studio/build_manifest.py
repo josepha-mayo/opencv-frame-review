@@ -16,7 +16,7 @@ def main():
     for directory in (ROOT / 'static', ROOT / 'tests', ROOT / 'fixtures', REPO / 'opencv-ready/candidate', REPO / 'opencv-ready/opencv-recovery'):
         paths.extend(path for path in directory.rglob('*') if path.is_file() and '__pycache__' not in path.parts and path.suffix not in ('.pyc', '.pyo'))
     files = {path.relative_to(REPO).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest() for path in sorted(set(paths))}
-    record = {'build': 'lesson-rescue-studio-2026-10-22-v3',
+    record = {'build': 'lesson-rescue-studio-2026-10-22-v4',
               'scope': 'Studio UI, unchanged media backend, tests and owned synthetic fixtures/goldens. Source integrity is separate from runtime, media and browser qualification.',
               'frozen_backend_commit': 'fd861d0ce2cd50bec741327975d95ff5488254e2',
               'files': files}

@@ -47,7 +47,7 @@ assert.equal(ui.reviewed.checked,false);assert.equal(ui.approve.disabled,true);
         harness = HARNESS.replace(
             '  addEventListener() {}',
             '  addEventListener(name, handler) { (this.events ??= {})[name] = handler; }'
-        ).replace('boundaryReviewProblem, renderBoundaryReview, renderResults, localURL, ui,', EXPOSE)
+        ).replace('this.attributes = {};', 'this.attributes = {}; this.style = {};').replace('boundaryReviewProblem, renderBoundaryReview, renderResults, localURL, ui,', EXPOSE)
         setup = '''
 context.Headers=Headers;
 api.prepare();
@@ -76,7 +76,9 @@ save('Counter',[180,15,40,20]);save('Footer',[10,150,200,10]);
 assert.equal(ui.protectOverlays.children.length,4);
 assert.equal(ui.protectCount.textContent,'4 of 4 areas saved');
 assert.ok(ui.protectOverlays.textContent.includes('4. Footer'));
-assert.ok(ui.protectOverlays.children[1].attributes.style.includes('width:37.5%'));
+assert.equal(ui.protectOverlays.children[1].style.width,'37.5%');
+assert.equal(ui.protectOverlays.children[1].style.left,'3.125%');
+assert.equal(ui.protectOverlays.children[1].attributes.style,undefined);
 assert.equal(ids.get('protected-list').querySelectorAll('button').length,4);
 assert.equal(ui.reviewed.checked,false);assert.equal(ui.approve.disabled,true);
 ''')

@@ -1,5 +1,5 @@
 {
-  "build": "lesson-rescue-studio-2026-10-22-v3",
+  "build": "lesson-rescue-studio-2026-10-22-v4",
   "scope": "Studio UI, unchanged media backend, tests and owned synthetic fixtures/goldens. Source integrity is separate from runtime, media and browser qualification.",
   "frozen_backend_commit": "fd861d0ce2cd50bec741327975d95ff5488254e2",
   "files": {
@@ -68,20 +68,20 @@
     "opencv-ready/opencv-recovery/rerun/p2/recipe.json": "c9460e93dd16f604fddac7b0960e6ab2682022fcc6f2da2666e1bacc3f06c0e1",
     "opencv-ready/opencv-recovery/rerun/workshop/input.mp4": "4d06a05ef684296874564cd17f85c076675ab578157220e1b585ed595ff02232",
     "opencv-ready/opencv-recovery/rerun/workshop/recipe.json": "b7149d3d874f313dfe37a1d3ab830d6f8b2749c21a29197f05de4a28169e9c6e",
-    "studio/build_manifest.py": "544694170d83121b6c005d856b8ac8343773fc6d9f7fc6d8c5ba80b54d967383",
+    "studio/build_manifest.py": "11f7a4bf62bb41bfac911b6fa0a876265b1d19ae0f658768dd9b93b063534f16",
     "studio/cloud_server.py": "127060392c88b92f8e9e36487571912d98d0fde4e6b4b00db4cabc7112cceb64",
     "studio/fixtures/lesson.mp4": "8de118ac269d8fb5b6124b3ab79f87ac240342bda0880db3d9bc0c84cb26d738",
     "studio/fixtures/make_lesson.py": "217f132a422511bc122ee56816b5ac35be170fac24da3364420db68306b096c9",
     "studio/fixtures/narration.mp3": "eb4ad468003a83ff5acaaec89480781d75194dc02eda5d137fb19f83af5ace77",
     "studio/run.py": "a41903e0a42e0ff3cbf0306dff9a55b774f879a26c0ded1b4c48f88f04a64c3a",
     "studio/runtime-requirements.lock": "f6ef34a38b624856efb1f2e8028c5a35fb2e1563c48fba94be6338ae715b2f62",
-    "studio/static/app.js": "3aca3a6f2ac3652c5187fd9c03803a18978fa05684c0dfb3770986deb91fcad2",
-    "studio/static/index.html": "625533c51bac6dbdfa996239254daa83b529ef8fd9bb2f8488f10c8643897e73",
+    "studio/static/app.js": "d55d835779235334733bb22557961fc73e624f9da19aabe806683a356f6bd5ba",
+    "studio/static/index.html": "8f712be290b38e7efbbf6844f26e6aaf8a0cba3f3038c889c76449567246d412",
     "studio/static/styles.css": "1437854d33267e4565d5875e1681d81912029592f52bef0ef87d4def7f97dcd6",
     "studio/tests/integration_lesson.py": "bb128af7f51448833e4371a29ce573a1089b36323fdd9ceb731e99cc5c0b26e6",
     "studio/tests/test_cloud.py": "6b445662a978f45ac3633b0bbc2abdcb30b8e56fe5478cee61ae9915f6b5333d",
     "studio/tests/test_compatibility.py": "bf05ae18d50e6cc96e4e665e757e846746c455d96e25ee189ab4b1f1408ebae8",
     "studio/tests/test_launcher.py": "d3a0c0136cc6a466f0e3bebaec94db2b087f2b6cd61ff620ac710e23f987997c",
-    "studio/tests/test_studio_ui.py": "18e1b0343f1f17f56f0912c40c4a4b64a9e4b0dbb47febe660953521cedf9686"
+    "studio/tests/test_studio_ui.py": "df470db8590ea80c0ecf6ef9d30b0e15e25993bd9849081d35313e5c353f019e"
   }
 }
