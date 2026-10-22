@@ -1,0 +1,14 @@
+{
+  "scope": "Controlled whole-clip baseline on one authored fixture; no user, time-savings or manual-editor comparison",
+  "source_duration_seconds": 12,
+  "local_edit_duration_seconds": 12,
+  "whole_clip_5x_duration_seconds": 60,
+  "first_step_counter_change_seconds": {
+    "source": 3,
+    "local_edit": 3,
+    "whole_clip_5x": 15
+  },
+  "counter_patch_bytes_match_at_compared_frames": true,
+  "whole_clip_baseline_video_frames": 1800,
+  "whole_clip_baseline_sha256": "5d99bb9771f941e61316c6b6c032f8480f2204884cae24eb18ccc694d2053bc6"
+}

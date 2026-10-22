@@ -1,11 +1,11 @@
 {
-  "backend_tests": 137,
-  "verification_stages": 9,
-  "csp_overlay_geometry_verified_in_brave": true,
-  "studio_tests_skipped_linux": 1,
-  "build": "lesson-rescue-studio-2026-10-22-v5",
+  "container_image_index": "sha256:64cc5f02e99464140539bec0fde686b808fcc27b1146939d13abf18c07415f5a",
   "studio_tests_passed_linux": 56,
-  "studio_tests_passed_windows": 57,
   "source_manifest_sha256": "d00b0c7753e4bd8debcee5ba2186c06d32530333ba1d9320376c41faaf529966",
-  "container_image_index": "sha256:64cc5f02e99464140539bec0fde686b808fcc27b1146939d13abf18c07415f5a"
+  "build": "lesson-rescue-studio-2026-10-22-v5",
+  "csp_overlay_geometry_verified_in_brave": true,
+  "backend_tests": 137,
+  "studio_tests_passed_windows": 57,
+  "verification_stages": 9,
+  "studio_tests_skipped_linux": 1
 }

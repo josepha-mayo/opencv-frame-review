@@ -46,3 +46,11 @@ The frozen multimedia stack has package-scan findings. The public service checks
 `studio/BUILD_HASHES.json` identifies the active runtime source. This curated snapshot excludes the historical private archive, its missing historical screenshot and old handoff notes. It does not repair or certify that archive. No historical manifest was weakened.
 
 The source and fixture were developed with AI assistance. The authored lesson uses disclosed neural narration. Real teacher trials, comparison with competent manual editing, ordinary-video intake and broader browser compatibility remain future evaluation.
+
+## Judge materials
+
+[2:46 demo video](https://www.youtube.com/watch?v=5oE3rA-aJNI) · [Technical report](docs/Frame-Review-Technical-Report.pdf) · [AWS deployment](docs/DEPLOYMENT.md) · [Release package](https://github.com/josepha-mayo/opencv-frame-review/releases/tag/opencv-2026-20261022)
+
+The final AWS lesson download matches both its report and the independent local export: `b6e8052ec70f60e2189f41645167111fb846e88092727bf91213e7621fcda68e`. The real browser completed analysis, four-area review, explicit generation, twelve loaded crops, downloads and completed-job recovery. A request without the owning session receives 404. See `evidence/aws-lesson.json`.
+
+A controlled whole-clip 5x baseline makes the 12-second lesson 60 seconds long and moves its first step-counter change from 3 to 15 seconds. The local edit keeps that change at 3 seconds and the clip at 12 seconds. Compared counter patches match the source bytes. This one synthetic fixture does not establish user benefit or manual-editor performance. To reproduce, run `evidence/check_global_baseline.py --source /path/to/lesson.mp4 --edited /path/to/downloaded-edited.mp4 --output-directory /tmp/baseline` inside the pinned image with native Linux storage. The script first encodes a whole-clip baseline, then independently decodes the compared patches. See `evidence/global-baseline.json`.
