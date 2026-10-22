@@ -1,0 +1,19 @@
+test_boundary_rows_and_loop_edges (__main__.BoundaryFrames.test_boundary_rows_and_loop_edges) ... ok
+test_incomplete_duplicate_or_bad_binding_refused (__main__.BoundaryFrames.test_incomplete_duplicate_or_bad_binding_refused) ... ok
+test_invalid_timestamps_interval (__main__.BoundaryFrames.test_invalid_timestamps_interval) ... ok
+test_measure_numbers_unchanged_with_capture (__main__.BoundaryFrames.test_measure_numbers_unchanged_with_capture) ... ok
+test_pixel_alignment_lossless_hashes_and_no_mutation (__main__.BoundaryFrames.test_pixel_alignment_lossless_hashes_and_no_mutation) ... ok
+test_http_image_requires_completed_intact_binding (__main__.ReviewServing.test_http_image_requires_completed_intact_binding) ... ok
+test_manifest_binding_and_original_first (__main__.ReviewServing.test_manifest_binding_and_original_first) ... ok
+test_manifest_parses_the_same_bytes_that_were_hashed (__main__.ReviewServing.test_manifest_parses_the_same_bytes_that_were_hashed) ... ok
+test_modified_manifest_not_exposed (__main__.ReviewServing.test_modified_manifest_not_exposed) ... ok
+test_modified_media_not_exposed (__main__.ReviewServing.test_modified_media_not_exposed) ... ok
+test_modified_png_not_exposed (__main__.ReviewServing.test_modified_png_not_exposed) ... ok
+test_nonregular_or_oversized_image_is_bounded_refusal (__main__.ReviewServing.test_nonregular_or_oversized_image_is_bounded_refusal) ... ok
+test_review_implementation_is_approval_bound (__main__.ReviewServing.test_review_implementation_is_approval_bound) ... ok
+test_valid_image_swapped_after_validation_is_refused (__main__.ReviewServing.test_valid_image_swapped_after_validation_is_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.166s
+
+OK

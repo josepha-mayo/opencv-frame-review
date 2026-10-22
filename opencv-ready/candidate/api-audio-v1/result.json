@@ -1,0 +1,1962 @@
+{
+  "url_tested": "http://127.0.0.1:41873",
+  "checks": [
+    {
+      "check": "/api/profile returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs returns 403",
+      "passed": true
+    },
+    {
+      "check": "/api/profile returns 400",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs returns 400",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs returns 202",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "p2 analyzed",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db/plan returns 200",
+      "passed": true
+    },
+    {
+      "check": "recipe binds v2 pointwise gate",
+      "passed": true
+    },
+    {
+      "check": "protected criteria exact",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db/approve returns 409",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db/approve returns 202",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db/approve returns 409",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db returns 200",
+      "passed": true
+    },
+    {
+      "check": "p2 accepted processing",
+      "passed": true
+    },
+    {
+      "check": "acceptance surfaced",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db/download/edited.mp4 returns 200",
+      "passed": true
+    },
+    {
+      "check": "audio preserved",
+      "passed": true
+    },
+    {
+      "check": "audio present",
+      "passed": true
+    },
+    {
+      "check": "four bound static rows",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db/download/report.json returns 200",
+      "passed": true
+    },
+    {
+      "check": "source comparator accurately named",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/f8fc8037239faa0faa573b20b26124db/download/edited.mp4 returns 400",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs returns 202",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "workshop analyzed",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde/plan returns 200",
+      "passed": true
+    },
+    {
+      "check": "recipe binds v2 pointwise gate",
+      "passed": true
+    },
+    {
+      "check": "protected criteria exact",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde/approve returns 409",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde/approve returns 202",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde/approve returns 409",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde returns 200",
+      "passed": true
+    },
+    {
+      "check": "workshop accepted processing",
+      "passed": true
+    },
+    {
+      "check": "acceptance surfaced",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde/download/edited.mp4 returns 200",
+      "passed": true
+    },
+    {
+      "check": "audio preserved",
+      "passed": true
+    },
+    {
+      "check": "audio present",
+      "passed": true
+    },
+    {
+      "check": "four bound static rows",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde/download/report.json returns 200",
+      "passed": true
+    },
+    {
+      "check": "source comparator accurately named",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/46caf17e66753148f208ad107579ecde/download/edited.mp4 returns 400",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs returns 202",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/d959887f2e170ca0352d2b4105c1c3f8 returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/d959887f2e170ca0352d2b4105c1c3f8 returns 200",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/d959887f2e170ca0352d2b4105c1c3f8 returns 200",
+      "passed": true
+    },
+    {
+      "check": "unsupported input rejected",
+      "passed": true
+    },
+    {
+      "check": "/api/jobs/d959887f2e170ca0352d2b4105c1c3f8/download/edited.mp4 returns 409",
+      "passed": true
+    }
+  ],
+  "outcomes": {
+    "p2": {
+      "job_id": "f8fc8037239faa0faa573b20b26124db",
+      "summary": {
+        "audio_preservation": {
+          "present": true,
+          "checks": {
+            "control": {
+              "stream_exact": true,
+              "packet_payload_timing_skip_exact": true,
+              "decoded_pcm_exact": true
+            },
+            "edited": {
+              "stream_exact": true,
+              "packet_payload_timing_skip_exact": true,
+              "decoded_pcm_exact": true
+            }
+          },
+          "policy": "copy-only AAC-LC mono 48 kHz; packet payload/timing/skip and decoded PCM exact"
+        },
+        "protected_content": {
+          "regions": [],
+          "frames": 90,
+          "declared": false,
+          "passed": null,
+          "scope": "Fixed declared rectangles, every decoded frame, edited versus original source decode. No tracking, readability or meaning guarantee."
+        },
+        "review_status": "needs_creator_review",
+        "selected_trigger_count": {
+          "control": 10,
+          "edited": 2,
+          "criterion_max": 6
+        },
+        "outside_mask_error": {
+          "mean_rgb_code_error": 0.0,
+          "p99_rgb_code_error": 0,
+          "max_rgb_code_error": 0,
+          "channel_samples": 14842170
+        },
+        "boundary": {
+          "entry": {
+            "control_delta": 0.8794117366085885,
+            "edited_delta": 0.8794117366085885
+          },
+          "exit": {
+            "control_delta": 3.4564477329546497e-06,
+            "edited_delta": 3.0882961229040246e-07
+          },
+          "loop_seam": {
+            "control_delta": 8.519559285821883e-06,
+            "edited_delta": 8.519559285821883e-06
+          }
+        },
+        "checks": {
+          "audio_exact": true,
+          "fresh_source_bound_detection": true,
+          "native_output_exact": true,
+          "timestamps_exact": true,
+          "original_masters_unchanged": true,
+          "outside_interval_frames_exact": true,
+          "protected_regions_exact_vs_source": true,
+          "outside_budget": true,
+          "unprotected_profile_outside_exact": true,
+          "all_cycle_phases_retained": true
+        },
+        "export_mode": "periodic-local-retime-v2",
+        "acceptance": {
+          "status": "accepted_experiment",
+          "checks": {
+            "audio_exact": true,
+            "fresh_source_bound_detection": true,
+            "native_output_exact": true,
+            "timestamps_exact": true,
+            "original_masters_unchanged": true,
+            "outside_interval_frames_exact": true,
+            "protected_regions_exact_vs_source": true,
+            "outside_budget": true,
+            "unprotected_profile_outside_exact": true,
+            "all_cycle_phases_retained": true
+          },
+          "meaning": "Mechanical preservation checks only; creator review remains required."
+        },
+        "detection": {
+          "period_frames": 6,
+          "complete_cycles_observed": 9,
+          "max_repeat_plane_frame_mae": 0.20273868391023203,
+          "max_repeat_sample_error": 28,
+          "gate_version": "bounded-native-recurrence-v2",
+          "luma_mean_range": 191.96728794218333,
+          "thresholds": {
+            "max_period": 30,
+            "min_cycles": 3,
+            "max_repeat_plane_frame_mae": 2.0,
+            "max_repeat_sample_error": 32,
+            "min_luma_range": 32.0
+          },
+          "scores": [
+            {
+              "period_frames": 2,
+              "max_repeat_plane_frame_mae": 191.96728794218333,
+              "max_repeat_sample_error": 199
+            },
+            {
+              "period_frames": 3,
+              "max_repeat_plane_frame_mae": 191.96728794218333,
+              "max_repeat_sample_error": 199
+            },
+            {
+              "period_frames": 4,
+              "max_repeat_plane_frame_mae": 191.96728794218333,
+              "max_repeat_sample_error": 199
+            },
+            {
+              "period_frames": 5,
+              "max_repeat_plane_frame_mae": 191.96728794218333,
+              "max_repeat_sample_error": 199
+            },
+            {
+              "period_frames": 6,
+              "max_repeat_plane_frame_mae": 0.20273868391023203,
+              "max_repeat_sample_error": 28
+            }
+          ]
+        },
+        "codec": "Lossless H.264 High 4:4:4 Predictive, YUV420; playback compatibility unverified",
+        "warnings": [
+          "Slows the observed decoration cycle 5\u00d7 only inside the detected interval.",
+          "This repeats one observed cycle and may discard subtle variations; it does not synthesize smooth motion.",
+          "The mean and pointwise recurrence budgets do not guarantee semantic periodicity or reject every small nonperiodic change.",
+          "Entry remains abrupt; inspect the exact frame boundaries.",
+          "Shared chroma interpolation can alter adjacent pixels. Declared protected regions must remain exact.",
+          "No medical, photosensitivity, safety, compliance or publishing-clearance claim."
+        ],
+        "scope": "Bounded synthetic-development profile; real creator benefit and browser playback unverified."
+      },
+      "edited_sha256": "cbcb6cecb4cd306132154d2fa9103361a40b19f0f08d824545ca54e7f1ffb0e7"
+    },
+    "workshop": {
+      "job_id": "46caf17e66753148f208ad107579ecde",
+      "summary": {
+        "audio_preservation": {
+          "present": true,
+          "checks": {
+            "control": {
+              "stream_exact": true,
+              "packet_payload_timing_skip_exact": true,
+              "decoded_pcm_exact": true
+            },
+            "edited": {
+              "stream_exact": true,
+              "packet_payload_timing_skip_exact": true,
+              "decoded_pcm_exact": true
+            }
+          },
+          "policy": "copy-only AAC-LC mono 48 kHz; packet payload/timing/skip and decoded PCM exact"
+        },
+        "protected_content": {
+          "regions": [
+            {
+              "label": "Title and date",
+              "xywh": [
+                28,
+                20,
+                390,
+                90
+              ],
+              "measurements": {
+                "mean_rgb_code_error": 0.0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "criteria": {
+                "mean_rgb_code_error": 0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "passed": true,
+              "channel_samples": 18954000,
+              "histogram": [
+                18954000,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "label": "Instruction card",
+              "xywh": [
+                28,
+                142,
+                386,
+                116
+              ],
+              "measurements": {
+                "mean_rgb_code_error": 0.0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "criteria": {
+                "mean_rgb_code_error": 0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "passed": true,
+              "channel_samples": 24179040,
+              "histogram": [
+                24179040,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "label": "Join label",
+              "xywh": [
+                480,
+                188,
+                80,
+                30
+              ],
+              "measurements": {
+                "mean_rgb_code_error": 0.0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "criteria": {
+                "mean_rgb_code_error": 0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "passed": true,
+              "channel_samples": 1296000,
+              "histogram": [
+                1296000,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "label": "Progress bar",
+              "xywh": [
+                32,
+                312,
+                576,
+                16
+              ],
+              "measurements": {
+                "mean_rgb_code_error": 0.0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "criteria": {
+                "mean_rgb_code_error": 0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "passed": true,
+              "channel_samples": 4976640,
+              "histogram": [
+                4976640,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "frames": 180,
+          "declared": true,
+          "passed": true,
+          "scope": "Fixed declared rectangles, every decoded frame, edited versus original source decode. No tracking, readability or meaning guarantee."
+        },
+        "review_status": "needs_creator_review",
+        "selected_trigger_count": {
+          "control": 10,
+          "edited": 2,
+          "criterion_max": 6
+        },
+        "outside_mask_error": {
+          "mean_rgb_code_error": 0.00039301102405980934,
+          "p99_rgb_code_error": 0,
+          "max_rgb_code_error": 10,
+          "channel_samples": 120296880
+        },
+        "boundary": {
+          "entry": {
+            "control_delta": 0.8599036645490082,
+            "edited_delta": 0.8599036645490082
+          },
+          "exit": {
+            "control_delta": 0.0,
+            "edited_delta": 1.898600695939001e-05
+          },
+          "loop_seam": {
+            "control_delta": 0.0,
+            "edited_delta": 0.0
+          }
+        },
+        "checks": {
+          "audio_exact": true,
+          "fresh_source_bound_detection": true,
+          "native_output_exact": true,
+          "timestamps_exact": true,
+          "original_masters_unchanged": true,
+          "outside_interval_frames_exact": true,
+          "protected_regions_exact_vs_source": true,
+          "outside_budget": true,
+          "unprotected_profile_outside_exact": true,
+          "all_cycle_phases_retained": true
+        },
+        "export_mode": "periodic-local-retime-v2",
+        "acceptance": {
+          "status": "accepted_experiment",
+          "checks": {
+            "audio_exact": true,
+            "fresh_source_bound_detection": true,
+            "native_output_exact": true,
+            "timestamps_exact": true,
+            "original_masters_unchanged": true,
+            "outside_interval_frames_exact": true,
+            "protected_regions_exact_vs_source": true,
+            "outside_budget": true,
+            "unprotected_profile_outside_exact": true,
+            "all_cycle_phases_retained": true
+          },
+          "meaning": "Mechanical preservation checks only; creator review remains required."
+        },
+        "detection": {
+          "period_frames": 6,
+          "complete_cycles_observed": 19,
+          "max_repeat_plane_frame_mae": 0.6162847391516334,
+          "max_repeat_sample_error": 7,
+          "gate_version": "bounded-native-recurrence-v2",
+          "luma_mean_range": 188.8554011536445,
+          "thresholds": {
+            "max_period": 30,
+            "min_cycles": 3,
+            "max_repeat_plane_frame_mae": 2.0,
+            "max_repeat_sample_error": 32,
+            "min_luma_range": 32.0
+          },
+          "scores": [
+            {
+              "period_frames": 2,
+              "max_repeat_plane_frame_mae": 188.85540115364446,
+              "max_repeat_sample_error": 197
+            },
+            {
+              "period_frames": 3,
+              "max_repeat_plane_frame_mae": 188.85540115364446,
+              "max_repeat_sample_error": 197
+            },
+            {
+              "period_frames": 4,
+              "max_repeat_plane_frame_mae": 188.85540115364446,
+              "max_repeat_sample_error": 197
+            },
+            {
+              "period_frames": 5,
+              "max_repeat_plane_frame_mae": 188.85540115364446,
+              "max_repeat_sample_error": 197
+            },
+            {
+              "period_frames": 6,
+              "max_repeat_plane_frame_mae": 0.6162847391516334,
+              "max_repeat_sample_error": 7
+            }
+          ]
+        },
+        "codec": "Lossless H.264 High 4:4:4 Predictive, YUV420; playback compatibility unverified",
+        "warnings": [
+          "Slows the observed decoration cycle 5\u00d7 only inside the detected interval.",
+          "This repeats one observed cycle and may discard subtle variations; it does not synthesize smooth motion.",
+          "The mean and pointwise recurrence budgets do not guarantee semantic periodicity or reject every small nonperiodic change.",
+          "Entry remains abrupt; inspect the exact frame boundaries.",
+          "Shared chroma interpolation can alter adjacent pixels. Declared protected regions must remain exact.",
+          "No medical, photosensitivity, safety, compliance or publishing-clearance claim."
+        ],
+        "scope": "Bounded synthetic-development profile; real creator benefit and browser playback unverified."
+      },
+      "edited_sha256": "72b5096e84ea6f09933da07200497ce364376f31d1ec9cc2c4fd2f015c8fc143"
+    }
+  },
+  "browser_qa": "not performed",
+  "scope": "real loopback HTTP and actual media workers on two owned fixtures"
+}

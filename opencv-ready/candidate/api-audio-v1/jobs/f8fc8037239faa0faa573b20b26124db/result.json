@@ -1,0 +1,203 @@
+{
+  "fresh_pixel_detection_matches": true,
+  "native_output_exact": true,
+  "timing_exact": true,
+  "masters_unchanged": true,
+  "outside_interval_frames_exact": true,
+  "protected": {
+    "regions": [],
+    "frames": 90,
+    "declared": false,
+    "passed": null,
+    "scope": "Fixed declared rectangles, every decoded frame, edited versus original source decode. No tracking, readability or meaning guarantee."
+  },
+  "outside_rgb": {
+    "mean_rgb_code_error": 0.0,
+    "p99_rgb_code_error": 0,
+    "max_rgb_code_error": 0,
+    "channel_samples": 14842170
+  },
+  "detection": {
+    "period_frames": 6,
+    "complete_cycles_observed": 9,
+    "max_repeat_plane_frame_mae": 0.20273868391023203,
+    "max_repeat_sample_error": 28,
+    "gate_version": "bounded-native-recurrence-v2",
+    "luma_mean_range": 191.96728794218333,
+    "thresholds": {
+      "max_period": 30,
+      "min_cycles": 3,
+      "max_repeat_plane_frame_mae": 2.0,
+      "max_repeat_sample_error": 32,
+      "min_luma_range": 32.0
+    },
+    "scores": [
+      {
+        "period_frames": 2,
+        "max_repeat_plane_frame_mae": 191.96728794218333,
+        "max_repeat_sample_error": 199
+      },
+      {
+        "period_frames": 3,
+        "max_repeat_plane_frame_mae": 191.96728794218333,
+        "max_repeat_sample_error": 199
+      },
+      {
+        "period_frames": 4,
+        "max_repeat_plane_frame_mae": 191.96728794218333,
+        "max_repeat_sample_error": 199
+      },
+      {
+        "period_frames": 5,
+        "max_repeat_plane_frame_mae": 191.96728794218333,
+        "max_repeat_sample_error": 199
+      },
+      {
+        "period_frames": 6,
+        "max_repeat_plane_frame_mae": 0.20273868391023203,
+        "max_repeat_sample_error": 28
+      }
+    ]
+  },
+  "retained_cycle_phases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "recipe": {
+    "mapping": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      12,
+      12,
+      12,
+      12,
+      13,
+      13,
+      13,
+      13,
+      13,
+      14,
+      14,
+      14,
+      14,
+      14,
+      15,
+      15,
+      15,
+      15,
+      15,
+      16,
+      16,
+      16,
+      16,
+      16,
+      17,
+      17,
+      17,
+      17,
+      17,
+      12,
+      12,
+      12,
+      12,
+      12,
+      13,
+      13,
+      13,
+      13,
+      13,
+      14,
+      14,
+      14,
+      14,
+      14,
+      15,
+      15,
+      15,
+      15,
+      15,
+      16,
+      16,
+      16,
+      16,
+      16,
+      17,
+      17,
+      17,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89
+    ],
+    "protected_regions": []
+  },
+  "output_sha256": "cbcb6cecb4cd306132154d2fa9103361a40b19f0f08d824545ca54e7f1ffb0e7",
+  "audio_preservation": {
+    "present": true,
+    "checks": {
+      "control": {
+        "stream_exact": true,
+        "packet_payload_timing_skip_exact": true,
+        "decoded_pcm_exact": true
+      },
+      "edited": {
+        "stream_exact": true,
+        "packet_payload_timing_skip_exact": true,
+        "decoded_pcm_exact": true
+      }
+    },
+    "policy": "copy-only AAC-LC mono 48 kHz; packet payload/timing/skip and decoded PCM exact"
+  },
+  "acceptance": {
+    "status": "accepted_experiment",
+    "checks": {
+      "audio_exact": true,
+      "fresh_source_bound_detection": true,
+      "native_output_exact": true,
+      "timestamps_exact": true,
+      "original_masters_unchanged": true,
+      "outside_interval_frames_exact": true,
+      "protected_regions_exact_vs_source": true,
+      "outside_budget": true,
+      "unprotected_profile_outside_exact": true,
+      "all_cycle_phases_retained": true
+    },
+    "meaning": "Mechanical preservation checks only; creator review remains required."
+  },
+  "output_artifact": {
+    "filename": "edited.mp4",
+    "download_recommended": false,
+    "role": "measured_candidate_for_creator_review"
+  }
+}

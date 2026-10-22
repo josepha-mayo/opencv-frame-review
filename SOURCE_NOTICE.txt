@@ -1,0 +1,6 @@
+Frame Review: Keep the Lesson
+Original project code and authored fixtures: Joseph Ayanda, with AI assistance.
+All rights remain with their respective authors. No third-party lesson footage is included.
+The lesson narration is neural speech; see studio/FIXTURE_PROVENANCE.md.
+OpenCV, NumPy, FFmpeg, Python and container base images are obtained separately from upstream, under their own licenses.
+This source snapshot contains no dependency binaries, credentials, private evidence archive or agent handoffs.

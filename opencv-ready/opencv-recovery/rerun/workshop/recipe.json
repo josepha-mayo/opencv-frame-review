@@ -1,0 +1,82 @@
+{
+  "protected_regions": [
+    {
+      "label": "Title and date",
+      "xywh": [
+        28,
+        20,
+        390,
+        90
+      ]
+    },
+    {
+      "label": "Instruction card",
+      "xywh": [
+        28,
+        142,
+        386,
+        116
+      ]
+    },
+    {
+      "label": "Join label",
+      "xywh": [
+        480,
+        188,
+        80,
+        30
+      ]
+    },
+    {
+      "label": "Progress bar",
+      "xywh": [
+        32,
+        312,
+        576,
+        16
+      ]
+    }
+  ],
+  "protected_criteria": {
+    "mean_rgb_code_error": 0.1,
+    "p99_rgb_code_error": 1,
+    "max_rgb_code_error": 3
+  },
+  "profile": "owned-sdr-review-v1-card",
+  "input_profile": {
+    "id": "owned-sdr-review-v1-card",
+    "width": 640,
+    "height": 360,
+    "frames": 180,
+    "fps": 30,
+    "duration_seconds": 6,
+    "max_input_bytes": 8388608
+  },
+  "input_sha256": "4d06a05ef684296874564cd17f85c076675ab578157220e1b585ed595ff02232",
+  "prediction_sha256": "724ff77754351327edd95f2f007d834fde9b19cdcac8879561a2a274276d6ccf",
+  "candidate_id": "0",
+  "component_sha256": "92ddf1c354aa9441ac1d5634809ca8c963d44185a71b142ef25de5492cbeb6c1",
+  "frame_bounds_inclusive": [
+    33,
+    150
+  ],
+  "edit": {
+    "kind": "native-yuv-whole-clip-v9",
+    "reference_frame": 0,
+    "support": "approved luma mask and all touched 2x2 chroma blocks",
+    "interval": "entire clip"
+  },
+  "export_mode": "native-yuv-whole-clip-v9",
+  "detector_ast_sha256": "04213a65f57aa65cfbb4af9e0d4d78072b0f2c19a879017509ee3f796fd0e4d4",
+  "temporal_ast_sha256": "0bafa50e264ba230a6c6001a4fc2d263ec2705660e3bce132ea028971ed3c00a",
+  "transport_profile_sha256": "e37dafdce2b0aa1cd3633321ecad87e4480148522fd2a4cb8b57f8246fa1bf09",
+  "implementation_sha256": {
+    "common.py": "33950b3fa98a23adf84b222a4625712d67c80982793b593532f8229fbda68a2f",
+    "engine.py": "e86008859fdee121699e02befc13fa54039929e19166712355e525fbb184ec50",
+    "worker.py": "2c1ecc36affb6020b97cc35cefa21d927d3caf01eaeecbd0ed2dc38076d01c3c",
+    "frozen_algorithms.py": "742bd77f554528bb09d0732b8324accd30fc633e0458eb9628f4a11455704ab5",
+    "review_frames.py": "81c560173379d2a80288a1635e0bcc82a556d14d7304437ca7e902e8b0792794",
+    "protected_regions.py": "1b0f4c1cd7cbf6fc1755a12d68b699765b3cf95441a44813fd1b49bed19edaa9",
+    "native_yuv.py": "4139e8dec4c38f44c51258f8aefa2673e0bbdc04ca32044180978fdb8dcddd00"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "fixture": "Authored 12-second math lesson with neural narration",
+  "input_sha256": "8de118ac269d8fb5b6124b3ab79f87ac240342bda0880db3d9bc0c84cb26d738",
+  "edited_sha256": "b6e8052ec70f60e2189f41645167111fb846e88092727bf91213e7621fcda68e",
+  "protected_regions": [
+    {
+      "label": "Equation",
+      "xywh": [
+        20,
+        55,
+        245,
+        52
+      ]
+    },
+    {
+      "label": "Explanation",
+      "xywh": [
+        20,
+        112,
+        255,
+        105
+      ]
+    },
+    {
+      "label": "Graph",
+      "xywh": [
+        300,
+        45,
+        330,
+        200
+      ]
+    },
+    {
+      "label": "Step counter",
+      "xywh": [
+        20,
+        250,
+        205,
+        36
+      ]
+    }
+  ],
+  "all_360_frames_protected_rgb_exact": true,
+  "independent_native_mapping_exact": true,
+  "outside_native_pixels_exact": true,
+  "audio_packets_pcm_timing_exact": true,
+  "video_timestamps_exact": true,
+  "all_12_comparison_png_hashes_exact": true,
+  "measurements": {
+    "selected_trigger_count": {
+      "control": 10,
+      "edited": 2,
+      "criterion_max": 6
+    },
+    "outside_mask_error": {
+      "mean_rgb_code_error": 5.829124579124579e-05,
+      "p99_rgb_code_error": 0,
+      "max_rgb_code_error": 2,
+      "channel_samples": 247104000
+    },
+    "boundary": {
+      "entry": {
+        "control_delta": 0.7675428539828862,
+        "edited_delta": 0.7675428539828862
+      },
+      "exit": {
+        "control_delta": 0.0,
+        "edited_delta": 7.804841734466994e-06
+      },
+      "loop_seam": {
+        "control_delta": 0.0,
+        "edited_delta": 0.0
+      }
+    }
+  },
+  "protected_measurements": [
+    {
+      "label": "Equation",
+      "xywh": [
+        20,
+        55,
+        245,
+        52
+      ],
+      "measurements": {
+        "mean_rgb_code_error": 0.0,
+        "p99_rgb_code_error": 0,
+        "max_rgb_code_error": 0
+      },
+      "passed": true
+    },
+    {
+      "label": "Explanation",
+      "xywh": [
+        20,
+        112,
+        255,
+        105
+      ],
+      "measurements": {
+        "mean_rgb_code_error": 0.0,
+        "p99_rgb_code_error": 0,
+        "max_rgb_code_error": 0
+      },
+      "passed": true
+    },
+    {
+      "label": "Graph",
+      "xywh": [
+        300,
+        45,
+        330,
+        200
+      ],
+      "measurements": {
+        "mean_rgb_code_error": 0.0,
+        "p99_rgb_code_error": 0,
+        "max_rgb_code_error": 0
+      },
+      "passed": true
+    },
+    {
+      "label": "Step counter",
+      "xywh": [
+        20,
+        250,
+        205,
+        36
+      ],
+      "measurements": {
+        "mean_rgb_code_error": 0.0,
+        "p99_rgb_code_error": 0,
+        "max_rgb_code_error": 0
+      },
+      "passed": true
+    }
+  ]
+}

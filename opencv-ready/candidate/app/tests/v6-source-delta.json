@@ -1,0 +1,17 @@
+{
+  "scope": "Source comparison only; no new export performed",
+  "changed_engine_functions": [
+    "measure",
+    "export"
+  ],
+  "unchanged_numeric_processing_functions": {
+    "decode": true,
+    "encode": true,
+    "trace": true,
+    "source_index": true,
+    "edited_frames": true,
+    "analyze": true
+  },
+  "frozen_algorithms_identical": true,
+  "profile_identical": true
+}

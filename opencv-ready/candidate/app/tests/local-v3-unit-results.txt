@@ -1,0 +1,41 @@
+test_audio_and_rotation (test_contracts.Admission.test_audio_and_rotation) ... ok
+test_filename (test_contracts.Admission.test_filename) ... ok
+test_frame_timing (test_contracts.Admission.test_frame_timing) ... ok
+test_incomplete_frames (test_contracts.Admission.test_incomplete_frames) ... ok
+test_larger_frame_timing (test_contracts.Admission.test_larger_frame_timing) ... ok
+test_larger_profile_is_explicit (test_contracts.Admission.test_larger_profile_is_explicit) ... ok
+test_reject_fields (test_contracts.Admission.test_reject_fields) ... ok
+test_valid (test_contracts.Admission.test_valid) ... ok
+test_approval_binding (test_contracts.Approval.test_approval_binding) ... ok
+test_interval_bounds (test_contracts.Approval.test_interval_bounds) ... ok
+test_bind_failure_closes_manager (test_contracts.Server.test_bind_failure_closes_manager) ... ok
+test_cancel_stops_even_if_save_fails (test_contracts.Server.test_cancel_stops_even_if_save_fails) ... ok
+test_decline_preserves_input (test_contracts.Server.test_decline_preserves_input) ... ok
+test_no_implicit_edit (test_contracts.Server.test_no_implicit_edit) ... ok
+test_origin_and_host (test_contracts.Server.test_origin_and_host) ... ok
+test_oversize_before_job (test_contracts.Server.test_oversize_before_job) ... ok
+test_path_traversal (test_contracts.Server.test_path_traversal) ... ok
+test_profile_and_no_token (test_contracts.Server.test_profile_and_no_token) ... ok
+test_shutdown_stops_even_if_save_fails (test_contracts.Server.test_shutdown_stops_even_if_save_fails) ... ok
+test_worker_launch_failure_is_terminal (test_contracts.Server.test_worker_launch_failure_is_terminal) ... ok
+test_exact_original_float32_bits (test_deterministic_lut.DeterministicTable.test_exact_original_float32_bits) ... ok
+test_finite_monotonic_endpoints (test_deterministic_lut.DeterministicTable.test_finite_monotonic_endpoints) ... ok
+test_failed_numeric_result_is_not_accepted (test_lifecycle.Lifecycle.test_failed_numeric_result_is_not_accepted) ... ok
+test_outer_timeout_is_terminal_and_cleans (test_lifecycle.Lifecycle.test_outer_timeout_is_terminal_and_cleans) ... ok
+test_real_process_group_cleanup (test_lifecycle.Lifecycle.test_real_process_group_cleanup) ... ok
+test_resource_guard_boundaries (test_lifecycle.Lifecycle.test_resource_guard_boundaries) ... ok
+test_restart_is_terminal (test_lifecycle.Lifecycle.test_restart_is_terminal) ... ok
+test_missing_expected_child_fails_closed (test_resource_monitor.TreeAccounting.test_missing_expected_child_fails_closed) ... ok
+test_parent_and_grandchild_rss_are_counted (test_resource_monitor.TreeAccounting.test_parent_and_grandchild_rss_are_counted) ... ok
+test_audio_contract_is_refusal_not_muting (test_ui_static.StaticReviewContracts.test_audio_contract_is_refusal_not_muting) ... ok
+test_generation_consent_and_tradeoff_are_explicit (test_ui_static.StaticReviewContracts.test_generation_consent_and_tradeoff_are_explicit) ... ok
+test_initial_consent_controls_are_disabled (test_ui_static.StaticReviewContracts.test_initial_consent_controls_are_disabled) ... ok
+test_source_contains_no_implicit_approval_or_autoretry (test_ui_static.StaticReviewContracts.test_source_contains_no_implicit_approval_or_autoretry) ... ok
+test_static_only_elements_and_assets (test_ui_static.StaticReviewContracts.test_static_only_elements_and_assets) ... ok
+test_summary_disclosure_matches_actual_payload (test_ui_static.StaticReviewContracts.test_summary_disclosure_matches_actual_payload) ... ok
+test_unique_ids_and_script_bindings_remain_available (test_ui_static.StaticReviewContracts.test_unique_ids_and_script_bindings_remain_available) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 5.810s
+
+OK

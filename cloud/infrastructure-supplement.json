@@ -1,0 +1,32 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ManageOnlyLessonRescueService",
+      "Effect": "Allow",
+      "Action": ["ecs:DescribeServices", "ecs:UpdateService"],
+      "Resource": "arn:aws:ecs:<REGION>:<ACCOUNT_ID>:service/default/lesson-rescue"
+    },
+    {
+      "Sid": "ReadRegionalAlarmState",
+      "Effect": "Allow",
+      "Action": "cloudwatch:DescribeAlarms",
+      "Resource": "arn:aws:cloudwatch:<REGION>:<ACCOUNT_ID>:alarm:*"
+    },
+    {
+      "Sid": "PassOnlyCreatorExecutionRoleToTasks",
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": "arn:aws:iam::<ACCOUNT_ID>:role/opencv-lesson-rescue-ecs-execution",
+      "Condition": {"StringEquals": {"iam:PassedToService": "ecs-tasks.amazonaws.com"}}
+    },
+    {
+      "Sid": "PassOnlyCreatorInfrastructureRoleToECS",
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": "arn:aws:iam::<ACCOUNT_ID>:role/opencv-lesson-rescue-ecs-infrastructure",
+      "Condition": {"StringEquals": {"iam:PassedToService": "ecs.amazonaws.com"}}
+    }
+  ]
+}
+

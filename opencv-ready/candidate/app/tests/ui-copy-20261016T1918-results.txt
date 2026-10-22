@@ -1,0 +1,12 @@
+test_audio_contract_is_refusal_not_muting (__main__.StaticReviewContracts.test_audio_contract_is_refusal_not_muting) ... ok
+test_generation_consent_and_tradeoff_are_explicit (__main__.StaticReviewContracts.test_generation_consent_and_tradeoff_are_explicit) ... ok
+test_initial_consent_controls_are_disabled (__main__.StaticReviewContracts.test_initial_consent_controls_are_disabled) ... ok
+test_source_contains_no_implicit_approval_or_autoretry (__main__.StaticReviewContracts.test_source_contains_no_implicit_approval_or_autoretry) ... ok
+test_static_only_elements_and_assets (__main__.StaticReviewContracts.test_static_only_elements_and_assets) ... ok
+test_summary_disclosure_matches_actual_payload (__main__.StaticReviewContracts.test_summary_disclosure_matches_actual_payload) ... ok
+test_unique_ids_and_script_bindings_remain_available (__main__.StaticReviewContracts.test_unique_ids_and_script_bindings_remain_available) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.019s
+
+OK

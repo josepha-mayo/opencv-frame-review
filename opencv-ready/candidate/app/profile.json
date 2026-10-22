@@ -1,0 +1,30 @@
+{
+  "versions": {
+    "ffmpeg": "7.1.5-0+deb13u1",
+    "ffmpeg_sha256": "e8a8d46f5225f3062cec7c07fb145d58ae73c603cb740dcd5bad34bfb54e455a",
+    "ffprobe_sha256": "cefc5f81c0b18429cdbf8fa5a89e1e9c759235e10f93f9b329ff1b2fdff26f46",
+    "opencv": "5.0.0",
+    "numpy": "2.3.5"
+  },
+  "detector": {
+    "display_model": "ideal-black gamma2.4 normalized white",
+    "luminance_weights": [
+      0.2126,
+      0.7152,
+      0.0722
+    ],
+    "adjacent_delta_min": 0.1,
+    "darker_max_exclusive": 0.8,
+    "alternating_only": true,
+    "window_seconds": 1.0,
+    "transition_min": 7,
+    "connectivity": 8,
+    "component_area_min_pixels": 64,
+    "morphology": false,
+    "region": "tight component box",
+    "interval": "first through last counted adjacent transition on retained component support",
+    "loop_analysis": false
+  },
+  "detector_ast_sha256": "04213a65f57aa65cfbb4af9e0d4d78072b0f2c19a879017509ee3f796fd0e4d4",
+  "temporal_ast_sha256": "0bafa50e264ba230a6c6001a4fc2d263ec2705660e3bce132ea028971ed3c00a"
+}
