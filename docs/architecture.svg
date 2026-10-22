@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#245941"/></marker><style>text{font-family:DejaVu Sans,Arial,sans-serif;fill:#1c302b}.h{font-size:25px;font-weight:bold}.s{font-size:20px}.tiny{font-size:18px;fill:#59675f}.box{fill:white;stroke:#a9b7a8;stroke-width:2}.edge{fill:none;stroke:#245941;stroke-width:3;marker-end:url(#a)}</style></defs>
+<rect width="1600" height="900" fill="#f4f5ef"/>
+<text x="65" y="75" font-size="42" font-weight="bold">Frame Review: Keep the Lesson</text>
+<text x="65" y="115" font-size="24">OpenCV 5 analyzes and verifies the actual media on AWS.</text>
+<rect class="box" x="65" y="340" width="255" height="170" rx="15"/><text class="h" x="90" y="382">Browser</text><text class="s" x="90" y="421">Static inspection</text><text class="s" x="90" y="454">Named areas</text><text class="s" x="90" y="487">Explicit consent</text>
+<rect class="box" x="385" y="340" width="230" height="170" rx="15"/><text class="h" x="410" y="382">AWS ALB</text><text class="s" x="410" y="421">HTTPS / TLS</text><text class="s" x="410" y="454">Health checks</text><text class="s" x="410" y="487">Managed routing</text>
+<path class="edge" d="M320 425 H380"/>
+<rect x="680" y="265" width="485" height="320" rx="18" fill="#e9eddc" stroke="#245941" stroke-width="3"/><text class="h" x="710" y="307">ECS Fargate task</text><text class="tiny" x="710" y="339">One replica in steady state; one serial worker</text>
+<rect class="box" x="710" y="365" width="205" height="165" rx="10"/><text class="h" x="730" y="403">OpenCV 5</text><text class="s" x="730" y="441">Candidate region</text><text class="s" x="730" y="475">Pixel checks</text><text class="s" x="730" y="509">PNG comparisons</text>
+<rect class="box" x="940" y="365" width="195" height="165" rx="10"/><text class="h" x="960" y="403">FFmpeg</text><text class="s" x="960" y="441">Decode / encode</text><text class="s" x="960" y="475">Audio copy</text><text class="s" x="960" y="509">Probe / recheck</text>
+<path class="edge" d="M615 425 H675"/><path class="edge" d="M1165 425 H1225"/>
+<rect class="box" x="1230" y="340" width="305" height="170" rx="15"/><text class="h" x="1255" y="382">Measured artifacts</text><text class="s" x="1255" y="421">Original / control / edit</text><text class="s" x="1255" y="454">Report + recipe hashes</text><text class="s" x="1255" y="487">12 static boundary crops</text>
+<rect class="box" x="760" y="155" width="325" height="80" rx="12"/><text class="h" x="790" y="188">Amazon ECR</text><text class="tiny" x="790" y="218">Private, digest-pinned container</text><path class="edge" d="M922 235 V260"/>
+<rect class="box" x="760" y="650" width="325" height="90" rx="12"/><text class="h" x="790" y="685">CloudWatch</text><text class="tiny" x="790" y="715">Service / HTTP logs: 7 days</text><path class="edge" d="M922 585 V645"/>
+<text class="s" x="65" y="655">Public demo: exact bundled synthetic fixtures only.</text><text class="s" x="65" y="692">Secure / HttpOnly / SameSite browser ownership.</text><text class="s" x="65" y="729">Host, origin, token, CPU, memory and disk controls.</text>
+<text class="tiny" x="65" y="807">ECS infrastructure and execution roles are separate. The application needs no AWS API permissions.</text><text class="tiny" x="65" y="840">Management actions appear in CloudTrail event history. Jobs expire after 24 hours; task replacement can clear them sooner.</text>
+</svg>
