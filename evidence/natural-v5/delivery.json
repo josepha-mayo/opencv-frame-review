@@ -1,0 +1,85 @@
+{
+  "verified_utc": "2026-10-23T20:56:43.008369+00:00",
+  "build": "lesson-rescue-matched-boundaries-2026-10-23-v5",
+  "runtime_manifest_sha256": "a900388b23d5cdab6f2ad590a669fed2d70e50eee32ef20891b33a7249ca5ac1",
+  "runtime_files": 106,
+  "qualification_stages_passed": 14,
+  "original_source_repairs": 7,
+  "six_prior_source_regressions": 6,
+  "newly_discovered_repairs_this_round": 1,
+  "fixed_six_source_exposure_seconds": 72,
+  "whole_excerpt_activity": {
+    "source": 90,
+    "fixed_blur": 91,
+    "prior_longer_hold": 54,
+    "matched_hold": 56
+  },
+  "matched_hold_new_events": 0,
+  "prior_longer_hold_sources_with_new_events": 5,
+  "matched_hold_seconds": 17.6,
+  "new_gentoo_activity": {
+    "source": 13,
+    "edited": 9,
+    "new_events": 0,
+    "audio": "silent source, absence exact"
+  },
+  "aws": {
+    "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+    "rollout_complete": true,
+    "task_definition": "default-lesson-rescue:10",
+    "image_digest": "sha256:b47393cbfdb45d0be950062a89d26b10e114d0b36acaedfb3a6d52368706c543",
+    "original_browser_cases": [
+      "jupyter",
+      "npm-basics",
+      "gentoo-equery"
+    ],
+    "all_three_actual_download_playbacks_complete": true,
+    "all_36_actual_browser_crop_download_hashes_exact": true,
+    "responsive_actual_widths_on_gentoo": [
+      375,
+      890
+    ],
+    "scope": "Cloud repeats of local cases, not extra independent sources. Muted playback does not evaluate listening."
+  },
+  "published_source": {
+    "private_branch": "master",
+    "private_commit": "cd1f5d68cd98096eb367df17ddc9c5b65b2fb7db",
+    "public_branch": "main",
+    "public_commit": "6e6617409bf420fb6fe715d9b1676874a6f58248",
+    "public_repository": "https://github.com/josepha-mayo/opencv-frame-review",
+    "method": "Direct default-branch compare-and-swap publication; remote trees exactly match local trees; no PR."
+  },
+  "package": {
+    "verified_utc": "2026-10-23T20:51:27.103690+00:00",
+    "filename": "Frame-Review-Matched-Boundaries-Judge-Package.zip",
+    "bytes": 20706618,
+    "sha256": "49de0f20317ad800890cd0cf4885f5097c56f5cf57f088615021356ae18e2649",
+    "source_commit": "6e6617409bf420fb6fe715d9b1676874a6f58248",
+    "runtime_manifest_sha256": "a900388b23d5cdab6f2ad590a669fed2d70e50eee32ef20891b33a7249ca5ac1",
+    "runtime_files_verified": 106,
+    "zip_integrity": true,
+    "handoff_paths": 0,
+    "report_sha256": "2865935a08674dcc18d468a1c10301da05f6f4ea50f75aaafc58386f42352258",
+    "purpose": "Exact source archive update for existing submitted Devpost entry 1177390; no new submission."
+  },
+  "devpost": {
+    "project_id": 1423567,
+    "submission_id": 1177390,
+    "url": "https://devpost.com/software/countback-inspect-the-evidence",
+    "status": "SUBMITTED",
+    "steps_done": "5/5",
+    "source_zip_filename_read_back": "Frame-Review-Matched-Boundaries-Judge-Package.zip",
+    "testing_instructions_read_back_exact": true,
+    "writeup_read_back_exact": true,
+    "gallery_photos": 15,
+    "gallery_first_photo": "5667509",
+    "gallery_current_image_read_back_loaded": true,
+    "thumbnail_upload_http_status": 200,
+    "thumbnail_photo": "5667563",
+    "video_unchanged": "https://www.youtube.com/watch?v=5oE3rA-aJNI",
+    "real_voice": "deferred by user",
+    "save_scope": "Updated existing submitted entry; did not submit again or accept terms. Saved ZIP filename verified in browser; server-side ZIP bytes were not independently downloaded or hashed."
+  },
+  "automation": "Existing OpenCV automation remains PAUSED; no cron run created or resumed.",
+  "evidence_limits": "Selected development/regression engineering results. No representative recall, creator preference, time saving, comprehension, attention, accessibility or safety benefit measured. New-source negatives and shorter-hold tradeoff retained."
+}
