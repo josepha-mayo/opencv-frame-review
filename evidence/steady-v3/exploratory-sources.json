@@ -1,0 +1,43 @@
+[
+  {
+    "source": "Luke Smith - Easy Screencasting and Webcamming with ffmpeg in Linux",
+    "page": "https://commons.wikimedia.org/wiki/File:Easy_Screencasting_and_Webcamming_with_ffmpeg_in_Linux.webm",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Easy_Screencasting_and_Webcamming_with_ffmpeg_in_Linux.webm",
+    "license": "CC BY 3.0",
+    "sha256": "f1a38b89aab7b999fa69ce21240e84df265abee74ca0787ff17ac949bea108a3",
+    "bytes": 31882722,
+    "authored_defect": false,
+    "selection": "Exploratory scan of fixed 12-second grid, beginning at zero, stop at first stationary proposal; independent original-upload qualification follows."
+  },
+  {
+    "author": "Elisabeth Mandl (WMDE)",
+    "page": "https://commons.wikimedia.org/wiki/File:Screencast_Tutorial_Beobachtungslisten.webm",
+    "license": "CC BY-SA 4.0",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Screencast_Tutorial_Beobachtungslisten.webm",
+    "bytes": 18254712,
+    "sha256": "53288366e53adcbd3b925d4d53b9506d35f2ec5b05e118e937f551eb71d07861",
+    "authored_defect": false
+  },
+  {
+    "filename": "quick-editor.webm",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Tutorial-tamil-firefox-addon-QuickWikiEditor-usage.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Tutorial-tamil-firefox-addon-QuickWikiEditor-usage.webm",
+    "author": "Info-farmer",
+    "license": "CC0 1.0",
+    "bytes": 2802384,
+    "sha256": "eea372b8bacda4cf9ba52083d88b63657e8366c0bc460dd21472f62bd05a4ab9",
+    "authored_defect": false,
+    "selection": "Exploratory fixed 12-second grid from zero; original-upload HTTP qualification is separate."
+  },
+  {
+    "filename": "xed-editor.webm",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/LinuxMint-text-editor-xed.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:LinuxMint-text-editor-xed.webm",
+    "author": "Info-farmer",
+    "license": "CC0 1.0",
+    "bytes": 7395264,
+    "sha256": "bc7eabbd3db6038abf9f2251e6fcddb707ba8c13dc82687e96a72e102b83f23e",
+    "authored_defect": false,
+    "selection": "Exploratory fixed 12-second grid from zero; original-upload HTTP qualification is separate."
+  }
+]

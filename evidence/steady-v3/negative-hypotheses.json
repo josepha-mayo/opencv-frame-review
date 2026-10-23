@@ -1,0 +1,22 @@
+[
+  {
+    "source": "wikilink",
+    "start_seconds": 60,
+    "state_at_harness_exit": "review without an approved edit",
+    "rapid_candidates": 0,
+    "stationary_candidates": 0,
+    "prepared_sha256": "b15a0a2d18f67685c55452bf41d3f9ac8e82e3a3b4b8581d98936b5cda69de4a",
+    "accepted_edit": false,
+    "reason": "A hypothesis found in a simplified source scan did not survive the production preparation. Not counted as a natural repair."
+  },
+  {
+    "source": "wiki-citations",
+    "start_seconds": 24,
+    "state_at_harness_exit": "review without an approved edit",
+    "rapid_candidates": 0,
+    "stationary_candidates": 0,
+    "prepared_sha256": "e5bc51342084801817aa58e8d10c2a7edd5adebcd0e2373e1c4f3a6a5ef0967a",
+    "accepted_edit": false,
+    "reason": "A hypothesis found in a simplified source scan did not survive the production preparation. Not counted as a natural repair."
+  }
+]

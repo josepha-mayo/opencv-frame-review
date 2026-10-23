@@ -9,6 +9,7 @@ import sys
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 
 STUDIO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(STUDIO))
@@ -17,6 +18,23 @@ from common import write_json
 
 
 class CloudHTTP(unittest.TestCase):
+    def test_natural_sample_is_owned_and_never_approved_by_its_button(self):
+        status,headers,body=self.request('/api/profile')
+        token=json.loads(body)['csrf_token']
+        cookie=headers['Set-Cookie'].split(';')[0]
+        with patch.object(self.server.manager.pool,'submit'):
+            status,_,body=self.request('/api/natural-demo',method='POST',body=b'{}',headers={'Cookie':cookie,'X-App-Token':token})
+        self.assertEqual(status,202)
+        job=json.loads(body);folder=self.server.manager.jobpath(job['id'])
+        self.assertEqual((folder/'owner.txt').read_text(),cookie.split('=')[1])
+        self.assertFalse((folder/'approval.json').exists())
+        self.assertFalse(job['sample_credit']['authored_defect'])
+        self.assertEqual(hashlib.sha256((folder/'input.mp4').read_bytes()).hexdigest(),job['sample_credit']['prepared_sample_sha256'])
+        for name,kind in [('natural-terminal.mp4','video/mp4'),('natural-terminal.png','image/png'),('natural-terminal-credit.json','application/json')]:
+            status,headers,data=self.request('/api/samples/'+name)
+            self.assertEqual(status,200)
+            self.assertEqual(headers['Content-Type'],kind)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.server = cloud_server.make_cloud_server(['demo.example'], 0, Path(self.temp.name), bind='127.0.0.1')
@@ -72,6 +90,8 @@ class CloudHTTP(unittest.TestCase):
         for role in ('upload', 'receipt', 'preview', 'decision', 'prepared'):
             status, _, _ = self.request('/api/jobs/' + jid + '/intake/' + role, headers={'Cookie': 'creator_session=' + 'c' * 64})
             self.assertEqual(status, 404)
+        status, _, _ = self.request('/api/jobs/'+jid+'/steady/steady-0-reference.png',headers={'Cookie':'creator_session='+'c'*64})
+        self.assertEqual(status,404)
 
     def test_cross_origin_wrong_host_and_missing_csrf_refuse_without_job(self):
         self.assertEqual(self.request('/api/profile', headers={'Host': 'attacker.example'})[0], 400)

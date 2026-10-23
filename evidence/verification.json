@@ -1,5 +1,5 @@
 {
-  "build": "lesson-rescue-teaching-contract-2026-10-23-v2",
+  "build": "lesson-rescue-steady-detail-2026-10-23-v3",
   "complete": true,
   "stages": [
     {
@@ -46,6 +46,11 @@
       "stage": "real-lessons",
       "returncode": 0,
       "log": "real-lessons.log"
+    },
+    {
+      "stage": "natural-steady",
+      "returncode": 0,
+      "log": "natural-steady.log"
     },
     {
       "stage": "studio-ui",

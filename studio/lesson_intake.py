@@ -14,12 +14,27 @@ APP = STUDIO.parent / 'opencv-ready/candidate/app'
 sys.path.insert(0, str(APP))
 import server as backend
 from prepare_worker import MAX_UPLOAD, parameters
+import steady_detail
+from protected_regions import validate_regions
 
 
 class LessonManager(backend.Manager):
     def __init__(self, root):
         super().__init__(root)
         self.import_lock = threading.Lock()
+
+    def natural_demo(self, owner=None):
+        credit = backend.read_json(STUDIO/'fixtures/NATURAL_TERMINAL_CREDIT.json')
+        data = backend.bounded_regular_bytes(STUDIO/'fixtures/natural-terminal.mp4',8*1024**2)
+        if hashlib.sha256(data).hexdigest() != credit['prepared_sample_sha256']:
+            raise ValueError('Natural terminal sample changed.')
+        with self.lock:
+            result = self.create('Info-farmer-natural-terminal-prepared-excerpt.mp4',data)
+            folder = self.jobpath(result['id'])
+            if owner is not None:
+                (folder/'owner.txt').write_text(owner)
+            backend.write_json(folder/'sample-credit.json',credit)
+            return self.view(result['id'])
 
     def uploaded_path(self, jid):
         archived = self.root / '.uploads' / (jid + '.bin')
@@ -87,7 +102,7 @@ class LessonManager(backend.Manager):
             with self.lock:
                 self.jobs[jid]['preparing_lesson'] = False
                 self.save(jid)
-            super().run(jid, 'analyze')
+            self.run(jid, 'analyze')
         except BaseException as error:
             if proc is not None:
                 self.stop_process(proc)
@@ -113,7 +128,36 @@ class LessonManager(backend.Manager):
         with self.lock:
             if self.preparation(jid) and not body.get('protected_regions'):
                 raise ValueError('Mark at least one teaching area before planning an edit to a prepared lesson. If the candidate is teaching content, leave it unchanged.')
+            if str(body.get('candidate_id','')).startswith('steady-') or body.get('export_mode') == steady_detail.MODE:
+                folder = self.jobpath(jid)
+                if self.jobs[jid]['status'] != 'review':
+                    raise backend.Conflict('This job is not awaiting review.')
+                return steady_detail.plan(folder,backend.read_json(folder/'analysis.json'),
+                                          backend.read_json(folder/'steady-analysis.json'),body,backend.sha,validate_regions)
             return super().plan(jid, body)
+
+    def approve(self, jid, body):
+        if not (str(body.get('candidate_id','')).startswith('steady-') or body.get('export_mode') == steady_detail.MODE):
+            return super().approve(jid, body)
+        with self.lock:
+            if body.get('approve') is not True:
+                raise ValueError('Explicit approval is required.')
+            plan = self.plan(jid,body)
+            if body.get('recipe_sha256') != plan['recipe_sha256']:
+                raise backend.Conflict('Steady detail or teaching areas changed; review the plan again.')
+            backend.write_json(self.jobpath(jid)/'approval.json',dict(plan,approve=True,approved_utc=datetime.datetime.now(datetime.timezone.utc).isoformat()))
+            self.jobs[jid]['status'] = 'queued'
+            self.save(jid)
+            self.pool.submit(self.run,jid,'export')
+            return self.view(jid)
+
+    def run(self, jid, mode):
+        folder = self.jobpath(jid)
+        is_steady = mode == 'export' and (folder/'approval.json').is_file() and backend.read_json(folder/'approval.json').get('export_mode') == steady_detail.MODE
+        if is_steady or mode == 'analyze':
+            from steady_jobs import run
+            return run(self,jid,mode,backend,STUDIO)
+        return super().run(jid,mode)
 
     def decision_record(self, jid):
         with self.lock:
@@ -135,7 +179,7 @@ class LessonManager(backend.Manager):
                     'edited_export_accepted': job['status'] == 'complete',
                     'failure_reason': job.get('error') if job['status'] == 'failed' else None,
                     'interpretation': ('Processing failed; no edited export was accepted. Retained sources are available.' if job['status'] == 'failed' else 'Creator left the prepared clip unchanged; no edit was approved.' if job['status'] == 'declined' else 'Creator approved one bounded edit; read the encoded report for its measurements.'),
-                    'detector_scope': 'At least 7 alternating luminance transitions in a rolling second on a connected support of at least 64 pixels. Candidates are not semantic distraction labels.',
+                    'detector_scope': 'Frozen rapid-change detector: at least 7 alternating luminance transitions in a rolling second, connected support at least 64 pixels. Separate steady-detail-v1: small stationary two-state luma appearance, at least 6 transitions, bounded state and chroma errors, minimum dwell. Proposals are not semantic distraction labels.',
                     'limitations': ['No candidate does not mean distraction-free or safe.',
                                     'Ordinary caret blinking, notifications and camera movement may be outside this detector.',
                                     'Preparation changes picture/audio and may make small teaching labels unreadable.',
@@ -144,6 +188,17 @@ class LessonManager(backend.Manager):
 
     def view(self, jid):
         out = super().view(jid)
+        folder = self.jobpath(jid)
+        if (folder/'sample-credit.json').is_file():
+            out['sample_credit'] = backend.read_json(folder/'sample-credit.json')
+        if (folder/'steady-analysis.json').is_file() and (folder/'analysis.json').is_file():
+            detection = backend.read_json(folder/'steady-analysis.json')
+            for item in detection['candidates']:
+                candidate = dict(item)
+                candidate['recipe_sha256'] = hashlib.sha256(steady_detail.canonical(item)).hexdigest()
+                candidate['overlay_url'] = f'/api/jobs/{jid}/steady/{item["id"]}-reference.png'
+                candidate['alternate_url'] = f'/api/jobs/{jid}/steady/{item["id"]}-alternate.png'
+                out['candidates'].append(candidate)
         preparation = self.preparation(jid)
         if preparation:
             out['preparation'] = preparation
@@ -155,6 +210,8 @@ class LessonManager(backend.Manager):
                 out['artifacts']['Uploaded original'] = f'/api/jobs/{jid}/intake/upload'
                 out['artifacts']['Preparation receipt'] = f'/api/jobs/{jid}/intake/receipt'
                 out['artifacts']['Lesson decision record'] = f'/api/jobs/{jid}/intake/decision'
+        if out.get('sample_credit') and out['artifacts']:
+            out['artifacts']['Natural sample provenance'] = '/api/samples/natural-terminal-credit.json'
         return out
 
 
@@ -165,6 +222,14 @@ class LessonHandler(backend.Handler):
         return super().file(path, attachment)
 
     def do_POST(self):
+        if urllib.parse.urlsplit(self.path).path == '/api/natural-demo':
+            try:
+                self.secure(True)
+                if self.body(1024) not in (b'',b'{}'):
+                    raise ValueError('The natural lesson demonstration takes no custom parameters.')
+                return self.respond(202,self.server.manager.natural_demo(getattr(self,'session',None)))
+            except (ValueError,KeyError,PermissionError,OSError) as error:
+                return self.handle_error(error)
         if urllib.parse.urlsplit(self.path).path != '/api/imports':
             return super().do_POST()
         try:
@@ -180,6 +245,35 @@ class LessonHandler(backend.Handler):
     def do_GET(self):
         path = urllib.parse.urlsplit(self.path).path
         import re
+        samples = {'/api/samples/natural-terminal.mp4':('fixtures/natural-terminal.mp4','video/mp4','natural-terminal-prepared-excerpt.mp4'),
+                   '/api/samples/natural-terminal.png':('static/natural-terminal.png','image/png',None),
+                   '/api/samples/natural-terminal-credit.json':('fixtures/NATURAL_TERMINAL_CREDIT.json','application/json','natural-terminal-provenance.json')}
+        if path == '/static/natural-terminal.png':
+            path = '/api/samples/natural-terminal.png'
+        if path in samples:
+            try:
+                self.secure()
+                name,kind,attachment = samples[path]
+                expected = backend.read_json(STUDIO/'BUILD_HASHES.json')['files']['studio/'+name]
+                data = backend.bounded_regular_bytes(STUDIO/name,8*1024**2)
+                if hashlib.sha256(data).hexdigest() != expected:
+                    raise ValueError('Natural lesson asset changed.')
+                self.send_response(200);self.headers_safe(kind,len(data),attachment);self.wfile.write(data)
+                return
+            except (ValueError,KeyError,PermissionError,OSError) as error:
+                return self.handle_error(error)
+        steady_match = re.fullmatch(r'/api/jobs/([0-9a-f]{32})/steady/(steady-[0-7]-(?:reference|alternate)\.png)',path)
+        if steady_match:
+            try:
+                self.secure()
+                jid, name = steady_match.groups()
+                folder = self.server.manager.jobpath(jid)
+                previews = backend.read_json(folder/'steady-previews.json')
+                if name not in previews:
+                    raise KeyError('Steady-detail preview unavailable')
+                return self.verified_image(folder/name,previews[name])
+            except (ValueError,KeyError,PermissionError,OSError) as error:
+                return self.handle_error(error)
         match = re.fullmatch(r'/api/jobs/([0-9a-f]{32})/intake/(upload|receipt|preview|decision|prepared)', path)
         if not match:
             return super().do_GET()

@@ -14,3 +14,9 @@
 
 #preparation-preview { display:block; width:100%; height:auto; border-radius:8px; margin:12px 0; }
 #preparation-preview[hidden] { display:none; }
+/* The two observed states stay readable without stretching their aspect ratio. */
+#steady-alternate { display: block; max-width: 100%; height: auto; margin-top: 1rem; }
+#steady-state-review { display: block; }
+.natural-lesson-example { min-width: 0; margin: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #252c29; }
+.natural-lesson-example img { display: block; width: 100%; height: auto; }
+.natural-lesson-example figcaption { color: #e4eddf; padding: 10px 12px; font-size: .68rem; }

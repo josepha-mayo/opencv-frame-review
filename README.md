@@ -1,45 +1,50 @@
 # Frame Review: Keep the Lesson
 
-**Rescue the lesson. Keep what teaches.** For a teacher with a flattened recording and no editable project: inspect a short excerpt, protect the explanation and narration, and change a visual detail only after reviewing a checkable preservation contract.
+**Keep the command. Calm the blink.** A teacher has a flattened recording and no editable project. Frame Review steadies an observed blinking detail during a stationary pause, while checking that the teaching text, timeline and prepared narration stay intact.
 
-[Earlier AWS app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws) · [Devpost entry](https://devpost.com/software/countback-inspect-the-evidence)
+[Live AWS app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws) · [Devpost entry](https://devpost.com/software/countback-inspect-the-evidence) · [Technical report](docs/real-lessons-report.pdf)
 
-**Release status, 23 October:** the teaching-contract candidate passed all ten media stages, a six-source lesson evaluation and actual local browser checks. Real prepared lessons require a protected teaching area; refused edits retain verified source downloads and a decision record. The public AWS endpoint still serves the earlier authored-lesson release. The newer candidate is reproducible locally; its AWS upgrade and final HTTPS checks are deferred until Joseph is home. Its new buttons are not yet on the public endpoint. The final real-voice demo remains pending. The required Devpost ZIP and judging instructions are updated; see the [saved delivery confirmation](evidence/devpost-delivery.json).
+**Verified 23 October:** one naturally blinking lesson case now completes original upload → preparation → reviewed plan → export → downloads on the public HTTPS app. Six adjacent ROI-mean changes became zero inside the approved four-second interval. All 360 protected teaching frames and prepared audio passed their checks. The AWS output matches the independently decoded local output byte for byte. This is one targeted case, not a user study or a general success rate.
 
-![Local candidate showing the real teacher and the protected whiteboard area](docs/real-teacher-local-review.jpg)
+![Actual AWS review of the naturally blinking terminal lesson](docs/natural-aws-review.png)
 
-Actual local candidate, not the current AWS deployment. ITTT classroom footage, CC BY 3.0; the challenge deliberately adds the corner artifact. No endorsement. [Technical report](docs/real-lessons-report.pdf) · [Real lesson provenance](docs/real-lesson-evaluation.md)
+Info-farmer’s real installation tutorial, CC0 1.0. The excerpt was extracted/resized/re-encoded; **no defect was added**. The prepared preset is the same case, not another independent natural success.
 
-## Try real lesson intake
+## Try the natural repair
 
-**Local server:** the bundled preset buttons are cloud-adapter controls. With `studio/run.py --serve`, use **Local video file**: upload `studio/fixtures/real-teacher.webm`, choose start **40**, length **12**, and leave preparation checked. For the controlled positive, upload `studio/fixtures/real-teacher-challenge.mp4`, choose start **0**, length **12**, then protect **[80, 0, 480, 360]**, add the named teacher/whiteboard area, check the plan and approve. Both files are in this archive. Use the cloud buttons below only when running the cloud adapter.
+1. Open the live app, or run the Linux build below. Click **Try a real terminal blink**.
+2. Inspect the kept state and expand **Inspect the alternate observed state**. A caret may be teaching content; reject an inappropriate proposal.
+3. Name the teaching area, enter **X 0, Y 0, Width 640, Height 336**, and click **Add area to list**. Check the plan.
+4. Review the explicit confirmation, then **Generate comparison**. Inspect all twelve boundary crops, the **[6, 0]** activity count and protected/audio measurements.
+5. Download and review the edit, source, recipe, provenance and report. Passing mechanical checks does not accept an edit for publication.
 
-Use an MP4/MOV or WebM you own or have permission to process, up to **64 MiB**. Keep **Prepare a real lesson excerpt** checked, choose its start (0–600 seconds) and length (1–12 seconds), then analyze. Source files may be up to 30 minutes; this release edits the selected segment and does not splice it back into a full lesson.
+For the untouched-original test, obtain the original linked in `studio/fixtures/NATURAL_TERMINAL_CREDIT.json`. SHA-256: **8eae63bc0d5ed8c35c1c0efb7d5ae7588007423f0e9c2fa915dc7971e3675763**. Upload it with preparation checked, start **68**, length **12**, then use the same teaching area. Original and prepared source have separate hashes/downloads.
 
-Preparation accepts one 8-bit SDR video track, at most one mono/stereo audio track, and dimensions up to 3840×2160. Supported codec families are H.264, SDR HEVC, VP8, VP9, AV1 and MPEG-4, with supported AAC/Opus/Vorbis/MP3/PCM audio. Not every combination has been tested. HDR/high-bit-depth video, subtitles/data tracks, unsupported audio and out-of-bounds excerpts are refused.
+## Why a separate vision action
 
-Preparation selects the excerpt, preserves its aspect ratio with letterboxing to 640×360, converts to 30 fps and encodes its audio once as AAC-LC mono/48 kHz. **This changes picture and audio.** The uploaded original is kept separately. Exact edit preservation is measured against the prepared clip, not against the original upload. Download both sources and the preparation receipt.
+The frozen rapid-change detector missed ordinary caret blinking. **steady-detail-v1** separately checks small stationary two-state luma support, at least six transitions, minimum dwell, bounded appearance error and stable supporting chroma. It holds the observed state with greater contrast against its surrounding ring, only in the reviewed box and interval. It does not infer which activity is unwanted or generate replacement pixels.
 
-The app also offers two distinct real-footage examples:
+This case edits native box **[10,340,8,14]**, frames **30–149**, keeping source frame **30**. Approval binds source, both analyses, implementation, proposal and named teaching rectangles. The worker recomputes the proposal and measures the actual encoded result. Protection overlapping the four-pixel RGB influence area is refused. Changed sources and failed checks withhold the edited download.
 
-- **Analyze a real classroom lesson:** the unmodified ITTT classroom original, preparing seconds 40–52. The tested excerpt produced no candidate; choosing Leave unchanged retains it without inventing an edit.
-- **Try a controlled distraction on real footage:** the same real teacher and human narration with an explicitly added flashing corner in the black margin. The defect is authored. Protect **[80, 0, 480, 360]**, name it Teacher and whiteboard, add the area, check the plan and explicitly approve. The exact gate covers all 360 frames of that region. Inspect twelve boundary crops and download the edited segment, sources, recipe, report and preparation receipt.
+OpenCV 5 performs connected-component localization, overlays, encoded RGB crops and preservation measurements. NumPy represents native YUV planes/mappings. FFmpeg handles bounded preparation, encoding and audio transport. The older rapid detector and periodic 5× retimer remain unchanged.
 
-The authored math clip remains a separate regression demonstration. No source selection or preparation approves an edit. Prepared lessons require at least one saved teaching area. Check the smallest label in the full-size prepared frame: resizing may have removed teaching detail. A protected area overlapping the edit is refused. Changing an area invalidates consent and the old plan. Reload reopens a job without repeating its decision; unsaved areas and consent clear.
+## Measured evidence
 
-## Evidence
+| Same natural interval | Adjacent ROI-mean RGB changes ≥8 codes |
+|---|---:|
+| Prepared original | 6 |
+| Fixed spatial blur, 5×5 / sigma 2 | 6 |
+| Observed-state hold | 0 |
 
-The natural-footage audit covers **six original lesson sources and fourteen selected, unaugmented excerpts**. Four new tutorials use the same three windows selected before testing. Eleven of those twelve excerpts returned no candidate; the remaining Blender candidate fell in its settings panel. Protecting those settings refused the edit before approval. All twelve originals and prepared downloads matched their recorded hashes. This is a convenience sample, not a representative accuracy benchmark.
+![Actual encoded measurements](docs/natural-activity-comparison.png)
 
-A separate natural camera-flicker recording produced candidates in two excerpts, but both largest-support export attempts failed the unchanged recurrence gate. The revised workflow retained both sources and a failure-aware decision record; edited downloads stayed blocked. That recording is not an active lesson. **Zero natural lesson repairs are qualified.** The controlled positive below still uses an explicitly added defect.
+The blur reference is one declared, untuned local luma blur with retained source chroma, not a complete editor comparison. The count excludes entry/return. The strong return remains reported: source delta **0.61055**, edited **0.61449**. No attention, comprehension, accessibility, time-saving, adoption or medical benefit has been measured.
 
-Read [every natural outcome and its provenance](docs/natural-lessons/README.md), [the final fixed-cohort receipt](evidence/natural-lessons.json), [the actual refusal/recovery checks](evidence/natural-attempts.json) and [the rubric-specific demonstration route](docs/judging-evidence-2026-10-23.md). The [updated technical report](docs/real-lessons-report.pdf) and [exact current release binding](evidence/release-binding.json) distinguish local results from pending AWS delivery.
+Independent checks cover native samples outside the box, the exact mapping, all 240 outside-interval frames, all protected RGB samples across 360 frames, RGB outside the influence area and prepared narration. Actual browser downloads of original/prepared/output and all twelve crops match their hashes. The AWS-downloaded file played through twelve seconds at 640×360 without a media error; listening was not evaluated.
 
-The original two-source qualification is repeated on the final image: the classroom WebM is 854×480, 29.97 fps with stereo Vorbis; the separate Wikipedia screencast is 1920×1080, 60 fps, AV1 with stereo Vorbis. Both original excerpts reached review and were left unchanged. Their original-upload downloads matched the original SHA-256. Independent source-to-prepared narration correlation was 0.99604 and 0.99975, with zero best lag within a ±10 ms search; preparation remains lossy.
+[Exact binding](evidence/steady-v3/release-binding.json) · [Eleven stages](evidence/steady-v3/verification.json) · [Original HTTP test](evidence/steady-v3/original-http.json) · [AWS/browser checks](evidence/steady-v3/cloud-verified.json) · [Blur reference](evidence/steady-v3/blur-reference.json) · [Measured traces](evidence/steady-v3/comparison.json)
 
-The augmented classroom challenge passed independent native outside-sample/mapping checks, all 360 teacher/whiteboard RGB-frame comparisons, prepared-narration PCM comparison and all twelve response-PNG hashes. The editor additionally checks AAC packet/timing/skip metadata. This demonstrates functional preservation on real footage with an added test defect; it does not establish repair success on naturally defective lessons or teacher benefit.
-
-See `docs/real-lesson-evaluation.md`, `evidence/real-lessons.json`, `evidence/verification.json` and `evidence/release-binding.json` for source provenance, exact build identity, refusal cases and receipts. The core media algorithms and historical negative evidence remain unchanged. No historical hash gate has been weakened.
+The earlier six-source/fourteen-excerpt HTTP audit, Blender teaching-content refusal, failed natural-camera retimes and disclosed added-corner challenge remain in [the historical natural audit](docs/natural-lessons/README.md). Four additional licensed tutorials were screened without a supported stationary proposal; two tiny browser-caret hypotheses also failed after production preparation. [Exploratory sources](evidence/steady-v3/exploratory-sources.json) and [negative hypotheses](evidence/steady-v3/negative-hypotheses.json) remain separate from qualification. Convenience searches and repeats of the same case do not estimate prevalence or recall.
 
 ## Reproduce
 
@@ -50,16 +55,27 @@ docker cp frame-review-check:/tmp/qualification ./qualification
 docker run --rm --network host frame-review python studio/run.py --serve --port 8877
 ```
 
-Open http://127.0.0.1:8877 on the Linux Docker host. Media operation requires Linux resource/process controls. Keep processing on native Linux storage; a retained Windows-bind-mount failure hit an unchanged time limit. Copy receipts out after completion. Windows can run source/UI tests, not the media worker. The final image passes 137 backend unit tests and all ten stages; studio checks run 65 tests on Linux and Windows with the documented platform-specific skip. Current browser and source-recovery receipts are in `evidence/teaching-local-browser.json`. Ten verification stages include the original numerical/refusal suites, authored math lesson, real-classroom preparation/augmented challenge, and studio checks. Exact dependencies and binary hashes are pinned by the Dockerfile and runtime lock.
+Open http://127.0.0.1:8877 on the Linux Docker host. **Try a real terminal blink works locally and on AWS.** The older classroom/cloud regression buttons are cloud-adapter controls. All **eleven stages** passed, including 137 backend tests and 73 studio tests (72 passed, one platform skip). Media processing requires Linux resource/process controls and the pinned runtime. Windows can inspect source and run pure UI checks; this receipt is the Linux qualification.
 
-The external two-source test is reproducible with `docs/fetch-real-evaluation-sources.py` and `python studio/tests/integration_real_lessons.py NEW_OUTPUT_DIRECTORY ORIGINALS_DIRECTORY` in the pinned image. The included classroom original and controlled challenge carry ITTT attribution and CC BY 3.0; external Wikimedia media has its separate attribution/license record. These media licenses do not license third-party dependencies or change the project's source-code notice.
+For the external original-upload test, mount the audit/originals read-only and keep output inside native Linux container storage:
 
-To reproduce the natural audit, fetch and hash-check the originals with `python docs/natural-lessons/fetch_sources.py ORIGINALS --camera`. The runtime image contains the application, not these external audit scripts. Mount `docs/natural-lessons` read-only at `/audit`, mount the originals read-only at `/originals`, and provide native Linux output storage at `/results` writable by UID 10001. In the pinned image run `python /audit/audit_final_http.py /audit/plan.json /originals /results/NEW_COHORT`, then `python /audit/targeted_final_http.py /results/OTHER_NEW_OUTPUT /originals`. Both output names must be new. The optional camera input is an identified Commons transcode. Source and derivative-media licenses are in `docs/natural-lessons/MEDIA_CREDITS.txt`.
+```sh
+docker run --name natural-original-check --network none -v "$PWD/docs/steady-detail:/audit:ro" -v "$PWD/originals:/originals:ro" frame-review python /audit/original_http.py /tmp/natural-original /originals/tamil-install.webm 68
+docker cp natural-original-check:/tmp/natural-original ./natural-original-evidence
+```
+
+Container/output names must be new. The image contains the application, not the external audit directory. Hashes and credits accompany the receipts. Classroom/controlled fixtures and their separate CC BY 3.0 attribution remain included for regression testing.
 
 ## AWS and limits
 
-The prepared deployment runs preparation, OpenCV analysis and FFmpeg export on ECS/Fargate behind HTTPS after the pending upgrade; ECR holds the digest-pinned image and CloudWatch logs the service. See `docs/DEPLOYMENT.md`. The application runs as unprivileged UID 10001, has no AWS API permissions, processes media serially, restricts preparation protocols to file/pipe and applies process/time/memory/disk and upload caps. Job ownership uses Secure/HttpOnly/SameSite cookies plus host/origin/request-token checks. It retains at most eight jobs; uploads and results expire after 24 hours and task replacement can clear them sooner. Download results you need.
+ECS/Fargate performs preparation, OpenCV analysis and FFmpeg export behind managed HTTPS. ECR pins the digest and CloudWatch records the service. The completed revision runs one task, one worker and eight job slots. [Deployment instructions](docs/DEPLOYMENT.md).
 
-The frozen multimedia stack has known package-scan findings. Unprivileged operation and input restrictions are mitigations, not a security certification. Fixed rectangles do not track objects or establish readability. Repeating a cycle may discard small variations; entry/exit transitions remain for review. Adjacent unprotected RGB pixels can differ through chroma interpolation. No safety, medical or publishing-clearance claim is made.
+- Manifest: **593b07a52cee2dda00fd756e387f9059f9a7c6ee7c5026cebf42c8f6fb86b658** — 96 exact files.
+- Image: **sha256:0991b45074e726f43492ed480222ec3943888f1b13a8534d1e8b5dd1a468af15**.
+- Natural output: **ce027d46d71a225729a56f25c4c68cf78bdd9f60769db7da26a5a01991e2e0b6**.
 
-Developed by Joseph Ayanda with AI assistance. The classroom and screencast use their original human narration. The older 2:46 demonstration uses disclosed neural narration and shows the earlier core workflow; a final demo with Joseph's real voice is deferred at his request. Real creator trials and competent manual-editor comparisons remain unperformed.
+Intake: MP4/MOV/WebM up to 64 MiB, one supported 8-bit SDR video up to 3840×2160, at most one supported mono/stereo audio track, sources up to 30 minutes. Excerpt start 0–600 seconds, length 1–12 seconds. **No full-lesson splice-back.** Preparation changes picture/audio: letterbox/resize to 640×360, 30 fps, H.264 and optional AAC-LC mono/48 kHz once. It can make small teaching detail unreadable. Exact edit checks reference that prepared source.
+
+UID 10001, file/pipe protocols, process/time/memory/disk caps, Secure/HttpOnly/SameSite cookies and host/origin/request-token checks bound operation. No application AWS API role is needed. Inactive jobs expire after 24 hours; task replacement can clear them sooner. Download results you need. Known multimedia package findings remain; mitigations are not certification. Fixed rectangles do not track objects or prove readability. No safety, compliance or publishing-clearance claim is made.
+
+Developed by Joseph Ayanda with AI assistance. The existing 2:46 video shows the earlier workflow with disclosed neural narration. Joseph’s final real-voice demo, broader natural-repair coverage, creator trials and competent manual-editor comparisons remain outstanding. No COOL or Agentic Vision award claim is made.

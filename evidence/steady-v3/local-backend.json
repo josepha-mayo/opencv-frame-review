@@ -1,0 +1,13 @@
+{
+  "scope": "Actual local HTTP responses from the owning browser job; cloud qualification is separate.",
+  "twelve_crop_response_hashes_exact": true,
+  "no_owner_statuses": {
+    "/api/jobs/50a2e98be6440651f5b4ab42fe1c11a1": 404,
+    "/api/jobs/50a2e98be6440651f5b4ab42fe1c11a1/steady/steady-0-reference.png": 404,
+    "/api/jobs/50a2e98be6440651f5b4ab42fe1c11a1/steady/steady-0-alternate.png": 404,
+    "/api/jobs/50a2e98be6440651f5b4ab42fe1c11a1/download/edited.mp4": 404
+  },
+  "edited_download_matches_report": true,
+  "output_sha256": "ce027d46d71a225729a56f25c4c68cf78bdd9f60769db7da26a5a01991e2e0b6",
+  "source_manifest_sha256": "593b07a52cee2dda00fd756e387f9059f9a7c6ee7c5026cebf42c8f6fb86b658"
+}

@@ -1,0 +1,12 @@
+{
+  "scope": "Explicit browser playback of the exact AWS-downloaded output on a separate local test page; no listening or comprehension claim.",
+  "output_sha256": "ce027d46d71a225729a56f25c4c68cf78bdd9f60769db7da26a5a01991e2e0b6",
+  "currentTime": 12,
+  "duration": 12,
+  "ended": true,
+  "error": null,
+  "height": 360,
+  "paused": true,
+  "readyState": 4,
+  "width": 640
+}

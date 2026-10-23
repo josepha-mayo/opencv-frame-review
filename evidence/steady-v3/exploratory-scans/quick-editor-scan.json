@@ -1,0 +1,20 @@
+[
+  {
+    "start_seconds": 0,
+    "source_sha256": "eea372b8bacda4cf9ba52083d88b63657e8366c0bc460dd21472f62bd05a4ab9",
+    "exploratory": true,
+    "candidates": []
+  },
+  {
+    "start_seconds": 12,
+    "source_sha256": "eea372b8bacda4cf9ba52083d88b63657e8366c0bc460dd21472f62bd05a4ab9",
+    "exploratory": true,
+    "candidates": []
+  },
+  {
+    "start_seconds": 24,
+    "source_sha256": "eea372b8bacda4cf9ba52083d88b63657e8366c0bc460dd21472f62bd05a4ab9",
+    "exploratory": true,
+    "candidates": []
+  }
+]

@@ -1,22 +1,16 @@
 {
-  "release": "Teaching preservation contract and refusal recovery, locally qualified 23 October 2026",
-  "build": "lesson-rescue-teaching-contract-2026-10-23-v2",
-  "source_manifest_sha256": "54468669f8704929c1085a3bf2276cc6dde0ad31390b80de065c35e4c5c26aa6",
-  "source_files_verified": 87,
-  "local_image_id": "sha256:050ea28fdbd0d2dc8afe474a6a725a8978a51086f144784ad3e62fd672783c0d",
+  "build": "lesson-rescue-steady-detail-2026-10-23-v3",
   "verification_complete": true,
-  "verification_stages": 10,
-  "original_lesson_sources": 6,
-  "selected_original_lesson_excerpts": 14,
-  "qualified_natural_lesson_repairs": 0,
-  "natural_camera_stress_excerpts": 2,
-  "natural_camera_export_refusals": 2,
-  "browser_scope": "Actual local cloud-adapter UI: original Blender protection refusal, unchanged downloads, controlled classroom edit, real camera export refusal with source recovery, twelve crops, reload and responsive checks.",
-  "cloud_upgrade_verified": false,
-  "remaining": [
-    "Deploy this qualified image on existing AWS account and verify real HTTPS flows when Joseph is home",
-    "Record the final demo with Joseph real voice later",
-    "Establish natural lesson repair success and observed creator benefit before claiming either"
-  ],
-  "devpost_attachment": "Delivery is recorded separately from this runtime qualification snapshot."
+  "verification_stages": 11,
+  "source_files_verified": 96,
+  "source_manifest_sha256": "593b07a52cee2dda00fd756e387f9059f9a7c6ee7c5026cebf42c8f6fb86b658",
+  "local_image_id": "sha256:0991b45074e726f43492ed480222ec3943888f1b13a8534d1e8b5dd1a468af15",
+  "ecr_image_digest": "sha256:0991b45074e726f43492ed480222ec3943888f1b13a8534d1e8b5dd1a468af15",
+  "aws_endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+  "new_real_intake_deployed_to_aws": true,
+  "natural_original_http_and_browser_verified": true,
+  "natural_success_scope": "One targeted original lesson, one four-second interval; prepared preset is the same case. No user study or representative success rate.",
+  "original_input_sha256": "8eae63bc0d5ed8c35c1c0efb7d5ae7588007423f0e9c2fa915dc7971e3675763",
+  "prepared_sha256": "683df17ddcec4eacd180e740308792d6c58ff77f482a4439c268584229762a45",
+  "output_sha256": "ce027d46d71a225729a56f25c4c68cf78bdd9f60769db7da26a5a01991e2e0b6"
 }

@@ -1,0 +1,16 @@
+{
+  "schema": "natural-terminal-credit-v1",
+  "author": "Info-farmer",
+  "title": "Tutorial-tamil-installation-SimpleScreenRecorder.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Tutorial-tamil-installation-SimpleScreenRecorder.webm",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "original_sha256": "8eae63bc0d5ed8c35c1c0efb7d5ae7588007423f0e9c2fa915dc7971e3675763",
+  "source_original_bytes": 34393948,
+  "excerpt_start_seconds": 68,
+  "excerpt_duration_seconds": 12,
+  "prepared_sample_sha256": "683df17ddcec4eacd180e740308792d6c58ff77f482a4439c268584229762a45",
+  "authored_defect": false,
+  "derivation": "Extracted seconds 68-80, resized to 640x360, converted to 30fps H.264 and AAC mono. This bundled file is the prepared excerpt; the separately tested original is linked above. No blink or other defect was added.",
+  "notice": "Natural caret activity; no author endorsement. Human review decides whether holding its observed state is useful."
+}

@@ -1,3 +1,5 @@
+> Historical v2 audit: the zero-natural-repair result below belongs to the earlier rapid-retiming workflow. The current v3 release qualifies one separately selected natural terminal blink with an observed-state hold; [current release binding](../../evidence/steady-v3/release-binding.json). The original failures and counts below are preserved.
+
 # Natural footage audit: preserve the teaching before offering a repair
 
 A teacher often retains a flattened recording after losing its editable project. Frame Review asks for a smaller, checkable decision: is a rapid-changing region unwanted decoration, and can a local retime preserve the teaching around it? These tests show why both questions matter.

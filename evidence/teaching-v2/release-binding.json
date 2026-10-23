@@ -1,0 +1,22 @@
+{
+  "release": "Teaching preservation contract and refusal recovery, locally qualified 23 October 2026",
+  "build": "lesson-rescue-teaching-contract-2026-10-23-v2",
+  "source_manifest_sha256": "54468669f8704929c1085a3bf2276cc6dde0ad31390b80de065c35e4c5c26aa6",
+  "source_files_verified": 87,
+  "local_image_id": "sha256:050ea28fdbd0d2dc8afe474a6a725a8978a51086f144784ad3e62fd672783c0d",
+  "verification_complete": true,
+  "verification_stages": 10,
+  "original_lesson_sources": 6,
+  "selected_original_lesson_excerpts": 14,
+  "qualified_natural_lesson_repairs": 0,
+  "natural_camera_stress_excerpts": 2,
+  "natural_camera_export_refusals": 2,
+  "browser_scope": "Actual local cloud-adapter UI: original Blender protection refusal, unchanged downloads, controlled classroom edit, real camera export refusal with source recovery, twelve crops, reload and responsive checks.",
+  "cloud_upgrade_verified": false,
+  "remaining": [
+    "Deploy this qualified image on existing AWS account and verify real HTTPS flows when Joseph is home",
+    "Record the final demo with Joseph real voice later",
+    "Establish natural lesson repair success and observed creator benefit before claiming either"
+  ],
+  "devpost_attachment": "Delivery is recorded separately from this runtime qualification snapshot."
+}

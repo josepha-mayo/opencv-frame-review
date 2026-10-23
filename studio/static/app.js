@@ -85,6 +85,9 @@
     }
   }
   const exportMode = byId("export-mode"), exportModeNote = byId("export-mode-note");
+  const steadyReview = byId("steady-state-review"), steadyAlternate = byId("steady-alternate");
+  let alternateLoaded = false;
+  const STEADY_NOTE = "Keep the more contrasting observed state only inside this stationary-blink interval. Removes alternate phases. Refuses changed teaching areas, changed timing/audio, any native sample outside the box, or decoded RGB changes outside the four-pixel influence area. Review both source states and the return boundary.";
   const protectLabel = byId("protect-label"), protectList = byId("protected-list"), protectAdd = byId("protect-add");
   let savedRegions = [];
   const MAX_BYTES = 64 * 1024 * 1024;
@@ -92,6 +95,7 @@
   const preparationNotice = byId("preparation-notice"), preparationPreview = byId("preparation-preview");
   const realDemo = byId("real-demo-button");
   const realChallenge = byId("real-challenge-button");
+  const naturalDemo = byId("natural-demo-button");
   const ACTIVE = new Set(["queued", "analyzing", "exporting"]);
   const TERMINAL = new Set(["complete", "declined", "failed", "cancelled"]);
   const STATUS = {
@@ -196,6 +200,7 @@
     recovery.dismiss.disabled = recovering;
     ui.file.disabled = busy || !token || locked;
     ui.demo.disabled = busy || !token || locked;
+    naturalDemo.disabled = busy || !token || locked;
     realDemo.disabled = busy || !token || locked;
     realChallenge.disabled = busy || !token || locked;
     [prepareLesson, clipStart, clipDuration].forEach(node => { node.disabled = busy || locked; });
@@ -203,9 +208,13 @@
     ui.analyze.disabled = busy || !token || locked || !file || file.size === 0 || file.size > MAX_BYTES;
     ui.analyze.textContent = busy && !job ? "Sending file…" : "Analyze selected file ↗";
     const canReview = job?.status === "review" && !busy && !refreshInFlight && !stateUncertain;
-    ui.reviewed.disabled = !canReview || !imageLoaded;
-    ui.approve.disabled = !canReview || !imageLoaded || !ui.reviewed.checked || !currentCandidate()?.recipe_sha256 || !job?.prediction_sha256 || !protectionPlan;
+    const steady = currentCandidate()?.action === "steady-detail-v1";
+    const imagesReady = imageLoaded && (!steady || alternateLoaded);
+    ui.reviewed.disabled = !canReview || !imagesReady;
+    ui.approve.disabled = !canReview || !imageLoaded || !ui.reviewed.checked || !imagesReady || !currentCandidate()?.recipe_sha256 || !job?.prediction_sha256 || !protectionPlan;
     [ui.protectX, ui.protectY, ui.protectW, ui.protectH, ui.protectPick, ui.protectCheck, ui.protectClear, exportMode, protectLabel, protectAdd].forEach((node) => { node.disabled = !canReview || !imageLoaded; });
+    exportMode.disabled = !canReview || !imageLoaded || steady;
+    exportMode.querySelectorAll("option").forEach(option => { option.disabled = option.value === "steady-detail-v1" && !steady; });
     ui.decline.disabled = !canReview;
     ui.cancel.disabled = busy || refreshInFlight || stateUncertain;
     ui.retry.disabled = busy || refreshInFlight;
@@ -239,6 +248,9 @@
     const candidate = currentCandidate();
     imageLoaded = false;
     const version = ++imageVersion;
+    alternateLoaded = false;
+    steadyReview.hidden = candidate?.action !== "steady-detail-v1";
+    steadyAlternate.removeAttribute("src");
     ui.reviewed.checked = false;
     ui.facts.replaceChildren();
     ui.imageError.hidden = true;
@@ -246,6 +258,17 @@
     ui.image.alt = "";
     resetProtection(candidate);
     if (!candidate) { updateControls(); return; }
+
+    if (candidate.action === "steady-detail-v1") {
+      addFact(ui.facts,"Action","Steady one observed more contrasting state");
+      addFact(ui.facts,"State to keep / alternate frame",[candidate.reference_frame,candidate.alternate_frame]);
+      addFact(ui.facts,"Observed state transitions",candidate.state_transitions);
+      addFact(ui.facts,"RGB influence area [x,y,width,height]",candidate.influence_xywh);
+      steadyAlternate.onload = () => { if (version !== imageVersion) return; alternateLoaded = true; updateControls(); };
+      steadyAlternate.onerror = () => { if (version !== imageVersion) return; alternateLoaded = false; ui.reviewed.checked = false; showError(ui.imageError,"Alternate observed state unavailable. Review both states before generating this edit."); updateControls(); };
+      const alternate = localURL(candidate.alternate_url);
+      if (alternate) steadyAlternate.src = alternate;
+    }
 
     addFact(ui.facts, "Candidate", candidate.id);
     addFact(ui.facts, "Region [x, y, width, height]", candidate.bbox);
@@ -350,6 +373,7 @@
     protectionVersion += 1; picking = false; firstCorner = null;
     ui.reviewed.checked = false;
     savedRegions=[];protectList.replaceChildren();protectLabel.value="";exportMode.value="periodic-local-retime-v2";exportModeNote.textContent="5× local retiming inside the detected interval only. Requires at least three repeated cycles, mean recurrence error ≤2 and every sample difference ≤32 native codes. Small nonperiodic changes can still pass. Strong entry transitions remain; playback unverified; no safety claim.";
+    if (candidate?.action === "steady-detail-v1") { exportMode.value = "steady-detail-v1"; exportModeNote.textContent = STEADY_NOTE; }
     [ui.protectX,ui.protectY,ui.protectW,ui.protectH].forEach((field) => { field.value = ""; });
     protectionPlan = null; // Every retiming mode needs a freshly checked, bound plan.
     ui.protectRect.hidden = true;
@@ -382,7 +406,7 @@
       if (version!==protectionVersion || job.id!==id || currentCandidate()?.id!==candidateId) return;
       if (plan.prediction_sha256!==prediction || plan.candidate_id!==candidateId || plan.export_mode!==mode || JSON.stringify(plan.protected_regions)!==JSON.stringify(regions) || !/^[0-9a-f]{64}$/.test(plan.recipe_sha256)) throw new Error("The returned plan does not match the selected edit and areas.");
       const candidate = currentCandidate();
-      ui.planSummary.textContent = (mode === "periodic-local-retime-v2" ? "Slow the selected decoration 5×" : mode === "legacy" ? "Hold each 10-frame block in the selected interval" : "Hold the selected decoration across the entire clip") + ". Detected region: [" + candidate.bbox.join(", ") + "]; detected interval: frames " + candidate.interval_frames.join("–") + ". " + (regions.length ? "Check every frame of: " + regions.map(region => region.label).join(", ") + "." : "No important area declared.") + " Generate only after reviewing this plan. The encoded result can still be refused.";
+      ui.planSummary.textContent = (mode === "steady-detail-v1" ? "Keep the more contrasting observed state from frame "+candidate.reference_frame+" steady inside this interval" : mode === "periodic-local-retime-v2" ? "Slow the selected decoration 5×" : mode === "legacy" ? "Hold each 10-frame block in the selected interval" : "Hold the selected decoration across the entire clip") + ". Detected region: [" + candidate.bbox.join(", ") + "]; detected interval: frames " + candidate.interval_frames.join("–") + ". " + (regions.length ? "Check every frame of: " + regions.map(region => region.label).join(", ") + "." : "No important area declared.") + " Generate only after reviewing this plan. The encoded result can still be refused.";
       ui.planSummary.hidden = false;
       protectionPlan=plan;
       ui.protectStatus.textContent=regions.length ? "Checked "+regions.length+" fixed areas. The actual encoded result still has to meet its criteria." : "Edit plan checked. No important area declared.";
@@ -401,7 +425,7 @@
     const fingerprint = JSON.stringify([job.prediction_sha256, candidates]);
     ui.candidates.hidden = job.status !== "review" || candidates.length === 0;
     if (job.status === "review" && candidates.length === 0) {
-      ui.status.textContent = "No rapid-change candidate in this excerpt. This detector can miss slower blinking, notifications and camera movement. It does not establish that the lesson is distraction-free. Leave it unchanged and download the lesson decision record.";
+      ui.status.textContent = "No supported rapid-change or stationary-blink proposal in this excerpt. Notifications, moving cursors and many other distractions remain outside these checks. It does not establish that the lesson is distraction-free. Leave it unchanged and download the lesson decision record.";
     }
     if (fingerprint === candidateFingerprint) return;
     candidateFingerprint = fingerprint;
@@ -419,7 +443,7 @@
         selectedId = input.value;
         renderSelectedCandidate();
       });
-      label.append(input, element("span", "Candidate " + String(candidate.id)));
+      label.append(input, element("span", (candidate.action === "steady-detail-v1" ? "Stationary blink · " : "Rapid change · ") + String(candidate.id)));
       ui.candidateList.append(label);
     });
     renderSelectedCandidate();
@@ -614,6 +638,10 @@
     ui.raw.textContent = hasSummary ? JSON.stringify(summary, null, 2) : "No result report was returned by the server.";
 
     if (hasSummary) {
+      if (summary.export_mode === "steady-detail-v1") {
+        const detail = summary.stationary_detail;
+        ui.highlights.append(resultCard("Steady reading detail", [["Observed RGB activity before / after",detail ? [detail.activity.source,detail.activity.edited] : null],["Interval frames",detail?.proposal.interval_frames],["Kept source frame",detail?.proposal.reference_frame],["Preservation gate",summary.acceptance?.status]], "Adjacent ROI-mean changes of at least 8 RGB codes inside the interval. This excludes entry/return and does not measure attention or learning."));
+      }
       if (summary.export_mode === "periodic-local-retime-v2") {
         ui.highlights.append(resultCard("Local decoration retiming", [["Slowdown", "5×"], ["Observed cycle frames", summary.detection?.period_frames], ["Retimed cycle frames", summary.detection ? summary.detection.period_frames * 5 : null], ["Preservation gate", summary.acceptance?.status]], "The rest of the clip keeps its original timeline. This is slower pulsing, not smooth motion."));
       }
@@ -624,7 +652,7 @@
       const trigger = summary.selected_trigger_count;
       const outside = summary.outside_mask_error;
       const boundary = summary.boundary;
-      ui.highlights.append(resultCard("Selected trigger count", trigger ? [
+      if (summary.export_mode !== "steady-detail-v1") ui.highlights.append(resultCard("Selected trigger count", trigger ? [
         ["Unchanged re-encode control", trigger.control],
         ["Edited encoded result", trigger.edited],
         ["Experimental criterion maximum", trigger.criterion_max]
@@ -699,7 +727,8 @@
     ui.statusPill.dataset.state = job.status;
     ui.status.textContent = status[1];
     if (job.preparing_lesson) ui.status.textContent = "Preparing your selected lesson excerpt, then analyzing it. No edit has been approved.";
-    preparationNotice.hidden = !job.preparation;
+    preparationNotice.hidden = !job.preparation && !job.sample_credit;
+    if (job.sample_credit) preparationNotice.textContent = "Natural tutorial sample: " + job.sample_credit.derivation + " Inspect both observed states before deciding whether its caret should stay steady. The full source attribution and preparation history are downloadable.";
     preparationPreview.hidden = !job.preparation;
     byId("preparation-fullsize").hidden = !job.preparation;
     if (job.preparation) {
@@ -825,6 +854,10 @@
   ui.demo.addEventListener("click", async () => {
     if (ui.demo.disabled || ui.cloudSamples.hidden) return;
     await startJob("/api/demo", {headers: {"Content-Type":"application/json"}, body:"{}"});
+  });
+  naturalDemo.addEventListener("click", async () => {
+    if (naturalDemo.disabled) return;
+    await startJob("/api/natural-demo", {headers:{"Content-Type":"application/json"},body:"{}"});
   });
   realDemo.addEventListener("click", async () => {
     if (realDemo.disabled || ui.cloudSamples.hidden) return;

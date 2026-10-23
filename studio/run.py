@@ -77,6 +77,7 @@ def verify(output):
         ('pixel-refusals', [str(tests / 'integration_rejections.py')]),
         ('lesson', [str(ROOT / 'tests/integration_lesson.py'), str(output / 'lesson')]),
         ('real-lessons', [str(ROOT / 'tests/integration_real_lessons.py'), str(output / 'real-lessons')]),
+        ('natural-steady', [str(ROOT / 'tests/integration_steady_detail.py'), str(output / 'natural-steady')]),
         ('studio-ui', ['-m', 'unittest', 'discover', '-s', str(ROOT / 'tests')]),
     ]
     outcomes = []
@@ -91,7 +92,7 @@ def verify(output):
         (output / 'verification.json').write_text(json.dumps(receipt, indent=2) + '\n')
         if result.returncode:
             raise RuntimeError(name + ' failed; see ' + str(output / (name + '.log')))
-    print('Ten stages passed, including real classroom intake and the disclosed augmented edit challenge. Browser checks and creator benefit remain separate.', flush=True)
+    print('Eleven stages passed, including a naturally blinking lesson excerpt, real classroom intake, and the disclosed augmented edit challenge. Original-source upload, browser/cloud checks and creator benefit remain separate.', flush=True)
 
 
 def main():
