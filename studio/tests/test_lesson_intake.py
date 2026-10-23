@@ -55,6 +55,10 @@ class LessonIntake(unittest.TestCase):
                     self.assertFalse(result['edited_export_accepted'])
                     self.assertEqual(result['failure_reason'], 'No repeated cycle')
                     self.assertIn('Retained sources', result['interpretation'])
+                    backend.write_json(manager.jobpath(jid)/'result.json', {'schema':'steady-detail-export-v1','acceptance':{'status':'rejected_experiment'},'encoded_boundary_checks':{'passed':False}})
+                    result = manager.decision_record(jid)
+                    self.assertFalse(result['encoded_export_measurements']['encoded_boundary_checks']['passed'])
+                    self.assertFalse(result['edited_export_accepted'])
                     job['status'] = 'declined'
                     (manager.jobpath(jid) / 'edited.mp4').write_bytes(b'unexpected')
                     with self.assertRaisesRegex(ValueError, 'Unexpected edited artifact'):

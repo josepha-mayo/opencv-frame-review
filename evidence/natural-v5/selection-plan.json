@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-23T19:20:04.762120+00:00",
+  "sources": [
+    {
+      "id": "ezhil-turtle",
+      "title": "Ezhuthi - Ezhil tutorial Loops, Turtle graphics.webm"
+    },
+    {
+      "id": "geogebra-matrix",
+      "title": "GeoGebra tutorial - Determinant of a matrix with a variable element using sliders.webm"
+    },
+    {
+      "id": "phonemes",
+      "title": "Tabela de Fonemas - Tutorial.webm"
+    },
+    {
+      "id": "wikisound-recording",
+      "title": "WikiSound Campaign tutorial for Recording.webm"
+    }
+  ],
+  "selection": "Four named tutorial sources chosen from official Commons title/size/license metadata before viewing or scoring their footage. Different subjects/authors. Convenience sample, no population claims.",
+  "rule": "After freezing v5 boundary code, prepare 12 seconds at floor(duration*quarter), floor(duration*half), floor(duration*three_quarters), capped to duration-12 and 600 seconds. Record all twelve outcomes; no alternate-positive search within this cohort. Inspect any proposal for teaching meaning; source remains no-edit if protected or unsupported.",
+  "development": "Previous six cases are development/regressions, not new independent successes. New code may be revised only on those cases before freezing this cohort run."
+}

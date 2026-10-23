@@ -1,0 +1,7 @@
+{
+  "candidate_optimization": "Crop selected RGB before the frozen OpenCV floating colour transform",
+  "regression_observed": "A pinned-random frame differed: crop-first selected mean 0.39870994786421454, frozen full-width masked mean 0.3987099602818489.",
+  "interpretation": "OpenCV full-width SIMD and narrow scalar dispatch can round differently. Pointwise mathematical equivalence was insufficient for exact diagnostic identity.",
+  "resolution": "Reject crop-first optimization. Retain full-width LUT and colour transform, reuse the already decoded frames, then crop transformed values for the selected mean. Six boundary/numerical tests pass, including equality against the actual frozen temporal entry point.",
+  "threshold_policy": "No encoded boundary tolerance or worker CPU budget was increased."
+}

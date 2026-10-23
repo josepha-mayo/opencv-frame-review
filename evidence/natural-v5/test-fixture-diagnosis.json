@@ -1,0 +1,8 @@
+{
+  "build": "lesson-rescue-matched-boundaries-2026-10-23-v5-dev2",
+  "stage": "studio unit tests",
+  "outcome": "81 executed tests: 80 passed, one new fixture assertion failed; one additional platform skip, 82 total tests",
+  "failed_test": "test_fixed_window_return_that_worsens_gets_source_matched_cuts",
+  "observed": "The constructed period-15 source already changed appearance between frames 119 and 120, so the held return and source return were equal (0.7372549019607844). The fixture did not demonstrate the intended pre-fix boundary failure.",
+  "repair": "Use interval endpoint 120 and exterior frame 121. The two source frames share an appearance, while the held reference differs. No production acceptance threshold changed to repair this test."
+}

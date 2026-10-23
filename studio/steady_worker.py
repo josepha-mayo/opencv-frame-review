@@ -9,13 +9,14 @@ for key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'NUMEX
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'opencv-ready/candidate/app'))
 import engine as e
 import steady_detail as steady
+import steady_boundaries
 from native_yuv import decode_yuv
 
 
 def analyze(job):
     analysis = e.analyze(job)
     source = list(decode_yuv(e, job/'input.mp4', 'steady_source'))
-    detection = steady.detect_native(source,e.W,e.H,e.cv2,e.np,e.guard)
+    detection = steady_boundaries.detect(e,job/'input.mp4',source)
     del source
     e.write_json(job/'steady-analysis.json', detection)
     wanted = {c[k] for c in detection['candidates'] for k in ('reference_frame', 'alternate_frame')}

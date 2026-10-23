@@ -1,0 +1,14 @@
+..................................................E......................................................................................
+======================================================================
+ERROR: test_real_process_group_cleanup (test_lifecycle.Lifecycle.test_real_process_group_cleanup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/out/gate/workspace/candidate/app/tests/test_lifecycle.py", line 42, in test_real_process_group_cleanup
+    self.assertTrue(marker.exists());child=int(marker.read_text())
+                                           ^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+----------------------------------------------------------------------
+Ran 137 tests in 19.365s
+
+FAILED (errors=1)

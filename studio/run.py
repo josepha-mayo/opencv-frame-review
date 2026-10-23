@@ -80,6 +80,7 @@ def verify(output):
         ('silent-webm', [str(ROOT / 'tests/integration_silent_webm.py'), str(output / 'silent-webm')]),
         ('natural-steady', [str(ROOT / 'tests/integration_steady_detail.py'), str(output / 'natural-steady')]),
         ('natural-examples', [str(ROOT / 'tests/integration_natural_examples.py'), str(output / 'natural-examples')]),
+        ('boundary-refusals', [str(ROOT / 'tests/integration_boundary_rejections.py'), str(output / 'boundary-refusals')]),
         ('studio-ui', ['-m', 'unittest', 'discover', '-s', str(ROOT / 'tests')]),
     ]
     outcomes = []

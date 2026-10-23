@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-10-23T20:17:50.607934+00:00",
+  "sources": [
+    {
+      "id": "git-setup",
+      "title": "Git Foundations - Setup.webm"
+    },
+    {
+      "id": "toybox-true-false",
+      "title": "Using toybox true-false.webm"
+    },
+    {
+      "id": "gentoo-equery",
+      "title": "Gentoo-portage-installing-and-using-of-equery.webm"
+    }
+  ],
+  "selection": "Three targeted command-line tutorial sources chosen from official Commons title/size/license metadata, after the first four-source v5 screen but before viewing or scoring these files. Exploratory follow-up; no population or held-out claim.",
+  "rule": "After freezing v5 boundary code, prepare 12 seconds at floor(duration*quarter), floor(duration*half), floor(duration*three_quarters), capped to duration-12 and 600 seconds. Record all nine outcomes; no alternate-positive search within this cohort. Inspect any proposal for teaching meaning; source remains no-edit if protected or unsupported.",
+  "development": "Previous six cases are development/regressions, not new independent successes. New code may be revised only on those cases before freezing this cohort run."
+}

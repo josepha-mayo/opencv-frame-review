@@ -5,6 +5,7 @@ creator must decide whether holding one observed state preserves the lesson.
 """
 import hashlib
 import json
+from pathlib import Path
 
 MODE = 'steady-detail-v1'
 POLICY = {'version': 'steady-proposal-v2', 'action': MODE,
@@ -166,6 +167,7 @@ def plan(folder, analysis, detection, body, sha, validate_regions):
               'input_sha256': analysis['input_sha256'], 'prediction_sha256': analysis['prediction_sha256'],
               'steady_analysis_sha256': sha(folder/'steady-analysis.json'),
               'implementation_sha256': sha(__file__), 'proposal': candidate,
+              'boundary_implementation_sha256': sha(Path(__file__).with_name('steady_boundaries.py')),
               'protected_regions': regions, 'reference_frame': candidate['reference_frame'],
               'scope': 'Hold the more contrasting observed state of this stationary two-state detail only during the proposed interval. Native samples outside the box, all frames outside the interval and decoded RGB outside the influence area must remain exact.'}
     return {'candidate_id': candidate['id'], 'prediction_sha256': analysis['prediction_sha256'],

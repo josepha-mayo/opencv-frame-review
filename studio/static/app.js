@@ -87,7 +87,7 @@
   const exportMode = byId("export-mode"), exportModeNote = byId("export-mode-note");
   const steadyReview = byId("steady-state-review"), steadyAlternate = byId("steady-alternate");
   let alternateLoaded = false;
-  const STEADY_NOTE = "Keep the more contrasting observed state only inside this stationary-blink interval. Removes alternate phases. Refuses changed teaching areas, changed timing/audio, any native sample outside the box, or decoded RGB changes outside the four-pixel influence area. Review both source states and the return boundary.";
+  const STEADY_NOTE = "Keep one observed frame of the more contrasting blink state. Cut points are shortened to match the source; the first and last clip frames stay unchanged. Refuses worsening encoded boundary differences, changed teaching areas, timing/audio, native samples outside the box or RGB outside its influence area. Review both states and every cut.";
   const protectLabel = byId("protect-label"), protectList = byId("protected-list"), protectAdd = byId("protect-add");
   let savedRegions = [];
   const MAX_BYTES = 64 * 1024 * 1024;
@@ -278,6 +278,7 @@
       addFact(ui.facts,"Action","Steady one observed more contrasting state");
       addFact(ui.facts,"State to keep / alternate frame",[candidate.reference_frame,candidate.alternate_frame]);
       addFact(ui.facts,"Observed state transitions",candidate.state_transitions);
+      if (candidate.boundary_alignment) addFact(ui.facts,"Cut points","Source-matched prediction; encoded checks still required");
       addFact(ui.facts,"RGB influence area [x,y,width,height]",candidate.influence_xywh);
       steadyAlternate.onload = () => { if (version !== imageVersion) return; alternateLoaded = true; updateControls(); };
       steadyAlternate.onerror = () => { if (version !== imageVersion) return; alternateLoaded = false; ui.reviewed.checked = false; showError(ui.imageError,"Alternate observed state unavailable. Review both states before generating this edit."); updateControls(); };
@@ -656,6 +657,8 @@
       if (summary.export_mode === "steady-detail-v1") {
         const detail = summary.stationary_detail;
         ui.highlights.append(resultCard("Steady reading detail", [["Observed RGB activity before / after",detail ? [detail.activity.source,detail.activity.edited] : null],["Interval frames",detail?.proposal.interval_frames],["Kept source frame",detail?.proposal.reference_frame],["Preservation gate",summary.acceptance?.status]], "Adjacent ROI-mean changes of at least 8 RGB codes inside the interval. This excludes entry/return and does not measure attention or learning."));
+        if (detail?.whole_clip_activity) ui.highlights.append(resultCard("Whole excerpt activity · includes cut points",[["Source / edited",[detail.whole_clip_activity.source,detail.whole_clip_activity.edited]]],"Same region and all clip frames, including entry and return. Adjacent ROI-mean changes of at least 8 RGB codes; no measured learning or safety benefit."));
+        if (summary.encoded_boundary_checks) ui.highlights.append(resultCard("Encoded cut points",[["Selected and influence RGB",summary.encoded_boundary_checks.passed ? "No worse than source" : "Refused"],["Selected-mean entry / return / loop",summary.checks?.encoded_boundary_selected_mean_not_worse ? "No worse than source" : "Refused"]],"Mean absolute, RMS and maximum decoded RGB changes are checked separately at entry, return and clip loop. Fixed first/last frames preserve the loop. Exact measurements remain in the report."));
       }
       if (summary.export_mode === "periodic-local-retime-v2") {
         ui.highlights.append(resultCard("Local decoration retiming", [["Slowdown", "5×"], ["Observed cycle frames", summary.detection?.period_frames], ["Retimed cycle frames", summary.detection ? summary.detection.period_frames * 5 : null], ["Preservation gate", summary.acceptance?.status]], "The rest of the clip keeps its original timeline. This is slower pulsing, not smooth motion."));

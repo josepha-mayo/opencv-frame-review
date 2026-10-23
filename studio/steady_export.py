@@ -5,6 +5,7 @@ from native_yuv import decode_yuv, encode_yuv
 from retime import retimed_frames
 from protected_regions import validate_regions
 import steady_detail as steady
+import steady_boundaries as boundaries
 
 
 def export(e, job):
@@ -19,7 +20,7 @@ def export(e, job):
     if analysis['input_profile'] != e.CURRENT_PROFILE:
         raise ValueError('Steady-detail source profile changed.')
     original = list(decode_yuv(e, sourcepath, 'steady_source'))
-    fresh = steady.detect_native(original,e.W,e.H,e.cv2,np,e.guard)
+    fresh = boundaries.detect(e,sourcepath,original)
     if fresh != detection:
         raise ValueError('Fresh steady-detail analysis differs from the reviewed source.')
     mask = np.zeros((e.H,e.W), np.uint8)
@@ -55,12 +56,21 @@ def export(e, job):
     patch_means = {'source':[], 'edited':[]}
     selected_constant = True
     reference_patch = None
+    boundary_samples = {}
+    full_means = {'source':[], 'edited':[]}
+    linear_values = {'source':[], 'control':[], 'edited':[]}
     # First read the selected reference crop independently from the encoded edit.
     for t,rgb in enumerate(e.decode(sourcepath,'steady_reference')):
         if t == candidate['reference_frame']:
             reference_patch = rgb[y:y+h,x:x+w].copy()
     for t,(source,control,edited) in enumerate(zip(e.decode(sourcepath,'steady_source_rgb'),e.decode(job/'control.mp4','steady_control_rgb'),e.decode(pending,'steady_edited_rgb'))):
         control_rgb &= bool(np.array_equal(source,control))
+        for name,frame in [('source',source),('control',control),('edited',edited)]:
+            linear_values[name].append(boundaries.selected_linear(e,frame,candidate['bbox']))
+        for name,frame in [('source',source),('edited',edited)]:
+            full_means[name].append(float(frame[y:y+h,x:x+w].mean()))
+        if t in (0,e.N-1,lo-1,lo,hi,hi+1):
+            boundary_samples[t] = {name:{'selected':frame[y:y+h,x:x+w].copy(),'influence':frame[iy:iy+ih,ix:ix+iw].copy()} for name,frame in [('source',source),('edited',edited)]}
         if t < lo or t > hi:
             outside_interval &= bool(np.array_equal(source,edited))
         else:
@@ -86,6 +96,12 @@ def export(e, job):
         # A separate encoded ROI-mean diagnostic, not the rapid-flash detector.
         return int((np.abs(np.diff(values))>=8).sum())
     activity = {k: transitions(v) for k,v in patch_means.items()}
+    encoded_boundaries=boundaries.encoded_measurements(boundary_samples,lo,hi,e.N,np)
+    traces = {name:boundaries.trace_from_values(e,values,lo,hi) for name,values in linear_values.items()}
+    linear_boundaries={name:{'source':traces['source'][field],'edited':traces['edited'][field],'passed':traces['edited'][field]<=traces['source'][field]+boundaries.POLICY['boundary_tolerance']} for name,field in [('entry','entry_delta'),('exit','exit_delta'),('loop_seam','seam_absolute_delta')]}
+    whole_activity={name:transitions(values) for name,values in full_means.items()}
+    full_events={name:np.abs(np.diff(values))>=boundaries.POLICY['activity_threshold_rgb_codes'] for name,values in full_means.items()}
+    new_events=int((full_events['edited'] & ~full_events['source']).sum())
     checks = {'fresh_stationary_two_state_proposal':True, 'approved_plan_bound':True,
               'native_control_exact':native_control, 'native_edit_matches_mapping':native_edit,
               'unchanged_control_rgb_exact':control_rgb,
@@ -95,12 +111,18 @@ def export(e, job):
               'all_protected_teaching_rgb_exact':measured['passed'],
               'audio_exact':not has_audio or all(all(v is True for v in c.values()) for c in audio_checks.values()),
               'source_and_detection_unchanged':e.sha(sourcepath)==analysis['input_sha256'] and e.sha(job/'steady-analysis.json')==recipe['steady_analysis_sha256'],
-              'selected_activity_reduced':activity['source']>=6 and activity['edited']==0}
+              'selected_activity_reduced':activity['source']>=boundaries.POLICY['minimum_removed_mean_changes'] and activity['edited']==0,
+              'encoded_boundary_rgb_not_worse':encoded_boundaries['passed'],
+              'encoded_boundary_selected_mean_not_worse':all(r['passed'] for r in linear_boundaries.values()),
+              'whole_clip_activity_reduced':whole_activity['edited']<whole_activity['source'],
+              'whole_clip_no_new_activity_events':new_events==0}
     acceptance = {'status':'accepted_experiment' if all(checks.values()) else 'rejected_experiment', 'checks':checks,
                   'meaning':'Encoded preservation and activity measurements only. Creator review is required; no measured learning or accessibility benefit.'}
     decision={'schema':'steady-detail-export-v1','recipe':recipe,'mapping':mapping.tolist(),
               'activity':activity,'activity_threshold_rgb_codes':8,'protected':measured,
               'outside_rgb':outside_error,'rgb_selected_matches_reference':selected_constant,
+              'encoded_boundary_checks':encoded_boundaries,'linear_boundary_checks':linear_boundaries,
+              'whole_clip_activity':whole_activity,'new_activity_events':new_events,
               'acceptance':acceptance,'audio_preservation':{'present':has_audio,'checks':audio_checks}}
     e.write_json(job/'result.json',decision)
     pending.rename(job/('edited.mp4' if all(checks.values()) else 'rejected-candidate.mp4'))
@@ -108,7 +130,6 @@ def export(e, job):
         raise ValueError('Steady-detail encoded checks failed; no edited download is accepted.')
     hashes={name:e.sha(job/(name+'.mp4')) for name in ('control','edited')}
     binding={'input_sha256':analysis['input_sha256'],'prediction_sha256':analysis['prediction_sha256'],'recipe_sha256':approval['recipe_sha256'],'output_hashes':hashes}
-    traces = {name:e.trace(e.decode(path,'steady_'+name+'_trace'),mask,lo,hi) for name,path in [('source',sourcepath),('control',job/'control.mp4'),('edited',job/'edited.mp4')]}
     strong = {'newly_timed':traces['edited']['exit_delta']>=.1 and traces['control']['exit_delta']<.1,
               'edited_delta':traces['edited']['exit_delta'],'control_delta':traces['control']['exit_delta'],'criterion':.1}
     frames=review.finish(binding,strong)
@@ -119,7 +140,8 @@ def export(e, job):
               'Preparation resized/re-encoded the original. Exact edit checks reference the prepared clip.',
               'No learning, time-saving, medical, safety or compliance claim.']
     summary={'export_mode':steady.MODE,'review_status':'needs_creator_review','checks':checks,'acceptance':acceptance,
-             'stationary_detail':{'proposal':candidate,'activity':activity,'metric':'Number of adjacent ROI-mean RGB changes >=8 codes inside the approved interval; excludes entry/return.'},
+             'stationary_detail':{'proposal':candidate,'activity':activity,'whole_clip_activity':whole_activity,'new_activity_events':new_events,'metric':'Number of adjacent ROI-mean RGB changes >=8 codes. Interior and fixed whole-clip counts are separate; the latter includes both cut boundaries.'},
+             'encoded_boundary_checks':encoded_boundaries,'linear_boundary_checks':linear_boundaries,
              'protected_content':measured,'outside_mask_error':outside_error,'audio_preservation':decision['audio_preservation'],
              'boundary':{name:{'control_delta':traces['control'][field],'edited_delta':traces['edited'][field]} for name,field in [('entry','entry_delta'),('exit','exit_delta'),('loop_seam','seam_absolute_delta')]},
              'codec':'Lossless H.264 High 4:4:4 Predictive, YUV420; verify browser playback separately','warnings':warnings}

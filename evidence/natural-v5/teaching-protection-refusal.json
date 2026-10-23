@@ -1,0 +1,147 @@
+{
+  "complete": true,
+  "source": "wikisound-recording",
+  "source_sha256": "efbaa9a0d6cd394be77a0d7872f8fec3380cc96757af4420e53c5ec371ac4b4f",
+  "start_seconds": 159,
+  "authored_defect": false,
+  "scope": "Follow-up of the preselected cohort outcome. Moving Audacity control/readout text was reviewed as lesson content and protected. This is a refusal/source-recovery test, not a distraction removal, independent new source, or human impact trial.",
+  "candidates": [
+    {
+      "id": "0",
+      "bbox": [
+        86,
+        333,
+        23,
+        7
+      ],
+      "interval_frames": [
+        18,
+        154
+      ],
+      "interval_seconds": [
+        0.6,
+        5.133333333333334
+      ],
+      "pixels": 102,
+      "preview_frame": 35,
+      "recipe_sha256": "e0f092b7cedd0d9e77cc2d21e85bc262706b43fd0de26073ce0ec025395b843d",
+      "overlay_url": "/api/jobs/a1aaff0727fb30215b095fc9be32fac9/preview/0.png"
+    },
+    {
+      "id": "1",
+      "bbox": [
+        126,
+        333,
+        13,
+        6
+      ],
+      "interval_frames": [
+        18,
+        154
+      ],
+      "interval_seconds": [
+        0.6,
+        5.133333333333334
+      ],
+      "pixels": 68,
+      "preview_frame": 35,
+      "recipe_sha256": "f05a8c955bd7ccee5502ecf283bcfb06d54debd03a49ad4c019dd9d3e41d0681",
+      "overlay_url": "/api/jobs/a1aaff0727fb30215b095fc9be32fac9/preview/1.png"
+    }
+  ],
+  "protected_regions": [
+    {
+      "label": "Audacity control and readout text",
+      "xywh": [
+        0,
+        300,
+        640,
+        60
+      ]
+    }
+  ],
+  "plan_refusals": [
+    {
+      "error": "A protected rectangle overlaps the proposed edit. Choose another candidate or leave the original unchanged."
+    },
+    {
+      "error": "A protected rectangle overlaps the proposed edit. Choose another candidate or leave the original unchanged."
+    }
+  ],
+  "decision": {
+    "schema": "lesson-decision-v1",
+    "job_id": "a1aaff0727fb30215b095fc9be32fac9",
+    "created_utc": "2026-10-23T20:04:37.425857+00:00",
+    "decision": "declined",
+    "uploaded_sha256": "efbaa9a0d6cd394be77a0d7872f8fec3380cc96757af4420e53c5ec371ac4b4f",
+    "prepared_sha256": "b66067c6dca12294d8f371c4e26a33733e67a69adf8b628c335a325429171634",
+    "excerpt": {
+      "start_seconds": 159.0,
+      "duration_seconds": 12.0,
+      "frames": 360
+    },
+    "source": {
+      "video_codec": "vp8",
+      "width": 1366,
+      "height": 768,
+      "duration_seconds": 318.003,
+      "frame_rate": "24/1",
+      "chroma_location": "unspecified",
+      "audio_codec": "vorbis",
+      "audio_channels": 2
+    },
+    "prepared": {
+      "width": 640,
+      "height": 360,
+      "fps": 30,
+      "color": "limited BT.709 SDR",
+      "chroma_location": "left",
+      "audio": "AAC-LC mono 48 kHz"
+    },
+    "candidates": [
+      {
+        "id": "0",
+        "bbox": [
+          86,
+          333,
+          23,
+          7
+        ],
+        "interval_frames": [
+          18,
+          154
+        ],
+        "pixels": 102
+      },
+      {
+        "id": "1",
+        "bbox": [
+          126,
+          333,
+          13,
+          6
+        ],
+        "interval_frames": [
+          18,
+          154
+        ],
+        "pixels": 68
+      }
+    ],
+    "edited_export_accepted": false,
+    "failure_reason": null,
+    "encoded_export_measurements": null,
+    "interpretation": "Creator left the prepared clip unchanged; no edit was approved.",
+    "detector_scope": "Frozen rapid-change detector: at least 7 alternating luminance transitions in a rolling second, connected support at least 64 pixels. Separate steady-detail-v1: small stationary two-state luma appearance, at least 6 transitions, bounded state/chroma errors and dwell. A reviewed hold is trimmed to matched cut points, at least 60 frames and four internal changes; first/last clip frames remain unchanged. Encoded selected/influence boundary RGB and selected-mean changes cannot worsen. Proposals are not semantic distraction labels.",
+    "limitations": [
+      "No candidate does not mean distraction-free or safe.",
+      "Ordinary caret blinking, notifications and camera movement may be outside this detector.",
+      "Preparation changes picture/audio and may make small teaching labels unreadable.",
+      "Exact edit measurements reference the prepared clip, not the uploaded original.",
+      "This record does not establish learning benefit or accessibility compliance."
+    ]
+  },
+  "original_and_prepared_http_hashes_exact": true,
+  "edited_download_withheld": true,
+  "runtime_manifest_sha256": "a900388b23d5cdab6f2ad590a669fed2d70e50eee32ef20891b33a7249ca5ac1"
+}

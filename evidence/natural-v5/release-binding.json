@@ -1,0 +1,24 @@
+{
+  "build": "lesson-rescue-matched-boundaries-2026-10-23-v5",
+  "source_manifest_sha256": "a900388b23d5cdab6f2ad590a669fed2d70e50eee32ef20891b33a7249ca5ac1",
+  "source_files_verified": 106,
+  "verification_stages": 14,
+  "original_http_repairs": 7,
+  "prior_sources_regressed": 6,
+  "new_source_repairs": 1,
+  "fixed_six_source_exposure_seconds": 72,
+  "six_source_whole_excerpt_counts": {
+    "source": 90,
+    "spatial_blur": 91,
+    "matched_hold": 56,
+    "prior_fixed_hold": 54
+  },
+  "six_source_held_seconds": 17.6,
+  "first_new_cohort_sources": 4,
+  "first_new_cohort_windows": 12,
+  "shell_followup_sources": 3,
+  "shell_followup_windows": 9,
+  "earlier_negative_editor_sources": 2,
+  "earlier_negative_windows": 12,
+  "scope": "Selected development/regression evidence. Frozen code before seven new-source screens, targeted shell follow-up after first cohort. No representative recall or measured creator, learning, safety, accessibility, time-saving benefit."
+}

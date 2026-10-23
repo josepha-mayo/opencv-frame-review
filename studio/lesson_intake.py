@@ -176,6 +176,12 @@ class LessonManager(backend.Manager):
                 raise KeyError('Prepared lesson unavailable')
             if job['status'] == 'declined' and (self.jobpath(jid) / 'edited.mp4').exists():
                 raise ValueError('Unexpected edited artifact in an unchanged lesson.')
+            export_measurements = None
+            result_path = self.jobpath(jid)/'result.json'
+            if result_path.is_file():
+                result = backend.read_json(result_path)
+                if result.get('schema') == 'steady-detail-export-v1':
+                    export_measurements = {key:result.get(key) for key in ('acceptance','encoded_boundary_checks','linear_boundary_checks','activity','whole_clip_activity','new_activity_events')}
             return {'schema': 'lesson-decision-v1', 'job_id': jid,
                     'created_utc': job['created_utc'], 'decision': job['status'],
                     'uploaded_sha256': receipt['uploaded_sha256'],
@@ -185,8 +191,9 @@ class LessonManager(backend.Manager):
                     'candidates': [{k: c[k] for k in ('id', 'bbox', 'interval_frames', 'pixels')} for c in job['candidates']],
                     'edited_export_accepted': job['status'] == 'complete',
                     'failure_reason': job.get('error') if job['status'] == 'failed' else None,
+                    'encoded_export_measurements': export_measurements,
                     'interpretation': ('Processing failed; no edited export was accepted. Retained sources are available.' if job['status'] == 'failed' else 'Creator left the prepared clip unchanged; no edit was approved.' if job['status'] == 'declined' else 'Creator approved one bounded edit; read the encoded report for its measurements.'),
-                    'detector_scope': 'Frozen rapid-change detector: at least 7 alternating luminance transitions in a rolling second, connected support at least 64 pixels. Separate steady-detail-v1: small stationary two-state luma appearance, at least 6 transitions, bounded state and chroma errors, minimum dwell. Proposals are not semantic distraction labels.',
+                    'detector_scope': 'Frozen rapid-change detector: at least 7 alternating luminance transitions in a rolling second, connected support at least 64 pixels. Separate steady-detail-v1: small stationary two-state luma appearance, at least 6 transitions, bounded state/chroma errors and dwell. A reviewed hold is trimmed to matched cut points, at least 60 frames and four internal changes; first/last clip frames remain unchanged. Encoded selected/influence boundary RGB and selected-mean changes cannot worsen. Proposals are not semantic distraction labels.',
                     'limitations': ['No candidate does not mean distraction-free or safe.',
                                     'Ordinary caret blinking, notifications and camera movement may be outside this detector.',
                                     'Preparation changes picture/audio and may make small teaching labels unreadable.',
