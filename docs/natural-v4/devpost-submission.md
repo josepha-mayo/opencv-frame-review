@@ -59,7 +59,7 @@ The new timing grid was declared before outcomes: four tutorial sources, three t
 
 Final code was revised after outcome inspection using development cases. This is a convenience development cohort without exhaustive distraction annotations, not held-out validation or a representative recall/success estimate. No creator time saving, attention, comprehension, adoption or user preference has been measured.
 
-Preparation changes picture and sound: a supported 1–12 second excerpt is resized/letterboxed to 640x360/30fps, with optional mono AAC prepared once. It can erase teaching detail. Exact edit checks reference that prepared clip; the untouched upload remains separate. Intake is capped at64MiB. Fixed rectangles do not track objects, and there is no full-lesson splice-back. Jobs are ephemeral and known multimedia package findings remain.
+Preparation changes picture and sound: a supported 1–12 second excerpt is resized/letterboxed to 640x360/30fps, with optional mono AAC prepared once. It can erase teaching detail. Exact edit checks reference that prepared clip; the untouched upload remains separate. Intake is capped at 64 MiB. Fixed rectangles do not track objects, and there is no full-lesson splice-back. Jobs are ephemeral and known multimedia package findings remain.
 
 ## What is next
 
@@ -67,4 +67,4 @@ Creator review sessions and competent manual-editor comparisons are needed to te
 
 Developed by Joseph Ayanda with AI assistance. Media credits, source hashes, license metadata and derivative changes are published; no author endorsement. No COOL acceleration or autonomous-agent award claim is made.
 
-[Public source](https://github.com/josepha-mayo/opencv-frame-review) · [Technical report](https://github.com/josepha-mayo/opencv-frame-review/blob/main/docs/real-lessons-report.pdf) · [Current AWS/media receipts](https://github.com/josepha-mayo/opencv-frame-review/tree/main/evidence/natural-v4) · [Source credits](https://github.com/josepha-mayo/opencv-frame-review/blob/main/evidence/natural-v4/sources.json)
+[Public source](https://github.com/josepha-mayo/opencv-frame-review) · [Technical report](https://github.com/josepha-mayo/opencv-frame-review/blob/25d4f1038bee913e20b815cac62a618a1e237821/docs/real-lessons-report.pdf) · [Current AWS/media receipts](https://github.com/josepha-mayo/opencv-frame-review/tree/25d4f1038bee913e20b815cac62a618a1e237821/evidence/natural-v4) · [Source credits](https://github.com/josepha-mayo/opencv-frame-review/blob/25d4f1038bee913e20b815cac62a618a1e237821/evidence/natural-v4/sources.json)

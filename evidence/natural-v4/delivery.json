@@ -1,0 +1,155 @@
+{
+  "recorded_utc": "2026-10-23T18:23:36.935152+00:00",
+  "build": "lesson-rescue-natural-cohort-2026-10-23-v4",
+  "source_publication": {
+    "recorded_at": "2026-10-23T18:19:28.598Z",
+    "private": {
+      "repository": "josepha-mayo/opencv-creator",
+      "branch": "master",
+      "sha": "ea5ec1c83c47f0daedeece5f962bc3a006e3a76e",
+      "tree_sha": "bd05f6771b6e7571a21b25b73b7a8ed11a171d6c",
+      "parent_sha": "9ca15e9f5b0506af8265609f0b5d8f82bbd5498e"
+    },
+    "public": {
+      "repository": "josepha-mayo/opencv-frame-review",
+      "branch": "main",
+      "sha": "25d4f1038bee913e20b815cac62a618a1e237821",
+      "tree_sha": "02dd4b15516b97d5136f387389d94305b900c616",
+      "parent_sha": "a7c81e19b1a17130c73607d899d50b030bdea777"
+    }
+  },
+  "judge_package": {
+    "verified_utc": "2026-10-23T18:20:35.875073+00:00",
+    "filename": "Frame-Review-Natural-Cohort-Judge-Package.zip",
+    "bytes": 14785398,
+    "sha256": "c4c6c4860c130dd33b5d99a0019f3a08ca6786f76faf605d07856a2d8cbfce6c",
+    "source_commit": "25d4f1038bee913e20b815cac62a618a1e237821",
+    "runtime_manifest_sha256": "21fb29c79616e9afebdcfc0176e4ddd44c3be83b3b58386793b9d2623f4a93d0",
+    "runtime_files_verified": 103,
+    "zip_integrity": true,
+    "handoff_paths": 0,
+    "report_sha256": "25063e60b70e0d00e568956b00297ebb7e7538938150efa362fa77b1ab5fbfa0",
+    "purpose": "Exact public source archive for existing Devpost submission 1177390; no new submission."
+  },
+  "devpost": {
+    "verified_utc": "2026-10-23T18:23:10.418Z",
+    "project_id": 1423567,
+    "submission_id": 1177390,
+    "public_url": "https://devpost.com/software/countback-inspect-the-evidence",
+    "description_exact_after_trim": true,
+    "testing_instructions_exact_after_trim": true,
+    "current_file": "Frame-Review-Natural-Cohort-Judge-Package.zip",
+    "repository": "https://github.com/josepha-mayo/opencv-frame-review",
+    "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+    "links": [
+      "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+      "https://github.com/josepha-mayo/opencv-frame-review",
+      "https://github.com/josepha-mayo/opencv-frame-review/blob/25d4f1038bee913e20b815cac62a618a1e237821/docs/real-lessons-report.pdf"
+    ],
+    "video": "https://www.youtube.com/watch?v=5oE3rA-aJNI",
+    "built_with": "python,opencv,javascript,numpy,amazon-ecr,html5,css3,amazon-ecs,ffmpeg,docker,amazon-cloudwatch",
+    "gallery": [
+      {
+        "caption": "Real Jupyter original on AWS: inspect observed states and protect code/output and controls. Alex The Analyst, CC BY 3.0 as listed.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/663/374/datas/small.png"
+      },
+      {
+        "caption": "Earlier concept cover. Current evidence uses six natural lesson sources; see the real AWS examples and measured comparison.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/646/547/datas/small.png"
+      },
+      {
+        "caption": "Architecture: HTTPS to ECS/Fargate, OpenCV 5 and FFmpeg, pinned ECR image and CloudWatch logs. Current source: v4.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/646/548/datas/small.png"
+      },
+      {
+        "caption": "Earlier controlled math regression: 5x retime; prepared audio and teaching areas checked. This is not a natural case.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/646/549/datas/small.jpg"
+      },
+      {
+        "caption": "Local candidate: ITTT classroom (CC BY 3.0), authored corner defect. Teacher/whiteboard protection shown. No endorsement.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/651/938/datas/small.jpg"
+      },
+      {
+        "caption": "Controlled classroom regression: teacher/whiteboard and narration checked; added corner defect. ITTT / CC BY 3.0.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/651/940/datas/small.jpg"
+      },
+      {
+        "caption": "Earlier v3 Tamil review: two caret states and teaching protection. Same CC0 source repeated in v4; no added defect.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/658/652/datas/small.png"
+      },
+      {
+        "caption": "Historical v2 intake architecture. Current v4 original-upload repairs run on AWS; see the six-case report.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/651/942/datas/small.png"
+      },
+      {
+        "caption": "Real Blender settings candidate. Lorenzoh, CC BY-SA 4.0; excerpt, resize and overlay. Protecting teaching content refuses the edit.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/655/604/datas/small.png"
+      },
+      {
+        "caption": "Historical natural camera-flicker refusal: source and decision recovered. Not a qualified repair; lesson cases are separate.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/655/607/datas/small.png"
+      },
+      {
+        "caption": "Earlier v3 AWS Tamil result: 6 to 0 internal changes. Same source, different interval in v4. Info-farmer / CC0.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/658/654/datas/small.png"
+      },
+      {
+        "caption": "Earlier v3 interval: source 6, fixed blur 6, hold 0. Current v4 six-source traces are shown in the new chart.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/658/659/datas/small.png"
+      },
+      {
+        "caption": "npm original on AWS: 7 to 0 internal changes; command, presenter and prepared audio checked. Kevin Powell, CC BY 3.0 as listed.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/663/376/datas/small.png"
+      },
+      {
+        "caption": "Six selected natural lessons: source 41 changes, fixed blur 41, reviewed holds 0. Boundaries and negative cases remain reported.",
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/663/378/datas/small.png"
+      }
+    ],
+    "finalization": {
+      "five_steps": true,
+      "submit_disabled": true,
+      "submitted": true,
+      "thumbnail": {
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/005/664/138/datas/medium.png"
+      },
+      "url": "https://devpost.com/submit-to/30984-opencv-ai-competition-2026-powered-by-aws/manage/submissions/1177390-frame-review-keep-the-lesson/finalization"
+    },
+    "scope": "Existing submitted entry updated. No new submission or terms acceptance performed."
+  },
+  "published_story_sha256": "a2a3595131b0e068978dc27d9dc0c2c4c586835ed0502bc3bfaeb48e8ae0b974",
+  "testing_instructions_sha256": "18d987d604c598f894518b6d077e9f18f5e50dbae1b8d47e74b75dc215ea887a",
+  "aws": {
+    "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+    "task_definition_revision": 9,
+    "rollout": "COMPLETED",
+    "runtime_manifest_sha256": "21fb29c79616e9afebdcfc0176e4ddd44c3be83b3b58386793b9d2623f4a93d0",
+    "runtime_files_verified": 103,
+    "image_digest": "sha256:196b508dcd7314e26f5d69d0fd82470821793f6de3c437d14bb7448da9d93eaf",
+    "original_browser_cases": [
+      "jupyter",
+      "npm-basics"
+    ],
+    "download_and_full_playback": "passed",
+    "receipt": "cloud-verified.json"
+  },
+  "evidence_scope": "Six selected original source repairs; 41/41/0 internal changes for prepared source/fixed blur/reviewed hold. Three new-source cohort repairs, two development repairs, one repeated previous source. Nine no-proposal cohort outcomes retained. No held-out success rate or measured human benefit. Strong returns can worsen.",
+  "delivery_scope": "Existing submitted entry updated; no new submission or terms acceptance. Source ZIP is bound to the source commit, before this documentation-only delivery record. Uploaded filename and saved judge text verified in signed-in UI; local ZIP integrity and SHA-256 verified independently. Server-side ZIP bytes were not downloaded back.",
+  "real_voice": "Deferred until Joseph records; current earlier video discloses neural narration.",
+  "automation": "OpenCV recurring automation remains PAUSED at user request."
+}
