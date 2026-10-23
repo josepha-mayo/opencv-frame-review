@@ -4,7 +4,7 @@
 
 [Earlier AWS app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws) · [Devpost entry](https://devpost.com/software/countback-inspect-the-evidence)
 
-**Release status, 23 October:** the teaching-contract candidate passed all ten media stages, a six-source lesson evaluation and actual local browser checks. Real prepared lessons require a protected teaching area; refused edits retain verified source downloads and a decision record. The public AWS endpoint still serves the earlier authored-lesson release. The newer candidate is reproducible locally; its AWS upgrade and final HTTPS checks are deferred until Joseph is home. Its new buttons are not yet on the public endpoint. The final real-voice demo remains pending. The attached ZIP identity is recorded separately from runtime qualification.
+**Release status, 23 October:** the teaching-contract candidate passed all ten media stages, a six-source lesson evaluation and actual local browser checks. Real prepared lessons require a protected teaching area; refused edits retain verified source downloads and a decision record. The public AWS endpoint still serves the earlier authored-lesson release. The newer candidate is reproducible locally; its AWS upgrade and final HTTPS checks are deferred until Joseph is home. Its new buttons are not yet on the public endpoint. The final real-voice demo remains pending. The required Devpost ZIP and judging instructions are updated; see the [saved delivery confirmation](evidence/devpost-delivery.json).
 
 ![Local candidate showing the real teacher and the protected whiteboard area](docs/real-teacher-local-review.jpg)
 
