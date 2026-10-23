@@ -4,13 +4,15 @@
 
 [Earlier AWS app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws) · [Devpost entry](https://devpost.com/software/countback-inspect-the-evidence)
 
-**Release status, 23 October:** the teaching-contract candidate passed all ten media stages, a six-source lesson evaluation and actual local browser checks. Real prepared lessons require a protected teaching area; refused edits retain verified source downloads and a decision record. The public AWS endpoint still serves the earlier authored-lesson release. The newer candidate is reproducible locally; its AWS upgrade and final HTTPS checks are deferred until Joseph is home. Its new buttons are not yet on the public endpoint. The required Devpost ZIP and final real-voice demo remain pending.
+**Release status, 23 October:** the teaching-contract candidate passed all ten media stages, a six-source lesson evaluation and actual local browser checks. Real prepared lessons require a protected teaching area; refused edits retain verified source downloads and a decision record. The public AWS endpoint still serves the earlier authored-lesson release. The newer candidate is reproducible locally; its AWS upgrade and final HTTPS checks are deferred until Joseph is home. Its new buttons are not yet on the public endpoint. The final real-voice demo remains pending. The attached ZIP identity is recorded separately from runtime qualification.
 
 ![Local candidate showing the real teacher and the protected whiteboard area](docs/real-teacher-local-review.jpg)
 
 Actual local candidate, not the current AWS deployment. ITTT classroom footage, CC BY 3.0; the challenge deliberately adds the corner artifact. No endorsement. [Technical report](docs/real-lessons-report.pdf) · [Real lesson provenance](docs/real-lesson-evaluation.md)
 
 ## Try real lesson intake
+
+**Local server:** the bundled preset buttons are cloud-adapter controls. With `studio/run.py --serve`, use **Local video file**: upload `studio/fixtures/real-teacher.webm`, choose start **40**, length **12**, and leave preparation checked. For the controlled positive, upload `studio/fixtures/real-teacher-challenge.mp4`, choose start **0**, length **12**, then protect **[80, 0, 480, 360]**, add the named teacher/whiteboard area, check the plan and approve. Both files are in this archive. Use the cloud buttons below only when running the cloud adapter.
 
 Use an MP4/MOV or WebM you own or have permission to process, up to **64 MiB**. Keep **Prepare a real lesson excerpt** checked, choose its start (0–600 seconds) and length (1–12 seconds), then analyze. Source files may be up to 30 minutes; this release edits the selected segment and does not splice it back into a full lesson.
 
