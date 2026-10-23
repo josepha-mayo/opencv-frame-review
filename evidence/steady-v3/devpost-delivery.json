@@ -1,0 +1,123 @@
+{
+  "schema": "natural-lesson-devpost-delivery-v1",
+  "verified_utc": "2026-10-23 16:21:33 UTC",
+  "project_id": 1423567,
+  "project_url": "https://devpost.com/software/countback-inspect-the-evidence",
+  "state": "published",
+  "updated_at": "2026-10-23T12:19:05.123-04:00",
+  "hackathons": [
+    {
+      "name": "OpenCV AI Competition 2026, powered by AWS",
+      "slug": "opencv26",
+      "url": "https://opencv26.devpost.com/",
+      "website_url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+      "submitted_at": "2026-09-16T17:16:23.621-04:00"
+    }
+  ],
+  "description_plain_text_matches_published_draft": true,
+  "existing_video_url": "https://www.youtube.com/watch?v=5oE3rA-aJNI",
+  "real_voice_demo_deferred": true,
+  "new_gallery_upload_receipts": [
+    {
+      "project_id": 1423567,
+      "project_slug": "countback-inspect-the-evidence",
+      "url": "https://devpost.com/software/countback-inspect-the-evidence",
+      "processing": true,
+      "version": 24,
+      "photo_id": 5658652,
+      "gallery_image_url": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/658/652/datas/gallery.jpg",
+      "caption": "Real Tamil tutorial, no added defect: inspect both observed caret states and protect the teaching area. Info-farmer, CC0.",
+      "position": 7,
+      "photo_count": 9
+    },
+    {
+      "project_id": 1423567,
+      "project_slug": "countback-inspect-the-evidence",
+      "url": "https://devpost.com/software/countback-inspect-the-evidence",
+      "processing": true,
+      "version": 24,
+      "photo_id": 5658654,
+      "gallery_image_url": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/658/654/datas/gallery.jpg",
+      "caption": "Actual AWS export: 6 internal changes to 0; teaching/audio checks and 12 crop downloads passed. One targeted case; CC0 source.",
+      "position": 8,
+      "photo_count": 10
+    },
+    {
+      "project_id": 1423567,
+      "project_slug": "countback-inspect-the-evidence",
+      "url": "https://devpost.com/software/countback-inspect-the-evidence",
+      "processing": true,
+      "version": 24,
+      "photo_id": 5658659,
+      "gallery_image_url": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/658/659/datas/gallery.jpg",
+      "caption": "Same natural interval: original 6, one fixed blur 6, reviewed state hold 0. Encoded measurements; no user-benefit claim.",
+      "position": 9,
+      "photo_count": 11
+    }
+  ],
+  "source_publication": {
+    "private": {
+      "repository": "josepha-mayo/opencv-creator",
+      "branch": "master",
+      "commit": "32262395b0d6ac7972dc4e9ad85f9b29404381c2",
+      "tree": "3c5cc68bd05576462d96d77c5428a4d475c94a5a",
+      "parent": "8a076c3caca5ae0660fcaa532061af6bd62a17d2",
+      "verified_remote": true
+    },
+    "public": {
+      "repository": "josepha-mayo/opencv-frame-review",
+      "branch": "main",
+      "commit": "7de9abf230f777c6b68523520aff69f61a6c8f79",
+      "tree": "7a5e36c3796ed6723caf9f1ae069172bd79e71eb",
+      "parent": "6dd26e393d594717848957369b22112b7eff941a",
+      "verified_remote": true
+    }
+  },
+  "submitted_state_verified_in_browser": {
+    "saved_notes_exact": true,
+    "current_file": "Frame-Review-Natural-Lesson-Judge-Package.zip",
+    "submission_state": "SUBMITTED",
+    "steps_done": "5/5",
+    "gallery": [
+      {
+        "complete": true,
+        "slide": "6",
+        "src": "//d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/658/652/datas/gallery.jpg",
+        "width": 806
+      },
+      {
+        "complete": true,
+        "slide": "10",
+        "src": "//d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/658/654/datas/gallery.jpg",
+        "width": 806
+      },
+      {
+        "complete": true,
+        "slide": "11",
+        "src": "//d112y698adiu2z.cloudfront.net/photos/production/software_photos/005/658/659/datas/gallery.jpg",
+        "width": 806
+      }
+    ]
+  },
+  "package": {
+    "archive": "Frame-Review-Natural-Lesson-Judge-Package.zip",
+    "bytes": 11536792,
+    "sha256": "a71a72b9b2221995b8bd8fe3c0394d98ce42ba757768100423337b34e36c34cf",
+    "public_source_commit": "7de9abf230f777c6b68523520aff69f61a6c8f79",
+    "public_source_tree": "7a5e36c3796ed6723caf9f1ae069172bd79e71eb",
+    "runtime_manifest_sha256": "593b07a52cee2dda00fd756e387f9059f9a7c6ee7c5026cebf42c8f6fb86b658",
+    "runtime_files_verified": 96,
+    "zip_integrity_verified": true,
+    "source_published": true,
+    "aws_deployed_and_natural_flow_verified": true,
+    "devpost_attachment_saved": true,
+    "scope": "One targeted unmodified original tutorial, one interval; bundled prepared preset is the same case. No user-benefit or representative success-rate claim.",
+    "remote_archive_bytes_independently_downloaded_and_hashed": false,
+    "attachment_verification": "Selected local file, successful save, fresh Current File filename and exact saved judging notes. Remote archive bytes were not independently downloaded."
+  },
+  "proof_images": [
+    "Frame-Review-Devpost-Natural-Release.png",
+    "Frame-Review-Devpost-Saved-ZIP.png"
+  ],
+  "scope": "One targeted natural tutorial/interval; same prepared preset. AWS/media qualification is separate from submission completeness and unmeasured creator benefit."
+}
