@@ -122,6 +122,9 @@ class CloudHTTP(unittest.TestCase):
             self.assertEqual(status, 404)
         status, _, _ = self.request('/api/jobs/'+jid+'/steady/steady-0-reference.png',headers={'Cookie':'creator_session='+'c'*64})
         self.assertEqual(status,404)
+        for cookie in ('','creator_session='+'c'*64):
+            status,_,_=self.request('/api/jobs/'+jid+'/teaching/teaching-r0-f00001-source.png',headers={'Cookie':cookie})
+            self.assertEqual(status,404)
 
     def test_cross_origin_wrong_host_and_missing_csrf_refuse_without_job(self):
         self.assertEqual(self.request('/api/profile', headers={'Host': 'attacker.example'})[0], 400)

@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-23T22:44:47.957810+00:00",
+  "sources": [
+    {
+      "id": "toybox-prebuilt",
+      "title": "Downloading and using prebuilt toybox binaries.webm"
+    },
+    {
+      "id": "toybox-implementation",
+      "title": "Implementation of toybox true-false.webm"
+    },
+    {
+      "id": "toybox-compiling",
+      "title": "Compiling toybox from source code.webm"
+    },
+    {
+      "id": "libreoffice-writer",
+      "title": "LibreOffice Writer \u2013 The Basics.webm"
+    },
+    {
+      "id": "libreoffice-import",
+      "title": "LibreOffice Calc \u2013- Importing Data.webm"
+    },
+    {
+      "id": "libreoffice-charts",
+      "title": "Creating Charts With LibreOffice.webm"
+    },
+    {
+      "id": "pandoc-wikiversity",
+      "title": "PanDoc Wikiversity.webm"
+    }
+  ],
+  "selection": "Seven named new instructional sources selected using official Commons title/size/author/license metadata before viewing or scoring. Three Toybox videos share one author; seven recordings are not seven independent creators. Convenience exploration, no representative recall.",
+  "rule": "For each original, prepare 12 seconds at floor(min(duration-12,600)*q) for q=.25,.5,.75. This covers distinct points in the app-supported first ten minutes, avoiding duplicated capped timestamps on long recordings. Retain all 21 outcomes. Never add a defect. Inspect proposals for teaching meaning before independent HTTP export qualification.",
+  "baseline_manifest_sha256": "a900388b23d5cdab6f2ad590a669fed2d70e50eee32ef20891b33a7249ca5ac1",
+  "phase": "Frozen v5 baseline; later source-driven fixes are development, not held-out validation."
+}

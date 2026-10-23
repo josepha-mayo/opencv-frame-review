@@ -1,0 +1,6 @@
+{
+  "source_manifest_sha256": "09c8bd44526e7d1e65ad40ea2528154b3f6489c7659510bb61b5fcd5fddfa123",
+  "image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue:source-09c8bd44526e7d1e-teaching-v6-20261024",
+  "image_digest": "sha256:957fdbd114072441fdc1c948fa0dc02eb5011b0d0bf7757ce83908c8308ae45f",
+  "pinned_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:957fdbd114072441fdc1c948fa0dc02eb5011b0d0bf7757ce83908c8308ae45f"
+}

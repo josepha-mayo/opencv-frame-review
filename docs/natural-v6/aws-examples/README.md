@@ -1,0 +1,3 @@
+# Actual AWS browser downloads
+
+All three MP4s are actual browser downloads, hash checked against their cloud reports. Gentoo and Writer match the locally qualified bytes. Caption preparation differs across hosts; its actual cloud source/edit pair passes a separate independent decoded qualification. See cloud-caption-independent.json and the retained diagnostic negative. Serve this folder with a local HTTP server and use the explicit Play buttons. All three play to12seconds at640x360, muted. This is playback evidence, not listening or creator preference. Full source URLs, original/prepared/output hashes, listed authors/licenses and adaptations are in CREDITS.json.

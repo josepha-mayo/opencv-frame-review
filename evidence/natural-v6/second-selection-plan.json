@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-23T23:01:50.302722+00:00",
+  "sources": [
+    {
+      "id": "gerrit-setup",
+      "title": "WMA gerrit code setup locally.webm"
+    },
+    {
+      "id": "schrodinger",
+      "title": "Annotating the Schr\u00f6dinger equation.webm"
+    },
+    {
+      "id": "wiki-userpage",
+      "title": "Como criar e editar sua p\u00e1gina de usu\u00e1rio na Wikip\u00e9dia.webm"
+    },
+    {
+      "id": "wiki-sandbox",
+      "title": "Como utilizar p\u00e1ginas de teste na Wikip\u00e9dia.webm"
+    }
+  ],
+  "selection": "Four additional named instructional sources selected using official Commons metadata after the initial 21-window screen, before viewing/scoring these four originals. Exploratory follow-up; no representative recall.",
+  "rule": "For each original, prepare 12 seconds at floor(min(duration-12,600)*q) for q=.25,.5,.75. This covers distinct points in the app-supported first ten minutes, avoiding duplicated capped timestamps on long recordings. Retain all 12 outcomes. Never add a defect. Inspect proposals for teaching meaning before independent HTTP export qualification.",
+  "baseline_manifest_sha256": "a900388b23d5cdab6f2ad590a669fed2d70e50eee32ef20891b33a7249ca5ac1",
+  "phase": "Frozen v5 baseline; later source-driven fixes are development, not held-out validation."
+}

@@ -1,24 +1,819 @@
 {
-  "build": "lesson-rescue-matched-boundaries-2026-10-23-v5",
-  "source_manifest_sha256": "a900388b23d5cdab6f2ad590a669fed2d70e50eee32ef20891b33a7249ca5ac1",
-  "source_files_verified": 106,
-  "verification_stages": 14,
-  "original_http_repairs": 7,
-  "prior_sources_regressed": 6,
-  "new_source_repairs": 1,
-  "fixed_six_source_exposure_seconds": 72,
-  "six_source_whole_excerpt_counts": {
-    "source": 90,
-    "spatial_blur": 91,
-    "matched_hold": 56,
-    "prior_fixed_hold": 54
-  },
-  "six_source_held_seconds": 17.6,
-  "first_new_cohort_sources": 4,
-  "first_new_cohort_windows": 12,
-  "shell_followup_sources": 3,
-  "shell_followup_windows": 9,
-  "earlier_negative_editor_sources": 2,
-  "earlier_negative_windows": 12,
-  "scope": "Selected development/regression evidence. Frozen code before seven new-source screens, targeted shell follow-up after first cohort. No representative recall or measured creator, learning, safety, accessibility, time-saving benefit."
+  "build": "lesson-rescue-teaching-motion-2026-10-23-v6",
+  "runtime_manifest_sha256": "09c8bd44526e7d1e65ad40ea2528154b3f6489c7659510bb61b5fcd5fddfa123",
+  "runtime_files": 108,
+  "verification_stages_passed": 14,
+  "prior_original_sources_regressed": 7,
+  "newly_qualified_originals": 2,
+  "original_source_qualifications": 9,
+  "new_sources_screened": 11,
+  "new_windows_screened": 33,
+  "teaching_content_overlap_refusals": 3,
+  "repairs": [
+    {
+      "id": "jupyter",
+      "start": 301.0,
+      "held_activity": {
+        "source": 4,
+        "edited": 0
+      },
+      "whole_excerpt": {
+        "source": 24,
+        "edited": 18
+      },
+      "new_activity_events": 0,
+      "teaching_regions": [
+        {
+          "label": "Notebook code and output",
+          "xywh": [
+            52,
+            96,
+            552,
+            45
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "04730508ed082e684f75aa744fec92d7df68dc63b31c64add371a33538d09252",
+            "edited": "04730508ed082e684f75aa744fec92d7df68dc63b31c64add371a33538d09252"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 148,
+            "edited": 148
+          },
+          "changed_pairs_inside_hold": {
+            "source": 13,
+            "edited": 13
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 78,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.06578712861664701,
+            "edited": 0.06578712861664701
+          },
+          "peak_change_frame_inside_hold": 90,
+          "peak_change_mean_rgb_codes": 0.5564278046162104
+        },
+        {
+          "label": "Notebook controls",
+          "xywh": [
+            50,
+            30,
+            560,
+            60
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "d45e733941aa54754276665c7d26dc55bbecc43ed08ec9b3caf7db054c0e0742",
+            "edited": "d45e733941aa54754276665c7d26dc55bbecc43ed08ec9b3caf7db054c0e0742"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 31,
+            "edited": 31
+          },
+          "changed_pairs_inside_hold": {
+            "source": 0,
+            "edited": 0
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 78,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.00524856855462705,
+            "edited": 0.00524856855462705
+          },
+          "peak_change_frame_inside_hold": 20,
+          "peak_change_mean_rgb_codes": 0
+        }
+      ],
+      "teaching_pngs": 12,
+      "output_sha256": "7148dba7b0e1e4282fefb43f694cc174c9f5d8bf126d60b8b4d3a3badc3eb774"
+    },
+    {
+      "id": "npm-packages",
+      "start": 29.0,
+      "held_activity": {
+        "source": 5,
+        "edited": 0
+      },
+      "whole_excerpt": {
+        "source": 19,
+        "edited": 13
+      },
+      "new_activity_events": 0,
+      "teaching_regions": [
+        {
+          "label": "Repository explanation and code",
+          "xywh": [
+            55,
+            180,
+            560,
+            180
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "b7f5b73cf05def389047598b6a5e74f0ba58f56ee7983d915a619695b3063828",
+            "edited": "b7f5b73cf05def389047598b6a5e74f0ba58f56ee7983d915a619695b3063828"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 124,
+            "edited": 124
+          },
+          "changed_pairs_inside_hold": {
+            "source": 8,
+            "edited": 8
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 88,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.7688146084803467,
+            "edited": 0.7688146084803467
+          },
+          "peak_change_frame_inside_hold": 202,
+          "peak_change_mean_rgb_codes": 0.006438492063492064
+        }
+      ],
+      "teaching_pngs": 6,
+      "output_sha256": "7c742d6a21c293fe4c1a031bf2d022a129c2dd56d5ab3c29b1970079d0bc8baa"
+    },
+    {
+      "id": "npm-basics",
+      "start": 232.0,
+      "held_activity": {
+        "source": 5,
+        "edited": 0
+      },
+      "whole_excerpt": {
+        "source": 17,
+        "edited": 11
+      },
+      "new_activity_events": 0,
+      "teaching_regions": [
+        {
+          "label": "Command history",
+          "xywh": [
+            0,
+            0,
+            480,
+            236
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "d53a0e0354716b4539dd9eea171ee29631ea6274e2959dbaf7cacbbe46629066",
+            "edited": "d53a0e0354716b4539dd9eea171ee29631ea6274e2959dbaf7cacbbe46629066"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 39,
+            "edited": 39
+          },
+          "changed_pairs_inside_hold": {
+            "source": 17,
+            "edited": 17
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 96,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.0019561392810118084,
+            "edited": 0.0019561392810118084
+          },
+          "peak_change_frame_inside_hold": 93,
+          "peak_change_mean_rgb_codes": 0.030058262711864406
+        },
+        {
+          "label": "Current command text",
+          "xywh": [
+            0,
+            232,
+            530,
+            28
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "155d1a1b1930cbe33157a652ae0d4a8458cb700fc75637fbbb315ad9c5c8e791",
+            "edited": "155d1a1b1930cbe33157a652ae0d4a8458cb700fc75637fbbb315ad9c5c8e791"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 27,
+            "edited": 27
+          },
+          "changed_pairs_inside_hold": {
+            "source": 17,
+            "edited": 17
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 96,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.007505437135699395,
+            "edited": 0.007505437135699395
+          },
+          "peak_change_frame_inside_hold": 97,
+          "peak_change_mean_rgb_codes": 0.20222371967654987
+        },
+        {
+          "label": "Presenter explanation",
+          "xywh": [
+            490,
+            0,
+            150,
+            160
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "bcc271c4d8f0e8d5169eabf404e260981f9ff0d2fdd8923381b6d2d1c593d2d9",
+            "edited": "bcc271c4d8f0e8d5169eabf404e260981f9ff0d2fdd8923381b6d2d1c593d2d9"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 359,
+            "edited": 359
+          },
+          "changed_pairs_inside_hold": {
+            "source": 96,
+            "edited": 96
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 96,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.787538765088208,
+            "edited": 0.787538765088208
+          },
+          "peak_change_frame_inside_hold": 29,
+          "peak_change_mean_rgb_codes": 1.763638888888889
+        }
+      ],
+      "teaching_pngs": 16,
+      "output_sha256": "d6b7404bc08f0cb2c575755e6588ef8577999fcee726c83987e47c7355911117"
+    },
+    {
+      "id": "wikilink",
+      "start": 60.0,
+      "held_activity": {
+        "source": 4,
+        "edited": 0
+      },
+      "whole_excerpt": {
+        "source": 9,
+        "edited": 3
+      },
+      "new_activity_events": 0,
+      "teaching_regions": [
+        {
+          "label": "Wikilink teaching text",
+          "xywh": [
+            195,
+            80,
+            245,
+            100
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "2cf8969d123a90fcc6785741ee5d12b0621383c005dc6ef5f3ce56e8e906796f",
+            "edited": "2cf8969d123a90fcc6785741ee5d12b0621383c005dc6ef5f3ce56e8e906796f"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 77,
+            "edited": 77
+          },
+          "changed_pairs_inside_hold": {
+            "source": 26,
+            "edited": 26
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 89,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.006760161446194076,
+            "edited": 0.006760161446194076
+          },
+          "peak_change_frame_inside_hold": 250,
+          "peak_change_mean_rgb_codes": 0.2158095238095238
+        },
+        {
+          "label": "Lesson heading",
+          "xywh": [
+            195,
+            54,
+            245,
+            25
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "be1d513393cfe1c5b1126cfea40f9091de76542dbc138e761c7f1280b839d2bd",
+            "edited": "be1d513393cfe1c5b1126cfea40f9091de76542dbc138e761c7f1280b839d2bd"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 6,
+            "edited": 6
+          },
+          "changed_pairs_inside_hold": {
+            "source": 2,
+            "edited": 2
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 89,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.002673185151497925,
+            "edited": 0.002673185151497925
+          },
+          "peak_change_frame_inside_hold": 250,
+          "peak_change_mean_rgb_codes": 0.8837551020408163
+        }
+      ],
+      "teaching_pngs": 12,
+      "output_sha256": "5bcc2832e5bebe2dcf52e360fb1da36e341e4ef2277ea388c0473cb4c2d7b639"
+    },
+    {
+      "id": "wiki-citations",
+      "start": 24.0,
+      "held_activity": {
+        "source": 4,
+        "edited": 0
+      },
+      "whole_excerpt": {
+        "source": 6,
+        "edited": 2
+      },
+      "new_activity_events": 0,
+      "teaching_regions": [
+        {
+          "label": "Citation example and text",
+          "xywh": [
+            150,
+            125,
+            430,
+            80
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "e477fb79d8e17d4faacd25cd7a313484b0fbba56f0a7789b26e54e6cd1ddd4c1",
+            "edited": "e477fb79d8e17d4faacd25cd7a313484b0fbba56f0a7789b26e54e6cd1ddd4c1"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 75,
+            "edited": 75
+          },
+          "changed_pairs_inside_hold": {
+            "source": 46,
+            "edited": 46
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 82,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.007761034095571246,
+            "edited": 0.007761034095571246
+          },
+          "peak_change_frame_inside_hold": 43,
+          "peak_change_mean_rgb_codes": 0.12380813953488372
+        },
+        {
+          "label": "Article heading and controls",
+          "xywh": [
+            150,
+            25,
+            430,
+            65
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "9a8ad814d1231b0b2af33d1076cb7160ac42bec246e6f7c558fa34579733e111",
+            "edited": "9a8ad814d1231b0b2af33d1076cb7160ac42bec246e6f7c558fa34579733e111"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 5,
+            "edited": 5
+          },
+          "changed_pairs_inside_hold": {
+            "source": 1,
+            "edited": 1
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 82,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.0021330037887659185,
+            "edited": 0.0021330037887659185
+          },
+          "peak_change_frame_inside_hold": 61,
+          "peak_change_mean_rgb_codes": 0.0018485390578413833
+        }
+      ],
+      "teaching_pngs": 12,
+      "output_sha256": "01fc2f04728436432b9e88935cf7004dafd766584ae5e1e94f3a942a480b1707"
+    },
+    {
+      "id": "terminal",
+      "start": 68.0,
+      "held_activity": {
+        "source": 4,
+        "edited": 0
+      },
+      "whole_excerpt": {
+        "source": 15,
+        "edited": 9
+      },
+      "new_activity_events": 0,
+      "teaching_regions": [
+        {
+          "label": "Terminal command text",
+          "xywh": [
+            0,
+            0,
+            640,
+            336
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "86d45d8a17f6cc1f99b4cd116046cd244530d9f4a69d4a4ab0d30c198b6ed04b",
+            "edited": "86d45d8a17f6cc1f99b4cd116046cd244530d9f4a69d4a4ab0d30c198b6ed04b"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 182,
+            "edited": 182
+          },
+          "changed_pairs_inside_hold": {
+            "source": 14,
+            "edited": 14
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 89,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.35636624016917584,
+            "edited": 0.35636624016917584
+          },
+          "peak_change_frame_inside_hold": 18,
+          "peak_change_mean_rgb_codes": 0.2479399181547619
+        }
+      ],
+      "teaching_pngs": 6,
+      "output_sha256": "704fceddf3b1759527736956b045e730b0e7a41475eddd3049545f30e90dad70"
+    },
+    {
+      "id": "gentoo-equery",
+      "start": 62.0,
+      "held_activity": {
+        "source": 4,
+        "edited": 0
+      },
+      "whole_excerpt": {
+        "source": 13,
+        "edited": 9
+      },
+      "new_activity_events": 0,
+      "teaching_regions": [
+        {
+          "label": "Commands and package explanation",
+          "xywh": [
+            0,
+            0,
+            640,
+            326
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "0b36f51f2c93451cb38e3d204d1100694fad49f41da4029a7b0832efcc189dd5",
+            "edited": "0b36f51f2c93451cb38e3d204d1100694fad49f41da4029a7b0832efcc189dd5"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 66,
+            "edited": 66
+          },
+          "changed_pairs_inside_hold": {
+            "source": 15,
+            "edited": 15
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 112,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.013686843495622355,
+            "edited": 0.013686843495622355
+          },
+          "peak_change_frame_inside_hold": 67,
+          "peak_change_mean_rgb_codes": 0.010439033742331289
+        },
+        {
+          "label": "Live package progress readout",
+          "xywh": [
+            0,
+            326,
+            360,
+            18
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "0848e2477bce5609f312f6e86865d7b0ab41443cff954487c6de6f0996571128",
+            "edited": "0848e2477bce5609f312f6e86865d7b0ab41443cff954487c6de6f0996571128"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 96,
+            "edited": 96
+          },
+          "changed_pairs_inside_hold": {
+            "source": 32,
+            "edited": 32
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 112,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.3366114721964304,
+            "edited": 0.3366114721964304
+          },
+          "peak_change_frame_inside_hold": 152,
+          "peak_change_mean_rgb_codes": 4.073302469135802
+        },
+        {
+          "label": "Terminal lower margin",
+          "xywh": [
+            0,
+            344,
+            640,
+            16
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "fdd510568e0c48f9751e9afff85c3808f055dc69d729aa68cb5c33a40e1f986b",
+            "edited": "fdd510568e0c48f9751e9afff85c3808f055dc69d729aa68cb5c33a40e1f986b"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 5,
+            "edited": 5
+          },
+          "changed_pairs_inside_hold": {
+            "source": 1,
+            "edited": 1
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 112,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.0003645107938718663,
+            "edited": 0.0003645107938718663
+          },
+          "peak_change_frame_inside_hold": 111,
+          "peak_change_mean_rgb_codes": 0.0015625
+        }
+      ],
+      "teaching_pngs": 18,
+      "output_sha256": "366ee9f57dcc45a6f09abae3691ee7e77611f930904d5ea9200303ed9a38e085"
+    },
+    {
+      "id": "libreoffice-writer",
+      "start": 150.0,
+      "held_activity": {
+        "source": 6,
+        "edited": 0
+      },
+      "whole_excerpt": {
+        "source": 15,
+        "edited": 9
+      },
+      "new_activity_events": 0,
+      "teaching_regions": [
+        {
+          "label": "Writer controls and ruler",
+          "xywh": [
+            0,
+            0,
+            640,
+            81
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "21dc781a515a91d20b0630481aa117a0b9caba8f3b5a38c36c108a04e9b2165f",
+            "edited": "21dc781a515a91d20b0630481aa117a0b9caba8f3b5a38c36c108a04e9b2165f"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 126,
+            "edited": 126
+          },
+          "changed_pairs_inside_hold": {
+            "source": 31,
+            "edited": 31
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 118,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.0116999703394202,
+            "edited": 0.0116999703394202
+          },
+          "peak_change_frame_inside_hold": 23,
+          "peak_change_mean_rgb_codes": 0.3587705761316872
+        },
+        {
+          "label": "Formatting sidebar",
+          "xywh": [
+            490,
+            81,
+            150,
+            257
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "b195e79994590f289c64ef8cdc7261f28541d1404d8bc543a903c7602025d7cc",
+            "edited": "b195e79994590f289c64ef8cdc7261f28541d1404d8bc543a903c7602025d7cc"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 204,
+            "edited": 204
+          },
+          "changed_pairs_inside_hold": {
+            "source": 35,
+            "edited": 35
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 118,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.3469433635970601,
+            "edited": 0.3469433635970601
+          },
+          "peak_change_frame_inside_hold": 77,
+          "peak_change_mean_rgb_codes": 3.91073065283182
+        },
+        {
+          "label": "Document status readout",
+          "xywh": [
+            0,
+            338,
+            640,
+            22
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "67cd6036d1624363045f8e52684b92d74bb4f16473128a1b79bc11c8bccc36d9",
+            "edited": "67cd6036d1624363045f8e52684b92d74bb4f16473128a1b79bc11c8bccc36d9"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 197,
+            "edited": 197
+          },
+          "changed_pairs_inside_hold": {
+            "source": 117,
+            "edited": 117
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 118,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.013380497172279902,
+            "edited": 0.013380497172279902
+          },
+          "peak_change_frame_inside_hold": 57,
+          "peak_change_mean_rgb_codes": 0.06008522727272727
+        }
+      ],
+      "teaching_pngs": 18,
+      "output_sha256": "dc623fcfca3006f4136510e5b41c4420dedd5214d32eafd5ead943202d61b3ed"
+    },
+    {
+      "id": "wiki-userpage",
+      "start": 236.0,
+      "held_activity": {
+        "source": 5,
+        "edited": 0
+      },
+      "whole_excerpt": {
+        "source": 17,
+        "edited": 11
+      },
+      "new_activity_events": 0,
+      "teaching_regions": [
+        {
+          "label": "Page heading and image form controls",
+          "xywh": [
+            0,
+            0,
+            640,
+            168
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "a55eb9e1be711676ac1d61efe9a7902d32df0e5608c5505c95af53f03cd3b2bb",
+            "edited": "a55eb9e1be711676ac1d61efe9a7902d32df0e5608c5505c95af53f03cd3b2bb"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 311,
+            "edited": 311
+          },
+          "changed_pairs_inside_hold": {
+            "source": 72,
+            "edited": 72
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 110,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.4333999573744307,
+            "edited": 0.4333999573744307
+          },
+          "peak_change_frame_inside_hold": 250,
+          "peak_change_mean_rgb_codes": 0.8143880208333333
+        },
+        {
+          "label": "Alternative text and lower page",
+          "xywh": [
+            0,
+            188,
+            640,
+            172
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "b3b635af5bf2ba79066d329d994d2d8b15d31aa1cb8adcf19801d1caf1cfcd5a",
+            "edited": "b3b635af5bf2ba79066d329d994d2d8b15d31aa1cb8adcf19801d1caf1cfcd5a"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 342,
+            "edited": 342
+          },
+          "changed_pairs_inside_hold": {
+            "source": 104,
+            "edited": 104
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 110,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 1.0580929324971389,
+            "edited": 1.0580929324971389
+          },
+          "peak_change_frame_inside_hold": 250,
+          "peak_change_mean_rgb_codes": 0.25456637596899223
+        },
+        {
+          "label": "Left page content",
+          "xywh": [
+            0,
+            168,
+            216,
+            20
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "b6ad4ea628cef3380bb2bcd51b5366162f2b83bef5fe40356e6f958ddf57f4a9",
+            "edited": "b6ad4ea628cef3380bb2bcd51b5366162f2b83bef5fe40356e6f958ddf57f4a9"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 223,
+            "edited": 223
+          },
+          "changed_pairs_inside_hold": {
+            "source": 84,
+            "edited": 84
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 110,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.6656655146325527,
+            "edited": 0.6656655146325527
+          },
+          "peak_change_frame_inside_hold": 250,
+          "peak_change_mean_rgb_codes": 0.6260802469135802
+        },
+        {
+          "label": "Caption body and right page content",
+          "xywh": [
+            228,
+            168,
+            412,
+            20
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "8b738e26003047e55d8e79d3acb5ee2a27bf73b53e82976db341346384a00969",
+            "edited": "8b738e26003047e55d8e79d3acb5ee2a27bf73b53e82976db341346384a00969"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 248,
+            "edited": 248
+          },
+          "changed_pairs_inside_hold": {
+            "source": 44,
+            "edited": 44
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 110,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 1.504060857650251,
+            "edited": 1.504060857650251
+          },
+          "peak_change_frame_inside_hold": 250,
+          "peak_change_mean_rgb_codes": 0.5616909385113269
+        }
+      ],
+      "teaching_pngs": 24,
+      "output_sha256": "a0a35791a99a8fdf5b15c1e24d4c7eca586f26086f7f86dc85ecae2e342b15b1"
+    }
+  ],
+  "scope": "Selected engineering evidence, including exploratory follow-up. Counts are decoded changes including codec variation. Not representative recall, human preference, attention, comprehension, time saving, safety or independent rights clearance. New media/browser/cloud qualifications are separate."
 }

@@ -95,7 +95,7 @@ def verify(output):
         (output / 'verification.json').write_text(json.dumps(receipt, indent=2) + '\n')
         if result.returncode:
             raise RuntimeError(name + ' failed; see ' + str(output / (name + '.log')))
-    print('Thirteen stages passed, including three naturally blinking lesson excerpts, silent WebM intake, real classroom intake, and the disclosed augmented edit challenge. Original-source upload, browser/cloud checks and creator benefit remain separate.', flush=True)
+    print('Fourteen stages passed, including natural lesson excerpts, silent WebM intake, decoded bad-boundary refusal, real classroom intake, teaching-frame proof checks, and the disclosed augmented edit challenge. Original-source upload, browser/cloud checks and creator benefit remain separate.', flush=True)
 
 
 def main():

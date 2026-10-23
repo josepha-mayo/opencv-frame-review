@@ -181,7 +181,7 @@ class LessonManager(backend.Manager):
             if result_path.is_file():
                 result = backend.read_json(result_path)
                 if result.get('schema') == 'steady-detail-export-v1':
-                    export_measurements = {key:result.get(key) for key in ('acceptance','encoded_boundary_checks','linear_boundary_checks','activity','whole_clip_activity','new_activity_events')}
+                    export_measurements = {key:result.get(key) for key in ('acceptance','encoded_boundary_checks','linear_boundary_checks','activity','whole_clip_activity','new_activity_events','teaching_motion')}
             return {'schema': 'lesson-decision-v1', 'job_id': jid,
                     'created_utc': job['created_utc'], 'decision': job['status'],
                     'uploaded_sha256': receipt['uploaded_sha256'],
@@ -200,9 +200,45 @@ class LessonManager(backend.Manager):
                                     'Exact edit measurements reference the prepared clip, not the uploaded original.',
                                     'This record does not establish learning benefit or accessibility compliance.']}
 
+    def teaching_review(self, jid, boundary_verified=False):
+        with self.lock:
+            folder=self.jobpath(jid)
+            if self.jobs[jid]['status']!='complete':raise backend.Conflict('Teaching proof requires a completed export.')
+            export=backend.read_json(folder/'export.json')
+            expected=export.get('teaching_review_sha256')
+            if not expected:raise KeyError('Teaching frame proof unavailable')
+            raw=backend.bounded_regular_bytes(folder/'teaching-review.json',1024*1024)
+            if hashlib.sha256(raw).hexdigest()!=expected:raise ValueError('Teaching proof changed; comparison unavailable.')
+            review=json.loads(raw);analysis=backend.read_json(folder/'analysis.json');approval=backend.read_json(folder/'approval.json')
+            if not boundary_verified:self.frame_review(jid)
+            if (review.get('schema')!='teaching-motion-v1' or review.get('input_sha256')!=analysis['input_sha256']
+                or review.get('prediction_sha256')!=analysis['prediction_sha256'] or review.get('recipe_sha256')!=approval['recipe_sha256']
+                or review.get('output_hashes')!=export['output_hashes'] or review.get('frames')!=analysis['input_profile']['frames']
+                or review.get('interval_frames')!=approval['recipe']['proposal']['interval_frames']):raise ValueError('Teaching proof source binding mismatch.')
+            declared=approval['recipe']['protected_regions'];regions=review.get('regions',[])
+            if len(regions)!=len(declared) or not 1<=len(regions)<=4:raise ValueError('Teaching proof areas incomplete.')
+            for i,(region,original) in enumerate(zip(regions,declared)):
+                if region['xywh']!=original['xywh'] or region['label']!=original['label']:raise ValueError('Teaching proof area changed.')
+                moments=region.get('moments',[])
+                if not 2<=len(moments)<=3:raise ValueError('Teaching proof moments incomplete.')
+                for moment in moments:
+                    t=moment.get('frame');lo,hi=review['interval_frames']
+                    if type(t) is not int or not lo<=t<=hi or set(moment.get('images',{}))!={'source','edited'}:raise ValueError('Invalid teaching proof moment.')
+                    for role,asset in moment['images'].items():
+                        name=f'teaching-r{i}-f{t:05d}-{role}.png'
+                        if asset.get('filename')!=name or [asset.get('width'),asset.get('height')]!=region['xywh'][2:]:raise ValueError('Teaching image geometry changed.')
+                        backend.verified_image_bytes(folder/name,asset.get('sha256'))
+                        asset['url']=f'/api/jobs/{jid}/teaching/{name}'
+            return review
+
     def view(self, jid):
         out = super().view(jid)
         folder = self.jobpath(jid)
+        if out['status']=='complete' and (folder/'export.json').is_file() and backend.read_json(folder/'export.json').get('teaching_review_sha256'):
+            try:
+                if out.get('frame_review_error') or not isinstance(out.get('frame_review'),dict):raise ValueError('Bound media comparison unavailable.')
+                out['teaching_review']=self.teaching_review(jid,boundary_verified=True)
+            except (ValueError,KeyError,OSError) as error:out['teaching_review_error']=str(error)
         if (folder/'sample-credit.json').is_file():
             out['sample_credit'] = backend.read_json(folder/'sample-credit.json')
         if (folder/'steady-analysis.json').is_file() and (folder/'analysis.json').is_file():
@@ -290,6 +326,15 @@ class LessonHandler(backend.Handler):
             except (ValueError,KeyError,PermissionError,OSError) as error:
                 return self.handle_error(error)
         steady_match = re.fullmatch(r'/api/jobs/([0-9a-f]{32})/steady/(steady-[0-7]-(?:reference|alternate)\.png)',path)
+        teaching_match = re.fullmatch(r'/api/jobs/([0-9a-f]{32})/teaching/(teaching-r[0-3]-f[0-9]{5}-(?:source|edited)\.png)',path)
+        if teaching_match:
+            try:
+                self.secure();jid,name=teaching_match.groups();review=self.server.manager.teaching_review(jid)
+                assets=[asset for region in review['regions'] for moment in region['moments'] for asset in moment['images'].values()]
+                asset=next((a for a in assets if a['filename']==name),None)
+                if asset is None:raise KeyError('Teaching image unavailable')
+                return self.verified_image(self.server.manager.jobpath(jid)/name,asset['sha256'])
+            except (ValueError,KeyError,PermissionError,OSError) as error:return self.handle_error(error)
         if steady_match:
             try:
                 self.secure()

@@ -1,75 +1,61 @@
 # Frame Review: Keep the Lesson
 
-**Keep the code. Calm the blink. Keep the cut points honest.** A teacher has a finished screen recording and no editable project. Frame Review lets an editor steady one observed blinking detail during a reading pause, while protecting the command, code, progress readout and prepared narration on the original timeline.
+**Keep the lesson moving. Calm the idle blink.** A teacher has a finished screen recording, but the editable project is gone. Frame Review helps an editor hold one observed blinking detail during a reading pause while the explanation, code, progress readout and prepared narration keep their original timeline.
 
-[Live AWS app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws) · [Devpost entry](https://devpost.com/software/countback-inspect-the-evidence) · [Technical report](../docs/real-lessons-report.pdf) · [Checked output videos and credits](../docs/natural-v5/examples/README.md)
+[Live AWS app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws) · [Devpost entry](https://devpost.com/software/countback-inspect-the-evidence) · [Technical report](../docs/real-lessons-report.pdf) · [Two new real-source comparisons and credits](../docs/natural-v6/examples/README.md)
 
-**23 October v5: seven actual original-source HTTP repairs pass independent encoded checks.** Six repeat the prior lessons to fix their cut points; the seventh is a new, silent Gentoo package-management tutorial found with the code already frozen. No visual defect was added. These are selected engineering experiments, not seven users or a general success rate.
+**v6 adds proof of what keeps changing.** Each protected teaching area has a frame-ordered RGB digest over all 360 decoded frames, source/edit change counts, and hash-bound static PNG pairs at hold entry, the largest measured teaching change, and hold end. A teaching freeze or reordered sequence fails even when a simple change count matches. Damaged proof receipts or PNGs are withheld. Download hashes and actual decoded crops are independently checked.
 
-Across the **same 72 seconds in the six regression excerpts**, adjacent selected-region mean RGB changes of at least eight codes fall **90 → 56 (34 fewer, 37.8%)**, including the cuts. There are **zero newly timed threshold crossings**. All three boundary diagnostics—entry, return and loop—are no worse than source in selected/influence RGB mean absolute, RMS and maximum error, plus the frozen selected-mean linear diagnostic. All named teaching pixels, native samples outside the box, outside-interval frames, timestamps and prepared audio checks pass.
+![Actual changing progress and new-source results](../docs/natural-v6/Teaching-Results.png)
 
-![Measured whole-excerpt results and the actual new Gentoo lesson](../docs/natural-v5/Boundary-Results.png)
+In the existing Gentoo package tutorial, the protected progress readout changes in **32 of 112 adjacent frame pairs during the hold, in both source and edit**, with the complete ordered sequence exact. These are decoded sample changes, including codec variation; they are not 32 semantic progress updates. The selected blink goes 4 → 0 inside the hold; whole-clip activity goes 13 → 9, including cuts. Gentoo is silent; audio absence stays exact.
 
-These counts measure local temporal activity. No attention, comprehension, creator time saving, accessibility, medical, safety, adoption or publishing-clearance benefit has been measured. The editor must decide whether a caret conveys useful information and inspect the actual download.
+## Two additional real recordings, nine total qualifications
 
-## The boundary failure and causal fix
+This round screens **11 additional originals / 33 fixed windows** and qualifies two reviewed idle-caret examples: Free I.T. Athens' Writer explanation and a Portuguese Wikipedia image-caption lesson. Seven prior sources pass regression with the new proof. No visual distraction was added. Nine qualifications are selected source cases, not nine users, independent creators, a general success rate or demonstrated preference.
 
-The previous fixed four-second holds could make an exit worse. The new `steady-boundaries-v1` policy trims at most 30 frames from each end and chooses an actual source frame from the same more-contrasting appearance class. It never extends the proposed window or invents pixels. The clip's first and last frames stay untouched. At least two seconds and four internal changes must remain useful to hold.
+| Lesson | Original start (s) | Inclusive hold frames | Inside hold | Whole 12 s | Teaching PNGs |
+|---|---:|---|---|---|---:|
+| jupyter | 301 | 19-97 | 4 → 0 | 24 → 18 | 12 |
+| npm-packages | 29 | 117-205 | 5 → 0 | 19 → 13 | 6 |
+| npm-basics | 232 | 1-97 | 5 → 0 | 17 → 11 | 16 |
+| wikilink | 60 | 225-314 | 4 → 0 | 9 → 3 | 12 |
+| wiki-citations | 24 | 10-92 | 4 → 0 | 6 → 2 | 12 |
+| terminal | 68 | 6-95 | 4 → 0 | 15 → 9 | 6 |
+| gentoo-equery | 62 | 61-173 | 4 → 0 | 13 → 9 | 18 |
+| libreoffice-writer | 150 | 1-119 | 6 → 0 | 15 → 9 | 18 |
+| wiki-userpage | 236 | 244-354 | 5 → 0 | 17 → 11 | 24 |
 
-The proposal predicts the cuts, then an independent decoded-export gate checks the actual selected box and influence area. A worse cut, a newly timed eight-code event, changed teaching samples, altered prepared audio or a stale approval withholds the edited download. The decision record includes these measurements. The UI now shows whole-excerpt counts and the encoded cut-point result.
+The activity metric counts adjacent selected-box mean RGB changes ≥8 codes. Whole-excerpt counts include cut points. All nine have zero newly timed threshold crossings and all encoded boundary/preservation gates pass. Static moments alone do not show full motion. Fixed teaching regions are creator declarations, not a semantic guarantee.
 
-**The tradeoff stays visible:** prior longer holds leave 54 changes versus 56 with the shorter matched holds, but introduce new threshold events in five cases. The new holds total **17.6 seconds**, versus 24 seconds before. Their interior counts are 26 → 0; the older 41 → 0 counted different intervals. These are not interchangeable comparisons. Existing strong source motion and loop seams can remain.
+## Keep the useful motion; refuse edits on teaching content
 
-## Same-excerpt encoded comparison
+Three real detections in the first screen touch a configuration-menu command, the first letter of a document title, and a schedule dataset. Actual HTTP plans refuse when those teaching areas are protected, with exact original/prepared downloads and edited downloads withheld. The source-selection plans, all 33 outcomes, and the failed test-label request are retained in [v6 evidence](../evidence/natural-v6/).
 
-All rows use a full twelve-second excerpt, 360 frames at 30 fps, and the same selected box. The fixed blur uses one untuned 5×5 Gaussian, sigma 2, inside the new interval with source chroma retained. It is one engineering reference, not a complete professional editor or a user trial. [Full traces, new-event times and continuous temporal/contrast measurements](../evidence/natural-v5/comparison.json) accompany the count.
+The first seven-source/21-window screen ran on frozen v5; the four-source/12-window follow-up ran on v6. The detector and cut policy are unchanged between them. The second round is exploratory, selected after the first round, not held out. Three Toybox recordings share one author. Additional rapid-change proposals in equation annotation and Wikipedia editing were declined; proposal presence does not identify a distraction.
 
-| Lesson | Start (s) | New inclusive frames / reference | Source | Fixed blur | Prior hold | Matched hold |
-|---|---:|---|---:|---:|---:|---:|
-| jupyter | 301 | 19–97 / 67 | 24 | 24 | 17 | 18 |
-| npm-packages | 29 | 117–205 / 116 | 19 | 20 | 13 | 13 |
-| npm-basics | 232 | 1–97 / 0 | 17 | 18 | 11 | 11 |
-| wikilink | 60 | 225–314 / 251 | 9 | 8 | 3 | 3 |
-| wiki-citations | 24 | 10–92 / 79 | 6 | 6 | 1 | 2 |
-| terminal | 68 | 6–95 / 24 | 15 | 15 | 9 | 9 |
+## The cut-point fix stays enforced
 
-Totals: source 90; fixed blur 91 (new events in two cases); prior hold 54 (new events in five cases); matched hold 56 (no new events). A lower total alone does not establish a good edit.
+The frozen `steady-boundaries-v1` policy trims at most 30 frames per end, never extends a detection, and keeps the first/last clip frames unchanged. Actual encoded entry, return and loop diagnostics must be no worse than source in selected/influence RGB mean absolute, RMS and maximum error, plus the frozen selected-mean diagnostic. No tolerance or detector threshold was relaxed for the new examples.
 
-## New lessons, including the negatives
-
-The unchanged build was frozen before screening **seven new sources / 21 preselected windows**. Four broad instructional sources were screened first; the three command-line sources were an exploratory follow-up chosen after those results. This is a convenience sample, not held-out recall.
-
-| New source | Actual outcome |
-|---|---|
-| Ezhil loops/turtle | Three review windows, no proposal |
-| GeoGebra matrix | Three declared source-dimension refusals; limit unchanged |
-| Phoneme table | Two review/no-proposal windows; one >16-region refusal |
-| WikiSound recording | Two no-proposal windows; one with two rapid candidates in instructional Audacity controls/readouts. Both refuse when protected; exact original/prepared recovery passes. |
-| Git Foundations setup | Two no-proposal windows; one with eight rapid candidates in the tutorial webpage. Declined; these are not stationary-detail repairs. |
-| Toybox true/false | Three review windows, no proposal |
-| Gentoo equery | One stationary caret proposal; two no-proposal windows. New full HTTP repair qualified at 62 seconds. |
-
-Two previously negative editor recordings were also screened over twelve nonoverlapping windows without proposals. Those are exploratory offline detector screens, not twelve HTTP repairs. Every outcome is retained in [v5 evidence](../evidence/natural-v5/).
-
-**New Gentoo case:** untouched original → prepared seconds 62–74 → reviewed box `[370,330,6,10]` → frames 61–173, source reference 86 → encoded export/download. Whole-excerpt activity **13 → 9**, interior **4 → 0**, no new events. Commands and the live progress readout remain exact in every frame; all other preservation and boundary gates pass. The original is silent and audio absence stays exact. Its existing entry remains strong (selected-mean diagnostic about 0.21815 → 0.21686); passing no-worsening does not make it smooth. Vitaly Zdanevich, CC0 via Wikimedia Commons as listed; no endorsement.
+The prior six-source comparison remains **the same 72 seconds**: source 90, fixed blur 91, prior longer hold 54, source-matched hold 56 changes. The matched hold removes 34 (37.8%) with zero new events; the prior hold introduces events in five cases. The matched intervals total 17.6 seconds versus 24 before. This is an engineering comparison, not superiority over a professional editor or a human-benefit trial. [Full v5 traces and negatives](../evidence/natural-v5/comparison.json) remain versioned.
 
 ## Try and reproduce
 
-1. Open the AWS app and choose Jupyter, npm or the Tamil installation example. These are disclosed prepared excerpts, not additional sources. The app only shows static images.
-2. Inspect both observed states. For Jupyter protect code/output `[52,96,552,45]` and controls `[50,30,560,60]`. For npm protect history `[0,0,480,236]`, command `[0,232,530,28]`, presenter `[490,0,150,160]`. For Tamil protect `[0,0,640,336]`.
-3. Check the plan and explicitly generate the comparison. Inspect twelve boundary crops, the whole-excerpt card, encoded cuts, teaching areas and audio checks. Download and play the output before deciding whether to use it.
-4. For original intake, obtain hash-checked files from [source credits](../evidence/natural-v5/sources.json), upload with preparation checked, and use the starts above. Gentoo uses [the exact case configuration](../docs/natural-v5/natural-v5-gentoo-case.json). Originals stay separately downloadable; exact edit checks reference the resized/re-encoded prepared input.
+The live app has prepared Tamil terminal, Jupyter and npm examples with source/provenance links. Inspect both states, declare the teaching areas, check the plan, explicitly generate a comparison, then review the actual download. Original/prepared bytes and receipts are separate. The [new case configurations](../docs/natural-v6/) supply exact original starts, rectangles and expected results; listed source URLs and hashes are in evidence/natural-v6/sources.json.
 
-AWS original uploads of **Jupyter, npm basics and Gentoo** were checked in the real browser: approval, actual artifact downloads and hashes, twelve crop downloads, reload, responsive layouts and downloaded H.264 playback. They repeat local cases; they are not extra independent successes. Playback was muted, so this does not establish listening quality. Known-job reads without the owner cookie return 404. Receipts: [cloud verification](../evidence/natural-v5/cloud-verified.json).
+Build on Linux: `docker build -t frame-review .`
 
-Build on Linux with `docker build -t frame-review .`. Run the gate with `docker run --name frame-review-check --network none frame-review python studio/run.py --verify /tmp/qualification`, then `docker cp frame-review-check:/tmp/qualification ./qualification`. Use a fresh container name. Serve with `docker run --rm --network host frame-review python studio/run.py --serve --port 8877` and open http://127.0.0.1:8877 on the Linux Docker host.
+Run the full gate in a fresh container: `docker run --name frame-review-check --network none frame-review python studio/run.py --verify /tmp/qualification`, then `docker cp frame-review-check:/tmp/qualification ./qualification`.
 
-All **14 stages** pass, including the actual encoded old-Jupyter boundary rejection. Backend: 137 unit tests; studio: 84 tests (one platform skip). The final CLI sentence retains the older “Thirteen” wording; the authoritative verification JSON contains fourteen passed stages. The first gate hit a frozen PID-marker test race; a full rerun passed with that test unchanged. A development Wikilink CPU refusal and rejected floating-point optimization remain documented. No runtime limit or error budget was increased.
+Serve: `docker run --rm --network host frame-review python studio/run.py --serve --port 8877`, then open http://127.0.0.1:8877 on that host. Windows source/UI checks alone do not qualify media. All **14 stages**, **137 backend unit tests**, and **91 studio tests** pass (one platform skip). The old bad Jupyter boundary is actually encoded and refused. The runtime manifest binds **108 exact files**: `09c8bd44526e7d1e65ad40ea2528154b3f6489c7659510bb61b5fcd5fddfa123`.
 
-Runtime source manifest: `a900388b23d5cdab6f2ad590a669fed2d70e50eee32ef20891b33a7249ca5ac1` / **106 exact files**. AWS ECS Fargate, digest-pinned ECR, managed HTTPS, one vCPU / 2 GiB task, CloudWatch logs, one worker/eight job slots, 24-hour ephemeral owned jobs, no application AWS role. Source and [container instructions](README.md) are included. The older `opencv-ready/` package remains frozen history.
+AWS revision 11 is complete. Actual original-upload Gentoo, Writer and caption browser jobs pass artifact/PNG hashes, ownership checks, reload and twelve-second downloaded playback. The caption pair has different prepared video bytes across hosts and was independently decoded against its actual cloud reference; audio packets/PCM match. This is not universal cross-host preparation determinism. See the versioned cloud receipt and diagnostic negative. Actual 375/890 widths were checked on caption; Gentoo/Writer were observed at 1280.
 
-## Why this fits the hackathon
+## Scope and next evidence
 
-OpenCV 5 connected components localize support; native luma/chroma checks establish the observed states; OpenCV measures RGB preservation and encoded boundary errors. FFmpeg handles bounded preparation/export, and NumPy represents samples. This is a concrete creator editing operation with a source-bound human decision, an inspectable refusal and a complete AWS media path. Technical execution, innovation, impact, UX, documentation and cloud reproducibility have separate evidence; the rubric is not a score received.
+Supported SDR originals up to 64 MiB; prepared 1–12 second excerpts at 640×360/30 fps (or canonical 320×180). Preparation resizes/re-encodes picture and optional mono AAC once and can reduce legibility. Exact edit checks compare against the prepared clip. Native samples outside the box, every outside-interval frame, RGB outside influence, all protected RGB, timing and prepared audio must remain exact. No full-lesson splice-back or moving semantic tracking is implemented.
 
-The near-term impact hypothesis is rescuing a short explanation without re-recording or rebuilding its timeline. It still needs creator preference and timed-task studies with consenting educators. No such result is claimed. The existing narrated walkthrough covers the earlier workflow; the real-voice recording is deferred as requested. The current report and receipts describe v5. No handoff documents or credentials are tracked; direct default-branch publication is used, with no cron work.
+No measured creator time saving, preference, attention, comprehension, accessibility, adoption, medical or safety benefit. A useful caret may stay; the creator decides. Next useful human evidence is a consenting teacher/editor comparison with blinded preference and timed rescue tasks. Source metadata preserves listed authors, license URLs and adaptations; imported license claims are not independent clearance or endorsement. Wikipedia output is CC BY-SA 4.0 as listed; Writer is CC BY 3.0. Earlier failures and controlled added-corner tests remain explicitly separate.
+
+The 2:46 neural-narrated demo covers an earlier workflow. Current evidence is in this report, source, actual artifacts and live app. Joseph's real voice is deferred. Existing submission is updated in place; no cron or new PR is part of this release.

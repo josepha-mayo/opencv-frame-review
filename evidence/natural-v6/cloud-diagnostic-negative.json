@@ -1,0 +1,27 @@
+{
+  "initial_import_failure": "The new standalone diagnostic omitted the frozen backend module path; import failed before decoding. Corrected sys.path to studio.APP, matching the existing qualified harness.",
+  "initial_rgb_failure": {
+    "complete": false,
+    "case": "wiki-userpage",
+    "prepared_sha256": "0245ddb1483405b3667a844f92b661dcc5c9913e2a2f6cee0cffb18d23661889",
+    "edited_sha256": "d82442c055a495ab7a892ad9b8c331764069aa7482d5e8183175dfd573924c0b",
+    "scope": "Independent decoding of actual AWS browser downloads against their own prepared reference. Cross-host preparation identity is measured separately, not assumed.",
+    "native_outside_box_exact": true,
+    "outside_interval_exact": true,
+    "observed_reference_mapping_exact": true,
+    "prepared_audio_pcm_packets_timing_exact": true,
+    "video_timestamps_exact": true,
+    "audio_present": true,
+    "cross_host_preparation": {
+      "prepared_files_identical": false,
+      "video_packet_payloads_identical": false,
+      "audio_packet_payloads_identical": true,
+      "decoded_prepared_pcm_identical": true,
+      "native_yuv_identical": false
+    }
+  },
+  "reason": "The new standalone diagnostic first used FFmpeg implicit RGB conversion, while proof PNGs use the frozen explicit DECODE_FILTER. This is a harness contract mismatch, not a passing proof. The failed result is retained.",
+  "correction": "Use the exact frozen colour/range conversion specification and filter_threads=1, then recompute all independent sample/PNG/order/activity/boundary checks on actual cloud downloads. No export threshold or source changed.",
+  "corrected_result": "cloud-caption-independent.json",
+  "cross_host_limit": "Caption preparation video packet payloads and native video samples differ across hosts; audio packets and decoded PCM match. Cause not established. Actual cloud source/edit pair independently passes all preservation/proof/boundary tests. Do not claim cross-host byte determinism."
+}

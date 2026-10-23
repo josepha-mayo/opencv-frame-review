@@ -1,0 +1,168 @@
+{
+  "complete": true,
+  "case": "wiki-userpage",
+  "prepared_sha256": "0245ddb1483405b3667a844f92b661dcc5c9913e2a2f6cee0cffb18d23661889",
+  "edited_sha256": "d82442c055a495ab7a892ad9b8c331764069aa7482d5e8183175dfd573924c0b",
+  "scope": "Independent decoding of actual AWS browser downloads against their own prepared reference. Cross-host preparation identity is measured separately, not assumed.",
+  "native_outside_box_exact": true,
+  "outside_interval_exact": true,
+  "observed_reference_mapping_exact": true,
+  "prepared_audio_pcm_packets_timing_exact": true,
+  "video_timestamps_exact": true,
+  "audio_present": true,
+  "cross_host_preparation": {
+    "prepared_files_identical": false,
+    "video_packet_payloads_identical": false,
+    "audio_packet_payloads_identical": true,
+    "decoded_prepared_pcm_identical": true,
+    "native_yuv_identical": false
+  },
+  "all_360_teaching_rgb_frames_exact": true,
+  "all_rgb_outside_influence_exact": true,
+  "teaching": [
+    {
+      "label": "Page heading and image form controls",
+      "frames": 360,
+      "ordered_rgb_sequence_sha256": {
+        "source": "1747f9466457db190e2b18ca779ff6158fc0679f60bd38f66a15060720d50c96",
+        "edited": "1747f9466457db190e2b18ca779ff6158fc0679f60bd38f66a15060720d50c96"
+      },
+      "changed_pairs_inside_hold": {
+        "source": 72,
+        "edited": 72
+      },
+      "all_source_edit_samples_exact": true
+    },
+    {
+      "label": "Alternative text and lower page",
+      "frames": 360,
+      "ordered_rgb_sequence_sha256": {
+        "source": "b748d5ca1ea3e4527d9cca3556e70179fd241eb247c56a99f6e68237b121170b",
+        "edited": "b748d5ca1ea3e4527d9cca3556e70179fd241eb247c56a99f6e68237b121170b"
+      },
+      "changed_pairs_inside_hold": {
+        "source": 104,
+        "edited": 104
+      },
+      "all_source_edit_samples_exact": true
+    },
+    {
+      "label": "Left page content",
+      "frames": 360,
+      "ordered_rgb_sequence_sha256": {
+        "source": "b6ad4ea628cef3380bb2bcd51b5366162f2b83bef5fe40356e6f958ddf57f4a9",
+        "edited": "b6ad4ea628cef3380bb2bcd51b5366162f2b83bef5fe40356e6f958ddf57f4a9"
+      },
+      "changed_pairs_inside_hold": {
+        "source": 84,
+        "edited": 84
+      },
+      "all_source_edit_samples_exact": true
+    },
+    {
+      "label": "Caption body and right page content",
+      "frames": 360,
+      "ordered_rgb_sequence_sha256": {
+        "source": "58b58245306be34fe5f2edefef7687fe95bc851bb055785af052ecacdff0db6a",
+        "edited": "58b58245306be34fe5f2edefef7687fe95bc851bb055785af052ecacdff0db6a"
+      },
+      "changed_pairs_inside_hold": {
+        "source": 44,
+        "edited": 44
+      },
+      "all_source_edit_samples_exact": true
+    }
+  ],
+  "actual_teaching_pngs_independently_decoded": 24,
+  "boundaries": {
+    "entry": {
+      "selected": {
+        "source": {
+          "mean_absolute_rgb_codes": 18.76388888888889,
+          "rms_rgb_codes": 26.573012625594412,
+          "maximum_rgb_codes": 47.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 1.8680555555555556,
+          "rms_rgb_codes": 2.4080305461333147,
+          "maximum_rgb_codes": 7.0
+        },
+        "passed": true
+      },
+      "influence": {
+        "source": {
+          "mean_absolute_rgb_codes": 3.7930555555555556,
+          "rms_rgb_codes": 11.885507047567545,
+          "maximum_rgb_codes": 47.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 0.43194444444444446,
+          "rms_rgb_codes": 1.107424439358681,
+          "maximum_rgb_codes": 7.0
+        },
+        "passed": true
+      }
+    },
+    "exit": {
+      "selected": {
+        "source": {
+          "mean_absolute_rgb_codes": 0.0,
+          "rms_rgb_codes": 0.0,
+          "maximum_rgb_codes": 0.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 0.0,
+          "rms_rgb_codes": 0.0,
+          "maximum_rgb_codes": 0.0
+        },
+        "passed": true
+      },
+      "influence": {
+        "source": {
+          "mean_absolute_rgb_codes": 0.0,
+          "rms_rgb_codes": 0.0,
+          "maximum_rgb_codes": 0.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 0.0,
+          "rms_rgb_codes": 0.0,
+          "maximum_rgb_codes": 0.0
+        },
+        "passed": true
+      }
+    },
+    "loop_seam": {
+      "selected": {
+        "source": {
+          "mean_absolute_rgb_codes": 127.25,
+          "rms_rgb_codes": 133.79046636023395,
+          "maximum_rgb_codes": 236.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 127.25,
+          "rms_rgb_codes": 133.79046636023395,
+          "maximum_rgb_codes": 236.0
+        },
+        "passed": true
+      },
+      "influence": {
+        "source": {
+          "mean_absolute_rgb_codes": 139.98611111111111,
+          "rms_rgb_codes": 147.22377148031796,
+          "maximum_rgb_codes": 249.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 139.98611111111111,
+          "rms_rgb_codes": 147.22377148031796,
+          "maximum_rgb_codes": 249.0
+        },
+        "passed": true
+      }
+    }
+  },
+  "whole_excerpt_activity": {
+    "source": 17,
+    "edited": 11,
+    "new_events": 0
+  }
+}

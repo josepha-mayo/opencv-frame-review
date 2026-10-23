@@ -20,3 +20,10 @@
 .natural-lesson-example { min-width: 0; margin: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #252c29; }
 .natural-lesson-example img { display: block; width: 100%; height: auto; }
 .natural-lesson-example figcaption { color: #e4eddf; padding: 10px 12px; font-size: .68rem; }
+/* Teaching crops are static evidence, with source and encoded edit paired. */
+.teaching-frame-proof { margin-top: 1rem; }
+.teaching-proof-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+.teaching-proof-pair figure { margin: 0; min-width: 0; }
+.teaching-proof-pair img { display: block; width: 100%; height: auto; margin-top: .5rem; }
+.teaching-proof-pair figcaption { font-weight: 600; }
+@media (max-width: 500px) { .teaching-proof-pair { grid-template-columns: 1fr; } }

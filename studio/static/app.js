@@ -690,12 +690,37 @@
 
       const protection = summary.protected_content;
       if (protection?.declared) {
-        protection.regions.forEach((region) => {
+        protection.regions.forEach((region,regionIndex) => {
           const card=resultCard("Important area: "+region.label,[["Fixed rectangle",region.xywh],["Result",region.passed ? "Criteria met; review still required" : "Failed preservation criteria"],["Mean / p99 / maximum RGB error",[region.measurements.mean_rgb_code_error,region.measurements.p99_rgb_code_error,region.measurements.max_rgb_code_error]],["Criteria",region.criteria ? [region.criteria.mean_rgb_code_error,region.criteria.p99_rgb_code_error,region.criteria.max_rgb_code_error] : [0.1,1,3]],["Frames measured",protection.frames]]);
+          const motion=summary.teaching_motion?.regions?.[regionIndex];
+          if (motion && motion.label===region.label && JSON.stringify(motion.xywh)===JSON.stringify(region.xywh)) {
+            card.append(element("h4","Teaching motion kept on its timeline"));
+            card.append(element("p","Changing frame pairs inside hold · source / edited: "+pretty([motion.changed_pairs_inside_hold.source,motion.changed_pairs_inside_hold.edited])+" of "+motion.hold_adjacent_pairs+". Ordered RGB sequence: "+(motion.ordered_rgb_sequence_exact ? "exact match" : "different")+".","small"));
+            card.append(element("p","Any decoded RGB change is counted, including codec variation. This does not count semantic progress ticks or establish readability.","small muted"));
+          }
+          const proof=job.teaching_review?.regions?.[regionIndex];
+          if (proof && proof.label===region.label && JSON.stringify(proof.xywh)===JSON.stringify(region.xywh)) {
+            const details=element("details",null,"teaching-frame-proof");details.append(element("summary","Inspect preserved teaching frames · static PNGs"));
+            proof.moments.forEach((moment)=>{
+              details.append(element("p",moment.roles.join(" / ")+" · frame "+moment.frame,"small"));
+              const pair=element("div",null,"teaching-proof-pair");
+              ["source","edited"].forEach((role)=>{
+                const asset=moment.images[role],figure=element("figure");
+                figure.append(element("figcaption",role==="source" ? "Prepared source" : "Encoded edit"));
+                const image=element("img"),status=element("p","Loading static teaching crop…","small muted");
+                image.alt=region.label+" · "+role+" · frame "+moment.frame;image.loading="lazy";
+                image.onload=()=>{const valid=image.naturalWidth===asset.width && image.naturalHeight===asset.height;image.hidden=!valid;status.textContent=valid ? "Hash-verified source-bound PNG" : "Teaching crop dimensions differ; image withheld.";};
+                image.onerror=()=>{image.hidden=true;status.textContent="Teaching crop unavailable; it has not been displayed.";};
+                figure.append(image,status);pair.append(figure);
+                try { image.src=localURL(asset.url); } catch(error) { image.hidden=true;status.textContent="Teaching crop URL refused."; }
+              });details.append(pair);
+            });card.append(details);
+          }
           if (!region.passed) card.classList.add("protected-failed");
           ui.highlights.append(card);
         });
       } else ui.highlights.append(resultCard("Important-area check",[],"No important area declared. No preservation conclusion for text or objects."));
+      if (job.teaching_review_error) ui.highlights.append(resultCard("Teaching frame proof unavailable",[],"The source-bound teaching images could not be verified. "+job.teaching_review_error));
 
       const notes = element("section", null, "result-notes");
       notes.append(element("p", "Numeric checks do not replace creator review, even when every experimental criterion is met.", "result-caveat"));

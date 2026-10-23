@@ -6,6 +6,7 @@ from retime import retimed_frames
 from protected_regions import validate_regions
 import steady_detail as steady
 import steady_boundaries as boundaries
+from teaching_motion import TeachingMotion
 
 
 def export(e, job):
@@ -50,6 +51,7 @@ def export(e, job):
         native_edit &= bool(np.array_equal(expected,actual))
     del original
     protected = e.RegionMeasure(recipe['protected_regions'],np,e.cv2)
+    teaching = TeachingMotion(recipe['protected_regions'],[lo,hi],e.N,np)
     review = e.ReviewFrames(job,mask,lo,hi,timestamps,e.guard)
     outside_histogram = np.zeros(256,np.int64)
     control_rgb = outside_interval = True
@@ -80,12 +82,14 @@ def export(e, job):
             patch_means['source'].append(float(source[y:y+h,x:x+w].mean()))
             patch_means['edited'].append(float(edited[y:y+h,x:x+w].mean()))
         protected.add(source,edited)
+        teaching.add(t,source,edited)
         review.capture(t,source,control,edited)
         difference=e.cv2.absdiff(source,edited)
         for channel in range(3):
             outside_histogram += e.cv2.calcHist([difference],[channel],e.cv2.bitwise_not(influence),[256],[0,256]).ravel().astype(np.int64)
         e.guard()
     measured = protected.result()
+    teaching_result = teaching.result()
     measured['scope'] = 'Every decoded RGB frame versus prepared source. Fixed areas; creator judges meaning and readability.'
     for region in measured['regions']:
         region['criteria']={k:0 for k in region['measurements']}
@@ -109,6 +113,7 @@ def export(e, job):
               'all_frames_outside_interval_exact':outside_interval,
               'all_rgb_outside_influence_exact':outside_error['max_rgb_code_error']==0,
               'all_protected_teaching_rgb_exact':measured['passed'],
+              'all_ordered_teaching_rgb_sequences_exact':teaching_result['all_ordered_rgb_sequences_exact'],
               'audio_exact':not has_audio or all(all(v is True for v in c.values()) for c in audio_checks.values()),
               'source_and_detection_unchanged':e.sha(sourcepath)==analysis['input_sha256'] and e.sha(job/'steady-analysis.json')==recipe['steady_analysis_sha256'],
               'selected_activity_reduced':activity['source']>=boundaries.POLICY['minimum_removed_mean_changes'] and activity['edited']==0,
@@ -123,6 +128,7 @@ def export(e, job):
               'outside_rgb':outside_error,'rgb_selected_matches_reference':selected_constant,
               'encoded_boundary_checks':encoded_boundaries,'linear_boundary_checks':linear_boundaries,
               'whole_clip_activity':whole_activity,'new_activity_events':new_events,
+              'teaching_motion':teaching_result,
               'acceptance':acceptance,'audio_preservation':{'present':has_audio,'checks':audio_checks}}
     e.write_json(job/'result.json',decision)
     pending.rename(job/('edited.mp4' if all(checks.values()) else 'rejected-candidate.mp4'))
@@ -130,6 +136,8 @@ def export(e, job):
         raise ValueError('Steady-detail encoded checks failed; no edited download is accepted.')
     hashes={name:e.sha(job/(name+'.mp4')) for name in ('control','edited')}
     binding={'input_sha256':analysis['input_sha256'],'prediction_sha256':analysis['prediction_sha256'],'recipe_sha256':approval['recipe_sha256'],'output_hashes':hashes}
+    teaching_review=teaching.write_review(job,e.cv2,binding)
+    e.write_json(job/'teaching-review.json',teaching_review)
     strong = {'newly_timed':traces['edited']['exit_delta']>=.1 and traces['control']['exit_delta']<.1,
               'edited_delta':traces['edited']['exit_delta'],'control_delta':traces['control']['exit_delta'],'criterion':.1}
     frames=review.finish(binding,strong)
@@ -143,10 +151,12 @@ def export(e, job):
              'stationary_detail':{'proposal':candidate,'activity':activity,'whole_clip_activity':whole_activity,'new_activity_events':new_events,'metric':'Number of adjacent ROI-mean RGB changes >=8 codes. Interior and fixed whole-clip counts are separate; the latter includes both cut boundaries.'},
              'encoded_boundary_checks':encoded_boundaries,'linear_boundary_checks':linear_boundaries,
              'protected_content':measured,'outside_mask_error':outside_error,'audio_preservation':decision['audio_preservation'],
+             'teaching_motion':teaching_result,
              'boundary':{name:{'control_delta':traces['control'][field],'edited_delta':traces['edited'][field]} for name,field in [('entry','entry_delta'),('exit','exit_delta'),('loop_seam','seam_absolute_delta')]},
              'codec':'Lossless H.264 High 4:4:4 Predictive, YUV420; verify browser playback separately','warnings':warnings}
     report={'profile':analysis['input_profile']['id'],'summary':summary,'approval':approval,**binding,
+            'teaching_review':teaching_review,
             'frame_review':frames,'steady_detail':decision,'versions':e.PROFILE['versions'],'limitations':warnings}
     e.write_json(job/'report.json',report);e.write_json(job/'recipe.json',recipe)
     (job/'report.txt').write_text('Steady observed detail\n\n'+e.json.dumps(summary,indent=2)+'\n\nReview the original and edited clip before use.\n')
-    return {'summary':summary,'output_hashes':hashes,'frame_review_sha256':e.sha(job/'frame-review.json')}
+    return {'summary':summary,'output_hashes':hashes,'frame_review_sha256':e.sha(job/'frame-review.json'),'teaching_review_sha256':e.sha(job/'teaching-review.json')}

@@ -1,0 +1,303 @@
+[
+  {
+    "id": "libreoffice-writer",
+    "filename": "libreoffice-writer.webm",
+    "title": "LibreOffice Writer \u2013 The Basics.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:LibreOffice_Writer_%E2%80%93_The_Basics.webm",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/LibreOffice_Writer_%E2%80%93_The_Basics.webm",
+    "bytes": 56817799,
+    "sha256": "73404a568137c3db42db2cfaed76c1fe8ebfa07a4e08657175174f6651b85c90",
+    "commons_sha1": "839abd49b9adf8f6765424bbc762de19c41a27e7",
+    "artist": "Free I.T. Athens",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "credit": "YouTube: LibreOffice Writer: The Basics",
+    "fetched_utc": "2026-10-23T22:48:31.548679+00:00",
+    "rights_scope": "Official Commons metadata as listed; imported-license review not independently verified, no endorsement or independent clearance.",
+    "edited_sha256": "dc623fcfca3006f4136510e5b41c4420dedd5214d32eafd5ead943202d61b3ed",
+    "prepared_sha256": "3a0e1f0c1ac343490000097c535abb10b30077d8a3ee5281f964c29ffe7bd518",
+    "artifact_filename": "libreoffice-writer.mp4",
+    "edit": {
+      "id": "steady-0",
+      "bbox": [
+        92,
+        118,
+        2,
+        10
+      ],
+      "influence_xywh": [
+        88,
+        114,
+        10,
+        18
+      ],
+      "interval_frames": [
+        1,
+        119
+      ],
+      "interval_seconds": [
+        0.03333333333333333,
+        3.966666666666667
+      ],
+      "pixels": 20,
+      "reference_frame": 0,
+      "alternate_frame": 17,
+      "reference_selection": "Observed frame in the originally kept appearance class, selected with the reviewed cut points to minimize predicted boundary RMS. No blended or invented pixels.",
+      "reference_state": "darker",
+      "state_transitions": 6,
+      "minimum_interior_dwell_frames": 18,
+      "maximum_observed_dwell_frames": 18,
+      "state_mean_error_max": 0.0,
+      "state_mean_error_limit": 6.0,
+      "state_separation": 76.45,
+      "state_sample_error_max": 0,
+      "action": "steady-detail-v1",
+      "meaning": "Keep the more contrasting observed state steady during this interval; review both states. This may be instructional content.",
+      "chroma_stability": [
+        {
+          "maximum_frame_mean": 0.0,
+          "maximum_sample": 0
+        },
+        {
+          "maximum_frame_mean": 0.0,
+          "maximum_sample": 0
+        }
+      ],
+      "boundary_alignment": {
+        "policy": {
+          "version": "steady-boundaries-v1",
+          "maximum_trim_frames_per_end": 30,
+          "minimum_hold_frames": 60,
+          "minimum_removed_mean_changes": 4,
+          "maximum_reference_samples": 33,
+          "activity_threshold_rgb_codes": 8,
+          "boundary_tolerance": 1e-12,
+          "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+        },
+        "original_interval_frames": [
+          0,
+          119
+        ],
+        "original_reference_frame": 0,
+        "predicted_source_internal_changes": 6,
+        "predicted_entry": {
+          "source": {
+            "mean_absolute_rgb_codes": 0.0,
+            "rms_rgb_codes": 0.0,
+            "maximum_rgb_codes": 0.0
+          },
+          "edited": {
+            "mean_absolute_rgb_codes": 0.0,
+            "rms_rgb_codes": 0.0,
+            "maximum_rgb_codes": 0.0
+          },
+          "source_selected_mean_delta": 0.0,
+          "edited_selected_mean_delta": 0.0
+        },
+        "predicted_exit": {
+          "source": {
+            "mean_absolute_rgb_codes": 0.0,
+            "rms_rgb_codes": 0.0,
+            "maximum_rgb_codes": 0.0
+          },
+          "edited": {
+            "mean_absolute_rgb_codes": 0.0,
+            "rms_rgb_codes": 0.0,
+            "maximum_rgb_codes": 0.0
+          },
+          "source_selected_mean_delta": 0.0,
+          "edited_selected_mean_delta": 0.0
+        },
+        "scope": "Predicted selected-box RGB and selected-mean changes. Encoded selected/influence RGB and linear-mean checks independently decide acceptance."
+      },
+      "recipe_sha256": "0b19c156446e76ae934567a373122404056cf540b64902f6b384350e62e02992",
+      "overlay_url": "/api/jobs/6905da6a664153dca9d0142f6c4c2dc8/steady/steady-0-reference.png",
+      "alternate_url": "/api/jobs/6905da6a664153dca9d0142f6c4c2dc8/steady/steady-0-alternate.png"
+    },
+    "protected_regions": [
+      {
+        "label": "Writer controls and ruler",
+        "xywh": [
+          0,
+          0,
+          640,
+          81
+        ]
+      },
+      {
+        "label": "Formatting sidebar",
+        "xywh": [
+          490,
+          81,
+          150,
+          257
+        ]
+      },
+      {
+        "label": "Document status readout",
+        "xywh": [
+          0,
+          338,
+          640,
+          22
+        ]
+      }
+    ],
+    "derivation": "Extracted/resized/re-encoded to 640x360/30fps and optional mono AAC once, then reviewed observed-state hold. No added defect. Creator review still required. Listed attribution retained; no endorsement. Share-alike conditions from original license apply to Wikipedia adaptation."
+  },
+  {
+    "id": "wiki-userpage",
+    "filename": "wiki-userpage.webm",
+    "title": "Como criar e editar sua p\u00e1gina de usu\u00e1rio na Wikip\u00e9dia.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Como_criar_e_editar_sua_p%C3%A1gina_de_usu%C3%A1rio_na_Wikip%C3%A9dia.webm",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Como_criar_e_editar_sua_p%C3%A1gina_de_usu%C3%A1rio_na_Wikip%C3%A9dia.webm",
+    "bytes": 18500320,
+    "sha256": "0849b4fbba5ed4ed7ffbdc267ef023baed42fea1a4a73bbb14100ca7cc0236cf",
+    "commons_sha1": "211076d0f6bbfc9eb3b811199abfbc0e11afadf4",
+    "artist": "Aly Brenner Nogueira Pereira (Projeto Mais+)",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "fetched_utc": "2026-10-23T23:02:13.278536+00:00",
+    "rights_scope": "Official Commons metadata as listed; imported-license review not independently verified, no endorsement or independent clearance.",
+    "edited_sha256": "a0a35791a99a8fdf5b15c1e24d4c7eca586f26086f7f86dc85ecae2e342b15b1",
+    "prepared_sha256": "7f28cfb05191c2af41ceed297a7cb3e53c1210af85b2eba03af29c788767e8ff",
+    "artifact_filename": "wiki-userpage.mp4",
+    "edit": {
+      "id": "steady-0",
+      "bbox": [
+        220,
+        172,
+        4,
+        12
+      ],
+      "influence_xywh": [
+        216,
+        168,
+        12,
+        20
+      ],
+      "interval_frames": [
+        244,
+        354
+      ],
+      "interval_seconds": [
+        8.133333333333333,
+        11.8
+      ],
+      "pixels": 48,
+      "reference_frame": 346,
+      "alternate_frame": 250,
+      "reference_selection": "Observed frame in the originally kept appearance class, selected with the reviewed cut points to minimize predicted boundary RMS. No blended or invented pixels.",
+      "reference_state": "darker",
+      "state_transitions": 7,
+      "minimum_interior_dwell_frames": 15,
+      "maximum_observed_dwell_frames": 32,
+      "state_mean_error_max": 2.4583333333333335,
+      "state_mean_error_limit": 2.53125,
+      "state_separation": 16.875,
+      "state_sample_error_max": 8,
+      "action": "steady-detail-v1",
+      "meaning": "Keep the more contrasting observed state steady during this interval; review both states. This may be instructional content.",
+      "chroma_stability": [
+        {
+          "maximum_frame_mean": 0.3333333333333333,
+          "maximum_sample": 1
+        },
+        {
+          "maximum_frame_mean": 0.8333333333333334,
+          "maximum_sample": 2
+        }
+      ],
+      "boundary_alignment": {
+        "policy": {
+          "version": "steady-boundaries-v1",
+          "maximum_trim_frames_per_end": 30,
+          "minimum_hold_frames": 60,
+          "minimum_removed_mean_changes": 4,
+          "maximum_reference_samples": 33,
+          "activity_threshold_rgb_codes": 8,
+          "boundary_tolerance": 1e-12,
+          "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+        },
+        "original_interval_frames": [
+          240,
+          359
+        ],
+        "original_reference_frame": 240,
+        "predicted_source_internal_changes": 5,
+        "predicted_entry": {
+          "source": {
+            "mean_absolute_rgb_codes": 18.76388888888889,
+            "rms_rgb_codes": 26.573012625594412,
+            "maximum_rgb_codes": 47.0
+          },
+          "edited": {
+            "mean_absolute_rgb_codes": 1.8958333333333333,
+            "rms_rgb_codes": 2.4109126902482387,
+            "maximum_rgb_codes": 7.0
+          },
+          "source_selected_mean_delta": 0.15550190334518754,
+          "edited_selected_mean_delta": 0.008506768693526623
+        },
+        "predicted_exit": {
+          "source": {
+            "mean_absolute_rgb_codes": 0.0,
+            "rms_rgb_codes": 0.0,
+            "maximum_rgb_codes": 0.0
+          },
+          "edited": {
+            "mean_absolute_rgb_codes": 0.0,
+            "rms_rgb_codes": 0.0,
+            "maximum_rgb_codes": 0.0
+          },
+          "source_selected_mean_delta": 0.0,
+          "edited_selected_mean_delta": 0.0
+        },
+        "scope": "Predicted selected-box RGB and selected-mean changes. Encoded selected/influence RGB and linear-mean checks independently decide acceptance."
+      },
+      "recipe_sha256": "8e735702c501d5f84e22d612d3b97b3c0380fd98f8ac0b6f43e5c3c818b3d1de",
+      "overlay_url": "/api/jobs/2cf15fdbf9633bf9a27b7fcb167cadc0/steady/steady-0-reference.png",
+      "alternate_url": "/api/jobs/2cf15fdbf9633bf9a27b7fcb167cadc0/steady/steady-0-alternate.png"
+    },
+    "protected_regions": [
+      {
+        "label": "Page heading and image form controls",
+        "xywh": [
+          0,
+          0,
+          640,
+          168
+        ]
+      },
+      {
+        "label": "Alternative text and lower page",
+        "xywh": [
+          0,
+          188,
+          640,
+          172
+        ]
+      },
+      {
+        "label": "Left page content",
+        "xywh": [
+          0,
+          168,
+          216,
+          20
+        ]
+      },
+      {
+        "label": "Caption body and right page content",
+        "xywh": [
+          228,
+          168,
+          412,
+          20
+        ]
+      }
+    ],
+    "derivation": "Extracted/resized/re-encoded to 640x360/30fps and optional mono AAC once, then reviewed observed-state hold. No added defect. Creator review still required. Listed attribution retained; no endorsement. Share-alike conditions from original license apply to Wikipedia adaptation."
+  }
+]

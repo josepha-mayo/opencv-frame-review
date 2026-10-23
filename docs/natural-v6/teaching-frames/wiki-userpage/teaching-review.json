@@ -1,0 +1,427 @@
+{
+  "schema": "teaching-motion-v1",
+  "frames": 360,
+  "interval_frames": [
+    244,
+    354
+  ],
+  "regions": [
+    {
+      "label": "Page heading and image form controls",
+      "xywh": [
+        0,
+        0,
+        640,
+        168
+      ],
+      "frames": 360,
+      "ordered_rgb_sequence_sha256": {
+        "source": "a55eb9e1be711676ac1d61efe9a7902d32df0e5608c5505c95af53f03cd3b2bb",
+        "edited": "a55eb9e1be711676ac1d61efe9a7902d32df0e5608c5505c95af53f03cd3b2bb"
+      },
+      "ordered_rgb_sequence_exact": true,
+      "changed_adjacent_frame_pairs": {
+        "source": 311,
+        "edited": 311
+      },
+      "changed_pairs_inside_hold": {
+        "source": 72,
+        "edited": 72
+      },
+      "adjacent_pairs": 359,
+      "hold_adjacent_pairs": 110,
+      "mean_absolute_temporal_rgb_codes": {
+        "source": 0.4333999573744307,
+        "edited": 0.4333999573744307
+      },
+      "peak_change_frame_inside_hold": 250,
+      "peak_change_mean_rgb_codes": 0.8143880208333333,
+      "moments": [
+        {
+          "frame": 244,
+          "seconds": 8.133333333333333,
+          "roles": [
+            "Hold begins"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r0-f00244-source.png",
+              "sha256": "e1341d4a65e96e31d6c408829ebf7f0eb125ad93e21e82266939d8c60f1af109",
+              "decoded_rgb_sha256": "cd601c42281c8f4a0ee151d18f4464399448d5f7fc118b12c7c507b90e7d5ec5",
+              "width": 640,
+              "height": 168
+            },
+            "edited": {
+              "filename": "teaching-r0-f00244-edited.png",
+              "sha256": "e1341d4a65e96e31d6c408829ebf7f0eb125ad93e21e82266939d8c60f1af109",
+              "decoded_rgb_sha256": "cd601c42281c8f4a0ee151d18f4464399448d5f7fc118b12c7c507b90e7d5ec5",
+              "width": 640,
+              "height": 168
+            }
+          }
+        },
+        {
+          "frame": 250,
+          "seconds": 8.333333333333334,
+          "roles": [
+            "Largest measured teaching change inside hold"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r0-f00250-source.png",
+              "sha256": "dbd79db0841fc9271aacfc66847e961ef43a684c566bafc5c0ae92c48c9519f5",
+              "decoded_rgb_sha256": "096be292a600165e90f525b56aee2add3599b9fd9626e6a3797cb796bdf41ce5",
+              "width": 640,
+              "height": 168
+            },
+            "edited": {
+              "filename": "teaching-r0-f00250-edited.png",
+              "sha256": "dbd79db0841fc9271aacfc66847e961ef43a684c566bafc5c0ae92c48c9519f5",
+              "decoded_rgb_sha256": "096be292a600165e90f525b56aee2add3599b9fd9626e6a3797cb796bdf41ce5",
+              "width": 640,
+              "height": 168
+            }
+          }
+        },
+        {
+          "frame": 354,
+          "seconds": 11.8,
+          "roles": [
+            "Hold ends"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r0-f00354-source.png",
+              "sha256": "0236faf0378a023762fe9973f309ca1b4c58d7572daa77e6883b922ab877b830",
+              "decoded_rgb_sha256": "98d194e4e914602d41a9e7229c2e5ab18e5041fadd993010a96b330b140ee83b",
+              "width": 640,
+              "height": 168
+            },
+            "edited": {
+              "filename": "teaching-r0-f00354-edited.png",
+              "sha256": "0236faf0378a023762fe9973f309ca1b4c58d7572daa77e6883b922ab877b830",
+              "decoded_rgb_sha256": "98d194e4e914602d41a9e7229c2e5ab18e5041fadd993010a96b330b140ee83b",
+              "width": 640,
+              "height": 168
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "Alternative text and lower page",
+      "xywh": [
+        0,
+        188,
+        640,
+        172
+      ],
+      "frames": 360,
+      "ordered_rgb_sequence_sha256": {
+        "source": "b3b635af5bf2ba79066d329d994d2d8b15d31aa1cb8adcf19801d1caf1cfcd5a",
+        "edited": "b3b635af5bf2ba79066d329d994d2d8b15d31aa1cb8adcf19801d1caf1cfcd5a"
+      },
+      "ordered_rgb_sequence_exact": true,
+      "changed_adjacent_frame_pairs": {
+        "source": 342,
+        "edited": 342
+      },
+      "changed_pairs_inside_hold": {
+        "source": 104,
+        "edited": 104
+      },
+      "adjacent_pairs": 359,
+      "hold_adjacent_pairs": 110,
+      "mean_absolute_temporal_rgb_codes": {
+        "source": 1.0580929324971389,
+        "edited": 1.0580929324971389
+      },
+      "peak_change_frame_inside_hold": 250,
+      "peak_change_mean_rgb_codes": 0.25456637596899223,
+      "moments": [
+        {
+          "frame": 244,
+          "seconds": 8.133333333333333,
+          "roles": [
+            "Hold begins"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r1-f00244-source.png",
+              "sha256": "2a6973808a15eed9b40b23b1c233ad9b24f1085f317c913cbc428000262fdcb3",
+              "decoded_rgb_sha256": "e86c12365c9b715f01609d51097e59b14a216fde87d085de028f86bda713f853",
+              "width": 640,
+              "height": 172
+            },
+            "edited": {
+              "filename": "teaching-r1-f00244-edited.png",
+              "sha256": "2a6973808a15eed9b40b23b1c233ad9b24f1085f317c913cbc428000262fdcb3",
+              "decoded_rgb_sha256": "e86c12365c9b715f01609d51097e59b14a216fde87d085de028f86bda713f853",
+              "width": 640,
+              "height": 172
+            }
+          }
+        },
+        {
+          "frame": 250,
+          "seconds": 8.333333333333334,
+          "roles": [
+            "Largest measured teaching change inside hold"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r1-f00250-source.png",
+              "sha256": "e524b72857ccec6a4239d2a6d24604ad63a26706b504537adf0009307f845465",
+              "decoded_rgb_sha256": "fbde73e54dee3997f4a2a6f5174c6902887ffd2041da3d84adcef2cff9333967",
+              "width": 640,
+              "height": 172
+            },
+            "edited": {
+              "filename": "teaching-r1-f00250-edited.png",
+              "sha256": "e524b72857ccec6a4239d2a6d24604ad63a26706b504537adf0009307f845465",
+              "decoded_rgb_sha256": "fbde73e54dee3997f4a2a6f5174c6902887ffd2041da3d84adcef2cff9333967",
+              "width": 640,
+              "height": 172
+            }
+          }
+        },
+        {
+          "frame": 354,
+          "seconds": 11.8,
+          "roles": [
+            "Hold ends"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r1-f00354-source.png",
+              "sha256": "7ce38f108fe91171084f2c4fa7a1fa8f4701c3c67499cafbf8d95936de036e0a",
+              "decoded_rgb_sha256": "57865190a304013bb6e271c8d282f6f738f756f85aa327edd3a11ae21ff7bdc6",
+              "width": 640,
+              "height": 172
+            },
+            "edited": {
+              "filename": "teaching-r1-f00354-edited.png",
+              "sha256": "7ce38f108fe91171084f2c4fa7a1fa8f4701c3c67499cafbf8d95936de036e0a",
+              "decoded_rgb_sha256": "57865190a304013bb6e271c8d282f6f738f756f85aa327edd3a11ae21ff7bdc6",
+              "width": 640,
+              "height": 172
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "Left page content",
+      "xywh": [
+        0,
+        168,
+        216,
+        20
+      ],
+      "frames": 360,
+      "ordered_rgb_sequence_sha256": {
+        "source": "b6ad4ea628cef3380bb2bcd51b5366162f2b83bef5fe40356e6f958ddf57f4a9",
+        "edited": "b6ad4ea628cef3380bb2bcd51b5366162f2b83bef5fe40356e6f958ddf57f4a9"
+      },
+      "ordered_rgb_sequence_exact": true,
+      "changed_adjacent_frame_pairs": {
+        "source": 223,
+        "edited": 223
+      },
+      "changed_pairs_inside_hold": {
+        "source": 84,
+        "edited": 84
+      },
+      "adjacent_pairs": 359,
+      "hold_adjacent_pairs": 110,
+      "mean_absolute_temporal_rgb_codes": {
+        "source": 0.6656655146325527,
+        "edited": 0.6656655146325527
+      },
+      "peak_change_frame_inside_hold": 250,
+      "peak_change_mean_rgb_codes": 0.6260802469135802,
+      "moments": [
+        {
+          "frame": 244,
+          "seconds": 8.133333333333333,
+          "roles": [
+            "Hold begins"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r2-f00244-source.png",
+              "sha256": "daf50ab68278bd2643f56dc50b9d0ecc50b13497f5f95a3e94cfa1980533f2e6",
+              "decoded_rgb_sha256": "5aff886b1da387d9388696b88a55da44265c269ff1ab8b39cf45a443f4460838",
+              "width": 216,
+              "height": 20
+            },
+            "edited": {
+              "filename": "teaching-r2-f00244-edited.png",
+              "sha256": "daf50ab68278bd2643f56dc50b9d0ecc50b13497f5f95a3e94cfa1980533f2e6",
+              "decoded_rgb_sha256": "5aff886b1da387d9388696b88a55da44265c269ff1ab8b39cf45a443f4460838",
+              "width": 216,
+              "height": 20
+            }
+          }
+        },
+        {
+          "frame": 250,
+          "seconds": 8.333333333333334,
+          "roles": [
+            "Largest measured teaching change inside hold"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r2-f00250-source.png",
+              "sha256": "895f3924ecd63800b068f0fd794a713307e65667bee56814757cfef34c59fc6c",
+              "decoded_rgb_sha256": "93d6337cb0c195ecd55176f8acfb410dac6a94ed7974348c98b1ebe3b0d6f4b9",
+              "width": 216,
+              "height": 20
+            },
+            "edited": {
+              "filename": "teaching-r2-f00250-edited.png",
+              "sha256": "895f3924ecd63800b068f0fd794a713307e65667bee56814757cfef34c59fc6c",
+              "decoded_rgb_sha256": "93d6337cb0c195ecd55176f8acfb410dac6a94ed7974348c98b1ebe3b0d6f4b9",
+              "width": 216,
+              "height": 20
+            }
+          }
+        },
+        {
+          "frame": 354,
+          "seconds": 11.8,
+          "roles": [
+            "Hold ends"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r2-f00354-source.png",
+              "sha256": "b10e18b5e3dfb37b6e0c0e2d0423b858bc527ad5e45134f4b8f3b7e8570c27e9",
+              "decoded_rgb_sha256": "25d95499f4eaff1da0d2b2315b6244c8c2481c7ffa82ed8f5c05c85219b09652",
+              "width": 216,
+              "height": 20
+            },
+            "edited": {
+              "filename": "teaching-r2-f00354-edited.png",
+              "sha256": "b10e18b5e3dfb37b6e0c0e2d0423b858bc527ad5e45134f4b8f3b7e8570c27e9",
+              "decoded_rgb_sha256": "25d95499f4eaff1da0d2b2315b6244c8c2481c7ffa82ed8f5c05c85219b09652",
+              "width": 216,
+              "height": 20
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "Caption body and right page content",
+      "xywh": [
+        228,
+        168,
+        412,
+        20
+      ],
+      "frames": 360,
+      "ordered_rgb_sequence_sha256": {
+        "source": "8b738e26003047e55d8e79d3acb5ee2a27bf73b53e82976db341346384a00969",
+        "edited": "8b738e26003047e55d8e79d3acb5ee2a27bf73b53e82976db341346384a00969"
+      },
+      "ordered_rgb_sequence_exact": true,
+      "changed_adjacent_frame_pairs": {
+        "source": 248,
+        "edited": 248
+      },
+      "changed_pairs_inside_hold": {
+        "source": 44,
+        "edited": 44
+      },
+      "adjacent_pairs": 359,
+      "hold_adjacent_pairs": 110,
+      "mean_absolute_temporal_rgb_codes": {
+        "source": 1.504060857650251,
+        "edited": 1.504060857650251
+      },
+      "peak_change_frame_inside_hold": 250,
+      "peak_change_mean_rgb_codes": 0.5616909385113269,
+      "moments": [
+        {
+          "frame": 244,
+          "seconds": 8.133333333333333,
+          "roles": [
+            "Hold begins"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r3-f00244-source.png",
+              "sha256": "a3166e9eabe004067763651273d9af5c3ae0ccc1107b3682bdf49e12e3ba643a",
+              "decoded_rgb_sha256": "0573393bcb771318cf5d7c33d86f63ca414ecdf1220f25e6fa4198cfaf1360ee",
+              "width": 412,
+              "height": 20
+            },
+            "edited": {
+              "filename": "teaching-r3-f00244-edited.png",
+              "sha256": "a3166e9eabe004067763651273d9af5c3ae0ccc1107b3682bdf49e12e3ba643a",
+              "decoded_rgb_sha256": "0573393bcb771318cf5d7c33d86f63ca414ecdf1220f25e6fa4198cfaf1360ee",
+              "width": 412,
+              "height": 20
+            }
+          }
+        },
+        {
+          "frame": 250,
+          "seconds": 8.333333333333334,
+          "roles": [
+            "Largest measured teaching change inside hold"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r3-f00250-source.png",
+              "sha256": "96a9670a6db2016f7067a3fdcfb10b6c4e1919d6342fdfaad83eee92fb698c5a",
+              "decoded_rgb_sha256": "7812c7f6a5cb286a8cc302caa3e4beaf3f5ed058349038704fdaaf47cf6d7ca8",
+              "width": 412,
+              "height": 20
+            },
+            "edited": {
+              "filename": "teaching-r3-f00250-edited.png",
+              "sha256": "96a9670a6db2016f7067a3fdcfb10b6c4e1919d6342fdfaad83eee92fb698c5a",
+              "decoded_rgb_sha256": "7812c7f6a5cb286a8cc302caa3e4beaf3f5ed058349038704fdaaf47cf6d7ca8",
+              "width": 412,
+              "height": 20
+            }
+          }
+        },
+        {
+          "frame": 354,
+          "seconds": 11.8,
+          "roles": [
+            "Hold ends"
+          ],
+          "images": {
+            "source": {
+              "filename": "teaching-r3-f00354-source.png",
+              "sha256": "f364ccf18c7fac464b19b63b2cc439211bad472ab86528daaab25c1c228ccd81",
+              "decoded_rgb_sha256": "7aeff25316cf154f10125a2478668a4e78868737ec6f85fde8e9727da2f4e0bd",
+              "width": 412,
+              "height": 20
+            },
+            "edited": {
+              "filename": "teaching-r3-f00354-edited.png",
+              "sha256": "f364ccf18c7fac464b19b63b2cc439211bad472ab86528daaab25c1c228ccd81",
+              "decoded_rgb_sha256": "7aeff25316cf154f10125a2478668a4e78868737ec6f85fde8e9727da2f4e0bd",
+              "width": 412,
+              "height": 20
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "all_ordered_rgb_sequences_exact": true,
+  "meaning": "Decoded sample changes, including codec variation; not semantic progress ticks, legibility or learning measurements. Source and edited teaching regions are compared at their original frame times.",
+  "input_sha256": "7f28cfb05191c2af41ceed297a7cb3e53c1210af85b2eba03af29c788767e8ff",
+  "prediction_sha256": "b9fe96fad4cd7873d7acf113ce773e45edd79debedcf2a1ce7a8292d8e959dc7",
+  "recipe_sha256": "c0aac17d4d1904c2596619abb83676b2aecd8bba22b0a8d3193edda478942b71",
+  "output_hashes": {
+    "control": "16d368ae11493dd19e813ba9be4e87b1df0992e3d40226740f6e8c18f7f90826",
+    "edited": "a0a35791a99a8fdf5b15c1e24d4c7eca586f26086f7f86dc85ecae2e342b15b1"
+  }
+}
