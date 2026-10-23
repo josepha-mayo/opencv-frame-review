@@ -1,0 +1,33 @@
+{
+  "id": "jupyter",
+  "filename": "jupyter.webm",
+  "source_group": "new",
+  "start": 301,
+  "bbox": [
+    116,
+    148,
+    2,
+    8
+  ],
+  "selection": "Quarter/half/three-quarter duration cohort selected before detector changes. This is the midpoint excerpt; all three outcomes retained.",
+  "protected_regions": [
+    {
+      "label": "Notebook code and output",
+      "xywh": [
+        52,
+        96,
+        552,
+        45
+      ]
+    },
+    {
+      "label": "Notebook controls",
+      "xywh": [
+        50,
+        30,
+        560,
+        60
+      ]
+    }
+  ]
+}

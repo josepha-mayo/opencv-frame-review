@@ -1,0 +1,10 @@
+{
+  "scope": "A development browser check, before publication or deployment of v4",
+  "build_manifest_sha256": "e8eba55343c3b324d2f37d3f5bdc3763fc2bf563f746e76ba902a4a3e481c061",
+  "example": "jupyter",
+  "issue": "The completed Jupyter example linked Natural sample provenance to natural-terminal-credit.json, despite the selected Jupyter source and correct Jupyter input bytes.",
+  "observed_wrong_href": "/api/samples/natural-terminal-credit.json",
+  "required_correct_href": "/api/samples/natural-jupyter-credit.json",
+  "resolution": "Bind the artifact link to the validated example identity; assert the actual downloaded metadata matches the input in both HTTP and media integration tests.",
+  "fixed_release_qualification": "Pending the fresh full gate and actual browser check; this record is not a completion receipt."
+}

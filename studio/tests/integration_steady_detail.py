@@ -5,7 +5,8 @@ import numpy as np
 STUDIO=Path(__file__).resolve().parents[1];sys.path.insert(0,str(STUDIO));import run as studio
 sys.path.insert(0,str(studio.APP));from native_yuv import support_masks
 OUT=Path(sys.argv[1]);OUT.mkdir(exist_ok=False)
-source=STUDIO/'fixtures/natural-terminal.mp4';start=0
+example=sys.argv[2] if len(sys.argv)>2 else 'terminal'
+source=STUDIO/('fixtures/natural-'+example+'.mp4');start=0
 server=studio.make_studio_server(0,OUT/'jobs');thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
 base='http://127.0.0.1:'+str(server.server_address[1]);token=''
 def req(path,data=None,expect=200,raw=False,headers=None):
@@ -30,7 +31,7 @@ def pcm(path):
 record={'complete':False,'source_name':source.name,'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'start_seconds':start,'authored_defect':False,'selection':'Disclosed prepared excerpt of naturally blinking tutorial footage; no authored defect. Original-source upload qualification is separate.'}
 try:
     token=req('/api/profile')['csrf_token']
-    job=poll(req('/api/natural-demo',{},202)['id'])
+    job=poll(req('/api/natural-demo',{'example':example},202)['id'])
     print('Prepared',job['status'],job.get('error'),[(c['id'],c['bbox'],c['interval_frames']) for c in job['candidates']],flush=True)
     assert job['status']=='review',job
     candidate=next(c for c in job['candidates'] if c.get('action')=='steady-detail-v1')
@@ -38,7 +39,7 @@ try:
     record.update(job_id=jid,sample_credit=job['sample_credit'],candidate=candidate)
     x,y,w,h=candidate['influence_xywh']
     # The tutorial's main explanation and command text above this detail.
-    areas=[{'label':'Lesson and commands','xywh':[0,0,640,y]}] if y else [{'label':'Other lesson area','xywh':[0,y+h,640,360-y-h]}]
+    areas=job['sample_credit'].get('recommended_teaching_areas') or ([{'label':'Lesson and commands','xywh':[0,0,640,y]}] if y else [{'label':'Other lesson area','xywh':[0,y+h,640,360-y-h]}])
     body={'candidate_id':candidate['id'],'prediction_sha256':job['prediction_sha256'],'export_mode':'steady-detail-v1','protected_regions':areas}
     req('/api/jobs/'+jid+'/plan',{**body,'protected_regions':[]},400)
     req('/api/jobs/'+jid+'/plan',{**body,'protected_regions':[{'label':'Overlap','xywh':[x,y,1,1]}]},400)
@@ -50,6 +51,10 @@ try:
     assert final['status']=='complete',final
     output=OUT/'edited-natural.mp4';output.write_bytes(req('/api/jobs/'+jid+'/download/edited.mp4',raw=True))
     report=req('/api/jobs/'+jid+'/download/report.json')
+    provenance=req(final['artifacts']['Natural sample provenance'])
+    assert provenance==job['sample_credit']
+    assert provenance['prepared_sample_sha256']==hashlib.sha256(source.read_bytes()).hexdigest()
+    record['sample_provenance_matches_downloaded_input']=True
     decision={'sample_credit':job['sample_credit'],'decision':final['status']}
     source_raw,edited=native(folder/'input.mp4'),native(output)
     bx,by,bw,bh=candidate['bbox'];mask=np.zeros((360,640),np.uint8);mask[by:by+bh,bx:bx+bw]=255

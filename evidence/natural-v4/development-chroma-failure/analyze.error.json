@@ -1,0 +1,4 @@
+{
+  "type": "ValueError",
+  "message": "Unsupported input contract: {\"chroma_location\": [\"center\", \"left\"]}"
+}

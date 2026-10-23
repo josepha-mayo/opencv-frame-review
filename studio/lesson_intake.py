@@ -17,19 +17,26 @@ from prepare_worker import MAX_UPLOAD, parameters
 import steady_detail
 from protected_regions import validate_regions
 
+NATURAL_EXAMPLES = {'terminal': ('natural-terminal.mp4', 'NATURAL_TERMINAL_CREDIT.json'),
+                    'jupyter': ('natural-jupyter.mp4', 'NATURAL_JUPYTER_CREDIT.json'),
+                    'npm': ('natural-npm.mp4', 'NATURAL_NPM_CREDIT.json')}
+
 
 class LessonManager(backend.Manager):
     def __init__(self, root):
         super().__init__(root)
         self.import_lock = threading.Lock()
 
-    def natural_demo(self, owner=None):
-        credit = backend.read_json(STUDIO/'fixtures/NATURAL_TERMINAL_CREDIT.json')
-        data = backend.bounded_regular_bytes(STUDIO/'fixtures/natural-terminal.mp4',8*1024**2)
+    def natural_demo(self, owner=None, example='terminal'):
+        if not isinstance(example, str) or example not in NATURAL_EXAMPLES:
+            raise ValueError('Choose an available natural lesson example.')
+        filename, credit_name = NATURAL_EXAMPLES[example]
+        credit = backend.read_json(STUDIO/'fixtures'/credit_name)
+        data = backend.bounded_regular_bytes(STUDIO/'fixtures'/filename,8*1024**2)
         if hashlib.sha256(data).hexdigest() != credit['prepared_sample_sha256']:
-            raise ValueError('Natural terminal sample changed.')
+            raise ValueError('Natural lesson sample changed.')
         with self.lock:
-            result = self.create('Info-farmer-natural-terminal-prepared-excerpt.mp4',data)
+            result = self.create('natural-'+example+'-prepared-excerpt.mp4',data)
             folder = self.jobpath(result['id'])
             if owner is not None:
                 (folder/'owner.txt').write_text(owner)
@@ -211,11 +218,19 @@ class LessonManager(backend.Manager):
                 out['artifacts']['Preparation receipt'] = f'/api/jobs/{jid}/intake/receipt'
                 out['artifacts']['Lesson decision record'] = f'/api/jobs/{jid}/intake/decision'
         if out.get('sample_credit') and out['artifacts']:
-            out['artifacts']['Natural sample provenance'] = '/api/samples/natural-terminal-credit.json'
+            example = out['sample_credit'].get('id', 'terminal')
+            if example not in NATURAL_EXAMPLES:
+                raise ValueError('Natural lesson provenance identity changed.')
+            out['artifacts']['Natural sample provenance'] = '/api/samples/natural-'+example+'-credit.json'
         return out
 
 
 class LessonHandler(backend.Handler):
+    def headers_safe(self, ctype, length, attachment=None):
+        if ctype.startswith('text/') or ctype in ('application/javascript', 'application/x-javascript'):
+            ctype += '; charset=utf-8'
+        return super().headers_safe(ctype, length, attachment)
+
     def file(self, path, attachment=None):
         if path.parent == APP / 'static' and path.name in ('index.html', 'app.js', 'styles.css'):
             path = STUDIO / 'static' / path.name
@@ -225,9 +240,10 @@ class LessonHandler(backend.Handler):
         if urllib.parse.urlsplit(self.path).path == '/api/natural-demo':
             try:
                 self.secure(True)
-                if self.body(1024) not in (b'',b'{}'):
-                    raise ValueError('The natural lesson demonstration takes no custom parameters.')
-                return self.respond(202,self.server.manager.natural_demo(getattr(self,'session',None)))
+                payload = json.loads(self.body(1024) or b'{}')
+                if not isinstance(payload, dict) or set(payload)-{'example'}:
+                    raise ValueError('Choose an available natural lesson example.')
+                return self.respond(202,self.server.manager.natural_demo(getattr(self,'session',None),payload.get('example','terminal')))
             except (ValueError,KeyError,PermissionError,OSError) as error:
                 return self.handle_error(error)
         if urllib.parse.urlsplit(self.path).path != '/api/imports':
@@ -248,6 +264,10 @@ class LessonHandler(backend.Handler):
         samples = {'/api/samples/natural-terminal.mp4':('fixtures/natural-terminal.mp4','video/mp4','natural-terminal-prepared-excerpt.mp4'),
                    '/api/samples/natural-terminal.png':('static/natural-terminal.png','image/png',None),
                    '/api/samples/natural-terminal-credit.json':('fixtures/NATURAL_TERMINAL_CREDIT.json','application/json','natural-terminal-provenance.json')}
+        for example in ('jupyter', 'npm'):
+            filename, credit = NATURAL_EXAMPLES[example]
+            samples['/api/samples/'+filename] = ('fixtures/'+filename,'video/mp4',filename)
+            samples['/api/samples/natural-'+example+'-credit.json'] = ('fixtures/'+credit,'application/json','natural-'+example+'-provenance.json')
         if path == '/static/natural-terminal.png':
             path = '/api/samples/natural-terminal.png'
         if path in samples:

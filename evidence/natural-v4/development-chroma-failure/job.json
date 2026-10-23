@@ -1,0 +1,8 @@
+{
+  "id": "b273fbf5257d3addf819d1561eb1a615",
+  "status": "failed",
+  "input_name": "cangjie.webm",
+  "created_utc": "2026-10-23T17:00:38.375455+00:00",
+  "preparing_lesson": false,
+  "error": "Unsupported input contract: {\"chroma_location\": [\"center\", \"left\"]}"
+}

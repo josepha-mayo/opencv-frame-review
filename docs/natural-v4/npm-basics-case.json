@@ -1,0 +1,42 @@
+{
+  "id": "npm-basics",
+  "filename": "npm-basics.webm",
+  "source_group": "new",
+  "start": 232,
+  "bbox": [
+    538,
+    244,
+    8,
+    4
+  ],
+  "selection": "Quarter/half/three-quarter duration cohort selected before detector changes. This is the first-quarter excerpt; all three outcomes retained.",
+  "protected_regions": [
+    {
+      "label": "Command history",
+      "xywh": [
+        0,
+        0,
+        480,
+        236
+      ]
+    },
+    {
+      "label": "Current command text",
+      "xywh": [
+        0,
+        232,
+        530,
+        28
+      ]
+    },
+    {
+      "label": "Presenter explanation",
+      "xywh": [
+        490,
+        0,
+        150,
+        160
+      ]
+    }
+  ]
+}

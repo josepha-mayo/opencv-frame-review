@@ -1,0 +1,49 @@
+{
+  "schema": "natural-lesson-example-v1",
+  "id": "npm",
+  "label": "Windows command-line explanation",
+  "author": "Kevin Powell",
+  "title": "Npm for absolute beginners (Node.JS, Visual Studio Code).webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Npm_for_absolute_beginners_(Node.JS,_Visual_Studio_Code).webm",
+  "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Npm_for_absolute_beginners_%28Node.JS%2C_Visual_Studio_Code%29.webm",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "license_provenance": "The Wikimedia Commons file page lists this license; its imported YouTube license review is marked as not yet reviewed. No endorsement is implied.",
+  "original_sha256": "b17217ef947a013399b38fd251effcc08701587bae892093a86728786d45ee14",
+  "source_original_bytes": 58755165,
+  "excerpt_start_seconds": 232,
+  "excerpt_duration_seconds": 12,
+  "prepared_sample_sha256": "0a2170e2a8b2b1b8512dedf1dabb8f6249c9cda147ad4ad0af58e57b6cba9ede",
+  "authored_defect": false,
+  "derivation": "Extracted seconds 232-244, resized/letterboxed to 640x360, converted to 30fps H.264 and AAC mono. No defect added; this is a prepared excerpt. Original upload qualification is recorded separately.",
+  "recommended_teaching_areas": [
+    {
+      "label": "Command history",
+      "xywh": [
+        0,
+        0,
+        480,
+        236
+      ]
+    },
+    {
+      "label": "Current command text",
+      "xywh": [
+        0,
+        232,
+        530,
+        28
+      ]
+    },
+    {
+      "label": "Presenter explanation",
+      "xywh": [
+        490,
+        0,
+        150,
+        160
+      ]
+    }
+  ],
+  "notice": "The caret occurs naturally. Review its observed states, the named teaching areas and both boundaries before deciding whether this hold is appropriate."
+}

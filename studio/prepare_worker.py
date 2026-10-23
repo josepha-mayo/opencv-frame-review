@@ -44,7 +44,7 @@ def prepare(folder):
         raise ValueError('The uploaded original changed or exceeds 64 MiB.')
     # Restrict container/codec families and protocols before any full decode.
     probe = subprocess.run(['/usr/bin/ffprobe', '-v', 'error', '-threads', '1', *INPUT,
-                            '-show_entries', 'format=duration,format_name:stream=index,codec_type,codec_name,width,height,pix_fmt,color_transfer,avg_frame_rate,channels:stream_side_data=rotation', '-of', 'json', str(upload)],
+                            '-show_entries', 'format=duration,format_name:stream=index,codec_type,codec_name,width,height,pix_fmt,color_transfer,chroma_location,avg_frame_rate,channels:stream_side_data=rotation', '-of', 'json', str(upload)],
                            stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=15, check=True)
     if len(probe.stdout) > 131072:
         raise ValueError('Source metadata exceeds the limit.')
@@ -69,7 +69,7 @@ def prepare(folder):
     silent = folder / 'prepared-video.mp4'
     # Honor display rotation; preserve aspect ratio with a visible letterbox.
     filt = ('scale=640:360:force_original_aspect_ratio=decrease:force_divisible_by=2:'
-            'out_color_matrix=bt709:out_range=tv:flags=bilinear+accurate_rnd+bitexact,'
+            'out_color_matrix=bt709:out_range=tv:out_chroma_loc=left:flags=bilinear+accurate_rnd+bitexact,'
             'pad=640:360:(ow-iw)/2:(oh-ih)/2:black,setsar=1,'
             'fps=30:start_time=0,tpad=stop_mode=clone:stop_duration=0.1,format=yuv420p,'
             'setparams=range=limited:color_primaries=bt709:color_trc=bt709:colorspace=bt709')
@@ -95,6 +95,12 @@ def prepare(folder):
         silent.rename(target)
     if target.stat().st_size > 8 * 1024**2:
         raise ValueError('The prepared segment exceeds 8 MiB. Choose a shorter excerpt.')
+    prepared_probe = subprocess.run(['/usr/bin/ffprobe', '-v', 'error', '-select_streams', 'v:0',
+                                    '-show_entries', 'stream=chroma_location', '-of', 'json', str(target)],
+                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=10, check=True)
+    prepared_chroma = json.loads(prepared_probe.stdout)['streams'][0].get('chroma_location')
+    if prepared_chroma != 'left':
+        raise ValueError('Prepared chroma location did not meet the left-sited edit profile.')
     preview = folder / 'prepared-preview.png'
     subprocess.run(['/usr/bin/ffmpeg', '-v', 'error', '-nostdin', '-threads', '1', '-i', str(target),
                     '-frames:v', '1', '-threads', '1', str(preview)], stdout=subprocess.DEVNULL,
@@ -105,9 +111,11 @@ def prepare(folder):
                'start_seconds': start, 'duration_seconds': duration, 'frames': frames,
                'source': {'video_codec': video['codec_name'], 'width': video['width'], 'height': video['height'],
                           'duration_seconds': source_duration, 'frame_rate': video.get('avg_frame_rate'),
+                          'chroma_location': video.get('chroma_location', 'unspecified'),
                           'audio_codec': audios[0]['codec_name'] if audios else None,
                           'audio_channels': audios[0].get('channels') if audios else 0},
                'prepared': {'width': 640, 'height': 360, 'fps': 30, 'color': 'limited BT.709 SDR',
+                            'chroma_location': prepared_chroma,
                             'audio': 'AAC-LC mono 48 kHz' if audios else 'none'},
                'changes': ['Selected excerpt only', 'Aspect-preserving resize and letterbox to 640 × 360',
                            '30 fps conversion and H.264 encoding', 'SDR conversion; untagged color interpreted by FFmpeg',

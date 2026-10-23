@@ -7,10 +7,14 @@ import hashlib
 import json
 
 MODE = 'steady-detail-v1'
-POLICY = {'version': MODE, 'minimum_luma_range': 48, 'minimum_transitions': 6,
+POLICY = {'version': 'steady-proposal-v2', 'action': MODE,
+          'minimum_luma_range': 24, 'minimum_transitions': 6,
           'maximum_transitions_per_second': 4, 'minimum_state_dwell_frames': 5,
+          'maximum_state_dwell_frames': 60,
           'maximum_box': [24, 32], 'minimum_pixels': 4,
-          'state_mean_error_max': 2.0, 'state_sample_error_max': 16,
+          'state_mean_error_floor': 2.0, 'state_mean_error_max': 6.0,
+          'state_mean_error_fraction': 0.15, 'minimum_state_separation': 12.0,
+          'state_sample_error_max': 16,
           'rgb_influence_padding': 4, 'fallback_window_frames': 120,
           'fallback_stride_frames': 30, 'chroma_mean_error_max': 2.0,
           'chroma_sample_error_max': 16}
@@ -101,11 +105,18 @@ def _window(luma, cv2, np, guard):
         mean_errors = errors.mean(axis=(2, 3))
         state = mean_errors.argmin(axis=0)
         assigned = errors[state, np.arange(n)]
-        if float(assigned.mean(axis=(1, 2)).max()) > POLICY['state_mean_error_max'] or int(assigned.max()) > POLICY['state_sample_error_max']:
+        separation = float(np.abs(patch[dark]-patch[light]).mean())
+        # Preparation reduces thin-caret contrast and adds small codec errors.
+        # Permit bounded within-state variation relative to the observed state
+        # separation; do not admit a third appearance or change export checks.
+        mean_limit = max(POLICY['state_mean_error_floor'], min(POLICY['state_mean_error_max'],
+                         separation*POLICY['state_mean_error_fraction']))
+        if separation < POLICY['minimum_state_separation'] or float(assigned.mean(axis=(1, 2)).max()) > mean_limit or int(assigned.max()) > POLICY['state_sample_error_max']:
             continue
         edges = np.flatnonzero(np.diff(state)) + 1
         dwell = np.diff(np.r_[0, edges, n])
-        if len(edges) < 6 or np.any(dwell[1:-1] < POLICY['minimum_state_dwell_frames']):
+        if (len(edges) < 6 or np.any(dwell[1:-1] < POLICY['minimum_state_dwell_frames'])
+                or np.any(dwell > POLICY['maximum_state_dwell_frames'])):
             continue
         if min(int((state==s).sum()) for s in (0, 1)) < 15:
             continue
@@ -128,7 +139,10 @@ def _window(luma, cv2, np, guard):
                           'reference_state': 'brighter' if reference == light else 'darker',
                           'state_transitions': int(len(edges)),
                           'minimum_interior_dwell_frames': int(dwell[1:-1].min()),
+                          'maximum_observed_dwell_frames': int(dwell.max()),
                           'state_mean_error_max': float(assigned.mean(axis=(1, 2)).max()),
+                          'state_mean_error_limit': mean_limit,
+                          'state_separation': separation,
                           'state_sample_error_max': int(assigned.max()),
                           'action': MODE, 'meaning': 'Keep the more contrasting observed state steady during this interval; review both states. This may be instructional content.'})
         if len(proposals) == 8:

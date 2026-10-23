@@ -1,0 +1,33 @@
+{
+  "id": "wikilink",
+  "filename": "wikilink.webm",
+  "source_group": "old",
+  "start": 60,
+  "bbox": [
+    206,
+    210,
+    2,
+    6
+  ],
+  "selection": "Development repair of an earlier production-preparation failure, selected after inspection. Not held out or a new corpus source.",
+  "protected_regions": [
+    {
+      "label": "Wikilink teaching text",
+      "xywh": [
+        195,
+        80,
+        245,
+        100
+      ]
+    },
+    {
+      "label": "Lesson heading",
+      "xywh": [
+        195,
+        54,
+        245,
+        25
+      ]
+    }
+  ]
+}

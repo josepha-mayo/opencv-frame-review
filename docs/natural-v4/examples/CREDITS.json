@@ -1,0 +1,101 @@
+[
+  {
+    "schema": "natural-lesson-example-v1",
+    "id": "jupyter",
+    "label": "Jupyter notebook reading pause",
+    "author": "Alex The Analyst",
+    "title": "Installing Jupyter Notebooks-Anaconda - Python for Beginners.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Installing_Jupyter_Notebooks-Anaconda_-_Python_for_Beginners.webm",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Installing_Jupyter_Notebooks-Anaconda_-_Python_for_Beginners.webm",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "license_provenance": "The Wikimedia Commons file page lists this license; its imported YouTube license review is marked as not yet reviewed. No endorsement is implied.",
+    "original_sha256": "07c5185ee564614bab1a3f1dd5d64ac487aab485a78c96ebe6f629f08fd47319",
+    "source_original_bytes": 28510055,
+    "excerpt_start_seconds": 301,
+    "excerpt_duration_seconds": 12,
+    "prepared_sample_sha256": "946e90e2071c51e22c103c29abf863d3f463f3df53da81985ea1e897734f51c5",
+    "authored_defect": false,
+    "derivation": "Extracted seconds 301-313, resized/letterboxed to 640x360, converted to 30fps H.264 and AAC mono. No defect added; this is a prepared excerpt. Original upload qualification is recorded separately.",
+    "recommended_teaching_areas": [
+      {
+        "label": "Notebook code and output",
+        "xywh": [
+          52,
+          96,
+          552,
+          45
+        ]
+      },
+      {
+        "label": "Notebook controls",
+        "xywh": [
+          50,
+          30,
+          560,
+          60
+        ]
+      }
+    ],
+    "notice": "The caret occurs naturally. Review its observed states, the named teaching areas and both boundaries before deciding whether this hold is appropriate.",
+    "artifact_filename": "jupyter-edited.mp4",
+    "edited_sha256": "0c3008f7a0b252ee0b8480b175e6b4e15e9a82a87813da5d5dfd6e2efc5459af",
+    "source_manifest_sha256": "21fb29c79616e9afebdcfc0176e4ddd44c3be83b3b58386793b9d2623f4a93d0",
+    "edit_derivation": "Observed-state hold in the reviewed four-second box/interval. Exact plan and boundary measurements are in the case receipt. Source narration was prepared once; edit preserves the prepared audio.",
+    "acceptance_scope": "Checked experimental comparison, not approved for publishing or measured creator benefit. Review both boundaries."
+  },
+  {
+    "schema": "natural-lesson-example-v1",
+    "id": "npm",
+    "label": "Windows command-line explanation",
+    "author": "Kevin Powell",
+    "title": "Npm for absolute beginners (Node.JS, Visual Studio Code).webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Npm_for_absolute_beginners_(Node.JS,_Visual_Studio_Code).webm",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Npm_for_absolute_beginners_%28Node.JS%2C_Visual_Studio_Code%29.webm",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "license_provenance": "The Wikimedia Commons file page lists this license; its imported YouTube license review is marked as not yet reviewed. No endorsement is implied.",
+    "original_sha256": "b17217ef947a013399b38fd251effcc08701587bae892093a86728786d45ee14",
+    "source_original_bytes": 58755165,
+    "excerpt_start_seconds": 232,
+    "excerpt_duration_seconds": 12,
+    "prepared_sample_sha256": "0a2170e2a8b2b1b8512dedf1dabb8f6249c9cda147ad4ad0af58e57b6cba9ede",
+    "authored_defect": false,
+    "derivation": "Extracted seconds 232-244, resized/letterboxed to 640x360, converted to 30fps H.264 and AAC mono. No defect added; this is a prepared excerpt. Original upload qualification is recorded separately.",
+    "recommended_teaching_areas": [
+      {
+        "label": "Command history",
+        "xywh": [
+          0,
+          0,
+          480,
+          236
+        ]
+      },
+      {
+        "label": "Current command text",
+        "xywh": [
+          0,
+          232,
+          530,
+          28
+        ]
+      },
+      {
+        "label": "Presenter explanation",
+        "xywh": [
+          490,
+          0,
+          150,
+          160
+        ]
+      }
+    ],
+    "notice": "The caret occurs naturally. Review its observed states, the named teaching areas and both boundaries before deciding whether this hold is appropriate.",
+    "artifact_filename": "npm-edited.mp4",
+    "edited_sha256": "5a949b2f5f9047fcfd8b17b4402415c016a24deabd4337e00095df45ebe375f9",
+    "source_manifest_sha256": "21fb29c79616e9afebdcfc0176e4ddd44c3be83b3b58386793b9d2623f4a93d0",
+    "edit_derivation": "Observed-state hold in the reviewed four-second box/interval. Exact plan and boundary measurements are in the case receipt. Source narration was prepared once; edit preserves the prepared audio.",
+    "acceptance_scope": "Checked experimental comparison, not approved for publishing or measured creator benefit. Review both boundaries."
+  }
+]

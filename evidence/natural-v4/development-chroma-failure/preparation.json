@@ -1,0 +1,35 @@
+{
+  "schema": "lesson-preparation-v1",
+  "uploaded_sha256": "8663cc1881b921560cd6bd2a1ef7ec4c8852c052b6bba1d8c2c3a2e3ef6ad85f",
+  "prepared_sha256": "ad92b5677196dc5c3fb972b385130a27b8aa7d6f184b2a1ac6dc6967ee006ff8",
+  "uploaded_bytes": 11317621,
+  "preview_sha256": "2f07c584a346fe476e427d337b13ec6778d89c9d83fd0140541da5add2ab5665",
+  "start_seconds": 139.0,
+  "duration_seconds": 12.0,
+  "frames": 360,
+  "source": {
+    "video_codec": "vp8",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 278.8,
+    "frame_rate": "15/1",
+    "audio_codec": null,
+    "audio_channels": 0
+  },
+  "prepared": {
+    "width": 640,
+    "height": 360,
+    "fps": 30,
+    "color": "limited BT.709 SDR",
+    "audio": "none"
+  },
+  "changes": [
+    "Selected excerpt only",
+    "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+    "30 fps conversion and H.264 encoding",
+    "SDR conversion; untagged color interpreted by FFmpeg",
+    "No audio track"
+  ],
+  "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+  "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+}

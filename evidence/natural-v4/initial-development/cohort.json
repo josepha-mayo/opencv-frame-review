@@ -1,0 +1,572 @@
+{
+  "complete": true,
+  "scope": "The same twelve preselected production-prepared excerpts, rescored after the proposal detector was frozen. Offline proposals are not qualified repairs.",
+  "manifest_sha256": "0f63051f7abea05e150a9d0d224c2dd3b591ee73cbb0b6e96f56fffb1e43af03",
+  "detector_sha256": "489a943de7dbef770f6cef54b2aab382ee633dfb4f339f703cca75cde80516b5",
+  "selection_plan_sha256": "77f35c09c4243d12faf0184733615de3b5efeb1eabb5eac8c3702856a71fc9b7",
+  "baseline_manifest_sha256": "593b07a52cee2dda00fd756e387f9059f9a7c6ee7c5026cebf42c8f6fb86b658",
+  "cases": [
+    {
+      "source": "jupyter",
+      "start_seconds": 150,
+      "duration_seconds": 12,
+      "original_sha256": "07c5185ee564614bab1a3f1dd5d64ac487aab485a78c96ebe6f629f08fd47319",
+      "preparation_returncode": 0,
+      "prepared_sha256": "1699fb0c34910f576ef335986fef0334f47db58c573dd9d81e8f89089996b96d",
+      "baseline_candidates": 0,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": []
+      }
+    },
+    {
+      "source": "jupyter",
+      "start_seconds": 301,
+      "duration_seconds": 12,
+      "original_sha256": "07c5185ee564614bab1a3f1dd5d64ac487aab485a78c96ebe6f629f08fd47319",
+      "preparation_returncode": 0,
+      "prepared_sha256": "90e80a8773618765c221d2ad64a8c4e052a66c6a01a8e86b2a618803275931ba",
+      "baseline_candidates": 1,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": [
+          {
+            "id": "steady-0",
+            "bbox": [
+              116,
+              148,
+              2,
+              8
+            ],
+            "influence_xywh": [
+              112,
+              144,
+              10,
+              16
+            ],
+            "interval_frames": [
+              0,
+              119
+            ],
+            "interval_seconds": [
+              0.0,
+              3.966666666666667
+            ],
+            "pixels": 16,
+            "reference_frame": 98,
+            "alternate_frame": 0,
+            "reference_selection": "Greater mean luma contrast against the median surrounding ring. This is not semantic caret recognition.",
+            "reference_state": "darker",
+            "state_transitions": 8,
+            "minimum_interior_dwell_frames": 9,
+            "state_mean_error_max": 2.75,
+            "state_mean_error_limit": 3.9749999999999996,
+            "state_separation": 26.5,
+            "state_sample_error_max": 5,
+            "action": "steady-detail-v1",
+            "meaning": "Keep the more contrasting observed state steady during this interval; review both states. This may be instructional content.",
+            "chroma_stability": [
+              {
+                "maximum_frame_mean": 1.0,
+                "maximum_sample": 1
+              },
+              {
+                "maximum_frame_mean": 0.0,
+                "maximum_sample": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "source": "jupyter",
+      "start_seconds": 452,
+      "duration_seconds": 12,
+      "original_sha256": "07c5185ee564614bab1a3f1dd5d64ac487aab485a78c96ebe6f629f08fd47319",
+      "preparation_returncode": 0,
+      "prepared_sha256": "f2736168b7fdfeb878b930593dd0aab5a3e0cad0a4f827d945ad82eb97a1c6f5",
+      "baseline_candidates": 0,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": []
+      }
+    },
+    {
+      "source": "npm-packages",
+      "start_seconds": 29,
+      "duration_seconds": 12,
+      "original_sha256": "c76852045f62eaa4664e2d31976b1cff9d176a8862424d7fc38202558d2f90a0",
+      "preparation_returncode": 0,
+      "prepared_sha256": "9d4bc5bd291afe85c7d6bcf1254754872fbf31a0498bd3d9ecf5b9f144e59f26",
+      "baseline_candidates": 1,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": [
+          {
+            "id": "steady-0",
+            "bbox": [
+              82,
+              116,
+              2,
+              8
+            ],
+            "influence_xywh": [
+              78,
+              112,
+              10,
+              16
+            ],
+            "interval_frames": [
+              90,
+              209
+            ],
+            "interval_seconds": [
+              3.0,
+              6.966666666666667
+            ],
+            "pixels": 16,
+            "reference_frame": 206,
+            "alternate_frame": 90,
+            "reference_selection": "Greater mean luma contrast against the median surrounding ring. This is not semantic caret recognition.",
+            "reference_state": "darker",
+            "state_transitions": 7,
+            "minimum_interior_dwell_frames": 14,
+            "state_mean_error_max": 1.5,
+            "state_mean_error_limit": 6.0,
+            "state_separation": 42.9375,
+            "state_sample_error_max": 2,
+            "action": "steady-detail-v1",
+            "meaning": "Keep the more contrasting observed state steady during this interval; review both states. This may be instructional content.",
+            "chroma_stability": [
+              {
+                "maximum_frame_mean": 1.0,
+                "maximum_sample": 1
+              },
+              {
+                "maximum_frame_mean": 0.0,
+                "maximum_sample": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "source": "npm-packages",
+      "start_seconds": 58,
+      "duration_seconds": 12,
+      "original_sha256": "c76852045f62eaa4664e2d31976b1cff9d176a8862424d7fc38202558d2f90a0",
+      "preparation_returncode": 0,
+      "prepared_sha256": "940357e02f4ab7ef5cebba8ba268afdc04fe5db99bbeeb9e699943a8ff287ad4",
+      "baseline_candidates": 0,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": []
+      }
+    },
+    {
+      "source": "npm-packages",
+      "start_seconds": 87,
+      "duration_seconds": 12,
+      "original_sha256": "c76852045f62eaa4664e2d31976b1cff9d176a8862424d7fc38202558d2f90a0",
+      "preparation_returncode": 0,
+      "prepared_sha256": "d6b1ea76ebf4f382327d32660d9f11846c9538eb9e1257cd4ffd6ab732705a17",
+      "baseline_candidates": 0,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": []
+      }
+    },
+    {
+      "source": "npm-basics",
+      "start_seconds": 232,
+      "duration_seconds": 12,
+      "original_sha256": "b17217ef947a013399b38fd251effcc08701587bae892093a86728786d45ee14",
+      "preparation_returncode": 0,
+      "prepared_sha256": "51d3abc007367a2b0b61906fdf953b016645fb8c1228d8732e2b98d7f5ac3833",
+      "baseline_candidates": 1,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": [
+          {
+            "id": "steady-0",
+            "bbox": [
+              538,
+              244,
+              8,
+              4
+            ],
+            "influence_xywh": [
+              534,
+              240,
+              16,
+              12
+            ],
+            "interval_frames": [
+              0,
+              119
+            ],
+            "interval_seconds": [
+              0.0,
+              3.966666666666667
+            ],
+            "pixels": 32,
+            "reference_frame": 0,
+            "alternate_frame": 62,
+            "reference_selection": "Greater mean luma contrast against the median surrounding ring. This is not semantic caret recognition.",
+            "reference_state": "brighter",
+            "state_transitions": 7,
+            "minimum_interior_dwell_frames": 16,
+            "state_mean_error_max": 2.4375,
+            "state_mean_error_limit": 6.0,
+            "state_separation": 91.125,
+            "state_sample_error_max": 7,
+            "action": "steady-detail-v1",
+            "meaning": "Keep the more contrasting observed state steady during this interval; review both states. This may be instructional content.",
+            "chroma_stability": [
+              {
+                "maximum_frame_mean": 0.0,
+                "maximum_sample": 0
+              },
+              {
+                "maximum_frame_mean": 0.0,
+                "maximum_sample": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "source": "npm-basics",
+      "start_seconds": 465,
+      "duration_seconds": 12,
+      "original_sha256": "b17217ef947a013399b38fd251effcc08701587bae892093a86728786d45ee14",
+      "preparation_returncode": 0,
+      "prepared_sha256": "7fa2c4199f6da46610d3a378379178c42f44418344451d879105bc68d5cfc6dd",
+      "baseline_candidates": 0,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": []
+      }
+    },
+    {
+      "source": "npm-basics",
+      "start_seconds": 600,
+      "duration_seconds": 12,
+      "original_sha256": "b17217ef947a013399b38fd251effcc08701587bae892093a86728786d45ee14",
+      "preparation_returncode": 0,
+      "prepared_sha256": "2acae7f5e5792ea92e367f3cfdff90b0d8ced8bed4c8ba796c138ce113932d10",
+      "baseline_candidates": 0,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": []
+      }
+    },
+    {
+      "source": "cangjie",
+      "start_seconds": 69,
+      "duration_seconds": 12,
+      "original_sha256": "8663cc1881b921560cd6bd2a1ef7ec4c8852c052b6bba1d8c2c3a2e3ef6ad85f",
+      "preparation_returncode": 0,
+      "prepared_sha256": "bc362af96e1203164da11bb74e8f0145b16b63a844b615e0d59bb65fc923d3a6",
+      "baseline_candidates": 0,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": []
+      }
+    },
+    {
+      "source": "cangjie",
+      "start_seconds": 139,
+      "duration_seconds": 12,
+      "original_sha256": "8663cc1881b921560cd6bd2a1ef7ec4c8852c052b6bba1d8c2c3a2e3ef6ad85f",
+      "preparation_returncode": 0,
+      "prepared_sha256": "ad92b5677196dc5c3fb972b385130a27b8aa7d6f184b2a1ac6dc6967ee006ff8",
+      "baseline_candidates": 0,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": []
+      }
+    },
+    {
+      "source": "cangjie",
+      "start_seconds": 209,
+      "duration_seconds": 12,
+      "original_sha256": "8663cc1881b921560cd6bd2a1ef7ec4c8852c052b6bba1d8c2c3a2e3ef6ad85f",
+      "preparation_returncode": 0,
+      "prepared_sha256": "4df30936e5fda3e4cc42d23ed88832bd08f734984897f29ef61f32a5c96a7158",
+      "baseline_candidates": 0,
+      "detection": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": []
+      }
+    }
+  ],
+  "finished_utc": "2026-10-23T16:35:58.687541+00:00"
+}

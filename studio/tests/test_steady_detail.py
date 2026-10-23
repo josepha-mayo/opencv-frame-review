@@ -45,6 +45,27 @@ class StationaryBlink(unittest.TestCase):
     def test_static_detail_never_becomes_an_edit_proposal(self):
         self.assertEqual(steady.detect(np.full((180,90,160),32,np.uint8),cv2,np)['candidates'],[])
 
+    def test_downsampled_thin_caret_survives_small_compression_variation(self):
+        frames=np.full((180,90,160),230,np.uint8)
+        for t in range(180):
+            frames[t,30:36,40:42]=(196 if (t//15)%2 else 230)+(t%3-1)*2
+        found=steady.detect(frames,cv2,np)['candidates']
+        self.assertEqual(len(found),1)
+        self.assertEqual(found[0]['bbox'],[40,30,2,6])
+        self.assertEqual(found[0]['reference_state'],'darker')
+
+    def test_low_separation_codec_noise_is_not_a_blink_proposal(self):
+        frames=np.full((180,90,160),230,np.uint8)
+        for t in range(180):frames[t,30:36,40:42]=224 if (t//15)%2 else 230
+        self.assertEqual(steady.detect(frames,cv2,np)['candidates'],[])
+
+    def test_blink_that_stops_is_not_held_through_the_following_pause(self):
+        frames=np.full((360,90,160),32,np.uint8)
+        for t in range(120):frames[t,30:40,40:44]=220 if (t//15)%2 else 32
+        candidates=steady.detect(frames,cv2,np)['candidates']
+        self.assertTrue(candidates)
+        self.assertEqual(candidates[0]['interval_frames'],[0,119])
+
     def test_dark_caret_on_light_background_keeps_its_visible_state(self):
         frames=255-self.source()
         candidate=steady.detect(frames,cv2,np)['candidates'][0]

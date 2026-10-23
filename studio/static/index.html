@@ -58,8 +58,10 @@
         </dl>
         <p class="profile-detail">H.264 · YUV420 · limited-range BT.709<br>Maximum input: 4 MiB / 8 MiB by profile</p>
         <form id="upload-form">
+          <label for="natural-example">Choose a real lesson</label>
+          <select id="natural-example" disabled><option value="terminal">Terminal installation · Tamil</option><option value="jupyter">Jupyter notebook · English</option><option value="npm">npm command line · English</option></select>
           <button id="natural-demo-button" class="button primary full-width" type="button" disabled>Try a real terminal blink</button>
-          <p class="small muted">A prepared 12-second excerpt from Info-farmer’s real installation tutorial, with its natural caret and original narration. No added defect. Protect the command text above the caret: [0, 0, 640, 336]. <a href="/api/samples/natural-terminal.mp4" download>Download this prepared excerpt</a> · <a href="/api/samples/natural-terminal-credit.json" download>Source &amp; preparation provenance</a>.</p>
+          <p class="small muted"><span id="natural-example-description">Info-farmer, CC0. Prepared 12-second Tamil lesson, with a natural caret and prepared narration. No added defect. Suggested teaching area: [0, 0, 640, 336].</span> <a id="natural-example-download" href="/api/samples/natural-terminal.mp4" download>Download this prepared excerpt</a> · <a id="natural-example-credit" href="/api/samples/natural-terminal-credit.json" download>Source &amp; preparation provenance</a>.</p>
           <div id="cloud-samples" hidden>
             <button id="real-demo-button" class="button primary full-width" type="button" disabled>Analyze a real classroom lesson</button>
             <p class="small muted">A real teacher and whiteboard, with human narration. Prepares seconds 40–52. No artificial defect is added; no candidate can be the right outcome. <a href="/api/samples/real-teacher.webm" download>Download the original WebM</a>.</p>

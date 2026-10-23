@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="468" height="142" preserveAspectRatio="xMinYMin meet" viewBox="0 0 468 142" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="468" height="142"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-142)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="66" width="88" height="53" rx="4" ry="0" style="stroke: rgb(50%,59%,49%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,94%,90%); fill-rule: evenodd;"/>
+			<text x="5" y="100" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,200) scale(1,-1)">Browser</text>
+			<text x="5" y="82" style="font-family: Times-Roman; font-size: 6.7px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,164) scale(1,-1)">Upload + inspect</text>
+			<path d="M 88,91 L 94,91 Z" style="stroke: rgb(14%,34%,25%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="94" y="66" width="88" height="53" rx="4" ry="0" style="stroke: rgb(50%,59%,49%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,94%,90%); fill-rule: evenodd;"/>
+			<text x="99" y="100" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,200) scale(1,-1)">AWS ECS</text>
+			<text x="99" y="82" style="font-family: Times-Roman; font-size: 6.7px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,164) scale(1,-1)">Prepare excerpt</text>
+			<path d="M 182,91 L 188,91 Z" style="stroke: rgb(14%,34%,25%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="188" y="66" width="88" height="53" rx="4" ry="0" style="stroke: rgb(50%,59%,49%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,94%,90%); fill-rule: evenodd;"/>
+			<text x="193" y="100" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,200) scale(1,-1)">OpenCV 5</text>
+			<text x="193" y="82" style="font-family: Times-Roman; font-size: 6.7px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,164) scale(1,-1)">Localize + review</text>
+			<path d="M 276,91 L 282,91 Z" style="stroke: rgb(14%,34%,25%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="282" y="66" width="88" height="53" rx="4" ry="0" style="stroke: rgb(50%,59%,49%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,94%,90%); fill-rule: evenodd;"/>
+			<text x="287" y="100" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,200) scale(1,-1)">Bound plan</text>
+			<text x="287" y="82" style="font-family: Times-Roman; font-size: 6.7px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,164) scale(1,-1)">Human approval</text>
+			<path d="M 370,91 L 376,91 Z" style="stroke: rgb(14%,34%,25%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="376" y="66" width="88" height="53" rx="4" ry="0" style="stroke: rgb(50%,59%,49%); stroke-linecap: butt; stroke-width: 1; fill: rgb(92%,94%,90%); fill-rule: evenodd;"/>
+			<text x="381" y="100" style="font-family: Helvetica-Bold; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,200) scale(1,-1)">Encoded checks</text>
+			<text x="381" y="82" style="font-family: Times-Roman; font-size: 6.7px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,164) scale(1,-1)">Download / refuse</text>
+			<text x="0" y="43" style="font-family: Times-Roman; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,86) scale(1,-1)">Managed HTTPS / digest-pinned ECR / Fargate CPU / CloudWatch Logs</text>
+			<text x="0" y="26" style="font-family: Times-Roman; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,52) scale(1,-1)">FFmpeg and OpenCV run on AWS. No model API or application AWS role is required.</text>
+			<text x="0" y="9" style="font-family: Times-Roman; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,18) scale(1,-1)">One worker / eight slots / owned ephemeral jobs / original-source recovery</text>
+		</g>
+	</g>
+</svg>

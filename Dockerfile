@@ -10,6 +10,7 @@ RUN pip install --no-cache-dir --only-binary=:all: --require-hashes -r /tmp/requ
 WORKDIR /app
 COPY opencv-ready /app/opencv-ready
 COPY studio /app/studio
+COPY Dockerfile /app/Dockerfile
 RUN python studio/run.py --check
 EXPOSE 8877
 USER 10001:10001

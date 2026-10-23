@@ -1,0 +1,22 @@
+{
+  "build": "lesson-rescue-natural-cohort-2026-10-23-v4",
+  "verified_utc": "2026-10-23T18:07:55.135376+00:00",
+  "source_manifest_sha256": "21fb29c79616e9afebdcfc0176e4ddd44c3be83b3b58386793b9d2623f4a93d0",
+  "source_files_verified": 103,
+  "verification_complete": true,
+  "verification_stages": 13,
+  "original_http_repairs": 6,
+  "new_cohort_sources": 4,
+  "new_cohort_excerpts": 12,
+  "new_cohort_excerpt_proposals": 3,
+  "new_cohort_source_repairs": 3,
+  "development_source_repairs": 2,
+  "previous_source_regression": 1,
+  "image_digest": "sha256:196b508dcd7314e26f5d69d0fd82470821793f6de3c437d14bb7448da9d93eaf",
+  "aws_endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+  "aws_original_browser_cases": [
+    "jupyter",
+    "npm-basics"
+  ],
+  "scope": "Six selected original lesson sources and one four-second interval per source. Three new-source repairs, two development repairs and the prior Tamil source repeated. Presets/cloud reruns are the same sources. Final code was iterated after cohort inspection; no held-out or representative recall, learning, accessibility or time-saving claim."
+}

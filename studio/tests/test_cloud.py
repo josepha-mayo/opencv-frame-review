@@ -35,6 +35,30 @@ class CloudHTTP(unittest.TestCase):
             self.assertEqual(status,200)
             self.assertEqual(headers['Content-Type'],kind)
 
+    def test_other_natural_examples_remain_owned_and_unknown_names_create_nothing(self):
+        _,headers,body=self.request('/api/profile')
+        owner=headers['Set-Cookie'].split(';')[0]
+        post_headers={'Cookie':owner,'X-App-Token':json.loads(body)['csrf_token']}
+        with patch.object(self.server.manager.pool,'submit'):
+            for example in ('jupyter','npm'):
+                status,_,body=self.request('/api/natural-demo',method='POST',body=json.dumps({'example':example}),headers=post_headers)
+                self.assertEqual(status,202)
+                job=json.loads(body);folder=self.server.manager.jobpath(job['id'])
+                self.assertEqual((folder/'owner.txt').read_text(),owner.split('=')[1])
+                self.assertFalse((folder/'approval.json').exists())
+                self.assertFalse(job['sample_credit']['authored_defect'])
+                self.assertEqual(job['sample_credit']['id'],example)
+                self.assertEqual(self.request('/api/jobs/'+job['id'])[0],404)
+                self.server.manager.jobs[job['id']]['status']='review'
+                declined=self.server.manager.decline(job['id'])
+                self.assertEqual(declined['artifacts']['Natural sample provenance'],'/api/samples/natural-'+example+'-credit.json')
+                for suffix in ('.mp4','-credit.json'):
+                    self.assertEqual(self.request('/api/samples/natural-'+example+suffix)[0],200)
+            count=len(self.server.manager.jobs)
+            for body in (b'{"example":"../../other"}',b'{"example":[]}',b'[]',b'{"example":"npm","path":"elsewhere"}'):
+                self.assertEqual(self.request('/api/natural-demo',method='POST',body=body,headers=post_headers)[0],400)
+            self.assertEqual(len(self.server.manager.jobs),count)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.server = cloud_server.make_cloud_server(['demo.example'], 0, Path(self.temp.name), bind='127.0.0.1')
@@ -75,6 +99,12 @@ class CloudHTTP(unittest.TestCase):
         value = json.loads(body)
         self.assertEqual(value['transport']['kind'], 'aws')
         self.assertEqual(value['transport']['retention_hours'], 24)
+
+    def test_script_explicitly_declares_utf8_for_review_symbols(self):
+        status, headers, body = self.request('/static/app.js')
+        self.assertEqual(status, 200)
+        self.assertIn('charset=utf-8', headers['Content-Type'])
+        self.assertIn('\u2193', body.decode('utf-8'))
 
     def test_job_cannot_be_read_by_another_browser_even_with_known_job_id(self):
         owner = 'b' * 64

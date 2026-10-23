@@ -77,7 +77,9 @@ def verify(output):
         ('pixel-refusals', [str(tests / 'integration_rejections.py')]),
         ('lesson', [str(ROOT / 'tests/integration_lesson.py'), str(output / 'lesson')]),
         ('real-lessons', [str(ROOT / 'tests/integration_real_lessons.py'), str(output / 'real-lessons')]),
+        ('silent-webm', [str(ROOT / 'tests/integration_silent_webm.py'), str(output / 'silent-webm')]),
         ('natural-steady', [str(ROOT / 'tests/integration_steady_detail.py'), str(output / 'natural-steady')]),
+        ('natural-examples', [str(ROOT / 'tests/integration_natural_examples.py'), str(output / 'natural-examples')]),
         ('studio-ui', ['-m', 'unittest', 'discover', '-s', str(ROOT / 'tests')]),
     ]
     outcomes = []
@@ -92,7 +94,7 @@ def verify(output):
         (output / 'verification.json').write_text(json.dumps(receipt, indent=2) + '\n')
         if result.returncode:
             raise RuntimeError(name + ' failed; see ' + str(output / (name + '.log')))
-    print('Eleven stages passed, including a naturally blinking lesson excerpt, real classroom intake, and the disclosed augmented edit challenge. Original-source upload, browser/cloud checks and creator benefit remain separate.', flush=True)
+    print('Thirteen stages passed, including three naturally blinking lesson excerpts, silent WebM intake, real classroom intake, and the disclosed augmented edit challenge. Original-source upload, browser/cloud checks and creator benefit remain separate.', flush=True)
 
 
 def main():

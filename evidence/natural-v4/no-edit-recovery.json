@@ -1,0 +1,90 @@
+{
+  "complete": true,
+  "scope": "One preselected no-proposal excerpt; functional no-edit recovery, not a repair or recall measurement.",
+  "source": "cangjie",
+  "source_sha256": "8663cc1881b921560cd6bd2a1ef7ec4c8852c052b6bba1d8c2c3a2e3ef6ad85f",
+  "excerpt_start_seconds": 139,
+  "preparation": {
+    "schema": "lesson-preparation-v1",
+    "uploaded_sha256": "8663cc1881b921560cd6bd2a1ef7ec4c8852c052b6bba1d8c2c3a2e3ef6ad85f",
+    "prepared_sha256": "37aa22862b2059880a262c050523d2891b439d8169662067e167fbb360f951bb",
+    "uploaded_bytes": 11317621,
+    "preview_sha256": "2f07c584a346fe476e427d337b13ec6778d89c9d83fd0140541da5add2ab5665",
+    "start_seconds": 139.0,
+    "duration_seconds": 12.0,
+    "frames": 360,
+    "source": {
+      "video_codec": "vp8",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 278.8,
+      "frame_rate": "15/1",
+      "chroma_location": "center",
+      "audio_codec": null,
+      "audio_channels": 0
+    },
+    "prepared": {
+      "width": 640,
+      "height": 360,
+      "fps": 30,
+      "color": "limited BT.709 SDR",
+      "chroma_location": "left",
+      "audio": "none"
+    },
+    "changes": [
+      "Selected excerpt only",
+      "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+      "30 fps conversion and H.264 encoding",
+      "SDR conversion; untagged color interpreted by FFmpeg",
+      "No audio track"
+    ],
+    "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+    "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+  },
+  "decision": {
+    "schema": "lesson-decision-v1",
+    "job_id": "fc2b9f5c67d89ab4721423bd692e12ac",
+    "created_utc": "2026-10-23T17:26:54.639512+00:00",
+    "decision": "declined",
+    "uploaded_sha256": "8663cc1881b921560cd6bd2a1ef7ec4c8852c052b6bba1d8c2c3a2e3ef6ad85f",
+    "prepared_sha256": "37aa22862b2059880a262c050523d2891b439d8169662067e167fbb360f951bb",
+    "excerpt": {
+      "start_seconds": 139.0,
+      "duration_seconds": 12.0,
+      "frames": 360
+    },
+    "source": {
+      "video_codec": "vp8",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 278.8,
+      "frame_rate": "15/1",
+      "chroma_location": "center",
+      "audio_codec": null,
+      "audio_channels": 0
+    },
+    "prepared": {
+      "width": 640,
+      "height": 360,
+      "fps": 30,
+      "color": "limited BT.709 SDR",
+      "chroma_location": "left",
+      "audio": "none"
+    },
+    "candidates": [],
+    "edited_export_accepted": false,
+    "failure_reason": null,
+    "interpretation": "Creator left the prepared clip unchanged; no edit was approved.",
+    "detector_scope": "Frozen rapid-change detector: at least 7 alternating luminance transitions in a rolling second, connected support at least 64 pixels. Separate steady-detail-v1: small stationary two-state luma appearance, at least 6 transitions, bounded state and chroma errors, minimum dwell. Proposals are not semantic distraction labels.",
+    "limitations": [
+      "No candidate does not mean distraction-free or safe.",
+      "Ordinary caret blinking, notifications and camera movement may be outside this detector.",
+      "Preparation changes picture/audio and may make small teaching labels unreadable.",
+      "Exact edit measurements reference the prepared clip, not the uploaded original.",
+      "This record does not establish learning benefit or accessibility compliance."
+    ]
+  },
+  "original_and_prepared_downloads_exact": true,
+  "edited_download_withheld": true,
+  "manifest_sha256": "21fb29c79616e9afebdcfc0176e4ddd44c3be83b3b58386793b9d2623f4a93d0"
+}

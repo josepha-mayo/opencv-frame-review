@@ -1,0 +1,40 @@
+{
+  "schema": "natural-lesson-example-v1",
+  "id": "jupyter",
+  "label": "Jupyter notebook reading pause",
+  "author": "Alex The Analyst",
+  "title": "Installing Jupyter Notebooks-Anaconda - Python for Beginners.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Installing_Jupyter_Notebooks-Anaconda_-_Python_for_Beginners.webm",
+  "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Installing_Jupyter_Notebooks-Anaconda_-_Python_for_Beginners.webm",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "license_provenance": "The Wikimedia Commons file page lists this license; its imported YouTube license review is marked as not yet reviewed. No endorsement is implied.",
+  "original_sha256": "07c5185ee564614bab1a3f1dd5d64ac487aab485a78c96ebe6f629f08fd47319",
+  "source_original_bytes": 28510055,
+  "excerpt_start_seconds": 301,
+  "excerpt_duration_seconds": 12,
+  "prepared_sample_sha256": "946e90e2071c51e22c103c29abf863d3f463f3df53da81985ea1e897734f51c5",
+  "authored_defect": false,
+  "derivation": "Extracted seconds 301-313, resized/letterboxed to 640x360, converted to 30fps H.264 and AAC mono. No defect added; this is a prepared excerpt. Original upload qualification is recorded separately.",
+  "recommended_teaching_areas": [
+    {
+      "label": "Notebook code and output",
+      "xywh": [
+        52,
+        96,
+        552,
+        45
+      ]
+    },
+    {
+      "label": "Notebook controls",
+      "xywh": [
+        50,
+        30,
+        560,
+        60
+      ]
+    }
+  ],
+  "notice": "The caret occurs naturally. Review its observed states, the named teaching areas and both boundaries before deciding whether this hold is appropriate."
+}

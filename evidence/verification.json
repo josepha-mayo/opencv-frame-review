@@ -1,5 +1,5 @@
 {
-  "build": "lesson-rescue-steady-detail-2026-10-23-v3",
+  "build": "lesson-rescue-natural-cohort-2026-10-23-v4",
   "complete": true,
   "stages": [
     {
@@ -48,9 +48,19 @@
       "log": "real-lessons.log"
     },
     {
+      "stage": "silent-webm",
+      "returncode": 0,
+      "log": "silent-webm.log"
+    },
+    {
       "stage": "natural-steady",
       "returncode": 0,
       "log": "natural-steady.log"
+    },
+    {
+      "stage": "natural-examples",
+      "returncode": 0,
+      "log": "natural-examples.log"
     },
     {
       "stage": "studio-ui",

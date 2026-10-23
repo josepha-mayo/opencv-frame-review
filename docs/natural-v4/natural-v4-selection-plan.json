@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-10-23T16:28:36.219570+00:00",
+  "purpose": "New source cohort, selected before detector changes/outcomes. Licensed tutorial convenience sample, not prevalence or recall estimation.",
+  "development_sources": [
+    "existing wikilink at 60 seconds",
+    "existing wiki-citations at 24 seconds"
+  ],
+  "new_sources": [
+    {
+      "id": "jupyter",
+      "title": "Installing Jupyter Notebooks-Anaconda - Python for Beginners.webm"
+    },
+    {
+      "id": "npm-packages",
+      "title": "Npm explainer tutorial video - Expand Your Project with External Packages - Managing Packages with npm - freeCodeCamp Tutorial.webm"
+    },
+    {
+      "id": "npm-basics",
+      "title": "Npm for absolute beginners (Node.JS, Visual Studio Code).webm"
+    },
+    {
+      "id": "cangjie",
+      "title": "TypingChineseCharactersWithCangjieGedit383Ubuntu1310Screencast.webm"
+    }
+  ],
+  "new_cohort_rule": "After freezing the candidate detector, prepare 12 seconds at quarter, half and three-quarter source duration, floored to a whole second and capped at 600 seconds. No searching for a positive within this cohort; record every outcome.",
+  "additional_exploration": "Any later search is separately labelled development/exploratory and never added to this fixed cohort."
+}

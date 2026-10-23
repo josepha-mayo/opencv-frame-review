@@ -96,6 +96,20 @@
   const realDemo = byId("real-demo-button");
   const realChallenge = byId("real-challenge-button");
   const naturalDemo = byId("natural-demo-button");
+  const naturalExample = byId("natural-example");
+  const naturalChoices = {
+    terminal: {button:"Try a real terminal blink",description:"Info-farmer, CC0. Prepared 12-second Tamil lesson, with a natural caret and prepared narration. No added defect. Suggested teaching area: [0, 0, 640, 336]."},
+    jupyter: {button:"Try a real Jupyter reading pause",description:"Alex The Analyst, CC BY 3.0. Prepared English lesson with a natural caret; no added defect. Suggested code/output area: [52, 96, 552, 45]. Source license and preparation history are linked below."},
+    npm: {button:"Try a real command-line pause",description:"Kevin Powell, CC BY 3.0. Prepared English lesson with a natural command-prompt caret; no added defect. Suggested command area: [0, 0, 480, 236]. Source license and preparation history are linked below."}
+  };
+  function updateNaturalChoice() {
+    const example = naturalChoices[naturalExample.value] ? naturalExample.value : "terminal";
+    naturalDemo.textContent = naturalChoices[example].button;
+    byId("natural-example-description").textContent = naturalChoices[example].description;
+    byId("natural-example-download").setAttribute("href","/api/samples/natural-"+example+".mp4");
+    byId("natural-example-credit").setAttribute("href","/api/samples/natural-"+example+"-credit.json");
+  }
+  naturalExample.addEventListener("change",updateNaturalChoice);
   const ACTIVE = new Set(["queued", "analyzing", "exporting"]);
   const TERMINAL = new Set(["complete", "declined", "failed", "cancelled"]);
   const STATUS = {
@@ -201,6 +215,7 @@
     ui.file.disabled = busy || !token || locked;
     ui.demo.disabled = busy || !token || locked;
     naturalDemo.disabled = busy || !token || locked;
+    naturalExample.disabled = naturalDemo.disabled;
     realDemo.disabled = busy || !token || locked;
     realChallenge.disabled = busy || !token || locked;
     [prepareLesson, clipStart, clipDuration].forEach(node => { node.disabled = busy || locked; });
@@ -728,7 +743,7 @@
     ui.status.textContent = status[1];
     if (job.preparing_lesson) ui.status.textContent = "Preparing your selected lesson excerpt, then analyzing it. No edit has been approved.";
     preparationNotice.hidden = !job.preparation && !job.sample_credit;
-    if (job.sample_credit) preparationNotice.textContent = "Natural tutorial sample: " + job.sample_credit.derivation + " Inspect both observed states before deciding whether its caret should stay steady. The full source attribution and preparation history are downloadable.";
+    if (job.sample_credit) preparationNotice.textContent = "Natural tutorial sample by " + job.sample_credit.author + " (" + job.sample_credit.license + "): " + job.sample_credit.derivation + " Inspect both observed states before deciding whether its caret should stay steady. The full source attribution and preparation history are downloadable.";
     preparationPreview.hidden = !job.preparation;
     byId("preparation-fullsize").hidden = !job.preparation;
     if (job.preparation) {
@@ -857,7 +872,7 @@
   });
   naturalDemo.addEventListener("click", async () => {
     if (naturalDemo.disabled) return;
-    await startJob("/api/natural-demo", {headers:{"Content-Type":"application/json"},body:"{}"});
+    await startJob("/api/natural-demo", {headers:{"Content-Type":"application/json"},body:JSON.stringify({example:naturalExample.value || "terminal"})});
   });
   realDemo.addEventListener("click", async () => {
     if (realDemo.disabled || ui.cloudSamples.hidden) return;

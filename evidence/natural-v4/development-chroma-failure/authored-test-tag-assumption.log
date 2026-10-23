@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/app/studio/tests/integration_silent_webm.py", line 12, in <module>
+    assert probe(source)[0]['chroma_location']=='center'
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'chroma_location'

@@ -1,0 +1,33 @@
+{
+  "id": "wiki-citations",
+  "filename": "wiki-citations.webm",
+  "source_group": "earlier",
+  "start": 24,
+  "bbox": [
+    156,
+    108,
+    2,
+    6
+  ],
+  "selection": "Development repair of an earlier production-preparation failure, selected after inspection. Not held out or a new corpus source.",
+  "protected_regions": [
+    {
+      "label": "Citation example and text",
+      "xywh": [
+        150,
+        125,
+        430,
+        80
+      ]
+    },
+    {
+      "label": "Article heading and controls",
+      "xywh": [
+        150,
+        25,
+        430,
+        65
+      ]
+    }
+  ]
+}
