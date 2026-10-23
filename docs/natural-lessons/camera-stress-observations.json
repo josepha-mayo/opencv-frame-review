@@ -1,0 +1,300 @@
+{
+  "schema": "natural-lesson-observations-v1",
+  "plan_sha256": "8ddac11330dc14352c64e3c681006502c8da1c37f01778a69de231bf7c21ca18",
+  "runtime_manifest_sha256": "9d94ffbd280ad5575e615cfb40f8cb2662dc94cb11609295ce0d9b1abcb48f74",
+  "source_check": {
+    "build": "lesson-rescue-real-intake-2026-10-22-v1",
+    "source_files_verified": 87,
+    "media_runtime_checked": false,
+    "media_qualification": "not established for this build"
+  },
+  "complete": true,
+  "records": [
+    {
+      "source_id": "lecture-hall-light",
+      "source_sha256": "267b37c9ce88b0a5cb0e0306847cf698a14b1f5f4866ef6d51622570da26d530",
+      "source_bytes": 13860169,
+      "start_seconds": 4,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 8.562,
+      "error": null,
+      "candidates": [
+        {
+          "id": "0",
+          "bbox": [
+            153,
+            86,
+            8,
+            105
+          ],
+          "interval_frames": [
+            2,
+            359
+          ],
+          "interval_seconds": [
+            0.06666666666666667,
+            11.966666666666667
+          ],
+          "pixels": 658,
+          "preview_frame": 18,
+          "recipe_sha256": "441bbf12e7b97fc5ad535345abfb52289554fadeb9d2b9007988b79063c396e3",
+          "overlay_url": "/api/jobs/c373c85feb8611a0ff38fca2feac6218/preview/0.png"
+        },
+        {
+          "id": "1",
+          "bbox": [
+            301,
+            232,
+            13,
+            114
+          ],
+          "interval_frames": [
+            24,
+            359
+          ],
+          "interval_seconds": [
+            0.8,
+            11.966666666666667
+          ],
+          "pixels": 538,
+          "preview_frame": 161,
+          "recipe_sha256": "24f9f6f00b6b46654f98635732976b9c6b7efa2d86c6feeb7607b4e8f8220997",
+          "overlay_url": "/api/jobs/c373c85feb8611a0ff38fca2feac6218/preview/1.png"
+        },
+        {
+          "id": "2",
+          "bbox": [
+            153,
+            235,
+            7,
+            113
+          ],
+          "interval_frames": [
+            1,
+            359
+          ],
+          "interval_seconds": [
+            0.03333333333333333,
+            11.966666666666667
+          ],
+          "pixels": 594,
+          "preview_frame": 10,
+          "recipe_sha256": "9b7aea9807d4b9d684a828dbfa04ffddda5a3bc487b1e1d8f50a4d5cfbad884f",
+          "overlay_url": "/api/jobs/c373c85feb8611a0ff38fca2feac6218/preview/2.png"
+        }
+      ],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "267b37c9ce88b0a5cb0e0306847cf698a14b1f5f4866ef6d51622570da26d530",
+        "prepared_sha256": "0dc3071d886a25cfd9ccb1ee02116c60bf30b5c77f68b27aad63bd0b86d66344",
+        "uploaded_bytes": 13860169,
+        "preview_sha256": "76378a318b14e7731a300b840a06e7055eaea17e6a4d35437355401316854be1",
+        "start_seconds": 4.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 32.119,
+          "frame_rate": "59/1",
+          "audio_codec": "opus",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9967595876151846,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true
+    },
+    {
+      "source_id": "lecture-hall-light",
+      "source_sha256": "267b37c9ce88b0a5cb0e0306847cf698a14b1f5f4866ef6d51622570da26d530",
+      "source_bytes": 13860169,
+      "start_seconds": 16,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 8.731,
+      "error": null,
+      "candidates": [
+        {
+          "id": "0",
+          "bbox": [
+            437,
+            0,
+            5,
+            41
+          ],
+          "interval_frames": [
+            1,
+            93
+          ],
+          "interval_seconds": [
+            0.03333333333333333,
+            3.1
+          ],
+          "pixels": 92,
+          "preview_frame": 10,
+          "recipe_sha256": "d0d116b3588ef758f01f2378cd60c210aa5a171136bdfb3d16e265a01875ae67",
+          "overlay_url": "/api/jobs/524c37b84958c1aa81bdedcf6fd862cc/preview/0.png"
+        },
+        {
+          "id": "1",
+          "bbox": [
+            153,
+            112,
+            8,
+            85
+          ],
+          "interval_frames": [
+            2,
+            176
+          ],
+          "interval_seconds": [
+            0.06666666666666667,
+            5.866666666666666
+          ],
+          "pixels": 461,
+          "preview_frame": 11,
+          "recipe_sha256": "c307f2eac5410e838c706a23d83e9ca64082eb4c683b28832bb9b94852b337aa",
+          "overlay_url": "/api/jobs/524c37b84958c1aa81bdedcf6fd862cc/preview/1.png"
+        },
+        {
+          "id": "2",
+          "bbox": [
+            297,
+            232,
+            17,
+            122
+          ],
+          "interval_frames": [
+            2,
+            359
+          ],
+          "interval_seconds": [
+            0.06666666666666667,
+            11.966666666666667
+          ],
+          "pixels": 1696,
+          "preview_frame": 10,
+          "recipe_sha256": "6d70db2449bd01b2fb6aa0325e78ed5d9fa57bcedbec795943b4785948e97c83",
+          "overlay_url": "/api/jobs/524c37b84958c1aa81bdedcf6fd862cc/preview/2.png"
+        },
+        {
+          "id": "3",
+          "bbox": [
+            153,
+            237,
+            6,
+            51
+          ],
+          "interval_frames": [
+            1,
+            142
+          ],
+          "interval_seconds": [
+            0.03333333333333333,
+            4.733333333333333
+          ],
+          "pixels": 242,
+          "preview_frame": 10,
+          "recipe_sha256": "860ab71ffb000d1cb2c6f6bfcd54a365270f188dedd459d61bae30a01ac0daba",
+          "overlay_url": "/api/jobs/524c37b84958c1aa81bdedcf6fd862cc/preview/3.png"
+        },
+        {
+          "id": "4",
+          "bbox": [
+            153,
+            294,
+            5,
+            41
+          ],
+          "interval_frames": [
+            1,
+            142
+          ],
+          "interval_seconds": [
+            0.03333333333333333,
+            4.733333333333333
+          ],
+          "pixels": 144,
+          "preview_frame": 29,
+          "recipe_sha256": "0938e5017699d34a4b0400135aa15cf6716985e5ea016c718c20a1cf68a4a96c",
+          "overlay_url": "/api/jobs/524c37b84958c1aa81bdedcf6fd862cc/preview/4.png"
+        }
+      ],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "267b37c9ce88b0a5cb0e0306847cf698a14b1f5f4866ef6d51622570da26d530",
+        "prepared_sha256": "ad7bf898d4bc00d4d5de02c9c8618bda0286cda1241dc1c49ffe401067c7f97a",
+        "uploaded_bytes": 13860169,
+        "preview_sha256": "24514c19ad79c24527852ab85ba660687ed461cba42ab77640a1386ef9deade5",
+        "start_seconds": 16.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 32.119,
+          "frame_rate": "59/1",
+          "audio_codec": "opus",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9962498750229664,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true
+    }
+  ],
+  "scope": "Original, unaugmented excerpts. Candidate detection is not semantic distraction identification. No candidate is approved in this audit.",
+  "all_workflows_passed": true
+}

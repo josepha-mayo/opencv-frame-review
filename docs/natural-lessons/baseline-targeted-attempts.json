@@ -1,0 +1,118 @@
+{
+  "runtime_manifest_sha256": "9d94ffbd280ad5575e615cfb40f8cb2662dc94cb11609295ce0d9b1abcb48f74",
+  "records": [
+    {
+      "source": "blender.webm",
+      "source_sha256": "708990275a7fa626d7003816790ecd6a2bc320ced9b82f21ed2bdf1c10a6f0e8",
+      "start_seconds": 68,
+      "job_id": "617ba3c4691f6f2d8a74381116ac1ba3",
+      "candidate_count": 1,
+      "selector": "Largest detected support by pixel count, fixed before export outcome",
+      "candidate": {
+        "id": "0",
+        "bbox": [
+          605,
+          181,
+          22,
+          12
+        ],
+        "interval_frames": [
+          40,
+          315
+        ],
+        "interval_seconds": [
+          1.3333333333333333,
+          10.5
+        ],
+        "pixels": 114,
+        "preview_frame": 66,
+        "recipe_sha256": "2901f1a9ef9e2898296f5f952d64b06f5b96f11269388f095a75d412058b30c0",
+        "overlay_url": "/api/jobs/617ba3c4691f6f2d8a74381116ac1ba3/preview/0.png"
+      },
+      "plan_http_status": 400,
+      "plan_refusal": {
+        "error": "A protected rectangle overlaps the proposed edit. Choose another candidate or leave the original unchanged."
+      },
+      "no_approval_record": true,
+      "outcome": "teaching-overlap-refused"
+    },
+    {
+      "source": "lecture-hall-light-1080p.webm",
+      "source_sha256": "267b37c9ce88b0a5cb0e0306847cf698a14b1f5f4866ef6d51622570da26d530",
+      "start_seconds": 4,
+      "job_id": "ec36227a5fd6465aa6a05b95b8582891",
+      "candidate_count": 3,
+      "selector": "Largest detected support by pixel count, fixed before export outcome",
+      "candidate": {
+        "id": "0",
+        "bbox": [
+          153,
+          86,
+          8,
+          105
+        ],
+        "interval_frames": [
+          2,
+          359
+        ],
+        "interval_seconds": [
+          0.06666666666666667,
+          11.966666666666667
+        ],
+        "pixels": 658,
+        "preview_frame": 18,
+        "recipe_sha256": "441bbf12e7b97fc5ad535345abfb52289554fadeb9d2b9007988b79063c396e3",
+        "overlay_url": "/api/jobs/ec36227a5fd6465aa6a05b95b8582891/preview/0.png"
+      },
+      "plan_http_status": 200,
+      "outcome": "failed",
+      "error": "Local retiming unsupported: No repeated selected-pixel cycle passes the bounded periodicity gate.",
+      "artifacts": {},
+      "edited_file_exists": false,
+      "recurrence_rejection": {
+        "status": "unsupported_recurrence",
+        "reason": "No repeated selected-pixel cycle passes the bounded periodicity gate.",
+        "scope": "Bounded appearance recurrence, not arbitrary periodic motion."
+      }
+    },
+    {
+      "source": "lecture-hall-light-1080p.webm",
+      "source_sha256": "267b37c9ce88b0a5cb0e0306847cf698a14b1f5f4866ef6d51622570da26d530",
+      "start_seconds": 16,
+      "job_id": "8ec44f8c422084a392363c7380af89ee",
+      "candidate_count": 5,
+      "selector": "Largest detected support by pixel count, fixed before export outcome",
+      "candidate": {
+        "id": "2",
+        "bbox": [
+          297,
+          232,
+          17,
+          122
+        ],
+        "interval_frames": [
+          2,
+          359
+        ],
+        "interval_seconds": [
+          0.06666666666666667,
+          11.966666666666667
+        ],
+        "pixels": 1696,
+        "preview_frame": 10,
+        "recipe_sha256": "6d70db2449bd01b2fb6aa0325e78ed5d9fa57bcedbec795943b4785948e97c83",
+        "overlay_url": "/api/jobs/8ec44f8c422084a392363c7380af89ee/preview/2.png"
+      },
+      "plan_http_status": 200,
+      "outcome": "failed",
+      "error": "Local retiming unsupported: No repeated selected-pixel cycle passes the bounded periodicity gate.",
+      "artifacts": {},
+      "edited_file_exists": false,
+      "recurrence_rejection": {
+        "status": "unsupported_recurrence",
+        "reason": "No repeated selected-pixel cycle passes the bounded periodicity gate.",
+        "scope": "Bounded appearance recurrence, not arbitrary periodic motion."
+      }
+    }
+  ]
+}

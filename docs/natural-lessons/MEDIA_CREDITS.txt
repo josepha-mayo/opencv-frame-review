@@ -1,0 +1,10 @@
+Derived static evaluation frames only. No endorsement by source authors.
+Wikilink: Psypherium, How to make a wikilink.webm, CC BY 3.0.
+Tamil installation: Info-farmer, Tutorial-tamil-installation-SimpleScreenRecorder.webm, CC0 1.0.
+Blender: Lorenzoh, Module 3 Lesson 1 Screencast v2.webm, CC BY-SA 4.0.
+Interface: Panabo TG, VIDEO 1 Interface Tutorial Video - Introduction & About.webm, CC BY-SA 4.0.
+Camera lamps: PantheraLeo1359531, Lichtflimmern, je nach Belichtungszeit 20240823 C0997.webm, CC BY 4.0.
+Source pages and license URLs are in sources.json and camera-stress-source.json.
+Changes: extract selected excerpts, resize/letterbox to 640x360 at 30fps, encode; make static contact sheets or candidate overlay.
+Blender and interface derived images are distributed under CC BY-SA 4.0. Other derived images retain the corresponding source attribution license. Code licenses are separate.
+The camera input is a Commons 1080p transcode, not the 902.57 MiB uploader original, and does not show an active lesson.

@@ -1,0 +1,14 @@
+{
+  "schema": "natural-lesson-cohort-v1",
+  "purpose": "Exploratory natural-footage scope and failure audit. No authored defects. Not a representative dataset or accessibility certification.",
+  "selection_frozen_before_download": true,
+  "selection": "Four additional Commons originals under 64 MiB: different tutorial subjects, authors, VP8/VP9 and Vorbis/Opus. Convenience sample from licensed tutorial search, not selected by detector outcome.",
+  "excerpt_policy": {"starts_seconds": [12, 40, 68], "duration_seconds": 12, "reason": "Same three nonoverlapping windows in every source; no shifting a failed window to manufacture a positive."},
+  "approval_policy": "Analyze only initially. Inspect candidates and source context. Do not approve cursor, typing, diagram movement or other useful instructional activity merely because it meets a luminance threshold.",
+  "sources": [
+    {"id":"wikilink", "filename":"wikilink.webm", "page":"https://commons.wikimedia.org/wiki/File:How_to_make_a_wikilink.webm", "url":"https://upload.wikimedia.org/wikipedia/commons/0/0a/How_to_make_a_wikilink.webm", "author":"Psypherium", "license":"CC BY 3.0", "license_url":"https://creativecommons.org/licenses/by/3.0/"},
+    {"id":"tamil-install", "filename":"tamil-install.webm", "page":"https://commons.wikimedia.org/wiki/File:Tutorial-tamil-installation-SimpleScreenRecorder.webm", "url":"https://upload.wikimedia.org/wikipedia/commons/5/58/Tutorial-tamil-installation-SimpleScreenRecorder.webm", "author":"Info-farmer", "license":"CC0 1.0", "license_url":"https://creativecommons.org/publicdomain/zero/1.0/"},
+    {"id":"blender", "filename":"blender.webm", "page":"https://commons.wikimedia.org/wiki/File:Module_3_Lesson_1_Screencast_v2.webm", "url":"https://upload.wikimedia.org/wikipedia/commons/5/52/Module_3_Lesson_1_Screencast_v2.webm", "author":"Lorenzoh", "license":"CC BY-SA 4.0", "license_url":"https://creativecommons.org/licenses/by-sa/4.0/"},
+    {"id":"interface", "filename":"interface.webm", "page":"https://commons.wikimedia.org/wiki/File:VIDEO_1_Interface_Tutorial_Video_-_Introduction_%26_About.webm", "url":"https://upload.wikimedia.org/wikipedia/commons/f/f2/VIDEO_1_Interface_Tutorial_Video_-_Introduction_%26_About.webm", "author":"Panabo TG", "license":"CC BY-SA 4.0", "license_url":"https://creativecommons.org/licenses/by-sa/4.0/"}
+  ]
+}

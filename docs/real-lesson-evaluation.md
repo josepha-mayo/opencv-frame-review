@@ -1,5 +1,7 @@
 # Real lesson evaluation, 22–23 October 2026
 
+**Expanded audit, 23 October:** four more original tutorials were evaluated on twelve fixed, unaugmented excerpts. One candidate fell in useful Blender settings; protected-area review refused it. A separate natural camera-flicker recording produced candidates but failed both attempted recurrence-gated exports. No natural lesson repair is qualified. See [the full natural-footage audit](natural-lessons/README.md) for every outcome, hashes, source credits and reproducible scripts.
+
 Two independently published lessons were tested, using seconds 40–52 of their original files. This is a functional evaluation of selected excerpts, not a representative benchmark or a teacher-benefit study.
 
 | Original | Attribution and license | Input |

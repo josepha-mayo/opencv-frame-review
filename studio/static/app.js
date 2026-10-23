@@ -372,6 +372,7 @@
     let regions;
     try { regions = protectionValues(); }
     catch (error) { showError(ui.protectError,error.message); return; }
+    if (job.preparation && regions.length === 0) { showError(ui.protectError,"Save at least one teaching area before checking the plan. If this candidate is useful lesson content, leave the clip unchanged."); return; }
     const version = ++protectionVersion, id=job.id, candidateId=currentCandidate().id, prediction=job.prediction_sha256, mode=exportMode.value;
     protectionPlan=null; ui.reviewed.checked=false; busy=true; updateControls();
     ui.planSummary.hidden = true;
@@ -400,7 +401,7 @@
     const fingerprint = JSON.stringify([job.prediction_sha256, candidates]);
     ui.candidates.hidden = job.status !== "review" || candidates.length === 0;
     if (job.status === "review" && candidates.length === 0) {
-      ui.status.textContent = "No candidate region was returned for review. You can leave the clip unchanged.";
+      ui.status.textContent = "No rapid-change candidate in this excerpt. This detector can miss slower blinking, notifications and camera movement. It does not establish that the lesson is distraction-free. Leave it unchanged and download the lesson decision record.";
     }
     if (fingerprint === candidateFingerprint) return;
     candidateFingerprint = fingerprint;
@@ -605,7 +606,7 @@
     ui.results.hidden = !hasSummary && !hasArtifacts && !hasFrameReview;
     if (ui.results.hidden) return;
     byId("results-title").textContent = hasSummary || hasFrameReview ? "Encoded-result measurements" : "Retained lesson files";
-    byId("result-intro").textContent = hasSummary || hasFrameReview ? "These values come from the server’s result report. Read the scope and limitations alongside the measurements." : "No edit was encoded. Download the retained source files and preparation receipt.";
+    byId("result-intro").textContent = hasSummary || hasFrameReview ? "These values come from the server’s result report. Read the scope and limitations alongside the measurements." : "No edited export was accepted. Download the retained sources, preparation receipt and lesson decision record.";
     byId("boundary-review").hidden = !hasFrameReview;
     byId("result-report-details").hidden = !hasSummary;
     ui.highlights.replaceChildren();
@@ -700,9 +701,11 @@
     if (job.preparing_lesson) ui.status.textContent = "Preparing your selected lesson excerpt, then analyzing it. No edit has been approved.";
     preparationNotice.hidden = !job.preparation;
     preparationPreview.hidden = !job.preparation;
+    byId("preparation-fullsize").hidden = !job.preparation;
     if (job.preparation) {
-      preparationNotice.textContent = "Prepared excerpt: " + job.preparation.start_seconds + "–" + (job.preparation.start_seconds + job.preparation.duration_seconds) + " seconds. Picture and audio were converted once. All exact edit checks compare against this prepared clip, not the uploaded original. Keep both sources and the preparation receipt.";
+      preparationNotice.textContent = "Teaching detail check: " + job.preparation.source.width + " × " + job.preparation.source.height + " source → 640 × 360 review. Check the smallest label before editing; resizing can make teaching detail unreadable. Prepared excerpt: " + job.preparation.start_seconds + "–" + (job.preparation.start_seconds + job.preparation.duration_seconds) + " seconds. Picture and audio were converted once. All exact edit checks compare against this prepared clip, not the uploaded original. Keep both sources and the preparation receipt.";
       preparationPreview.src = "/api/jobs/" + encodeURIComponent(job.id) + "/intake/preview";
+      byId("preparation-fullsize").href = preparationPreview.src;
     }
     showError(ui.error, job.error ? pretty(job.error) : "");
     ui.retry.hidden = true;

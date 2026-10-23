@@ -1,0 +1,734 @@
+{
+  "schema": "natural-lesson-observations-v1",
+  "plan_sha256": "65d096e8fa6d5c6d5964a044aa8b2c2619ef37310f7e8080ded9c3d159778ecf",
+  "runtime_manifest_sha256": "54468669f8704929c1085a3bf2276cc6dde0ad31390b80de065c35e4c5c26aa6",
+  "source_check": {
+    "build": "lesson-rescue-teaching-contract-2026-10-23-v2",
+    "source_files_verified": 87,
+    "media_runtime_checked": false,
+    "media_qualification": "not established for this build"
+  },
+  "complete": true,
+  "records": [
+    {
+      "source_id": "wikilink",
+      "source_sha256": "043c7d193fe030f10c271f60b0f9845a7f0833a4fa6f152d1c0493a8ffc364cc",
+      "source_bytes": 16483357,
+      "start_seconds": 12,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 19.091,
+      "error": null,
+      "candidates": [],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "043c7d193fe030f10c271f60b0f9845a7f0833a4fa6f152d1c0493a8ffc364cc",
+        "prepared_sha256": "21286193ab5ae85de85c298265783ae4c47bc6ce23eebb5697400442b2854313",
+        "uploaded_bytes": 16483357,
+        "preview_sha256": "92d4b7f5edfc2e89058fb7a299f45b94dae4088220143476dce6dfd63e786a22",
+        "start_seconds": 12.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 2560,
+          "height": 1440,
+          "duration_seconds": 84.082,
+          "frame_rate": "60/1",
+          "audio_codec": "opus",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9996095217191855,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    },
+    {
+      "source_id": "wikilink",
+      "source_sha256": "043c7d193fe030f10c271f60b0f9845a7f0833a4fa6f152d1c0493a8ffc364cc",
+      "source_bytes": 16483357,
+      "start_seconds": 40,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 22.851,
+      "error": null,
+      "candidates": [],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "043c7d193fe030f10c271f60b0f9845a7f0833a4fa6f152d1c0493a8ffc364cc",
+        "prepared_sha256": "2b4aa36d80489b86772601b331c1be9ac2e47b53066b65b90c5912629a72635c",
+        "uploaded_bytes": 16483357,
+        "preview_sha256": "b5c2abf9ea16df299ff7d5405a6778e1ef1e743f1683b4a22f5fd815ccefa3cd",
+        "start_seconds": 40.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 2560,
+          "height": 1440,
+          "duration_seconds": 84.082,
+          "frame_rate": "60/1",
+          "audio_codec": "opus",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9921053287174408,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    },
+    {
+      "source_id": "wikilink",
+      "source_sha256": "043c7d193fe030f10c271f60b0f9845a7f0833a4fa6f152d1c0493a8ffc364cc",
+      "source_bytes": 16483357,
+      "start_seconds": 68,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 31.534,
+      "error": null,
+      "candidates": [],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "043c7d193fe030f10c271f60b0f9845a7f0833a4fa6f152d1c0493a8ffc364cc",
+        "prepared_sha256": "0498b0e8ae074ea1d1ab5851e32bbd9e61c9a50f5d7c4eb649a9296b23fadaf2",
+        "uploaded_bytes": 16483357,
+        "preview_sha256": "75dd00c974b6e64d1e98119138fa8ce73a2b5a85faed65133f1f3f240ba31c9e",
+        "start_seconds": 68.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 2560,
+          "height": 1440,
+          "duration_seconds": 84.082,
+          "frame_rate": "60/1",
+          "audio_codec": "opus",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9995205457180539,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    },
+    {
+      "source_id": "tamil-install",
+      "source_sha256": "8eae63bc0d5ed8c35c1c0efb7d5ae7588007423f0e9c2fa915dc7971e3675763",
+      "source_bytes": 34393948,
+      "start_seconds": 12,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 12.267,
+      "error": null,
+      "candidates": [],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "8eae63bc0d5ed8c35c1c0efb7d5ae7588007423f0e9c2fa915dc7971e3675763",
+        "prepared_sha256": "50528017cfd794f9e56f1b761edd1635ab8223d25b2133e96990189f104ffffc",
+        "uploaded_bytes": 34393948,
+        "preview_sha256": "f399a837c010efe42ef092b6fb041075ad594f074e5b38cf1c71bcd08ad70cca",
+        "start_seconds": 12.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp8",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 129.409,
+          "frame_rate": "30/1",
+          "audio_codec": "vorbis",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9898445393109856,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    },
+    {
+      "source_id": "tamil-install",
+      "source_sha256": "8eae63bc0d5ed8c35c1c0efb7d5ae7588007423f0e9c2fa915dc7971e3675763",
+      "source_bytes": 34393948,
+      "start_seconds": 40,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 14.051,
+      "error": null,
+      "candidates": [],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "8eae63bc0d5ed8c35c1c0efb7d5ae7588007423f0e9c2fa915dc7971e3675763",
+        "prepared_sha256": "8f4bd063939ee029bcd1a66c6f1cf13f4228f4243a532563f13b6d189ff5a87b",
+        "uploaded_bytes": 34393948,
+        "preview_sha256": "7059c513a271dd2d453d22479e9734595458e2277a3b0a98536bfc9b328b4dcb",
+        "start_seconds": 40.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp8",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 129.409,
+          "frame_rate": "30/1",
+          "audio_codec": "vorbis",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9890906062148421,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    },
+    {
+      "source_id": "tamil-install",
+      "source_sha256": "8eae63bc0d5ed8c35c1c0efb7d5ae7588007423f0e9c2fa915dc7971e3675763",
+      "source_bytes": 34393948,
+      "start_seconds": 68,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 24.329,
+      "error": null,
+      "candidates": [],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "8eae63bc0d5ed8c35c1c0efb7d5ae7588007423f0e9c2fa915dc7971e3675763",
+        "prepared_sha256": "683df17ddcec4eacd180e740308792d6c58ff77f482a4439c268584229762a45",
+        "uploaded_bytes": 34393948,
+        "preview_sha256": "3d7a55d50dc8f679dac789c82cb11d7bb4ddee9de1000f9634d008d7cc628861",
+        "start_seconds": 68.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp8",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 129.409,
+          "frame_rate": "30/1",
+          "audio_codec": "vorbis",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.991411800086313,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    },
+    {
+      "source_id": "blender",
+      "source_sha256": "708990275a7fa626d7003816790ecd6a2bc320ced9b82f21ed2bdf1c10a6f0e8",
+      "source_bytes": 9886273,
+      "start_seconds": 12,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 12.886,
+      "error": null,
+      "candidates": [],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "708990275a7fa626d7003816790ecd6a2bc320ced9b82f21ed2bdf1c10a6f0e8",
+        "prepared_sha256": "6fa9793e5437cbd4139eed353c7af5de7cb812d4c994abd9c6e39e234a23584a",
+        "uploaded_bytes": 9886273,
+        "preview_sha256": "84c8ecb7c67706fb31c703456ddf5e0f9cc20125a147e48ed2fcdae8f2c0a45e",
+        "start_seconds": 12.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp8",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 193.069,
+          "frame_rate": "30/1",
+          "audio_codec": "vorbis",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9970065403148224,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    },
+    {
+      "source_id": "blender",
+      "source_sha256": "708990275a7fa626d7003816790ecd6a2bc320ced9b82f21ed2bdf1c10a6f0e8",
+      "source_bytes": 9886273,
+      "start_seconds": 40,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 12.698,
+      "error": null,
+      "candidates": [],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "708990275a7fa626d7003816790ecd6a2bc320ced9b82f21ed2bdf1c10a6f0e8",
+        "prepared_sha256": "e539daf08a23bc972b88a0e1f399709cf0ce0329930429cad4cd5d1ecf3c8e79",
+        "uploaded_bytes": 9886273,
+        "preview_sha256": "46ada77e51dfd0c363c91722e444b599cc24348ed003cd57c4656d06c1ac4997",
+        "start_seconds": 40.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp8",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 193.069,
+          "frame_rate": "30/1",
+          "audio_codec": "vorbis",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9978428574387171,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    },
+    {
+      "source_id": "blender",
+      "source_sha256": "708990275a7fa626d7003816790ecd6a2bc320ced9b82f21ed2bdf1c10a6f0e8",
+      "source_bytes": 9886273,
+      "start_seconds": 68,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 15.226,
+      "error": null,
+      "candidates": [
+        {
+          "id": "0",
+          "bbox": [
+            605,
+            181,
+            22,
+            12
+          ],
+          "interval_frames": [
+            40,
+            315
+          ],
+          "interval_seconds": [
+            1.3333333333333333,
+            10.5
+          ],
+          "pixels": 114,
+          "preview_frame": 66,
+          "recipe_sha256": "2901f1a9ef9e2898296f5f952d64b06f5b96f11269388f095a75d412058b30c0",
+          "overlay_url": "/api/jobs/a29b4aee5c475e5fa89247d386b1e7c7/preview/0.png"
+        }
+      ],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "708990275a7fa626d7003816790ecd6a2bc320ced9b82f21ed2bdf1c10a6f0e8",
+        "prepared_sha256": "4ddc23138ddbba2db2fb371dfb2eabace3922af9fc6c6dc6e7435b8a3f4e7e43",
+        "uploaded_bytes": 9886273,
+        "preview_sha256": "298b06c6c707d14209f9293c33b4675ac08e54c96ab7ef4ec347fefa1b06ef48",
+        "start_seconds": 68.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp8",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 193.069,
+          "frame_rate": "30/1",
+          "audio_codec": "vorbis",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9996051407176448,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    },
+    {
+      "source_id": "interface",
+      "source_sha256": "6964e5473e2759fbdb393f15ce135c9ea986f96e7f582ce3cc53ae7a2c881420",
+      "source_bytes": 2930576,
+      "start_seconds": 12,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 9.156,
+      "error": null,
+      "candidates": [],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "6964e5473e2759fbdb393f15ce135c9ea986f96e7f582ce3cc53ae7a2c881420",
+        "prepared_sha256": "35e9073feb75cbfb533804983a7150b0c74dfeb78f6dc519573ba9d6ce76d8d2",
+        "uploaded_bytes": 2930576,
+        "preview_sha256": "f127308ae8c17dcda52f89a4110b31dbce6866e10dcc271165a1b6fdebfb5a2d",
+        "start_seconds": 12.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 90.12,
+          "frame_rate": "30/1",
+          "audio_codec": "opus",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9989581743769571,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    },
+    {
+      "source_id": "interface",
+      "source_sha256": "6964e5473e2759fbdb393f15ce135c9ea986f96e7f582ce3cc53ae7a2c881420",
+      "source_bytes": 2930576,
+      "start_seconds": 40,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 10.288,
+      "error": null,
+      "candidates": [],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "6964e5473e2759fbdb393f15ce135c9ea986f96e7f582ce3cc53ae7a2c881420",
+        "prepared_sha256": "b0629bebce8919a816bbfd6896b12a4cba27aa54eadfd0d802b7f4299cb042b6",
+        "uploaded_bytes": 2930576,
+        "preview_sha256": "34580b21be8726379686d1b08ea92d042cd84a144aed970b1d4b9b7647c03cbd",
+        "start_seconds": 40.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 90.12,
+          "frame_rate": "30/1",
+          "audio_codec": "opus",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.998141008946688,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    },
+    {
+      "source_id": "interface",
+      "source_sha256": "6964e5473e2759fbdb393f15ce135c9ea986f96e7f582ce3cc53ae7a2c881420",
+      "source_bytes": 2930576,
+      "start_seconds": 68,
+      "duration_seconds": 12,
+      "authored_defect": false,
+      "outcome": "declined",
+      "analysis_seconds": 9.392,
+      "error": null,
+      "candidates": [],
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "6964e5473e2759fbdb393f15ce135c9ea986f96e7f582ce3cc53ae7a2c881420",
+        "prepared_sha256": "8772176cac52c05ec26be57b180bd9681becdc81b3614a37b1c57d71639cae7d",
+        "uploaded_bytes": 2930576,
+        "preview_sha256": "d2366b24834906d16fea825f2095c198ca43ebb92be38965cb0303e6918d68fa",
+        "start_seconds": 68.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 90.12,
+          "frame_rate": "30/1",
+          "audio_codec": "opus",
+          "audio_channels": 2
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      },
+      "no_approval_after_preparation": true,
+      "uploaded_original_download_exact": true,
+      "audio_preparation": {
+        "max_normalized_correlation_within_10ms": 0.9968587798124883,
+        "lag_seconds": 0.0,
+        "meaning": "Lossy preparation check, not original audio identity or a listening test."
+      },
+      "decision": "declined without approval; semantic review is separate",
+      "prepared_download_exact": true,
+      "no_edited_artifact": true,
+      "decision_record_verified": true
+    }
+  ],
+  "scope": "Original, unaugmented excerpts. Candidate detection is not semantic distraction identification. No candidate is approved in this audit.",
+  "all_workflows_passed": true
+}

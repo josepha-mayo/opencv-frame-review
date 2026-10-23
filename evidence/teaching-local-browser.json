@@ -1,0 +1,309 @@
+{
+  "local_test_adapter": "http://127.0.0.1:8894",
+  "aws_execution": false,
+  "source_manifest_sha256": "54468669f8704929c1085a3bf2276cc6dde0ad31390b80de065c35e4c5c26aa6",
+  "blender": {
+    "source_sha256": "708990275a7fa626d7003816790ecd6a2bc320ced9b82f21ed2bdf1c10a6f0e8",
+    "start_seconds": 68,
+    "candidate_bbox": [
+      605,
+      181,
+      22,
+      12
+    ],
+    "empty_teaching_contract_blocked": true,
+    "protected_settings_overlap_refused": true,
+    "approval_disabled_after_refusal": true,
+    "reload_recovered": true,
+    "verified": true,
+    "original_download_exact": true,
+    "prepared_download_exact": true,
+    "decision": {
+      "schema": "lesson-decision-v1",
+      "job_id": "2c716a7af9f714c4e10dade98c1c71c8",
+      "created_utc": "2026-10-23T13:33:49.776564+00:00",
+      "decision": "declined",
+      "uploaded_sha256": "708990275a7fa626d7003816790ecd6a2bc320ced9b82f21ed2bdf1c10a6f0e8",
+      "prepared_sha256": "4ddc23138ddbba2db2fb371dfb2eabace3922af9fc6c6dc6e7435b8a3f4e7e43",
+      "excerpt": {
+        "start_seconds": 68.0,
+        "duration_seconds": 12.0,
+        "frames": 360
+      },
+      "source": {
+        "video_codec": "vp8",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 193.069,
+        "frame_rate": "30/1",
+        "audio_codec": "vorbis",
+        "audio_channels": 2
+      },
+      "prepared": {
+        "width": 640,
+        "height": 360,
+        "fps": 30,
+        "color": "limited BT.709 SDR",
+        "audio": "AAC-LC mono 48 kHz"
+      },
+      "candidates": [
+        {
+          "id": "0",
+          "bbox": [
+            605,
+            181,
+            22,
+            12
+          ],
+          "interval_frames": [
+            40,
+            315
+          ],
+          "pixels": 114
+        }
+      ],
+      "edited_export_accepted": false,
+      "failure_reason": null,
+      "interpretation": "Creator left the prepared clip unchanged; no edit was approved.",
+      "detector_scope": "At least 7 alternating luminance transitions in a rolling second on a connected support of at least 64 pixels. Candidates are not semantic distraction labels.",
+      "limitations": [
+        "No candidate does not mean distraction-free or safe.",
+        "Ordinary caret blinking, notifications and camera movement may be outside this detector.",
+        "Preparation changes picture/audio and may make small teaching labels unreadable.",
+        "Exact edit measurements reference the prepared clip, not the uploaded original.",
+        "This record does not establish learning benefit or accessibility compliance."
+      ]
+    }
+  },
+  "response375": {
+    "clientWidth": 360,
+    "documentWidth": 360,
+    "image": {
+      "height": 150.75,
+      "left": 46,
+      "top": 189.203125,
+      "width": 268
+    },
+    "protected": {
+      "height": 150.75,
+      "left": 79.5,
+      "top": 189.203125,
+      "width": 201
+    },
+    "viewport": 375
+  },
+  "response890": {
+    "clientWidth": 875,
+    "documentWidth": 875,
+    "image": {
+      "height": 180,
+      "left": 443.6875,
+      "top": -738.890625,
+      "width": 320
+    },
+    "protected": {
+      "height": 180,
+      "left": 483.6875,
+      "top": -738.890625,
+      "width": 240
+    },
+    "viewport": 890
+  },
+  "challenge": {
+    "scope": "Real teacher and human narration with explicitly added controlled corner defect",
+    "protected_area": [
+      80,
+      0,
+      480,
+      360
+    ],
+    "candidate_bbox": [
+      588,
+      260,
+      32,
+      32
+    ],
+    "interval_frames": [
+      30,
+      327
+    ],
+    "explicit_plan_and_approval": true,
+    "dom": {
+      "crops": [
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00029-original.png"
+        },
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00029-control.png"
+        },
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00029-edited.png"
+        },
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00030-original.png"
+        },
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00030-control.png"
+        },
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00030-edited.png"
+        },
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00327-original.png"
+        },
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00327-control.png"
+        },
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00327-edited.png"
+        },
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00328-original.png"
+        },
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00328-control.png"
+        },
+        {
+          "loaded": true,
+          "src": "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/review/boundary-f00328-edited.png"
+        }
+      ],
+      "preview": "http://127.0.0.1:8894/api/jobs/09f331101c26059e022d5eb2ee86dc0b/intake/preview",
+      "status": "Processing complete"
+    },
+    "job_id": "09f331101c26059e022d5eb2ee86dc0b",
+    "verified": true,
+    "reload_recovered": true,
+    "matches_report_and_independent_export": true,
+    "edited_sha256": "4b612c894c0ccb94787d51a085802ffe2fce32658bd53b8aeefc37b4252cacd0"
+  },
+  "natural_refusal": {
+    "scope": "Separate natural camera-flicker stress recording, not an active lesson; Commons 1080p transcode",
+    "source_sha256": "267b37c9ce88b0a5cb0e0306847cf698a14b1f5f4866ef6d51622570da26d530",
+    "start_seconds": 4,
+    "verified": true,
+    "recurrence_refused": true,
+    "only_retained_source_links_visible": true,
+    "edited_download_visible": false,
+    "reload_recovered": true,
+    "original_download_exact": true,
+    "prepared_download_exact": true,
+    "decision": {
+      "schema": "lesson-decision-v1",
+      "job_id": "4c00c4f398968f8ef714ad7f051005e7",
+      "created_utc": "2026-10-23T13:41:26.439204+00:00",
+      "decision": "failed",
+      "uploaded_sha256": "267b37c9ce88b0a5cb0e0306847cf698a14b1f5f4866ef6d51622570da26d530",
+      "prepared_sha256": "0dc3071d886a25cfd9ccb1ee02116c60bf30b5c77f68b27aad63bd0b86d66344",
+      "excerpt": {
+        "start_seconds": 4.0,
+        "duration_seconds": 12.0,
+        "frames": 360
+      },
+      "source": {
+        "video_codec": "vp9",
+        "width": 1920,
+        "height": 1080,
+        "duration_seconds": 32.119,
+        "frame_rate": "59/1",
+        "audio_codec": "opus",
+        "audio_channels": 2
+      },
+      "prepared": {
+        "width": 640,
+        "height": 360,
+        "fps": 30,
+        "color": "limited BT.709 SDR",
+        "audio": "AAC-LC mono 48 kHz"
+      },
+      "candidates": [
+        {
+          "id": "0",
+          "bbox": [
+            153,
+            86,
+            8,
+            105
+          ],
+          "interval_frames": [
+            2,
+            359
+          ],
+          "pixels": 658
+        },
+        {
+          "id": "1",
+          "bbox": [
+            301,
+            232,
+            13,
+            114
+          ],
+          "interval_frames": [
+            24,
+            359
+          ],
+          "pixels": 538
+        },
+        {
+          "id": "2",
+          "bbox": [
+            153,
+            235,
+            7,
+            113
+          ],
+          "interval_frames": [
+            1,
+            359
+          ],
+          "pixels": 594
+        }
+      ],
+      "edited_export_accepted": false,
+      "failure_reason": "Local retiming unsupported: No repeated selected-pixel cycle passes the bounded periodicity gate.",
+      "interpretation": "Processing failed; no edited export was accepted. Retained sources are available.",
+      "detector_scope": "At least 7 alternating luminance transitions in a rolling second on a connected support of at least 64 pixels. Candidates are not semantic distraction labels.",
+      "limitations": [
+        "No candidate does not mean distraction-free or safe.",
+        "Ordinary caret blinking, notifications and camera movement may be outside this detector.",
+        "Preparation changes picture/audio and may make small teaching labels unreadable.",
+        "Exact edit measurements reference the prepared clip, not the uploaded original.",
+        "This record does not establish learning benefit or accessibility compliance."
+      ]
+    }
+  },
+  "playback": {
+    "currentTime": 12,
+    "duration": 12,
+    "ended": true,
+    "error": null,
+    "paused": true,
+    "videoHeight": 360,
+    "videoWidth": 640
+  },
+  "backend_response_checks": {
+    "all_12_crop_response_hashes_exact": true,
+    "unowned_statuses": {
+      "/api/jobs/09f331101c26059e022d5eb2ee86dc0b": 404,
+      "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/intake/upload": 404,
+      "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/intake/prepared": 404,
+      "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/intake/receipt": 404,
+      "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/intake/decision": 404,
+      "/api/jobs/09f331101c26059e022d5eb2ee86dc0b/download/edited.mp4": 404
+    },
+    "source_manifest_sha256": "54468669f8704929c1085a3bf2276cc6dde0ad31390b80de065c35e4c5c26aa6",
+    "scope": "Actual local backend HTTP checks. Adapter hosting labels are not evidence of AWS execution."
+  }
+}

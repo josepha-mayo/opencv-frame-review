@@ -10,10 +10,58 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from prepare_worker import parameters, MAX_UPLOAD
-from lesson_intake import LessonManager
+from lesson_intake import LessonManager, backend
 
 
 class LessonIntake(unittest.TestCase):
+    def test_prepared_lesson_requires_a_teaching_contract_before_planning(self):
+        with tempfile.TemporaryDirectory() as directory:
+            manager = LessonManager(directory)
+            try:
+                with patch.object(manager, 'preparation', return_value={'prepared_sha256': 'test'}), patch.object(backend.Manager, 'plan', return_value={'accepted': True}) as base:
+                    for body in ({}, {'protected_regions': []}):
+                        with self.assertRaisesRegex(ValueError, 'at least one teaching area'):
+                            manager.plan('a' * 32, body)
+                    base.assert_not_called()
+                    body = {'protected_regions': [{'label': 'Equation', 'xywh': [0, 0, 100, 100]}]}
+                    self.assertEqual(manager.plan('a' * 32, body), {'accepted': True})
+                    base.assert_called_once_with('a' * 32, body)
+                with patch.object(manager, 'preparation', return_value=None), patch.object(backend.Manager, 'plan', return_value={'canonical': True}):
+                    self.assertEqual(manager.plan('a' * 32, {}), {'canonical': True})
+            finally:
+                manager.close()
+
+    def test_decision_record_distinguishes_no_edit_from_no_distraction(self):
+        with tempfile.TemporaryDirectory() as directory:
+            manager = LessonManager(directory)
+            try:
+                jid = 'a' * 32
+                manager.jobs[jid] = {'id': jid, 'status': 'review'}
+                manager.jobpath(jid).mkdir()
+                receipt = dict(uploaded_sha256='original', prepared_sha256='prepared', start_seconds=40,
+                               duration_seconds=12, frames=360, source={'width': 1920}, prepared={'width': 640})
+                job = dict(status='review', created_utc='test', candidates=[])
+                with patch.object(manager, 'view', return_value=job), patch.object(manager, 'preparation', return_value=receipt):
+                    with self.assertRaisesRegex(ValueError, 'Finish the review'):
+                        manager.decision_record(jid)
+                    job['status'] = 'declined'
+                    result = manager.decision_record(jid)
+                    self.assertFalse(result['edited_export_accepted'])
+                    self.assertEqual(result['uploaded_sha256'], 'original')
+                    self.assertEqual(result['prepared_sha256'], 'prepared')
+                    self.assertIn('No candidate does not mean distraction-free or safe.', result['limitations'])
+                    job.update(status='failed', error='No repeated cycle')
+                    result = manager.decision_record(jid)
+                    self.assertFalse(result['edited_export_accepted'])
+                    self.assertEqual(result['failure_reason'], 'No repeated cycle')
+                    self.assertIn('Retained sources', result['interpretation'])
+                    job['status'] = 'declined'
+                    (manager.jobpath(jid) / 'edited.mp4').write_bytes(b'unexpected')
+                    with self.assertRaisesRegex(ValueError, 'Unexpected edited artifact'):
+                        manager.decision_record(jid)
+            finally:
+                manager.close()
+
     def test_excerpt_parameters_cannot_escape_bounded_finite_grid(self):
         for start, length in [('nan', 12), (0, 'inf'), (-1, 12), (601, 12), (0, .9), (0, 12.1), (0, 1.01)]:
             with self.assertRaises(ValueError):

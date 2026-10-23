@@ -19,13 +19,13 @@
   <main id="main" class="page-width">
     <section class="intro" aria-labelledby="page-title">
       <p class="eyebrow">For the lesson you can no longer unflatten</p>
-      <h1 id="page-title">Keep the equation.<br>Slow the distraction.</h1>
-      <p class="intro-copy">When a repeating decoration competes with the lesson, changing the whole clip changes too much. Mark the text, diagram or counter that matters. Review a local 5× retime, then check the actual export. This page shows static images only.</p>
+      <h1 id="page-title">Rescue the lesson.<br>Keep what teaches.</h1>
+      <p class="intro-copy">A teacher has the recording, but the editable project is gone. Inspect a short excerpt, protect the explanation and narration, and decide whether a repeating visual detail should change. Every edit needs your reviewed plan. This page shows static images only.</p>
     </section>
 
     <section class="lesson-story" aria-label="How a lesson rescue works">
       <div class="lesson-example"><span class="eyebrow">Illustrative lesson frame</span><div class="lesson-equation">y = −2x + 1</div><span class="lesson-lock">01 · Keep the equation</span><span class="lesson-decoration">02 · Slow this corner</span></div>
-      <div class="lesson-promise"><h2>One small edit. A specific promise to check.</h2><p>With 5× local retiming, the important areas stay on the original timeline and supported audio is copied and checked. The decoration gets an explicit edit plan. A failed preservation check withholds the edited download.</p><p class="small muted">Try the authored math lesson: an equation, changing graph and step counter, plus neural narration. Real teacher benefit is still untested.</p></div>
+      <div class="lesson-promise"><h2>One small edit. A specific promise to check.</h2><p>With 5× local retiming, the important areas stay on the original timeline and supported audio is copied and checked. The decoration gets an explicit edit plan. A failed preservation check withholds the edited download.</p><p class="small muted">Keep useful motion: a changing counter, a blinking text cursor or a live demonstration may be part of the teaching. Vision finds rapid changes; you decide what they mean. Creator benefit remains unmeasured.</p></div>
     </section>
 
     <aside class="notice" aria-labelledby="limits-title">
@@ -96,6 +96,7 @@
           </ol>
           <p id="job-status" role="status" aria-live="polite"></p>
           <p id="preparation-notice" class="notice small" hidden></p>
+          <a id="preparation-fullsize" class="small" target="_blank" rel="noopener" hidden>Inspect prepared teaching detail at full size</a>
           <img id="preparation-preview" alt="First frame of the prepared lesson excerpt; static image" width="640" height="360" hidden>
           <div id="job-error" class="error-box" role="alert" hidden></div>
           <button id="retry-button" type="button" class="button secondary" hidden>Check connection again</button>
@@ -110,8 +111,8 @@
             <dl id="candidate-facts" class="candidate-facts"></dl>
             <p class="small muted">Choose the explicit action below. Only one candidate can be approved for this job. Retiming repeats one observed cycle and can discard subtle variations; it does not smooth motion. Encoding can change pixels outside the region. The legacy interval hold, if selected, reuses the first sample in each 10-frame block. It changes the animation and can cause an abrupt change when the original frames resume.</p>
             <fieldset class="protection-fields"><legend>Export strategy</legend><label for="export-mode">Choose an explicit edit</label><select id="export-mode"><option value="periodic-local-retime-v2" selected>Slow periodic decoration 5× · exact protected areas</option><option value="legacy">Legacy interval hold · H.264 QP18</option><option value="native-yuv-whole-clip-v9">Experimental whole-clip hold · lossless H.264 (experimental playback compatibility)</option></select><p id="export-mode-note" class="small muted">5× local retiming inside the detected interval only. Requires at least three repeated cycles, per-plane recurrence mean ≤2 and every sample difference ≤32 native codes. This bounded test can still admit small nonperiodic changes. Strong entry transitions remain; no safety claim.</p></fieldset>
-            <fieldset class="protection-fields"><legend>Protect up to four important areas (optional)</legend>
-              <p class="small muted">Mark a fixed rectangle containing text, a logo or a counter that should not change. Retiming checks it on every frame against the original source decode; older modes use the unchanged re-encode. This does not track moving content or guarantee preservation. An area overlapping the proposed edit is refused.</p>
+            <fieldset class="protection-fields"><legend>Protect up to four teaching areas</legend>
+              <p class="small muted">For a prepared lesson, save at least one teaching area: the explanation, labels, diagram or counter that must not change. Retiming checks it on every frame against the original source decode; older modes use the unchanged re-encode. This does not track moving content or guarantee preservation. An area overlapping the proposed edit is refused.</p>
               <button id="protect-pick" type="button" class="button secondary">Mark two corners on the static image</button>
               <p id="protect-status" class="small" role="status">No important area declared.</p>
               <p id="protected-count" class="small muted" aria-live="polite">0 of 4 areas saved</p>
@@ -128,7 +129,7 @@
               <div id="protect-error" class="error-box" role="alert" hidden></div>
             </fieldset>
             <aside id="plan-summary" class="plan-summary" role="status" hidden></aside>
-            <label class="review-confirmation" for="review-checkbox"><input id="review-checkbox" type="checkbox"><span>I reviewed this edit region, interval and any important area above, and want to generate this edit for comparison.</span></label>
+            <label class="review-confirmation" for="review-checkbox"><input id="review-checkbox" type="checkbox"><span>I checked that the prepared teaching detail is readable, this selected region is unwanted decoration, and the saved teaching areas cover what must stay unchanged. I want to generate this edit for comparison.</span></label>
             <button id="approve-button" type="button" class="button primary full-width" disabled>Generate comparison</button>
             <p class="small muted">Generating a comparison does not accept the output for use. Review the encoded measurements before choosing an output.</p>
           </div>

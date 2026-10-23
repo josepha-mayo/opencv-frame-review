@@ -60,6 +60,7 @@ try:
   assert hashlib.sha256(req('/api/jobs/'+jid+'/intake/upload',raw=True)).hexdigest()==hashlib.sha256(original.read_bytes()).hexdigest()
   assert req('/api/jobs/'+jid+'/intake/preview',raw=True).startswith(b'\x89PNG')
   assert not (folder/'approval.json').exists()
+  req('/api/jobs/'+jid+'/intake/decision',expect=409)
   if j['candidates']:
    candidate=j['candidates'][0];body={'candidate_id':candidate['id'],'prediction_sha256':j['prediction_sha256'],'export_mode':'periodic-local-retime-v2','protected_regions':[]}
    p=req('/api/jobs/'+jid+'/plan',body)
@@ -70,6 +71,11 @@ try:
    prepared=req('/api/jobs/'+jid+'/download/original.mp4',raw=True)
    assert hashlib.sha256(prepared).hexdigest()==j['preparation']['prepared_sha256']
    assert hashlib.sha256(req('/api/jobs/'+jid+'/intake/upload',raw=True)).hexdigest()==j['preparation']['uploaded_sha256']
+   decision=req('/api/jobs/'+jid+'/intake/decision')
+   assert decision['decision']=='declined' and not decision['edited_export_accepted']
+   assert decision['uploaded_sha256']==j['preparation']['uploaded_sha256']
+   assert decision['prepared_sha256']==j['preparation']['prepared_sha256']
+   assert 'No candidate does not mean distraction-free or safe.' in decision['limitations']
   record={'source':name,'source_sha256':hashlib.sha256(original.read_bytes()).hexdigest(),'preparation':j['preparation'],'candidates':len(j['candidates']),'outcome':final['status'],'error':final.get('error'),'audio_preparation_correlation':correlation,'uploaded_original_download_exact':True,'no_approval_from_preparation':True}
   records.append(record)
   if name in ('real-teacher.webm','ittt-present-simple.webm'):teacher=folder/'input.mp4'
@@ -82,6 +88,7 @@ try:
  jid=j['id'];folder=OUT/'jobs'/jid
  areas=[{'label':'Real teacher and whiteboard','xywh':[80,0,480,360]}]
  body={'candidate_id':candidate['id'],'prediction_sha256':j['prediction_sha256'],'export_mode':'periodic-local-retime-v2','protected_regions':areas}
+ req('/api/jobs/'+jid+'/plan',{**body,'protected_regions':[]},expect=400)
  plan=req('/api/jobs/'+jid+'/plan',body);req('/api/jobs/'+jid+'/approve',{**body,'approve':True,'recipe_sha256':plan['recipe_sha256']},202)
  final=poll(jid);print('challenge final',final['status'],final.get('error'),flush=True);assert final['status']=='complete',final
  output=OUT/'edited-real-teacher.mp4';output.write_bytes(req('/api/jobs/'+jid+'/download/edited.mp4',raw=True));report=req('/api/jobs/'+jid+'/download/report.json')

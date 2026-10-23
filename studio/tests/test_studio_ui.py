@@ -25,6 +25,17 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL
 
 
 class StudioEditor(unittest.TestCase):
+    def test_prepared_lesson_cannot_plan_without_a_teaching_area(self):
+        self.run_js('''
+api.prepare();
+api.setJob({id:'a'.repeat(32),status:'review',prediction_sha256:'b'.repeat(64),preparation:{source:{width:1920,height:1080}},candidates:[{id:'0',recipe_sha256:'c'.repeat(64),bbox:[260,50,40,40],interval_frames:[9,159]}]});
+let calls=0;context.fetch=async()=>{calls++;throw new Error('must not send an empty teaching contract');};
+await api.checkProtection();
+assert.equal(calls,0);assert.equal(api.plan(),null);
+assert.ok(ui.protectError.textContent.includes('at least one teaching area'));
+assert.equal(ui.approve.disabled,true);
+''')
+
     def test_retaining_source_does_not_claim_encoded_measurements(self):
         self.run_js('''
 api.setJob({status:'declined',artifacts:{'Prepared lesson clip':'/api/jobs/abc/download/original.mp4'}});api.renderResults();

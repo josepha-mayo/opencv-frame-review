@@ -1,0 +1,9 @@
+Malformed WebM refused without export
+real-teacher.webm review 0 None
+Traceback (most recent call last):
+  File "/app/studio/tests/integration_real_lessons.py", line 63, in <module>
+    req('/api/jobs/'+jid+'/intake/decision',expect=400)
+  File "/app/studio/tests/integration_real_lessons.py", line 21, in req
+    assert status==expect,(status,body[:500]);return body if raw else json.loads(body)
+           ^^^^^^^^^^^^^^
+AssertionError: (409, b'{"error": "Finish the review before downloading its decision record."}')

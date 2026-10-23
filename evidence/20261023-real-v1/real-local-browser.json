@@ -1,0 +1,159 @@
+{
+  "checked_utc": "2026-10-23T08:44:22.818745+00:00",
+  "environment": "Local Docker cloud-adapter test on loopback; not an AWS deployment",
+  "endpoint": "http://127.0.0.1:8890",
+  "source_manifest_sha256": "9d94ffbd280ad5575e615cfb40f8cb2662dc94cb11609295ce0d9b1abcb48f74",
+  "challenge_matches_independent_export": true,
+  "challenge_edited_sha256": "4b612c894c0ccb94787d51a085802ffe2fce32658bd53b8aeefc37b4252cacd0",
+  "wiki_original_download_exact": true,
+  "wiki_prepared_download_exact": true,
+  "wiki_preparation": {
+    "schema": "lesson-preparation-v1",
+    "uploaded_sha256": "a146328c73c9582a99b35006d3e9e9965881f6a50dd0f05621832911b271419d",
+    "prepared_sha256": "0655c9002faed783176fada41472516e470043126515cfda0c7fa3495e33542f",
+    "uploaded_bytes": 25655057,
+    "preview_sha256": "cdf36ce8465a862280edf4f09ff520124d0d554388409a0912c0cfd64787fe7f",
+    "start_seconds": 40.0,
+    "duration_seconds": 12.0,
+    "frames": 360,
+    "source": {
+      "video_codec": "av1",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 358.202,
+      "frame_rate": "60/1",
+      "audio_codec": "vorbis",
+      "audio_channels": 2
+    },
+    "prepared": {
+      "width": 640,
+      "height": 360,
+      "fps": 30,
+      "color": "limited BT.709 SDR",
+      "audio": "AAC-LC mono 48 kHz"
+    },
+    "changes": [
+      "Selected excerpt only",
+      "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+      "30 fps conversion and H.264 encoding",
+      "SDR conversion; untagged color interpreted by FFmpeg",
+      "Audio resampled/downmixed and AAC encoded once"
+    ],
+    "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+    "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+  },
+  "challenge_preparation": {
+    "schema": "lesson-preparation-v1",
+    "uploaded_sha256": "f1ca4f16ba75bad58bfcbedd1b569ace875a752c0c7a20191032f8cc75f093c6",
+    "prepared_sha256": "344d5567b37044029dcfd537b9025b9f9d1dd8de26c98ae58b7c9ef7b1651841",
+    "uploaded_bytes": 1449257,
+    "preview_sha256": "3129b423f06c34f1ef076d867a78436043eef4f1e9c7c1fe51ebf4c9f531d011",
+    "start_seconds": 0.0,
+    "duration_seconds": 12.0,
+    "frames": 360,
+    "source": {
+      "video_codec": "h264",
+      "width": 640,
+      "height": 360,
+      "duration_seconds": 12.0,
+      "frame_rate": "30/1",
+      "audio_codec": "aac",
+      "audio_channels": 1
+    },
+    "prepared": {
+      "width": 640,
+      "height": 360,
+      "fps": 30,
+      "color": "limited BT.709 SDR",
+      "audio": "AAC-LC mono 48 kHz"
+    },
+    "changes": [
+      "Selected excerpt only",
+      "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+      "30 fps conversion and H.264 encoding",
+      "SDR conversion; untagged color interpreted by FFmpeg",
+      "Audio resampled/downmixed and AAC encoded once"
+    ],
+    "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+    "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+  },
+  "browser": {
+    "environment": "Local Docker cloud-adapter test on loopback; not an AWS deployment",
+    "wiki_job": "09a152f31454e0e70518e6fcf0ff14db",
+    "challenge_job": "4e481b23e442f88d333ab0744a4d53b1",
+    "cropStatus": {
+      "count": 12,
+      "loaded": 12
+    },
+    "playback": {
+      "currentTime": 12,
+      "duration": 12,
+      "ended": true,
+      "error": null,
+      "readyState": 4,
+      "videoHeight": 360,
+      "videoWidth": 640
+    },
+    "wiki_no_edit_recovered": true,
+    "challenge_complete_recovered": true
+  },
+  "unowned_known_job_requests": {
+    "/api/jobs/09a152f31454e0e70518e6fcf0ff14db/intake/upload": 404,
+    "/api/jobs/09a152f31454e0e70518e6fcf0ff14db/intake/receipt": 404,
+    "/api/jobs/4e481b23e442f88d333ab0744a4d53b1/download/edited.mp4": 404,
+    "/api/jobs/4e481b23e442f88d333ab0744a4d53b1": 404
+  },
+  "live_aws_endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+  "live_aws_deployment": {
+    "build": "lesson-rescue-studio-2026-10-22-v5",
+    "source_files_verified": 80,
+    "source_manifest_sha256": "d00b0c7753e4bd8debcee5ba2186c06d32530333ba1d9320376c41faaf529966",
+    "hosting": "Amazon ECS",
+    "analysis": "OpenCV 5.0.0",
+    "media_runtime": "Pinned Debian FFmpeg 7.1.5",
+    "retention_hours": 24,
+    "workers": 1,
+    "max_jobs": 8
+  },
+  "new_real_intake_deployed_to_aws": false,
+  "aws_upgrade_status": "Awaiting existing AWS account credential refresh; user away from home. No new release deployment claimed.",
+  "responsive": {
+    "response890": {
+      "clientWidth": 875,
+      "documentWidth": 875,
+      "image": {
+        "height": 180,
+        "width": 320
+      },
+      "protected": {
+        "height": 180,
+        "left": 40,
+        "top": 0,
+        "width": 240
+      },
+      "viewport": 890
+    },
+    "response375": {
+      "clientWidth": 360,
+      "documentWidth": 360,
+      "image": {
+        "height": 150.75,
+        "width": 268
+      },
+      "protected": {
+        "height": 150.75,
+        "left": 33.5,
+        "top": 0,
+        "width": 201
+      },
+      "viewport": 375
+    }
+  },
+  "source_image_identity": {
+    "source_manifest_sha256": "9d94ffbd280ad5575e615cfb40f8cb2662dc94cb11609295ce0d9b1abcb48f74",
+    "local_image_config_sha256": "sha256:de87eb293b3cf2636e9fbb76099e7bed435ee54c5c6cf8ba8b92de7e40512a6b",
+    "local_image_manifest_index_sha256": "sha256:de87eb293b3cf2636e9fbb76099e7bed435ee54c5c6cf8ba8b92de7e40512a6b",
+    "qualified": "all ten stages plus the separately recorded local browser checks",
+    "aws_upgrade_status": "Awaiting existing AWS account credential refresh; user away from home. No new release deployment claimed."
+  }
+}

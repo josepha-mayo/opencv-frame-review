@@ -1,0 +1,9 @@
+{
+  "schema":"natural-camera-stress-case-v1",
+  "purpose":"Natural camera-recorded lecture-hall lamp flicker. Separate targeted stress case, NOT a lesson repair or an independent lesson source.",
+  "selection_frozen_before_download":true,
+  "selection":"Commons description explicitly identifies exposure-dependent flicker. Original 902.57 MiB exceeds product upload limit; use the public 1080p Commons transcode, record its hash, and do not call it the uploader original. The advertised 720p derivative returned 404; API listed the available 1080p derivative.",
+  "excerpt_policy":{"starts_seconds":[4,16],"duration_seconds":12},
+  "approval_policy":"Analyze only, inspect source context before any separate edit attempt.",
+  "sources":[{"id":"lecture-hall-light","filename":"lecture-hall-light-1080p.webm","page":"https://commons.wikimedia.org/wiki/File:Lichtflimmern,_je_nach_Belichtungszeit_20240823_C0997.webm","url":"https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b2/Lichtflimmern%2C_je_nach_Belichtungszeit_20240823_C0997.webm/Lichtflimmern%2C_je_nach_Belichtungszeit_20240823_C0997.webm.1080p.vp9.webm","author":"PantheraLeo1359531","license":"CC BY 4.0","license_url":"https://creativecommons.org/licenses/by/4.0/","input_is_commons_transcode":true}]
+}
