@@ -1,5 +1,5 @@
 {
-  "build": "lesson-rescue-studio-2026-10-22-v5",
+  "build": "lesson-rescue-real-intake-2026-10-22-v1",
   "complete": true,
   "stages": [
     {
@@ -41,6 +41,11 @@
       "stage": "lesson",
       "returncode": 0,
       "log": "lesson.log"
+    },
+    {
+      "stage": "real-lessons",
+      "returncode": 0,
+      "log": "real-lessons.log"
     },
     {
       "stage": "studio-ui",

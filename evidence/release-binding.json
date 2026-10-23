@@ -1,11 +1,19 @@
 {
-  "container_image_index": "sha256:64cc5f02e99464140539bec0fde686b808fcc27b1146939d13abf18c07415f5a",
-  "studio_tests_passed_linux": 56,
-  "source_manifest_sha256": "d00b0c7753e4bd8debcee5ba2186c06d32530333ba1d9320376c41faaf529966",
-  "build": "lesson-rescue-studio-2026-10-22-v5",
-  "csp_overlay_geometry_verified_in_brave": true,
-  "backend_tests": 137,
-  "studio_tests_passed_windows": 57,
-  "verification_stages": 9,
-  "studio_tests_skipped_linux": 1
+  "release": "real-lesson candidate, locally qualified, 23 October 2026",
+  "candidate": {
+    "source_manifest_sha256": "9d94ffbd280ad5575e615cfb40f8cb2662dc94cb11609295ce0d9b1abcb48f74",
+    "local_image_config_sha256": "sha256:de87eb293b3cf2636e9fbb76099e7bed435ee54c5c6cf8ba8b92de7e40512a6b",
+    "local_image_manifest_index_sha256": "sha256:de87eb293b3cf2636e9fbb76099e7bed435ee54c5c6cf8ba8b92de7e40512a6b",
+    "qualified": "all ten stages plus the separately recorded local browser checks",
+    "aws_upgrade_status": "Awaiting existing AWS account credential refresh; user away from home. No new release deployment claimed."
+  },
+  "live_aws_endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+  "live_aws_source_manifest_sha256": "d00b0c7753e4bd8debcee5ba2186c06d32530333ba1d9320376c41faaf529966",
+  "new_real_intake_deployed_to_aws": false,
+  "current_devpost_attachment": "Earlier authored-lesson ZIP; candidate ZIP is published separately in the linked release",
+  "remaining": [
+    "Refresh existing AWS credentials, deploy the qualified candidate and verify actual HTTPS real-video flows",
+    "Replace required Devpost ZIP when authenticated form control is available",
+    "Record final demo with Joseph real voice later, as requested"
+  ]
 }

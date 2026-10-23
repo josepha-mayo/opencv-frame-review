@@ -8,7 +8,7 @@ STUDIO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(STUDIO.parent / 'opencv-ready/candidate/app/tests'))
 from test_boundary_ui_static import HARNESS, NODE
 
-EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL, ui,
+EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL, ui, byId,
   protectionValues, resetProtection, invalidateProtection, drawProtection,
   saveProtectedRegion, removeProtectedRegion, checkProtection,
   plan() { return protectionPlan; },
@@ -25,6 +25,14 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL
 
 
 class StudioEditor(unittest.TestCase):
+    def test_retaining_source_does_not_claim_encoded_measurements(self):
+        self.run_js('''
+api.setJob({status:'declined',artifacts:{'Prepared lesson clip':'/api/jobs/abc/download/original.mp4'}});api.renderResults();
+assert.equal(ui.results.hidden,false);
+assert.equal(api.byId('results-title').textContent,'Retained lesson files');
+assert.equal(api.byId('boundary-review').hidden,true);
+assert.equal(api.byId('result-report-details').hidden,true);
+''')
     def test_empty_artifacts_do_not_show_results_before_encoding(self):
         self.run_js('''
 api.setJob({status:'review',artifacts:{}});api.renderResults();

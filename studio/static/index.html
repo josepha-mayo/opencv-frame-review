@@ -31,7 +31,7 @@
     <aside class="notice" aria-labelledby="limits-title">
       <span class="notice-icon" aria-hidden="true">i</span>
       <div><h2 id="limits-title">A tightly limited experiment</h2>
-        <p>Evidence is limited to tiny synthetic tests. Real-world creator benefit has not been established. An encoded result is a measured experiment, not a publishing recommendation.</p>
+        <p>Prepare a short excerpt from a real lesson, then inspect what the vision workflow proposes. Preparation changes the source format. Real-world creator benefit has not been established.</p>
       </div>
     </aside>
 
@@ -48,19 +48,30 @@
     <div class="workspace-grid">
       <section class="panel upload-panel" aria-labelledby="upload-title">
         <div class="section-heading"><span class="step-number" aria-hidden="true">01</span><h2 id="upload-title">Choose a clip</h2></div>
-        <p class="muted">The server validates the file against one of these two exact profiles before analysis.</p>
+        <p class="muted">Upload an MP4/MOV or WebM lesson, up to 64 MiB. Choose a 1–12 second excerpt to prepare for review.</p>
+        <p class="small muted">Prepared review profile (the uploaded original stays separate):</p>
         <dl class="profile-grid">
           <div><dt>Resolution</dt><dd>320 × 180 or 640 × 360</dd></div>
           <div><dt>Frame rate</dt><dd>30 fps</dd></div>
           <div><dt>Length</dt><dd>1.0–12.0 s in 0.1 s steps<br>at either resolution</dd></div>
-          <div><dt>Audio</dt><dd>Optional AAC-LC mono 48 kHz only: copy unchanged, verify packets, timing and decoded samples. No extra tracks or offsets; local retiming only. Canonical pinned FFmpeg mux metadata is required; many otherwise-playable AAC MP4 files are refused.</dd></div>
+          <div><dt>Audio</dt><dd>Prepared edit input: Optional AAC-LC mono 48 kHz only. Preparation accepts supported mono/stereo audio and converts it once to AAC-LC mono 48 kHz. The local edit copies that prepared track unchanged and verifies packets, timing and decoded samples. Canonical direct inputs may skip preparation.</dd></div>
         </dl>
         <p class="profile-detail">H.264 · YUV420 · limited-range BT.709<br>Maximum input: 4 MiB / 8 MiB by profile</p>
         <form id="upload-form">
-          <div id="cloud-samples" hidden><button id="demo-button" class="button primary full-width" type="button" disabled>Analyze the demo lesson on AWS</button><p class="small muted">An authored 12-second math lesson with neural narration. This analyzes the sample; an edit still needs your reviewed plan and consent.</p><a class="small" href="/api/samples/lesson.mp4" download>Download the original demo lesson</a></div>
+          <div id="cloud-samples" hidden>
+            <button id="real-demo-button" class="button primary full-width" type="button" disabled>Analyze a real classroom lesson</button>
+            <p class="small muted">A real teacher and whiteboard, with human narration. Prepares seconds 40–52. No artificial defect is added; no candidate can be the right outcome. <a href="/api/samples/real-teacher.webm" download>Download the original WebM</a>.</p>
+            <p class="small muted">TEFL &amp; TESOL Courses – ITTT, <a href="https://commons.wikimedia.org/wiki/File:English_Grammar_%E2%80%94_Present_Simple_%E2%80%94_Teaching_Ideas_%E2%80%94_1.webm" target="_blank" rel="noopener">Present Simple – Teaching Ideas</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>. Preparation changes format and extracts a segment. No endorsement.</p>
+            <button id="real-challenge-button" class="button secondary full-width" type="button" disabled>Try a controlled distraction on real footage</button>
+            <p class="small muted">Same real teacher and human narration, with a deliberately added flashing corner in the black margin. This tests edit preservation; the defect is authored. Protect the teacher and whiteboard: [80, 0, 480, 360].</p>
+            <button id="demo-button" class="button secondary full-width" type="button" disabled>Analyze the demo lesson on AWS</button><p class="small muted">The authored math regression sample has a deliberate looping decoration and neural narration. An edit still needs your reviewed plan and consent.</p><a class="small" href="/api/samples/lesson.mp4" download>Download the original demo lesson</a>
+          </div>
           <label class="file-label" for="clip-file">Local video file</label>
-          <input id="clip-file" name="clip" type="file" aria-describedby="file-help" required disabled>
-          <p id="file-help" class="small muted">Choose a file that matches the profile above. No video preview is played.</p>
+          <input id="clip-file" name="clip" type="file" accept="video/mp4,video/quicktime,video/webm,.mp4,.mov,.webm" aria-describedby="file-help" required disabled>
+          <p id="file-help" class="small muted">Use a lesson you own or have permission to process. No video preview is played.</p>
+          <label class="small"><input id="prepare-lesson" type="checkbox" checked> Prepare a real lesson excerpt</label>
+          <div class="protection-inputs"><label for="clip-start">Start (seconds)<input id="clip-start" type="number" min="0" max="600" step="0.1" value="0"></label><label for="clip-duration">Length (seconds)<input id="clip-duration" type="number" min="1" max="12" step="0.1" value="12"></label></div>
+          <p class="small muted">Preparation resizes and letterboxes to 640 × 360, converts to 30 fps and encodes mono AAC audio once. Exact edit checks then compare against this prepared clip. The uploaded original is retained separately. Uncheck preparation only for an already canonical clip (8 MiB maximum).</p>
           <p id="file-info" class="small file-info" aria-live="polite"></p>
           <button id="analyze-button" type="submit" class="button primary full-width" disabled>Analyze selected file <span aria-hidden="true">↗</span></button>
         </form>
@@ -84,6 +95,8 @@
             <li data-stage="analyze">Analyze</li><li data-stage="review">Review</li><li data-stage="encode">Encode</li><li data-stage="result">Result</li>
           </ol>
           <p id="job-status" role="status" aria-live="polite"></p>
+          <p id="preparation-notice" class="notice small" hidden></p>
+          <img id="preparation-preview" alt="First frame of the prepared lesson excerpt; static image" width="640" height="360" hidden>
           <div id="job-error" class="error-box" role="alert" hidden></div>
           <button id="retry-button" type="button" class="button secondary" hidden>Check connection again</button>
 
@@ -128,7 +141,7 @@
 
     <section id="results-panel" class="panel results-panel" aria-labelledby="results-title" hidden>
       <div class="section-heading"><span class="step-number" aria-hidden="true">03</span><h2 id="results-title">Encoded-result measurements</h2></div>
-      <p class="muted">These values come from the server’s result report. Read the scope and limitations alongside the measurements.</p>
+      <p id="result-intro" class="muted">These values come from the server’s result report. Read the scope and limitations alongside the measurements.</p>
       <section id="boundary-review" class="boundary-review" aria-labelledby="boundary-review-title">
         <h3 id="boundary-review-title">Static boundary comparison</h3>
         <p class="muted">Four fixed moments, with the original input, unchanged re-encode control and generated edit side by side. Every image is a static PNG crop of the same region. These selected moments do not show the full motion.</p>
@@ -148,7 +161,7 @@
       </section>
       <div id="result-highlights" class="result-highlights"></div>
       <div id="artifacts-area" hidden><h3>Download artifacts</h3><ul id="artifact-list" class="artifact-list"></ul></div>
-      <details class="report-details"><summary>Summary JSON</summary><pre id="raw-report"></pre></details>
+      <details id="result-report-details" class="report-details"><summary>Summary JSON</summary><pre id="raw-report"></pre></details>
     </section>
 
     <footer class="page-footer"><p>Human review stays in the loop.</p><p>Limited profile · Static inspection · Explicit approval</p></footer>

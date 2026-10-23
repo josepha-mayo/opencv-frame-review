@@ -1,0 +1,23 @@
+{
+  "license": "CC BY 3.0",
+  "date": "2013-04-09",
+  "original_youtube": "https://www.youtube.com/watch?v=jAcNhNCQKuo",
+  "title": "English Grammar \u2014 Present Simple \u2014 Teaching Ideas \u2014 1",
+  "source_sha256": "554bfe67be9ff2edd7a1c04283e9744a78c7b8ec171ebc569bb250144adc33aa",
+  "endorsement": "The original creator does not endorse this project.",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:English_Grammar_%E2%80%94_Present_Simple_%E2%80%94_Teaching_Ideas_%E2%80%94_1.webm",
+  "author": "TEFL & TESOL Courses - ITTT",
+  "modifications": "Original WebM unchanged in package. Demo prepares seconds 40\u201352, resizes/letterboxes and converts frame rate/audio. No artificial defect is added to this classroom demo.",
+  "controlled_challenge": {
+    "file": "real-teacher-challenge.mp4",
+    "license": "CC BY 3.0",
+    "changes": "Prepared seconds 40\u201352 from the original and deliberately added a flashing 32 \u00d7 32 square at [588,260] in the black letterbox. Real teacher/whiteboard/human narration; defect is authored. This is an augmented challenge, not a naturally defective lesson.",
+    "protected_area": [
+      80,
+      0,
+      480,
+      360
+    ]
+  }
+}

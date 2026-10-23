@@ -1,6 +1,8 @@
 Frame Review: Keep the Lesson
 Original project code and authored fixtures: Joseph Ayanda, with AI assistance.
-All rights remain with their respective authors. No third-party lesson footage is included.
-The lesson narration is neural speech; see studio/FIXTURE_PROVENANCE.md.
+All rights remain with their respective authors. Source-code rights are separate from media licenses.
+The authored math fixture uses neural speech; see studio/FIXTURE_PROVENANCE.md.
+The real classroom original and its disclosed augmented challenge include ITTT footage and human narration under CC BY 3.0. See studio/fixtures/REAL_LESSON_CREDIT.json and docs/real-lesson-evaluation.md for source links, attribution and modifications. No endorsement.
+The external Wikimedia screencast is not bundled; its hash-checking fetch script and separate attribution/license record are included.
 OpenCV, NumPy, FFmpeg, Python and container base images are obtained separately from upstream, under their own licenses.
 This source snapshot contains no dependency binaries, credentials, private evidence archive or agent handoffs.

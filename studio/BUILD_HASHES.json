@@ -1,6 +1,6 @@
 {
-  "build": "lesson-rescue-studio-2026-10-22-v5",
-  "scope": "Studio UI, unchanged media backend, tests and owned synthetic fixtures/goldens. Source integrity is separate from runtime, media and browser qualification.",
+  "build": "lesson-rescue-real-intake-2026-10-22-v1",
+  "scope": "Studio, bounded lesson preparation, unchanged preservation engine, tests and fixtures. Source identity is separate from runtime, media and browser qualification.",
   "frozen_backend_commit": "fd861d0ce2cd50bec741327975d95ff5488254e2",
   "files": {
     "opencv-ready/candidate/adversarial-input-v1/sparse-nonperiodic.mp4": "d694327f3b85648e30a1300a80da14b0a37ea0557f2f8724519e73171f2d56fb",
@@ -68,20 +68,27 @@
     "opencv-ready/opencv-recovery/rerun/p2/recipe.json": "c9460e93dd16f604fddac7b0960e6ab2682022fcc6f2da2666e1bacc3f06c0e1",
     "opencv-ready/opencv-recovery/rerun/workshop/input.mp4": "4d06a05ef684296874564cd17f85c076675ab578157220e1b585ed595ff02232",
     "opencv-ready/opencv-recovery/rerun/workshop/recipe.json": "b7149d3d874f313dfe37a1d3ab830d6f8b2749c21a29197f05de4a28169e9c6e",
-    "studio/build_manifest.py": "b0a3b1422a6075acde9ce8bddcc54952879eaa4e426a5bb0fd0e89a49cc30dd7",
-    "studio/cloud_server.py": "127060392c88b92f8e9e36487571912d98d0fde4e6b4b00db4cabc7112cceb64",
+    "studio/build_manifest.py": "9a54d9643d1604a3636aab1e50f4ed80344dee38a25fa57d308ab8eef539eb66",
+    "studio/cloud_server.py": "90552dbef69010d778423e66937ecdfc135a0009da123eaf32249c8450b0edfa",
     "studio/fixtures/lesson.mp4": "8de118ac269d8fb5b6124b3ab79f87ac240342bda0880db3d9bc0c84cb26d738",
     "studio/fixtures/make_lesson.py": "217f132a422511bc122ee56816b5ac35be170fac24da3364420db68306b096c9",
     "studio/fixtures/narration.mp3": "eb4ad468003a83ff5acaaec89480781d75194dc02eda5d137fb19f83af5ace77",
-    "studio/run.py": "a41903e0a42e0ff3cbf0306dff9a55b774f879a26c0ded1b4c48f88f04a64c3a",
+    "studio/fixtures/real-teacher-challenge.mp4": "f1ca4f16ba75bad58bfcbedd1b569ace875a752c0c7a20191032f8cc75f093c6",
+    "studio/fixtures/real-teacher.webm": "554bfe67be9ff2edd7a1c04283e9744a78c7b8ec171ebc569bb250144adc33aa",
+    "studio/fixtures/REAL_LESSON_CREDIT.json": "ee5feeb143d16a49507555e3bef464bf0e0da5bd3367a214a31d955d8d6813b4",
+    "studio/lesson_intake.py": "036dfdcd7a0afbeb974795f56b4736c7f712ea8a7b5b2e131fda09e4d10a4ba5",
+    "studio/prepare_worker.py": "36f10e6dadebd9ace2c22acf2b3860a871d286f21bf90dae55db6eec51d39107",
+    "studio/run.py": "c76279b5f57071c575b0b757a9171aa2f321dc1980c497f8b8db417e5f6a97db",
     "studio/runtime-requirements.lock": "f6ef34a38b624856efb1f2e8028c5a35fb2e1563c48fba94be6338ae715b2f62",
-    "studio/static/app.js": "d55d835779235334733bb22557961fc73e624f9da19aabe806683a356f6bd5ba",
-    "studio/static/index.html": "8f712be290b38e7efbbf6844f26e6aaf8a0cba3f3038c889c76449567246d412",
-    "studio/static/styles.css": "b79d85f1c6887cbef5565039a1d971974270b136d211294c95e78da530ac9ad2",
+    "studio/static/app.js": "c9ce0e0abfdf39c13e10c08c685c7525f30e0c3277b9aa6c7b42e564ae9dbeef",
+    "studio/static/index.html": "d011a5d0d78d5235d286f194bdd543736c1377fbfb4ca9eeee5d17e59cb71e08",
+    "studio/static/styles.css": "b2f4737fcc3f070c652086e78c86f37fa2a95f58796f0d5d25aac5e34f27b38b",
     "studio/tests/integration_lesson.py": "bb128af7f51448833e4371a29ce573a1089b36323fdd9ceb731e99cc5c0b26e6",
+    "studio/tests/integration_real_lessons.py": "8aa6b779f151b680ec3bde644d430fed6ef8bb8a11ba3a6c668d05e201d8d7e1",
     "studio/tests/test_cloud.py": "6b445662a978f45ac3633b0bbc2abdcb30b8e56fe5478cee61ae9915f6b5333d",
     "studio/tests/test_compatibility.py": "bf05ae18d50e6cc96e4e665e757e846746c455d96e25ee189ab4b1f1408ebae8",
     "studio/tests/test_launcher.py": "d3a0c0136cc6a466f0e3bebaec94db2b087f2b6cd61ff620ac710e23f987997c",
-    "studio/tests/test_studio_ui.py": "df470db8590ea80c0ecf6ef9d30b0e15e25993bd9849081d35313e5c353f019e"
+    "studio/tests/test_lesson_intake.py": "13b9abc691ff660e1f138933ad85b1aeb24cf94ed338420877df222ad5e81bb6",
+    "studio/tests/test_studio_ui.py": "03c5de68c2a21497767222b913be836c91a53b921bf9ccebab2730202b8ff317"
   }
 }

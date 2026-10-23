@@ -87,7 +87,11 @@
   const exportMode = byId("export-mode"), exportModeNote = byId("export-mode-note");
   const protectLabel = byId("protect-label"), protectList = byId("protected-list"), protectAdd = byId("protect-add");
   let savedRegions = [];
-  const MAX_BYTES = 8 * 1024 * 1024;
+  const MAX_BYTES = 64 * 1024 * 1024;
+  const prepareLesson = byId("prepare-lesson"), clipStart = byId("clip-start"), clipDuration = byId("clip-duration");
+  const preparationNotice = byId("preparation-notice"), preparationPreview = byId("preparation-preview");
+  const realDemo = byId("real-demo-button");
+  const realChallenge = byId("real-challenge-button");
   const ACTIVE = new Set(["queued", "analyzing", "exporting"]);
   const TERMINAL = new Set(["complete", "declined", "failed", "cancelled"]);
   const STATUS = {
@@ -192,6 +196,9 @@
     recovery.dismiss.disabled = recovering;
     ui.file.disabled = busy || !token || locked;
     ui.demo.disabled = busy || !token || locked;
+    realDemo.disabled = busy || !token || locked;
+    realChallenge.disabled = busy || !token || locked;
+    [prepareLesson, clipStart, clipDuration].forEach(node => { node.disabled = busy || locked; });
     const file = ui.file.files[0];
     ui.analyze.disabled = busy || !token || locked || !file || file.size === 0 || file.size > MAX_BYTES;
     ui.analyze.textContent = busy && !job ? "Sending file…" : "Analyze selected file ↗";
@@ -597,6 +604,10 @@
     renderBoundaryReview();
     ui.results.hidden = !hasSummary && !hasArtifacts && !hasFrameReview;
     if (ui.results.hidden) return;
+    byId("results-title").textContent = hasSummary || hasFrameReview ? "Encoded-result measurements" : "Retained lesson files";
+    byId("result-intro").textContent = hasSummary || hasFrameReview ? "These values come from the server’s result report. Read the scope and limitations alongside the measurements." : "No edit was encoded. Download the retained source files and preparation receipt.";
+    byId("boundary-review").hidden = !hasFrameReview;
+    byId("result-report-details").hidden = !hasSummary;
     ui.highlights.replaceChildren();
     ui.artifacts.replaceChildren();
     ui.raw.textContent = hasSummary ? JSON.stringify(summary, null, 2) : "No result report was returned by the server.";
@@ -607,7 +618,7 @@
       }
       if (summary.audio_preservation) {
         const a = summary.audio_preservation;
-        ui.highlights.append(resultCard("Original lesson audio", [["Track", a.present ? "AAC-LC mono / 48 kHz" : "No audio in source"], ["Verification", a.present ? "Original packet bytes, timestamps, skip metadata and decoded PCM unchanged" : "Silent source retained"]], "Canonical development mux only. No stretching, trimming, resampling or audio encoding. Playback compatibility remains unverified."));
+        ui.highlights.append(resultCard(job.preparation ? "Prepared lesson audio" : "Original lesson audio", [["Track", a.present ? "AAC-LC mono / 48 kHz" : "No audio in source"], ["Verification", a.present ? (job.preparation ? "Prepared packet bytes, timestamps, skip metadata and decoded PCM unchanged by this edit" : "Original packet bytes, timestamps, skip metadata and decoded PCM unchanged") : "Silent source retained"]], job.preparation ? "Preparation converted the narration once. This edit copies and checks that prepared audio; it is not packet-identical to the uploaded original." : "Canonical development mux only. No stretching, trimming, resampling or audio encoding. Playback compatibility remains unverified."));
       }
       const trigger = summary.selected_trigger_count;
       const outside = summary.outside_mask_error;
@@ -686,6 +697,13 @@
     ui.statusPill.textContent = status[0];
     ui.statusPill.dataset.state = job.status;
     ui.status.textContent = status[1];
+    if (job.preparing_lesson) ui.status.textContent = "Preparing your selected lesson excerpt, then analyzing it. No edit has been approved.";
+    preparationNotice.hidden = !job.preparation;
+    preparationPreview.hidden = !job.preparation;
+    if (job.preparation) {
+      preparationNotice.textContent = "Prepared excerpt: " + job.preparation.start_seconds + "–" + (job.preparation.start_seconds + job.preparation.duration_seconds) + " seconds. Picture and audio were converted once. All exact edit checks compare against this prepared clip, not the uploaded original. Keep both sources and the preparation receipt.";
+      preparationPreview.src = "/api/jobs/" + encodeURIComponent(job.id) + "/intake/preview";
+    }
     showError(ui.error, job.error ? pretty(job.error) : "");
     ui.retry.hidden = true;
     ui.reviewActions.hidden = job.status !== "review";
@@ -750,7 +768,7 @@
     showError(ui.connectionError, "");
     if (!file) ui.fileInfo.textContent = "";
     else if (!file.size) ui.fileInfo.textContent = "This file is empty. Choose a supported clip.";
-    else if (file.size > MAX_BYTES) ui.fileInfo.textContent = "This file exceeds the 8 MiB limit. Choose a smaller clip.";
+    else if (file.size > MAX_BYTES) ui.fileInfo.textContent = "This file exceeds the 64 MiB lesson limit. Choose a smaller file.";
     else ui.fileInfo.textContent = file.name + " · " + (file.size / 1024 / 1024).toFixed(2) + " MiB";
     updateControls();
   });
@@ -790,11 +808,28 @@
     if (ui.analyze.disabled) return;
     const file = ui.file.files[0];
     if (!file || !file.size || file.size > MAX_BYTES) return;
-    await startJob("/api/jobs", {headers: {"Content-Type":"application/octet-stream", "X-Filename":encodeURIComponent(file.name)}, body:file});
+    if (prepareLesson.checked) {
+      const start = Number(clipStart.value), duration = Number(clipDuration.value);
+      if (!Number.isFinite(start) || !Number.isFinite(duration) || start < 0 || start > 600 || duration < 1 || duration > 12 || Math.abs(duration * 10 - Math.round(duration * 10)) > .000001) {
+        showError(ui.connectionError, "Choose a start from 0 to 600 seconds and a length of 1–12 seconds in 0.1-second steps."); return;
+      }
+      await startJob("/api/imports", {headers: {"Content-Type":"application/octet-stream", "X-Filename":encodeURIComponent(file.name), "X-Clip-Start":String(start), "X-Clip-Duration":String(duration)}, body:file});
+    } else {
+      if (file.size > 8 * 1024 * 1024) { showError(ui.connectionError, "Canonical clips are limited to 8 MiB; enable preparation for a real lesson file."); return; }
+      await startJob("/api/jobs", {headers: {"Content-Type":"application/octet-stream", "X-Filename":encodeURIComponent(file.name)}, body:file});
+    }
   });
   ui.demo.addEventListener("click", async () => {
     if (ui.demo.disabled || ui.cloudSamples.hidden) return;
     await startJob("/api/demo", {headers: {"Content-Type":"application/json"}, body:"{}"});
+  });
+  realDemo.addEventListener("click", async () => {
+    if (realDemo.disabled || ui.cloudSamples.hidden) return;
+    await startJob("/api/real-demo", {headers: {"Content-Type":"application/json"}, body:"{}"});
+  });
+  realChallenge.addEventListener("click", async () => {
+    if (realChallenge.disabled || ui.cloudSamples.hidden) return;
+    await startJob("/api/real-challenge", {headers: {"Content-Type":"application/json"}, body:"{}"});
   });
 
   [ui.protectX,ui.protectY,ui.protectW,ui.protectH].forEach((field) => field.addEventListener("input",invalidateProtection));

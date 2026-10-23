@@ -1,56 +1,55 @@
 # Frame Review: Keep the Lesson
 
-**Keep the equation. Slow the distraction.**
+**Keep the teaching. Slow the distraction.** Upload a real lesson, choose a short excerpt, mark the content that must stay unchanged and inspect a measured local edit.
 
-A creator has a flattened lesson and no editable timeline. Frame Review proposes a local 5x slowdown for a repeated decoration, lets the creator name up to four areas that must remain unchanged, and checks the encoded comparison against the original source. Supported audio stays on its original timeline and is copied byte-for-byte at packet level.
+[Earlier AWS app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws) · [Devpost entry](https://devpost.com/software/countback-inspect-the-evidence)
 
-## Try the AWS judge demo
+**Release status, 23 October:** the real-lesson candidate passed all ten stages and actual local browser checks, including original 1080p AV1 upload, no-edit recovery, real-classroom export, twelve crops, downloads and playback. The public AWS endpoint still serves the earlier authored-lesson release. Deployment of this candidate and its final AWS browser checks await refresh of the existing account credentials. The instructions below describe the candidate you can reproduce locally; its new buttons are not yet on the public endpoint.
 
-Open https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws and choose **Analyze the demo lesson on AWS**. Analysis does not approve an edit. The public endpoint accepts only bundled synthetic fixtures. It runs the actual OpenCV/FFmpeg worker on ECS, with one replica and one serial worker.
+![Local candidate showing the real teacher and the protected whiteboard area](docs/real-teacher-local-review.jpg)
 
-For the authored math lesson, protect these four rectangles (x, y, width, height):
+Actual local candidate, not the current AWS deployment. ITTT classroom footage, CC BY 3.0; the challenge deliberately adds the corner artifact. No endorsement. [Technical report](docs/real-lessons-report.pdf) · [Real lesson provenance](docs/real-lesson-evaluation.md)
 
-| Area | Rectangle |
-|---|---|
-| Equation | 20, 55, 245, 52 |
-| Explanation | 20, 112, 255, 105 |
-| Graph | 300, 45, 330, 200 |
-| Step counter | 20, 250, 205, 36 |
+## Try real lesson intake
 
-Add each area, check the edit plan, then explicitly approve generation. Inspect all twelve original/control/edited boundary crops and the actual protected-content/audio measurements. Download the edited comparison, report and recipe. A refused preservation check withholds the edited download. Declining retains the original. Reloading reopens the same job without repeating its decision; unsubmitted areas and consent clear.
+Use an MP4/MOV or WebM you own or have permission to process, up to **64 MiB**. Keep **Prepare a real lesson excerpt** checked, choose its start (0–600 seconds) and length (1–12 seconds), then analyze. Source files may be up to 30 minutes; this release edits the selected segment and does not splice it back into a full lesson.
 
-## Reproduce on Linux
+Preparation accepts one 8-bit SDR video track, at most one mono/stereo audio track, and dimensions up to 3840×2160. Supported codec families are H.264, SDR HEVC, VP8, VP9, AV1 and MPEG-4, with supported AAC/Opus/Vorbis/MP3/PCM audio. Not every combination has been tested. HDR/high-bit-depth video, subtitles/data tracks, unsupported audio and out-of-bounds excerpts are refused.
 
-The Dockerfile uses Python 3.12.14, exact wheel hashes for OpenCV 5.0.0.93 and NumPy 2.3.5, and verifies the historical FFmpeg/ffprobe binary hashes.
+Preparation selects the excerpt, preserves its aspect ratio with letterboxing to 640×360, converts to 30 fps and encodes its audio once as AAC-LC mono/48 kHz. **This changes picture and audio.** The uploaded original is kept separately. Exact edit preservation is measured against the prepared clip, not against the original upload. Download both sources and the preparation receipt.
+
+The app also offers two distinct real-footage examples:
+
+- **Analyze a real classroom lesson:** the unmodified ITTT classroom original, preparing seconds 40–52. The tested excerpt produced no candidate; choosing Leave unchanged retains it without inventing an edit.
+- **Try a controlled distraction on real footage:** the same real teacher and human narration with an explicitly added flashing corner in the black margin. The defect is authored. Protect **[80, 0, 480, 360]**, name it Teacher and whiteboard, add the area, check the plan and explicitly approve. The exact gate covers all 360 frames of that region. Inspect twelve boundary crops and download the edited segment, sources, recipe, report and preparation receipt.
+
+The authored math clip remains a separate regression demonstration. No source selection or preparation approves an edit. A protected area overlapping the edit is refused. Changing an area invalidates consent and the old plan. Reload reopens a job without repeating its decision; unsaved areas and consent clear.
+
+## Evidence
+
+The classroom WebM is 854×480, 29.97 fps with stereo Vorbis; the separate Wikipedia screencast is 1920×1080, 60 fps, AV1 with stereo Vorbis. Both original excerpts reached review and were left unchanged. Their original-upload downloads matched the original SHA-256. Independent source-to-prepared narration correlation was 0.99604 and 0.99975, with zero best lag within a ±10 ms search; preparation remains lossy.
+
+The augmented classroom challenge passed independent native outside-sample/mapping checks, all 360 teacher/whiteboard RGB-frame comparisons, prepared-narration PCM comparison and all twelve response-PNG hashes. The editor additionally checks AAC packet/timing/skip metadata. This demonstrates functional preservation on real footage with an added test defect; it does not establish repair success on naturally defective lessons or teacher benefit.
+
+See `docs/real-lesson-evaluation.md`, `evidence/real-lessons.json`, `evidence/verification.json` and `evidence/release-binding.json` for source provenance, exact build identity, refusal cases and receipts. The core media algorithms and historical negative evidence remain unchanged. No historical hash gate has been weakened.
+
+## Reproduce
 
 ```sh
 docker build -t frame-review .
-docker run --rm --network none frame-review python studio/run.py --check
 docker run --name frame-review-check --network none frame-review python studio/run.py --verify /tmp/qualification
 docker cp frame-review-check:/tmp/qualification ./qualification
 docker run --rm --network host frame-review python studio/run.py --serve --port 8877
 ```
 
-Open http://127.0.0.1:8877 for the local Linux workflow. The host-network command assumes a Linux Docker host; Docker Desktop's default bridge does not expose a server bound to the container's loopback. The web demo requires no Docker installation or AWS account.
+Open http://127.0.0.1:8877 on the Linux Docker host. Media operation requires Linux resource/process controls. Keep processing on native Linux storage; a retained Windows-bind-mount failure hit an unchanged time limit. Copy receipts out after completion. Windows can run source/UI tests, not the media worker. Ten verification stages include the original numerical/refusal suites, authored math lesson, real-classroom preparation/augmented challenge, and studio checks. Exact dependencies and binary hashes are pinned by the Dockerfile and runtime lock.
 
-Keep media work on native Linux storage. An earlier Windows bind mount caused a real worker timeout; unchanged source and limits passed on native Linux storage. Copy verification receipts out after the run.
+The external two-source test is reproducible with `docs/fetch-real-evaluation-sources.py` and `python studio/tests/integration_real_lessons.py NEW_OUTPUT_DIRECTORY ORIGINALS_DIRECTORY` in the pinned image. The included classroom original and controlled challenge carry ITTT attribution and CC BY 3.0; external Wikimedia media has its separate attribution/license record. These media licenses do not license third-party dependencies or change the project's source-code notice.
 
-## Evidence and scope
+## AWS and limits
 
-`evidence/verification.json` records all nine stages: backend units, six duration exports, duration refusals, original audio, original silent media, audio refusals, pixel refusals, the authored math lesson, and studio UI/HTTP checks. The lesson was independently decoded to check all 360 frames of the equation, explanation, changing graph and changing counter. Native outside pixels, the retime mapping, video timestamps, audio packets and decoded audio, and all twelve PNG hashes passed. See `evidence/lesson.json` and `evidence/release-binding.json`.
+ECS/Fargate executes preparation, OpenCV analysis and FFmpeg export behind HTTPS; ECR holds the digest-pinned image and CloudWatch logs the service. See `docs/DEPLOYMENT.md`. The application runs as unprivileged UID 10001, has no AWS API permissions, processes media serially, restricts preparation protocols to file/pipe and applies process/time/memory/disk and upload caps. Job ownership uses Secure/HttpOnly/SameSite cookies plus host/origin/request-token checks. It retains at most eight jobs; uploads and results expire after 24 hours and task replacement can clear them sooner. Download results you need.
 
-Inputs remain narrowly bounded: 320x180 or 640x360, 30 fps, 1-12 seconds in 0.1-second steps, limited-range BT.709 H.264/YUV420, and optional canonical AAC-LC mono/48 kHz. Many normal playable videos are refused. Fixed rectangles do not track moving objects or establish readability. The retime repeats an observed cycle, can discard variations and can retain abrupt transitions. Adjacent decoded RGB pixels may change because of chroma interpolation; declared protected areas must remain exact. No creator-benefit, medical, safety or publishing-clearance claim is made.
+The frozen multimedia stack has known package-scan findings. Unprivileged operation and input restrictions are mitigations, not a security certification. Fixed rectangles do not track objects or establish readability. Repeating a cycle may discard small variations; entry/exit transitions remain for review. Adjacent unprotected RGB pixels can differ through chroma interpolation. No safety, medical or publishing-clearance claim is made.
 
-The frozen multimedia stack has package-scan findings. The public service checks exact bundled fixture hashes before spawning any media worker. It is an intentionally bounded demonstration, not an arbitrary public upload service. Jobs are isolated by Secure/HttpOnly/SameSite cookies, constrained by origin/host/request-token checks and resource caps, and expire after 24 hours; task replacement can clear them sooner.
-
-`studio/BUILD_HASHES.json` identifies the active runtime source. This curated snapshot excludes the historical private archive, its missing historical screenshot and old handoff notes. It does not repair or certify that archive. No historical manifest was weakened.
-
-The source and fixture were developed with AI assistance. The authored lesson uses disclosed neural narration. Real teacher trials, comparison with competent manual editing, ordinary-video intake and broader browser compatibility remain future evaluation.
-
-## Judge materials
-
-[2:46 demo video](https://www.youtube.com/watch?v=5oE3rA-aJNI) · [Technical report](docs/Frame-Review-Technical-Report.pdf) · [AWS deployment](docs/DEPLOYMENT.md) · [Release package](https://github.com/josepha-mayo/opencv-frame-review/releases/tag/opencv-2026-20261022)
-
-The final AWS lesson download matches both its report and the independent local export: `b6e8052ec70f60e2189f41645167111fb846e88092727bf91213e7621fcda68e`. The real browser completed analysis, four-area review, explicit generation, twelve loaded crops, downloads and completed-job recovery. A request without the owning session receives 404. See `evidence/aws-lesson.json`.
-
-A controlled whole-clip 5x baseline makes the 12-second lesson 60 seconds long and moves its first step-counter change from 3 to 15 seconds. The local edit keeps that change at 3 seconds and the clip at 12 seconds. Compared counter patches match the source bytes. This one synthetic fixture does not establish user benefit or manual-editor performance. To reproduce, run `evidence/check_global_baseline.py --source /path/to/lesson.mp4 --edited /path/to/downloaded-edited.mp4 --output-directory /tmp/baseline` inside the pinned image with native Linux storage. The script first encodes a whole-clip baseline, then independently decodes the compared patches. See `evidence/global-baseline.json`.
+Developed by Joseph Ayanda with AI assistance. The classroom and screencast use their original human narration. The older 2:46 demonstration uses disclosed neural narration and shows the earlier core workflow; a final demo with Joseph's real voice is deferred at his request. Real creator trials and competent manual-editor comparisons remain unperformed.

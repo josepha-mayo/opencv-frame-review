@@ -49,14 +49,11 @@ def make_studio_server(port, data_dir):
     sys.path.insert(0, str(APP))
     import server as backend
 
-    class StudioHandler(backend.Handler):
-        def file(self, path, attachment=None):
-            if path.parent == APP / 'static' and path.name in ('index.html', 'app.js', 'styles.css'):
-                path = ROOT / 'static' / path.name
-            return super().file(path, attachment)
-
+    from lesson_intake import LessonHandler, LessonManager
     server = backend.make_server(port, data_dir)
-    server.RequestHandlerClass = StudioHandler
+    server.manager.close()
+    server.manager = LessonManager(data_dir)
+    server.RequestHandlerClass = LessonHandler
     return server
 
 
@@ -79,6 +76,7 @@ def verify(output):
         ('audio-refusals', [str(tests / 'integration_audio_rejections.py'), str(output / 'audio-refusals')]),
         ('pixel-refusals', [str(tests / 'integration_rejections.py')]),
         ('lesson', [str(ROOT / 'tests/integration_lesson.py'), str(output / 'lesson')]),
+        ('real-lessons', [str(ROOT / 'tests/integration_real_lessons.py'), str(output / 'real-lessons')]),
         ('studio-ui', ['-m', 'unittest', 'discover', '-s', str(ROOT / 'tests')]),
     ]
     outcomes = []
@@ -93,7 +91,7 @@ def verify(output):
         (output / 'verification.json').write_text(json.dumps(receipt, indent=2) + '\n')
         if result.returncode:
             raise RuntimeError(name + ' failed; see ' + str(output / (name + '.log')))
-    print('Nine stages passed. Browser playback and creator benefit remain separate.', flush=True)
+    print('Ten stages passed, including real classroom intake and the disclosed augmented edit challenge. Browser checks and creator benefit remain separate.', flush=True)
 
 
 def main():

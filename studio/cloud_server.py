@@ -22,12 +22,13 @@ import urllib.parse
 import run as studio
 sys.path.insert(0, str(studio.APP))
 import server as backend
+from lesson_intake import LessonHandler, LessonManager
 
 COOKIE = 'creator_session'
 RETENTION_SECONDS = 24 * 60 * 60
 
 
-class CloudHandler(backend.Handler):
+class CloudHandler(LessonHandler):
     def end_headers(self):
         if getattr(self, 'new_session', False):
             secure = '; Secure' if self.server.secure_cookie else ''
@@ -89,6 +90,16 @@ class CloudHandler(backend.Handler):
                 return self.respond(200, self.server.deployment)
             except (ValueError, KeyError, PermissionError, OSError) as error:
                 return self.handle_error(error)
+        if path == '/api/samples/real-teacher.webm':
+            try:
+                self.secure()
+                sample = studio.ROOT / 'fixtures/real-teacher.webm'
+                expected = json.loads((studio.ROOT / 'fixtures/REAL_LESSON_CREDIT.json').read_text())['source_sha256']
+                if hashlib.sha256(sample.read_bytes()).hexdigest() != expected:
+                    raise ValueError('Licensed classroom sample changed')
+                return self.file(sample, 'ITTT-present-simple-CC-BY-3.0.webm')
+            except (ValueError, KeyError, PermissionError, OSError) as error:
+                return self.handle_error(error)
         if path in ('/api/samples/workshop.mp4', '/api/samples/lesson.mp4'):
             try:
                 self.secure()
@@ -107,16 +118,28 @@ class CloudHandler(backend.Handler):
     def respond(self, code, obj):
         if urllib.parse.urlsplit(self.path).path == '/api/profile' and code == 200:
             obj = dict(obj, transport={'kind': 'aws', 'retention_hours': 24,
-                                     'message': 'AWS judge demo: bundled synthetic clips only. Uploads are processed on AWS. Jobs expire after 24 hours and a service restart can clear them sooner. Download results you want to keep. Use the local build for other media.'})
+                                     'message': 'Lesson uploads are processed on AWS. Preparation converts your selected 1–12 second excerpt; exact edit checks compare against that prepared clip. Uploaded originals are retained separately. Jobs expire after 24 hours and a restart can clear them sooner. Download results you want to keep.'})
         return super().respond(code, obj)
 
     def do_POST(self):
         path = urllib.parse.urlsplit(self.path).path
-        if path not in ('/api/jobs', '/api/demo'):
+        if path not in ('/api/jobs', '/api/demo', '/api/real-demo', '/api/real-challenge'):
             return super().do_POST()
         try:
             self.secure(True)
             expire_jobs(self.server.manager)
+            if path in ('/api/real-demo', '/api/real-challenge'):
+                if self.body(1024) not in (b'{}', b''):
+                    raise ValueError('The classroom demonstration takes no custom parameters')
+                challenge = path == '/api/real-challenge'
+                sample = studio.ROOT / ('fixtures/real-teacher-challenge.mp4' if challenge else 'fixtures/real-teacher.webm')
+                data = sample.read_bytes()
+                credit = json.loads((studio.ROOT / 'fixtures/REAL_LESSON_CREDIT.json').read_text())
+                expected = self.server.sample_hashes.get(sample.relative_to(studio.REPO).as_posix()) if challenge else credit['source_sha256']
+                if hashlib.sha256(data).hexdigest() != expected:
+                    raise ValueError('Licensed classroom sample changed')
+                result = self.server.manager.create_import('ITTT-controlled-decoration-CC-BY-3.0.mp4' if challenge else 'ITTT-present-simple-CC-BY-3.0.webm', data, 0 if challenge else 40, 12, self.session)
+                return self.respond(202, result)
             if path == '/api/demo':
                 if self.body(1024) not in (b'{}', b''):
                     raise ValueError('The demonstration takes no custom parameters')
@@ -147,6 +170,7 @@ def expire_jobs(manager, now=None):
             path = manager.jobpath(jid).resolve()
             if path.parent != manager.root or not re.fullmatch('[0-9a-f]{32}', path.name):
                 raise RuntimeError('Unexpected expired-job path')
+            manager.remove_upload(jid)
             shutil.rmtree(path)
             del manager.jobs[jid]
 
@@ -154,7 +178,7 @@ def expire_jobs(manager, now=None):
 def make_cloud_server(hosts, port, data_dir, *, bind='0.0.0.0', secure_cookie=True):
     if not hosts or any(not re.fullmatch(r'[a-zA-Z0-9.-]+(?::[0-9]+)?', host) for host in hosts):
         raise ValueError('Explicit public host names are required')
-    manager = backend.Manager(data_dir)
+    manager = LessonManager(data_dir)
     try:
         server = http.server.ThreadingHTTPServer((bind, port), CloudHandler)
     except BaseException:
@@ -176,6 +200,7 @@ def make_cloud_server(hosts, port, data_dir, *, bind='0.0.0.0', secure_cookie=Tr
     server.rate_lock = threading.Lock()
     identity = studio.check_source()
     manifest = json.loads((studio.ROOT / 'BUILD_HASHES.json').read_text(encoding='utf-8'))
+    server.sample_hashes = manifest['files']
     server.allowed_sources = {digest for path, digest in manifest['files'].items()
                               if path.startswith(('opencv-ready/candidate/fixtures/', 'studio/fixtures/')) and path.endswith('.mp4')}
     server.deployment = {'build': identity['build'], 'source_files_verified': identity['source_files_verified'],

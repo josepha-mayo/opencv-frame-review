@@ -12,4 +12,5 @@ COPY opencv-ready /app/opencv-ready
 COPY studio /app/studio
 RUN python studio/run.py --check
 EXPOSE 8877
+USER 10001:10001
 CMD ["python", "studio/run.py", "--serve", "--port", "8877", "--data-dir", "/tmp/creator-jobs"]
