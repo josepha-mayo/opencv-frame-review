@@ -1,0 +1,82 @@
+{
+  "verified_utc": "2026-10-23T23:45:42.656398+00:00",
+  "build": "lesson-rescue-teaching-motion-2026-10-23-v6",
+  "runtime_manifest_sha256": "09c8bd44526e7d1e65ad40ea2528154b3f6489c7659510bb61b5fcd5fddfa123",
+  "runtime_files": 108,
+  "full_verification_stages": 14,
+  "backend_tests": 137,
+  "studio_tests": 91,
+  "studio_platform_skips": 1,
+  "selected_original_source_qualifications": 9,
+  "prior_sources_regressed": 7,
+  "newly_qualified_recordings": 2,
+  "new_sources_screened": 11,
+  "fixed_windows_screened": 33,
+  "teaching_content_refusals": 3,
+  "gentoo_progress": {
+    "changing_frame_pairs_during_hold_source": 32,
+    "changing_frame_pairs_during_hold_edited": 32,
+    "adjacent_pairs_during_hold": 112,
+    "all_360_ordered_teaching_rgb_frames_exact": true,
+    "scope": "Decoded changes include codec variation, not semantic progress updates."
+  },
+  "aws": {
+    "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+    "task_definition": "default-lesson-rescue:11",
+    "image_digest": "sha256:957fdbd114072441fdc1c948fa0dc02eb5011b0d0bf7757ce83908c8308ae45f",
+    "single_task_rollout_completed": true,
+    "actual_original_browser_cases": [
+      "gentoo-equery",
+      "libreoffice-writer",
+      "wiki-userpage"
+    ],
+    "boundary_pngs_actual_downloads": 36,
+    "teaching_pngs_actual_downloads": 60,
+    "three_actual_downloads_play_to_end": true,
+    "caption_cross_host_preparation_differs": true,
+    "actual_cloud_caption_pair_independently_qualified": true,
+    "scope": "Three original-upload AWS/browser repeats, not extra sources. Gentoo and Writer prepared/edit bytes match local qualification. Caption preparation differs in video packets/native samples across hosts; actual cloud pair independently passes all decoded/reference, teaching PNG, audio, timing and boundary checks. No universal cross-host preparation identity claim. Actual375/890 widths on caption; Gentoo/Writer observed1280. All three actual downloaded videos play to12seconds muted; no listening or human-benefit claim."
+  },
+  "published_source": {
+    "private_branch": "master",
+    "private_commit": "9f230b51ede12e16a55def6e5d216129afd1b3fd",
+    "public_branch": "main",
+    "public_commit": "57f35809a618b8c3b4411fd2db96f364d2344d27",
+    "public_repository": "https://github.com/josepha-mayo/opencv-frame-review",
+    "method": "Direct compare-and-swap updates of both default branches. Remote trees exactly match qualified local trees. No PR."
+  },
+  "source_package": {
+    "verified_utc": "2026-10-23T23:39:08.883855+00:00",
+    "filename": "Frame-Review-Teaching-Timeline-Judge-Package.zip",
+    "bytes": 26765513,
+    "sha256": "8cf59a4948d2c7343b49660b30da1865db543723f1025307b359c7bcf40bb71a",
+    "source_commit": "57f35809a618b8c3b4411fd2db96f364d2344d27",
+    "runtime_manifest_sha256": "09c8bd44526e7d1e65ad40ea2528154b3f6489c7659510bb61b5fcd5fddfa123",
+    "runtime_files_verified": 108,
+    "zip_integrity": true,
+    "handoff_paths": 0,
+    "report_sha256": "1082a1040f4f4dc9f0b432dc8965857d3ca69397afb2c88f0381174b1442d64f",
+    "purpose": "Exact source archive update of already submitted Devpost entry 1177390, not a new submission."
+  },
+  "devpost": {
+    "project_id": 1423567,
+    "submission_id": 1177390,
+    "url": "https://devpost.com/software/countback-inspect-the-evidence",
+    "status": "SUBMITTED",
+    "steps_done": "5/5",
+    "source_zip_filename_read_back": "Frame-Review-Teaching-Timeline-Judge-Package.zip",
+    "testing_instructions_exact": true,
+    "writeup_exact": true,
+    "public_current_evidence_image_loaded": true,
+    "thumbnail_photo": "5668210",
+    "thumbnail_card_ratio": "3:2",
+    "thumbnail_read_back_loaded": true,
+    "gallery_photos": 15,
+    "gallery_scope": "Historical images remain versioned. Current evidence is in the writeup image, thumbnail, report and exact source package. No photo deletion.",
+    "video_unchanged": "https://www.youtube.com/watch?v=5oE3rA-aJNI",
+    "real_voice": "Deferred by user. Existing2:46 video uses disclosed neural narration and shows an earlier workflow.",
+    "save_scope": "Updated existing submitted entry; did not resubmit or accept terms. Local ZIP bytes/hash verified and server filename read back. Server-side ZIP bytes were not independently downloaded or hashed. Final3:2 thumbnail is a presentation-only delivery update after the source archive commit; runtime/report/ZIP unchanged."
+  },
+  "automation": "No cron run created or resumed; existing OpenCV automation remains PAUSED.",
+  "limits": "Selected engineering evidence, not representative recall, independent creators or measured preference, time saving, attention, comprehension, accessibility, safety, adoption, judge score or independent rights clearance. All failures and exploratory selection remain explicit."
+}
