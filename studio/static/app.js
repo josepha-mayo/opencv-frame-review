@@ -90,6 +90,8 @@
   const STEADY_NOTE = "Keep one observed frame of the more contrasting blink state. Cut points are shortened to match the source; the first and last clip frames stay unchanged. Refuses worsening encoded boundary differences, changed teaching areas, timing/audio, native samples outside the box or RGB outside its influence area. Review both states and every cut.";
   const protectLabel = byId("protect-label"), protectList = byId("protected-list"), protectAdd = byId("protect-add");
   let savedRegions = [];
+  let editingRegionIndex = null;
+  const protectEditCancel = byId("protect-edit-cancel"), protectEditStatus = byId("protect-edit-status");
   const MAX_BYTES = 64 * 1024 * 1024;
   const prepareLesson = byId("prepare-lesson"), clipStart = byId("clip-start"), clipDuration = byId("clip-duration");
   const preparationNotice = byId("preparation-notice"), preparationPreview = byId("preparation-preview");
@@ -227,8 +229,8 @@
     const canReview = job?.status === "review" && !busy && !refreshInFlight && !stateUncertain;
     const steady = currentCandidate()?.action === "steady-detail-v1";
     const imagesReady = imageLoaded && (!steady || alternateLoaded);
-    ui.reviewed.disabled = !canReview || !imagesReady;
-    ui.approve.disabled = !canReview || !imageLoaded || !ui.reviewed.checked || !imagesReady || !currentCandidate()?.recipe_sha256 || !job?.prediction_sha256 || !protectionPlan;
+    ui.reviewed.disabled = !canReview || !imagesReady || editingRegionIndex !== null;
+    ui.approve.disabled = !canReview || !imageLoaded || !ui.reviewed.checked || !imagesReady || !currentCandidate()?.recipe_sha256 || !job?.prediction_sha256 || !protectionPlan || editingRegionIndex !== null;
     [ui.protectX, ui.protectY, ui.protectW, ui.protectH, ui.protectPick, ui.protectCheck, ui.protectClear, exportMode, protectLabel, protectAdd].forEach((node) => { node.disabled = !canReview || !imageLoaded; });
     exportMode.disabled = !canReview || !imageLoaded || steady;
     exportMode.querySelectorAll("option").forEach(option => { option.disabled = option.value === "steady-detail-v1" && !steady; });
@@ -236,7 +238,12 @@
     ui.cancel.disabled = busy || refreshInFlight || stateUncertain;
     ui.retry.disabled = busy || refreshInFlight;
     ui.candidateList.querySelectorAll("input").forEach((input) => { input.disabled = !canReview; });
-    protectList.querySelectorAll("button").forEach((button) => { button.disabled = !canReview || !imageLoaded; });
+    protectList.querySelectorAll("button").forEach((button) => { button.disabled = !canReview || !imageLoaded || editingRegionIndex !== null; });
+    ui.protectCheck.disabled = ui.protectCheck.disabled || editingRegionIndex !== null;
+    protectAdd.textContent = editingRegionIndex === null ? "Add area to list" : "Save area changes";
+    protectEditCancel.hidden = editingRegionIndex === null;
+    protectEditCancel.disabled = !canReview || !imageLoaded;
+    protectEditStatus.hidden = editingRegionIndex === null;
     const guide=matchedTeachingGuide();
     teachingGuide.hidden=!guide;
     byId("teaching-guide-focus").textContent=guide?.focus || "";
@@ -333,15 +340,21 @@
 
   function protectionValues() {
     const fields = [ui.protectX, ui.protectY, ui.protectW, ui.protectH];
-    if (fields.every((field) => field.value === "")) return savedRegions.map(r=>({label:r.label,xywh:[...r.xywh]}));
+    if (fields.every((field) => field.value === "")) {
+      if (editingRegionIndex !== null) throw new Error("Complete the area change, or cancel it.");
+      return savedRegions.map(r=>({label:r.label,xywh:[...r.xywh]}));
+    }
     const values = fields.map((field) => field.value === "" ? NaN : Number(field.value));
     if (!values.every(Number.isSafeInteger) || values[0] < 0 || values[1] < 0 || values[2] <= 0 || values[3] <= 0 ||
         values[0] + values[2] > ui.image.naturalWidth || values[1] + values[3] > ui.image.naturalHeight) {
       throw new Error("Enter one complete rectangle inside the image using integer pixels.");
     }
     const label=protectLabel.value.trim() || "Important area";
-    if (savedRegions.length>=4) throw new Error("Choose at most four protected areas.");
-    if (savedRegions.some(r=>r.label===label)) throw new Error("Use a distinct area name.");
+    if (editingRegionIndex === null && savedRegions.length>=4) throw new Error("Choose at most four protected areas.");
+    if (savedRegions.some((r,index)=>index!==editingRegionIndex && r.label===label)) throw new Error("Use a distinct area name.");
+    if (editingRegionIndex !== null) {
+      return savedRegions.map((r,index)=>index===editingRegionIndex ? {label,xywh:values} : {label:r.label,xywh:[...r.xywh]});
+    }
     return [...savedRegions, {label, xywh: values}];
   }
   function drawProtection() {
@@ -381,22 +394,52 @@
       remove.setAttribute("aria-label", "Remove protected area " + region.label);
       remove.addEventListener("click", () => removeProtectedRegion(index));
       row.append(remove);
+      const edit = element("button", "Edit", "text-button");
+      edit.type = "button";
+      edit.setAttribute("aria-label", "Edit protected area " + region.label);
+      edit.addEventListener("click", () => editProtectedRegion(index));
+      row.append(edit);
       protectList.append(row);
     });
   }
   function removeProtectedRegion(index) {
     if (busy || refreshInFlight || stateUncertain || !imageLoaded || job?.status !== "review") return;
+    if (editingRegionIndex !== null) return;
     if (!Number.isInteger(index) || index < 0 || index >= savedRegions.length) return;
     savedRegions.splice(index, 1);
     renderProtectedList();
     invalidateProtection();
   }
+  function editProtectedRegion(index) {
+    if (busy || refreshInFlight || stateUncertain || !imageLoaded || job?.status !== "review") return;
+    if (!Number.isInteger(index) || index < 0 || index >= savedRegions.length) return;
+    if (editingRegionIndex !== null || [ui.protectX,ui.protectY,ui.protectW,ui.protectH,protectLabel].some(field=>String(field.value || "").trim())) {
+      showError(ui.protectError,"Finish the current area or clear its input fields before editing another. Your draft has been kept.");
+      return;
+    }
+    editingRegionIndex = index;
+    const region = savedRegions[index];
+    protectLabel.value = region.label;
+    [ui.protectX,ui.protectY,ui.protectW,ui.protectH].forEach((field,i)=>{field.value=String(region.xywh[i]);});
+    picking=false;firstCorner=null;
+    protectEditStatus.textContent="Editing area "+(index+1)+": "+region.label+". The overlay previews your draft; the saved box stays intact until you save. Save or cancel before checking a new plan.";
+    invalidateProtection();
+  }
+  function cancelProtectedEdit() {
+    if (busy || refreshInFlight || stateUncertain || !imageLoaded || job?.status !== "review" || editingRegionIndex === null) return;
+    editingRegionIndex=null;
+    [ui.protectX,ui.protectY,ui.protectW,ui.protectH].forEach(field=>{field.value="";});
+    protectLabel.value="";picking=false;firstCorner=null;
+    renderProtectedList();invalidateProtection();
+    ui.protectStatus.textContent="Area change cancelled. Saved areas kept; check the plan again before generating.";
+  }
   function saveProtectedRegion() {
     if (protectAdd.disabled) return;
     try {
       const regions = protectionValues();
-      if (regions.length === savedRegions.length) throw new Error("Enter a new rectangle first.");
+      if (regions.length === savedRegions.length && editingRegionIndex === null) throw new Error("Enter a new rectangle first.");
       savedRegions = regions;
+      editingRegionIndex = null;
       renderProtectedList();
       [ui.protectX,ui.protectY,ui.protectW,ui.protectH].forEach(field => { field.value = ""; });
       protectLabel.value = "";
@@ -407,7 +450,7 @@
   function resetProtection(candidate) {
     protectionVersion += 1; picking = false; firstCorner = null;
     ui.reviewed.checked = false;
-    savedRegions=[];protectList.replaceChildren();protectLabel.value="";exportMode.value="periodic-local-retime-v2";exportModeNote.textContent="5× local retiming inside the detected interval only. Requires at least three repeated cycles, mean recurrence error ≤2 and every sample difference ≤32 native codes. Small nonperiodic changes can still pass. Strong entry transitions remain; playback unverified; no safety claim.";
+    savedRegions=[];editingRegionIndex=null;protectEditStatus.textContent="";protectList.replaceChildren();protectLabel.value="";exportMode.value="periodic-local-retime-v2";exportModeNote.textContent="5× local retiming inside the detected interval only. Requires at least three repeated cycles, mean recurrence error ≤2 and every sample difference ≤32 native codes. Small nonperiodic changes can still pass. Strong entry transitions remain; playback unverified; no safety claim.";
     if (candidate?.action === "steady-detail-v1") { exportMode.value = "steady-detail-v1"; exportModeNote.textContent = STEADY_NOTE; }
     [ui.protectX,ui.protectY,ui.protectW,ui.protectH].forEach((field) => { field.value = ""; });
     protectionPlan = null; // Every retiming mode needs a freshly checked, bound plan.
@@ -937,6 +980,7 @@
     exportModeNote.textContent=exportMode.value==="periodic-local-retime-v2" ? "5× local retiming inside the detected interval only. Requires at least three repeated cycles, mean recurrence error ≤2 and every sample difference ≤32 native codes. Small nonperiodic changes can still pass. Strong entry transitions remain; playback unverified; no safety claim." : exportMode.value==="legacy" ? "Legacy interval hold: a strong return transition and codec spill are possible." : "Experimental: freeze the selected decoration from frame zero for the ENTIRE clip. Lossless native YUV transport; adjacent RGB pixels can still change. Review all measurements. No safety claim.";
   });
   protectAdd.addEventListener("click",saveProtectedRegion);
+  protectEditCancel.addEventListener("click",cancelProtectedEdit);
   teachingGuideLoad.addEventListener("click",loadTeachingGuide);
   ui.protectCheck.addEventListener("click",checkProtection);
   ui.protectClear.addEventListener("click",() => { resetProtection(currentCandidate()); ui.reviewed.checked=false;updateControls(); });

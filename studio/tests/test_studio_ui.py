@@ -10,7 +10,7 @@ from test_boundary_ui_static import HARNESS, NODE
 
 EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL, ui, byId,
   protectionValues, resetProtection, invalidateProtection, drawProtection,
-  saveProtectedRegion, removeProtectedRegion, checkProtection, loadTeachingGuide,
+  saveProtectedRegion, removeProtectedRegion, editProtectedRegion, cancelProtectedEdit, checkProtection, loadTeachingGuide,
   plan() { return protectionPlan; },
   setBusy(value) { busy = value; updateControls(); },
   setUncertain(value) { stateUncertain = value; updateControls(); },
@@ -119,7 +119,9 @@ assert.ok(ui.protectOverlays.textContent.includes('4. Footer'));
 assert.equal(ui.protectOverlays.children[1].style.width,'37.5%');
 assert.equal(ui.protectOverlays.children[1].style.left,'3.125%');
 assert.equal(ui.protectOverlays.children[1].attributes.style,undefined);
-assert.equal(ids.get('protected-list').querySelectorAll('button').length,4);
+const actions=ids.get('protected-list').querySelectorAll('button');
+assert.equal(actions.filter(b=>b.attributes['aria-label'].startsWith('Remove protected area ')).length,4);
+assert.equal(actions.filter(b=>b.attributes['aria-label'].startsWith('Edit protected area ')).length,4);
 assert.equal(ui.reviewed.checked,false);assert.equal(ui.approve.disabled,true);
 ''')
 
@@ -129,6 +131,55 @@ save('Equation',[10,10,80,25]);ui.protectX.value='5';api.invalidateProtection();
 assert.equal(ui.protectOverlays.children.length,1);
 assert.throws(()=>api.protectionValues(),/complete rectangle/);
 assert.equal(api.plan(),null);assert.equal(ui.approve.disabled,true);
+''')
+
+    def test_edit_saved_area_at_four_area_limit_requires_save_and_fresh_plan(self):
+        self.run_js('''
+save('Equation',[10,10,80,25]);save('Diagram',[10,50,120,50]);
+save('Counter',[180,15,40,20]);save('Footer',[10,150,200,10]);
+respond();await api.checkProtection();ui.reviewed.checked=true;
+ids.get('protected-list').querySelectorAll('button').find(b=>b.attributes['aria-label']==='Edit protected area Equation').events.click();
+assert.equal(ids.get('protect-label').value,'Equation');assert.equal(ui.protectW.value,'80');
+assert.equal(ui.protectCheck.disabled,true);assert.equal(ui.reviewed.checked,false);
+assert.equal(ui.approve.disabled,true);assert.equal(api.plan(),null);
+let calls=0;context.fetch=async()=>{calls++;throw new Error('must save before plan');};
+await api.checkProtection();assert.equal(calls,0);
+draft('Equation detail',[10,10,90,25]);api.saveProtectedRegion();
+assert.equal(api.protectionValues().length,4);assert.equal(api.protectionValues()[0].label,'Equation detail');
+assert.equal(api.protectionValues()[0].xywh[2],90);assert.equal(api.protectionValues()[1].label,'Diagram');
+assert.equal(ids.get('protect-edit-cancel').hidden,true);assert.equal(ui.protectCheck.disabled,false);
+assert.equal(ui.reviewed.checked,false);assert.equal(ui.approve.disabled,true);assert.equal(api.plan(),null);
+respond();await api.checkProtection();assert.equal(api.plan().protected_regions[0].xywh[2],90);
+assert.equal(ui.reviewed.checked,false);assert.equal(ui.approve.disabled,true);
+''')
+
+    def test_invalid_area_edit_can_cancel_without_losing_saved_regions(self):
+        self.run_js('''
+save('Equation',[10,10,80,25]);save('Footer',[10,150,200,10]);
+const original=JSON.stringify(api.protectionValues());api.editProtectedRegion(0);
+draft('Broken',[10,10,999,25]);api.saveProtectedRegion();
+assert.ok(ui.protectError.textContent.includes('complete rectangle'));
+assert.ok(ids.get('protected-list').textContent.includes('Equation'));
+assert.equal(ids.get('protect-edit-cancel').hidden,false);
+api.removeProtectedRegion(1);assert.ok(ids.get('protected-list').textContent.includes('Footer'));
+api.cancelProtectedEdit();assert.equal(JSON.stringify(api.protectionValues()),original);
+assert.equal(ids.get('protect-label').value,'');assert.equal(ui.protectX.value,'');
+assert.equal(api.plan(),null);assert.equal(ui.reviewed.checked,false);assert.equal(ui.approve.disabled,true);
+''')
+
+    def test_edit_never_overwrites_a_draft_or_bypasses_locked_review(self):
+        self.run_js('''
+save('Equation',[10,10,80,25]);draft('New draft',[30,60,40,20]);
+api.editProtectedRegion(0);assert.equal(ids.get('protect-label').value,'New draft');
+assert.ok(ui.protectError.textContent.includes('draft has been kept'));
+ui.protectX.value='';ui.protectY.value='';ui.protectW.value='';ui.protectH.value='';ids.get('protect-label').value='';api.invalidateProtection();
+api.setBusy(true);api.editProtectedRegion(0);assert.equal(ids.get('protect-label').value,'');
+api.setBusy(false);api.setUncertain(true);api.editProtectedRegion(0);assert.equal(ids.get('protect-label').value,'');
+api.setUncertain(false);api.editProtectedRegion(-1);api.editProtectedRegion(9);assert.equal(ids.get('protect-label').value,'');
+api.editProtectedRegion(0);assert.equal(ids.get('protect-label').value,'Equation');
+api.resetProtection(null);api.setBusy(false);
+assert.equal(api.protectionValues().length,0);assert.equal(ids.get('protect-edit-cancel').hidden,true);
+assert.equal(ids.get('protect-label').value,'');assert.equal(ui.protectX.value,'');
 ''')
 
     def test_remove_one_area_keeps_others_and_invalidates_checked_plan(self):

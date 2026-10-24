@@ -1,0 +1,6 @@
+{
+  "windows_unit_attempt": {"tests":100,"errors":4,"skips":1,"causes":["Linux-only O_NOFOLLOW file controls unavailable in Windows","Linux-only resource module unavailable in Windows"],"correction":"Run unchanged tests inside pinned Linux image; no backend compatibility or security checks relaxed.","corrected_linux_result":{"tests":100,"errors":0,"skips":1}},
+  "runtime_restart": {"dedicated_socket":"Unavailable after WSL restart; attempted dedicated daemon startup failed waiting for containerd metadata open.","correction":"Use already-running Docker daemon. Its existing qualified v7 image manifest was verified as dbddf025b7caf643a3b8ba95014af7d84cb4a21fbe8dd1bdf3943824fd2455ca before using its pinned runtime.","unrelated_containers_modified":false,"images_pruned":false},
+  "browser_preview_initial_load":"First request arrived before server/startup forwarding was ready and refused. Verified local API source manifest before reloading; actual new UI then loaded in Brave.",
+  "scope":"Development/environment negatives, separate from final frozen-image qualification. No media rule changed. No demo video or voice recorded."
+}

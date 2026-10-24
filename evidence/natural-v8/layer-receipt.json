@@ -1,0 +1,16 @@
+{
+  "parent_image_id": "sha256:552365d73e74e02e9fcdfc6c140e523db4165fb09abb7840dfc133cc07a526f9",
+  "parent_runtime_manifest_sha256": "dbddf025b7caf643a3b8ba95014af7d84cb4a21fbe8dd1bdf3943824fd2455ca",
+  "source_manifest_sha256": "17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801",
+  "changed_runtime_files": [
+    "studio/static/app.js",
+    "studio/static/index.html",
+    "studio/static/styles.css",
+    "studio/tests/test_studio_ui.py"
+  ],
+  "source_files": 113,
+  "build_method": "Incremental app-only layer on exact qualified v7 runtime; original full Dockerfile remains primary independent reproduction path.",
+  "dependency_source_files_unchanged": true,
+  "image": "opencv-creator:area-editor-v8-layer",
+  "image_id": "sha256:e63044defb6db901f4de74829616694e29ae318a29b29e56c770e18d7d59a0f2"
+}

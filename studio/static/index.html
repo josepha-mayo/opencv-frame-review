@@ -110,6 +110,7 @@
 
           <div id="candidate-area" hidden>
             <fieldset id="candidate-options"><legend>Choose a candidate to inspect</legend><div id="candidate-list" class="candidate-list"></div></fieldset>
+            <aside id="teaching-guide" class="example-guide" hidden><h3>What this lesson needs to keep</h3><p id="teaching-guide-focus"></p><button id="teaching-guide-load" type="button" class="button secondary">Load this example's teaching areas</button><p class="small muted">Suggestions match these prepared bytes and this candidate. Inspect the highlighted areas and edit as needed. Loading them does not check the plan or approve an edit. Clear existing areas before loading suggestions.</p></aside>
             <figure class="overlay-figure">
               <div class="overlay-image-wrap"><div class="overlay-image-stage"><img id="candidate-overlay" alt="" width="320" height="180"><div id="protected-rectangle" class="protected-rectangle" hidden></div><div id="protected-overlays" aria-hidden="true"></div></div></div>
               <figcaption id="overlay-caption">Static candidate overlay</figcaption>
@@ -120,12 +121,12 @@
             <p class="small muted">Choose the explicit action below. Only one candidate can be approved for this job. Retiming repeats one observed cycle and can discard subtle variations; it does not smooth motion. Encoding can change pixels outside the region. The legacy interval hold, if selected, reuses the first sample in each 10-frame block. It changes the animation and can cause an abrupt change when the original frames resume.</p>
             <fieldset class="protection-fields"><legend>Export strategy</legend><label for="export-mode">Choose an explicit edit</label><select id="export-mode"><option value="steady-detail-v1">Keep the more contrasting state of a stationary blink</option><option value="periodic-local-retime-v2" selected>Slow periodic decoration 5× · exact protected areas</option><option value="legacy">Legacy interval hold · H.264 QP18</option><option value="native-yuv-whole-clip-v9">Experimental whole-clip hold · lossless H.264 (experimental playback compatibility)</option></select><p id="export-mode-note" class="small muted">5× local retiming inside the detected interval only. Requires at least three repeated cycles, per-plane recurrence mean ≤2 and every sample difference ≤32 native codes. This bounded test can still admit small nonperiodic changes. Strong entry transitions remain; no safety claim.</p></fieldset>
             <fieldset class="protection-fields"><legend>Protect up to four teaching areas</legend>
-              <aside id="teaching-guide" class="example-guide" hidden><h3>What this lesson needs to keep</h3><p id="teaching-guide-focus"></p><button id="teaching-guide-load" type="button" class="button secondary">Load this example's teaching areas</button><p class="small muted">Suggestions match these prepared bytes and this candidate. Inspect the highlighted areas and edit as needed. Loading them does not check the plan or approve an edit. Clear existing areas before loading suggestions.</p></aside>
               <p class="small muted">For a prepared lesson, save at least one teaching area: the explanation, labels, diagram or counter that must not change. Retiming checks it on every frame against the original source decode; older modes use the unchanged re-encode. This does not track moving content or guarantee preservation. An area overlapping the proposed edit is refused.</p>
               <button id="protect-pick" type="button" class="button secondary">Mark two corners on the static image</button>
               <p id="protect-status" class="small" role="status">No important area declared.</p>
               <p id="protected-count" class="small muted" aria-live="polite">0 of 4 areas saved</p>
               <ol id="protected-list" class="protected-area-list" aria-label="Saved important areas"></ol>
+              <p id="protect-edit-status" class="small notice" role="status" hidden></p>
               <div class="protection-coordinates">
                 <label for="protect-label" class="area-name">Area name<input id="protect-label" type="text" maxlength="40" placeholder="Equation, title, counter…"></label><label>X<input id="protect-x" type="number" min="0" step="1"></label>
                 <label>Y<input id="protect-y" type="number" min="0" step="1"></label>
@@ -134,6 +135,7 @@
               </div>
               <p class="small muted">Retiming requires zero decoded RGB error in every declared area and refuses the edited download on failure. With no declared area, every outside-mask pixel must be exact. Older modes retain their original mean≤0.1, p99≤1, max≤3 criteria. None of these checks establishes readability.</p>
               <button id="protect-check" type="button" class="button secondary">Check edit plan</button><button id="protect-add" type="button" class="button secondary">Add area to list</button>
+              <button id="protect-edit-cancel" type="button" class="text-button" hidden>Cancel area changes</button>
               <button id="protect-clear" type="button" class="text-button">Clear all areas</button>
               <div id="protect-error" class="error-box" role="alert" hidden></div>
             </fieldset>

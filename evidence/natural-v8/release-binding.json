@@ -1,0 +1,24 @@
+{
+  "build": "lesson-rescue-area-editor-2026-10-24-v8",
+  "source_manifest_sha256": "17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801",
+  "source_files": 113,
+  "checked_utc": "2026-10-24T11:08:49.164277+00:00",
+  "verification_stages": 14,
+  "backend_tests": 137,
+  "studio_tests": 100,
+  "studio_platform_skips": 1,
+  "changed_runtime_files": [
+    "studio/static/app.js",
+    "studio/static/index.html",
+    "studio/static/styles.css",
+    "studio/tests/test_studio_ui.py"
+  ],
+  "media_detector_teaching_cut_engines_unchanged": true,
+  "previous_nine_source_regressions": "v7 evidence; not rerun as nine v8 original-source jobs.",
+  "current_original_geometry_regression": "Gentoo: widen saved progress rectangle 360 to 364 pixels; first bounded preparation timeout retained; isolated same-limit retry passed.",
+  "new_original_sources": 0,
+  "edited_sha256": "366ee9f57dcc45a6f09abae3691ee7e77611f930904d5ea9200303ed9a38e085",
+  "playback_scope": "Exact edited bytes match the v7 Gentoo download already played to end in Brave. No new playback, demo recording or voice work for this update.",
+  "browser_scope": "Brave actual Edit/invalid/Cancel/Save/new-plan/export/report-rendered-summary/proof/reload checks. Actual report file written despite Browser Use download callback timeout. No five-artifact browser-download claim; complete HTTP artifact and independent decoded checks are separate.",
+  "runtime_build": "Incremental UI-only layer on exact qualified v7 image, with unchanged dependency pins and source/runtime checks. Independent full Dockerfile rebuild was cancelled during slow package installation; no failed dependency check was bypassed."
+}

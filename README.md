@@ -1,15 +1,17 @@
 # Frame Review: Keep the Lesson
 
+**Current app update (v8): edit a teaching box in place.** Choose **Edit** beside a saved area, adjust its name or rectangle, then **Save area changes** or **Cancel area changes**. The overlay previews the draft; invalid input keeps the saved box. Editing works at the four-area limit and requires a fresh plan and consent. Suggested areas now appear above the source image. No voice or submission-video change.
+
 **Keep the progress. Calm the blink.** A teacher has a finished recording and no editable project. During a reading pause, a caret blinks beside a changing package-download readout. Frame Review lets the editor hold that observed caret state while the teaching content keeps its original prepared timeline.
 
-[Try the AWS app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws) · [Devpost entry](https://devpost.com/software/countback-inspect-the-evidence) · [Current report](docs/real-lessons-report.pdf) · [Exact release evidence](evidence/natural-v7/release-binding.json)
+[Try the AWS app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws) · [Devpost entry](https://devpost.com/software/countback-inspect-the-evidence) · [Current report](docs/real-lessons-report.pdf) · [Exact release evidence](evidence/natural-v8/release-binding.json)
 
 ![Actual lesson and guided progress review](docs/natural-v7/Guided-Progress-Results.png)
 
 ## A judge can try the hard part first
 
 1. Select **Package progress · keep the readout moving**, then **Try the real package-progress lesson**. This is a prepared real Gentoo tutorial; no defect was added.
-2. Inspect both observed caret states. Choose **Load this example's teaching areas**: commands, live progress and lower margin appear on the static image. Inspect or edit them.
+2. Inspect both observed caret states. Choose **Load this example's teaching areas**: commands, live progress and lower margin appear on the static image. Use **Edit** beside an area to adjust it; save or cancel before checking the plan.
 3. **Check edit plan**, explicitly tick review, then **Generate comparison**. Loading suggestions never checks the plan or approves the edit.
 4. Inspect all four cut moments and expand the live-progress teaching proof. Download the report, recipe and actual comparison; play it before use.
 
@@ -23,7 +25,9 @@ This release makes that evidence usable: the strongest real case is the default;
 
 ## Evidence, with the selection boundary visible
 
-**14 verification stages passed**, including **137 backend tests** and **97 studio tests** (one platform skip). All **nine selected original-source HTTP regressions** passed again on this exact 113-file runtime. Every actual export was independently decoded; teaching PNG/receipt mutations were refused then restored. No detector, preservation tolerance or cut policy was relaxed. This release adds **zero new natural-source qualifications**: guided and cloud repeats are not extra cases.
+**Current v8: all 14 verification stages pass**, including **137 backend tests** and **100 studio tests** (one platform skip). An untouched Gentoo original also passes independent HTTP/native/RGB/audio/timing/cut/teaching-proof checks after widening its saved progress area from 360 to 364 pixels. The first preparation timeout is retained; the isolated retry passed with the same limit. The nine-source full original regression below is the **v7 baseline**, not nine new v8 jobs. Media, detector, teaching and cut engines are byte-identical; no tolerance or deadline was relaxed. There are zero new natural-source qualifications.
+
+**Selected-source baseline from v7:**
 
 | Real lesson | Whole 12-second source → edit activity | Inside hold |
 |---|---:|---:|
@@ -47,9 +51,9 @@ Build on Linux: `docker build -t frame-review .`
 
 Run a fresh gate: `docker run --name frame-review-v7-check --network none frame-review python studio/run.py --verify /tmp/qualification`, then `docker cp frame-review-v7-check:/tmp/qualification ./qualification`.
 
-Serve: `docker run --rm --network host frame-review python studio/run.py --serve --port 8877`; open http://127.0.0.1:8877 on that host. Windows source/UI tests alone do not qualify media. The exact runtime manifest is `dbddf025b7caf643a3b8ba95014af7d84cb4a21fbe8dd1bdf3943824fd2455ca` (113 files). Original-source harnesses and guide contracts are in [reproduction notes](docs/natural-v7/REPRODUCE.md); original URLs, authors, listed licenses and preparation adaptations remain in evidence/natural-v6/sources.json.
+Serve: `docker run --rm --network host frame-review python studio/run.py --serve --port 8877`; open http://127.0.0.1:8877 on that host. Windows source/UI tests alone do not qualify media. The exact runtime manifest is `17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801` (113 files). Original-source harnesses and guide contracts are in [reproduction notes](docs/natural-v8/REPRODUCE.md); original URLs, authors, listed licenses and preparation adaptations remain in evidence/natural-v6/sources.json.
 
-The local release-browser adapter is explicitly local evidence. Current AWS qualification is recorded separately in evidence/natural-v7/cloud-verified.json. The prior v6 cloud caption preparation differed across hosts and was independently checked against its actual cloud reference; no universal preparation-byte determinism claim is made.
+The local release-browser adapter is explicitly local evidence. Current AWS qualification is recorded separately in evidence/natural-v8/cloud-verified.json. The prior v6 cloud caption preparation differed across hosts and was independently checked against its actual cloud reference; no universal preparation-byte determinism claim is made.
 
 ## Impact hypothesis and practical limits
 

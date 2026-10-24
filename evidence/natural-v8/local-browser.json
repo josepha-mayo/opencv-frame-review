@@ -1,0 +1,152 @@
+{
+  "phase": "development",
+  "local_http_adapter": true,
+  "before": {
+    "areas": "1. Commands and package explanation \u00b7 [0, 0, 640, 326]\nRemove\nEdit\n2. Live package progress readout \u00b7 [0, 326, 360, 18]\nRemove\nEdit\n3. Terminal lower margin \u00b7 [0, 344, 640, 16]\nRemove\nEdit",
+    "consent": false,
+    "editStatus": "Editing area 2: Live package progress readout. The overlay previews your draft; the saved box stays intact until you save. Save or cancel before checking a new plan.",
+    "generateDisabled": true,
+    "label": "Live package progress readout",
+    "planDisabled": true,
+    "width": "360"
+  },
+  "invalid": {
+    "error": "Enter one complete rectangle inside the image using integer pixels.",
+    "planDisabled": true,
+    "saved": "1. Commands and package explanation \u00b7 [0, 0, 640, 326]\nRemove\nEdit\n2. Live package progress readout \u00b7 [0, 326, 360, 18]\nRemove\nEdit\n3. Terminal lower margin \u00b7 [0, 344, 640, 16]\nRemove\nEdit"
+  },
+  "cancelled": "1. Commands and package explanation \u00b7 [0, 0, 640, 326]\nRemove\nEdit\n2. Live package progress readout \u00b7 [0, 326, 360, 18]\nRemove\nEdit\n3. Terminal lower margin \u00b7 [0, 344, 640, 16]\nRemove\nEdit",
+  "saved": {
+    "areas": "1. Commands and package explanation \u00b7 [0, 0, 640, 326]\nRemove\nEdit\n2. Live package progress readout \u00b7 [0, 326, 364, 18]\nRemove\nEdit\n3. Terminal lower margin \u00b7 [0, 344, 640, 16]\nRemove\nEdit",
+    "consent": false,
+    "generateDisabled": true,
+    "planDisabled": false
+  },
+  "checked": {
+    "consent": false,
+    "generateDisabled": true,
+    "plan": "Keep the more contrasting observed state from frame 86 steady inside this interval. Detected region: [370, 330, 6, 10]; detected interval: frames 61\u2013173. Check every frame of: Commands and package explanation, Live package progress readout, Terminal lower margin. Generate only after reviewing this plan. The encoded result can still be refused."
+  },
+  "case": "gentoo",
+  "endpoint": "http://127.0.0.1:8894",
+  "prepared_preset": true,
+  "runtime_manifest_sha256": "17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801",
+  "job_id": "30f2ee3b465678fc48bde539e59ce96e",
+  "downloads": {
+    "Report JSON": "report (28).json"
+  },
+  "crops": [],
+  "teaching_pngs": [],
+  "browser_download_callback": "Callback timed out, but the actual report was written. Its source, adjusted approved region and rendered summary were checked against this job. Other browser artifacts are not claimed downloaded.",
+  "actual_report_matches_rendered_summary": true,
+  "report_download_mtime": "2026-10-24T10:48:55.886Z",
+  "approved_regions": [
+    {
+      "label": "Commands and package explanation",
+      "xywh": [
+        0,
+        0,
+        640,
+        326
+      ]
+    },
+    {
+      "label": "Live package progress readout",
+      "xywh": [
+        0,
+        326,
+        364,
+        18
+      ]
+    },
+    {
+      "label": "Terminal lower margin",
+      "xywh": [
+        0,
+        344,
+        640,
+        16
+      ]
+    }
+  ],
+  "result": {
+    "allProofsLoaded": true,
+    "boundary": "12 of 12 static PNG crops loaded. All four moments are shown below.",
+    "teachingImages": [
+      {
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "loaded": true,
+        "width": 640
+      }
+    ]
+  },
+  "recovered_after_reload": true,
+  "reload_report": "/api/jobs/30f2ee3b465678fc48bde539e59ce96e/download/report.json"
+}
