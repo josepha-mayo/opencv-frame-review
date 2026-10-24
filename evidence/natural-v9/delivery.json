@@ -1,0 +1,53 @@
+{
+  "verified_utc": "2026-10-24T16:18:52.072671+00:00",
+  "source_commits": {
+    "private": {
+      "commit": "512c1ef5b97204b3be17ac6c7270101bcacaa52f",
+      "tree": "9ccda73faf949d6caabd41b1f28944a03c1c1a8c",
+      "branch": "master",
+      "parent": "51a425886413ca9b8a6f201e57f63b6371181f02"
+    },
+    "public": {
+      "commit": "90cfe479e1918a95977105442f8e975b76aba910",
+      "tree": "acc45192b85b8e826a623c58be34e82d42c68826",
+      "branch": "main",
+      "parent": "d4410a5f053b418d49b3b63c136fbe3a08077e08"
+    }
+  },
+  "cloud": {
+    "task_definition": "default-lesson-rescue:14",
+    "image_digest": "sha256:af469ef97a9f6f7b30c652dce532fcacbfcf79dd3785e0328f8ee0f23e8905fa",
+    "runtime_manifest_sha256": "1f6930b7db9a44b866c4e2b6b25efcf9ca2dbfd2629354777aff03bad55b853c",
+    "rollout_completed": true
+  },
+  "devpost": {
+    "project_id": 1423567,
+    "submission_id": 1177390,
+    "submitted": true,
+    "filename": "Frame-Review-Real-Ogg-Lessons-Judge-Package.zip",
+    "current_filename_visible": true,
+    "testing_exact": true,
+    "description_exact": true,
+    "video_url": "https://www.youtube.com/watch?v=5oE3rA-aJNI",
+    "gallery_count": 15,
+    "repository": "https://github.com/josepha-mayo/opencv-frame-review",
+    "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+    "source_commit": "90cfe479e1918a95977105442f8e975b76aba910",
+    "server_zip_bytes_independently_downloaded": false
+  },
+  "package": {
+    "verified_utc": "2026-10-24T16:14:47.166328+00:00",
+    "filename": "Frame-Review-Real-Ogg-Lessons-Judge-Package.zip",
+    "bytes": 30056014,
+    "sha256": "d460634eb296974b393acffbaeeeda83765cb49eaa2339aa732bfaca94d49e74",
+    "source_commit": "90cfe479e1918a95977105442f8e975b76aba910",
+    "runtime_manifest_sha256": "1f6930b7db9a44b866c4e2b6b25efcf9ca2dbfd2629354777aff03bad55b853c",
+    "runtime_files_verified": 113,
+    "zip_integrity": true,
+    "handoff_paths": 0,
+    "report_sha256": "679218406f893c2045fe377456afe6e17b3c2e461fe480c4238c3b82c20befb0"
+  },
+  "cron": "Existing OpenCV automation remains PAUSED; no automation created or resumed.",
+  "video": "Existing 5oE3rA-aJNI URL unchanged. No playback, recording, narration, or submission video edit. Wait for user audio.",
+  "limits": "No v9 actual browser artifact download or fresh mobile-width check claimed; five cross-host last-digit summary differences and first Joomla preparation timeout retained."
+}

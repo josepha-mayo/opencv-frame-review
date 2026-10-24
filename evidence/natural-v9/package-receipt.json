@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-10-24T16:14:47.166328+00:00",
+  "filename": "Frame-Review-Real-Ogg-Lessons-Judge-Package.zip",
+  "bytes": 30056014,
+  "sha256": "d460634eb296974b393acffbaeeeda83765cb49eaa2339aa732bfaca94d49e74",
+  "source_commit": "90cfe479e1918a95977105442f8e975b76aba910",
+  "runtime_manifest_sha256": "1f6930b7db9a44b866c4e2b6b25efcf9ca2dbfd2629354777aff03bad55b853c",
+  "runtime_files_verified": 113,
+  "zip_integrity": true,
+  "handoff_paths": 0,
+  "report_sha256": "679218406f893c2045fe377456afe6e17b3c2e461fe480c4238c3b82c20befb0"
+}
