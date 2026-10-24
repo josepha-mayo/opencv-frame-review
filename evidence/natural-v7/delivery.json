@@ -1,0 +1,54 @@
+{
+  "verified_utc": "2026-10-24T10:32:30.395242+00:00",
+  "complete": true,
+  "source_commits": {
+    "private": "88a55678153fa2979edc74033f9fa28984408bed",
+    "public": "d1a291b45044d2363de6400fbbf47dd6f45e3769"
+  },
+  "source_archive": {
+    "verified_utc": "2026-10-24T10:23:26.882091+00:00",
+    "filename": "Frame-Review-Guided-Progress-Judge-Package.zip",
+    "bytes": 28036015,
+    "sha256": "9178a43cceb14bae607ded2b9b9ee1a0d58d0e6b0f99a21c2a2b96cae48c36aa",
+    "source_commit": "d1a291b45044d2363de6400fbbf47dd6f45e3769",
+    "runtime_manifest_sha256": "dbddf025b7caf643a3b8ba95014af7d84cb4a21fbe8dd1bdf3943824fd2455ca",
+    "runtime_files_verified": 113,
+    "zip_integrity": true,
+    "handoff_paths": 0,
+    "report_sha256": "da3ff22406c878cf58ab6eea5e1c85c5572e99576661aa92b65ddfe4579181a2",
+    "purpose": "Exact source archive update of already submitted Devpost entry 1177390, not a new submission."
+  },
+  "aws": {
+    "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+    "task_definition": "default-lesson-rescue:12",
+    "image_digest": "sha256:552365d73e74e02e9fcdfc6c140e523db4165fb09abb7840dfc133cc07a526f9",
+    "source_manifest_sha256": "dbddf025b7caf643a3b8ba95014af7d84cb4a21fbe8dd1bdf3943824fd2455ca",
+    "single_task_rollout_completed": true
+  },
+  "devpost": {
+    "project_id": 1423567,
+    "submission_id": 1177390,
+    "submitted": true,
+    "source_file_widget": "* Upload a File\n\nUpload a file as part of your submission - e.g., zip, pdf, word, apk, etc. To upload multiple files, put them in a zip file and upload the zip file. Limit: 35 MB.\n\nCurrent File: Frame-Review-Guided-Progress-Judge-Package.zip",
+    "testing_exact": true,
+    "public_image_loaded": true,
+    "server_archive_bytes_independently_downloaded": false,
+    "testing_normalization": "Server removed one trailing newline; all instruction content exact after trimming both strings.",
+    "description_exact": true,
+    "video": [
+      "https://www.youtube.com/watch?v=5oE3rA-aJNI"
+    ],
+    "gallery_images": 15,
+    "thumbnail": [
+      {
+        "height": 222,
+        "loaded": true,
+        "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/005/670/659/datas/medium.png",
+        "width": 333
+      }
+    ]
+  },
+  "video_work": "Existing video and voice unchanged. Exported lesson clips played only for compatibility checks. Real voice deferred.",
+  "automation": "Existing OpenCV heartbeat remains PAUSED; no cron or PR created.",
+  "scope": "Delivery receipt after the exact source commit; the uploaded source ZIP remains pinned to that earlier source tree. Server ZIP filename and testing fields read back; server ZIP bytes were not independently downloaded."
+}
