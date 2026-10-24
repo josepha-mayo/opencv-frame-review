@@ -1,0 +1,6 @@
+Prepared failed Lesson preparation failed or exceeded its bounded runtime. Try a shorter SDR excerpt. []
+Traceback (most recent call last):
+  File "/audit/qualify-guided-v10-extra.py", line 38, in <module>
+    assert job['status']=='review',job
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': '78526bc4d602dc9a06848801e64ad331', 'status': 'failed', 'input_name': 'upload-assistant.ogv', 'created_utc': '2026-10-24T18:43:12.751045+00:00', 'preparing_lesson': False, 'error': 'Lesson preparation failed or exceeded its bounded runtime. Try a shorter SDR excerpt.', 'candidates': [], 'artifacts': {}}

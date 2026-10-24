@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-24T18:34:12.710597+00:00",
+  "sources": [
+    {
+      "id": "git-basics-two",
+      "title": "Git Basics 02 - Was ist Git (Deutsch).webm"
+    },
+    {
+      "id": "git-basics-three",
+      "title": "Git Basics 03 - Erste Schritte mit Git (Deutsch).webm"
+    }
+  ],
+  "selection": "Two German Git instructional recordings; separate follow-up selected after the GitHub course screen. Same-course recordings are not independent creators. selected from official Commons metadata before viewing or scoring these originals. Exploratory follow-up; no representative recall.",
+  "rule": "For each original, prepare 12 seconds at floor(min(duration-12,600)*q) for q=.10,.25,.35,.50,.65,.75,.90. This covers distinct points in the app-supported first ten minutes, avoiding duplicated capped timestamps on long recordings. Retain all 14 outcomes. Never add a defect. Inspect proposals for teaching meaning before independent HTTP export qualification.",
+  "baseline_manifest_sha256": "bf051fab955205b2850fd0f2aa2dbcc3cd8ccfc3b8c8c8ccde0d406aa06b0e06",
+  "phase": "Frozen v10 baseline; later source-driven fixes are development, not held-out validation."
+}

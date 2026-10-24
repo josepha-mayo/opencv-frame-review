@@ -18,6 +18,23 @@ except ImportError:
 
 @unittest.skipIf(np is None or cv2 is None,'Pinned numerical runtime required for detector tests')
 class StationaryBlink(unittest.TestCase):
+    def test_observed_luma_hold_keeps_all_original_chroma_and_unselected_luma(self):
+        from steady_export import held_luma_frames
+        source=[np.arange(12,dtype=np.uint8)+t*20 for t in range(3)]
+        mask=np.zeros((2,4),np.uint8);mask[:,2:4]=255
+        output=list(held_luma_frames(source,mask,[0,0,0]));selected=np.flatnonzero(mask.ravel())
+        for t,frame in enumerate(output):
+            self.assertTrue(np.array_equal(frame[selected],source[0][selected]))
+            self.assertTrue(np.array_equal(frame[8:],source[t][8:]))
+            self.assertTrue(np.array_equal(frame[np.setdiff1d(np.arange(8),selected)],source[t][np.setdiff1d(np.arange(8),selected)]))
+        self.assertTrue(np.array_equal(source[2],np.arange(12,dtype=np.uint8)+40))
+
+    def test_observed_luma_hold_refuses_an_invalid_mapping(self):
+        from steady_export import held_luma_frames
+        source=[np.arange(12,dtype=np.uint8)]
+        for mapping in ([],[1],[-1],[.5]):
+            with self.assertRaises(ValueError):list(held_luma_frames(source,np.zeros((2,4),np.uint8),mapping))
+
     def source(self):
         frames=np.full((180,90,160),32,np.uint8)
         for t in range(180):

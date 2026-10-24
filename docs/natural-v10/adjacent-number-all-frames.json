@@ -1,0 +1,21 @@
+{
+  "scope": "All360 decoded number-ROI frames, prepared reference versus included rejected/current artifacts. RGB sample differences, not semantic-number or human-benefit evidence.",
+  "xywh": [
+    180,
+    254,
+    14,
+    22
+  ],
+  "previous": {
+    "changed_frames": 84,
+    "changed_pixel_frames": 863,
+    "maximum_rgb_code_error": 3,
+    "first_changed_frame": 246
+  },
+  "current": {
+    "changed_frames": 0,
+    "changed_pixel_frames": 0,
+    "maximum_rgb_code_error": 0,
+    "first_changed_frame": null
+  }
+}

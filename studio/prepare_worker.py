@@ -11,6 +11,7 @@ import os
 import signal
 import subprocess
 import sys
+import tempfile
 
 MAX_UPLOAD = 64 * 1024**2
 INPUT = ['-protocol_whitelist', 'file,pipe', '-format_whitelist', 'mov,matroska,webm,ogg',
@@ -28,6 +29,23 @@ def parameters(start, duration):
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def publish_receipt(path, value):
+    """Polling readers see no receipt or one complete JSON document."""
+    path = Path(path)
+    pending = None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', dir=path.parent,
+                                         prefix=path.name+'.', suffix='.tmp', delete=False) as stream:
+            pending = Path(stream.name)
+            stream.write(json.dumps(value, indent=2, allow_nan=False))
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(pending, path)
+    finally:
+        if pending is not None:
+            pending.unlink(missing_ok=True)
 
 
 def lesson_tracks(metadata, header):
@@ -145,7 +163,7 @@ def prepare(folder):
                            'Audio resampled/downmixed and AAC encoded once' if audios else 'No audio track'],
                'preservation_reference': 'prepared_sha256; exact edit checks do not compare against uploaded original',
                'notice': 'Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation.'}
-    (folder / 'preparation.json').write_text(json.dumps(receipt, indent=2))
+    publish_receipt(folder / 'preparation.json', receipt)
     return receipt
 
 
@@ -155,5 +173,5 @@ if __name__ == '__main__':
         prepare(folder)
     except BaseException as error:
         message = str(error) if isinstance(error, ValueError) else 'Lesson preparation failed or exceeded its bounded runtime. Try a shorter SDR excerpt.'
-        (folder / 'prepare-error.json').write_text(json.dumps({'error': message, 'type': type(error).__name__}))
+        publish_receipt(folder / 'prepare-error.json', {'error': message, 'type': type(error).__name__})
         raise SystemExit(2)

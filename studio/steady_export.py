@@ -2,11 +2,24 @@
 import numpy as np
 import audio_preserve
 from native_yuv import decode_yuv, encode_yuv
-from retime import retimed_frames
 from protected_regions import validate_regions
 import steady_detail as steady
 import steady_boundaries as boundaries
 from teaching_motion import TeachingMotion
+
+
+def held_luma_frames(source, mask, mapping):
+    """Copy observed selected Y samples; retain every original U/V sample."""
+    height,width=mask.shape;pixels=width*height
+    indexes=np.asarray(mapping)
+    if width%2 or height%2 or not len(source) or indexes.shape!=(len(source),) or not np.issubdtype(indexes.dtype,np.integer) or np.any(indexes<0) or np.any(indexes>=len(source)):
+        raise ValueError('Invalid observed-luma mapping.')
+    selected=np.flatnonzero(mask.reshape(-1))
+    for t,frame in enumerate(source):
+        if frame.dtype!=np.uint8 or frame.ndim!=1 or len(frame)!=pixels*3//2:
+            raise ValueError('Invalid native frame for observed-luma hold.')
+        output=frame.copy();output[selected]=source[int(mapping[t])][selected]
+        yield output
 
 
 def export(e, job):
@@ -35,7 +48,7 @@ def export(e, job):
     source_audio = audio_preserve.evidence(e, sourcepath, 'steady_original_audio') if has_audio else None
     pending = job/'pending-candidate.mp4'
     encode_yuv(e, job/'control.mp4', iter(original), 'steady_control')
-    encode_yuv(e, pending, retimed_frames(original,mask,mapping), 'steady_edited')
+    encode_yuv(e, pending, held_luma_frames(original,mask,mapping), 'steady_edited')
     audio_checks = {}
     if has_audio:
         for name,path in [('control',job/'control.mp4'),('edited',pending)]:
@@ -47,13 +60,16 @@ def export(e, job):
     native_control = native_edit = True
     for expected,actual in zip(original,decode_yuv(e,job/'control.mp4','steady_control_verify')):
         native_control &= bool(np.array_equal(expected,actual))
-    for expected,actual in zip(retimed_frames(original,mask,mapping),decode_yuv(e,pending,'steady_edited_verify')):
+    chroma_exact=True
+    for t,(expected,actual) in enumerate(zip(held_luma_frames(original,mask,mapping),decode_yuv(e,pending,'steady_edited_verify'))):
         native_edit &= bool(np.array_equal(expected,actual))
+        chroma_exact &= bool(np.array_equal(original[t][e.W*e.H:],actual[e.W*e.H:]))
     del original
     protected = e.RegionMeasure(recipe['protected_regions'],np,e.cv2)
     teaching = TeachingMotion(recipe['protected_regions'],[lo,hi],e.N,np)
     review = e.ReviewFrames(job,mask,lo,hi,timestamps,e.guard)
     outside_histogram = np.zeros(256,np.int64)
+    outside_box_histogram = np.zeros(256,np.int64)
     control_rgb = outside_interval = True
     patch_means = {'source':[], 'edited':[]}
     selected_constant = True
@@ -87,6 +103,7 @@ def export(e, job):
         difference=e.cv2.absdiff(source,edited)
         for channel in range(3):
             outside_histogram += e.cv2.calcHist([difference],[channel],e.cv2.bitwise_not(influence),[256],[0,256]).ravel().astype(np.int64)
+            outside_box_histogram += e.cv2.calcHist([difference],[channel],e.cv2.bitwise_not(mask),[256],[0,256]).ravel().astype(np.int64)
         e.guard()
     measured = protected.result()
     teaching_result = teaching.result()
@@ -96,6 +113,7 @@ def export(e, job):
         region['passed']=all(v==0 for v in region['measurements'].values())
     measured['passed']=bool(measured['regions']) and all(r['passed'] for r in measured['regions'])
     outside_error = e.hist_summary(outside_histogram)
+    outside_box_error = e.hist_summary(outside_box_histogram)
     def transitions(values):
         # A separate encoded ROI-mean diagnostic, not the rapid-flash detector.
         return int((np.abs(np.diff(values))>=8).sum())
@@ -108,10 +126,12 @@ def export(e, job):
     new_events=int((full_events['edited'] & ~full_events['source']).sum())
     checks = {'fresh_stationary_two_state_proposal':True, 'approved_plan_bound':True,
               'native_control_exact':native_control, 'native_edit_matches_mapping':native_edit,
+              'all_original_chroma_samples_exact':chroma_exact,
               'unchanged_control_rgb_exact':control_rgb,
               'all_timestamps_exact':control_ts==timestamps and edited_ts==timestamps,
               'all_frames_outside_interval_exact':outside_interval,
               'all_rgb_outside_influence_exact':outside_error['max_rgb_code_error']==0,
+              'all_rgb_outside_selected_box_exact':outside_box_error['max_rgb_code_error']==0,
               'all_protected_teaching_rgb_exact':measured['passed'],
               'all_ordered_teaching_rgb_sequences_exact':teaching_result['all_ordered_rgb_sequences_exact'],
               'audio_exact':not has_audio or all(all(v is True for v in c.values()) for c in audio_checks.values()),
@@ -123,9 +143,10 @@ def export(e, job):
               'whole_clip_no_new_activity_events':new_events==0}
     acceptance = {'status':'accepted_experiment' if all(checks.values()) else 'rejected_experiment', 'checks':checks,
                   'meaning':'Encoded preservation and activity measurements only. Creator review is required; no measured learning or accessibility benefit.'}
-    decision={'schema':'steady-detail-export-v1','recipe':recipe,'mapping':mapping.tolist(),
+    decision={'schema':'steady-detail-export-v2','recipe':recipe,'mapping':mapping.tolist(),
               'activity':activity,'activity_threshold_rgb_codes':8,'protected':measured,
               'outside_rgb':outside_error,'rgb_selected_matches_reference':selected_constant,
+              'outside_selected_box_rgb':outside_box_error,'sample_mapping':'observed-luma-source-chroma-v2',
               'encoded_boundary_checks':encoded_boundaries,'linear_boundary_checks':linear_boundaries,
               'whole_clip_activity':whole_activity,'new_activity_events':new_events,
               'teaching_motion':teaching_result,
@@ -142,15 +163,16 @@ def export(e, job):
               'edited_delta':traces['edited']['exit_delta'],'control_delta':traces['control']['exit_delta'],'criterion':.1}
     frames=review.finish(binding,strong)
     e.write_json(job/'frame-review.json',frames)
-    warnings=['Holds the more contrasting observed state only during the shown interval; alternate blink phases are intentionally removed.',
+    warnings=['Holds observed brightness samples only during the shown interval and keeps every original color sample on its timeline. Small color variation inside the box may remain; alternate brightness phases are intentionally removed.',
               'A blinking detail may convey progress or position. Check both source states and the boundaries before using this edit.',
-              'Native YUV outside the selected box and decoded RGB outside its four-pixel influence area are verified separately.',
+              'Native samples and decoded RGB outside the selected box, plus all original chroma samples, must remain exact. The older four-pixel influence check also remains.',
               'Preparation resized/re-encoded the original. Exact edit checks reference the prepared clip.',
               'No learning, time-saving, medical, safety or compliance claim.']
     summary={'export_mode':steady.MODE,'review_status':'needs_creator_review','checks':checks,'acceptance':acceptance,
              'stationary_detail':{'proposal':candidate,'activity':activity,'whole_clip_activity':whole_activity,'new_activity_events':new_events,'metric':'Number of adjacent ROI-mean RGB changes >=8 codes. Interior and fixed whole-clip counts are separate; the latter includes both cut boundaries.'},
              'encoded_boundary_checks':encoded_boundaries,'linear_boundary_checks':linear_boundaries,
              'protected_content':measured,'outside_mask_error':outside_error,'audio_preservation':decision['audio_preservation'],
+             'outside_selected_box_rgb':outside_box_error,'sample_mapping':decision['sample_mapping'],
              'teaching_motion':teaching_result,
              'boundary':{name:{'control_delta':traces['control'][field],'edited_delta':traces['edited'][field]} for name,field in [('entry','entry_delta'),('exit','exit_delta'),('loop_seam','seam_absolute_delta')]},
              'codec':'Lossless H.264 High 4:4:4 Predictive, YUV420; verify browser playback separately','warnings':warnings}

@@ -1,0 +1,38 @@
+{
+  "verified_utc": "2026-10-24T20:41:22.343996+00:00",
+  "source_manifest_sha256": "20dfbb02970dcfb4d2a8fc0a8414dc900ace3cb16ea75130090cefc12217a8a0",
+  "source_files": 117,
+  "verification_stages": 14,
+  "current_original_export_cases": 11,
+  "new_qualified_source": "upload-assistant",
+  "new_recordings": 13,
+  "distinct_screen_windows": 91,
+  "review_windows": 90,
+  "failed_windows": [
+    {
+      "source": "wikibase-landvoc",
+      "start_seconds": 87,
+      "error": "More than 16 regions; this review interface cannot admit the clip."
+    }
+  ],
+  "discovery_version_scope": "Expanded wiki grid used v9; other discovery used pre-luma v10. Detection/preparation semantics unchanged except atomic receipt publication. Every accepted export qualification uses the final manifest above.",
+  "sampling_scope": "Exploratory convenience search. Same-course recordings are not independent creators; repeated old-source qualifications are not new lessons or a recall estimate.",
+  "sample_mapping": "observed-luma-source-chroma-v2",
+  "human_impact": "Engineering evidence only. Time saved, creator preference, attention, learning, accessibility and adoption unmeasured.",
+  "video": "No new playback, recording, narration or video update.",
+  "qualification_failures_retained": "Pack build: first French preparation timeout and two Gentoo import timeouts; four first-pass corruption tests encountered the documented transient single-flight busy409 instead of the expected corruption refusal. The qualifier waits only for that explicit busy state before checking strict refusal. Production source/runtime startup preflight is now also run by the external qualifier. Successful retries use unchanged worker/probe/media limits; cold-start reliability is not established. All first records are retained, not recounted as new sources.",
+  "rescue_pack_scope": "One bounded verified ZIP per complete observed-brightness comparison; original, prepared/edit/control, recipe, reports, actual proofs and file-hash manifest. One-at-a-time assembly/transfer,112MiB bound, no owner/session files. Original-upload and built-in prepared-sample packs are distinct.",
+  "qualified_bank_activity": {
+    "selected_cases": 11,
+    "inside_hold": {
+      "source": 50,
+      "edited": 0
+    },
+    "whole_excerpt": {
+      "source": 159,
+      "edited": 97
+    },
+    "new_activity_events": 0,
+    "scope": "Adjacent selected-mean RGB changes>=8 codes across11 selected successful excerpts. Includes regression repeats. No representative recall, semantic-event or human-benefit claim."
+  }
+}

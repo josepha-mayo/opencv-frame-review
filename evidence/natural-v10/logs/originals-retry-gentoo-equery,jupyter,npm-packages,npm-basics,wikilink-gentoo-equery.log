@@ -1,0 +1,6 @@
+Prepared failed Lesson preparation failed or exceeded its bounded runtime. Try a shorter SDR excerpt. []
+Traceback (most recent call last):
+  File "/audit/qualify-guided-v10.py", line 54, in <module>
+    assert job['status']=='review',job
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': 'c71758caf9379b832aa1f3b3000f61aa', 'status': 'failed', 'input_name': 'gentoo-equery.webm', 'created_utc': '2026-10-24T19:41:28.572070+00:00', 'preparing_lesson': False, 'error': 'Lesson preparation failed or exceeded its bounded runtime. Try a shorter SDR excerpt.', 'candidates': [], 'artifacts': {}}

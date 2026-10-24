@@ -40,3 +40,6 @@
 #cloud-samples > details { margin: 18px 0; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 /* Marking uses the static image; numeric coordinates remain an alternative. */
 .marking-area { cursor: crosshair; }
+/* A long example name must not widen the mobile grid's intrinsic column. */
+.workspace-grid > .panel { min-width: 0; }
+#natural-example { width: 100%; max-width: 100%; min-width: 0; }

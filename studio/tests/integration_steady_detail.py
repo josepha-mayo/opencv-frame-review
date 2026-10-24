@@ -42,7 +42,7 @@ try:
     x,y,w,h=candidate['influence_xywh']
     # The tutorial's main explanation and command text above this detail.
     areas=job['sample_credit'].get('recommended_teaching_areas') or ([{'label':'Lesson and commands','xywh':[0,0,640,y]}] if y else [{'label':'Other lesson area','xywh':[0,y+h,640,360-y-h]}])
-    if example in ('jupyter','npm','gentoo'):
+    if example in ('jupyter','npm','gentoo','joomla'):
         guide=next(g for g in job['teaching_guides'] if g['candidate_id']==candidate['id'])
         assert guide['source_sha256']==job['input_sha256'] and guide['regions']==areas
         assert not (folder/'approval.json').exists()
@@ -62,12 +62,25 @@ try:
     assert provenance==job['sample_credit']
     assert provenance['prepared_sample_sha256']==hashlib.sha256(source.read_bytes()).hexdigest()
     record['sample_provenance_matches_downloaded_input']=True
+    import io,zipfile
+    packed=req(final['artifacts']['Download verified rescue pack'],raw=True)
+    with zipfile.ZipFile(io.BytesIO(packed))as z:
+        assert z.testzip()is None
+        manifest=json.loads(z.read('manifest.json'))
+        assert not manifest['binding']['uploaded_original_included']
+        assert json.loads(z.read('sample-provenance.json'))==provenance
+        assert z.read('prepared-lesson.mp4')==source.read_bytes()and z.read('edited.mp4')==output.read_bytes()
+        for name,expected in manifest['files'].items():assert hashlib.sha256(z.read(name)).hexdigest()==expected['sha256']and len(z.read(name))==expected['bytes']
+        assert not any(name in z.namelist()for name in ('owner.txt','job.json','approval.json'))
+        record['rescue_pack_all_member_hashes_exact']=True;record['rescue_pack_members']=len(z.namelist())
     decision={'sample_credit':job['sample_credit'],'decision':final['status']}
     source_raw,edited=native(folder/'input.mp4'),native(output)
     bx,by,bw,bh=candidate['bbox'];mask=np.zeros((360,640),np.uint8);mask[by:by+bh,bx:bx+bw]=255
-    ym,cm=support_masks(mask);support=np.concatenate([ym.ravel(),cm.ravel(),cm.ravel()])
+    ym,cm=support_masks(mask);support=np.concatenate([ym.ravel(),np.zeros_like(cm.ravel()),np.zeros_like(cm.ravel())])
     lo,hi=candidate['interval_frames'];ref=candidate['reference_frame']
     assert np.array_equal(source_raw[:,~support],edited[:,~support])
+    record['independent_all_original_chroma_exact']=bool(np.array_equal(source_raw[:,640*360:],edited[:,640*360:]))
+    assert record['independent_all_original_chroma_exact']
     assert np.array_equal(source_raw[:lo],edited[:lo]) and np.array_equal(source_raw[hi+1:],edited[hi+1:])
     for t in range(lo,hi+1):assert np.array_equal(edited[t,support],source_raw[ref,support]),t
     assert pcm(folder/'input.mp4')==pcm(output)
@@ -91,6 +104,8 @@ try:
     for t in range(360):
         frames=[np.frombuffer(p.stdout.read(640*360*3),np.uint8).reshape(360,640,3) for p in pipes]
         assert np.array_equal(frames[0][outside],frames[1][outside]),t
+        outside_box=np.ones((360,640),bool);outside_box[by:by+bh,bx:bx+bw]=False
+        assert np.array_equal(frames[0][outside_box],frames[1][outside_box]),t
         for area in areas:
             ax,ay,aw,ah=area['xywh'];assert np.array_equal(frames[0][ay:ay+ah,ax:ax+aw],frames[1][ay:ay+ah,ax:ax+aw]),t
     assert all(p.wait()==0 for p in pipes)

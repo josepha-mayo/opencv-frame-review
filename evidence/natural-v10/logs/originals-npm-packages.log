@@ -1,0 +1,10 @@
+Prepared review None [('steady-0', [82, 116, 2, 8], [117, 205])]
+Export complete None
+Traceback (most recent call last):
+  File "/audit/qualify-guided-v10.py", line 109, in <module>
+    try:target.write_bytes(before+b'tamper');req(pack_url,expect=400)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/audit/qualify-guided-v10.py", line 19, in req
+    assert code==expect,(code,body[:500]);return body if raw else json.loads(body)
+           ^^^^^^^^^^^^
+AssertionError: (409, b'{"error": "Another rescue pack is being prepared. Try again shortly."}')

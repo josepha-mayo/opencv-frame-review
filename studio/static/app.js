@@ -87,7 +87,7 @@
   const exportMode = byId("export-mode"), exportModeNote = byId("export-mode-note");
   const steadyReview = byId("steady-state-review"), steadyAlternate = byId("steady-alternate");
   let alternateLoaded = false;
-  const STEADY_NOTE = "Keep one observed frame of the more contrasting blink state. Cut points are shortened to match the source; the first and last clip frames stay unchanged. Refuses worsening encoded boundary differences, changed teaching areas, timing/audio, native samples outside the box or RGB outside its influence area. Review both states and every cut.";
+  const STEADY_NOTE = "Hold the observed brightness state inside the caret box while keeping every original color sample on its timeline. Small color variation inside the caret can remain. Refuses any RGB change outside the actual box, changed teaching areas, timing/audio or worse cut points. Review both states and every cut.";
   const protectLabel = byId("protect-label"), protectList = byId("protected-list"), protectAdd = byId("protect-add");
   let savedRegions = [];
   let editingRegionIndex = null;
@@ -103,6 +103,7 @@
   const naturalExample = byId("natural-example");
   const teachingGuide = byId("teaching-guide"), teachingGuideLoad = byId("teaching-guide-load");
   const naturalChoices = {
+    joomla: {button:"Try the real Joomla reading pause",description:"VolodyA! V Anarhist, Free Art License as listed. Prepared 12-second installation lesson from a real Ogg/Theora source, with prepared audio and a natural root-prompt caret. No added defect. Load the suggested commands/output and prompt-flank areas, then inspect and check the plan. This prepared example repeats the separately qualified original-upload case."},
     gentoo: {button:"Try the real package-progress lesson",description:"Vitaly Zdanevich, CC0 as listed. Prepared 12-second package tutorial: changing progress beside a naturally blinking caret. Silent source. No added defect. Teaching-area suggestions are available after analysis; review them before checking the plan."},
     terminal: {button:"Try a real terminal blink",description:"Info-farmer, CC0. Prepared 12-second Tamil lesson, with a natural caret and prepared narration. No added defect. Suggested teaching area: [0, 0, 640, 336]."},
     jupyter: {button:"Try a real Jupyter reading pause",description:"Alex The Analyst, CC BY 3.0. Prepared English lesson with a natural caret; no added defect. Suggested code/output area: [52, 96, 552, 45]. Source license and preparation history are linked below."},
@@ -491,7 +492,7 @@
       if (version!==protectionVersion || job.id!==id || currentCandidate()?.id!==candidateId) return;
       if (plan.prediction_sha256!==prediction || plan.candidate_id!==candidateId || plan.export_mode!==mode || JSON.stringify(plan.protected_regions)!==JSON.stringify(regions) || !/^[0-9a-f]{64}$/.test(plan.recipe_sha256)) throw new Error("The returned plan does not match the selected edit and areas.");
       const candidate = currentCandidate();
-      ui.planSummary.textContent = (mode === "steady-detail-v1" ? "Keep the more contrasting observed state from frame "+candidate.reference_frame+" steady inside this interval" : mode === "periodic-local-retime-v2" ? "Slow the selected decoration 5×" : mode === "legacy" ? "Hold each 10-frame block in the selected interval" : "Hold the selected decoration across the entire clip") + ". Detected region: [" + candidate.bbox.join(", ") + "]; detected interval: frames " + candidate.interval_frames.join("–") + ". " + (regions.length ? "Check every frame of: " + regions.map(region => region.label).join(", ") + "." : "No important area declared.") + " Generate only after reviewing this plan. The encoded result can still be refused.";
+      ui.planSummary.textContent = (mode === "steady-detail-v1" ? "Hold the observed brightness state from frame "+candidate.reference_frame+" steady inside this interval" : mode === "periodic-local-retime-v2" ? "Slow the selected decoration 5×" : mode === "legacy" ? "Hold each 10-frame block in the selected interval" : "Hold the selected decoration across the entire clip") + ". Detected region: [" + candidate.bbox.join(", ") + "]; detected interval: frames " + candidate.interval_frames.join("–") + ". " + (regions.length ? "Check every frame of: " + regions.map(region => region.label).join(", ") + "." : "No important area declared.") + " Generate only after reviewing this plan. The encoded result can still be refused.";
       ui.planSummary.hidden = false;
       protectionPlan=plan;
       ui.protectStatus.textContent=regions.length ? "Checked "+regions.length+" fixed areas. The actual encoded result still has to meet its criteria." : "Edit plan checked. No important area declared.";
@@ -756,6 +757,12 @@
         ["99th-percentile RGB code error", outside.p99_rgb_code_error],
         ["Maximum RGB code error", outside.max_rgb_code_error]
       ] : []));
+      const neighbors=summary.outside_selected_box_rgb;
+      if (neighbors) ui.highlights.append(resultCard("Pixels beside the caret",[
+        ["Scope","Every RGB pixel outside the actual caret box"],
+        ["Mean / p99 / maximum RGB error",[neighbors.mean_rgb_code_error,neighbors.p99_rgb_code_error,neighbors.max_rgb_code_error]],
+        ["Original color samples",summary.checks?.all_original_chroma_samples_exact ? "All retained on their timeline" : "Check not met"]
+      ]));
 
       const protection = summary.protected_content;
       if (protection?.declared) {
@@ -811,6 +818,8 @@
       ui.highlights.append(notes);
     }
 
+    const packNote = byId("rescue-pack-note");
+    if (packNote) packNote.hidden = !hasArtifacts || !artifacts["Download verified rescue pack"];
     if (hasArtifacts) {
       Object.entries(artifacts).forEach(([label, value]) => {
         const url = localURL(value);

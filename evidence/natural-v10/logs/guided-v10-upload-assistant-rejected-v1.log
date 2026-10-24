@@ -1,0 +1,21 @@
+Prepared review None [('steady-0', [194, 260, 2, 10], [233, 329])]
+Export complete None
+Traceback (most recent call last):
+  File "/audit/qualify-guided-v10-extra.py", line 121, in <module>
+    ex,ey,ew,eh=extra['xywh'];assert np.array_equal(frames[0][ey:ey+eh,ex:ex+ew],frames[1][ey:ey+eh,ex:ex+ew]),(t,extra['label'])
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (246, 'Complete participant digits before caret')
+[vost#0:0/rawvideo @ 0x62a3c6bc6680] Error submitting a packet to the muxer: Broken pipe
+    Last message repeated 1 times
+[out#0/rawvideo @ 0x62a3c6b6b480] Error muxing a packet
+[out#0/rawvideo @ 0x62a3c6b6b480] Task finished with error code: -32 (Broken pipe)
+[out#0/rawvideo @ 0x62a3c6b6b480] Terminating thread with return code -32 (Broken pipe)
+[vost#0:0/rawvideo @ 0x5c7ccebf1680] Error submitting a packet to the muxer: Broken pipe
+    Last message repeated 1 times
+[out#0/rawvideo @ 0x5c7cceb963c0] Error muxing a packet
+[out#0/rawvideo @ 0x5c7cceb963c0] Task finished with error code: -32 (Broken pipe)
+[out#0/rawvideo @ 0x5c7cceb963c0] Terminating thread with return code -32 (Broken pipe)
+[out#0/rawvideo @ 0x62a3c6b6b480] Error writing trailer: Broken pipe
+[out#0/rawvideo @ 0x62a3c6b6b480] Error closing file: Broken pipe
+[out#0/rawvideo @ 0x5c7cceb963c0] Error writing trailer: Broken pipe
+[out#0/rawvideo @ 0x5c7cceb963c0] Error closing file: Broken pipe

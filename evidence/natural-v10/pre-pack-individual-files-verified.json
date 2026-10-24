@@ -1,0 +1,27 @@
+{
+  "complete": true,
+  "scope": "Four actual pre-pack v10 individual browser files only. Remaining individual callbacks timed out; the prepared file completed later and was recovered by its actual filesystem name and verified bytes. No claim that all nine individual callbacks passed.",
+  "runtime_manifest_sha256": "938fdf442ed1a8fbb8db2e9d2516304f35e9388d8e34ab317a82521bc8a74fdb",
+  "files": {
+    "Report JSON": {
+      "filename": "report (33).json",
+      "bytes": 118046,
+      "sha256": "9f6b4bb2692ec0252668067fdc1fad60fdac2663737fe673fc53002c6d0a9b72"
+    },
+    "Recipe JSON": {
+      "filename": "recipe (21).json",
+      "bytes": 4945,
+      "sha256": "9b3aa650cbf944ef692f3d880ab851d8538208b7fc43f0af031d743ff6d0d528"
+    },
+    "Edited comparison": {
+      "filename": "edited (29).mp4",
+      "bytes": 259708,
+      "sha256": "97310fcc314affbc74da4c3b3d5dd02b38c9878bf66cc8e39c1d8ccb1e656394"
+    },
+    "Prepared lesson clip": {
+      "filename": "original (23).mp4",
+      "bytes": 213614,
+      "sha256": "93845b704ff338478ab0f6a300ea651dbce63906197069d757d1d142169e5380"
+    }
+  }
+}

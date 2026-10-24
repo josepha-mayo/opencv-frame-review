@@ -1,0 +1,40 @@
+{
+  "retrieved_utc": "2026-10-24T20:09:19Z",
+  "official_url": "https://opencv26.devpost.com/",
+  "hackathon_id": 30984,
+  "title": "OpenCV AI Competition 2026, powered by AWS",
+  "criteria": [
+    {
+      "name": "Technical execution",
+      "weight_percent": 30
+    },
+    {
+      "name": "Innovation",
+      "weight_percent": 20
+    },
+    {
+      "name": "Real-world impact",
+      "weight_percent": 20
+    },
+    {
+      "name": "User experience",
+      "weight_percent": 10
+    },
+    {
+      "name": "Documentation and presentation",
+      "weight_percent": 10
+    },
+    {
+      "name": "Cloud delivery, reproducibility, and responsible operation",
+      "weight_percent": 10
+    }
+  ],
+  "configured_submission_deadline_utc": "2026-10-27T06:45:00Z",
+  "configured_submission_deadline_lagos": "2026-10-27 07:45 WAT",
+  "deadline_note": "The configured deadline is earlier than the overview narrative time. Use the earlier configured deadline for planning.",
+  "core_requirements": {
+    "substantive_opencv_5": true,
+    "meaningful_aws_component": true
+  },
+  "scoring_note": "Official weights only; no judge score or award eligibility claim."
+}

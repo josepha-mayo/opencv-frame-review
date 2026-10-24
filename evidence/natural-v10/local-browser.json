@@ -1,0 +1,192 @@
+{
+  "complete": true,
+  "source_manifest_sha256": "20dfbb02970dcfb4d2a8fc0a8414dc900ace3cb16ea75130090cefc12217a8a0",
+  "scope": "Final pack build: guided prepared Joomla, three editable areas, marking/edit Cancel, fresh plan/consent, explicit completed export and pack CTA at375/890. Twelve boundary PNGs loaded. Expanded teaching PNGs were not verified before the local container exited; no complete30-image or local archive-download claim. Complete live HTTPS archive/36-image checks remain mandatory before final publication.",
+  "mobile375": {
+    "artifacts": [
+      {
+        "label": "Download verified rescue pack\n\u00e2\u2020\u201c",
+        "url": "/api/jobs/748930b6a7ad707bfbf47e0eeafbeaa7/rescue-pack.zip"
+      },
+      {
+        "label": "Original input\n\u00e2\u2020\u201c",
+        "url": "/api/jobs/748930b6a7ad707bfbf47e0eeafbeaa7/download/original.mp4"
+      },
+      {
+        "label": "Edited comparison\n\u00e2\u2020\u201c",
+        "url": "/api/jobs/748930b6a7ad707bfbf47e0eeafbeaa7/download/edited.mp4"
+      },
+      {
+        "label": "Unchanged re encode control\n\u00e2\u2020\u201c",
+        "url": "/api/jobs/748930b6a7ad707bfbf47e0eeafbeaa7/download/control.mp4"
+      },
+      {
+        "label": "Report JSON\n\u00e2\u2020\u201c",
+        "url": "/api/jobs/748930b6a7ad707bfbf47e0eeafbeaa7/download/report.json"
+      },
+      {
+        "label": "Recipe JSON\n\u00e2\u2020\u201c",
+        "url": "/api/jobs/748930b6a7ad707bfbf47e0eeafbeaa7/download/recipe.json"
+      },
+      {
+        "label": "Readable report\n\u00e2\u2020\u201c",
+        "url": "/api/jobs/748930b6a7ad707bfbf47e0eeafbeaa7/download/report.txt"
+      },
+      {
+        "label": "Natural sample provenance\n\u00e2\u2020\u201c",
+        "url": "/api/samples/natural-joomla-credit.json"
+      }
+    ],
+    "client": 360,
+    "images": [
+      {
+        "alt": "Original static PNG crop \u00c2\u00b7 Before edit \u00c2\u00b7 Frame 113 \u00c2\u00b7 3.7666666666666666 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00c2\u00b7 Before edit \u00c2\u00b7 Frame 113 \u00c2\u00b7 3.7666666666666666 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00c2\u00b7 Before edit \u00c2\u00b7 Frame 113 \u00c2\u00b7 3.7666666666666666 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop \u00c2\u00b7 Edit begins \u00c2\u00b7 Frame 114 \u00c2\u00b7 3.8 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00c2\u00b7 Edit begins \u00c2\u00b7 Frame 114 \u00c2\u00b7 3.8 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00c2\u00b7 Edit begins \u00c2\u00b7 Frame 114 \u00c2\u00b7 3.8 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop \u00c2\u00b7 Final edited frame \u00c2\u00b7 Frame 209 \u00c2\u00b7 6.966666666666667 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00c2\u00b7 Final edited frame \u00c2\u00b7 Frame 209 \u00c2\u00b7 6.966666666666667 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00c2\u00b7 Final edited frame \u00c2\u00b7 Frame 209 \u00c2\u00b7 6.966666666666667 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop \u00c2\u00b7 Original frames resume \u00c2\u00b7 Frame 210 \u00c2\u00b7 7 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00c2\u00b7 Original frames resume \u00c2\u00b7 Frame 210 \u00c2\u00b7 7 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00c2\u00b7 Original frames resume \u00c2\u00b7 Frame 210 \u00c2\u00b7 7 s \u00c2\u00b7 crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and installation output \u00c2\u00b7 source \u00c2\u00b7 frame 114",
+        "loaded": false
+      },
+      {
+        "alt": "Commands and installation output \u00c2\u00b7 edited \u00c2\u00b7 frame 114",
+        "loaded": false
+      },
+      {
+        "alt": "Commands and installation output \u00c2\u00b7 source \u00c2\u00b7 frame 120",
+        "loaded": false
+      },
+      {
+        "alt": "Commands and installation output \u00c2\u00b7 edited \u00c2\u00b7 frame 120",
+        "loaded": false
+      },
+      {
+        "alt": "Commands and installation output \u00c2\u00b7 source \u00c2\u00b7 frame 209",
+        "loaded": false
+      },
+      {
+        "alt": "Commands and installation output \u00c2\u00b7 edited \u00c2\u00b7 frame 209",
+        "loaded": false
+      },
+      {
+        "alt": "Prompt before caret \u00c2\u00b7 source \u00c2\u00b7 frame 114",
+        "loaded": false
+      },
+      {
+        "alt": "Prompt before caret \u00c2\u00b7 edited \u00c2\u00b7 frame 114",
+        "loaded": false
+      },
+      {
+        "alt": "Prompt before caret \u00c2\u00b7 source \u00c2\u00b7 frame 204",
+        "loaded": false
+      },
+      {
+        "alt": "Prompt before caret \u00c2\u00b7 edited \u00c2\u00b7 frame 204",
+        "loaded": false
+      },
+      {
+        "alt": "Prompt before caret \u00c2\u00b7 source \u00c2\u00b7 frame 209",
+        "loaded": false
+      },
+      {
+        "alt": "Prompt before caret \u00c2\u00b7 edited \u00c2\u00b7 frame 209",
+        "loaded": false
+      },
+      {
+        "alt": "Remaining prompt line \u00c2\u00b7 source \u00c2\u00b7 frame 114",
+        "loaded": false
+      },
+      {
+        "alt": "Remaining prompt line \u00c2\u00b7 edited \u00c2\u00b7 frame 114",
+        "loaded": false
+      },
+      {
+        "alt": "Remaining prompt line \u00c2\u00b7 source \u00c2\u00b7 frame 120",
+        "loaded": false
+      },
+      {
+        "alt": "Remaining prompt line \u00c2\u00b7 edited \u00c2\u00b7 frame 120",
+        "loaded": false
+      },
+      {
+        "alt": "Remaining prompt line \u00c2\u00b7 source \u00c2\u00b7 frame 209",
+        "loaded": false
+      },
+      {
+        "alt": "Remaining prompt line \u00c2\u00b7 edited \u00c2\u00b7 frame 209",
+        "loaded": false
+      }
+    ],
+    "inner": 375,
+    "packNote": "Keep the verified rescue pack before this job expires: source files, comparison, recipe, report, static proofs and a file-hash manifest in one ZIP. Upload jobs include the untouched original; built-in examples include their prepared excerpt and provenance. Individual files remain below.",
+    "scroll": 360
+  },
+  "layout890": {
+    "client": 875,
+    "inner": 890,
+    "scroll": 875
+  },
+  "markingLocks": {
+    "checkDisabled": true,
+    "consentDisabled": true,
+    "generateDisabled": true,
+    "saveDisabled": true
+  },
+  "planBeforeConsent": {
+    "consent": false,
+    "enabled": true,
+    "fit": {
+      "client": 360,
+      "inner": 375,
+      "scroll": 360
+    },
+    "text": ", 24]\nRemove\nEdit\nArea name\nX\nY\nWidth\nHeight\n\nRetiming requires zero decoded RGB error in every declared area and refuses the edited download on failure. With no declared area, every outside-mask pixel must be exact. Older modes retain their original mean\u00e2\u2030\u00a40.1, p99\u00e2\u2030\u00a41, max\u00e2\u2030\u00a43 criteria. None of these checks establishes readability.\n\nCheck edit planAdd area to list Clear all areas\nHold the observed brightness state from frame 174 steady inside this interval. Detected region: [124, 340, 8, 12]; detected interval: frames 114\u00e2\u20ac\u201c209. Check every frame of: Commands and installation output, Prompt before caret, Remaining prompt line. Generate only after reviewing this plan. The encoded result can still be refused.\nI checked that the prepared teaching detail is readable, the selected activity can change without hiding teaching information, and the saved teaching areas cover what must stay unchanged. I want to generate this edit for comparison.\nGenerate comparison\n\nGenerating a comparison does not accept the output for use. Review the encoded measurements before choosing an output.\n\nLeave unchanged"
+  },
+  "all30ProofImagesLoaded": false,
+  "noPlayback": true,
+  "local_container_exit_observed": true,
+  "remaining_browser_checks_moved_to_live_aws": true
+}

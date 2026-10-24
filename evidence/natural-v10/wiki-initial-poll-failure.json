@@ -1,0 +1,469 @@
+{
+  "complete": false,
+  "started_utc": "2026-10-24T18:12:48.592959+00:00",
+  "selection_plan_sha256": "417f4efc806edfa6e158c2c1c4a94a192abc454a4c6c4a51be9cf86127429947",
+  "runtime_manifest_sha256": "1f6930b7db9a44b866c4e2b6b25efcf9ca2dbfd2629354777aff03bad55b853c",
+  "scope": "Eighteen fixed windows from six new wiki-editing/upload/translation instructional recordings, selected after the first cohort. Exploratory follow-up. Real original HTTP intake, analysis, exact source recovery and withheld edits; proposal presence does not establish useful repair.",
+  "cases": [
+    {
+      "source": "translate-one",
+      "original_sha256": "6a4ae0f851722ec2a83c478fd5687f2c0ec85400eb2f9135c55947f3123c97ee",
+      "start_seconds": 67,
+      "duration_seconds": 12,
+      "job_id": "888d25e06f7666532b99a23a8085906d",
+      "job_directory_relative": "jobs-batch-0/888d25e06f7666532b99a23a8085906d",
+      "status": "review",
+      "analysis_seconds": 29.094811924999988,
+      "candidates": [],
+      "error": null,
+      "authored_defect": false,
+      "steady_analysis": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_state_dwell_frames": 60,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": [],
+        "boundary_policy": {
+          "version": "steady-boundaries-v1",
+          "maximum_trim_frames_per_end": 30,
+          "minimum_hold_frames": 60,
+          "minimum_removed_mean_changes": 4,
+          "maximum_reference_samples": 33,
+          "activity_threshold_rgb_codes": 8,
+          "boundary_tolerance": 1e-12,
+          "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+        },
+        "boundary_refusals": []
+      },
+      "original_and_prepared_http_hashes_exact": true,
+      "edited_download_withheld": true,
+      "prepared_sha256": "9130a70942a411a14c9a4af178aa04a72845dfbc71d2c5ad7a31544bd23a5f95",
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "6a4ae0f851722ec2a83c478fd5687f2c0ec85400eb2f9135c55947f3123c97ee",
+        "prepared_sha256": "9130a70942a411a14c9a4af178aa04a72845dfbc71d2c5ad7a31544bd23a5f95",
+        "uploaded_bytes": 12665773,
+        "preview_sha256": "9ec785e9e8ab75b10ccacbdc604cd3b6d89a31a5b6e351b8dc5071effae5dbfd",
+        "start_seconds": 67.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 283.107,
+          "frame_rate": "30/1",
+          "chroma_location": "left",
+          "audio_codec": "opus",
+          "audio_channels": 2,
+          "omitted_metadata": []
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "chroma_location": "left",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      }
+    },
+    {
+      "source": "translate-one",
+      "original_sha256": "6a4ae0f851722ec2a83c478fd5687f2c0ec85400eb2f9135c55947f3123c97ee",
+      "start_seconds": 135,
+      "duration_seconds": 12,
+      "job_id": "56e56616d9a39f679dbe72c8df33371b",
+      "job_directory_relative": "jobs-batch-0/56e56616d9a39f679dbe72c8df33371b",
+      "status": "review",
+      "analysis_seconds": 9.776361174999977,
+      "candidates": [],
+      "error": null,
+      "authored_defect": false,
+      "steady_analysis": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_state_dwell_frames": 60,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": [],
+        "boundary_policy": {
+          "version": "steady-boundaries-v1",
+          "maximum_trim_frames_per_end": 30,
+          "minimum_hold_frames": 60,
+          "minimum_removed_mean_changes": 4,
+          "maximum_reference_samples": 33,
+          "activity_threshold_rgb_codes": 8,
+          "boundary_tolerance": 1e-12,
+          "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+        },
+        "boundary_refusals": []
+      },
+      "original_and_prepared_http_hashes_exact": true,
+      "edited_download_withheld": true,
+      "prepared_sha256": "acd39ffa17275d0ea4d736e9f2ce1fc63ef419c9c4a2e610112f93c54603d3d7",
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "6a4ae0f851722ec2a83c478fd5687f2c0ec85400eb2f9135c55947f3123c97ee",
+        "prepared_sha256": "acd39ffa17275d0ea4d736e9f2ce1fc63ef419c9c4a2e610112f93c54603d3d7",
+        "uploaded_bytes": 12665773,
+        "preview_sha256": "9874185dc0e56a34ef6d78319961fa123837ce97d8844b9248f1c1bc585daa05",
+        "start_seconds": 135.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 283.107,
+          "frame_rate": "30/1",
+          "chroma_location": "left",
+          "audio_codec": "opus",
+          "audio_channels": 2,
+          "omitted_metadata": []
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "chroma_location": "left",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      }
+    },
+    {
+      "source": "translate-one",
+      "original_sha256": "6a4ae0f851722ec2a83c478fd5687f2c0ec85400eb2f9135c55947f3123c97ee",
+      "start_seconds": 203,
+      "duration_seconds": 12,
+      "job_id": "9f3f87d18aa9297f659a4f3060537f9c",
+      "job_directory_relative": "jobs-batch-0/9f3f87d18aa9297f659a4f3060537f9c",
+      "status": "review",
+      "analysis_seconds": 9.135530710000012,
+      "candidates": [],
+      "error": null,
+      "authored_defect": false,
+      "steady_analysis": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_state_dwell_frames": 60,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": [],
+        "boundary_policy": {
+          "version": "steady-boundaries-v1",
+          "maximum_trim_frames_per_end": 30,
+          "minimum_hold_frames": 60,
+          "minimum_removed_mean_changes": 4,
+          "maximum_reference_samples": 33,
+          "activity_threshold_rgb_codes": 8,
+          "boundary_tolerance": 1e-12,
+          "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+        },
+        "boundary_refusals": []
+      },
+      "original_and_prepared_http_hashes_exact": true,
+      "edited_download_withheld": true,
+      "prepared_sha256": "dfc8a26873de6751ad38b2511c845f2cdcbcdbe1596b5d22be3f24a911735c47",
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "6a4ae0f851722ec2a83c478fd5687f2c0ec85400eb2f9135c55947f3123c97ee",
+        "prepared_sha256": "dfc8a26873de6751ad38b2511c845f2cdcbcdbe1596b5d22be3f24a911735c47",
+        "uploaded_bytes": 12665773,
+        "preview_sha256": "be00a95ef56898c5e2e4c88059a048820e28f1613e3fb2c24d986c0a0eb5cdb2",
+        "start_seconds": 203.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 283.107,
+          "frame_rate": "30/1",
+          "chroma_location": "left",
+          "audio_codec": "opus",
+          "audio_channels": 2,
+          "omitted_metadata": []
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "chroma_location": "left",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      }
+    },
+    {
+      "source": "translate-two",
+      "original_sha256": "2922b8fe9391ecced91033f80f2a742d368d119d1ddf7aa5e43435ece51b0fe9",
+      "start_seconds": 59,
+      "duration_seconds": 12,
+      "job_id": "96b8a041be4b4e0662f1dc3f8de9a403",
+      "job_directory_relative": "jobs-batch-0/96b8a041be4b4e0662f1dc3f8de9a403",
+      "status": "review",
+      "analysis_seconds": 9.634198424999994,
+      "candidates": [],
+      "error": null,
+      "authored_defect": false,
+      "steady_analysis": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_state_dwell_frames": 60,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": [],
+        "boundary_policy": {
+          "version": "steady-boundaries-v1",
+          "maximum_trim_frames_per_end": 30,
+          "minimum_hold_frames": 60,
+          "minimum_removed_mean_changes": 4,
+          "maximum_reference_samples": 33,
+          "activity_threshold_rgb_codes": 8,
+          "boundary_tolerance": 1e-12,
+          "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+        },
+        "boundary_refusals": []
+      },
+      "original_and_prepared_http_hashes_exact": true,
+      "edited_download_withheld": true,
+      "prepared_sha256": "2571f6acf6a8ebdeedbecba55fd6da743559ea6f910a3faca281367b73eb42c4",
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "2922b8fe9391ecced91033f80f2a742d368d119d1ddf7aa5e43435ece51b0fe9",
+        "prepared_sha256": "2571f6acf6a8ebdeedbecba55fd6da743559ea6f910a3faca281367b73eb42c4",
+        "uploaded_bytes": 10890244,
+        "preview_sha256": "8fbbaf45ee949eaa0c0755faf284e7b7c066ab113b6022369a74d6cac58176c6",
+        "start_seconds": 59.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 250.008,
+          "frame_rate": "30/1",
+          "chroma_location": "left",
+          "audio_codec": "opus",
+          "audio_channels": 2,
+          "omitted_metadata": []
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "chroma_location": "left",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      }
+    },
+    {
+      "source": "translate-two",
+      "original_sha256": "2922b8fe9391ecced91033f80f2a742d368d119d1ddf7aa5e43435ece51b0fe9",
+      "start_seconds": 119,
+      "duration_seconds": 12,
+      "job_id": "74b04c84fdda95c679be13af3cf2379e",
+      "job_directory_relative": "jobs-batch-0/74b04c84fdda95c679be13af3cf2379e",
+      "status": "review",
+      "analysis_seconds": 9.667167470999999,
+      "candidates": [],
+      "error": null,
+      "authored_defect": false,
+      "steady_analysis": {
+        "policy": {
+          "version": "steady-proposal-v2",
+          "action": "steady-detail-v1",
+          "minimum_luma_range": 24,
+          "minimum_transitions": 6,
+          "maximum_transitions_per_second": 4,
+          "minimum_state_dwell_frames": 5,
+          "maximum_state_dwell_frames": 60,
+          "maximum_box": [
+            24,
+            32
+          ],
+          "minimum_pixels": 4,
+          "state_mean_error_floor": 2.0,
+          "state_mean_error_max": 6.0,
+          "state_mean_error_fraction": 0.15,
+          "minimum_state_separation": 12.0,
+          "state_sample_error_max": 16,
+          "rgb_influence_padding": 4,
+          "fallback_window_frames": 120,
+          "fallback_stride_frames": 30,
+          "chroma_mean_error_max": 2.0,
+          "chroma_sample_error_max": 16
+        },
+        "candidates": [],
+        "boundary_policy": {
+          "version": "steady-boundaries-v1",
+          "maximum_trim_frames_per_end": 30,
+          "minimum_hold_frames": 60,
+          "minimum_removed_mean_changes": 4,
+          "maximum_reference_samples": 33,
+          "activity_threshold_rgb_codes": 8,
+          "boundary_tolerance": 1e-12,
+          "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+        },
+        "boundary_refusals": []
+      },
+      "original_and_prepared_http_hashes_exact": true,
+      "edited_download_withheld": true,
+      "prepared_sha256": "1179fcc18012fe09328c1c8cb456e2fceb7e2b6a88fd877982ce0874aee72e43",
+      "preparation": {
+        "schema": "lesson-preparation-v1",
+        "uploaded_sha256": "2922b8fe9391ecced91033f80f2a742d368d119d1ddf7aa5e43435ece51b0fe9",
+        "prepared_sha256": "1179fcc18012fe09328c1c8cb456e2fceb7e2b6a88fd877982ce0874aee72e43",
+        "uploaded_bytes": 10890244,
+        "preview_sha256": "a456d7b562233186beb5f2b53a536eb50ac51bb757c7605a31f7db748345ab7e",
+        "start_seconds": 119.0,
+        "duration_seconds": 12.0,
+        "frames": 360,
+        "source": {
+          "video_codec": "vp9",
+          "width": 1920,
+          "height": 1080,
+          "duration_seconds": 250.008,
+          "frame_rate": "30/1",
+          "chroma_location": "left",
+          "audio_codec": "opus",
+          "audio_channels": 2,
+          "omitted_metadata": []
+        },
+        "prepared": {
+          "width": 640,
+          "height": 360,
+          "fps": 30,
+          "color": "limited BT.709 SDR",
+          "chroma_location": "left",
+          "audio": "AAC-LC mono 48 kHz"
+        },
+        "changes": [
+          "Selected excerpt only",
+          "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+          "30 fps conversion and H.264 encoding",
+          "SDR conversion; untagged color interpreted by FFmpeg",
+          "Audio resampled/downmixed and AAC encoded once"
+        ],
+        "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+        "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+      }
+    }
+  ]
+}

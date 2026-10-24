@@ -1,5 +1,8 @@
 # Frame Review: Keep the Lesson
 
+Current v10: preserve every original color sample and require exact RGB outside the actual caret box. The newly qualified French upload lesson keeps adjacent participant digits exact; 11 selected original-source exports pass on this mapping. Guided Joomla protection, mobile overflow, original recovery filenames and atomic receipt fixes are included. [Current evidence and reproduction](docs/natural-v10/REPRODUCE.md). Earlier results below remain version-specific.
+
+
 Current v9 adds supported Ogg/Theora lesson intake and reversible two-corner teaching-area marking. All 14 stages, 137 backend tests and 106 studio tests pass (one platform skip). Ten new source recordings / 48 total windows are retained, including an explicitly exploratory pause search; one new Joomla natural-caret repair independently qualifies. The historical nine-source baseline stays separate. See [v9 reproduction](docs/natural-v9/REPRODUCE.md) and [current evidence](evidence/natural-v9/release-binding.json). No demo, narration or submission-video update.
 
 The following material includes historical v8/v7 evidence; its labeled results remain version-specific.

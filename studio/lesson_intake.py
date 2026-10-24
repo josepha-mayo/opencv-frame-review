@@ -21,13 +21,26 @@ from protected_regions import validate_regions
 NATURAL_EXAMPLES = {'terminal': ('natural-terminal.mp4', 'NATURAL_TERMINAL_CREDIT.json'),
                     'jupyter': ('natural-jupyter.mp4', 'NATURAL_JUPYTER_CREDIT.json'),
                     'npm': ('natural-npm.mp4', 'NATURAL_NPM_CREDIT.json'),
-                    'gentoo': ('natural-gentoo.mp4', 'NATURAL_GENTOO_CREDIT.json')}
+                    'gentoo': ('natural-gentoo.mp4', 'NATURAL_GENTOO_CREDIT.json'),
+                    'joomla': ('natural-joomla.mp4', 'NATURAL_JOOMLA_CREDIT.json')}
+
+
+def original_download(data):
+    """A usable media suffix from verified container bytes, never a user suffix."""
+    if data[:4] == b'OggS':
+        return 'video/ogg', 'uploaded-original.ogv'
+    if data[:4] == b'\x1aE\xdf\xa3':
+        return ('video/webm', 'uploaded-original.webm') if b'\x42\x82\x84webm' in data[:4096] else ('video/x-matroska', 'uploaded-original.mkv')
+    if len(data) >= 12 and data[4:8] == b'ftyp':
+        return ('video/quicktime', 'uploaded-original.mov') if data[8:12] == b'qt  ' else ('video/mp4', 'uploaded-original.mp4')
+    raise ValueError('Retained original has an unsupported container header.')
 
 
 class LessonManager(backend.Manager):
     def __init__(self, root):
         super().__init__(root)
         self.import_lock = threading.Lock()
+        self.pack_lock = threading.Lock()
 
     def natural_demo(self, owner=None, example='terminal'):
         if not isinstance(example, str) or example not in NATURAL_EXAMPLES:
@@ -182,7 +195,7 @@ class LessonManager(backend.Manager):
             result_path = self.jobpath(jid)/'result.json'
             if result_path.is_file():
                 result = backend.read_json(result_path)
-                if result.get('schema') == 'steady-detail-export-v1':
+                if result.get('schema') in ('steady-detail-export-v1','steady-detail-export-v2'):
                     export_measurements = {key:result.get(key) for key in ('acceptance','encoded_boundary_checks','linear_boundary_checks','activity','whole_clip_activity','new_activity_events','teaching_motion')}
             return {'schema': 'lesson-decision-v1', 'job_id': jid,
                     'created_utc': job['created_utc'], 'decision': job['status'],
@@ -282,6 +295,8 @@ class LessonManager(backend.Manager):
             if example not in NATURAL_EXAMPLES:
                 raise ValueError('Natural lesson provenance identity changed.')
             out['artifacts']['Natural sample provenance'] = '/api/samples/natural-'+example+'-credit.json'
+        if out['status']=='complete' and out.get('summary',{}).get('sample_mapping')=='observed-luma-source-chroma-v2' and not out.get('frame_review_error') and not out.get('teaching_review_error'):
+            out['artifacts']={'Download verified rescue pack':f'/api/jobs/{jid}/rescue-pack.zip',**out['artifacts']}
         return out
 
 
@@ -321,10 +336,24 @@ class LessonHandler(backend.Handler):
     def do_GET(self):
         path = urllib.parse.urlsplit(self.path).path
         import re
+        pack_match=re.fullmatch(r'/api/jobs/([0-9a-f]{32})/rescue-pack\.zip',path)
+        if pack_match:
+            acquired=False
+            try:
+                self.secure()
+                acquired=self.server.manager.pack_lock.acquire(blocking=False)
+                if not acquired:raise backend.Conflict('Another rescue pack is being prepared. Try again shortly.')
+                from rescue_pack import build
+                data=build(self.server.manager,pack_match.group(1),backend,STUDIO,original_download,NATURAL_EXAMPLES,MAX_UPLOAD)
+                self.send_response(200);self.headers_safe('application/zip',len(data),'frame-review-rescue-pack.zip');self.wfile.write(data)
+                return
+            except (ValueError,KeyError,PermissionError,OSError)as error:return self.handle_error(error)
+            finally:
+                if acquired:self.server.manager.pack_lock.release()
         samples = {'/api/samples/natural-terminal.mp4':('fixtures/natural-terminal.mp4','video/mp4','natural-terminal-prepared-excerpt.mp4'),
                    '/api/samples/natural-terminal.png':('static/natural-terminal.png','image/png',None),
                    '/api/samples/natural-terminal-credit.json':('fixtures/NATURAL_TERMINAL_CREDIT.json','application/json','natural-terminal-provenance.json')}
-        for example in ('jupyter', 'npm', 'gentoo'):
+        for example in ('jupyter', 'npm', 'gentoo', 'joomla'):
             filename, credit = NATURAL_EXAMPLES[example]
             samples['/api/samples/'+filename] = ('fixtures/'+filename,'video/mp4',filename)
             samples['/api/samples/natural-'+example+'-credit.json'] = ('fixtures/'+credit,'application/json','natural-'+example+'-provenance.json')
@@ -391,9 +420,9 @@ class LessonHandler(backend.Handler):
                     raise ValueError('Retained lesson source changed')
             else:
                 data = json.dumps(receipt, indent=2).encode()
+            ctype, attachment = original_download(data) if role == 'upload' else ('video/mp4', 'prepared-lesson.mp4') if role == 'prepared' else ('application/json', 'preparation.json')
             self.send_response(200)
-            self.headers_safe('video/mp4' if role == 'prepared' else 'application/octet-stream' if role == 'upload' else 'application/json', len(data),
-                              'prepared-lesson.mp4' if role == 'prepared' else 'uploaded-original.bin' if role == 'upload' else 'preparation.json')
+            self.headers_safe(ctype, len(data), attachment)
             self.wfile.write(data)
         except (ValueError, KeyError, PermissionError, OSError) as error:
             return self.handle_error(error)

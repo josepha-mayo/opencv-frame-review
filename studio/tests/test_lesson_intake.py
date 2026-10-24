@@ -9,11 +9,36 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from prepare_worker import parameters, MAX_UPLOAD, lesson_tracks
-from lesson_intake import LessonManager, backend
+from prepare_worker import parameters, MAX_UPLOAD, lesson_tracks, publish_receipt
+from lesson_intake import LessonManager, backend, original_download
 
 
 class LessonIntake(unittest.TestCase):
+    def test_polling_cannot_observe_an_incomplete_preparation_receipt(self):
+        with tempfile.TemporaryDirectory() as directory:
+            target=Path(directory)/'preparation.json';value={'frames':360,'prepared_sha256':'a'*64}
+            real_replace=os.replace
+            def publish(pending,destination):
+                self.assertFalse(target.exists())
+                self.assertEqual(json.loads(Path(pending).read_text()),value)
+                real_replace(pending,destination)
+            with patch('prepare_worker.os.replace',side_effect=publish)as replace:
+                publish_receipt(target,value);replace.assert_called_once()
+            self.assertEqual(json.loads(target.read_text()),value)
+            with patch('prepare_worker.os.replace',side_effect=OSError('publication interrupted')):
+                with self.assertRaises(OSError):publish_receipt(target,{'frames':1})
+            self.assertEqual(json.loads(target.read_text()),value)
+            self.assertEqual(list(Path(directory).glob('*.tmp')),[])
+
+    def test_original_download_uses_container_bytes_for_a_playable_suffix(self):
+        for data,expected in [(b'OggSsource',('video/ogg','uploaded-original.ogv')),
+                              (b'\x1aE\xdf\xa3\x42\x82\x84webm',('video/webm','uploaded-original.webm')),
+                              (b'\x1aE\xdf\xa3matroska',('video/x-matroska','uploaded-original.mkv')),
+                              (b'\x00\x00\x00\x18ftypisom',('video/mp4','uploaded-original.mp4')),
+                              (b'\x00\x00\x00\x18ftypqt  ',('video/quicktime','uploaded-original.mov'))]:
+            self.assertEqual(original_download(data),expected)
+        with self.assertRaises(ValueError):original_download(b'not a supported original')
+
     def test_ogg_skeleton_versions_are_metadata_without_discarding_lesson_tracks(self):
         video={'index':1,'codec_type':'video','codec_name':'theora'}
         audio={'index':2,'codec_type':'audio','codec_name':'vorbis'}

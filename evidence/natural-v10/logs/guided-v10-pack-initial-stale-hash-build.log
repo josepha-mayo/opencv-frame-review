@@ -1,0 +1,97 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 1.78kB 0.2s done
+#1 DONE 1.7s
+
+#2 [internal] load metadata for docker.io/library/opencv-creator:marking-v9-final
+#2 DONE 3.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context:
+#3 transferring context: 2B 0.1s done
+#3 DONE 1.5s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [ 1/19] FROM docker.io/library/opencv-creator:marking-v9-final@sha256:af469ef97a9f6f7b30c652dce532fcacbfcf79dd3785e0328f8ee0f23e8905fa
+#5 resolve docker.io/library/opencv-creator:marking-v9-final@sha256:af469ef97a9f6f7b30c652dce532fcacbfcf79dd3785e0328f8ee0f23e8905fa
+#5 resolve docker.io/library/opencv-creator:marking-v9-final@sha256:af469ef97a9f6f7b30c652dce532fcacbfcf79dd3785e0328f8ee0f23e8905fa 4.9s done
+#5 DONE 6.3s
+
+#4 [internal] load build context
+#4 transferring context:
+#4 transferring context: 506.77kB 0.3s done
+#4 DONE 1.5s
+
+#6 [ 2/19] COPY --chown=10001:10001 [studio/fixtures/natural-joomla.mp4, /app/studio/fixtures/natural-joomla.mp4]
+#6 CACHED
+
+#7 [ 3/19] COPY --chown=10001:10001 [studio/fixtures/NATURAL_JOOMLA_CREDIT.json, /app/studio/fixtures/NATURAL_JOOMLA_CREDIT.json]
+#7 CACHED
+
+#8 [ 4/19] COPY --chown=10001:10001 [studio/lesson_intake.py, /app/studio/lesson_intake.py]
+#8 DONE 9.8s
+
+#9 [ 5/19] COPY --chown=10001:10001 [studio/prepare_worker.py, /app/studio/prepare_worker.py]
+#9 DONE 6.1s
+
+#10 [ 6/19] COPY --chown=10001:10001 [studio/rescue_pack.py, /app/studio/rescue_pack.py]
+#10 DONE 8.8s
+
+#11 [ 7/19] COPY --chown=10001:10001 [studio/static/app.js, /app/studio/static/app.js]
+#11 DONE 7.6s
+
+#12 [ 8/19] COPY --chown=10001:10001 [studio/static/index.html, /app/studio/static/index.html]
+#12 DONE 6.0s
+
+#13 [ 9/19] COPY --chown=10001:10001 [studio/static/styles.css, /app/studio/static/styles.css]
+#13 DONE 4.3s
+
+#14 [10/19] COPY --chown=10001:10001 [studio/steady_detail.py, /app/studio/steady_detail.py]
+#14 DONE 8.0s
+
+#15 [11/19] COPY --chown=10001:10001 [studio/steady_export.py, /app/studio/steady_export.py]
+#15 DONE 5.6s
+
+#16 [12/19] COPY --chown=10001:10001 [studio/tests/integration_natural_examples.py, /app/studio/tests/integration_natural_examples.py]
+#16 DONE 4.1s
+
+#17 [13/19] COPY --chown=10001:10001 [studio/tests/integration_steady_detail.py, /app/studio/tests/integration_steady_detail.py]
+#17 DONE 2.2s
+
+#18 [14/19] COPY --chown=10001:10001 [studio/tests/test_cloud.py, /app/studio/tests/test_cloud.py]
+#18 DONE 2.9s
+
+#19 [15/19] COPY --chown=10001:10001 [studio/tests/test_lesson_intake.py, /app/studio/tests/test_lesson_intake.py]
+#19 DONE 4.9s
+
+#20 [16/19] COPY --chown=10001:10001 [studio/tests/test_rescue_pack.py, /app/studio/tests/test_rescue_pack.py]
+#20 DONE 4.8s
+
+#21 [17/19] COPY --chown=10001:10001 [studio/tests/test_steady_detail.py, /app/studio/tests/test_steady_detail.py]
+#21 DONE 2.7s
+
+#22 [18/19] COPY --chown=10001:10001 [studio/BUILD_HASHES.json, /app/studio/BUILD_HASHES.json]
+#22 DONE 3.5s
+
+#23 [19/19] RUN python studio/run.py --check
+#23 14.05 Not ready: Changed build file: studio/tests/integration_steady_detail.py
+#23 ERROR: process "/bin/sh -c python studio/run.py --check" did not complete successfully: exit code: 2
+------
+ > [19/19] RUN python studio/run.py --check:
+14.05 Not ready: Changed build file: studio/tests/integration_steady_detail.py
+------
+Dockerfile:19
+--------------------
+  17 |     COPY --chown=10001:10001 ["studio/tests/test_steady_detail.py", "/app/studio/tests/test_steady_detail.py"]
+  18 |     COPY --chown=10001:10001 ["studio/BUILD_HASHES.json", "/app/studio/BUILD_HASHES.json"]
+  19 | >>> RUN python studio/run.py --check
+  20 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c python studio/run.py --check" did not complete successfully: exit code: 2

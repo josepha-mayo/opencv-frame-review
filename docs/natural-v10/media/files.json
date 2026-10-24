@@ -1,0 +1,14 @@
+{
+  "prepared-reference.mp4": {
+    "bytes": 213614,
+    "sha256": "93845b704ff338478ab0f6a300ea651dbce63906197069d757d1d142169e5380"
+  },
+  "rejected-previous-mapping.mp4": {
+    "bytes": 259720,
+    "sha256": "c8c1570f3c95b4d0b7ab9b2b02521e6a743d2fdffe9597e9a813af8127af75b4"
+  },
+  "current-observed-luma.mp4": {
+    "bytes": 259708,
+    "sha256": "97310fcc314affbc74da4c3b3d5dd02b38c9878bf66cc8e39c1d8ccb1e656394"
+  }
+}

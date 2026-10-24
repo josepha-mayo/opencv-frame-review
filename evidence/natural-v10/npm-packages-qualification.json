@@ -1,0 +1,2076 @@
+{
+  "complete": true,
+  "source_name": "npm-packages.webm",
+  "source_sha256": "c76852045f62eaa4664e2d31976b1cff9d176a8862424d7fc38202558d2f90a0",
+  "start_seconds": 29.0,
+  "authored_defect": false,
+  "selection": "Quarter/half/three-quarter duration cohort selected before detector changes. This is the first-quarter excerpt; all three outcomes retained.",
+  "case": {
+    "id": "npm-packages",
+    "filename": "npm-packages.webm",
+    "source_group": "new",
+    "start": 29,
+    "bbox": [
+      82,
+      116,
+      2,
+      8
+    ],
+    "selection": "Quarter/half/three-quarter duration cohort selected before detector changes. This is the first-quarter excerpt; all three outcomes retained.",
+    "protected_regions": [
+      {
+        "label": "Repository explanation and code",
+        "xywh": [
+          55,
+          180,
+          560,
+          180
+        ]
+      }
+    ]
+  },
+  "production_startup_preflight_passed": true,
+  "source_files_checked_at_startup": 117,
+  "job_id": "26076b4ea454f68a688cf32c267273aa",
+  "preparation": {
+    "schema": "lesson-preparation-v1",
+    "uploaded_sha256": "c76852045f62eaa4664e2d31976b1cff9d176a8862424d7fc38202558d2f90a0",
+    "prepared_sha256": "98a1098a172a31e324c7da394b25d50e519746866c0d2875620b50a5e67d75b6",
+    "uploaded_bytes": 11074358,
+    "preview_sha256": "c5ba04080c296ffc48afadf226d0928db9c6cac79992b1f4db75c8d712de923f",
+    "start_seconds": 29.0,
+    "duration_seconds": 12.0,
+    "frames": 360,
+    "source": {
+      "video_codec": "vp9",
+      "width": 2560,
+      "height": 1424,
+      "duration_seconds": 116.508,
+      "frame_rate": "27815/467",
+      "chroma_location": "unspecified",
+      "audio_codec": "opus",
+      "audio_channels": 2,
+      "omitted_metadata": []
+    },
+    "prepared": {
+      "width": 640,
+      "height": 360,
+      "fps": 30,
+      "color": "limited BT.709 SDR",
+      "chroma_location": "left",
+      "audio": "AAC-LC mono 48 kHz"
+    },
+    "changes": [
+      "Selected excerpt only",
+      "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+      "30 fps conversion and H.264 encoding",
+      "SDR conversion; untagged color interpreted by FFmpeg",
+      "Audio resampled/downmixed and AAC encoded once"
+    ],
+    "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+    "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+  },
+  "candidate": {
+    "id": "steady-0",
+    "bbox": [
+      82,
+      116,
+      2,
+      8
+    ],
+    "influence_xywh": [
+      78,
+      112,
+      10,
+      16
+    ],
+    "interval_frames": [
+      117,
+      205
+    ],
+    "interval_seconds": [
+      3.9,
+      6.833333333333333
+    ],
+    "pixels": 16,
+    "reference_frame": 116,
+    "alternate_frame": 90,
+    "reference_selection": "Observed frame in the originally kept appearance class, selected with the reviewed cut points to minimize predicted boundary RMS. No blended or invented pixels.",
+    "reference_state": "darker",
+    "state_transitions": 7,
+    "minimum_interior_dwell_frames": 14,
+    "maximum_observed_dwell_frames": 26,
+    "state_mean_error_max": 1.5,
+    "state_mean_error_limit": 6.0,
+    "state_separation": 42.9375,
+    "state_sample_error_max": 2,
+    "action": "steady-detail-v1",
+    "meaning": "Keep the more contrasting observed state steady during this interval; review both states. This may be instructional content.",
+    "chroma_stability": [
+      {
+        "maximum_frame_mean": 1.0,
+        "maximum_sample": 1
+      },
+      {
+        "maximum_frame_mean": 0.0,
+        "maximum_sample": 0
+      }
+    ],
+    "boundary_alignment": {
+      "policy": {
+        "version": "steady-boundaries-v1",
+        "maximum_trim_frames_per_end": 30,
+        "minimum_hold_frames": 60,
+        "minimum_removed_mean_changes": 4,
+        "maximum_reference_samples": 33,
+        "activity_threshold_rgb_codes": 8,
+        "boundary_tolerance": 1e-12,
+        "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+      },
+      "original_interval_frames": [
+        90,
+        209
+      ],
+      "original_reference_frame": 206,
+      "predicted_source_internal_changes": 5,
+      "predicted_entry": {
+        "source": {
+          "mean_absolute_rgb_codes": 0.0,
+          "rms_rgb_codes": 0.0,
+          "maximum_rgb_codes": 0.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 0.0,
+          "rms_rgb_codes": 0.0,
+          "maximum_rgb_codes": 0.0
+        },
+        "source_selected_mean_delta": 0.0,
+        "edited_selected_mean_delta": 0.0
+      },
+      "predicted_exit": {
+        "source": {
+          "mean_absolute_rgb_codes": 49.604166666666664,
+          "rms_rgb_codes": 63.84209034798281,
+          "maximum_rgb_codes": 90.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 1.1666666666666667,
+          "rms_rgb_codes": 1.2583057392117916,
+          "maximum_rgb_codes": 2.0
+        },
+        "source_selected_mean_delta": 0.31057921051979065,
+        "edited_selected_mean_delta": 0.00644441694021225
+      },
+      "scope": "Predicted selected-box RGB and selected-mean changes. Encoded selected/influence RGB and linear-mean checks independently decide acceptance."
+    },
+    "recipe_sha256": "ba17ccad641390f5f5063fc1bec64acdd341bb532574b3b5727f9a445e82e317",
+    "overlay_url": "/api/jobs/26076b4ea454f68a688cf32c267273aa/steady/steady-0-reference.png",
+    "alternate_url": "/api/jobs/26076b4ea454f68a688cf32c267273aa/steady/steady-0-alternate.png"
+  },
+  "source_bound_guide_verified": {
+    "expected": false,
+    "matched": false,
+    "automatic_approval": false
+  },
+  "independent_all_original_chroma_exact": true,
+  "audio_present": true,
+  "independent_native_outside_box_exact": true,
+  "independent_all_outside_interval_frames_exact": true,
+  "independent_observed_state_mapping_exact": true,
+  "independent_decoded_prepared_audio_exact": true,
+  "output_sha256": "6d68b9fd6315ef5b2af76976094692a863f9e9f32e3997a8f9df0d69d6342f61",
+  "output_bytes": 466949,
+  "summary": {
+    "export_mode": "steady-detail-v1",
+    "review_status": "needs_creator_review",
+    "checks": {
+      "fresh_stationary_two_state_proposal": true,
+      "approved_plan_bound": true,
+      "native_control_exact": true,
+      "native_edit_matches_mapping": true,
+      "all_original_chroma_samples_exact": true,
+      "unchanged_control_rgb_exact": true,
+      "all_timestamps_exact": true,
+      "all_frames_outside_interval_exact": true,
+      "all_rgb_outside_influence_exact": true,
+      "all_rgb_outside_selected_box_exact": true,
+      "all_protected_teaching_rgb_exact": true,
+      "all_ordered_teaching_rgb_sequences_exact": true,
+      "audio_exact": true,
+      "source_and_detection_unchanged": true,
+      "selected_activity_reduced": true,
+      "encoded_boundary_rgb_not_worse": true,
+      "encoded_boundary_selected_mean_not_worse": true,
+      "whole_clip_activity_reduced": true,
+      "whole_clip_no_new_activity_events": true
+    },
+    "acceptance": {
+      "status": "accepted_experiment",
+      "checks": {
+        "fresh_stationary_two_state_proposal": true,
+        "approved_plan_bound": true,
+        "native_control_exact": true,
+        "native_edit_matches_mapping": true,
+        "all_original_chroma_samples_exact": true,
+        "unchanged_control_rgb_exact": true,
+        "all_timestamps_exact": true,
+        "all_frames_outside_interval_exact": true,
+        "all_rgb_outside_influence_exact": true,
+        "all_rgb_outside_selected_box_exact": true,
+        "all_protected_teaching_rgb_exact": true,
+        "all_ordered_teaching_rgb_sequences_exact": true,
+        "audio_exact": true,
+        "source_and_detection_unchanged": true,
+        "selected_activity_reduced": true,
+        "encoded_boundary_rgb_not_worse": true,
+        "encoded_boundary_selected_mean_not_worse": true,
+        "whole_clip_activity_reduced": true,
+        "whole_clip_no_new_activity_events": true
+      },
+      "meaning": "Encoded preservation and activity measurements only. Creator review is required; no measured learning or accessibility benefit."
+    },
+    "stationary_detail": {
+      "proposal": {
+        "id": "steady-0",
+        "bbox": [
+          82,
+          116,
+          2,
+          8
+        ],
+        "influence_xywh": [
+          78,
+          112,
+          10,
+          16
+        ],
+        "interval_frames": [
+          117,
+          205
+        ],
+        "interval_seconds": [
+          3.9,
+          6.833333333333333
+        ],
+        "pixels": 16,
+        "reference_frame": 116,
+        "alternate_frame": 90,
+        "reference_selection": "Observed frame in the originally kept appearance class, selected with the reviewed cut points to minimize predicted boundary RMS. No blended or invented pixels.",
+        "reference_state": "darker",
+        "state_transitions": 7,
+        "minimum_interior_dwell_frames": 14,
+        "maximum_observed_dwell_frames": 26,
+        "state_mean_error_max": 1.5,
+        "state_mean_error_limit": 6.0,
+        "state_separation": 42.9375,
+        "state_sample_error_max": 2,
+        "action": "steady-detail-v1",
+        "meaning": "Keep the more contrasting observed state steady during this interval; review both states. This may be instructional content.",
+        "chroma_stability": [
+          {
+            "maximum_frame_mean": 1.0,
+            "maximum_sample": 1
+          },
+          {
+            "maximum_frame_mean": 0.0,
+            "maximum_sample": 0
+          }
+        ],
+        "boundary_alignment": {
+          "policy": {
+            "version": "steady-boundaries-v1",
+            "maximum_trim_frames_per_end": 30,
+            "minimum_hold_frames": 60,
+            "minimum_removed_mean_changes": 4,
+            "maximum_reference_samples": 33,
+            "activity_threshold_rgb_codes": 8,
+            "boundary_tolerance": 1e-12,
+            "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+          },
+          "original_interval_frames": [
+            90,
+            209
+          ],
+          "original_reference_frame": 206,
+          "predicted_source_internal_changes": 5,
+          "predicted_entry": {
+            "source": {
+              "mean_absolute_rgb_codes": 0.0,
+              "rms_rgb_codes": 0.0,
+              "maximum_rgb_codes": 0.0
+            },
+            "edited": {
+              "mean_absolute_rgb_codes": 0.0,
+              "rms_rgb_codes": 0.0,
+              "maximum_rgb_codes": 0.0
+            },
+            "source_selected_mean_delta": 0.0,
+            "edited_selected_mean_delta": 0.0
+          },
+          "predicted_exit": {
+            "source": {
+              "mean_absolute_rgb_codes": 49.604166666666664,
+              "rms_rgb_codes": 63.84209034798281,
+              "maximum_rgb_codes": 90.0
+            },
+            "edited": {
+              "mean_absolute_rgb_codes": 1.1666666666666667,
+              "rms_rgb_codes": 1.2583057392117916,
+              "maximum_rgb_codes": 2.0
+            },
+            "source_selected_mean_delta": 0.31057921051979065,
+            "edited_selected_mean_delta": 0.00644441694021225
+          },
+          "scope": "Predicted selected-box RGB and selected-mean changes. Encoded selected/influence RGB and linear-mean checks independently decide acceptance."
+        }
+      },
+      "activity": {
+        "source": 5,
+        "edited": 0
+      },
+      "whole_clip_activity": {
+        "source": 19,
+        "edited": 13
+      },
+      "new_activity_events": 0,
+      "metric": "Number of adjacent ROI-mean RGB changes >=8 codes. Interior and fixed whole-clip counts are separate; the latter includes both cut boundaries."
+    },
+    "encoded_boundary_checks": {
+      "policy": {
+        "version": "steady-boundaries-v1",
+        "maximum_trim_frames_per_end": 30,
+        "minimum_hold_frames": 60,
+        "minimum_removed_mean_changes": 4,
+        "maximum_reference_samples": 33,
+        "activity_threshold_rgb_codes": 8,
+        "boundary_tolerance": 1e-12,
+        "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+      },
+      "measurements": {
+        "entry": {
+          "selected": {
+            "source": {
+              "mean_absolute_rgb_codes": 0.0,
+              "rms_rgb_codes": 0.0,
+              "maximum_rgb_codes": 0.0
+            },
+            "edited": {
+              "mean_absolute_rgb_codes": 0.0,
+              "rms_rgb_codes": 0.0,
+              "maximum_rgb_codes": 0.0
+            },
+            "passed": true
+          },
+          "influence": {
+            "source": {
+              "mean_absolute_rgb_codes": 0.0,
+              "rms_rgb_codes": 0.0,
+              "maximum_rgb_codes": 0.0
+            },
+            "edited": {
+              "mean_absolute_rgb_codes": 0.0,
+              "rms_rgb_codes": 0.0,
+              "maximum_rgb_codes": 0.0
+            },
+            "passed": true
+          }
+        },
+        "exit": {
+          "selected": {
+            "source": {
+              "mean_absolute_rgb_codes": 49.604166666666664,
+              "rms_rgb_codes": 63.84209034798281,
+              "maximum_rgb_codes": 90.0
+            },
+            "edited": {
+              "mean_absolute_rgb_codes": 1.125,
+              "rms_rgb_codes": 1.224744871391589,
+              "maximum_rgb_codes": 2.0
+            },
+            "passed": true
+          },
+          "influence": {
+            "source": {
+              "mean_absolute_rgb_codes": 5.475,
+              "rms_rgb_codes": 20.283100519069233,
+              "maximum_rgb_codes": 90.0
+            },
+            "edited": {
+              "mean_absolute_rgb_codes": 0.6270833333333333,
+              "rms_rgb_codes": 1.993217666655267,
+              "maximum_rgb_codes": 21.0
+            },
+            "passed": true
+          }
+        },
+        "loop_seam": {
+          "selected": {
+            "source": {
+              "mean_absolute_rgb_codes": 217.70833333333334,
+              "rms_rgb_codes": 217.7671730694658,
+              "maximum_rgb_codes": 224.0
+            },
+            "edited": {
+              "mean_absolute_rgb_codes": 217.70833333333334,
+              "rms_rgb_codes": 217.7671730694658,
+              "maximum_rgb_codes": 224.0
+            },
+            "passed": true
+          },
+          "influence": {
+            "source": {
+              "mean_absolute_rgb_codes": 218.6875,
+              "rms_rgb_codes": 218.73142778302343,
+              "maximum_rgb_codes": 224.0
+            },
+            "edited": {
+              "mean_absolute_rgb_codes": 218.6875,
+              "rms_rgb_codes": 218.73142778302343,
+              "maximum_rgb_codes": 224.0
+            },
+            "passed": true
+          }
+        }
+      },
+      "passed": true,
+      "scope": "Entry, return and clip-loop boundary; selected and influence boxes; mean absolute, RMS and maximum decoded RGB differences must each be no greater than source (1e-12 floating comparison tolerance, no perceptual budget). This is not a safety or human-benefit measure."
+    },
+    "linear_boundary_checks": {
+      "entry": {
+        "source": 0.0,
+        "edited": 0.0,
+        "passed": true
+      },
+      "exit": {
+        "source": 0.3105792487040162,
+        "edited": 0.006139608100056648,
+        "passed": true
+      },
+      "loop_seam": {
+        "source": 0.8622722887084819,
+        "edited": 0.8622722887084819,
+        "passed": true
+      }
+    },
+    "protected_content": {
+      "regions": [
+        {
+          "label": "Repository explanation and code",
+          "xywh": [
+            55,
+            180,
+            560,
+            180
+          ],
+          "measurements": {
+            "mean_rgb_code_error": 0.0,
+            "p99_rgb_code_error": 0,
+            "max_rgb_code_error": 0
+          },
+          "criteria": {
+            "mean_rgb_code_error": 0,
+            "p99_rgb_code_error": 0,
+            "max_rgb_code_error": 0
+          },
+          "passed": true,
+          "channel_samples": 108864000,
+          "histogram": [
+            108864000,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "frames": 360,
+      "declared": true,
+      "passed": true,
+      "scope": "Every decoded RGB frame versus prepared source. Fixed areas; creator judges meaning and readability."
+    },
+    "outside_mask_error": {
+      "mean_rgb_code_error": 0.0,
+      "p99_rgb_code_error": 0,
+      "max_rgb_code_error": 0,
+      "channel_samples": 248659200
+    },
+    "audio_preservation": {
+      "present": true,
+      "checks": {
+        "control": {
+          "stream_exact": true,
+          "packet_payload_timing_skip_exact": true,
+          "decoded_pcm_exact": true
+        },
+        "edited": {
+          "stream_exact": true,
+          "packet_payload_timing_skip_exact": true,
+          "decoded_pcm_exact": true
+        }
+      }
+    },
+    "outside_selected_box_rgb": {
+      "mean_rgb_code_error": 0.0,
+      "p99_rgb_code_error": 0,
+      "max_rgb_code_error": 0,
+      "channel_samples": 248814720
+    },
+    "sample_mapping": "observed-luma-source-chroma-v2",
+    "teaching_motion": {
+      "schema": "teaching-motion-v1",
+      "frames": 360,
+      "interval_frames": [
+        117,
+        205
+      ],
+      "regions": [
+        {
+          "label": "Repository explanation and code",
+          "xywh": [
+            55,
+            180,
+            560,
+            180
+          ],
+          "frames": 360,
+          "ordered_rgb_sequence_sha256": {
+            "source": "b7f5b73cf05def389047598b6a5e74f0ba58f56ee7983d915a619695b3063828",
+            "edited": "b7f5b73cf05def389047598b6a5e74f0ba58f56ee7983d915a619695b3063828"
+          },
+          "ordered_rgb_sequence_exact": true,
+          "changed_adjacent_frame_pairs": {
+            "source": 124,
+            "edited": 124
+          },
+          "changed_pairs_inside_hold": {
+            "source": 8,
+            "edited": 8
+          },
+          "adjacent_pairs": 359,
+          "hold_adjacent_pairs": 88,
+          "mean_absolute_temporal_rgb_codes": {
+            "source": 0.7688146084803467,
+            "edited": 0.7688146084803467
+          },
+          "peak_change_frame_inside_hold": 202,
+          "peak_change_mean_rgb_codes": 0.006438492063492064
+        }
+      ],
+      "all_ordered_rgb_sequences_exact": true,
+      "meaning": "Decoded sample changes, including codec variation; not semantic progress ticks, legibility or learning measurements. Source and edited teaching regions are compared at their original frame times."
+    },
+    "boundary": {
+      "entry": {
+        "control_delta": 0.0,
+        "edited_delta": 0.0
+      },
+      "exit": {
+        "control_delta": 0.3105792487040162,
+        "edited_delta": 0.006139608100056648
+      },
+      "loop_seam": {
+        "control_delta": 0.8622722887084819,
+        "edited_delta": 0.8622722887084819
+      }
+    },
+    "codec": "Lossless H.264 High 4:4:4 Predictive, YUV420; verify browser playback separately",
+    "warnings": [
+      "Holds observed brightness samples only during the shown interval and keeps every original color sample on its timeline. Small color variation inside the box may remain; alternate brightness phases are intentionally removed.",
+      "A blinking detail may convey progress or position. Check both source states and the boundaries before using this edit.",
+      "Native samples and decoded RGB outside the selected box, plus all original chroma samples, must remain exact. The older four-pixel influence check also remains.",
+      "Preparation resized/re-encoded the original. Exact edit checks reference the prepared clip.",
+      "No learning, time-saving, medical, safety or compliance claim."
+    ]
+  },
+  "decision": {
+    "schema": "lesson-decision-v1",
+    "job_id": "26076b4ea454f68a688cf32c267273aa",
+    "created_utc": "2026-10-24T19:42:46.921770+00:00",
+    "decision": "complete",
+    "uploaded_sha256": "c76852045f62eaa4664e2d31976b1cff9d176a8862424d7fc38202558d2f90a0",
+    "prepared_sha256": "98a1098a172a31e324c7da394b25d50e519746866c0d2875620b50a5e67d75b6",
+    "excerpt": {
+      "start_seconds": 29.0,
+      "duration_seconds": 12.0,
+      "frames": 360
+    },
+    "source": {
+      "video_codec": "vp9",
+      "width": 2560,
+      "height": 1424,
+      "duration_seconds": 116.508,
+      "frame_rate": "27815/467",
+      "chroma_location": "unspecified",
+      "audio_codec": "opus",
+      "audio_channels": 2,
+      "omitted_metadata": []
+    },
+    "prepared": {
+      "width": 640,
+      "height": 360,
+      "fps": 30,
+      "color": "limited BT.709 SDR",
+      "chroma_location": "left",
+      "audio": "AAC-LC mono 48 kHz"
+    },
+    "candidates": [
+      {
+        "id": "steady-0",
+        "bbox": [
+          82,
+          116,
+          2,
+          8
+        ],
+        "interval_frames": [
+          117,
+          205
+        ],
+        "pixels": 16
+      }
+    ],
+    "edited_export_accepted": true,
+    "failure_reason": null,
+    "encoded_export_measurements": {
+      "acceptance": {
+        "status": "accepted_experiment",
+        "checks": {
+          "fresh_stationary_two_state_proposal": true,
+          "approved_plan_bound": true,
+          "native_control_exact": true,
+          "native_edit_matches_mapping": true,
+          "all_original_chroma_samples_exact": true,
+          "unchanged_control_rgb_exact": true,
+          "all_timestamps_exact": true,
+          "all_frames_outside_interval_exact": true,
+          "all_rgb_outside_influence_exact": true,
+          "all_rgb_outside_selected_box_exact": true,
+          "all_protected_teaching_rgb_exact": true,
+          "all_ordered_teaching_rgb_sequences_exact": true,
+          "audio_exact": true,
+          "source_and_detection_unchanged": true,
+          "selected_activity_reduced": true,
+          "encoded_boundary_rgb_not_worse": true,
+          "encoded_boundary_selected_mean_not_worse": true,
+          "whole_clip_activity_reduced": true,
+          "whole_clip_no_new_activity_events": true
+        },
+        "meaning": "Encoded preservation and activity measurements only. Creator review is required; no measured learning or accessibility benefit."
+      },
+      "encoded_boundary_checks": {
+        "policy": {
+          "version": "steady-boundaries-v1",
+          "maximum_trim_frames_per_end": 30,
+          "minimum_hold_frames": 60,
+          "minimum_removed_mean_changes": 4,
+          "maximum_reference_samples": 33,
+          "activity_threshold_rgb_codes": 8,
+          "boundary_tolerance": 1e-12,
+          "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+        },
+        "measurements": {
+          "entry": {
+            "selected": {
+              "source": {
+                "mean_absolute_rgb_codes": 0.0,
+                "rms_rgb_codes": 0.0,
+                "maximum_rgb_codes": 0.0
+              },
+              "edited": {
+                "mean_absolute_rgb_codes": 0.0,
+                "rms_rgb_codes": 0.0,
+                "maximum_rgb_codes": 0.0
+              },
+              "passed": true
+            },
+            "influence": {
+              "source": {
+                "mean_absolute_rgb_codes": 0.0,
+                "rms_rgb_codes": 0.0,
+                "maximum_rgb_codes": 0.0
+              },
+              "edited": {
+                "mean_absolute_rgb_codes": 0.0,
+                "rms_rgb_codes": 0.0,
+                "maximum_rgb_codes": 0.0
+              },
+              "passed": true
+            }
+          },
+          "exit": {
+            "selected": {
+              "source": {
+                "mean_absolute_rgb_codes": 49.604166666666664,
+                "rms_rgb_codes": 63.84209034798281,
+                "maximum_rgb_codes": 90.0
+              },
+              "edited": {
+                "mean_absolute_rgb_codes": 1.125,
+                "rms_rgb_codes": 1.224744871391589,
+                "maximum_rgb_codes": 2.0
+              },
+              "passed": true
+            },
+            "influence": {
+              "source": {
+                "mean_absolute_rgb_codes": 5.475,
+                "rms_rgb_codes": 20.283100519069233,
+                "maximum_rgb_codes": 90.0
+              },
+              "edited": {
+                "mean_absolute_rgb_codes": 0.6270833333333333,
+                "rms_rgb_codes": 1.993217666655267,
+                "maximum_rgb_codes": 21.0
+              },
+              "passed": true
+            }
+          },
+          "loop_seam": {
+            "selected": {
+              "source": {
+                "mean_absolute_rgb_codes": 217.70833333333334,
+                "rms_rgb_codes": 217.7671730694658,
+                "maximum_rgb_codes": 224.0
+              },
+              "edited": {
+                "mean_absolute_rgb_codes": 217.70833333333334,
+                "rms_rgb_codes": 217.7671730694658,
+                "maximum_rgb_codes": 224.0
+              },
+              "passed": true
+            },
+            "influence": {
+              "source": {
+                "mean_absolute_rgb_codes": 218.6875,
+                "rms_rgb_codes": 218.73142778302343,
+                "maximum_rgb_codes": 224.0
+              },
+              "edited": {
+                "mean_absolute_rgb_codes": 218.6875,
+                "rms_rgb_codes": 218.73142778302343,
+                "maximum_rgb_codes": 224.0
+              },
+              "passed": true
+            }
+          }
+        },
+        "passed": true,
+        "scope": "Entry, return and clip-loop boundary; selected and influence boxes; mean absolute, RMS and maximum decoded RGB differences must each be no greater than source (1e-12 floating comparison tolerance, no perceptual budget). This is not a safety or human-benefit measure."
+      },
+      "linear_boundary_checks": {
+        "entry": {
+          "source": 0.0,
+          "edited": 0.0,
+          "passed": true
+        },
+        "exit": {
+          "source": 0.3105792487040162,
+          "edited": 0.006139608100056648,
+          "passed": true
+        },
+        "loop_seam": {
+          "source": 0.8622722887084819,
+          "edited": 0.8622722887084819,
+          "passed": true
+        }
+      },
+      "activity": {
+        "source": 5,
+        "edited": 0
+      },
+      "whole_clip_activity": {
+        "source": 19,
+        "edited": 13
+      },
+      "new_activity_events": 0,
+      "teaching_motion": {
+        "schema": "teaching-motion-v1",
+        "frames": 360,
+        "interval_frames": [
+          117,
+          205
+        ],
+        "regions": [
+          {
+            "label": "Repository explanation and code",
+            "xywh": [
+              55,
+              180,
+              560,
+              180
+            ],
+            "frames": 360,
+            "ordered_rgb_sequence_sha256": {
+              "source": "b7f5b73cf05def389047598b6a5e74f0ba58f56ee7983d915a619695b3063828",
+              "edited": "b7f5b73cf05def389047598b6a5e74f0ba58f56ee7983d915a619695b3063828"
+            },
+            "ordered_rgb_sequence_exact": true,
+            "changed_adjacent_frame_pairs": {
+              "source": 124,
+              "edited": 124
+            },
+            "changed_pairs_inside_hold": {
+              "source": 8,
+              "edited": 8
+            },
+            "adjacent_pairs": 359,
+            "hold_adjacent_pairs": 88,
+            "mean_absolute_temporal_rgb_codes": {
+              "source": 0.7688146084803467,
+              "edited": 0.7688146084803467
+            },
+            "peak_change_frame_inside_hold": 202,
+            "peak_change_mean_rgb_codes": 0.006438492063492064
+          }
+        ],
+        "all_ordered_rgb_sequences_exact": true,
+        "meaning": "Decoded sample changes, including codec variation; not semantic progress ticks, legibility or learning measurements. Source and edited teaching regions are compared at their original frame times."
+      }
+    },
+    "interpretation": "Creator approved one bounded edit; read the encoded report for its measurements.",
+    "detector_scope": "Frozen rapid-change detector: at least 7 alternating luminance transitions in a rolling second, connected support at least 64 pixels. Separate steady-detail-v1: small stationary two-state luma appearance, at least 6 transitions, bounded state/chroma errors and dwell. A reviewed hold is trimmed to matched cut points, at least 60 frames and four internal changes; first/last clip frames remain unchanged. Encoded selected/influence boundary RGB and selected-mean changes cannot worsen. Proposals are not semantic distraction labels.",
+    "limitations": [
+      "No candidate does not mean distraction-free or safe.",
+      "Ordinary caret blinking, notifications and camera movement may be outside this detector.",
+      "Preparation changes picture/audio and may make small teaching labels unreadable.",
+      "Exact edit measurements reference the prepared clip, not the uploaded original.",
+      "This record does not establish learning benefit or accessibility compliance."
+    ]
+  },
+  "actual_original_download_content_disposition": "attachment; filename=\"uploaded-original.webm\"",
+  "actual_original_download_content_type": "video/webm",
+  "original_and_prepared_http_downloads_exact": true,
+  "rescue_pack": {
+    "bytes": 12693731,
+    "sha256": "f9c0541f95058bdd55ec8cae423489cc32d44accb9db0c5dd4747fcc17118589",
+    "members": 31,
+    "all_member_hashes_exact": true,
+    "original_prepared_edited_exact": true,
+    "file_hashes": {
+      "README.txt": {
+        "bytes": 687,
+        "sha256": "08eb9ab1646f81c1cc77bac2082cd3da4afee10a9c9dbfb6c56b5db209e072e2"
+      },
+      "boundary-f00116-control.png": {
+        "bytes": 1274,
+        "sha256": "73230e257a184dcde0e50e8f4a67cfbb8f410dbb194c004f5df0f2d2f463d4f0"
+      },
+      "boundary-f00116-edited.png": {
+        "bytes": 1274,
+        "sha256": "73230e257a184dcde0e50e8f4a67cfbb8f410dbb194c004f5df0f2d2f463d4f0"
+      },
+      "boundary-f00116-original.png": {
+        "bytes": 1274,
+        "sha256": "73230e257a184dcde0e50e8f4a67cfbb8f410dbb194c004f5df0f2d2f463d4f0"
+      },
+      "boundary-f00117-control.png": {
+        "bytes": 1277,
+        "sha256": "571628b9465caab4c5151d7c0a3b209ce9abc165f91feb162b44edf100120436"
+      },
+      "boundary-f00117-edited.png": {
+        "bytes": 1277,
+        "sha256": "571628b9465caab4c5151d7c0a3b209ce9abc165f91feb162b44edf100120436"
+      },
+      "boundary-f00117-original.png": {
+        "bytes": 1277,
+        "sha256": "571628b9465caab4c5151d7c0a3b209ce9abc165f91feb162b44edf100120436"
+      },
+      "boundary-f00205-control.png": {
+        "bytes": 1403,
+        "sha256": "66bb2ae9820d2bd431e5166b6bf82acfcaf8a1c8faa030137edaebe06660a61a"
+      },
+      "boundary-f00205-edited.png": {
+        "bytes": 1407,
+        "sha256": "5ef992e544ff19b17765bd774383a4d5f32cae953d4f47ef91e69d4862f7d6b9"
+      },
+      "boundary-f00205-original.png": {
+        "bytes": 1403,
+        "sha256": "66bb2ae9820d2bd431e5166b6bf82acfcaf8a1c8faa030137edaebe06660a61a"
+      },
+      "boundary-f00206-control.png": {
+        "bytes": 1406,
+        "sha256": "d8bbefae37d10bddecf3287a8d3763edf14ac0824d42eb88318b1f9f380136fe"
+      },
+      "boundary-f00206-edited.png": {
+        "bytes": 1406,
+        "sha256": "d8bbefae37d10bddecf3287a8d3763edf14ac0824d42eb88318b1f9f380136fe"
+      },
+      "boundary-f00206-original.png": {
+        "bytes": 1406,
+        "sha256": "d8bbefae37d10bddecf3287a8d3763edf14ac0824d42eb88318b1f9f380136fe"
+      },
+      "control.mp4": {
+        "bytes": 467099,
+        "sha256": "fb19b2bf49b20812e310d0e1f9104087a42c8bd6617f013a2b1b9df4dcc6fd58"
+      },
+      "edited.mp4": {
+        "bytes": 466949,
+        "sha256": "6d68b9fd6315ef5b2af76976094692a863f9e9f32e3997a8f9df0d69d6342f61"
+      },
+      "frame-review.json": {
+        "bytes": 4909,
+        "sha256": "6362ed88381de83867531a89f084d18f5b63c151f2256d576069e477566d6f89"
+      },
+      "lesson-decision.json": {
+        "bytes": 8963,
+        "sha256": "a9e84218cc7991057378c4263351759ef2da919f3d8261ebcef1c755807de2ac"
+      },
+      "preparation.json": {
+        "bytes": 1338,
+        "sha256": "310ddf492fde104134b2b19f8d7511fb7247a9360eb1029ea6b740fb8cb6cf3d"
+      },
+      "prepared-lesson.mp4": {
+        "bytes": 293172,
+        "sha256": "98a1098a172a31e324c7da394b25d50e519746866c0d2875620b50a5e67d75b6"
+      },
+      "recipe.json": {
+        "bytes": 4523,
+        "sha256": "51904ec8b15807251901254cd02070ed51e6cc0246828c9a04d8c2724dc0fdbb"
+      },
+      "report.json": {
+        "bytes": 74767,
+        "sha256": "fa56f7b15d34ae1bdfcd1d4d65cd5a60358e630b91567cbeab2c78e5478e9cfb"
+      },
+      "report.txt": {
+        "bytes": 16630,
+        "sha256": "517f0af8ff3e49690fb3f4181123602a474566141005f362e5a27419071e2182"
+      },
+      "teaching-r0-f00117-edited.png": {
+        "bytes": 41770,
+        "sha256": "304ea2d68c4b8ca077f86304a9870aac2f564160a923203bd3d10f561d3bccdd"
+      },
+      "teaching-r0-f00117-source.png": {
+        "bytes": 41770,
+        "sha256": "304ea2d68c4b8ca077f86304a9870aac2f564160a923203bd3d10f561d3bccdd"
+      },
+      "teaching-r0-f00202-edited.png": {
+        "bytes": 41824,
+        "sha256": "11d8e823c5ea814164f9a9b5c1f762068f9badd00e6bf10bcda1d8bd8f66c551"
+      },
+      "teaching-r0-f00202-source.png": {
+        "bytes": 41824,
+        "sha256": "11d8e823c5ea814164f9a9b5c1f762068f9badd00e6bf10bcda1d8bd8f66c551"
+      },
+      "teaching-r0-f00205-edited.png": {
+        "bytes": 41880,
+        "sha256": "41531ddc8fe3f0e4f1035250b4d7e504ee8b8d556ab3ec1d674f78348ef7b8cd"
+      },
+      "teaching-r0-f00205-source.png": {
+        "bytes": 41880,
+        "sha256": "41531ddc8fe3f0e4f1035250b4d7e504ee8b8d556ab3ec1d674f78348ef7b8cd"
+      },
+      "teaching-review.json": {
+        "bytes": 4397,
+        "sha256": "604a834062ce8feea972ab0e86dc3b29381980e8670b984149e9ff31dfda5d45"
+      },
+      "uploaded-original.webm": {
+        "bytes": 11074358,
+        "sha256": "c76852045f62eaa4664e2d31976b1cff9d176a8862424d7fc38202558d2f90a0"
+      }
+    },
+    "changed_recipe_report_readable_refused_then_exact_restore": true
+  },
+  "all_twelve_boundary_http_hashes_exact": true,
+  "all_actual_teaching_png_download_hashes_exact": true,
+  "teaching_png_count": 6,
+  "independent_teaching_motion": [
+    {
+      "label": "Repository explanation and code",
+      "xywh": [
+        55,
+        180,
+        560,
+        180
+      ],
+      "ordered_rgb_sequence_sha256": {
+        "source": "b7f5b73cf05def389047598b6a5e74f0ba58f56ee7983d915a619695b3063828",
+        "edited": "b7f5b73cf05def389047598b6a5e74f0ba58f56ee7983d915a619695b3063828"
+      },
+      "changed_pairs_inside_hold": {
+        "source": 8,
+        "edited": 8
+      },
+      "all_selected_source_and_edited_pngs_match_actual_decoded_frames": true
+    }
+  ],
+  "changed_teaching_png_refused_and_restored": true,
+  "changed_teaching_review_receipt_refused_and_restored": true,
+  "independent_encoded_boundary_checks": {
+    "entry": {
+      "selected": {
+        "source": {
+          "mean_absolute_rgb_codes": 0.0,
+          "rms_rgb_codes": 0.0,
+          "maximum_rgb_codes": 0.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 0.0,
+          "rms_rgb_codes": 0.0,
+          "maximum_rgb_codes": 0.0
+        },
+        "passed": true
+      },
+      "influence": {
+        "source": {
+          "mean_absolute_rgb_codes": 0.0,
+          "rms_rgb_codes": 0.0,
+          "maximum_rgb_codes": 0.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 0.0,
+          "rms_rgb_codes": 0.0,
+          "maximum_rgb_codes": 0.0
+        },
+        "passed": true
+      }
+    },
+    "exit": {
+      "selected": {
+        "source": {
+          "mean_absolute_rgb_codes": 49.604166666666664,
+          "rms_rgb_codes": 63.84209034798281,
+          "maximum_rgb_codes": 90.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 1.125,
+          "rms_rgb_codes": 1.224744871391589,
+          "maximum_rgb_codes": 2.0
+        },
+        "passed": true
+      },
+      "influence": {
+        "source": {
+          "mean_absolute_rgb_codes": 5.475,
+          "rms_rgb_codes": 20.283100519069233,
+          "maximum_rgb_codes": 90.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 0.6270833333333333,
+          "rms_rgb_codes": 1.993217666655267,
+          "maximum_rgb_codes": 21.0
+        },
+        "passed": true
+      }
+    },
+    "loop_seam": {
+      "selected": {
+        "source": {
+          "mean_absolute_rgb_codes": 217.70833333333334,
+          "rms_rgb_codes": 217.7671730694658,
+          "maximum_rgb_codes": 224.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 217.70833333333334,
+          "rms_rgb_codes": 217.7671730694658,
+          "maximum_rgb_codes": 224.0
+        },
+        "passed": true
+      },
+      "influence": {
+        "source": {
+          "mean_absolute_rgb_codes": 218.6875,
+          "rms_rgb_codes": 218.73142778302343,
+          "maximum_rgb_codes": 224.0
+        },
+        "edited": {
+          "mean_absolute_rgb_codes": 218.6875,
+          "rms_rgb_codes": 218.73142778302343,
+          "maximum_rgb_codes": 224.0
+        },
+        "passed": true
+      }
+    }
+  },
+  "independent_whole_clip_temporal": {
+    "source": {
+      "whole_clip_activity": 19,
+      "temporal_mean_absolute_sum": 1256.8333333333335,
+      "temporal_pixel_mse_sum": 142195.58333333334,
+      "roi_mean_trace": [
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        134.1875,
+        209.33333333333334,
+        209.33333333333334,
+        209.33333333333334,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        215.29166666666666,
+        255.0,
+        255.0,
+        255.0,
+        255.0,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        221.625,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        222.0,
+        174.3125,
+        173.4375,
+        173.4375,
+        173.4375,
+        173.4375,
+        173.4375,
+        173.4375,
+        173.4375,
+        173.4375,
+        173.4375,
+        173.4375,
+        173.4375,
+        173.4375,
+        173.4375,
+        222.8125,
+        222.8125,
+        222.8125,
+        222.8125,
+        222.8125,
+        222.8125,
+        222.8125,
+        222.8125,
+        222.8125,
+        222.8125,
+        222.8125,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.60416666666666,
+        221.75,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668
+      ]
+    },
+    "edited": {
+      "whole_clip_activity": 13,
+      "temporal_mean_absolute_sum": 968.3333333333334,
+      "temporal_pixel_mse_sum": 118909.25,
+      "roi_mean_trace": [
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        134.1875,
+        209.33333333333334,
+        209.33333333333334,
+        209.33333333333334,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        207.5625,
+        215.29166666666666,
+        255.0,
+        255.0,
+        255.0,
+        255.0,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        223.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        174.375,
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        223.47916666666666,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.875,
+        173.60416666666666,
+        221.75,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        222.5,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        174.125,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        222.9375,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668,
+        22.291666666666668
+      ]
+    },
+    "new_activity_events": 0
+  },
+  "independent_boundaries_not_worse": true,
+  "independent_all_360_teaching_rgb_frames_exact": true,
+  "independent_all_rgb_outside_influence_exact": true,
+  "runtime_manifest_sha256": "20dfbb02970dcfb4d2a8fc0a8414dc900ace3cb16ea75130090cefc12217a8a0"
+}

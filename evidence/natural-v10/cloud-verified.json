@@ -1,0 +1,432 @@
+{
+  "complete": true,
+  "verified_utc": "2026-10-24T20:40:09.867516+00:00",
+  "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+  "task_definition": "default-lesson-rescue:16",
+  "image_digest": "sha256:a154dba16c8ad22a50a1ebcf6ac40f2cf9e00304f6d770db9027d479408a1917",
+  "source_manifest_sha256": "20dfbb02970dcfb4d2a8fc0a8414dc900ace3cb16ea75130090cefc12217a8a0",
+  "browser": {
+    "complete": true,
+    "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+    "job_id": "fb96d695d33d88c70714b76eea574568",
+    "source_manifest_sha256": "20dfbb02970dcfb4d2a8fc0a8414dc900ace3cb16ea75130090cefc12217a8a0",
+    "mobile375": {
+      "client": 360,
+      "inner": 375,
+      "scroll": 360
+    },
+    "layout890": {
+      "client": 875,
+      "inner": 890,
+      "scroll": 875
+    },
+    "proof_images": [
+      {
+        "alt": "Original static PNG crop \u00c2\u00b7 Before edit \u00c2\u00b7 Frame 232 \u00c2\u00b7 7.733333333333333 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00c2\u00b7 Before edit \u00c2\u00b7 Frame 232 \u00c2\u00b7 7.733333333333333 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00c2\u00b7 Before edit \u00c2\u00b7 Frame 232 \u00c2\u00b7 7.733333333333333 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop \u00c2\u00b7 Edit begins \u00c2\u00b7 Frame 233 \u00c2\u00b7 7.766666666666667 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00c2\u00b7 Edit begins \u00c2\u00b7 Frame 233 \u00c2\u00b7 7.766666666666667 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00c2\u00b7 Edit begins \u00c2\u00b7 Frame 233 \u00c2\u00b7 7.766666666666667 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop \u00c2\u00b7 Final edited frame \u00c2\u00b7 Frame 329 \u00c2\u00b7 10.966666666666667 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00c2\u00b7 Final edited frame \u00c2\u00b7 Frame 329 \u00c2\u00b7 10.966666666666667 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00c2\u00b7 Final edited frame \u00c2\u00b7 Frame 329 \u00c2\u00b7 10.966666666666667 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop \u00c2\u00b7 Original frames resume \u00c2\u00b7 Frame 330 \u00c2\u00b7 11 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00c2\u00b7 Original frames resume \u00c2\u00b7 Frame 330 \u00c2\u00b7 11 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00c2\u00b7 Original frames resume \u00c2\u00b7 Frame 330 \u00c2\u00b7 11 s \u00c2\u00b7 crop [178, 244, 34, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Upload instructions and file metadata \u00c2\u00b7 source \u00c2\u00b7 frame 233",
+        "loaded": true
+      },
+      {
+        "alt": "Upload instructions and file metadata \u00c2\u00b7 edited \u00c2\u00b7 frame 233",
+        "loaded": true
+      },
+      {
+        "alt": "Upload instructions and file metadata \u00c2\u00b7 source \u00c2\u00b7 frame 250",
+        "loaded": true
+      },
+      {
+        "alt": "Upload instructions and file metadata \u00c2\u00b7 edited \u00c2\u00b7 frame 250",
+        "loaded": true
+      },
+      {
+        "alt": "Upload instructions and file metadata \u00c2\u00b7 source \u00c2\u00b7 frame 329",
+        "loaded": true
+      },
+      {
+        "alt": "Upload instructions and file metadata \u00c2\u00b7 edited \u00c2\u00b7 frame 329",
+        "loaded": true
+      },
+      {
+        "alt": "Form text before caret influence \u00c2\u00b7 source \u00c2\u00b7 frame 233",
+        "loaded": true
+      },
+      {
+        "alt": "Form text before caret influence \u00c2\u00b7 edited \u00c2\u00b7 frame 233",
+        "loaded": true
+      },
+      {
+        "alt": "Form text before caret influence \u00c2\u00b7 source \u00c2\u00b7 frame 250",
+        "loaded": true
+      },
+      {
+        "alt": "Form text before caret influence \u00c2\u00b7 edited \u00c2\u00b7 frame 250",
+        "loaded": true
+      },
+      {
+        "alt": "Form text before caret influence \u00c2\u00b7 source \u00c2\u00b7 frame 329",
+        "loaded": true
+      },
+      {
+        "alt": "Form text before caret influence \u00c2\u00b7 edited \u00c2\u00b7 frame 329",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining form and controls \u00c2\u00b7 source \u00c2\u00b7 frame 233",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining form and controls \u00c2\u00b7 edited \u00c2\u00b7 frame 233",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining form and controls \u00c2\u00b7 source \u00c2\u00b7 frame 250",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining form and controls \u00c2\u00b7 edited \u00c2\u00b7 frame 250",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining form and controls \u00c2\u00b7 source \u00c2\u00b7 frame 329",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining form and controls \u00c2\u00b7 edited \u00c2\u00b7 frame 329",
+        "loaded": true
+      },
+      {
+        "alt": "Below the selected field \u00c2\u00b7 source \u00c2\u00b7 frame 233",
+        "loaded": true
+      },
+      {
+        "alt": "Below the selected field \u00c2\u00b7 edited \u00c2\u00b7 frame 233",
+        "loaded": true
+      },
+      {
+        "alt": "Below the selected field \u00c2\u00b7 source \u00c2\u00b7 frame 250",
+        "loaded": true
+      },
+      {
+        "alt": "Below the selected field \u00c2\u00b7 edited \u00c2\u00b7 frame 250",
+        "loaded": true
+      },
+      {
+        "alt": "Below the selected field \u00c2\u00b7 source \u00c2\u00b7 frame 329",
+        "loaded": true
+      },
+      {
+        "alt": "Below the selected field \u00c2\u00b7 edited \u00c2\u00b7 frame 329",
+        "loaded": true
+      }
+    ],
+    "planBeforeConsent": {
+      "alternateLoaded": true,
+      "consent": false,
+      "consentEnabled": true,
+      "fit": {
+        "client": 360,
+        "inner": 375,
+        "scroll": 360
+      },
+      "generateDisabled": true,
+      "overlayLoaded": true,
+      "plan": "fluence \u00c2\u00b7 [0, 256, 190, 104]\nRemove\nEdit\n3. Remaining form and controls \u00c2\u00b7 [200, 256, 440, 104]\nRemove\nEdit\n4. Below the selected field \u00c2\u00b7 [190, 274, 10, 86]\nRemove\nEdit\nArea name\nX\nY\nWidth\nHeight\n\nRetiming requires zero decoded RGB error in every declared area and refuses the edited download on failure. With no declared area, every outside-mask pixel must be exact. Older modes retain their original mean\u00e2\u2030\u00a40.1, p99\u00e2\u2030\u00a41, max\u00e2\u2030\u00a43 criteria. None of these checks establishes readability.\n\nCheck edit planAdd area to list Clear all areas\nHold the observed brightness state from frame 233 steady inside this interval. Detected region: [194, 260, 2, 10]; detected interval: frames 233\u00e2\u20ac\u201c329. Check every frame of: Upload instructions and file metadata, Form text before caret influence, Remaining form and controls, Below the selected field. Generate only after reviewing this plan. The encoded result can still be refused.\nI checked that the prepared teaching detail is readable, the selected activity can change without hiding teaching information, and the saved teaching areas cover what must stay unchanged. I want to generate this edit for comparison.\nGenerate comparison\n\nGenerating a comparison does not accept the output for use. Review the encoded measurements before choosing an output.\n\nLeave unchanged",
+      "saved": "1. Upload instructions and file metadata \u00c2\u00b7 [0, 0, 640, 256]\nRemove\nEdit\n2. Form text before caret influence \u00c2\u00b7 [0, 256, 190, 104]\nRemove\nEdit\n3. Remaining form and controls \u00c2\u00b7 [200, 256, 440, 104]\nRemove\nEdit\n4. Below the selected field \u00c2\u00b7 [190, 274, 10, 86]\nRemove\nEdit"
+    },
+    "noPlayback": true,
+    "recoveryPending": false,
+    "recovery": {
+      "artifacts": [
+        "/api/jobs/fb96d695d33d88c70714b76eea574568/rescue-pack.zip",
+        "/api/jobs/fb96d695d33d88c70714b76eea574568/download/original.mp4",
+        "/api/jobs/fb96d695d33d88c70714b76eea574568/download/edited.mp4",
+        "/api/jobs/fb96d695d33d88c70714b76eea574568/download/control.mp4",
+        "/api/jobs/fb96d695d33d88c70714b76eea574568/download/report.json",
+        "/api/jobs/fb96d695d33d88c70714b76eea574568/download/recipe.json",
+        "/api/jobs/fb96d695d33d88c70714b76eea574568/download/report.txt",
+        "/api/jobs/fb96d695d33d88c70714b76eea574568/intake/upload",
+        "/api/jobs/fb96d695d33d88c70714b76eea574568/intake/receipt",
+        "/api/jobs/fb96d695d33d88c70714b76eea574568/intake/decision"
+      ],
+      "notice": true,
+      "status": "upload-assistant.ogv\n\nProcessing complete\nAnalyze\nReview\nEncode\nResult\n\nEncoding and measurements are complete. Even passing numeric checks still requires creator review.\n\nTeaching detail check: 1024 \u00c3\u2014 720 source \u00e2\u2020\u2019 640 \u00c3\u2014 360 review. Check t"
+    }
+  },
+  "rescue_pack": {
+    "filename": "Frame-Review-fb96d695-Verified-Rescue-Pack.zip",
+    "bytes": 13778958,
+    "sha256": "934427207765e762fc095d9732094c2c7d170419d36662c0871ea30d7b7846b6",
+    "members": 49,
+    "files": {
+      "README.txt": {
+        "bytes": 687,
+        "sha256": "08eb9ab1646f81c1cc77bac2082cd3da4afee10a9c9dbfb6c56b5db209e072e2"
+      },
+      "boundary-f00232-control.png": {
+        "bytes": 2311,
+        "sha256": "1fb5f62d7e3322d8a4d9de2120f889de52c301806e4cece7fc920c839f01a86f"
+      },
+      "boundary-f00232-edited.png": {
+        "bytes": 2311,
+        "sha256": "1fb5f62d7e3322d8a4d9de2120f889de52c301806e4cece7fc920c839f01a86f"
+      },
+      "boundary-f00232-original.png": {
+        "bytes": 2311,
+        "sha256": "1fb5f62d7e3322d8a4d9de2120f889de52c301806e4cece7fc920c839f01a86f"
+      },
+      "boundary-f00233-control.png": {
+        "bytes": 2311,
+        "sha256": "1fb5f62d7e3322d8a4d9de2120f889de52c301806e4cece7fc920c839f01a86f"
+      },
+      "boundary-f00233-edited.png": {
+        "bytes": 2311,
+        "sha256": "1fb5f62d7e3322d8a4d9de2120f889de52c301806e4cece7fc920c839f01a86f"
+      },
+      "boundary-f00233-original.png": {
+        "bytes": 2311,
+        "sha256": "1fb5f62d7e3322d8a4d9de2120f889de52c301806e4cece7fc920c839f01a86f"
+      },
+      "boundary-f00329-control.png": {
+        "bytes": 2167,
+        "sha256": "3b680c50120a6d8bbd30a47012038ac6cb468c81f8d7857642c0c2549168548f"
+      },
+      "boundary-f00329-edited.png": {
+        "bytes": 2181,
+        "sha256": "423ac7f53c8e13fbebcfa5d5d7771d5afe7a94b30a85250394f387befd3cbacb"
+      },
+      "boundary-f00329-original.png": {
+        "bytes": 2167,
+        "sha256": "3b680c50120a6d8bbd30a47012038ac6cb468c81f8d7857642c0c2549168548f"
+      },
+      "boundary-f00330-control.png": {
+        "bytes": 2188,
+        "sha256": "db109a2571e7e8fd14abb20da9bfe2033b18ab006db10ab2d25af7a967f72a2c"
+      },
+      "boundary-f00330-edited.png": {
+        "bytes": 2188,
+        "sha256": "db109a2571e7e8fd14abb20da9bfe2033b18ab006db10ab2d25af7a967f72a2c"
+      },
+      "boundary-f00330-original.png": {
+        "bytes": 2188,
+        "sha256": "db109a2571e7e8fd14abb20da9bfe2033b18ab006db10ab2d25af7a967f72a2c"
+      },
+      "control.mp4": {
+        "bytes": 259802,
+        "sha256": "5748a968bdce21b32da78949a9a8ae4fd09fb59d94107de1f7389cf3ad22399e"
+      },
+      "edited.mp4": {
+        "bytes": 259708,
+        "sha256": "97310fcc314affbc74da4c3b3d5dd02b38c9878bf66cc8e39c1d8ccb1e656394"
+      },
+      "frame-review.json": {
+        "bytes": 4913,
+        "sha256": "6be46f8c53bb24062f8d8b4c7c191dd312930aa88a325767a4fc62c0422381e3"
+      },
+      "lesson-decision.json": {
+        "bytes": 12058,
+        "sha256": "c31aa454c525765a60d34b564659fb295d096c7b55f877f796b3d985ef259899"
+      },
+      "preparation.json": {
+        "bytes": 1376,
+        "sha256": "427ecf1a6d13f9555e4154e40afab8f5e0e449674385df2a834113b4575e5d83"
+      },
+      "prepared-lesson.mp4": {
+        "bytes": 213614,
+        "sha256": "93845b704ff338478ab0f6a300ea651dbce63906197069d757d1d142169e5380"
+      },
+      "recipe.json": {
+        "bytes": 4945,
+        "sha256": "9b3aa650cbf944ef692f3d880ab851d8538208b7fc43f0af031d743ff6d0d528"
+      },
+      "report.json": {
+        "bytes": 118037,
+        "sha256": "c547b11341b31d639dacd679fb6fe51385ed6490f8eb906758298a1560f11f84"
+      },
+      "report.txt": {
+        "bytes": 31112,
+        "sha256": "d6e1b18cca5c358a290aeea61fd8636b11f4905aeb02d71d8565aecb45bb1340"
+      },
+      "teaching-r0-f00233-edited.png": {
+        "bytes": 88322,
+        "sha256": "53e348f4f89e2952c87b4caa802d80582bd2bf64f1dd81c42f0b49e59ddd54de"
+      },
+      "teaching-r0-f00233-source.png": {
+        "bytes": 88322,
+        "sha256": "53e348f4f89e2952c87b4caa802d80582bd2bf64f1dd81c42f0b49e59ddd54de"
+      },
+      "teaching-r0-f00250-edited.png": {
+        "bytes": 87692,
+        "sha256": "7b8f99db442f05aa4ed8807be7b40ece807ca16d7a4285e8be831b9f7a8aad1b"
+      },
+      "teaching-r0-f00250-source.png": {
+        "bytes": 87692,
+        "sha256": "7b8f99db442f05aa4ed8807be7b40ece807ca16d7a4285e8be831b9f7a8aad1b"
+      },
+      "teaching-r0-f00329-edited.png": {
+        "bytes": 87670,
+        "sha256": "b0a4d7e0731eb3d833853d0e64a53040b51ef275a09a2b62ffb9e8a92d3e5a52"
+      },
+      "teaching-r0-f00329-source.png": {
+        "bytes": 87670,
+        "sha256": "b0a4d7e0731eb3d833853d0e64a53040b51ef275a09a2b62ffb9e8a92d3e5a52"
+      },
+      "teaching-r1-f00233-edited.png": {
+        "bytes": 5852,
+        "sha256": "ffebba8960b6d230cbc0baea29d525a13639839e41e182d8431503bdd8b119e9"
+      },
+      "teaching-r1-f00233-source.png": {
+        "bytes": 5852,
+        "sha256": "ffebba8960b6d230cbc0baea29d525a13639839e41e182d8431503bdd8b119e9"
+      },
+      "teaching-r1-f00250-edited.png": {
+        "bytes": 5488,
+        "sha256": "648c631eed3b8a4f64ae4017cd23a6e572162e05497304da8df89e5120b20c64"
+      },
+      "teaching-r1-f00250-source.png": {
+        "bytes": 5488,
+        "sha256": "648c631eed3b8a4f64ae4017cd23a6e572162e05497304da8df89e5120b20c64"
+      },
+      "teaching-r1-f00329-edited.png": {
+        "bytes": 5482,
+        "sha256": "4309286e2c0f7cc713c3ef4d90151bbc862c7c9b2aa3b71cf967324343754651"
+      },
+      "teaching-r1-f00329-source.png": {
+        "bytes": 5482,
+        "sha256": "4309286e2c0f7cc713c3ef4d90151bbc862c7c9b2aa3b71cf967324343754651"
+      },
+      "teaching-r2-f00233-edited.png": {
+        "bytes": 13333,
+        "sha256": "afbcb4221fdbec6d8ea1b0d0a494d5ab29e63b3f8602aadbe6a52b8bd7025dd3"
+      },
+      "teaching-r2-f00233-source.png": {
+        "bytes": 13333,
+        "sha256": "afbcb4221fdbec6d8ea1b0d0a494d5ab29e63b3f8602aadbe6a52b8bd7025dd3"
+      },
+      "teaching-r2-f00250-edited.png": {
+        "bytes": 12238,
+        "sha256": "08c3908f634913da1e68d23cce79aaeb3c06eaca24b7a0157e494b4b38d35915"
+      },
+      "teaching-r2-f00250-source.png": {
+        "bytes": 12238,
+        "sha256": "08c3908f634913da1e68d23cce79aaeb3c06eaca24b7a0157e494b4b38d35915"
+      },
+      "teaching-r2-f00329-edited.png": {
+        "bytes": 12945,
+        "sha256": "6dad16f89bf8be04421df0f191f7ef593a60b38b7dc1aba266c857ddaf3616d7"
+      },
+      "teaching-r2-f00329-source.png": {
+        "bytes": 12945,
+        "sha256": "6dad16f89bf8be04421df0f191f7ef593a60b38b7dc1aba266c857ddaf3616d7"
+      },
+      "teaching-r3-f00233-edited.png": {
+        "bytes": 669,
+        "sha256": "6496271ace20532dc7ef5fce0cb96d310b0228e7cdfd3619dc9e6a79eed48044"
+      },
+      "teaching-r3-f00233-source.png": {
+        "bytes": 669,
+        "sha256": "6496271ace20532dc7ef5fce0cb96d310b0228e7cdfd3619dc9e6a79eed48044"
+      },
+      "teaching-r3-f00250-edited.png": {
+        "bytes": 545,
+        "sha256": "cf57875da1c476af512f56967ed038a4696b2896b825787b5d32679fe5ba8025"
+      },
+      "teaching-r3-f00250-source.png": {
+        "bytes": 545,
+        "sha256": "cf57875da1c476af512f56967ed038a4696b2896b825787b5d32679fe5ba8025"
+      },
+      "teaching-r3-f00329-edited.png": {
+        "bytes": 545,
+        "sha256": "cf57875da1c476af512f56967ed038a4696b2896b825787b5d32679fe5ba8025"
+      },
+      "teaching-r3-f00329-source.png": {
+        "bytes": 545,
+        "sha256": "cf57875da1c476af512f56967ed038a4696b2896b825787b5d32679fe5ba8025"
+      },
+      "teaching-review.json": {
+        "bytes": 15145,
+        "sha256": "ba7c902667f7dc088655bd3ed9e71568a69e9481cf77fd419bc64d09bf58ffe2"
+      },
+      "uploaded-original.ogv": {
+        "bytes": 12175035,
+        "sha256": "f3fb18ff88451ed8e44b3a4ac080474a0d108cc3b08af3d0f8e3013d65af2c61"
+      }
+    },
+    "all_member_hashes_exact": true,
+    "required_artifacts": [
+      "control.mp4",
+      "edited.mp4",
+      "lesson-decision.json",
+      "preparation.json",
+      "prepared-lesson.mp4",
+      "recipe.json",
+      "report.json",
+      "report.txt",
+      "uploaded-original.ogv"
+    ],
+    "all_native_media_and_png_bytes_identical": true
+  },
+  "actual_browser_downloads_verified": 1,
+  "individual_download_scope": "One current browser ZIP contains all nine required artifact roles plus actual proofs and hashes. Four pre-pack v10 individual downloads were separately verified; later individual callbacks timed out. No claim that all nine individual browser callbacks passed.",
+  "canonical_approved_recipe_hash_exact": true,
+  "cloud_acceptance_checks_match_native": true,
+  "cloud_original_prepared_edited_hashes_equal_independent_native": true,
+  "full_summary_exact": true,
+  "cross_host_numeric_diagnostic_differences": [],
+  "unowned_known_job_statuses": {
+    "/": 404,
+    "/download/report.json": 404,
+    "/download/edited.mp4": 404,
+    "/intake/upload": 404,
+    "/steady/steady-0-reference.png": 404,
+    "/rescue-pack.zip": 404
+  },
+  "browser_scope": "Final Brave original French upload, four manual areas and explicit export; all36 static proofs, actual375/890 fit, one complete verified rescue-pack download and reload recovery. Guided Joomla tested separately. No media playback or video changes.",
+  "cross_host_comparison_scope": "Numeric diagnostic differences are retained without claiming exact full summaries. Independent decoded native checks transfer through byte-identical downloaded media/PNG files. No encoder/export threshold was changed."
+}

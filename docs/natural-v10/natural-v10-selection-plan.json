@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-24T18:09:39.506745+00:00",
+  "sources": [
+    {
+      "id": "translate-one",
+      "title": "MediaWiki Translate Extenstion Tutorial 1.webm"
+    },
+    {
+      "id": "translate-two",
+      "title": "MediaWiki Translate Extenstion Tutorial 2.webm"
+    },
+    {
+      "id": "wikibase-landvoc",
+      "title": "Create a Wikibase for LandVoc.webm"
+    },
+    {
+      "id": "upload-assistant",
+      "title": "Tutoriel de l'assistant d'import.ogv"
+    },
+    {
+      "id": "commons-registration",
+      "title": "Videotutori\u00e1l- registrace na Commons.ogv"
+    },
+    {
+      "id": "video2commons",
+      "title": "Verwendung des Tools video2commons.webm"
+    }
+  ],
+  "selection": "Six new wiki editing/upload/translation instructional recordings selected from official Commons metadata before viewing or scoring these originals. Exploratory follow-up; no representative recall.",
+  "rule": "For each original, prepare 12 seconds at floor(min(duration-12,600)*q) for q=.25,.5,.75. This covers distinct points in the app-supported first ten minutes, avoiding duplicated capped timestamps on long recordings. Retain all 12 outcomes. Never add a defect. Inspect proposals for teaching meaning before independent HTTP export qualification.",
+  "baseline_manifest_sha256": "1f6930b7db9a44b866c4e2b6b25efcf9ca2dbfd2629354777aff03bad55b853c",
+  "phase": "Frozen v9 baseline; later source-driven fixes are development, not held-out validation."
+}

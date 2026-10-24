@@ -1,0 +1,5 @@
+{
+  "created_utc": "2026-10-24T18:14:42.301742+00:00",
+  "selection": "Additional preselected time grid in the same six new recordings, frozen before inspecting the initial 18-window outcomes. No defect added, no population or held-out claim.",
+  "rule": "Prepare 12 seconds at floor(min(duration-12,600)*q) for q=.10,.35,.65,.90. Preserve all24 outcomes; combine with the separate first18 as42 windows, not42 independent sources."
+}

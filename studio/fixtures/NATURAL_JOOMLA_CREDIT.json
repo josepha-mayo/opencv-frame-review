@@ -1,0 +1,86 @@
+{
+  "schema": "natural-lesson-example-v1",
+  "id": "joomla",
+  "label": "Joomla installation reading pause",
+  "author": "VolodyA! V Anarhist",
+  "title": "Joomla Installation.vorb.theo.ogv",
+  "page": "https://commons.wikimedia.org/wiki/File:Joomla_Installation.vorb.theo.ogv",
+  "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Joomla_Installation.vorb.theo.ogv",
+  "license": "Free Art License (FAL) as listed",
+  "license_url": "http://artlibre.org/licence/lal/en",
+  "original_sha256": "dcf4e35db5ada861d44ef0313083710c8397313885bc38afc901d8472475f83a",
+  "source_original_bytes": 6551725,
+  "excerpt_start_seconds": 60,
+  "excerpt_duration_seconds": 12,
+  "prepared_sample_sha256": "241896d9fe454ec8f036446e753c13c0942c5eadc74e728dac2c18a2cc34a377",
+  "authored_defect": false,
+  "derivation": "Extracted seconds 60-72 from the real Ogg/Theora original, resized/letterboxed to 640x360 and converted to 30 fps H.264 with mono AAC once. No defect was added. Original-upload qualification is separate; this prepared example repeats that source case. Prepared excerpt adaptations retain the listed Free Art License and attribution.",
+  "recommended_teaching_areas": [
+    {
+      "label": "Commands and installation output",
+      "xywh": [
+        0,
+        0,
+        640,
+        336
+      ]
+    },
+    {
+      "label": "Prompt before caret",
+      "xywh": [
+        0,
+        336,
+        120,
+        24
+      ]
+    },
+    {
+      "label": "Remaining prompt line",
+      "xywh": [
+        136,
+        336,
+        504,
+        24
+      ]
+    }
+  ],
+  "notice": "The terminal command and permissions output remain while a stationary root-prompt caret blinks. Inspect both states; its usefulness is a creator judgment, not automatic semantic detection.",
+  "reading_pause_guide": {
+    "candidate_bbox": [
+      124,
+      340,
+      8,
+      12
+    ],
+    "focus": "Keep the already-written commands, installation output and prompt flanks while reviewing one idle root-prompt blink.",
+    "teaching_regions": [
+      {
+        "label": "Commands and installation output",
+        "xywh": [
+          0,
+          0,
+          640,
+          336
+        ]
+      },
+      {
+        "label": "Prompt before caret",
+        "xywh": [
+          0,
+          336,
+          120,
+          24
+        ]
+      },
+      {
+        "label": "Remaining prompt line",
+        "xywh": [
+          136,
+          336,
+          504,
+          24
+        ]
+      }
+    ]
+  }
+}

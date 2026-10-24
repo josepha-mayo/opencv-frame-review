@@ -18,6 +18,15 @@ from common import write_json
 
 
 class CloudHTTP(unittest.TestCase):
+    def test_rescue_pack_enforces_owner_state_and_single_pack_bound(self):
+        owner='b'*64;jid,_=self.seed(owner,status='review');url='/api/jobs/'+jid+'/rescue-pack.zip'
+        for cookie in ('','creator_session='+'c'*64):
+            self.assertEqual(self.request(url,headers={'Cookie':cookie})[0],404)
+        self.assertEqual(self.request(url,headers={'Cookie':'creator_session='+owner})[0],409)
+        self.assertTrue(self.server.manager.pack_lock.acquire(blocking=False))
+        try:self.assertEqual(self.request(url,headers={'Cookie':'creator_session='+owner})[0],409)
+        finally:self.server.manager.pack_lock.release()
+
     def test_natural_sample_is_owned_and_never_approved_by_its_button(self):
         status,headers,body=self.request('/api/profile')
         token=json.loads(body)['csrf_token']
@@ -40,7 +49,7 @@ class CloudHTTP(unittest.TestCase):
         owner=headers['Set-Cookie'].split(';')[0]
         post_headers={'Cookie':owner,'X-App-Token':json.loads(body)['csrf_token']}
         with patch.object(self.server.manager.pool,'submit'):
-            for example in ('jupyter','npm','gentoo'):
+            for example in ('jupyter','npm','gentoo','joomla'):
                 status,_,body=self.request('/api/natural-demo',method='POST',body=json.dumps({'example':example}),headers=post_headers)
                 self.assertEqual(status,202)
                 job=json.loads(body);folder=self.server.manager.jobpath(job['id'])

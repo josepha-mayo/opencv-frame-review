@@ -163,7 +163,7 @@ def plan(folder, analysis, detection, body, sha, validate_regions):
     regions = validate_regions(body.get('protected_regions', []), [h, w], influence_runs)
     if not regions:
         raise ValueError('Mark at least one teaching area before steadying a detail.')
-    recipe = {'export_mode': MODE, 'candidate_id': candidate['id'], 'input_profile': analysis['input_profile'],
+    recipe = {'export_mode': MODE, 'sample_mapping':'observed-luma-source-chroma-v2', 'candidate_id': candidate['id'], 'input_profile': analysis['input_profile'],
               'input_sha256': analysis['input_sha256'], 'prediction_sha256': analysis['prediction_sha256'],
               'steady_analysis_sha256': sha(folder/'steady-analysis.json'),
               'implementation_sha256': sha(__file__), 'proposal': candidate,
@@ -171,7 +171,7 @@ def plan(folder, analysis, detection, body, sha, validate_regions):
               'export_implementation_sha256': sha(Path(__file__).with_name('steady_export.py')),
               'teaching_implementation_sha256': sha(Path(__file__).with_name('teaching_motion.py')),
               'protected_regions': regions, 'reference_frame': candidate['reference_frame'],
-              'scope': 'Hold the more contrasting observed state of this stationary two-state detail only during the proposed interval. Native samples outside the box, all frames outside the interval and decoded RGB outside the influence area must remain exact.'}
+              'scope': 'Hold selected observed luma samples only during the proposed interval; keep every original chroma sample. Native samples and decoded RGB outside the selected box, all frames outside the interval and every declared teaching RGB frame must remain exact. Small color variations inside the selected box can remain.'}
     return {'candidate_id': candidate['id'], 'prediction_sha256': analysis['prediction_sha256'],
             'export_mode': MODE, 'protected_regions': regions, 'recipe': recipe,
             'recipe_sha256': hashlib.sha256(canonical(recipe)).hexdigest()}

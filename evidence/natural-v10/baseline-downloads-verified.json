@@ -1,0 +1,53 @@
+{
+  "complete": true,
+  "scope": "Actual Brave v9 baseline artifact files; downloaded source/prepared/edited bytes equal independent native v9 original-source qualification. No playback or new v10 qualification claimed.",
+  "files": {
+    "Report JSON": {
+      "filename": "report (31).json",
+      "bytes": 102020,
+      "sha256": "7c26b2a78d3412d1ed6a31b0768b836c16da4991bc08b58027d703d46374a73b"
+    },
+    "Recipe JSON": {
+      "filename": "recipe (20).json",
+      "bytes": 4781,
+      "sha256": "2c08a10b56c454445b941cf9c7dce917636a07e0642c14a4f193f7b8f07ca156"
+    },
+    "Edited comparison": {
+      "filename": "edited (28).mp4",
+      "bytes": 391891,
+      "sha256": "206dd05d07006e7cc714159f63be9d44f67d9f518715db75a785344e5c40f655"
+    },
+    "Prepared lesson clip": {
+      "filename": "original (22).mp4",
+      "bytes": 271876,
+      "sha256": "241896d9fe454ec8f036446e753c13c0942c5eadc74e728dac2c18a2cc34a377"
+    },
+    "Uploaded original": {
+      "filename": "uploaded-original (8).bin",
+      "bytes": 6551725,
+      "sha256": "dcf4e35db5ada861d44ef0313083710c8397313885bc38afc901d8472475f83a"
+    },
+    "Preparation receipt": {
+      "filename": "preparation (14).json",
+      "bytes": 1374,
+      "sha256": "ee86e07c73407ca01fdc17d0174ca1e1062e6d7c794108dc2c9a6adcb11856f8"
+    },
+    "Lesson decision record": {
+      "filename": "lesson-decision (14).json",
+      "bytes": 11080,
+      "sha256": "535de684fd8fa1963f4c2e64322773dd4a3b2c72fd47e7de4a89fd7c9e6420e3"
+    },
+    "Unchanged re encode control": {
+      "filename": "control.mp4",
+      "bytes": 392602,
+      "sha256": "d5cbbc442bd8f5a9cf35ffdb490f2df4dea18211d7590d7dd37bc97ef8266cac"
+    },
+    "Readable report": {
+      "filename": "report.txt",
+      "bytes": 26013,
+      "sha256": "ed2ff2a997c493d8783e4bb83812ca9a21319347ff4043b030907422bc3bbd62"
+    }
+  },
+  "reported_checks_pass": true,
+  "canonical_approved_recipe_hash_exact": true
+}

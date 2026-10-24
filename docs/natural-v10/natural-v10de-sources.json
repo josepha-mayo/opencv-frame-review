@@ -1,0 +1,34 @@
+[
+  {
+    "id": "git-basics-two",
+    "filename": "git-basics-two.webm",
+    "title": "Git Basics 02 - Was ist Git (Deutsch).webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Git_Basics_02_-_Was_ist_Git_(Deutsch).webm",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Git_Basics_02_-_Was_ist_Git_%28Deutsch%29.webm",
+    "bytes": 11204523,
+    "sha256": "dd235f5be8b91aabb5c94d3d94a9b6ad9421109046f45009972f47223e018f3a",
+    "commons_sha1": "ffef222e18c6bbf1caf54d894e8da121e4863853",
+    "artist": "GitHub (original video)\nVbachem (German adaptation, audio production and video editing)\nAI-assisted translation: ChatGPT\nGerman speech synthesis: Piper TTS (Thorsten voice model)",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "credit": "This file was derived from:  Git Basics no. 2 - What is Git.webm\nOriginal tutorial: git-scm.com; Vimeo (published 2012-05-01).",
+    "fetched_utc": "2026-10-24T18:34:16.598613+00:00",
+    "rights_scope": "Official Commons metadata as listed; imported-license review not independently verified, no endorsement or independent clearance."
+  },
+  {
+    "id": "git-basics-three",
+    "filename": "git-basics-three.webm",
+    "title": "Git Basics 03 - Erste Schritte mit Git (Deutsch).webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Git_Basics_03_-_Erste_Schritte_mit_Git_(Deutsch).webm",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Git_Basics_03_-_Erste_Schritte_mit_Git_%28Deutsch%29.webm",
+    "bytes": 4876075,
+    "sha256": "948db014cd02b1438a8a821bd895bda725aaba1f6ad0196f14adb472a267f311",
+    "commons_sha1": "efdacc39896e4da0b30602476a605e5103cf953b",
+    "artist": "GitHub (original video)\nVbachem (German adaptation, audio production and video editing)\nAI-assisted translation: ChatGPT\nGerman speech synthesis: Piper TTS (Thorsten voice model)",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "credit": "This file was derived from:  Git Basics no. 3 - Get Going.webm\nOriginal tutorial: git-scm.com; Vimeo (published 2012-05-03).",
+    "fetched_utc": "2026-10-24T18:34:19.228791+00:00",
+    "rights_scope": "Official Commons metadata as listed; imported-license review not independently verified, no endorsement or independent clearance."
+  }
+]

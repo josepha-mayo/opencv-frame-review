@@ -1,0 +1,27 @@
+{
+  "parent_image_id": "sha256:af469ef97a9f6f7b30c652dce532fcacbfcf79dd3785e0328f8ee0f23e8905fa",
+  "parent_runtime_manifest_sha256": "1f6930b7db9a44b866c4e2b6b25efcf9ca2dbfd2629354777aff03bad55b853c",
+  "source_manifest_sha256": "20dfbb02970dcfb4d2a8fc0a8414dc900ace3cb16ea75130090cefc12217a8a0",
+  "changed_runtime_files": [
+    "studio/fixtures/natural-joomla.mp4",
+    "studio/fixtures/NATURAL_JOOMLA_CREDIT.json",
+    "studio/lesson_intake.py",
+    "studio/prepare_worker.py",
+    "studio/rescue_pack.py",
+    "studio/static/app.js",
+    "studio/static/index.html",
+    "studio/static/styles.css",
+    "studio/steady_detail.py",
+    "studio/steady_export.py",
+    "studio/tests/integration_natural_examples.py",
+    "studio/tests/integration_steady_detail.py",
+    "studio/tests/test_cloud.py",
+    "studio/tests/test_lesson_intake.py",
+    "studio/tests/test_rescue_pack.py",
+    "studio/tests/test_steady_detail.py"
+  ],
+  "source_files": 117,
+  "build_method": "Application/example layer on exact qualified v9 parent; not a new cold dependency rebuild.",
+  "image": "opencv-creator:guided-v10-pack",
+  "image_id": "sha256:a154dba16c8ad22a50a1ebcf6ac40f2cf9e00304f6d770db9027d479408a1917"
+}
