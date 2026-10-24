@@ -15,11 +15,13 @@ sys.path.insert(0, str(APP))
 import server as backend
 from prepare_worker import MAX_UPLOAD, parameters
 import steady_detail
+from lesson_guides import guide_for
 from protected_regions import validate_regions
 
 NATURAL_EXAMPLES = {'terminal': ('natural-terminal.mp4', 'NATURAL_TERMINAL_CREDIT.json'),
                     'jupyter': ('natural-jupyter.mp4', 'NATURAL_JUPYTER_CREDIT.json'),
-                    'npm': ('natural-npm.mp4', 'NATURAL_NPM_CREDIT.json')}
+                    'npm': ('natural-npm.mp4', 'NATURAL_NPM_CREDIT.json'),
+                    'gentoo': ('natural-gentoo.mp4', 'NATURAL_GENTOO_CREDIT.json')}
 
 
 class LessonManager(backend.Manager):
@@ -249,6 +251,21 @@ class LessonManager(backend.Manager):
                 candidate['overlay_url'] = f'/api/jobs/{jid}/steady/{item["id"]}-reference.png'
                 candidate['alternate_url'] = f'/api/jobs/{jid}/steady/{item["id"]}-alternate.png'
                 out['candidates'].append(candidate)
+        if out.get('input_sha256') and out.get('candidates'):
+            guides=[]
+            try:
+                manifest=backend.read_json(STUDIO/'BUILD_HASHES.json')['files']
+                profile=backend.read_json(folder/'analysis.json')['input_profile']
+                for _,credit_name in NATURAL_EXAMPLES.values():
+                    raw=backend.bounded_regular_bytes(STUDIO/'fixtures'/credit_name,128*1024)
+                    if hashlib.sha256(raw).hexdigest()!=manifest['studio/fixtures/'+credit_name]:raise ValueError('Example guide metadata changed.')
+                    credit=json.loads(raw)
+                    for candidate in out['candidates']:
+                        guide=guide_for(out['input_sha256'],candidate,credit,(profile['height'],profile['width']))
+                        if guide:guides.append(guide)
+                out['teaching_guides']=guides
+            except (ValueError,KeyError,OSError) as error:
+                out['teaching_guide_error']=str(error)
         preparation = self.preparation(jid)
         if preparation:
             out['preparation'] = preparation
@@ -307,12 +324,15 @@ class LessonHandler(backend.Handler):
         samples = {'/api/samples/natural-terminal.mp4':('fixtures/natural-terminal.mp4','video/mp4','natural-terminal-prepared-excerpt.mp4'),
                    '/api/samples/natural-terminal.png':('static/natural-terminal.png','image/png',None),
                    '/api/samples/natural-terminal-credit.json':('fixtures/NATURAL_TERMINAL_CREDIT.json','application/json','natural-terminal-provenance.json')}
-        for example in ('jupyter', 'npm'):
+        for example in ('jupyter', 'npm', 'gentoo'):
             filename, credit = NATURAL_EXAMPLES[example]
             samples['/api/samples/'+filename] = ('fixtures/'+filename,'video/mp4',filename)
             samples['/api/samples/natural-'+example+'-credit.json'] = ('fixtures/'+credit,'application/json','natural-'+example+'-provenance.json')
+        samples['/api/samples/natural-gentoo.png']=('static/natural-gentoo.png','image/png',None)
         if path == '/static/natural-terminal.png':
             path = '/api/samples/natural-terminal.png'
+        if path == '/static/natural-gentoo.png':
+            path = '/api/samples/natural-gentoo.png'
         if path in samples:
             try:
                 self.secure()

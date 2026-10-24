@@ -36,5 +36,34 @@
       ]
     }
   ],
-  "notice": "The caret occurs naturally. Review its observed states, the named teaching areas and both boundaries before deciding whether this hold is appropriate."
+  "notice": "The caret occurs naturally. Review its observed states, the named teaching areas and both boundaries before deciding whether this hold is appropriate.",
+  "reading_pause_guide": {
+    "candidate_bbox": [
+      116,
+      148,
+      2,
+      8
+    ],
+    "focus": "Keep notebook code and output while reviewing the idle cell caret.",
+    "teaching_regions": [
+      {
+        "label": "Notebook code and output",
+        "xywh": [
+          52,
+          96,
+          552,
+          45
+        ]
+      },
+      {
+        "label": "Notebook controls",
+        "xywh": [
+          50,
+          30,
+          560,
+          60
+        ]
+      }
+    ]
+  }
 }

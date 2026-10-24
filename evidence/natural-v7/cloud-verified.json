@@ -1,0 +1,2794 @@
+{
+  "schema": "guided-progress-aws-qualification-v1",
+  "complete": true,
+  "verified_utc": "2026-10-24T10:18:38.385982+00:00",
+  "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+  "deployment": {
+    "build": "lesson-rescue-guided-progress-2026-10-24-v7",
+    "source_files_verified": 113,
+    "source_manifest_sha256": "dbddf025b7caf643a3b8ba95014af7d84cb4a21fbe8dd1bdf3943824fd2455ca",
+    "hosting": "Amazon ECS",
+    "analysis": "OpenCV 5.0.0",
+    "media_runtime": "Pinned Debian FFmpeg 7.1.5",
+    "retention_hours": 24,
+    "workers": 1,
+    "max_jobs": 8
+  },
+  "image_digest": "sha256:552365d73e74e02e9fcdfc6c140e523db4165fb09abb7840dfc133cc07a526f9",
+  "task_definition": "default-lesson-rescue:12",
+  "task_cpu": "1024",
+  "task_memory": "2048",
+  "application_task_role_present": false,
+  "single_task_rollout_completed": true,
+  "cases": {
+    "gentoo": {
+      "case": "gentoo",
+      "phase": "cloud",
+      "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+      "prepared_preset": true,
+      "local_cloud_http_adapter": false,
+      "downloads": {
+        "Report JSON": "report (25).json",
+        "Recipe JSON": "recipe (17).json",
+        "Edited comparison": "edited (25).mp4",
+        "Original input": "original (19).mp4",
+        "Natural sample provenance": "natural-gentoo-provenance (1).json"
+      },
+      "crops": [
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00060-original.png",
+          "path": "boundary-f00060-original (4).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00060-control.png",
+          "path": "boundary-f00060-control (4).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00060-edited.png",
+          "path": "boundary-f00060-edited (4).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00061-original.png",
+          "path": "boundary-f00061-original (4).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00061-control.png",
+          "path": "boundary-f00061-control (4).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00061-edited.png",
+          "path": "boundary-f00061-edited (4).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00173-original.png",
+          "path": "boundary-f00173-original (4).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00173-control.png",
+          "path": "boundary-f00173-control (4).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00173-edited.png",
+          "path": "boundary-f00173-edited (4).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00174-original.png",
+          "path": "boundary-f00174-original (4).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00174-control.png",
+          "path": "boundary-f00174-control (4).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/review/boundary-f00174-edited.png",
+          "path": "boundary-f00174-edited (4).png"
+        }
+      ],
+      "teaching_pngs": [
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r0-f00061-source.png",
+          "path": "teaching-r0-f00061-source (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r0-f00061-edited.png",
+          "path": "teaching-r0-f00061-edited (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r0-f00067-source.png",
+          "path": "teaching-r0-f00067-source (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r0-f00067-edited.png",
+          "path": "teaching-r0-f00067-edited (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r0-f00173-source.png",
+          "path": "teaching-r0-f00173-source (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r0-f00173-edited.png",
+          "path": "teaching-r0-f00173-edited (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r1-f00061-source.png",
+          "path": "teaching-r1-f00061-source (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r1-f00061-edited.png",
+          "path": "teaching-r1-f00061-edited (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r1-f00152-source.png",
+          "path": "teaching-r1-f00152-source (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r1-f00152-edited.png",
+          "path": "teaching-r1-f00152-edited (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r1-f00173-source.png",
+          "path": "teaching-r1-f00173-source (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r1-f00173-edited.png",
+          "path": "teaching-r1-f00173-edited (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r2-f00061-source.png",
+          "path": "teaching-r2-f00061-source (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r2-f00061-edited.png",
+          "path": "teaching-r2-f00061-edited (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r2-f00111-source.png",
+          "path": "teaching-r2-f00111-source (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r2-f00111-edited.png",
+          "path": "teaching-r2-f00111-edited (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r2-f00173-source.png",
+          "path": "teaching-r2-f00173-source (3).png"
+        },
+        {
+          "src": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/teaching/teaching-r2-f00173-edited.png",
+          "path": "teaching-r2-f00173-edited (3).png"
+        }
+      ],
+      "before_suggestions": {
+        "areas": 0,
+        "consent": false,
+        "generateDisabled": true,
+        "guideVisible": true
+      },
+      "loaded_suggestions": {
+        "areas": [
+          "1. Commands and package explanation \u00b7 [0, 0, 640, 326]\nRemove",
+          "2. Live package progress readout \u00b7 [0, 326, 360, 18]\nRemove",
+          "3. Terminal lower margin \u00b7 [0, 344, 640, 16]\nRemove"
+        ],
+        "consent": false,
+        "generateDisabled": true,
+        "loadDisabled": true
+      },
+      "checked_plan_state": {
+        "consent": false,
+        "generateDisabled": true,
+        "plan": "Keep the more contrasting observed state from frame 86 steady inside this interval. Detected region: [370, 330, 6, 10]; detected interval: frames 61\u2013173. Check every frame of: Commands and package explanation, Live package progress readout, Terminal lower margin. Generate only after reviewing this plan. The encoded result can still be refused."
+      },
+      "job_id": "9bad814dacdd996f622bb7b9dea4690e",
+      "result": {
+        "highlights": "Steady reading detail\nObserved RGB activity before / after\n[4,0]\nInterval frames\n[61,173]\nKept source frame\n86\nPreservation gate\naccepted_experiment\nWhole excerpt activity \u00b7 includes cut points\nSource / edited\n[13,9]\nEncoded cut points\nSelected and influence RGB\nNo worse than source\nSelected-mean entry / return / loop\nNo worse than source\nOriginal lesson audio\nTrack\nNo audio in source\nVerification\nSilent source retained\nBoundary measurements\nEntry \u00b7 control delta\n0.21814853159400324\nEntry \u00b7 edited delta\n0.21686273734085262\nExit \u00b7 control delta\n0\nExit \u00b7 edited delta\n0\nLoop seam \u00b7 control delta\n0.2174215457867831\nLoop seam \u00b7 edited delta\n0.2174215457867831\nOutside-region preservation\nMean RGB code error\n0\n99th-percentile RGB code error\n0\nMaximum RGB code error\n0\nImportant area: Commands and package explanation\nFixed rectangle\n[0,0,640,326]\nResult\nCriteria met; review still required\nMean / p99 / maximum RGB error\n[0,0,0]\nCriteria\n[0,0,0]\nFrames measured\n360\nTeaching motion kept on its timeline\n\nChanging frame pairs inside hold \u00b7 source / edited: [15,15] of 112. Ordered RGB sequence: exact match.\n\nAny decoded RGB change is counted, including codec variation. This does not count semantic progress ticks or establish readability.\n\nInspect preserved teaching frames \u00b7 static PNGs\n\nHold begins \u00b7 frame 61\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nLargest measured teaching change inside hold \u00b7 frame 67\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nHold ends \u00b7 frame 173\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nImportant area: Live package progress readout\nFixed rectangle\n[0,326,360,18]\nResult\nCriteria met; review still required\nMean / p99 / maximum RGB error\n[0,0,0]\nCriteria\n[0,0,0]\nFrames measured\n360\nTeaching motion kept on its timeline\n\nChanging frame pairs inside hold \u00b7 source / edited: [32,32] of 112. Ordered RGB sequence: exact match.\n\nAny decoded RGB change is counted, including codec variation. This does not count semantic progress ticks or establish readability.\n\nInspect preserved teaching frames \u00b7 static PNGs\n\nHold begins \u00b7 frame 61\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nLargest measured teaching change inside hold \u00b7 frame 152\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nHold ends \u00b7 frame 173\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nImportant area: Terminal lower margin\nFixed rectangle\n[0,344,640,16]\nResult\nCriteria met; review still required\nMean / p99 / maximum RGB error\n[0,0,0]\nCriteria\n[0,0,0]\nFrames measured\n360\nTeaching motion kept on its timeline\n\nChanging frame pairs inside hold \u00b7 source / edited: [1,1] of 112. Ordered RGB sequence: exact match.\n\nAny decoded RGB change is counted, including codec variation. This does not count semantic progress ticks or establish readability.\n\nInspect preserved teaching frames \u00b7 static PNGs\n\nHold begins \u00b7 frame 61\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nLargest measured teaching change inside hold \u00b7 frame 111\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nHold ends \u00b7 frame 173\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nNumeric checks do not replace creator review, even when every experimental criterion is met.\n\nReport status: Needs creator review\n\nFresh stationary two state proposal: criterion met\nApproved plan bound: criterion met\nNative control exact: criterion met\nNative edit matches mapping: criterion met\nUnchanged control rgb exact: criterion met\nAll timestamps exact: criterion met\nAll frames outside interval exact: criterion met\nAll rgb outside influence exact: criterion met\nAll protected teaching rgb exact: criterion met\nAll ordered teaching rgb sequences exact: criterion met\nAudio exact: criterion met\nSource and detection unchanged: criterion met\nSelected activity reduced: criterion met\nEncoded boundary rgb not worse: criterion met\nEncoded boundary selected mean not worse: criterion met\nWhole clip activity reduced: criterion met\nWhole clip no new activity events: criterion met\nReport warnings\nHolds the more contrasting observed state only during the shown interval; alternate blink phases are intentionally removed.\nA blinking detail may convey progress or position. Check both source states and the boundaries before using this edit.\nNative YUV outside the selected box and decoded RGB outside its four-pixel influence area are verified separately.\nPreparation resized/re-encoded the original. Exact edit checks reference the prepared clip.\nNo learning, time-saving, medical, safety or compliance claim.",
+        "images": true,
+        "status": "Static boundary comparison\n\nFour fixed moments, with the original input, unchanged re-encode control and generated edit side by side. Every image is a static PNG crop of the same region. These selected moments do not show the full motion.\n\n12 of 12 static PNG crops loaded. All four moments are shown below.\n\nBefore edit\n\nFrame 60 \u00b7 2 s \u00b7 crop [354, 314, 38, 42]\n\nOriginal\nInput\nControl\nUnchanged re-encode\nEdited\nGenerated edit\nEdit begins\n\nFrame 61 \u00b7 2.033333333333333 s \u00b7 crop [354, 314, 38, 42]\n\nOriginal\nInput\nControl\nUnchanged re-encode\nEdited\nGenerated edit\nFinal edited frame\n\nFrame 173 \u00b7 5.766666666666667 s \u00b7 crop [354, 314, 38, 42]\n\nOriginal\nInput\nControl\nUnchanged re-encode\nEdited\nGenerated edit\nOriginal frames resume\n\nFrame 174 \u00b7 5.8 s \u00b7 crop [354, 314, 38, 42]\n\nOriginal\nInput\nControl\nUnchanged re-encode\nEdited\nGenerated edit\nFrame, crop & hash provenance"
+      },
+      "recovered_after_reload": true,
+      "reload_job_id": "/api/jobs/9bad814dacdd996f622bb7b9dea4690e/download/report.json",
+      "responsive": [
+        {
+          "proofImages": [
+            {
+              "complete": true,
+              "width": 360
+            },
+            {
+              "complete": true,
+              "width": 360
+            },
+            {
+              "complete": true,
+              "width": 360
+            },
+            {
+              "complete": true,
+              "width": 360
+            },
+            {
+              "complete": true,
+              "width": 360
+            },
+            {
+              "complete": true,
+              "width": 360
+            }
+          ],
+          "scrollWidth": 360,
+          "width": 375
+        },
+        {
+          "proofImages": [
+            {
+              "complete": true,
+              "width": 360
+            },
+            {
+              "complete": true,
+              "width": 360
+            },
+            {
+              "complete": true,
+              "width": 360
+            },
+            {
+              "complete": true,
+              "width": 360
+            },
+            {
+              "complete": true,
+              "width": 360
+            },
+            {
+              "complete": true,
+              "width": 360
+            }
+          ],
+          "scrollWidth": 875,
+          "width": 890
+        }
+      ],
+      "responsive_initial": [
+        {
+          "proofImages": [
+            {
+              "complete": false,
+              "width": 0
+            },
+            {
+              "complete": false,
+              "width": 0
+            },
+            {
+              "complete": false,
+              "width": 0
+            },
+            {
+              "complete": false,
+              "width": 0
+            },
+            {
+              "complete": false,
+              "width": 0
+            },
+            {
+              "complete": false,
+              "width": 0
+            }
+          ],
+          "scrollWidth": 360,
+          "width": 375
+        },
+        {
+          "proofImages": [
+            {
+              "complete": true,
+              "width": 360
+            },
+            {
+              "complete": false,
+              "width": 0
+            },
+            {
+              "complete": false,
+              "width": 0
+            },
+            {
+              "complete": false,
+              "width": 0
+            },
+            {
+              "complete": false,
+              "width": 0
+            },
+            {
+              "complete": false,
+              "width": 0
+            }
+          ],
+          "scrollWidth": 875,
+          "width": 890
+        }
+      ],
+      "downloaded_recipe": {
+        "file_sha256": "f3e7183bfdd780b8fc752ad818e169cf2038866a50da9ddf3d6db589251ffbb5",
+        "canonical_sha256": "2863c2172d42fffad1942b9566c09ba3fb91fa2e2f57a6da6839073a0a52ec60",
+        "approved_content_exact": true,
+        "hash_scope": "Approval binds canonical JSON content; downloaded recipe file is pretty printed."
+      },
+      "all_actual_browser_teaching_png_hashes_exact": true,
+      "teaching_png_count": 18,
+      "complete": true,
+      "prepared_sha256": "33a58e2d4dd11a6bfb84cc656fab241a59ba0624162083aeb9bcbea628814fd3",
+      "edited_sha256": "366ee9f57dcc45a6f09abae3691ee7e77611f930904d5ea9200303ed9a38e085",
+      "all_twelve_actual_browser_crop_download_hashes_exact": true,
+      "all_report_checks_pass": true,
+      "summary": {
+        "export_mode": "steady-detail-v1",
+        "review_status": "needs_creator_review",
+        "checks": {
+          "fresh_stationary_two_state_proposal": true,
+          "approved_plan_bound": true,
+          "native_control_exact": true,
+          "native_edit_matches_mapping": true,
+          "unchanged_control_rgb_exact": true,
+          "all_timestamps_exact": true,
+          "all_frames_outside_interval_exact": true,
+          "all_rgb_outside_influence_exact": true,
+          "all_protected_teaching_rgb_exact": true,
+          "all_ordered_teaching_rgb_sequences_exact": true,
+          "audio_exact": true,
+          "source_and_detection_unchanged": true,
+          "selected_activity_reduced": true,
+          "encoded_boundary_rgb_not_worse": true,
+          "encoded_boundary_selected_mean_not_worse": true,
+          "whole_clip_activity_reduced": true,
+          "whole_clip_no_new_activity_events": true
+        },
+        "acceptance": {
+          "status": "accepted_experiment",
+          "checks": {
+            "fresh_stationary_two_state_proposal": true,
+            "approved_plan_bound": true,
+            "native_control_exact": true,
+            "native_edit_matches_mapping": true,
+            "unchanged_control_rgb_exact": true,
+            "all_timestamps_exact": true,
+            "all_frames_outside_interval_exact": true,
+            "all_rgb_outside_influence_exact": true,
+            "all_protected_teaching_rgb_exact": true,
+            "all_ordered_teaching_rgb_sequences_exact": true,
+            "audio_exact": true,
+            "source_and_detection_unchanged": true,
+            "selected_activity_reduced": true,
+            "encoded_boundary_rgb_not_worse": true,
+            "encoded_boundary_selected_mean_not_worse": true,
+            "whole_clip_activity_reduced": true,
+            "whole_clip_no_new_activity_events": true
+          },
+          "meaning": "Encoded preservation and activity measurements only. Creator review is required; no measured learning or accessibility benefit."
+        },
+        "stationary_detail": {
+          "proposal": {
+            "id": "steady-0",
+            "bbox": [
+              370,
+              330,
+              6,
+              10
+            ],
+            "influence_xywh": [
+              366,
+              326,
+              14,
+              18
+            ],
+            "interval_frames": [
+              61,
+              173
+            ],
+            "interval_seconds": [
+              2.033333333333333,
+              5.766666666666667
+            ],
+            "pixels": 60,
+            "reference_frame": 86,
+            "alternate_frame": 60,
+            "reference_selection": "Observed frame in the originally kept appearance class, selected with the reviewed cut points to minimize predicted boundary RMS. No blended or invented pixels.",
+            "reference_state": "brighter",
+            "state_transitions": 6,
+            "minimum_interior_dwell_frames": 6,
+            "maximum_observed_dwell_frames": 54,
+            "state_mean_error_max": 1.2166666666666666,
+            "state_mean_error_limit": 6.0,
+            "state_separation": 100.06666666666666,
+            "state_sample_error_max": 5,
+            "action": "steady-detail-v1",
+            "meaning": "Keep the more contrasting observed state steady during this interval; review both states. This may be instructional content.",
+            "chroma_stability": [
+              {
+                "maximum_frame_mean": 0.0,
+                "maximum_sample": 0
+              },
+              {
+                "maximum_frame_mean": 0.0,
+                "maximum_sample": 0
+              }
+            ],
+            "boundary_alignment": {
+              "policy": {
+                "version": "steady-boundaries-v1",
+                "maximum_trim_frames_per_end": 30,
+                "minimum_hold_frames": 60,
+                "minimum_removed_mean_changes": 4,
+                "maximum_reference_samples": 33,
+                "activity_threshold_rgb_codes": 8,
+                "boundary_tolerance": 1e-12,
+                "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+              },
+              "original_interval_frames": [
+                60,
+                179
+              ],
+              "original_reference_frame": 61,
+              "predicted_source_internal_changes": 4,
+              "predicted_entry": {
+                "source": {
+                  "mean_absolute_rgb_codes": 116.45,
+                  "rms_rgb_codes": 131.7135148722408,
+                  "maximum_rgb_codes": 172.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 116.08333333333333,
+                  "rms_rgb_codes": 131.3993277506903,
+                  "maximum_rgb_codes": 171.0
+                },
+                "source_selected_mean_delta": 0.21814853426185435,
+                "edited_selected_mean_delta": 0.2168627381606105
+              },
+              "predicted_exit": {
+                "source": {
+                  "mean_absolute_rgb_codes": 0.0,
+                  "rms_rgb_codes": 0.0,
+                  "maximum_rgb_codes": 0.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 0.0,
+                  "rms_rgb_codes": 0.0,
+                  "maximum_rgb_codes": 0.0
+                },
+                "source_selected_mean_delta": 0.0,
+                "edited_selected_mean_delta": 0.0
+              },
+              "scope": "Predicted selected-box RGB and selected-mean changes. Encoded selected/influence RGB and linear-mean checks independently decide acceptance."
+            }
+          },
+          "activity": {
+            "source": 4,
+            "edited": 0
+          },
+          "whole_clip_activity": {
+            "source": 13,
+            "edited": 9
+          },
+          "new_activity_events": 0,
+          "metric": "Number of adjacent ROI-mean RGB changes >=8 codes. Interior and fixed whole-clip counts are separate; the latter includes both cut boundaries."
+        },
+        "encoded_boundary_checks": {
+          "policy": {
+            "version": "steady-boundaries-v1",
+            "maximum_trim_frames_per_end": 30,
+            "minimum_hold_frames": 60,
+            "minimum_removed_mean_changes": 4,
+            "maximum_reference_samples": 33,
+            "activity_threshold_rgb_codes": 8,
+            "boundary_tolerance": 1e-12,
+            "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+          },
+          "measurements": {
+            "entry": {
+              "selected": {
+                "source": {
+                  "mean_absolute_rgb_codes": 116.45,
+                  "rms_rgb_codes": 131.7135148722408,
+                  "maximum_rgb_codes": 172.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 116.08333333333333,
+                  "rms_rgb_codes": 131.3993277506903,
+                  "maximum_rgb_codes": 171.0
+                },
+                "passed": true
+              },
+              "influence": {
+                "source": {
+                  "mean_absolute_rgb_codes": 28.21825396825397,
+                  "rms_rgb_codes": 64.34076566986226,
+                  "maximum_rgb_codes": 172.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 28.13095238095238,
+                  "rms_rgb_codes": 64.18762799248456,
+                  "maximum_rgb_codes": 171.0
+                },
+                "passed": true
+              }
+            },
+            "exit": {
+              "selected": {
+                "source": {
+                  "mean_absolute_rgb_codes": 0.0,
+                  "rms_rgb_codes": 0.0,
+                  "maximum_rgb_codes": 0.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 0.0,
+                  "rms_rgb_codes": 0.0,
+                  "maximum_rgb_codes": 0.0
+                },
+                "passed": true
+              },
+              "influence": {
+                "source": {
+                  "mean_absolute_rgb_codes": 0.0,
+                  "rms_rgb_codes": 0.0,
+                  "maximum_rgb_codes": 0.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 0.0,
+                  "rms_rgb_codes": 0.0,
+                  "maximum_rgb_codes": 0.0
+                },
+                "passed": true
+              }
+            },
+            "loop_seam": {
+              "selected": {
+                "source": {
+                  "mean_absolute_rgb_codes": 116.16666666666667,
+                  "rms_rgb_codes": 131.52794379902699,
+                  "maximum_rgb_codes": 172.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 116.16666666666667,
+                  "rms_rgb_codes": 131.52794379902699,
+                  "maximum_rgb_codes": 172.0
+                },
+                "passed": true
+              },
+              "influence": {
+                "source": {
+                  "mean_absolute_rgb_codes": 28.095238095238095,
+                  "rms_rgb_codes": 64.23938365752284,
+                  "maximum_rgb_codes": 172.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 28.095238095238095,
+                  "rms_rgb_codes": 64.23938365752284,
+                  "maximum_rgb_codes": 172.0
+                },
+                "passed": true
+              }
+            }
+          },
+          "passed": true,
+          "scope": "Entry, return and clip-loop boundary; selected and influence boxes; mean absolute, RMS and maximum decoded RGB differences must each be no greater than source (1e-12 floating comparison tolerance, no perceptual budget). This is not a safety or human-benefit measure."
+        },
+        "linear_boundary_checks": {
+          "entry": {
+            "source": 0.21814853159400324,
+            "edited": 0.21686273734085262,
+            "passed": true
+          },
+          "exit": {
+            "source": 0.0,
+            "edited": 0.0,
+            "passed": true
+          },
+          "loop_seam": {
+            "source": 0.2174215457867831,
+            "edited": 0.2174215457867831,
+            "passed": true
+          }
+        },
+        "protected_content": {
+          "regions": [
+            {
+              "label": "Commands and package explanation",
+              "xywh": [
+                0,
+                0,
+                640,
+                326
+              ],
+              "measurements": {
+                "mean_rgb_code_error": 0.0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "criteria": {
+                "mean_rgb_code_error": 0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "passed": true,
+              "channel_samples": 225331200,
+              "histogram": [
+                225331200,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "label": "Live package progress readout",
+              "xywh": [
+                0,
+                326,
+                360,
+                18
+              ],
+              "measurements": {
+                "mean_rgb_code_error": 0.0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "criteria": {
+                "mean_rgb_code_error": 0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "passed": true,
+              "channel_samples": 6998400,
+              "histogram": [
+                6998400,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "label": "Terminal lower margin",
+              "xywh": [
+                0,
+                344,
+                640,
+                16
+              ],
+              "measurements": {
+                "mean_rgb_code_error": 0.0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "criteria": {
+                "mean_rgb_code_error": 0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "passed": true,
+              "channel_samples": 11059200,
+              "histogram": [
+                11059200,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "frames": 360,
+          "declared": true,
+          "passed": true,
+          "scope": "Every decoded RGB frame versus prepared source. Fixed areas; creator judges meaning and readability."
+        },
+        "outside_mask_error": {
+          "mean_rgb_code_error": 0.0,
+          "p99_rgb_code_error": 0,
+          "max_rgb_code_error": 0,
+          "channel_samples": 248559840
+        },
+        "audio_preservation": {
+          "present": false,
+          "checks": {}
+        },
+        "teaching_motion": {
+          "schema": "teaching-motion-v1",
+          "frames": 360,
+          "interval_frames": [
+            61,
+            173
+          ],
+          "regions": [
+            {
+              "label": "Commands and package explanation",
+              "xywh": [
+                0,
+                0,
+                640,
+                326
+              ],
+              "frames": 360,
+              "ordered_rgb_sequence_sha256": {
+                "source": "0b36f51f2c93451cb38e3d204d1100694fad49f41da4029a7b0832efcc189dd5",
+                "edited": "0b36f51f2c93451cb38e3d204d1100694fad49f41da4029a7b0832efcc189dd5"
+              },
+              "ordered_rgb_sequence_exact": true,
+              "changed_adjacent_frame_pairs": {
+                "source": 66,
+                "edited": 66
+              },
+              "changed_pairs_inside_hold": {
+                "source": 15,
+                "edited": 15
+              },
+              "adjacent_pairs": 359,
+              "hold_adjacent_pairs": 112,
+              "mean_absolute_temporal_rgb_codes": {
+                "source": 0.013686843495622355,
+                "edited": 0.013686843495622355
+              },
+              "peak_change_frame_inside_hold": 67,
+              "peak_change_mean_rgb_codes": 0.010439033742331289
+            },
+            {
+              "label": "Live package progress readout",
+              "xywh": [
+                0,
+                326,
+                360,
+                18
+              ],
+              "frames": 360,
+              "ordered_rgb_sequence_sha256": {
+                "source": "0848e2477bce5609f312f6e86865d7b0ab41443cff954487c6de6f0996571128",
+                "edited": "0848e2477bce5609f312f6e86865d7b0ab41443cff954487c6de6f0996571128"
+              },
+              "ordered_rgb_sequence_exact": true,
+              "changed_adjacent_frame_pairs": {
+                "source": 96,
+                "edited": 96
+              },
+              "changed_pairs_inside_hold": {
+                "source": 32,
+                "edited": 32
+              },
+              "adjacent_pairs": 359,
+              "hold_adjacent_pairs": 112,
+              "mean_absolute_temporal_rgb_codes": {
+                "source": 0.3366114721964304,
+                "edited": 0.3366114721964304
+              },
+              "peak_change_frame_inside_hold": 152,
+              "peak_change_mean_rgb_codes": 4.073302469135802
+            },
+            {
+              "label": "Terminal lower margin",
+              "xywh": [
+                0,
+                344,
+                640,
+                16
+              ],
+              "frames": 360,
+              "ordered_rgb_sequence_sha256": {
+                "source": "fdd510568e0c48f9751e9afff85c3808f055dc69d729aa68cb5c33a40e1f986b",
+                "edited": "fdd510568e0c48f9751e9afff85c3808f055dc69d729aa68cb5c33a40e1f986b"
+              },
+              "ordered_rgb_sequence_exact": true,
+              "changed_adjacent_frame_pairs": {
+                "source": 5,
+                "edited": 5
+              },
+              "changed_pairs_inside_hold": {
+                "source": 1,
+                "edited": 1
+              },
+              "adjacent_pairs": 359,
+              "hold_adjacent_pairs": 112,
+              "mean_absolute_temporal_rgb_codes": {
+                "source": 0.0003645107938718663,
+                "edited": 0.0003645107938718663
+              },
+              "peak_change_frame_inside_hold": 111,
+              "peak_change_mean_rgb_codes": 0.0015625
+            }
+          ],
+          "all_ordered_rgb_sequences_exact": true,
+          "meaning": "Decoded sample changes, including codec variation; not semantic progress ticks, legibility or learning measurements. Source and edited teaching regions are compared at their original frame times."
+        },
+        "boundary": {
+          "entry": {
+            "control_delta": 0.21814853159400324,
+            "edited_delta": 0.21686273734085262
+          },
+          "exit": {
+            "control_delta": 0.0,
+            "edited_delta": 0.0
+          },
+          "loop_seam": {
+            "control_delta": 0.2174215457867831,
+            "edited_delta": 0.2174215457867831
+          }
+        },
+        "codec": "Lossless H.264 High 4:4:4 Predictive, YUV420; verify browser playback separately",
+        "warnings": [
+          "Holds the more contrasting observed state only during the shown interval; alternate blink phases are intentionally removed.",
+          "A blinking detail may convey progress or position. Check both source states and the boundaries before using this edit.",
+          "Native YUV outside the selected box and decoded RGB outside its four-pixel influence area are verified separately.",
+          "Preparation resized/re-encoded the original. Exact edit checks reference the prepared clip.",
+          "No learning, time-saving, medical, safety or compliance claim."
+        ]
+      },
+      "unowned_known_job_responses": {
+        "/": 404,
+        "/intake/upload": 404,
+        "/intake/prepared": 404,
+        "/intake/receipt": 404,
+        "/intake/decision": 404,
+        "/steady/steady-0-reference.png": 404,
+        "/steady/steady-0-alternate.png": 404,
+        "/download/edited.mp4": 404,
+        "/teaching/teaching-r0-f00061-source.png": 404
+      },
+      "playback": {
+        "duration": 12,
+        "ended": true,
+        "error": null,
+        "height": 360,
+        "muted": true,
+        "time": 12,
+        "width": 640
+      },
+      "edited_bytes_identical_to_local_qualification": true
+    },
+    "jupyter": {
+      "case": "jupyter",
+      "phase": "cloud",
+      "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+      "prepared_preset": true,
+      "local_cloud_http_adapter": false,
+      "downloads": {
+        "Report JSON": "report (27).json",
+        "Recipe JSON": "recipe (19).json",
+        "Edited comparison": "edited (27).mp4",
+        "Original input": "original (21).mp4",
+        "Natural sample provenance": "natural-jupyter-provenance (3).json"
+      },
+      "crops": [
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00018-original.png",
+          "path": "boundary-f00018-original (4).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00018-control.png",
+          "path": "boundary-f00018-control (4).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00018-edited.png",
+          "path": "boundary-f00018-edited (4).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00019-original.png",
+          "path": "boundary-f00019-original (4).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00019-control.png",
+          "path": "boundary-f00019-control (4).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00019-edited.png",
+          "path": "boundary-f00019-edited (4).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00097-original.png",
+          "path": "boundary-f00097-original (5).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00097-control.png",
+          "path": "boundary-f00097-control (5).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00097-edited.png",
+          "path": "boundary-f00097-edited (5).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00098-original.png",
+          "path": "boundary-f00098-original (5).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00098-control.png",
+          "path": "boundary-f00098-control (5).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/review/boundary-f00098-edited.png",
+          "path": "boundary-f00098-edited (5).png"
+        }
+      ],
+      "teaching_pngs": [
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r0-f00019-source.png",
+          "path": "teaching-r0-f00019-source (2).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r0-f00019-edited.png",
+          "path": "teaching-r0-f00019-edited (2).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r0-f00090-source.png",
+          "path": "teaching-r0-f00090-source (2).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r0-f00090-edited.png",
+          "path": "teaching-r0-f00090-edited (2).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r0-f00097-source.png",
+          "path": "teaching-r0-f00097-source (2).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r0-f00097-edited.png",
+          "path": "teaching-r0-f00097-edited (2).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r1-f00019-source.png",
+          "path": "teaching-r1-f00019-source (2).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r1-f00019-edited.png",
+          "path": "teaching-r1-f00019-edited (2).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r1-f00020-source.png",
+          "path": "teaching-r1-f00020-source (2).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r1-f00020-edited.png",
+          "path": "teaching-r1-f00020-edited (2).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r1-f00097-source.png",
+          "path": "teaching-r1-f00097-source (2).png"
+        },
+        {
+          "src": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/teaching/teaching-r1-f00097-edited.png",
+          "path": "teaching-r1-f00097-edited (2).png"
+        }
+      ],
+      "before_suggestions": {
+        "areas": 0,
+        "consent": false,
+        "generateDisabled": true,
+        "guideVisible": true
+      },
+      "loaded_suggestions": {
+        "areas": [
+          "1. Notebook code and output \u00b7 [52, 96, 552, 45]\nRemove",
+          "2. Notebook controls \u00b7 [50, 30, 560, 60]\nRemove"
+        ],
+        "consent": false,
+        "generateDisabled": true,
+        "loadDisabled": true
+      },
+      "checked_plan_state": {
+        "consent": false,
+        "generateDisabled": true,
+        "plan": "Keep the more contrasting observed state from frame 67 steady inside this interval. Detected region: [116, 148, 2, 8]; detected interval: frames 19\u201397. Check every frame of: Notebook code and output, Notebook controls. Generate only after reviewing this plan. The encoded result can still be refused."
+      },
+      "job_id": "07814d361b9c9b103d6c95461fd5bfae",
+      "result": {
+        "highlights": "Steady reading detail\nObserved RGB activity before / after\n[4,0]\nInterval frames\n[19,97]\nKept source frame\n67\nPreservation gate\naccepted_experiment\nWhole excerpt activity \u00b7 includes cut points\nSource / edited\n[24,18]\nEncoded cut points\nSelected and influence RGB\nNo worse than source\nSelected-mean entry / return / loop\nNo worse than source\nOriginal lesson audio\nTrack\nAAC-LC mono / 48 kHz\nVerification\nOriginal packet bytes, timestamps, skip metadata and decoded PCM unchanged\nBoundary measurements\nEntry \u00b7 control delta\n0.21492635272443295\nEntry \u00b7 edited delta\n0.009136876091361046\nExit \u00b7 control delta\n0.22798942402005196\nExit \u00b7 edited delta\n0.0009337365627288818\nLoop seam \u00b7 control delta\n0.020125962793827057\nLoop seam \u00b7 edited delta\n0.020125962793827057\nOutside-region preservation\nMean RGB code error\n0\n99th-percentile RGB code error\n0\nMaximum RGB code error\n0\nImportant area: Notebook code and output\nFixed rectangle\n[52,96,552,45]\nResult\nCriteria met; review still required\nMean / p99 / maximum RGB error\n[0,0,0]\nCriteria\n[0,0,0]\nFrames measured\n360\nTeaching motion kept on its timeline\n\nChanging frame pairs inside hold \u00b7 source / edited: [13,13] of 78. Ordered RGB sequence: exact match.\n\nAny decoded RGB change is counted, including codec variation. This does not count semantic progress ticks or establish readability.\n\nInspect preserved teaching frames \u00b7 static PNGs\n\nHold begins \u00b7 frame 19\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nLargest measured teaching change inside hold \u00b7 frame 90\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nHold ends \u00b7 frame 97\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nImportant area: Notebook controls\nFixed rectangle\n[50,30,560,60]\nResult\nCriteria met; review still required\nMean / p99 / maximum RGB error\n[0,0,0]\nCriteria\n[0,0,0]\nFrames measured\n360\nTeaching motion kept on its timeline\n\nChanging frame pairs inside hold \u00b7 source / edited: [0,0] of 78. Ordered RGB sequence: exact match.\n\nAny decoded RGB change is counted, including codec variation. This does not count semantic progress ticks or establish readability.\n\nInspect preserved teaching frames \u00b7 static PNGs\n\nHold begins \u00b7 frame 19\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nLargest measured teaching change inside hold \u00b7 frame 20\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nHold ends \u00b7 frame 97\n\nPrepared source\n\nHash-verified source-bound PNG\n\nEncoded edit\n\nHash-verified source-bound PNG\n\nNumeric checks do not replace creator review, even when every experimental criterion is met.\n\nReport status: Needs creator review\n\nFresh stationary two state proposal: criterion met\nApproved plan bound: criterion met\nNative control exact: criterion met\nNative edit matches mapping: criterion met\nUnchanged control rgb exact: criterion met\nAll timestamps exact: criterion met\nAll frames outside interval exact: criterion met\nAll rgb outside influence exact: criterion met\nAll protected teaching rgb exact: criterion met\nAll ordered teaching rgb sequences exact: criterion met\nAudio exact: criterion met\nSource and detection unchanged: criterion met\nSelected activity reduced: criterion met\nEncoded boundary rgb not worse: criterion met\nEncoded boundary selected mean not worse: criterion met\nWhole clip activity reduced: criterion met\nWhole clip no new activity events: criterion met\nReport warnings\nHolds the more contrasting observed state only during the shown interval; alternate blink phases are intentionally removed.\nA blinking detail may convey progress or position. Check both source states and the boundaries before using this edit.\nNative YUV outside the selected box and decoded RGB outside its four-pixel influence area are verified separately.\nPreparation resized/re-encoded the original. Exact edit checks reference the prepared clip.\nNo learning, time-saving, medical, safety or compliance claim.",
+        "images": true,
+        "status": "Static boundary comparison\n\nFour fixed moments, with the original input, unchanged re-encode control and generated edit side by side. Every image is a static PNG crop of the same region. These selected moments do not show the full motion.\n\n12 of 12 static PNG crops loaded. All four moments are shown below.\n\nBefore edit\n\nFrame 18 \u00b7 0.6 s \u00b7 crop [100, 132, 34, 40]\n\nOriginal\nInput\nControl\nUnchanged re-encode\nEdited\nGenerated edit\nEdit begins\n\nFrame 19 \u00b7 0.6333333333333333 s \u00b7 crop [100, 132, 34, 40]\n\nOriginal\nInput\nControl\nUnchanged re-encode\nEdited\nGenerated edit\nFinal edited frame\n\nFrame 97 \u00b7 3.2333333333333334 s \u00b7 crop [100, 132, 34, 40]\n\nOriginal\nInput\nControl\nUnchanged re-encode\nEdited\nGenerated edit\nOriginal frames resume\n\nFrame 98 \u00b7 3.2666666666666666 s \u00b7 crop [100, 132, 34, 40]\n\nOriginal\nInput\nControl\nUnchanged re-encode\nEdited\nGenerated edit\nFrame, crop & hash provenance"
+      },
+      "recovered_after_reload": true,
+      "reload_job_id": "/api/jobs/07814d361b9c9b103d6c95461fd5bfae/download/report.json",
+      "responsive": [
+        {
+          "proofImages": [
+            {
+              "complete": true,
+              "width": 552
+            },
+            {
+              "complete": true,
+              "width": 552
+            },
+            {
+              "complete": true,
+              "width": 552
+            },
+            {
+              "complete": true,
+              "width": 552
+            },
+            {
+              "complete": true,
+              "width": 552
+            },
+            {
+              "complete": true,
+              "width": 552
+            }
+          ],
+          "scrollWidth": 360,
+          "width": 375
+        },
+        {
+          "proofImages": [
+            {
+              "complete": true,
+              "width": 552
+            },
+            {
+              "complete": true,
+              "width": 552
+            },
+            {
+              "complete": true,
+              "width": 552
+            },
+            {
+              "complete": true,
+              "width": 552
+            },
+            {
+              "complete": true,
+              "width": 552
+            },
+            {
+              "complete": true,
+              "width": 552
+            }
+          ],
+          "scrollWidth": 875,
+          "width": 890
+        }
+      ],
+      "downloaded_recipe": {
+        "file_sha256": "9c7cb94f92ebbb920fa2a3149ae166d84654d11e42970727ea5f3220754cdf47",
+        "canonical_sha256": "d76daf6b51f38b7d0a0e204e49b7223b3059ec10900464fd0accffe99c73867e",
+        "approved_content_exact": true,
+        "hash_scope": "Approval binds canonical JSON content; downloaded recipe file is pretty printed."
+      },
+      "all_actual_browser_teaching_png_hashes_exact": true,
+      "teaching_png_count": 12,
+      "complete": true,
+      "prepared_sha256": "946e90e2071c51e22c103c29abf863d3f463f3df53da81985ea1e897734f51c5",
+      "edited_sha256": "7148dba7b0e1e4282fefb43f694cc174c9f5d8bf126d60b8b4d3a3badc3eb774",
+      "all_twelve_actual_browser_crop_download_hashes_exact": true,
+      "all_report_checks_pass": true,
+      "summary": {
+        "export_mode": "steady-detail-v1",
+        "review_status": "needs_creator_review",
+        "checks": {
+          "fresh_stationary_two_state_proposal": true,
+          "approved_plan_bound": true,
+          "native_control_exact": true,
+          "native_edit_matches_mapping": true,
+          "unchanged_control_rgb_exact": true,
+          "all_timestamps_exact": true,
+          "all_frames_outside_interval_exact": true,
+          "all_rgb_outside_influence_exact": true,
+          "all_protected_teaching_rgb_exact": true,
+          "all_ordered_teaching_rgb_sequences_exact": true,
+          "audio_exact": true,
+          "source_and_detection_unchanged": true,
+          "selected_activity_reduced": true,
+          "encoded_boundary_rgb_not_worse": true,
+          "encoded_boundary_selected_mean_not_worse": true,
+          "whole_clip_activity_reduced": true,
+          "whole_clip_no_new_activity_events": true
+        },
+        "acceptance": {
+          "status": "accepted_experiment",
+          "checks": {
+            "fresh_stationary_two_state_proposal": true,
+            "approved_plan_bound": true,
+            "native_control_exact": true,
+            "native_edit_matches_mapping": true,
+            "unchanged_control_rgb_exact": true,
+            "all_timestamps_exact": true,
+            "all_frames_outside_interval_exact": true,
+            "all_rgb_outside_influence_exact": true,
+            "all_protected_teaching_rgb_exact": true,
+            "all_ordered_teaching_rgb_sequences_exact": true,
+            "audio_exact": true,
+            "source_and_detection_unchanged": true,
+            "selected_activity_reduced": true,
+            "encoded_boundary_rgb_not_worse": true,
+            "encoded_boundary_selected_mean_not_worse": true,
+            "whole_clip_activity_reduced": true,
+            "whole_clip_no_new_activity_events": true
+          },
+          "meaning": "Encoded preservation and activity measurements only. Creator review is required; no measured learning or accessibility benefit."
+        },
+        "stationary_detail": {
+          "proposal": {
+            "id": "steady-0",
+            "bbox": [
+              116,
+              148,
+              2,
+              8
+            ],
+            "influence_xywh": [
+              112,
+              144,
+              10,
+              16
+            ],
+            "interval_frames": [
+              19,
+              97
+            ],
+            "interval_seconds": [
+              0.6333333333333333,
+              3.2333333333333334
+            ],
+            "pixels": 16,
+            "reference_frame": 67,
+            "alternate_frame": 0,
+            "reference_selection": "Observed frame in the originally kept appearance class, selected with the reviewed cut points to minimize predicted boundary RMS. No blended or invented pixels.",
+            "reference_state": "darker",
+            "state_transitions": 8,
+            "minimum_interior_dwell_frames": 9,
+            "maximum_observed_dwell_frames": 16,
+            "state_mean_error_max": 2.75,
+            "state_mean_error_limit": 3.9749999999999996,
+            "state_separation": 26.5,
+            "state_sample_error_max": 5,
+            "action": "steady-detail-v1",
+            "meaning": "Keep the more contrasting observed state steady during this interval; review both states. This may be instructional content.",
+            "chroma_stability": [
+              {
+                "maximum_frame_mean": 1.0,
+                "maximum_sample": 1
+              },
+              {
+                "maximum_frame_mean": 0.0,
+                "maximum_sample": 0
+              }
+            ],
+            "boundary_alignment": {
+              "policy": {
+                "version": "steady-boundaries-v1",
+                "maximum_trim_frames_per_end": 30,
+                "minimum_hold_frames": 60,
+                "minimum_removed_mean_changes": 4,
+                "maximum_reference_samples": 33,
+                "activity_threshold_rgb_codes": 8,
+                "boundary_tolerance": 1e-12,
+                "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+              },
+              "original_interval_frames": [
+                0,
+                119
+              ],
+              "original_reference_frame": 98,
+              "predicted_source_internal_changes": 4,
+              "predicted_entry": {
+                "source": {
+                  "mean_absolute_rgb_codes": 28.270833333333332,
+                  "rms_rgb_codes": 38.92862057664001,
+                  "maximum_rgb_codes": 57.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 1.1458333333333333,
+                  "rms_rgb_codes": 1.4361406616345072,
+                  "maximum_rgb_codes": 2.0
+                },
+                "source_selected_mean_delta": 0.2149263173341751,
+                "edited_selected_mean_delta": 0.008745074272155762
+              },
+              "predicted_exit": {
+                "source": {
+                  "mean_absolute_rgb_codes": 30.333333333333332,
+                  "rms_rgb_codes": 42.11195396400726,
+                  "maximum_rgb_codes": 60.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 2.25,
+                  "rms_rgb_codes": 2.5495097567963922,
+                  "maximum_rgb_codes": 4.0
+                },
+                "source_selected_mean_delta": 0.22798942029476166,
+                "edited_selected_mean_delta": 0.0009337365627288818
+              },
+              "scope": "Predicted selected-box RGB and selected-mean changes. Encoded selected/influence RGB and linear-mean checks independently decide acceptance."
+            }
+          },
+          "activity": {
+            "source": 4,
+            "edited": 0
+          },
+          "whole_clip_activity": {
+            "source": 24,
+            "edited": 18
+          },
+          "new_activity_events": 0,
+          "metric": "Number of adjacent ROI-mean RGB changes >=8 codes. Interior and fixed whole-clip counts are separate; the latter includes both cut boundaries."
+        },
+        "encoded_boundary_checks": {
+          "policy": {
+            "version": "steady-boundaries-v1",
+            "maximum_trim_frames_per_end": 30,
+            "minimum_hold_frames": 60,
+            "minimum_removed_mean_changes": 4,
+            "maximum_reference_samples": 33,
+            "activity_threshold_rgb_codes": 8,
+            "boundary_tolerance": 1e-12,
+            "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames."
+          },
+          "measurements": {
+            "entry": {
+              "selected": {
+                "source": {
+                  "mean_absolute_rgb_codes": 28.270833333333332,
+                  "rms_rgb_codes": 38.92862057664001,
+                  "maximum_rgb_codes": 57.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 1.1875,
+                  "rms_rgb_codes": 1.4361406616345072,
+                  "maximum_rgb_codes": 2.0
+                },
+                "passed": true
+              },
+              "influence": {
+                "source": {
+                  "mean_absolute_rgb_codes": 3.377083333333333,
+                  "rms_rgb_codes": 12.350691613562915,
+                  "maximum_rgb_codes": 57.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 0.6854166666666667,
+                  "rms_rgb_codes": 1.1171019052291813,
+                  "maximum_rgb_codes": 4.0
+                },
+                "passed": true
+              }
+            },
+            "exit": {
+              "selected": {
+                "source": {
+                  "mean_absolute_rgb_codes": 30.333333333333332,
+                  "rms_rgb_codes": 42.11195396400726,
+                  "maximum_rgb_codes": 60.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 2.25,
+                  "rms_rgb_codes": 2.5495097567963922,
+                  "maximum_rgb_codes": 4.0
+                },
+                "passed": true
+              },
+              "influence": {
+                "source": {
+                  "mean_absolute_rgb_codes": 3.2895833333333333,
+                  "rms_rgb_codes": 13.332526017225693,
+                  "maximum_rgb_codes": 60.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 0.48125,
+                  "rms_rgb_codes": 1.0317864766187497,
+                  "maximum_rgb_codes": 4.0
+                },
+                "passed": true
+              }
+            },
+            "loop_seam": {
+              "selected": {
+                "source": {
+                  "mean_absolute_rgb_codes": 2.4791666666666665,
+                  "rms_rgb_codes": 2.6496855159307744,
+                  "maximum_rgb_codes": 4.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 2.4791666666666665,
+                  "rms_rgb_codes": 2.6496855159307744,
+                  "maximum_rgb_codes": 4.0
+                },
+                "passed": true
+              },
+              "influence": {
+                "source": {
+                  "mean_absolute_rgb_codes": 1.725,
+                  "rms_rgb_codes": 2.4949949899749297,
+                  "maximum_rgb_codes": 10.0
+                },
+                "edited": {
+                  "mean_absolute_rgb_codes": 1.725,
+                  "rms_rgb_codes": 2.4949949899749297,
+                  "maximum_rgb_codes": 10.0
+                },
+                "passed": true
+              }
+            }
+          },
+          "passed": true,
+          "scope": "Entry, return and clip-loop boundary; selected and influence boxes; mean absolute, RMS and maximum decoded RGB differences must each be no greater than source (1e-12 floating comparison tolerance, no perceptual budget). This is not a safety or human-benefit measure."
+        },
+        "linear_boundary_checks": {
+          "entry": {
+            "source": 0.21492635272443295,
+            "edited": 0.009136876091361046,
+            "passed": true
+          },
+          "exit": {
+            "source": 0.22798942402005196,
+            "edited": 0.0009337365627288818,
+            "passed": true
+          },
+          "loop_seam": {
+            "source": 0.020125962793827057,
+            "edited": 0.020125962793827057,
+            "passed": true
+          }
+        },
+        "protected_content": {
+          "regions": [
+            {
+              "label": "Notebook code and output",
+              "xywh": [
+                52,
+                96,
+                552,
+                45
+              ],
+              "measurements": {
+                "mean_rgb_code_error": 0.0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "criteria": {
+                "mean_rgb_code_error": 0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "passed": true,
+              "channel_samples": 26827200,
+              "histogram": [
+                26827200,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "label": "Notebook controls",
+              "xywh": [
+                50,
+                30,
+                560,
+                60
+              ],
+              "measurements": {
+                "mean_rgb_code_error": 0.0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "criteria": {
+                "mean_rgb_code_error": 0,
+                "p99_rgb_code_error": 0,
+                "max_rgb_code_error": 0
+              },
+              "passed": true,
+              "channel_samples": 36288000,
+              "histogram": [
+                36288000,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "frames": 360,
+          "declared": true,
+          "passed": true,
+          "scope": "Every decoded RGB frame versus prepared source. Fixed areas; creator judges meaning and readability."
+        },
+        "outside_mask_error": {
+          "mean_rgb_code_error": 0.0,
+          "p99_rgb_code_error": 0,
+          "max_rgb_code_error": 0,
+          "channel_samples": 248659200
+        },
+        "audio_preservation": {
+          "present": true,
+          "checks": {
+            "control": {
+              "stream_exact": true,
+              "packet_payload_timing_skip_exact": true,
+              "decoded_pcm_exact": true
+            },
+            "edited": {
+              "stream_exact": true,
+              "packet_payload_timing_skip_exact": true,
+              "decoded_pcm_exact": true
+            }
+          }
+        },
+        "teaching_motion": {
+          "schema": "teaching-motion-v1",
+          "frames": 360,
+          "interval_frames": [
+            19,
+            97
+          ],
+          "regions": [
+            {
+              "label": "Notebook code and output",
+              "xywh": [
+                52,
+                96,
+                552,
+                45
+              ],
+              "frames": 360,
+              "ordered_rgb_sequence_sha256": {
+                "source": "04730508ed082e684f75aa744fec92d7df68dc63b31c64add371a33538d09252",
+                "edited": "04730508ed082e684f75aa744fec92d7df68dc63b31c64add371a33538d09252"
+              },
+              "ordered_rgb_sequence_exact": true,
+              "changed_adjacent_frame_pairs": {
+                "source": 148,
+                "edited": 148
+              },
+              "changed_pairs_inside_hold": {
+                "source": 13,
+                "edited": 13
+              },
+              "adjacent_pairs": 359,
+              "hold_adjacent_pairs": 78,
+              "mean_absolute_temporal_rgb_codes": {
+                "source": 0.06578712861664701,
+                "edited": 0.06578712861664701
+              },
+              "peak_change_frame_inside_hold": 90,
+              "peak_change_mean_rgb_codes": 0.5564278046162104
+            },
+            {
+              "label": "Notebook controls",
+              "xywh": [
+                50,
+                30,
+                560,
+                60
+              ],
+              "frames": 360,
+              "ordered_rgb_sequence_sha256": {
+                "source": "d45e733941aa54754276665c7d26dc55bbecc43ed08ec9b3caf7db054c0e0742",
+                "edited": "d45e733941aa54754276665c7d26dc55bbecc43ed08ec9b3caf7db054c0e0742"
+              },
+              "ordered_rgb_sequence_exact": true,
+              "changed_adjacent_frame_pairs": {
+                "source": 31,
+                "edited": 31
+              },
+              "changed_pairs_inside_hold": {
+                "source": 0,
+                "edited": 0
+              },
+              "adjacent_pairs": 359,
+              "hold_adjacent_pairs": 78,
+              "mean_absolute_temporal_rgb_codes": {
+                "source": 0.00524856855462705,
+                "edited": 0.00524856855462705
+              },
+              "peak_change_frame_inside_hold": 20,
+              "peak_change_mean_rgb_codes": 0
+            }
+          ],
+          "all_ordered_rgb_sequences_exact": true,
+          "meaning": "Decoded sample changes, including codec variation; not semantic progress ticks, legibility or learning measurements. Source and edited teaching regions are compared at their original frame times."
+        },
+        "boundary": {
+          "entry": {
+            "control_delta": 0.21492635272443295,
+            "edited_delta": 0.009136876091361046
+          },
+          "exit": {
+            "control_delta": 0.22798942402005196,
+            "edited_delta": 0.0009337365627288818
+          },
+          "loop_seam": {
+            "control_delta": 0.020125962793827057,
+            "edited_delta": 0.020125962793827057
+          }
+        },
+        "codec": "Lossless H.264 High 4:4:4 Predictive, YUV420; verify browser playback separately",
+        "warnings": [
+          "Holds the more contrasting observed state only during the shown interval; alternate blink phases are intentionally removed.",
+          "A blinking detail may convey progress or position. Check both source states and the boundaries before using this edit.",
+          "Native YUV outside the selected box and decoded RGB outside its four-pixel influence area are verified separately.",
+          "Preparation resized/re-encoded the original. Exact edit checks reference the prepared clip.",
+          "No learning, time-saving, medical, safety or compliance claim."
+        ]
+      },
+      "unowned_known_job_responses": {
+        "/": 404,
+        "/intake/upload": 404,
+        "/intake/prepared": 404,
+        "/intake/receipt": 404,
+        "/intake/decision": 404,
+        "/steady/steady-0-reference.png": 404,
+        "/steady/steady-0-alternate.png": 404,
+        "/download/edited.mp4": 404,
+        "/teaching/teaching-r0-f00019-source.png": 404
+      },
+      "playback": {
+        "duration": 12,
+        "ended": true,
+        "error": null,
+        "height": 360,
+        "muted": true,
+        "time": 12,
+        "width": 640
+      },
+      "edited_bytes_identical_to_local_qualification": true
+    }
+  },
+  "boundary_pngs_actually_downloaded": 24,
+  "teaching_pngs_actually_downloaded": 30,
+  "scope": "Two actual AWS prepared-example guided repeats, not extra original sources. Exact prepared/edit bytes match independent local original-source qualifications. Separate plan and explicit approval, actual artifact/PNG downloads, ownership 404s, reload, actual 375/890 widths and muted 12-second downloaded playback pass. No listening or human benefit claim."
+}

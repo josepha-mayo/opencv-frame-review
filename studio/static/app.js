@@ -97,7 +97,9 @@
   const realChallenge = byId("real-challenge-button");
   const naturalDemo = byId("natural-demo-button");
   const naturalExample = byId("natural-example");
+  const teachingGuide = byId("teaching-guide"), teachingGuideLoad = byId("teaching-guide-load");
   const naturalChoices = {
+    gentoo: {button:"Try the real package-progress lesson",description:"Vitaly Zdanevich, CC0 as listed. Prepared 12-second package tutorial: changing progress beside a naturally blinking caret. Silent source. No added defect. Teaching-area suggestions are available after analysis; review them before checking the plan."},
     terminal: {button:"Try a real terminal blink",description:"Info-farmer, CC0. Prepared 12-second Tamil lesson, with a natural caret and prepared narration. No added defect. Suggested teaching area: [0, 0, 640, 336]."},
     jupyter: {button:"Try a real Jupyter reading pause",description:"Alex The Analyst, CC BY 3.0. Prepared English lesson with a natural caret; no added defect. Suggested code/output area: [52, 96, 552, 45]. Source license and preparation history are linked below."},
     npm: {button:"Try a real command-line pause",description:"Kevin Powell, CC BY 3.0. Prepared English lesson with a natural command-prompt caret; no added defect. Suggested command area: [0, 0, 480, 236]. Source license and preparation history are linked below."}
@@ -235,6 +237,23 @@
     ui.retry.disabled = busy || refreshInFlight;
     ui.candidateList.querySelectorAll("input").forEach((input) => { input.disabled = !canReview; });
     protectList.querySelectorAll("button").forEach((button) => { button.disabled = !canReview || !imageLoaded; });
+    const guide=matchedTeachingGuide();
+    teachingGuide.hidden=!guide;
+    byId("teaching-guide-focus").textContent=guide?.focus || "";
+    teachingGuideLoad.disabled=!canReview || !imagesReady || !guide || savedRegions.length>0 || [ui.protectX,ui.protectY,ui.protectW,ui.protectH,protectLabel].some(field=>String(field.value || "").trim());
+  }
+
+  function matchedTeachingGuide() {
+    const candidate=currentCandidate();
+    return (Array.isArray(job?.teaching_guides) ? job.teaching_guides : []).find(guide=>guide && guide.source_sha256===job?.input_sha256 && guide.candidate_id===candidate?.id && JSON.stringify(guide.candidate_bbox)===JSON.stringify(candidate?.bbox)) || null;
+  }
+  function loadTeachingGuide() {
+    if(teachingGuideLoad.disabled)return;
+    const guide=matchedTeachingGuide();
+    if(!guide || !Array.isArray(guide.regions) || guide.regions.length<1 || guide.regions.length>4)return;
+    savedRegions=guide.regions.map(region=>({label:region.label,xywh:[...region.xywh]}));
+    renderProtectedList();invalidateProtection();
+    ui.protectStatus.textContent="Example areas loaded. Inspect the highlighted teaching content, edit if needed, then check the plan. Nothing has been approved.";
   }
 
   function stopPolling() {
@@ -918,6 +937,7 @@
     exportModeNote.textContent=exportMode.value==="periodic-local-retime-v2" ? "5× local retiming inside the detected interval only. Requires at least three repeated cycles, mean recurrence error ≤2 and every sample difference ≤32 native codes. Small nonperiodic changes can still pass. Strong entry transitions remain; playback unverified; no safety claim." : exportMode.value==="legacy" ? "Legacy interval hold: a strong return transition and codec spill are possible." : "Experimental: freeze the selected decoration from frame zero for the ENTIRE clip. Lossless native YUV transport; adjacent RGB pixels can still change. Review all measurements. No safety claim.";
   });
   protectAdd.addEventListener("click",saveProtectedRegion);
+  teachingGuideLoad.addEventListener("click",loadTeachingGuide);
   ui.protectCheck.addEventListener("click",checkProtection);
   ui.protectClear.addEventListener("click",() => { resetProtection(currentCandidate()); ui.reviewed.checked=false;updateControls(); });
   ui.protectPick.addEventListener("click",() => {
@@ -979,5 +999,6 @@
     }
   }
 
+  updateNaturalChoice();
   initialize();
 })();

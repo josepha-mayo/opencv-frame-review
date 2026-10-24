@@ -27,6 +27,8 @@ def poll(jid):
 def native(path):
     return np.frombuffer(subprocess.check_output(['ffmpeg','-v','error','-threads','1','-i',str(path),'-map','0:v:0','-an','-pix_fmt','yuv420p','-f','rawvideo','pipe:1']),np.uint8).reshape(360,-1)
 def pcm(path):
+    info=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-of','json',str(path)]))
+    if not any(s['codec_type']=='audio' for s in info['streams']):return None
     return subprocess.check_output(['ffmpeg','-v','error','-threads','1','-i',str(path),'-map','0:a:0','-f','s16le','-acodec','pcm_s16le','pipe:1'])
 record={'complete':False,'source_name':source.name,'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'start_seconds':start,'authored_defect':False,'selection':'Disclosed prepared excerpt of naturally blinking tutorial footage; no authored defect. Original-source upload qualification is separate.'}
 try:
@@ -40,6 +42,11 @@ try:
     x,y,w,h=candidate['influence_xywh']
     # The tutorial's main explanation and command text above this detail.
     areas=job['sample_credit'].get('recommended_teaching_areas') or ([{'label':'Lesson and commands','xywh':[0,0,640,y]}] if y else [{'label':'Other lesson area','xywh':[0,y+h,640,360-y-h]}])
+    if example in ('jupyter','npm','gentoo'):
+        guide=next(g for g in job['teaching_guides'] if g['candidate_id']==candidate['id'])
+        assert guide['source_sha256']==job['input_sha256'] and guide['regions']==areas
+        assert not (folder/'approval.json').exists()
+        record['source_matched_guide_available_without_approval']=True
     body={'candidate_id':candidate['id'],'prediction_sha256':job['prediction_sha256'],'export_mode':'steady-detail-v1','protected_regions':areas}
     req('/api/jobs/'+jid+'/plan',{**body,'protected_regions':[]},400)
     req('/api/jobs/'+jid+'/plan',{**body,'protected_regions':[{'label':'Overlap','xywh':[x,y,1,1]}]},400)
@@ -73,6 +80,9 @@ try:
     for row in final['frame_review']['rows']:
         for asset in row['images'].values():assert hashlib.sha256(req(asset['url'],raw=True)).hexdigest()==asset['sha256']
     record['all_twelve_boundary_http_hashes_exact']=True
+    teaching=final['teaching_review'];assets=[a for r in teaching['regions'] for m in r['moments'] for a in m['images'].values()]
+    for asset in assets:assert hashlib.sha256(req(asset['url'],raw=True)).hexdigest()==asset['sha256']
+    record['all_teaching_http_png_hashes_exact']=True;record['teaching_png_count']=len(assets)
     # Independently verify every protected RGB sample and outside influence.
     def rgb(path):
         return subprocess.Popen(['ffmpeg','-v','error','-threads','1','-filter_threads','1','-i',str(path),'-map','0:v:0','-an','-vf',__import__('engine').DECODE_FILTER,'-pix_fmt','rgb24','-f','rawvideo','pipe:1'],stdout=subprocess.PIPE)

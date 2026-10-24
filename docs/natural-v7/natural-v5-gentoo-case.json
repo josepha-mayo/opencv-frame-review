@@ -1,0 +1,12 @@
+{
+  "id": "gentoo-equery",
+  "filename": "gentoo-equery.webm",
+  "start": 62,
+  "bbox": [370,330,6,10],
+  "selection": "Exploratory targeted shell follow-up selected by title, size and license before viewing three fixed windows. Frozen v5 build unchanged. The first-quarter window proposes an idle terminal caret while package progress text changes separately. Both observed images inspected; protect command text and progress readout. An editor may reasonably retain this caret; no semantic or preference claim.",
+  "protected_regions": [
+    {"label":"Commands and package explanation","xywh":[0,0,640,326]},
+    {"label":"Live package progress readout","xywh":[0,326,360,18]},
+    {"label":"Terminal lower margin","xywh":[0,344,640,16]}
+  ]
+}

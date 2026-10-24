@@ -1,0 +1,79 @@
+{
+  "criteria": {
+    "hackathon": {
+      "id": 30984,
+      "slug": "opencv26",
+      "title": "OpenCV AI Competition 2026, powered by AWS"
+    },
+    "data": {
+      "criteria": [
+        {
+          "name": "Technical execution",
+          "description": "weighted 30%: correctness and depth of the OpenCV 5",
+          "position": 1
+        },
+        {
+          "name": "Innovation",
+          "description": "weighted 20%: originality and thoughtful use of computer vision or AI.",
+          "position": 2
+        },
+        {
+          "name": "Real-world impact ",
+          "description": "weighted 20%: importance of the problem, usefulness, and evidence of potential benefit.",
+          "position": 3
+        },
+        {
+          "name": "User experience",
+          "description": "weighted 10%: usability, accessibility, and quality of interaction.",
+          "position": 4
+        },
+        {
+          "name": "Documentation and presentation",
+          "description": "weighted 10%: clarity of the report, code, architecture, instructions, and video.",
+          "position": 5
+        },
+        {
+          "name": "Cloud delivery, reproducibility, and responsible operation",
+          "description": "weighted 10%: AWS deployment quality, repeatability, observability, security, and responsible-use practices.",
+          "position": 6
+        }
+      ],
+      "count": 6,
+      "judging_scale": 5,
+      "tracks": [
+        {
+          "name": "Best Use of COOL Award"
+        },
+        {
+          "name": "Agentic Vision Award"
+        }
+      ]
+    },
+    "data_completeness": "complete",
+    "fetched_at": "2026-10-24T09:13:06Z"
+  },
+  "dates": {
+    "hackathon": {
+      "id": 30984,
+      "slug": "opencv26",
+      "title": "OpenCV AI Competition 2026, powered by AWS"
+    },
+    "data": {
+      "time_zone": "Pacific Time (US & Canada)",
+      "dates": {
+        "submissions_start_at": "2026-08-26T07:00:00Z",
+        "submissions_end_at": "2026-10-27T06:45:00Z",
+        "judging_starts_at": "2026-10-27T07:00:00Z",
+        "judging_ends_at": "2026-11-10T07:45:00Z",
+        "public_voting_starts_at": "2026-10-26T07:00:00Z",
+        "public_voting_ends_at": "2026-11-10T07:45:00Z",
+        "winners_announced_at": "2026-11-10T17:00:00Z",
+        "published_at": "2026-08-13T15:33:12Z"
+      },
+      "current_phase": "submissions_open"
+    },
+    "data_completeness": "complete",
+    "fetched_at": "2026-10-24T09:13:05Z"
+  },
+  "scope": "Official Devpost connection snapshot; weights do not predict a judge score."
+}

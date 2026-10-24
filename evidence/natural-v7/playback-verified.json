@@ -1,0 +1,42 @@
+{
+  "complete": true,
+  "cases": {
+    "cloud-gentoo": {
+      "duration": 12,
+      "ended": true,
+      "error": null,
+      "height": 360,
+      "muted": true,
+      "time": 12,
+      "width": 640
+    },
+    "cloud-jupyter": {
+      "duration": 12,
+      "ended": true,
+      "error": null,
+      "height": 360,
+      "muted": true,
+      "time": 12,
+      "width": 640
+    },
+    "local-gentoo": {
+      "duration": 12,
+      "ended": true,
+      "error": null,
+      "height": 360,
+      "muted": true,
+      "time": 12,
+      "width": 640
+    },
+    "local-jupyter": {
+      "duration": 12,
+      "ended": true,
+      "error": null,
+      "height": 360,
+      "muted": true,
+      "time": 12,
+      "width": 640
+    }
+  },
+  "scope": "Actual downloaded local and AWS edits played to end, muted. No listening study."
+}

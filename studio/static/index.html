@@ -18,14 +18,15 @@
 
   <main id="main" class="page-width">
     <section class="intro" aria-labelledby="page-title">
-      <p class="eyebrow">For the lesson you can no longer unflatten</p>
-      <h1 id="page-title">Rescue the lesson.<br>Keep what teaches.</h1>
-      <p class="intro-copy">A teacher has the recording, but the editable project is gone. Inspect a short excerpt, protect the explanation and narration, and decide whether a repeating visual detail should change. Every edit needs your reviewed plan. This page shows static images only.</p>
+      <p class="eyebrow">For the teacher with a recording and no editable project</p>
+      <h1 id="page-title">Keep the progress.<br>Calm the blink.</h1>
+      <p class="intro-copy">The command is written. The explanation continues. A caret keeps blinking beside a changing download readout. Review one small hold, protect the teaching content, and check that the exported lesson keeps its timeline. Every edit needs your reviewed plan.</p>
+      <div class="intro-actions"><a class="button primary" href="#upload-title">Start with the real lesson</a><a class="button secondary" href="#clip-file">Use your own recording</a></div>
     </section>
 
     <section class="lesson-story" aria-label="How a lesson rescue works">
-      <figure class="natural-lesson-example"><img src="/static/natural-terminal.png" width="640" height="360" alt="Real installation tutorial showing terminal commands and a blinking caret at the bottom; static prepared frame"><figcaption>Real terminal lesson · naturally occurring caret · Info-farmer, CC0. Extracted and resized; no defect added.</figcaption></figure>
-      <div class="lesson-promise"><h2>Keep the command. Calm the blink.</h2><p>A terminal caret can keep blinking while a teacher explains a finished command. Steady its visible state during a reading pause, while the command text and narration stay on their original timeline. The app checks the encoded result before offering an edited download.</p><p class="small muted">A caret can also show where typing happens. Compare both observed states and keep useful motion. The separate rapid-decoration retimer remains available. Attention, learning and time saved have not been measured.</p></div>
+      <figure class="natural-lesson-example"><img src="/static/natural-gentoo.png" width="640" height="360" alt="Actual package-management lesson: commands and a changing download readout, with a stationary caret beside the readout; static prepared frame"><figcaption>Real Gentoo lesson · natural caret · Vitaly Zdanevich, CC0 as listed. Prepared excerpt; no defect added. Silent source.</figcaption></figure>
+      <div class="lesson-promise"><h2>Hold one detail. Keep the lesson moving.</h2><p>Try the package lesson below. Compare both observed caret states, load its suggested teaching areas, and inspect the highlighted commands and progress readout. Check the plan and explicitly generate a comparison.</p><p>Then inspect what stayed: the complete teaching-frame sequence, static source/edit pairs, cut points, and recoverable source files.</p><p class="small muted">A caret can show where typing happens. Keep useful motion. These are selected engineering examples; attention, learning and time saved have not been measured. This page shows static images only.</p></div>
     </section>
 
     <aside class="notice" aria-labelledby="limits-title">
@@ -49,6 +50,7 @@
       <section class="panel upload-panel" aria-labelledby="upload-title">
         <div class="section-heading"><span class="step-number" aria-hidden="true">01</span><h2 id="upload-title">Choose a clip</h2></div>
         <p class="muted">Upload an MP4/MOV or WebM lesson, up to 64 MiB. Choose a 1–12 second excerpt to prepare for review.</p>
+        <details class="compact-details preparation-settings"><summary>Preparation settings · original kept separately</summary>
         <p class="small muted">Prepared review profile (the uploaded original stays separate):</p>
         <dl class="profile-grid">
           <div><dt>Resolution</dt><dd>320 × 180 or 640 × 360</dd></div>
@@ -57,19 +59,20 @@
           <div><dt>Audio</dt><dd>Prepared edit input: Optional AAC-LC mono 48 kHz only. Preparation accepts supported mono/stereo audio and converts it once to AAC-LC mono 48 kHz. The local edit copies that prepared track unchanged and verifies packets, timing and decoded samples. Canonical direct inputs may skip preparation.</dd></div>
         </dl>
         <p class="profile-detail">H.264 · YUV420 · limited-range BT.709<br>Maximum input: 4 MiB / 8 MiB by profile</p>
+        </details>
         <form id="upload-form">
           <label for="natural-example">Choose a real lesson</label>
-          <select id="natural-example" disabled><option value="terminal">Terminal installation · Tamil</option><option value="jupyter">Jupyter notebook · English</option><option value="npm">npm command line · English</option></select>
-          <button id="natural-demo-button" class="button primary full-width" type="button" disabled>Try a real terminal blink</button>
-          <p class="small muted"><span id="natural-example-description">Info-farmer, CC0. Prepared 12-second Tamil lesson, with a natural caret and prepared narration. No added defect. Suggested teaching area: [0, 0, 640, 336].</span> <a id="natural-example-download" href="/api/samples/natural-terminal.mp4" download>Download this prepared excerpt</a> · <a id="natural-example-credit" href="/api/samples/natural-terminal-credit.json" download>Source &amp; preparation provenance</a>.</p>
-          <div id="cloud-samples" hidden>
+          <select id="natural-example" disabled><option value="gentoo">Package progress · keep the readout moving</option><option value="terminal">Terminal installation · Tamil</option><option value="jupyter">Jupyter notebook · English</option><option value="npm">npm command line · English</option></select>
+          <button id="natural-demo-button" class="button primary full-width" type="button" disabled>Try the real package-progress lesson</button>
+          <p class="small muted"><span id="natural-example-description">Vitaly Zdanevich, CC0 as listed. Prepared 12-second package explanation, with changing progress beside a natural caret. Silent source; no added defect. Suggested teaching areas are available after analysis.</span> <a id="natural-example-download" href="/api/samples/natural-gentoo.mp4" download>Download this prepared excerpt</a> · <a id="natural-example-credit" href="/api/samples/natural-gentoo-credit.json" download>Source &amp; preparation provenance</a>.</p>
+          <div id="cloud-samples" hidden><details class="compact-details"><summary>Classroom and controlled regression examples</summary>
             <button id="real-demo-button" class="button primary full-width" type="button" disabled>Analyze a real classroom lesson</button>
             <p class="small muted">A real teacher and whiteboard, with human narration. Prepares seconds 40–52. No artificial defect is added; no candidate can be the right outcome. <a href="/api/samples/real-teacher.webm" download>Download the original WebM</a>.</p>
             <p class="small muted">TEFL &amp; TESOL Courses – ITTT, <a href="https://commons.wikimedia.org/wiki/File:English_Grammar_%E2%80%94_Present_Simple_%E2%80%94_Teaching_Ideas_%E2%80%94_1.webm" target="_blank" rel="noopener">Present Simple – Teaching Ideas</a>, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>. Preparation changes format and extracts a segment. No endorsement.</p>
             <button id="real-challenge-button" class="button secondary full-width" type="button" disabled>Try a controlled distraction on real footage</button>
             <p class="small muted">Same real teacher and human narration, with a deliberately added flashing corner in the black margin. This tests edit preservation; the defect is authored. Protect the teacher and whiteboard: [80, 0, 480, 360].</p>
             <button id="demo-button" class="button secondary full-width" type="button" disabled>Analyze the demo lesson on AWS</button><p class="small muted">The authored math regression sample has a deliberate looping decoration and neural narration. An edit still needs your reviewed plan and consent.</p><a class="small" href="/api/samples/lesson.mp4" download>Download the original demo lesson</a>
-          </div>
+          </details></div>
           <label class="file-label" for="clip-file">Local video file</label>
           <input id="clip-file" name="clip" type="file" accept="video/mp4,video/quicktime,video/webm,.mp4,.mov,.webm" aria-describedby="file-help" required disabled>
           <p id="file-help" class="small muted">Use a lesson you own or have permission to process. No video preview is played.</p>
@@ -117,6 +120,7 @@
             <p class="small muted">Choose the explicit action below. Only one candidate can be approved for this job. Retiming repeats one observed cycle and can discard subtle variations; it does not smooth motion. Encoding can change pixels outside the region. The legacy interval hold, if selected, reuses the first sample in each 10-frame block. It changes the animation and can cause an abrupt change when the original frames resume.</p>
             <fieldset class="protection-fields"><legend>Export strategy</legend><label for="export-mode">Choose an explicit edit</label><select id="export-mode"><option value="steady-detail-v1">Keep the more contrasting state of a stationary blink</option><option value="periodic-local-retime-v2" selected>Slow periodic decoration 5× · exact protected areas</option><option value="legacy">Legacy interval hold · H.264 QP18</option><option value="native-yuv-whole-clip-v9">Experimental whole-clip hold · lossless H.264 (experimental playback compatibility)</option></select><p id="export-mode-note" class="small muted">5× local retiming inside the detected interval only. Requires at least three repeated cycles, per-plane recurrence mean ≤2 and every sample difference ≤32 native codes. This bounded test can still admit small nonperiodic changes. Strong entry transitions remain; no safety claim.</p></fieldset>
             <fieldset class="protection-fields"><legend>Protect up to four teaching areas</legend>
+              <aside id="teaching-guide" class="example-guide" hidden><h3>What this lesson needs to keep</h3><p id="teaching-guide-focus"></p><button id="teaching-guide-load" type="button" class="button secondary">Load this example's teaching areas</button><p class="small muted">Suggestions match these prepared bytes and this candidate. Inspect the highlighted areas and edit as needed. Loading them does not check the plan or approve an edit. Clear existing areas before loading suggestions.</p></aside>
               <p class="small muted">For a prepared lesson, save at least one teaching area: the explanation, labels, diagram or counter that must not change. Retiming checks it on every frame against the original source decode; older modes use the unchanged re-encode. This does not track moving content or guarantee preservation. An area overlapping the proposed edit is refused.</p>
               <button id="protect-pick" type="button" class="button secondary">Mark two corners on the static image</button>
               <p id="protect-status" class="small" role="status">No important area declared.</p>

@@ -1,0 +1,67 @@
+{
+  "scope": "First 375 capture was before proof image loads settled; tab was closed prematurely. Repeat same prepared case with loaded proof before closing; no new source case.",
+  "initial_observations": [
+    {
+      "proofImages": [
+        {
+          "complete": true,
+          "width": 552
+        },
+        {
+          "complete": true,
+          "width": 552
+        },
+        {
+          "complete": false,
+          "width": 0
+        },
+        {
+          "complete": false,
+          "width": 0
+        },
+        {
+          "complete": false,
+          "width": 0
+        },
+        {
+          "complete": true,
+          "width": 552
+        }
+      ],
+      "scrollWidth": 360,
+      "width": 375
+    },
+    {
+      "proofImages": [
+        {
+          "complete": true,
+          "width": 552
+        },
+        {
+          "complete": true,
+          "width": 552
+        },
+        {
+          "complete": true,
+          "width": 552
+        },
+        {
+          "complete": true,
+          "width": 552
+        },
+        {
+          "complete": true,
+          "width": 552
+        },
+        {
+          "complete": true,
+          "width": 552
+        }
+      ],
+      "scrollWidth": 875,
+      "width": 890
+    }
+  ],
+  "resolution": "Repeated the same prepared notebook case; after actual proof images loaded, both 375 and 890 widths passed with no overflow. No runtime change or additional source qualification.",
+  "repeat_job_id": "07814d361b9c9b103d6c95461fd5bfae"
+}

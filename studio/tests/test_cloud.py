@@ -40,7 +40,7 @@ class CloudHTTP(unittest.TestCase):
         owner=headers['Set-Cookie'].split(';')[0]
         post_headers={'Cookie':owner,'X-App-Token':json.loads(body)['csrf_token']}
         with patch.object(self.server.manager.pool,'submit'):
-            for example in ('jupyter','npm'):
+            for example in ('jupyter','npm','gentoo'):
                 status,_,body=self.request('/api/natural-demo',method='POST',body=json.dumps({'example':example}),headers=post_headers)
                 self.assertEqual(status,202)
                 job=json.loads(body);folder=self.server.manager.jobpath(job['id'])

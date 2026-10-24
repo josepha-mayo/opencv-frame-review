@@ -1,0 +1,86 @@
+{
+  "schema": "natural-lesson-example-v1",
+  "id": "gentoo",
+  "label": "Package explanation with changing progress",
+  "author": "Vitaly Zdanevich",
+  "title": "Gentoo-portage-installing-and-using-of-equery.webm",
+  "page": "https://commons.wikimedia.org/wiki/File:Gentoo-portage-installing-and-using-of-equery.webm",
+  "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Gentoo-portage-installing-and-using-of-equery.webm",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "original_sha256": "28b6582333d38df21ac89e7511b506bbee9e1d211ad5809a4e729fde5a564eb1",
+  "source_original_bytes": 17268947,
+  "excerpt_start_seconds": 62,
+  "excerpt_duration_seconds": 12,
+  "prepared_sample_sha256": "33a58e2d4dd11a6bfb84cc656fab241a59ba0624162083aeb9bcbea628814fd3",
+  "authored_defect": false,
+  "derivation": "Extracted seconds 62-74, resized/letterboxed to 640x360 and converted to 30 fps H.264. Source is silent. No added defect. Original-upload qualification is separate; this prepared example repeats that case.",
+  "recommended_teaching_areas": [
+    {
+      "label": "Commands and package explanation",
+      "xywh": [
+        0,
+        0,
+        640,
+        326
+      ]
+    },
+    {
+      "label": "Live package progress readout",
+      "xywh": [
+        0,
+        326,
+        360,
+        18
+      ]
+    },
+    {
+      "label": "Terminal lower margin",
+      "xywh": [
+        0,
+        344,
+        640,
+        16
+      ]
+    }
+  ],
+  "notice": "The download readout changes while a stationary caret blinks beside it. Inspect both states and keep useful position information. An observed-state hold still requires a checked plan and explicit approval.",
+  "reading_pause_guide": {
+    "candidate_bbox": [
+      370,
+      330,
+      6,
+      10
+    ],
+    "focus": "Keep the changing package-progress readout on its timeline while reviewing the idle caret beside it.",
+    "teaching_regions": [
+      {
+        "label": "Commands and package explanation",
+        "xywh": [
+          0,
+          0,
+          640,
+          326
+        ]
+      },
+      {
+        "label": "Live package progress readout",
+        "xywh": [
+          0,
+          326,
+          360,
+          18
+        ]
+      },
+      {
+        "label": "Terminal lower margin",
+        "xywh": [
+          0,
+          344,
+          640,
+          16
+        ]
+      }
+    ]
+  }
+}

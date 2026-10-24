@@ -1,0 +1,38 @@
+{
+  "build": "lesson-rescue-guided-progress-2026-10-24-v7",
+  "runtime_manifest_sha256": "dbddf025b7caf643a3b8ba95014af7d84cb4a21fbe8dd1bdf3943824fd2455ca",
+  "runtime_files": 113,
+  "checked_utc": "2026-10-24T10:19:52.502809+00:00",
+  "verification_stages_passed": 14,
+  "backend_tests": 137,
+  "studio_tests": 97,
+  "studio_platform_skips": 1,
+  "original_source_regressions": 9,
+  "new_original_source_qualifications_this_release": 0,
+  "previous_exploratory_screen_sources": 11,
+  "previous_exploratory_screen_windows": 33,
+  "guided_examples": [
+    "gentoo",
+    "jupyter",
+    "npm-basics"
+  ],
+  "unchanged_runtime_files": 98,
+  "changed_runtime_files": [
+    "studio/fixtures/NATURAL_JUPYTER_CREDIT.json",
+    "studio/fixtures/NATURAL_NPM_CREDIT.json",
+    "studio/lesson_intake.py",
+    "studio/static/app.js",
+    "studio/static/index.html",
+    "studio/static/styles.css",
+    "studio/tests/integration_natural_examples.py",
+    "studio/tests/integration_steady_detail.py",
+    "studio/tests/test_cloud.py",
+    "studio/tests/test_studio_ui.py",
+    "studio/lesson_guides.py",
+    "studio/tests/test_lesson_guides.py",
+    "studio/fixtures/natural-gentoo.mp4",
+    "studio/fixtures/NATURAL_GENTOO_CREDIT.json",
+    "studio/static/natural-gentoo.png"
+  ],
+  "scope": "Guided repeats of selected engineering cases. Source-matched templates, not semantic teaching detection. No human impact or representative recall measured."
+}

@@ -1,0 +1,9 @@
+{
+  "initial_manifest": "f211892f25e785fc0556495785e8e673a71185271ea86b6dcb0d12757d85d043",
+  "studio_unit_tests": 97,
+  "failures": 1,
+  "skips": 1,
+  "failure": "Frozen static-only UI contract required image source under /static/. The first hero image used /api/samples/.",
+  "fix": "Keep the frozen contract unchanged. Route /static/natural-gentoo.png through the existing bounded/hash-verified static sample handler.",
+  "additional_prequalification_fix": "Read the admitted shape from analysis.json; the ordinary job view does not expose input_profile. No media or approval threshold changed."
+}

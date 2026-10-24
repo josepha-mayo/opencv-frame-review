@@ -10,7 +10,7 @@ from test_boundary_ui_static import HARNESS, NODE
 
 EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL, ui, byId,
   protectionValues, resetProtection, invalidateProtection, drawProtection,
-  saveProtectedRegion, removeProtectedRegion, checkProtection,
+  saveProtectedRegion, removeProtectedRegion, checkProtection, loadTeachingGuide,
   plan() { return protectionPlan; },
   setBusy(value) { busy = value; updateControls(); },
   setUncertain(value) { stateUncertain = value; updateControls(); },
@@ -25,6 +25,27 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL
 
 
 class StudioEditor(unittest.TestCase):
+    def test_example_areas_do_not_skip_review_or_overwrite_custom_work(self):
+        self.run_js('''
+const base={id:'a'.repeat(32),status:'review',input_sha256:'d'.repeat(64),prediction_sha256:'b'.repeat(64),candidates:[{id:'0',recipe_sha256:'c'.repeat(64),bbox:[260,50,40,40],interval_frames:[9,159]}],teaching_guides:[{source_sha256:'d'.repeat(64),candidate_id:'0',candidate_bbox:[260,50,40,40],focus:'Keep the readout moving',regions:[{label:'Readout',xywh:[10,10,80,25]}]}]};
+api.setJob(base);api.setBusy(false);ui.reviewed.checked=true;
+assert.equal(api.byId('teaching-guide').hidden,false);
+api.loadTeachingGuide();assert.equal(api.protectionValues().length,1);
+assert.equal(ui.reviewed.checked,false);assert.equal(api.plan(),null);assert.equal(ui.approve.disabled,true);
+assert.equal(api.byId('teaching-guide-load').disabled,true);
+api.loadTeachingGuide();assert.equal(api.protectionValues().length,1);
+api.resetProtection(null);draft('My area',[20,20,30,20]);
+assert.equal(api.byId('teaching-guide-load').disabled,true);
+api.loadTeachingGuide();assert.equal(api.protectionValues()[0].label,'My area');
+''')
+
+    def test_example_guide_for_different_source_is_hidden(self):
+        self.run_js('''
+api.setJob({id:'a'.repeat(32),status:'review',input_sha256:'d'.repeat(64),candidates:[{id:'0',bbox:[260,50,40,40]}],teaching_guides:[{source_sha256:'e'.repeat(64),candidate_id:'0',candidate_bbox:[260,50,40,40],regions:[{label:'Other source',xywh:[10,10,80,25]}]}]});api.setBusy(false);
+assert.equal(api.byId('teaching-guide').hidden,true);assert.equal(api.byId('teaching-guide-load').disabled,true);
+api.loadTeachingGuide();assert.equal(api.protectionValues().length,0);assert.equal(api.plan(),null);
+''')
+
     def test_prepared_lesson_cannot_plan_without_a_teaching_area(self):
         self.run_js('''
 api.prepare();

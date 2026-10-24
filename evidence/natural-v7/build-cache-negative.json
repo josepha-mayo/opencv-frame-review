@@ -1,0 +1,6 @@
+{
+  "initial_cached_build": "Failed: parent snapshot did not exist after dedicated daemon restart.",
+  "resolution": "Rebuilt exact Dockerfile without cache, then rebuilt frozen final source. Pinned Python, wheel hashes and FFmpeg binary checks unchanged.",
+  "shared_images_pruned": false,
+  "final_runtime_check_files": 113
+}

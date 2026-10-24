@@ -1,0 +1,191 @@
+[
+  {
+    "id": "jupyter",
+    "filename": "jupyter.webm",
+    "source_group": "new",
+    "start": 301,
+    "bbox": [
+      116,
+      148,
+      2,
+      8
+    ],
+    "selection": "Quarter/half/three-quarter duration cohort selected before detector changes. This is the midpoint excerpt; all three outcomes retained.",
+    "protected_regions": [
+      {
+        "label": "Notebook code and output",
+        "xywh": [
+          52,
+          96,
+          552,
+          45
+        ]
+      },
+      {
+        "label": "Notebook controls",
+        "xywh": [
+          50,
+          30,
+          560,
+          60
+        ]
+      }
+    ]
+  },
+  {
+    "id": "npm-packages",
+    "filename": "npm-packages.webm",
+    "source_group": "new",
+    "start": 29,
+    "bbox": [
+      82,
+      116,
+      2,
+      8
+    ],
+    "selection": "Quarter/half/three-quarter duration cohort selected before detector changes. This is the first-quarter excerpt; all three outcomes retained.",
+    "protected_regions": [
+      {
+        "label": "Repository explanation and code",
+        "xywh": [
+          55,
+          180,
+          560,
+          180
+        ]
+      }
+    ]
+  },
+  {
+    "id": "npm-basics",
+    "filename": "npm-basics.webm",
+    "source_group": "new",
+    "start": 232,
+    "bbox": [
+      538,
+      244,
+      8,
+      4
+    ],
+    "selection": "Quarter/half/three-quarter duration cohort selected before detector changes. This is the first-quarter excerpt; all three outcomes retained.",
+    "protected_regions": [
+      {
+        "label": "Command history",
+        "xywh": [
+          0,
+          0,
+          480,
+          236
+        ]
+      },
+      {
+        "label": "Current command text",
+        "xywh": [
+          0,
+          232,
+          530,
+          28
+        ]
+      },
+      {
+        "label": "Presenter explanation",
+        "xywh": [
+          490,
+          0,
+          150,
+          160
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wikilink",
+    "filename": "wikilink.webm",
+    "source_group": "old",
+    "start": 60,
+    "bbox": [
+      206,
+      210,
+      2,
+      6
+    ],
+    "selection": "Development repair of an earlier production-preparation failure, selected after inspection. Not held out or a new corpus source.",
+    "protected_regions": [
+      {
+        "label": "Wikilink teaching text",
+        "xywh": [
+          195,
+          80,
+          245,
+          100
+        ]
+      },
+      {
+        "label": "Lesson heading",
+        "xywh": [
+          195,
+          54,
+          245,
+          25
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wiki-citations",
+    "filename": "wiki-citations.webm",
+    "source_group": "earlier",
+    "start": 24,
+    "bbox": [
+      156,
+      108,
+      2,
+      6
+    ],
+    "selection": "Development repair of an earlier production-preparation failure, selected after inspection. Not held out or a new corpus source.",
+    "protected_regions": [
+      {
+        "label": "Citation example and text",
+        "xywh": [
+          150,
+          125,
+          430,
+          80
+        ]
+      },
+      {
+        "label": "Article heading and controls",
+        "xywh": [
+          150,
+          25,
+          430,
+          65
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terminal",
+    "filename": "tamil-install.webm",
+    "source_group": "old",
+    "start": 68,
+    "bbox": [
+      10,
+      340,
+      8,
+      16
+    ],
+    "selection": "Regression on the original previously qualified Tamil source. This new bounded proposal is not an independent new natural case.",
+    "protected_regions": [
+      {
+        "label": "Terminal command text",
+        "xywh": [
+          0,
+          0,
+          640,
+          336
+        ]
+      }
+    ]
+  }
+]
