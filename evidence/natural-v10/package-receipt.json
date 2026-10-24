@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-10-24T20:42:09.613650+00:00",
+  "filename": "Frame-Review-Keep-the-Number-Judge-Package.zip",
+  "bytes": 31266302,
+  "sha256": "2efe2338b957bac9ad6e24a9b4ed9e136fc4d2d26aff2f11e3365a088f6a4586",
+  "source_commit": "a4046d3dceea5cfc8e7b3aebb606f42871bb8d40",
+  "runtime_manifest_sha256": "20dfbb02970dcfb4d2a8fc0a8414dc900ace3cb16ea75130090cefc12217a8a0",
+  "runtime_files_verified": 117,
+  "zip_integrity": true,
+  "handoff_paths": 0,
+  "report_sha256": "39ed0d57d0deb1dde3a8c475d637dcb78d2f721b5a782fb85d094ddd75d4ae4b"
+}

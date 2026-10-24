@@ -1,0 +1,81 @@
+{
+  "verified_utc": "2026-10-24T20:45:21.041801+00:00",
+  "source_commits": {
+    "private": {
+      "commit": "7f50cb994a239c70e4583612a164b1f5f5b7080a",
+      "tree": "87159382e6df561e9e3e0cca8b722da40e37b40d",
+      "branch": "master",
+      "parent": "05387a69c8c45accc1690f0d346ff4293ba01933"
+    },
+    "public": {
+      "commit": "a4046d3dceea5cfc8e7b3aebb606f42871bb8d40",
+      "tree": "1c2cf46feae7c2596f379ac8aa36287f7bbd6519",
+      "branch": "main",
+      "parent": "b1d92454ce70305d5428a9c359461c5bccde458b"
+    }
+  },
+  "cloud": {
+    "task_definition": "default-lesson-rescue:16",
+    "image_digest": "sha256:a154dba16c8ad22a50a1ebcf6ac40f2cf9e00304f6d770db9027d479408a1917",
+    "runtime_manifest_sha256": "20dfbb02970dcfb4d2a8fc0a8414dc900ace3cb16ea75130090cefc12217a8a0",
+    "rollout_completed": true
+  },
+  "devpost": {
+    "verified_utc": "2026-10-24T20:45:01.037356+00:00",
+    "submitted": true,
+    "steps": "5/5",
+    "submission_id": 1177390,
+    "project_id": 1423567,
+    "project_url": "https://devpost.com/software/countback-inspect-the-evidence",
+    "source_commit": "a4046d3dceea5cfc8e7b3aebb606f42871bb8d40",
+    "current_filename_visible": true,
+    "current_filename": "Frame-Review-Keep-the-Number-Judge-Package.zip",
+    "testing_exact": true,
+    "description_exact": true,
+    "comparison_scope": "Exact saved values after removing Devpost-normalized terminal whitespace only.",
+    "gallery_count": 15,
+    "video_url": "https://www.youtube.com/watch?v=5oE3rA-aJNI",
+    "video_unchanged": true,
+    "repository": "https://github.com/josepha-mayo/opencv-frame-review",
+    "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+    "current_inline_images": [
+      {
+        "alt": "Untouched French upload tutorial, static observed frame and caret proposal",
+        "loaded": true,
+        "src": "https://raw.githubusercontent.com/josepha-mayo/opencv-frame-review/a4046d3dceea5cfc8e7b3aebb606f42871bb8d40/docs/natural-v10/upload-steady-0-reference.png"
+      },
+      {
+        "alt": "Actual decoded frame 246: enlarged source and false-color RGB error maps, previous11 pixels/max1code, currentzero",
+        "loaded": true,
+        "src": "https://raw.githubusercontent.com/josepha-mayo/opencv-frame-review/a4046d3dceea5cfc8e7b3aebb606f42871bb8d40/docs/natural-v10/Adjacent-Number-Exact-Footprint.png"
+      }
+    ],
+    "report_links": [
+      "https://github.com/josepha-mayo/opencv-frame-review/blob/a4046d3dceea5cfc8e7b3aebb606f42871bb8d40/docs/real-lessons-report.pdf",
+      "https://github.com/josepha-mayo/opencv-frame-review/blob/a4046d3dceea5cfc8e7b3aebb606f42871bb8d40/docs/real-lessons-report.pdf"
+    ],
+    "save_count": 1,
+    "source_zip_local_sha256": "2efe2338b957bac9ad6e24a9b4ed9e136fc4d2d26aff2f11e3365a088f6a4586",
+    "package_verification_scope": "Local exact git archive bytes and hashes verified before browser upload; Devpost current filename and saved testing instructions read back. No assertion of a second server archive download.",
+    "screenshots": [
+      "Devpost-v10-Live-Evidence.png",
+      "Devpost-v10-Preservation-Proof.png"
+    ],
+    "no_new_playback_recording_narration": true
+  },
+  "package": {
+    "verified_utc": "2026-10-24T20:42:09.613650+00:00",
+    "filename": "Frame-Review-Keep-the-Number-Judge-Package.zip",
+    "bytes": 31266302,
+    "sha256": "2efe2338b957bac9ad6e24a9b4ed9e136fc4d2d26aff2f11e3365a088f6a4586",
+    "source_commit": "a4046d3dceea5cfc8e7b3aebb606f42871bb8d40",
+    "runtime_manifest_sha256": "20dfbb02970dcfb4d2a8fc0a8414dc900ace3cb16ea75130090cefc12217a8a0",
+    "runtime_files_verified": 117,
+    "zip_integrity": true,
+    "handoff_paths": 0,
+    "report_sha256": "39ed0d57d0deb1dde3a8c475d637dcb78d2f721b5a782fb85d094ddd75d4ae4b"
+  },
+  "cron": "Existing OpenCV automation remains PAUSED; no automation created or resumed.",
+  "video": "Existing 5oE3rA-aJNI URL unchanged. No playback, recording, narration, or submission video edit. Wait for user audio.",
+  "limits": "One finalized live 49-member original-upload pack and separate local 41-member built-in pack verified; no assertion that all nine individual callbacks passed. Actual live 375/890 fit and all 36 proof images pass. Selected 11-source bank includes regression repeats; 13 new recordings/91 exploratory discovery windows are not representative recall. Preparation timeouts, polling failure and rejected adjacent-pixel mapping retained. Human benefit unmeasured."
+}
