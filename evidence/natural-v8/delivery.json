@@ -1,0 +1,45 @@
+{
+  "complete": true,
+  "verified_utc": "2026-10-24T11:49:39.120061+00:00",
+  "source_commits": {
+    "private": "0cac657580af869e0bc910329be72307a9746677",
+    "public": "bf791c7680598ff47d69c4fdc1069407943e74b3"
+  },
+  "source_archive": {
+    "verified_utc": "2026-10-24T11:40:59.025274+00:00",
+    "filename": "Frame-Review-Teaching-Area-Editor-Judge-Package.zip",
+    "bytes": 28472869,
+    "sha256": "e8cc5d9241073e169bf0e3f33c1db4e6c4b9e32ec11450592768ac826734b1d2",
+    "source_commit": "bf791c7680598ff47d69c4fdc1069407943e74b3",
+    "runtime_manifest_sha256": "17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801",
+    "runtime_files_verified": 113,
+    "zip_integrity": true,
+    "handoff_paths": 0,
+    "report_sha256": "3730192b64025ac721382dce66178038d33af050b9dd6fd12ead705e5753640a"
+  },
+  "aws": {
+    "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+    "task_definition": "default-lesson-rescue:13",
+    "image_digest": "sha256:e63044defb6db901f4de74829616694e29ae318a29b29e56c770e18d7d59a0f2",
+    "source_manifest_sha256": "17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801",
+    "single_task_rollout_completed": true,
+    "actual_brave_controls_and_report_checked": true
+  },
+  "devpost": {
+    "project_id": 1423567,
+    "submission_id": 1177390,
+    "submitted": true,
+    "filename": "* Upload a File\n\nUpload a file as part of your submission - e.g., zip, pdf, word, apk, etc. To upload multiple files, put them in a zip file and upload the zip file. Limit: 35 MB.\n\nCurrent File: Frame-Review-Teaching-Area-Editor-Judge-Package.zip",
+    "testing_exact": true,
+    "server_zip_bytes_independently_downloaded": false,
+    "description_exact": true,
+    "video": [
+      "https://www.youtube.com/watch?v=5oE3rA-aJNI"
+    ],
+    "gallery_count": 15
+  },
+  "new_demo_or_voice_recording": false,
+  "existing_submission_video_changed": false,
+  "automation_status": "PAUSED",
+  "publication": "Direct default-branch updates; no PR. Exact uploaded source ZIP remains pinned to the source commit, preceding this delivery receipt. Server ZIP filename and fields read back; server ZIP bytes not independently downloaded."
+}

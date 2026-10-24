@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-10-24T11:40:59.025274+00:00",
+  "filename": "Frame-Review-Teaching-Area-Editor-Judge-Package.zip",
+  "bytes": 28472869,
+  "sha256": "e8cc5d9241073e169bf0e3f33c1db4e6c4b9e32ec11450592768ac826734b1d2",
+  "source_commit": "bf791c7680598ff47d69c4fdc1069407943e74b3",
+  "runtime_manifest_sha256": "17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801",
+  "runtime_files_verified": 113,
+  "zip_integrity": true,
+  "handoff_paths": 0,
+  "report_sha256": "3730192b64025ac721382dce66178038d33af050b9dd6fd12ead705e5753640a"
+}
