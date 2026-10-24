@@ -92,6 +92,8 @@
   let savedRegions = [];
   let editingRegionIndex = null;
   const protectEditCancel = byId("protect-edit-cancel"), protectEditStatus = byId("protect-edit-status");
+  const protectPickCancel = byId("protect-pick-cancel");
+  let pickDraft = null;
   const MAX_BYTES = 64 * 1024 * 1024;
   const prepareLesson = byId("prepare-lesson"), clipStart = byId("clip-start"), clipDuration = byId("clip-duration");
   const preparationNotice = byId("preparation-notice"), preparationPreview = byId("preparation-preview");
@@ -229,25 +231,29 @@
     const canReview = job?.status === "review" && !busy && !refreshInFlight && !stateUncertain;
     const steady = currentCandidate()?.action === "steady-detail-v1";
     const imagesReady = imageLoaded && (!steady || alternateLoaded);
-    ui.reviewed.disabled = !canReview || !imagesReady || editingRegionIndex !== null;
-    ui.approve.disabled = !canReview || !imageLoaded || !ui.reviewed.checked || !imagesReady || !currentCandidate()?.recipe_sha256 || !job?.prediction_sha256 || !protectionPlan || editingRegionIndex !== null;
+    ui.reviewed.disabled = !canReview || !imagesReady || editingRegionIndex !== null || picking;
+    ui.approve.disabled = !canReview || !imageLoaded || !ui.reviewed.checked || !imagesReady || !currentCandidate()?.recipe_sha256 || !job?.prediction_sha256 || !protectionPlan || editingRegionIndex !== null || picking;
     [ui.protectX, ui.protectY, ui.protectW, ui.protectH, ui.protectPick, ui.protectCheck, ui.protectClear, exportMode, protectLabel, protectAdd].forEach((node) => { node.disabled = !canReview || !imageLoaded; });
-    exportMode.disabled = !canReview || !imageLoaded || steady;
+    exportMode.disabled = !canReview || !imageLoaded || steady || picking;
+    if (picking) [ui.protectX,ui.protectY,ui.protectW,ui.protectH,protectLabel,ui.protectPick,ui.protectCheck,ui.protectClear,protectAdd].forEach(node=>{node.disabled=true;});
+    protectPickCancel.hidden=!picking;
+    protectPickCancel.disabled=!canReview || !imageLoaded;
+    ui.image.classList.toggle("marking-area",picking);
     exportMode.querySelectorAll("option").forEach(option => { option.disabled = option.value === "steady-detail-v1" && !steady; });
     ui.decline.disabled = !canReview;
     ui.cancel.disabled = busy || refreshInFlight || stateUncertain;
     ui.retry.disabled = busy || refreshInFlight;
     ui.candidateList.querySelectorAll("input").forEach((input) => { input.disabled = !canReview; });
-    protectList.querySelectorAll("button").forEach((button) => { button.disabled = !canReview || !imageLoaded || editingRegionIndex !== null; });
+    protectList.querySelectorAll("button").forEach((button) => { button.disabled = !canReview || !imageLoaded || editingRegionIndex !== null || picking; });
     ui.protectCheck.disabled = ui.protectCheck.disabled || editingRegionIndex !== null;
     protectAdd.textContent = editingRegionIndex === null ? "Add area to list" : "Save area changes";
     protectEditCancel.hidden = editingRegionIndex === null;
-    protectEditCancel.disabled = !canReview || !imageLoaded;
+    protectEditCancel.disabled = !canReview || !imageLoaded || picking;
     protectEditStatus.hidden = editingRegionIndex === null;
     const guide=matchedTeachingGuide();
     teachingGuide.hidden=!guide;
     byId("teaching-guide-focus").textContent=guide?.focus || "";
-    teachingGuideLoad.disabled=!canReview || !imagesReady || !guide || savedRegions.length>0 || [ui.protectX,ui.protectY,ui.protectW,ui.protectH,protectLabel].some(field=>String(field.value || "").trim());
+    teachingGuideLoad.disabled=!canReview || !imagesReady || !guide || picking || savedRegions.length>0 || [ui.protectX,ui.protectY,ui.protectW,ui.protectH,protectLabel].some(field=>String(field.value || "").trim());
   }
 
   function matchedTeachingGuide() {
@@ -403,7 +409,7 @@
     });
   }
   function removeProtectedRegion(index) {
-    if (busy || refreshInFlight || stateUncertain || !imageLoaded || job?.status !== "review") return;
+    if (busy || refreshInFlight || stateUncertain || picking || !imageLoaded || job?.status !== "review") return;
     if (editingRegionIndex !== null) return;
     if (!Number.isInteger(index) || index < 0 || index >= savedRegions.length) return;
     savedRegions.splice(index, 1);
@@ -411,7 +417,7 @@
     invalidateProtection();
   }
   function editProtectedRegion(index) {
-    if (busy || refreshInFlight || stateUncertain || !imageLoaded || job?.status !== "review") return;
+    if (busy || refreshInFlight || stateUncertain || picking || !imageLoaded || job?.status !== "review") return;
     if (!Number.isInteger(index) || index < 0 || index >= savedRegions.length) return;
     if (editingRegionIndex !== null || [ui.protectX,ui.protectY,ui.protectW,ui.protectH,protectLabel].some(field=>String(field.value || "").trim())) {
       showError(ui.protectError,"Finish the current area or clear its input fields before editing another. Your draft has been kept.");
@@ -426,7 +432,7 @@
     invalidateProtection();
   }
   function cancelProtectedEdit() {
-    if (busy || refreshInFlight || stateUncertain || !imageLoaded || job?.status !== "review" || editingRegionIndex === null) return;
+    if (busy || refreshInFlight || stateUncertain || picking || !imageLoaded || job?.status !== "review" || editingRegionIndex === null) return;
     editingRegionIndex=null;
     [ui.protectX,ui.protectY,ui.protectW,ui.protectH].forEach(field=>{field.value="";});
     protectLabel.value="";picking=false;firstCorner=null;
@@ -449,6 +455,7 @@
   }
   function resetProtection(candidate) {
     protectionVersion += 1; picking = false; firstCorner = null;
+    pickDraft = null;
     ui.reviewed.checked = false;
     savedRegions=[];editingRegionIndex=null;protectEditStatus.textContent="";protectList.replaceChildren();protectLabel.value="";exportMode.value="periodic-local-retime-v2";exportModeNote.textContent="5× local retiming inside the detected interval only. Requires at least three repeated cycles, mean recurrence error ≤2 and every sample difference ≤32 native codes. Small nonperiodic changes can still pass. Strong entry transitions remain; playback unverified; no safety claim.";
     if (candidate?.action === "steady-detail-v1") { exportMode.value = "steady-detail-v1"; exportModeNote.textContent = STEADY_NOTE; }
@@ -984,19 +991,33 @@
   teachingGuideLoad.addEventListener("click",loadTeachingGuide);
   ui.protectCheck.addEventListener("click",checkProtection);
   ui.protectClear.addEventListener("click",() => { resetProtection(currentCandidate()); ui.reviewed.checked=false;updateControls(); });
-  ui.protectPick.addEventListener("click",() => {
+  function startAreaMarking() {
+    if (ui.protectPick.disabled) return;
+    pickDraft=[ui.protectX,ui.protectY,ui.protectW,ui.protectH].map(field=>field.value);
     picking=true;firstCorner=null;invalidateProtection();
-    ui.protectStatus.textContent="Click two opposite corners on the static image. You can also enter pixel coordinates.";
-  });
-  ui.image.addEventListener("click",(event) => {
-    if (!picking || !imageLoaded || busy || job?.status!=="review") return;
+    ui.protectStatus.textContent="Choose the first corner on the static image. Cancel marking or press Escape to keep your previous draft. Pixel fields remain available after marking.";
+  }
+  function cancelAreaMarking() {
+    if (!picking || busy || refreshInFlight || stateUncertain || !imageLoaded || job?.status!=="review") return;
+    if (pickDraft) [ui.protectX,ui.protectY,ui.protectW,ui.protectH].forEach((field,i)=>{field.value=pickDraft[i];});
+    picking=false;firstCorner=null;pickDraft=null;invalidateProtection();
+    ui.protectStatus.textContent="Marking cancelled. Previous draft and saved areas kept. Check the plan again before generating.";
+  }
+  function markAreaCorner(event) {
+    if (!picking || !imageLoaded || busy || refreshInFlight || stateUncertain || job?.status!=="review") return;
     const box=ui.image.getBoundingClientRect();
-    const point=[Math.max(0,Math.min(ui.image.naturalWidth-1,Math.floor((event.clientX-box.left)*ui.image.naturalWidth/box.width))),Math.max(0,Math.min(ui.image.naturalHeight-1,Math.floor((event.clientY-box.top)*ui.image.naturalHeight/box.height)))];
-    if (!firstCorner) { firstCorner=point;ui.protectStatus.textContent="First corner selected. Choose the opposite corner.";return; }
+    if (!(box.width>0 && box.height>0 && ui.image.naturalWidth>0 && ui.image.naturalHeight>0) || !Number.isFinite(event.clientX) || !Number.isFinite(event.clientY) || event.clientX<box.left || event.clientY<box.top || event.clientX>=box.left+box.width || event.clientY>=box.top+box.height) return;
+    const point=[Math.floor((event.clientX-box.left)*ui.image.naturalWidth/box.width),Math.floor((event.clientY-box.top)*ui.image.naturalHeight/box.height)];
+    if (!firstCorner) { firstCorner=point;ui.protectStatus.textContent="First corner: ("+point.join(", ")+"). Choose the opposite corner, or cancel marking to start again.";return; }
     const values=[Math.min(firstCorner[0],point[0]),Math.min(firstCorner[1],point[1]),Math.abs(firstCorner[0]-point[0])+1,Math.abs(firstCorner[1]-point[1])+1];
     [ui.protectX,ui.protectY,ui.protectW,ui.protectH].forEach((field,i) => { field.value=String(values[i]); });
-    picking=false;firstCorner=null;invalidateProtection();
-  });
+    picking=false;firstCorner=null;pickDraft=null;invalidateProtection();
+    ui.protectStatus.textContent="Rectangle marked: ["+values.join(", ")+"]. Name and save the area, then check the edit plan. Nothing has been approved.";
+  }
+  ui.protectPick.addEventListener("click",startAreaMarking);
+  protectPickCancel.addEventListener("click",cancelAreaMarking);
+  ui.image.addEventListener("click",markAreaCorner);
+  window.addEventListener("keydown",event=>{if(event.key==="Escape" && picking)cancelAreaMarking();});
   ui.reviewed.addEventListener("change", updateControls);
   ui.approve.addEventListener("click", () => {
     if (ui.approve.disabled) return;

@@ -1,0 +1,1667 @@
+{
+  "complete": true,
+  "verified_utc": "2026-10-24T16:11:34.241025+00:00",
+  "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+  "task_definition": "default-lesson-rescue:14",
+  "image_digest": "sha256:af469ef97a9f6f7b30c652dce532fcacbfcf79dd3785e0328f8ee0f23e8905fa",
+  "source_manifest_sha256": "1f6930b7db9a44b866c4e2b6b25efcf9ca2dbfd2629354777aff03bad55b853c",
+  "browser": {
+    "endpoint": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws",
+    "job_id": "22e4b34790057b6eca2792d7157e474c",
+    "source_manifest_sha256": "1f6930b7db9a44b866c4e2b6b25efcf9ca2dbfd2629354777aff03bad55b853c",
+    "original_file": "joomla-install.ogv",
+    "start_seconds": 60,
+    "markBefore": {
+      "consentDisabled": true,
+      "generateDisabled": true,
+      "planDisabled": true,
+      "saveDisabled": true,
+      "status": "First corner: (318, 178). Choose the opposite corner, or cancel marking to start again."
+    },
+    "markCancelled": {
+      "consent": false,
+      "generateDisabled": true,
+      "status": "Marking cancelled. Previous draft and saved areas kept. Check the plan again before generating.",
+      "values": [
+        "0",
+        "0",
+        "640",
+        "336"
+      ]
+    },
+    "markedPair": {
+      "cancelHidden": true,
+      "consent": false,
+      "status": "Rectangle marked: [318, 178, 1, 1]. Name and save the area, then check the edit plan. Nothing has been approved.",
+      "values": [
+        "318",
+        "178",
+        "1",
+        "1"
+      ]
+    },
+    "attemptedViewport375": {
+      "areas": "1. Commands and installation output \u00c2\u00b7 [0, 0, 640, 336]RemoveEdit2. Prompt before caret \u00c2\u00b7 [0, 336, 120, 24]RemoveEdit3. Remaining prompt line \u00c2\u00b7 [136, 336, 504, 24]RemoveEdit",
+      "consentDisabled": true,
+      "planDisabled": true,
+      "saveDisabled": true,
+      "scrollWidth": 1859,
+      "status": "First corner: (318, 178). Choose the opposite corner, or cancel marking to start again.",
+      "width": 1874
+    },
+    "attemptedViewport890": {
+      "areas": "1. Commands and installation output \u00c2\u00b7 [0, 0, 640, 336]RemoveEdit2. Prompt before caret \u00c2\u00b7 [0, 336, 120, 24]RemoveEdit3. Remaining prompt line \u00c2\u00b7 [136, 336, 504, 24]RemoveEdit",
+      "scrollWidth": 1859,
+      "status": "Marking cancelled. Previous draft and saved areas kept. Check the plan again before generating.",
+      "width": 1874
+    },
+    "viewport_override_applied": false,
+    "viewport_scope": "Override requests reported desktop width 1874, so current 375/890 responsive checks are not claimed. Temporary override reset.",
+    "planBeforeConsent": {
+      "areas": "1. Commands and installation output \u00c2\u00b7 [0, 0, 640, 336]RemoveEdit2. Prompt before caret \u00c2\u00b7 [0, 336, 120, 24]RemoveEdit3. Remaining prompt line \u00c2\u00b7 [136, 336, 504, 24]RemoveEdit",
+      "consent": false,
+      "generateDisabled": true,
+      "plan": "Keep the more contrasting observed state from frame 174 steady inside this interval. Detected region: [124, 340, 8, 12]; detected interval: frames 114\u00e2\u20ac\u201c209. Check every frame of: Commands and installation output, Prompt before caret, Remaining prompt line. Generate only after reviewing this plan. The encoded result can still be refused."
+    },
+    "boundary": {
+      "crop_xywh": [
+        108,
+        324,
+        40,
+        36
+      ],
+      "input_sha256": "241896d9fe454ec8f036446e753c13c0942c5eadc74e728dac2c18a2cc34a377",
+      "output_hashes": {
+        "control": "d5cbbc442bd8f5a9cf35ffdb490f2df4dea18211d7590d7dd37bc97ef8266cac",
+        "edited": "206dd05d07006e7cc714159f63be9d44f67d9f518715db75a785344e5c40f655"
+      },
+      "prediction_sha256": "a6e745e08fff8f4b0b1b44c150486e2dc2263ffb586236aca970036b1b1f6ef2",
+      "recipe_sha256": "fb33da42700fa982ebccb91403f2f51d26402ebe107a8a756e05922173d18ca8",
+      "rows": [
+        {
+          "frame": 113,
+          "images": {
+            "control": {
+              "decoded_crop_rgb_sha256": "75312b8a789d338faf48f5095df4945ec5c587adcfbdf616a700b6d8bffdabc8",
+              "filename": "boundary-f00113-control.png",
+              "sha256": "5f9aeba1df7ead09406cf6a3e97f751eb8ceb599fdcef273aa17d2e7d5f8a779",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00113-control.png"
+            },
+            "edited": {
+              "decoded_crop_rgb_sha256": "75312b8a789d338faf48f5095df4945ec5c587adcfbdf616a700b6d8bffdabc8",
+              "filename": "boundary-f00113-edited.png",
+              "sha256": "5f9aeba1df7ead09406cf6a3e97f751eb8ceb599fdcef273aa17d2e7d5f8a779",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00113-edited.png"
+            },
+            "original": {
+              "decoded_crop_rgb_sha256": "75312b8a789d338faf48f5095df4945ec5c587adcfbdf616a700b6d8bffdabc8",
+              "filename": "boundary-f00113-original.png",
+              "sha256": "5f9aeba1df7ead09406cf6a3e97f751eb8ceb599fdcef273aa17d2e7d5f8a779",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00113-original.png"
+            }
+          },
+          "label": "Before edit",
+          "loop_wrap": false,
+          "seconds": 3.7666666666666666
+        },
+        {
+          "frame": 114,
+          "images": {
+            "control": {
+              "decoded_crop_rgb_sha256": "48a6e4041dde342f6e11adbdfb11438e58bce39bac1afaa168e58f22891c1dab",
+              "filename": "boundary-f00114-control.png",
+              "sha256": "b5c8afd71d9e35da3ee99a9d8fe2aecd25d822bb43b6b577b6af61f02aba5423",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00114-control.png"
+            },
+            "edited": {
+              "decoded_crop_rgb_sha256": "064351203749357db06125d72c5d3c869f692707e3c411bddce6f5888eb40caa",
+              "filename": "boundary-f00114-edited.png",
+              "sha256": "0c9bc61fa3ffbe2ffcf3b5cc5effe49429020de2d8d2a08d5601cbf11f03510c",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00114-edited.png"
+            },
+            "original": {
+              "decoded_crop_rgb_sha256": "48a6e4041dde342f6e11adbdfb11438e58bce39bac1afaa168e58f22891c1dab",
+              "filename": "boundary-f00114-original.png",
+              "sha256": "b5c8afd71d9e35da3ee99a9d8fe2aecd25d822bb43b6b577b6af61f02aba5423",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00114-original.png"
+            }
+          },
+          "label": "Edit begins",
+          "loop_wrap": false,
+          "seconds": 3.8
+        },
+        {
+          "frame": 209,
+          "images": {
+            "control": {
+              "decoded_crop_rgb_sha256": "0bb2a50eab361eb8d24ff648f88cb09aa4ea3d30a11b66e2ae917a6eeee82fe5",
+              "filename": "boundary-f00209-control.png",
+              "sha256": "4ff21252b9509ad04e661318f4918b84dd89f4d59c0013cec371a12e5a9e23bf",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00209-control.png"
+            },
+            "edited": {
+              "decoded_crop_rgb_sha256": "80e3974b3a580d5f891bf73936257791d1281a37cf2900994238d55a53e991ba",
+              "filename": "boundary-f00209-edited.png",
+              "sha256": "b9a6b9f5ad34fd4f97a7d4b4137c25c1fd6f0fb5d77d408d8be22b90959404b7",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00209-edited.png"
+            },
+            "original": {
+              "decoded_crop_rgb_sha256": "0bb2a50eab361eb8d24ff648f88cb09aa4ea3d30a11b66e2ae917a6eeee82fe5",
+              "filename": "boundary-f00209-original.png",
+              "sha256": "4ff21252b9509ad04e661318f4918b84dd89f4d59c0013cec371a12e5a9e23bf",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00209-original.png"
+            }
+          },
+          "label": "Final edited frame",
+          "loop_wrap": false,
+          "seconds": 6.966666666666667
+        },
+        {
+          "frame": 210,
+          "images": {
+            "control": {
+              "decoded_crop_rgb_sha256": "a7c4fd3fde0d6e43fa09921ecfae0fbf56ca32f5399253ace67cd4fc8144c4c9",
+              "filename": "boundary-f00210-control.png",
+              "sha256": "2dab012db3d8ce12cd00bcdcb962ce102ba4ad7c15fb73962f5c257f5bf07d83",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00210-control.png"
+            },
+            "edited": {
+              "decoded_crop_rgb_sha256": "a7c4fd3fde0d6e43fa09921ecfae0fbf56ca32f5399253ace67cd4fc8144c4c9",
+              "filename": "boundary-f00210-edited.png",
+              "sha256": "2dab012db3d8ce12cd00bcdcb962ce102ba4ad7c15fb73962f5c257f5bf07d83",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00210-edited.png"
+            },
+            "original": {
+              "decoded_crop_rgb_sha256": "a7c4fd3fde0d6e43fa09921ecfae0fbf56ca32f5399253ace67cd4fc8144c4c9",
+              "filename": "boundary-f00210-original.png",
+              "sha256": "2dab012db3d8ce12cd00bcdcb962ce102ba4ad7c15fb73962f5c257f5bf07d83",
+              "url": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00210-original.png"
+            }
+          },
+          "label": "Original frames resume",
+          "loop_wrap": false,
+          "seconds": 7
+        }
+      ],
+      "schema": "encoded-boundaries-v1",
+      "strong_return_transition": {
+        "control_delta": 0.4380985786556266,
+        "criterion": 0.1,
+        "edited_delta": 0.0033360908273607492,
+        "newly_timed": false
+      }
+    },
+    "summary": {
+      "acceptance": {
+        "checks": {
+          "all_frames_outside_interval_exact": true,
+          "all_ordered_teaching_rgb_sequences_exact": true,
+          "all_protected_teaching_rgb_exact": true,
+          "all_rgb_outside_influence_exact": true,
+          "all_timestamps_exact": true,
+          "approved_plan_bound": true,
+          "audio_exact": true,
+          "encoded_boundary_rgb_not_worse": true,
+          "encoded_boundary_selected_mean_not_worse": true,
+          "fresh_stationary_two_state_proposal": true,
+          "native_control_exact": true,
+          "native_edit_matches_mapping": true,
+          "selected_activity_reduced": true,
+          "source_and_detection_unchanged": true,
+          "unchanged_control_rgb_exact": true,
+          "whole_clip_activity_reduced": true,
+          "whole_clip_no_new_activity_events": true
+        },
+        "meaning": "Encoded preservation and activity measurements only. Creator review is required; no measured learning or accessibility benefit.",
+        "status": "accepted_experiment"
+      },
+      "audio_preservation": {
+        "checks": {
+          "control": {
+            "decoded_pcm_exact": true,
+            "packet_payload_timing_skip_exact": true,
+            "stream_exact": true
+          },
+          "edited": {
+            "decoded_pcm_exact": true,
+            "packet_payload_timing_skip_exact": true,
+            "stream_exact": true
+          }
+        },
+        "present": true
+      },
+      "boundary": {
+        "entry": {
+          "control_delta": 0.4354249413396853,
+          "edited_delta": 0.00041699227100860936
+        },
+        "exit": {
+          "control_delta": 0.4380985786556266,
+          "edited_delta": 0.0033360908273607492
+        },
+        "loop_seam": {
+          "control_delta": 0.030361639316348978,
+          "edited_delta": 0.030361639316348978
+        }
+      },
+      "checks": {
+        "all_frames_outside_interval_exact": true,
+        "all_ordered_teaching_rgb_sequences_exact": true,
+        "all_protected_teaching_rgb_exact": true,
+        "all_rgb_outside_influence_exact": true,
+        "all_timestamps_exact": true,
+        "approved_plan_bound": true,
+        "audio_exact": true,
+        "encoded_boundary_rgb_not_worse": true,
+        "encoded_boundary_selected_mean_not_worse": true,
+        "fresh_stationary_two_state_proposal": true,
+        "native_control_exact": true,
+        "native_edit_matches_mapping": true,
+        "selected_activity_reduced": true,
+        "source_and_detection_unchanged": true,
+        "unchanged_control_rgb_exact": true,
+        "whole_clip_activity_reduced": true,
+        "whole_clip_no_new_activity_events": true
+      },
+      "codec": "Lossless H.264 High 4:4:4 Predictive, YUV420; verify browser playback separately",
+      "encoded_boundary_checks": {
+        "measurements": {
+          "entry": {
+            "influence": {
+              "edited": {
+                "maximum_rgb_codes": 18,
+                "mean_absolute_rgb_codes": 1.675,
+                "rms_rgb_codes": 2.969988776634237
+              },
+              "passed": true,
+              "source": {
+                "maximum_rgb_codes": 224,
+                "mean_absolute_rgb_codes": 37.39375,
+                "rms_rgb_codes": 81.79639356353066
+              }
+            },
+            "selected": {
+              "edited": {
+                "maximum_rgb_codes": 11,
+                "mean_absolute_rgb_codes": 1.4722222222222223,
+                "rms_rgb_codes": 2.223610677354389
+              },
+              "passed": true,
+              "source": {
+                "maximum_rgb_codes": 224,
+                "mean_absolute_rgb_codes": 120.36805555555556,
+                "rms_rgb_codes": 149.25358268545665
+              }
+            }
+          },
+          "exit": {
+            "influence": {
+              "edited": {
+                "maximum_rgb_codes": 11,
+                "mean_absolute_rgb_codes": 1.2979166666666666,
+                "rms_rgb_codes": 2.084166500066633
+              },
+              "passed": true,
+              "source": {
+                "maximum_rgb_codes": 226,
+                "mean_absolute_rgb_codes": 36.69583333333333,
+                "rms_rgb_codes": 81.51652439843102
+              }
+            },
+            "selected": {
+              "edited": {
+                "maximum_rgb_codes": 11,
+                "mean_absolute_rgb_codes": 1.8611111111111112,
+                "rms_rgb_codes": 2.7322660517925
+              },
+              "passed": true,
+              "source": {
+                "maximum_rgb_codes": 226,
+                "mean_absolute_rgb_codes": 119.75,
+                "rms_rgb_codes": 148.80302509619142
+              }
+            }
+          },
+          "loop_seam": {
+            "influence": {
+              "edited": {
+                "maximum_rgb_codes": 133,
+                "mean_absolute_rgb_codes": 15.122916666666669,
+                "rms_rgb_codes": 32.96153060766444
+              },
+              "passed": true,
+              "source": {
+                "maximum_rgb_codes": 133,
+                "mean_absolute_rgb_codes": 15.122916666666669,
+                "rms_rgb_codes": 32.96153060766444
+              }
+            },
+            "selected": {
+              "edited": {
+                "maximum_rgb_codes": 133,
+                "mean_absolute_rgb_codes": 20.197916666666668,
+                "rms_rgb_codes": 38.94970938416757
+              },
+              "passed": true,
+              "source": {
+                "maximum_rgb_codes": 133,
+                "mean_absolute_rgb_codes": 20.197916666666668,
+                "rms_rgb_codes": 38.94970938416757
+              }
+            }
+          }
+        },
+        "passed": true,
+        "policy": {
+          "activity_threshold_rgb_codes": 8,
+          "boundary_tolerance": 1e-12,
+          "maximum_reference_samples": 33,
+          "maximum_trim_frames_per_end": 30,
+          "minimum_hold_frames": 60,
+          "minimum_removed_mean_changes": 4,
+          "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames.",
+          "version": "steady-boundaries-v1"
+        },
+        "scope": "Entry, return and clip-loop boundary; selected and influence boxes; mean absolute, RMS and maximum decoded RGB differences must each be no greater than source (1e-12 floating comparison tolerance, no perceptual budget). This is not a safety or human-benefit measure."
+      },
+      "export_mode": "steady-detail-v1",
+      "linear_boundary_checks": {
+        "entry": {
+          "edited": 0.00041699227100860936,
+          "passed": true,
+          "source": 0.4354249413396853
+        },
+        "exit": {
+          "edited": 0.0033360908273607492,
+          "passed": true,
+          "source": 0.4380985786556266
+        },
+        "loop_seam": {
+          "edited": 0.030361639316348978,
+          "passed": true,
+          "source": 0.030361639316348978
+        }
+      },
+      "outside_mask_error": {
+        "channel_samples": 248486400,
+        "max_rgb_code_error": 0,
+        "mean_rgb_code_error": 0,
+        "p99_rgb_code_error": 0
+      },
+      "protected_content": {
+        "declared": true,
+        "frames": 360,
+        "passed": true,
+        "regions": [
+          {
+            "channel_samples": 232243200,
+            "criteria": {
+              "max_rgb_code_error": 0,
+              "mean_rgb_code_error": 0,
+              "p99_rgb_code_error": 0
+            },
+            "histogram": [
+              232243200,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "label": "Commands and installation output",
+            "measurements": {
+              "max_rgb_code_error": 0,
+              "mean_rgb_code_error": 0,
+              "p99_rgb_code_error": 0
+            },
+            "passed": true,
+            "xywh": [
+              0,
+              0,
+              640,
+              336
+            ]
+          },
+          {
+            "channel_samples": 3110400,
+            "criteria": {
+              "max_rgb_code_error": 0,
+              "mean_rgb_code_error": 0,
+              "p99_rgb_code_error": 0
+            },
+            "histogram": [
+              3110400,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "label": "Prompt before caret",
+            "measurements": {
+              "max_rgb_code_error": 0,
+              "mean_rgb_code_error": 0,
+              "p99_rgb_code_error": 0
+            },
+            "passed": true,
+            "xywh": [
+              0,
+              336,
+              120,
+              24
+            ]
+          },
+          {
+            "channel_samples": 13063680,
+            "criteria": {
+              "max_rgb_code_error": 0,
+              "mean_rgb_code_error": 0,
+              "p99_rgb_code_error": 0
+            },
+            "histogram": [
+              13063680,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "label": "Remaining prompt line",
+            "measurements": {
+              "max_rgb_code_error": 0,
+              "mean_rgb_code_error": 0,
+              "p99_rgb_code_error": 0
+            },
+            "passed": true,
+            "xywh": [
+              136,
+              336,
+              504,
+              24
+            ]
+          }
+        ],
+        "scope": "Every decoded RGB frame versus prepared source. Fixed areas; creator judges meaning and readability."
+      },
+      "review_status": "needs_creator_review",
+      "stationary_detail": {
+        "activity": {
+          "edited": 0,
+          "source": 4
+        },
+        "metric": "Number of adjacent ROI-mean RGB changes >=8 codes. Interior and fixed whole-clip counts are separate; the latter includes both cut boundaries.",
+        "new_activity_events": 0,
+        "proposal": {
+          "action": "steady-detail-v1",
+          "alternate_frame": 114,
+          "bbox": [
+            124,
+            340,
+            8,
+            12
+          ],
+          "boundary_alignment": {
+            "original_interval_frames": [
+              90,
+              209
+            ],
+            "original_reference_frame": 96,
+            "policy": {
+              "activity_threshold_rgb_codes": 8,
+              "boundary_tolerance": 1e-12,
+              "maximum_reference_samples": 33,
+              "maximum_trim_frames_per_end": 30,
+              "minimum_hold_frames": 60,
+              "minimum_removed_mean_changes": 4,
+              "selection": "Minimize worst predicted boundary RGB RMS, then sum, then maximize held duration. Observed references stay in the originally kept appearance class. Trim only; never extend the detected interval. Preserve first and last clip frames.",
+              "version": "steady-boundaries-v1"
+            },
+            "predicted_entry": {
+              "edited": {
+                "maximum_rgb_codes": 11,
+                "mean_absolute_rgb_codes": 1.4930555555555556,
+                "rms_rgb_codes": 2.2391714737574007
+              },
+              "edited_selected_mean_delta": 0.0004150331854665401,
+              "source": {
+                "maximum_rgb_codes": 224,
+                "mean_absolute_rgb_codes": 120.36805555555556,
+                "rms_rgb_codes": 149.25358268545665
+              },
+              "source_selected_mean_delta": 0.4354249385214643
+            },
+            "predicted_exit": {
+              "edited": {
+                "maximum_rgb_codes": 10,
+                "mean_absolute_rgb_codes": 1.8298611111111112,
+                "rms_rgb_codes": 2.6621054741605477
+              },
+              "edited_selected_mean_delta": 0.003365246622706763,
+              "source": {
+                "maximum_rgb_codes": 226,
+                "mean_absolute_rgb_codes": 119.75,
+                "rms_rgb_codes": 148.80302509619142
+              },
+              "source_selected_mean_delta": 0.43809858036790195
+            },
+            "predicted_source_internal_changes": 4,
+            "scope": "Predicted selected-box RGB and selected-mean changes. Encoded selected/influence RGB and linear-mean checks independently decide acceptance."
+          },
+          "chroma_stability": [
+            {
+              "maximum_frame_mean": 1,
+              "maximum_sample": 4
+            },
+            {
+              "maximum_frame_mean": 1.9583333333333333,
+              "maximum_sample": 4
+            }
+          ],
+          "id": "steady-0",
+          "influence_xywh": [
+            120,
+            336,
+            16,
+            20
+          ],
+          "interval_frames": [
+            114,
+            209
+          ],
+          "interval_seconds": [
+            3.8,
+            6.966666666666667
+          ],
+          "maximum_observed_dwell_frames": 24,
+          "meaning": "Keep the more contrasting observed state steady during this interval; review both states. This may be instructional content.",
+          "minimum_interior_dwell_frames": 18,
+          "pixels": 96,
+          "reference_frame": 174,
+          "reference_selection": "Observed frame in the originally kept appearance class, selected with the reviewed cut points to minimize predicted boundary RMS. No blended or invented pixels.",
+          "reference_state": "brighter",
+          "state_mean_error_limit": 6,
+          "state_mean_error_max": 2.6041666666666665,
+          "state_sample_error_max": 12,
+          "state_separation": 104.79166666666669,
+          "state_transitions": 6
+        },
+        "whole_clip_activity": {
+          "edited": 10,
+          "source": 16
+        }
+      },
+      "teaching_motion": {
+        "all_ordered_rgb_sequences_exact": true,
+        "frames": 360,
+        "interval_frames": [
+          114,
+          209
+        ],
+        "meaning": "Decoded sample changes, including codec variation; not semantic progress ticks, legibility or learning measurements. Source and edited teaching regions are compared at their original frame times.",
+        "regions": [
+          {
+            "adjacent_pairs": 359,
+            "changed_adjacent_frame_pairs": {
+              "edited": 356,
+              "source": 356
+            },
+            "changed_pairs_inside_hold": {
+              "edited": 95,
+              "source": 95
+            },
+            "frames": 360,
+            "hold_adjacent_pairs": 95,
+            "label": "Commands and installation output",
+            "mean_absolute_temporal_rgb_codes": {
+              "edited": 0.02960170049768979,
+              "source": 0.02960170049768979
+            },
+            "ordered_rgb_sequence_exact": true,
+            "ordered_rgb_sequence_sha256": {
+              "edited": "d83c6d3aedfbaefb6740a242372af4d41a86209f627c39216ca3a84060257b97",
+              "source": "d83c6d3aedfbaefb6740a242372af4d41a86209f627c39216ca3a84060257b97"
+            },
+            "peak_change_frame_inside_hold": 120,
+            "peak_change_mean_rgb_codes": 0.4736498635912698,
+            "xywh": [
+              0,
+              0,
+              640,
+              336
+            ]
+          },
+          {
+            "adjacent_pairs": 359,
+            "changed_adjacent_frame_pairs": {
+              "edited": 37,
+              "source": 37
+            },
+            "changed_pairs_inside_hold": {
+              "edited": 11,
+              "source": 11
+            },
+            "frames": 360,
+            "hold_adjacent_pairs": 95,
+            "label": "Prompt before caret",
+            "mean_absolute_temporal_rgb_codes": {
+              "edited": 0.044218443722273806,
+              "source": 0.044218443722273806
+            },
+            "ordered_rgb_sequence_exact": true,
+            "ordered_rgb_sequence_sha256": {
+              "edited": "5b920760047273057dd326c330350cfd32562919f5781b4b46e7b97b4728b4f7",
+              "source": "5b920760047273057dd326c330350cfd32562919f5781b4b46e7b97b4728b4f7"
+            },
+            "peak_change_frame_inside_hold": 204,
+            "peak_change_mean_rgb_codes": 0.6796296296296296,
+            "xywh": [
+              0,
+              336,
+              120,
+              24
+            ]
+          },
+          {
+            "adjacent_pairs": 359,
+            "changed_adjacent_frame_pairs": {
+              "edited": 30,
+              "source": 30
+            },
+            "changed_pairs_inside_hold": {
+              "edited": 6,
+              "source": 6
+            },
+            "frames": 360,
+            "hold_adjacent_pairs": 95,
+            "label": "Remaining prompt line",
+            "mean_absolute_temporal_rgb_codes": {
+              "edited": 0.023006523485283932,
+              "source": 0.023006523485283932
+            },
+            "ordered_rgb_sequence_exact": true,
+            "ordered_rgb_sequence_sha256": {
+              "edited": "88f7c09c35098e4c909fd7fcbbfb25f32a4a9900fad55cb5401c180119b1f82d",
+              "source": "88f7c09c35098e4c909fd7fcbbfb25f32a4a9900fad55cb5401c180119b1f82d"
+            },
+            "peak_change_frame_inside_hold": 120,
+            "peak_change_mean_rgb_codes": 0.4956459435626102,
+            "xywh": [
+              136,
+              336,
+              504,
+              24
+            ]
+          }
+        ],
+        "schema": "teaching-motion-v1"
+      },
+      "warnings": [
+        "Holds the more contrasting observed state only during the shown interval; alternate blink phases are intentionally removed.",
+        "A blinking detail may convey progress or position. Check both source states and the boundaries before using this edit.",
+        "Native YUV outside the selected box and decoded RGB outside its four-pixel influence area are verified separately.",
+        "Preparation resized/re-encoded the original. Exact edit checks reference the prepared clip.",
+        "No learning, time-saving, medical, safety or compliance claim."
+      ]
+    },
+    "proof_images": [
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00113-original.png"
+      },
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00113-control.png"
+      },
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00113-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00114-original.png"
+      },
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00114-control.png"
+      },
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00114-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00209-original.png"
+      },
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00209-control.png"
+      },
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00209-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00210-original.png"
+      },
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00210-control.png"
+      },
+      {
+        "loaded": true,
+        "parent": "boundary-image-wrap",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/review/boundary-f00210-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r0-f00114-source.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r0-f00114-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r0-f00120-source.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r0-f00120-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r0-f00209-source.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r0-f00209-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r1-f00114-source.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r1-f00114-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r1-f00204-source.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r1-f00204-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r1-f00209-source.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r1-f00209-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r2-f00114-source.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r2-f00114-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r2-f00120-source.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r2-f00120-edited.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r2-f00209-source.png"
+      },
+      {
+        "loaded": true,
+        "parent": "",
+        "src": "/api/jobs/22e4b34790057b6eca2792d7157e474c/teaching/teaching-r2-f00209-edited.png"
+      }
+    ],
+    "recovery": {
+      "artifacts": [
+        "/api/jobs/22e4b34790057b6eca2792d7157e474c/download/original.mp4",
+        "/api/jobs/22e4b34790057b6eca2792d7157e474c/download/edited.mp4",
+        "/api/jobs/22e4b34790057b6eca2792d7157e474c/download/control.mp4",
+        "/api/jobs/22e4b34790057b6eca2792d7157e474c/download/report.json",
+        "/api/jobs/22e4b34790057b6eca2792d7157e474c/download/recipe.json",
+        "/api/jobs/22e4b34790057b6eca2792d7157e474c/download/report.txt",
+        "/api/jobs/22e4b34790057b6eca2792d7157e474c/intake/upload",
+        "/api/jobs/22e4b34790057b6eca2792d7157e474c/intake/receipt",
+        "/api/jobs/22e4b34790057b6eca2792d7157e474c/intake/decision"
+      ],
+      "message": "Previous job reopened. No decision was repeated. Unsubmitted areas and consent are not saved; check the plan again before generating an edit.",
+      "status": "Processing complete"
+    },
+    "browser_artifact_downloads_verified": 0,
+    "download_scope": "Local preparation receipt attempts and cloud Report JSON callback timed out; no actual browser file download is claimed. Independent native HTTP artifact/decoded qualification is separate.",
+    "video_scope": "No new playback, recording, narration, or submission video change."
+  },
+  "cloud_acceptance_checks_match_native_qualification": true,
+  "cloud_full_rendered_summary_exact_match": false,
+  "cross_host_floating_point_differences": [
+    {
+      "path": "summary.encoded_boundary_checks.measurements.loop_seam.influence.edited.mean_absolute_rgb_codes",
+      "cloud": 15.122916666666669,
+      "native": 15.122916666666667
+    },
+    {
+      "path": "summary.encoded_boundary_checks.measurements.loop_seam.influence.source.mean_absolute_rgb_codes",
+      "cloud": 15.122916666666669,
+      "native": 15.122916666666667
+    },
+    {
+      "path": "summary.stationary_detail.proposal.boundary_alignment.predicted_entry.source_selected_mean_delta",
+      "cloud": 0.4354249385214643,
+      "native": 0.43542493852146436
+    },
+    {
+      "path": "summary.stationary_detail.proposal.boundary_alignment.predicted_exit.edited_selected_mean_delta",
+      "cloud": 0.003365246622706763,
+      "native": 0.0033652466227067634
+    },
+    {
+      "path": "summary.stationary_detail.proposal.state_separation",
+      "cloud": 104.79166666666669,
+      "native": 104.79166666666667
+    }
+  ],
+  "cloud_reported_source_and_output_hashes_match_native": true,
+  "unowned_known_job_statuses": {
+    "/": 404,
+    "/download/report.json": 404,
+    "/download/edited.mp4": 404,
+    "/intake/upload": 404,
+    "/steady/steady-0-reference.png": 404
+  },
+  "browser_artifact_downloads_verified": 0,
+  "viewport_override_applied": false,
+  "scope": "Actual Brave untouched Joomla Ogg upload/preparation, three manual teaching areas, first-corner feedback, Escape/Cancel draft restoration, two-corner completion, plan locks and fresh consent, explicit cloud export, 12 boundary +18 teaching PNGs loaded, matching acceptance checks/reported source/output hashes vs independently decoded native original, recovery and owner isolation. Five last-digit floating point reductions differ in the full displayed summary and remain recorded; encoder/export gates unchanged. No exact full-summary, actual cloud file-download, new playback, mobile-width, recording or narration claim."
+}

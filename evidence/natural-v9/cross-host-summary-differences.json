@@ -1,0 +1,27 @@
+[
+  {
+    "path": "summary.encoded_boundary_checks.measurements.loop_seam.influence.source.mean_absolute_rgb_codes",
+    "cloud": 15.122916666666669,
+    "native": 15.122916666666667
+  },
+  {
+    "path": "summary.encoded_boundary_checks.measurements.loop_seam.influence.edited.mean_absolute_rgb_codes",
+    "cloud": 15.122916666666669,
+    "native": 15.122916666666667
+  },
+  {
+    "path": "summary.stationary_detail.proposal.boundary_alignment.predicted_exit.edited_selected_mean_delta",
+    "cloud": 0.003365246622706763,
+    "native": 0.0033652466227067634
+  },
+  {
+    "path": "summary.stationary_detail.proposal.boundary_alignment.predicted_entry.source_selected_mean_delta",
+    "cloud": 0.4354249385214643,
+    "native": 0.43542493852146436
+  },
+  {
+    "path": "summary.stationary_detail.proposal.state_separation",
+    "cloud": 104.79166666666669,
+    "native": 104.79166666666667
+  }
+]

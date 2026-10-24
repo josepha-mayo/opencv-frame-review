@@ -11,6 +11,7 @@ from test_boundary_ui_static import HARNESS, NODE
 EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL, ui, byId,
   protectionValues, resetProtection, invalidateProtection, drawProtection,
   saveProtectedRegion, removeProtectedRegion, editProtectedRegion, cancelProtectedEdit, checkProtection, loadTeachingGuide,
+  startAreaMarking, cancelAreaMarking, markAreaCorner,
   plan() { return protectionPlan; },
   setBusy(value) { busy = value; updateControls(); },
   setUncertain(value) { stateUncertain = value; updateControls(); },
@@ -25,6 +26,51 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL
 
 
 class StudioEditor(unittest.TestCase):
+    def test_marking_cancel_keeps_saved_box_and_draft_without_reusing_consent(self):
+        self.run_js('''
+save('Equation',[10,10,80,25]);api.editProtectedRegion(0);draft('Equation detail',[10,10,90,25]);
+ui.reviewed.checked=true;api.startAreaMarking();
+assert.equal(ids.get('protect-pick-cancel').hidden,false);
+assert.equal(ui.protectCheck.disabled,true);assert.equal(ids.get('protect-add').disabled,true);
+assert.equal(ui.reviewed.checked,false);assert.equal(api.plan(),null);
+ui.image.getBoundingClientRect=()=>({left:10,top:20,width:160,height:90});
+api.markAreaCorner({clientX:20,clientY:30});assert.ok(ui.protectStatus.textContent.includes('(20, 20)'));
+api.cancelAreaMarking();
+assert.equal(ui.protectW.value,'90');assert.equal(ids.get('protect-label').value,'Equation detail');
+assert.ok(ids.get('protected-list').textContent.includes('[10, 10, 80, 25]'));
+assert.equal(ids.get('protect-pick-cancel').hidden,true);assert.equal(ui.approve.disabled,true);
+api.saveProtectedRegion();assert.equal(api.protectionValues()[0].xywh[2],90);
+''')
+
+    def test_scaled_reverse_corners_ignore_outside_image_and_block_plans_until_complete(self):
+        self.run_js('''
+ui.image.getBoundingClientRect=()=>({left:10,top:20,width:160,height:90});
+api.startAreaMarking();api.markAreaCorner({clientX:9,clientY:30});
+assert.ok(ui.protectStatus.textContent.includes('Choose the first corner'));
+api.markAreaCorner({clientX:110,clientY:70});
+assert.ok(ui.protectStatus.textContent.includes('(200, 100)'));
+api.markAreaCorner({clientX:170,clientY:110});
+assert.equal(ui.protectCheck.disabled,true);
+api.markAreaCorner({clientX:30,clientY:30});
+assert.deepEqual(Array.from(api.protectionValues()[0].xywh),[40,20,161,81]);
+assert.equal(ui.protectCheck.disabled,false);assert.equal(ui.approve.disabled,true);
+assert.ok(ui.protectStatus.textContent.includes('Nothing has been approved'));
+''')
+
+    def test_marking_cannot_mutate_during_uncertain_state_and_reset_drops_old_corner(self):
+        self.run_js('''
+save('Equation',[10,10,80,25]);
+ui.image.getBoundingClientRect=()=>({left:0,top:0,width:320,height:180});
+api.startAreaMarking();api.markAreaCorner({clientX:1,clientY:1});
+api.setUncertain(true);api.markAreaCorner({clientX:50,clientY:50});api.cancelAreaMarking();
+assert.equal(ids.get('protect-pick-cancel').hidden,false);assert.equal(ui.protectX.value,'');
+api.setUncertain(false);api.removeProtectedRegion(0);assert.equal(api.protectionValues().length,1);
+api.resetProtection(null);api.setBusy(false);api.startAreaMarking();
+api.markAreaCorner({clientX:20,clientY:30});
+assert.ok(ui.protectStatus.textContent.includes('(20, 30)'));assert.equal(ui.protectX.value,'');
+api.cancelAreaMarking();assert.equal(api.protectionValues().length,0);
+''')
+
     def test_example_areas_do_not_skip_review_or_overwrite_custom_work(self):
         self.run_js('''
 const base={id:'a'.repeat(32),status:'review',input_sha256:'d'.repeat(64),prediction_sha256:'b'.repeat(64),candidates:[{id:'0',recipe_sha256:'c'.repeat(64),bbox:[260,50,40,40],interval_frames:[9,159]}],teaching_guides:[{source_sha256:'d'.repeat(64),candidate_id:'0',candidate_bbox:[260,50,40,40],focus:'Keep the readout moving',regions:[{label:'Readout',xywh:[10,10,80,25]}]}]};

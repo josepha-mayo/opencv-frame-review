@@ -9,11 +9,32 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from prepare_worker import parameters, MAX_UPLOAD
+from prepare_worker import parameters, MAX_UPLOAD, lesson_tracks
 from lesson_intake import LessonManager, backend
 
 
 class LessonIntake(unittest.TestCase):
+    def test_ogg_skeleton_versions_are_metadata_without_discarding_lesson_tracks(self):
+        video={'index':1,'codec_type':'video','codec_name':'theora'}
+        audio={'index':2,'codec_type':'audio','codec_name':'vorbis'}
+        metadata={'format':{'format_name':'ogg'},'streams':[{'index':0,'codec_type':'data'},video,audio]}
+        for version,length in ((3,64),(4,80)):
+            header=b'OggS\x00\x02'+b'\x00'*20+bytes([1,length])+b'fishead\x00'+version.to_bytes(2,'little')+b'\x00'*(length-10)
+            self.assertEqual(lesson_tracks(metadata,header),(video,[audio],True))
+
+    def test_skeleton_exception_cannot_hide_subtitles_unknown_data_or_other_containers(self):
+        video={'index':1,'codec_type':'video','codec_name':'theora'}
+        data={'index':0,'codec_type':'data'}
+        header=b'OggS\x00\x02'+b'\x00'*20+bytes([1,64])+b'fishead\x00'+b'\x03\x00'+b'\x00'*54
+        for metadata,h in [
+            ({'format':{'format_name':'mov'},'streams':[data,video]},header),
+            ({'format':{'format_name':'ogg'},'streams':[data,video,{'codec_type':'subtitle'}]},header),
+            ({'format':{'format_name':'ogg'},'streams':[data,video]},header[:40]),
+            ({'format':{'format_name':'ogg'},'streams':[data,video]},header.replace(b'fishead',b'unknown')),
+            ({'format':{'format_name':'ogg'},'streams':[{'index':3,'codec_type':'data'},video]},header),
+            ({'format':{'format_name':'ogg'},'streams':[{'index':0,'codec_type':'subtitle'},video]},header)]:
+            with self.assertRaises(ValueError):lesson_tracks(metadata,h)
+
     def test_prepared_lesson_requires_a_teaching_contract_before_planning(self):
         with tempfile.TemporaryDirectory() as directory:
             manager = LessonManager(directory)
@@ -102,6 +123,22 @@ class LessonIntake(unittest.TestCase):
                     job = manager.create_import('lesson.webm', data, 5, 3, 'a' * 64)
                     self.assertTrue(job['preparing_lesson'])
                     self.assertEqual(job['status'], 'queued')
+            finally:
+                manager.close()
+
+    def test_ogg_original_is_queued_without_approval_and_retains_exact_upload(self):
+        with tempfile.TemporaryDirectory() as directory:
+            manager = LessonManager(directory)
+            try:
+                data = b'OggS\x00bounded-test-header'
+                with patch.object(manager.pool, 'submit') as submit:
+                    job = manager.create_import('drawing.ogv', data, 0, 3, 'a' * 64)
+                    submit.assert_called_once()
+                folder = manager.jobpath(job['id'])
+                self.assertEqual(job['status'], 'queued')
+                self.assertEqual((folder/'uploaded-original.bin').read_bytes(), data)
+                self.assertEqual((folder/'owner.txt').read_text(), 'a' * 64)
+                self.assertFalse((folder/'approval.json').exists())
             finally:
                 manager.close()
 

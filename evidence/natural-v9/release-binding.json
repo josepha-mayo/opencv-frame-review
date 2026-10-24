@@ -1,0 +1,24 @@
+{
+  "build": "lesson-rescue-marking-2026-10-24-v9",
+  "source_manifest_sha256": "1f6930b7db9a44b866c4e2b6b25efcf9ca2dbfd2629354777aff03bad55b853c",
+  "source_files": 113,
+  "verified_utc": "2026-10-24T16:02:32.794220+00:00",
+  "verification_stages": 14,
+  "backend_tests": 137,
+  "studio_tests": 106,
+  "studio_platform_skips": 1,
+  "new_sources": 10,
+  "fixed_windows": 30,
+  "exploratory_pause_windows": 18,
+  "all_original_and_prepared_recovery_hashes_exact": true,
+  "new_natural_qualified_sources": [
+    "joomla-install"
+  ],
+  "previous_nine_source_evidence": "Historical v7 baseline; this release independently repeats Gentoo and newly qualifies Joomla. Not nine new v9 original jobs.",
+  "joomla_output_sha256": "206dd05d07006e7cc714159f63be9d44f67d9f518715db75a785344e5c40f655",
+  "gentoo_output_sha256": "366ee9f57dcc45a6f09abae3691ee7e77611f930904d5ea9200303ed9a38e085",
+  "new_source_selection": "Convenience exploration; second pause pass selected after the fixed-window screen. No representative recall or held-out claim.",
+  "human_impact": "Preference, time saved, attention, learning, accessibility, safety and adoption remain unmeasured.",
+  "video": "No new playback, demo recording, narration or submission video change.",
+  "browser_download_limit": "Local GIMP receipt download and direct-link download callbacks timed out without a verified file. Not counted as actual browser downloads; complete native HTTP source/hash/decision checks are separate."
+}

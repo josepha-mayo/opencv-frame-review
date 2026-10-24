@@ -58,8 +58,8 @@ class LessonManager(backend.Manager):
         if not 0 < len(data) <= MAX_UPLOAD:
             raise ValueError('Choose a lesson file of at most 64 MiB.')
         # Reject playlists, URLs, images and unsupported containers before probe.
-        if not (data[:4] == b'\x1aE\xdf\xa3' or len(data) >= 12 and data[4:8] == b'ftyp'):
-            raise ValueError('Choose an MP4/MOV or WebM lesson file. Playlists and URLs are not accepted.')
+        if not (data[:4] in (b'\x1aE\xdf\xa3', b'OggS') or len(data) >= 12 and data[4:8] == b'ftyp'):
+            raise ValueError('Choose an MP4/MOV, WebM or Ogg/Theora lesson file. Playlists and URLs are not accepted.')
         with self.lock:
             if len(self.jobs) >= 8 or sum(p.stat().st_size for p in self.root.rglob('*') if p.is_file()) + len(data) > 512 * 1024**2:
                 raise backend.Conflict('Lesson capacity reached. Download your results and try again after expiry.')

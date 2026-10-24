@@ -1,12 +1,15 @@
 # Frame Review: Keep the Lesson
 
+Current v9: Ogg/Theora/Skeleton intake, reversible corner marking and 106 studio tests. See the repository v9 reproduction and release-binding evidence; historical v8/v7 results below keep their original scope.
+
+
 **Current app update (v8): edit a teaching box in place.** Choose **Edit** beside a saved area, adjust its name or rectangle, then **Save area changes** or **Cancel area changes**. The overlay previews the draft; invalid input keeps the saved box. Editing works at the four-area limit and requires a fresh plan and consent. Suggested areas now appear above the source image. No voice or submission-video change.
 
 **Keep the progress. Calm the blink.** A teacher has a finished recording and no editable project. During a reading pause, a caret blinks beside a changing package-download readout. Frame Review lets the editor hold that observed caret state while the teaching content keeps its original prepared timeline.
 
-[Try the AWS app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws) · [Devpost entry](https://devpost.com/software/countback-inspect-the-evidence) · [Current report](../docs/real-lessons-report.pdf) · [Exact release evidence](../evidence/natural-v8/release-binding.json)
+[Try the AWS app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws) · [Devpost entry](https://devpost.com/software/countback-inspect-the-evidence) · [Current report](../research/real-lessons-report.pdf) · [Exact release evidence](../research/natural-v8/release-binding.json)
 
-![Actual lesson and guided progress review](../docs/natural-v7/Guided-Progress-Results.png)
+![Actual lesson and guided progress review](../research/natural-v7/Guided-Progress-Results.png)
 
 ## A judge can try the hard part first
 
@@ -43,7 +46,7 @@ This release makes that evidence usable: the strongest real case is the default;
 
 Activity counts adjacent selected-box mean RGB changes ≥8 codes. All nine retain zero new event times and pass strict encoded boundary checks. Existing strong source transitions can remain. Nine selected sources are not nine independent creators, a recall estimate or a user study.
 
-The earlier exploratory screen of 11 additional originals / 33 fixed windows and three real teaching-overlap refusals remains in [v6 evidence](../evidence/natural-v6/). First seven/21 ran on v5; second four/12 was exploratory follow-up. Negative and rapid-change outcomes stay visible. The same-72-second six-source comparison remains source / untuned 5×5 sigma2 blur / older hold / matched hold **90 / 91 / 54 / 56**. Matched holds remove 34 (37.8%) without new events; old holds introduce events in five cases. This is not a professional-editor or human-benefit comparison. [v5 traces](../evidence/natural-v5/comparison.json).
+The earlier exploratory screen of 11 additional originals / 33 fixed windows and three real teaching-overlap refusals remains in [v6 evidence](../research/natural-v6/). First seven/21 ran on v5; second four/12 was exploratory follow-up. Negative and rapid-change outcomes stay visible. The same-72-second six-source comparison remains source / untuned 5×5 sigma2 blur / older hold / matched hold **90 / 91 / 54 / 56**. Matched holds remove 34 (37.8%) without new events; old holds introduce events in five cases. This is not a professional-editor or human-benefit comparison. [v5 traces](../research/natural-v5/comparison.json).
 
 ## Reproduce and inspect
 
@@ -51,7 +54,7 @@ Build on Linux: `docker build -t frame-review .`
 
 Run a fresh gate: `docker run --name frame-review-v7-check --network none frame-review python studio/run.py --verify /tmp/qualification`, then `docker cp frame-review-v7-check:/tmp/qualification ./qualification`.
 
-Serve: `docker run --rm --network host frame-review python studio/run.py --serve --port 8877`; open http://127.0.0.1:8877 on that host. Windows source/UI tests alone do not qualify media. The exact runtime manifest is `17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801` (113 files). Original-source harnesses and guide contracts are in [reproduction notes](../docs/natural-v8/REPRODUCE.md); original URLs, authors, listed licenses and preparation adaptations remain in evidence/natural-v6/sources.json.
+Serve: `docker run --rm --network host frame-review python studio/run.py --serve --port 8877`; open http://127.0.0.1:8877 on that host. Windows source/UI tests alone do not qualify media. The exact runtime manifest is `17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801` (113 files). Original-source harnesses and guide contracts are in [reproduction notes](../research/natural-v8/reproduction/REPRODUCE.md); original URLs, authors, listed licenses and preparation adaptations remain in evidence/natural-v6/sources.json.
 
 The local release-browser adapter is explicitly local evidence. Current AWS qualification is recorded separately in evidence/natural-v8/cloud-verified.json. The prior v6 cloud caption preparation differed across hosts and was independently checked against its actual cloud reference; no universal preparation-byte determinism claim is made.
 

@@ -1,0 +1,19 @@
+{
+  "parent_image_id": "sha256:e63044defb6db901f4de74829616694e29ae318a29b29e56c770e18d7d59a0f2",
+  "parent_runtime_manifest_sha256": "17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801",
+  "source_manifest_sha256": "1f6930b7db9a44b866c4e2b6b25efcf9ca2dbfd2629354777aff03bad55b853c",
+  "changed_runtime_files": [
+    "studio/lesson_intake.py",
+    "studio/prepare_worker.py",
+    "studio/static/app.js",
+    "studio/static/index.html",
+    "studio/static/styles.css",
+    "studio/tests/test_lesson_intake.py",
+    "studio/tests/test_studio_ui.py"
+  ],
+  "source_files": 113,
+  "build_method": "App-only layer on exact qualified v8 runtime; not a fresh cold dependency rebuild.",
+  "dependency_source_files_unchanged": true,
+  "image": "opencv-creator:marking-v9-final",
+  "image_id": "sha256:af469ef97a9f6f7b30c652dce532fcacbfcf79dd3785e0328f8ee0f23e8905fa"
+}

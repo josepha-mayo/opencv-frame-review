@@ -1,5 +1,10 @@
 # Frame Review: Keep the Lesson
 
+Current v9 adds supported Ogg/Theora lesson intake and reversible two-corner teaching-area marking. All 14 stages, 137 backend tests and 106 studio tests pass (one platform skip). Ten new source recordings / 48 total windows are retained, including an explicitly exploratory pause search; one new Joomla natural-caret repair independently qualifies. The historical nine-source baseline stays separate. See [v9 reproduction](docs/natural-v9/REPRODUCE.md) and [current evidence](evidence/natural-v9/release-binding.json). No demo, narration or submission-video update.
+
+The following material includes historical v8/v7 evidence; its labeled results remain version-specific.
+
+
 **Current app update (v8): edit a teaching box in place.** Choose **Edit** beside a saved area, adjust its name or rectangle, then **Save area changes** or **Cancel area changes**. The overlay previews the draft; invalid input keeps the saved box. Editing works at the four-area limit and requires a fresh plan and consent. Suggested areas now appear above the source image. No voice or submission-video change.
 
 **Keep the progress. Calm the blink.** A teacher has a finished recording and no editable project. During a reading pause, a caret blinks beside a changing package-download readout. Frame Review lets the editor hold that observed caret state while the teaching content keeps its original prepared timeline.

@@ -1,0 +1,6 @@
+Prepared failed Lesson preparation failed or exceeded its bounded runtime. Try a shorter SDR excerpt. []
+Traceback (most recent call last):
+  File "/audit/qualify-guided-v7.py", line 37, in <module>
+    assert job['status']=='review',job
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': '574c086bc13fc697280b0cd05c174fa2', 'status': 'failed', 'input_name': 'joomla-install.ogv', 'created_utc': '2026-10-24T15:58:05.152259+00:00', 'preparing_lesson': False, 'error': 'Lesson preparation failed or exceeded its bounded runtime. Try a shorter SDR excerpt.', 'candidates': [], 'artifacts': {}}

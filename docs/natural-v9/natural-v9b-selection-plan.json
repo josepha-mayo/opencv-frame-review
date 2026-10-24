@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-24T15:38:48.692364+00:00",
+  "sources": [
+    {
+      "id": "bash-files",
+      "title": "Working with Files in bash OS GNU Linux.vorb.theo.ogv"
+    },
+    {
+      "id": "ubuntu-server-gui",
+      "title": "How to Install a Graphical Interface on Ubuntu Server 20.04 LTS.webm"
+    },
+    {
+      "id": "x2go",
+      "title": "Remote Control your Linux Server How to install and use X2Go.webm"
+    }
+  ],
+  "selection": "Three additional command-line/Linux instructional recordings selected from official Commons metadata before viewing or scoring these originals. Exploratory follow-up; no representative recall.",
+  "rule": "For each original, prepare 12 seconds at floor(min(duration-12,600)*q) for q=.25,.5,.75. This covers distinct points in the app-supported first ten minutes, avoiding duplicated capped timestamps on long recordings. Retain all 12 outcomes. Never add a defect. Inspect proposals for teaching meaning before independent HTTP export qualification.",
+  "baseline_manifest_sha256": "17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801",
+  "phase": "Frozen v9 intake baseline; later source-driven fixes are development, not held-out validation."
+}

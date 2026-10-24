@@ -49,7 +49,7 @@
     <div class="workspace-grid">
       <section class="panel upload-panel" aria-labelledby="upload-title">
         <div class="section-heading"><span class="step-number" aria-hidden="true">01</span><h2 id="upload-title">Choose a clip</h2></div>
-        <p class="muted">Upload an MP4/MOV or WebM lesson, up to 64 MiB. Choose a 1–12 second excerpt to prepare for review.</p>
+        <p class="muted">Upload an MP4/MOV, WebM or Ogg/Theora lesson, up to 64 MiB. Choose a 1–12 second excerpt to prepare for review.</p>
         <details class="compact-details preparation-settings"><summary>Preparation settings · original kept separately</summary>
         <p class="small muted">Prepared review profile (the uploaded original stays separate):</p>
         <dl class="profile-grid">
@@ -74,7 +74,7 @@
             <button id="demo-button" class="button secondary full-width" type="button" disabled>Analyze the demo lesson on AWS</button><p class="small muted">The authored math regression sample has a deliberate looping decoration and neural narration. An edit still needs your reviewed plan and consent.</p><a class="small" href="/api/samples/lesson.mp4" download>Download the original demo lesson</a>
           </details></div>
           <label class="file-label" for="clip-file">Local video file</label>
-          <input id="clip-file" name="clip" type="file" accept="video/mp4,video/quicktime,video/webm,.mp4,.mov,.webm" aria-describedby="file-help" required disabled>
+          <input id="clip-file" name="clip" type="file" accept="video/mp4,video/quicktime,video/webm,video/ogg,.mp4,.mov,.webm,.ogv,.ogg" aria-describedby="file-help" required disabled>
           <p id="file-help" class="small muted">Use a lesson you own or have permission to process. No video preview is played.</p>
           <label class="small"><input id="prepare-lesson" type="checkbox" checked> Prepare a real lesson excerpt</label>
           <div class="protection-inputs"><label for="clip-start">Start (seconds)<input id="clip-start" type="number" min="0" max="600" step="0.1" value="0"></label><label for="clip-duration">Length (seconds)<input id="clip-duration" type="number" min="1" max="12" step="0.1" value="12"></label></div>
@@ -123,6 +123,7 @@
             <fieldset class="protection-fields"><legend>Protect up to four teaching areas</legend>
               <p class="small muted">For a prepared lesson, save at least one teaching area: the explanation, labels, diagram or counter that must not change. Retiming checks it on every frame against the original source decode; older modes use the unchanged re-encode. This does not track moving content or guarantee preservation. An area overlapping the proposed edit is refused.</p>
               <button id="protect-pick" type="button" class="button secondary">Mark two corners on the static image</button>
+              <button id="protect-pick-cancel" type="button" class="text-button" hidden>Cancel marking</button>
               <p id="protect-status" class="small" role="status">No important area declared.</p>
               <p id="protected-count" class="small muted" aria-live="polite">0 of 4 areas saved</p>
               <ol id="protected-list" class="protected-area-list" aria-label="Saved important areas"></ol>

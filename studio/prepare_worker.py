@@ -13,7 +13,7 @@ import subprocess
 import sys
 
 MAX_UPLOAD = 64 * 1024**2
-INPUT = ['-protocol_whitelist', 'file,pipe', '-format_whitelist', 'mov,matroska,webm',
+INPUT = ['-protocol_whitelist', 'file,pipe', '-format_whitelist', 'mov,matroska,webm,ogg',
          '-probesize', '5000000', '-analyzeduration', '5000000']
 
 
@@ -28,6 +28,30 @@ def parameters(start, duration):
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def lesson_tracks(metadata, header):
+    streams = metadata.get('streams', [])
+    videos = [s for s in streams if s.get('codec_type') == 'video']
+    audios = [s for s in streams if s.get('codec_type') == 'audio']
+    extra = [s for s in streams if s.get('codec_type') not in ('video', 'audio')]
+    # Xiph Skeleton is structural metadata, not subtitles or teaching content:
+    # https://xiph.org/ogg/doc/skeleton.html and https://wiki.xiph.org/Skeleton
+    # Accept only its complete, single-segment first BOS identification packet.
+    # Arbitrary data tracks and subtitles still refuse before full decoding.
+    skeleton = False
+    if metadata.get('format', {}).get('format_name') == 'ogg' and len(extra) == 1:
+        track = extra[0]
+        if len(header) >= 28 and header[:6] == b'OggS\x00\x02' and header[18:22] == b'\x00'*4 and header[26] == 1:
+            length = header[27]
+            packet = header[28:28+length]
+            skeleton = (track.get('index') == 0 and track.get('codec_type') == 'data' and not track.get('codec_name')
+                        and len(packet) == length and length in (64, 80) and packet[:8] == b'fishead\x00'
+                        and (int.from_bytes(packet[8:10], 'little'), length) in ((3, 64), (4, 80))
+                        and packet[10:12] == b'\x00\x00')
+    if len(videos) != 1 or len(audios) > 1 or extra and not skeleton:
+        raise ValueError('Use one video track and at most one audio track; remove subtitle/data tracks first. Recognized Ogg Skeleton metadata is allowed.')
+    return videos[0], audios, skeleton
 
 
 def prepare(folder):
@@ -49,13 +73,11 @@ def prepare(folder):
     if len(probe.stdout) > 131072:
         raise ValueError('Source metadata exceeds the limit.')
     metadata = json.loads(probe.stdout)
-    videos = [s for s in metadata.get('streams', []) if s.get('codec_type') == 'video']
-    audios = [s for s in metadata.get('streams', []) if s.get('codec_type') == 'audio']
-    if len(videos) != 1 or len(audios) > 1 or any(s.get('codec_type') not in ('video', 'audio') for s in metadata.get('streams', [])):
-        raise ValueError('Use one video track and at most one audio track; remove subtitle/data tracks first.')
-    video = videos[0]
-    if video.get('codec_name') not in ('h264', 'hevc', 'vp8', 'vp9', 'av1', 'mpeg4'):
-        raise ValueError('Supported lesson codecs: H.264, SDR HEVC, VP8, VP9, AV1 or MPEG-4.')
+    with upload.open('rb') as source:
+        header = source.read(108)
+    video, audios, skeleton = lesson_tracks(metadata, header)
+    if video.get('codec_name') not in ('h264', 'hevc', 'vp8', 'vp9', 'av1', 'mpeg4', 'theora'):
+        raise ValueError('Supported lesson codecs: H.264, SDR HEVC, VP8, VP9, AV1, MPEG-4 or Theora.')
     if not 16 <= video.get('width', 0) <= 3840 or not 16 <= video.get('height', 0) <= 2160:
         raise ValueError('Lesson dimensions must be between 16 pixels and 3840 × 2160.')
     if video.get('color_transfer') in ('smpte2084', 'arib-std-b67') or '10' in video.get('pix_fmt', '') or '12' in video.get('pix_fmt', ''):
@@ -113,7 +135,8 @@ def prepare(folder):
                           'duration_seconds': source_duration, 'frame_rate': video.get('avg_frame_rate'),
                           'chroma_location': video.get('chroma_location', 'unspecified'),
                           'audio_codec': audios[0]['codec_name'] if audios else None,
-                          'audio_channels': audios[0].get('channels') if audios else 0},
+                          'audio_channels': audios[0].get('channels') if audios else 0,
+                          'omitted_metadata': ['Ogg Skeleton structural metadata'] if skeleton else []},
                'prepared': {'width': 640, 'height': 360, 'fps': 30, 'color': 'limited BT.709 SDR',
                             'chroma_location': prepared_chroma,
                             'audio': 'AAC-LC mono 48 kHz' if audios else 'none'},

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "pacman-upgrade",
+    "filename": "pacman-upgrade.webm",
+    "title": "Sudo pacman -Syu.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Sudo_pacman_-Syu.webm",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Sudo_pacman_-Syu.webm",
+    "bytes": 6239219,
+    "sha256": "d4b6a0ad31f32c2ac9ff59c5def23cf8f01b4a253ea485ac2293fc198f25e14b",
+    "commons_sha1": "27504d6ac15ff702c273d96edad9f16d7fd43f97",
+    "artist": "VicFic",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "fetched_utc": "2026-10-24T15:48:33.551855+00:00",
+    "rights_scope": "Official Commons metadata as listed; imported-license review not independently verified, no endorsement or independent clearance."
+  },
+  {
+    "id": "joomla-install",
+    "filename": "joomla-install.ogv",
+    "title": "Joomla Installation.vorb.theo.ogv",
+    "page": "https://commons.wikimedia.org/wiki/File:Joomla_Installation.vorb.theo.ogv",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Joomla_Installation.vorb.theo.ogv",
+    "bytes": 6551725,
+    "sha256": "dcf4e35db5ada861d44ef0313083710c8397313885bc38afc901d8472475f83a",
+    "commons_sha1": "4713ed06878daa68860ce52e85463c73be1df625",
+    "artist": "VolodyA! V Anarhist",
+    "license": "FAL",
+    "license_url": "http://artlibre.org/licence/lal/en",
+    "credit": "Own work",
+    "fetched_utc": "2026-10-24T15:48:42.371741+00:00",
+    "rights_scope": "Official Commons metadata as listed; imported-license review not independently verified, no endorsement or independent clearance."
+  },
+  {
+    "id": "wikidata-infobox",
+    "filename": "wikidata-infobox.webm",
+    "title": "Como editar um item no Wikidata para constar em uma infocaixa na Wikip\u00e9dia.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:Como_editar_um_item_no_Wikidata_para_constar_em_uma_infocaixa_na_Wikip%C3%A9dia.webm",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Como_editar_um_item_no_Wikidata_para_constar_em_uma_infocaixa_na_Wikip%C3%A9dia.webm",
+    "bytes": 12804760,
+    "sha256": "759ac4c1b3a17df388f972b3ae708a0c9a9405c7e95c56fcb8d3d7fa99fb5fd7",
+    "commons_sha1": "404cc67af128b81b3056373ffe21346ff33a3841",
+    "artist": "Sarah Marcelino (Projetos Wiki)",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "fetched_utc": "2026-10-24T15:49:00.516225+00:00",
+    "rights_scope": "Official Commons metadata as listed; imported-license review not independently verified, no endorsement or independent clearance."
+  }
+]

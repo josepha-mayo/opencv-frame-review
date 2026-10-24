@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-24T15:48:30.308288+00:00",
+  "sources": [
+    {
+      "id": "pacman-upgrade",
+      "title": "Sudo pacman -Syu.webm"
+    },
+    {
+      "id": "joomla-install",
+      "title": "Joomla Installation.vorb.theo.ogv"
+    },
+    {
+      "id": "wikidata-infobox",
+      "title": "Como editar um item no Wikidata para constar em uma infocaixa na Wikip\u00e9dia.webm"
+    }
+  ],
+  "selection": "Three further command/form-entry instructional recordings selected from official Commons metadata before viewing or scoring these originals. Exploratory follow-up; no representative recall.",
+  "rule": "For each original, prepare 12 seconds at floor(min(duration-12,600)*q) for q=.25,.5,.75. This covers distinct points in the app-supported first ten minutes, avoiding duplicated capped timestamps on long recordings. Retain all 12 outcomes. Never add a defect. Inspect proposals for teaching meaning before independent HTTP export qualification.",
+  "baseline_manifest_sha256": "17a7f5cdfae01949b1a07baf7b3f3fa0fe2104927f99d90e212500c666c91801",
+  "phase": "Frozen v9 intake baseline; later source-driven fixes are development, not held-out validation."
+}

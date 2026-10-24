@@ -1,0 +1,27 @@
+{
+  "artifacts": [
+    {
+      "name": "Prepared lesson clip↓",
+      "url": "/api/jobs/2eb4843b2afce9a7a14336a2af5de711/download/original.mp4"
+    },
+    {
+      "name": "Uploaded original↓",
+      "url": "/api/jobs/2eb4843b2afce9a7a14336a2af5de711/intake/upload"
+    },
+    {
+      "name": "Preparation receipt↓",
+      "url": "/api/jobs/2eb4843b2afce9a7a14336a2af5de711/intake/receipt"
+    },
+    {
+      "name": "Lesson decision record↓",
+      "url": "/api/jobs/2eb4843b2afce9a7a14336a2af5de711/intake/decision"
+    }
+  ],
+  "file": "gimp-whitening.ogv",
+  "message": "You chose to leave the clip unchanged. No candidate was approved.",
+  "preparation": "Teaching detail check: 1184 × 704 source → 640 × 360 review. Check the smallest label before editing; resizing can make teaching detail unreadable. Prepared excerpt: 17–29 seconds. Picture and audio were converted once. All exact edit checks compare against this prepared clip, not the uploaded original. Keep both sources and the preparation receipt.",
+  "previewLoaded": true,
+  "reportHidden": true,
+  "status": "Left unchanged",
+  "scope": "Actual untouched GIMP .ogv upload/preparation/no-edit and source links in Brave. Receipt download attempts timed out; no browser artifact download claimed."
+}

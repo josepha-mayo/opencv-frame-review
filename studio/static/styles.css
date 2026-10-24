@@ -38,3 +38,5 @@
 .intro-actions a { text-decoration: none; }
 .preparation-settings > summary { margin-bottom: 12px; }
 #cloud-samples > details { margin: 18px 0; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+/* Marking uses the static image; numeric coordinates remain an alternative. */
+.marking-area { cursor: crosshair; }
