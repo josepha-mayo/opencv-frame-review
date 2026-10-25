@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "human_collection_open": true,
+  "function_version": "2",
+  "endpoint": "https://s4v28h0k8f.execute-api.us-east-1.amazonaws.com",
+  "protocol_sha256": "d76d56bdf6a02a29fb4bc34c31d6faa00fb94ccbc20d95717184098dfe28d00c",
+  "media_sha256": "ea59f5643c6b7988a0cbc5be020689197e46142c30f49bd4051c00c5b34b1569",
+  "published_before_human_enrollment": {
+    "opencv-creator": "3618e8b39cf11e7c3712c65d913bf5ceb60ab022",
+    "judge-source": "6ee27e1adeb9e0c515156985f84057f0bf93f4e6"
+  },
+  "actual_human_responses_created_by_agent": 0,
+  "devpost_story_version": 37,
+  "devpost_rendered_study_heading_verified": true,
+  "human_invitation_ready_without_creating_response": true
+}
