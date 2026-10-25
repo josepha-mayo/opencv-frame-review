@@ -1,0 +1,13 @@
+{
+  "filename": "Frame-Review-Keep-the-Teaching-Judge-Package.zip",
+  "bytes": 32616554,
+  "sha256": "3c6c3cbad9a31fabebcafc91fa08de56598f71a78bdd78e601473ef6a5c3485a",
+  "source_commit": "6e370981c53191b9823c2cc1cc467053fdc1c81d",
+  "runtime_manifest_sha256": "87337c7b9caa164b741ede5f35d4fc471d6110ac4e985935c2651f6b883d51f1",
+  "runtime_files_verified": 119,
+  "report_sha256": "d4acc1cdc20f9a4c921a3ff781f724d3f8974a7f8852aa39dd62c44702168ce0",
+  "report_pages": 5,
+  "zip_integrity": true,
+  "handoff_paths": 0,
+  "verified_utc": "2026-10-25T07:59:27.796455+00:00"
+}

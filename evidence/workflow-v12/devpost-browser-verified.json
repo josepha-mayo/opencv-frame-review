@@ -1,0 +1,23 @@
+{
+  "submitted": true,
+  "steps": "5/5",
+  "current_filename_visible": true,
+  "testing_exact": true,
+  "description_exact": true,
+  "video_url": "https://www.youtube.com/watch?v=5oE3rA-aJNI",
+  "gallery_count": 15,
+  "rendered_comparison_loaded": true,
+  "source_commit": "6e370981c53191b9823c2cc1cc467053fdc1c81d",
+  "thumbnail_submission_rendered": {
+    "height": 222,
+    "loaded": true,
+    "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/005/681/024/datas/medium.png",
+    "width": 333
+  },
+  "thumbnail_public_og": {
+    "url": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/005/670/659/datas/medium.png"
+  },
+  "thumbnail_scope": "New cover uploaded HTTP200 and rendered in the existing hackathon submission. Public software-page og:image metadata still references the old cover; no claim that cached public metadata refreshed.",
+  "package_scope": "Local source archive hashes verified before upload; saved browser filename/instructions read back. No server archive re-download claim.",
+  "gallery_scope": "Four replacement images prepared; all15 originals/captions backed up. No gallery deletion or upload performed. Permanent-delete confirmation requested and not yet received."
+}

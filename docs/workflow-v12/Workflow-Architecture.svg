@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1200" height="800" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1200" height="800"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-800)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1200" height="800" style="stroke: rgb(96%,96%,94%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,94%); fill-rule: evenodd;"/>
+			<text x="48" y="746" style="font-family: Helvetica-Bold; font-size: 25px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,1492) scale(1,-1)">FRAME REVIEW / KEEP THE LESSON</text>
+			<text x="48" y="708" style="font-family: Times-Roman; font-size: 18px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,1416) scale(1,-1)">OpenCV proposes. The creator decides. Encoded evidence constrains the result.</text>
+			<rect x="30" y="135" width="1140" height="530" rx="18" ry="0" style="stroke: rgb(62%,71%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="53" y="632" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,1264) scale(1,-1)">EXISTING AWS ECS FARGATE TASK  /  1 vCPU + 2 GiB  /  ONE WORKER</text>
+			<rect x="55" y="437" width="330" height="145" rx="12" ry="0" style="stroke: rgb(62%,71%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(87%,91%,87%); fill-rule: evenodd;"/>
+			<text x="73" y="550" style="font-family: Helvetica-Bold; font-size: 18px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,1100) scale(1,-1)">01  Prepare + retain</text>
+			<text x="73" y="519" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,1038) scale(1,-1)">Original upload kept separately</text>
+			<text x="73" y="497" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,994) scale(1,-1)">Bounded 1–12-second excerpt</text>
+			<text x="73" y="475" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,950) scale(1,-1)">Prepared picture/audio are the reference</text>
+			<rect x="435" y="437" width="330" height="145" rx="12" ry="0" style="stroke: rgb(62%,71%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(87%,91%,87%); fill-rule: evenodd;"/>
+			<text x="453" y="550" style="font-family: Helvetica-Bold; font-size: 18px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,1100) scale(1,-1)">02  OpenCV 5 perception</text>
+			<text x="453" y="519" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,1038) scale(1,-1)">Temporal differences + components</text>
+			<text x="453" y="497" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,994) scale(1,-1)">Stationary two-state proposals</text>
+			<text x="453" y="475" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,950) scale(1,-1)">Source-matched cut/reference selection</text>
+			<rect x="815" y="437" width="330" height="145" rx="12" ry="0" style="stroke: rgb(62%,71%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(87%,91%,87%); fill-rule: evenodd;"/>
+			<text x="833" y="550" style="font-family: Helvetica-Bold; font-size: 18px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,1100) scale(1,-1)">03  Creator decision</text>
+			<text x="833" y="519" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,1038) scale(1,-1)">Inspect both observed states</text>
+			<text x="833" y="497" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,994) scale(1,-1)">Name the teaching areas to preserve</text>
+			<text x="833" y="475" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,950) scale(1,-1)">Fresh plan + explicit generation approval</text>
+			<rect x="815" y="225" width="330" height="145" rx="12" ry="0" style="stroke: rgb(62%,71%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(87%,91%,87%); fill-rule: evenodd;"/>
+			<text x="833" y="338" style="font-family: Helvetica-Bold; font-size: 18px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,676) scale(1,-1)">04  Bounded local edit</text>
+			<text x="833" y="307" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,614) scale(1,-1)">FFmpeg holds observed brightness</text>
+			<text x="833" y="285" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,570) scale(1,-1)">Every original chroma sample retained</text>
+			<text x="833" y="263" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,526) scale(1,-1)">Existing native/RGB/audio/timing gates</text>
+			<rect x="435" y="225" width="330" height="145" rx="12" ry="0" style="stroke: rgb(62%,71%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(87%,91%,87%); fill-rule: evenodd;"/>
+			<text x="453" y="338" style="font-family: Helvetica-Bold; font-size: 18px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,676) scale(1,-1)">05  Inspect or withhold</text>
+			<text x="453" y="307" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,614) scale(1,-1)">Encoded cuts cannot worsen</text>
+			<text x="453" y="285" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,570) scale(1,-1)">Teaching timelines must remain exact</text>
+			<text x="453" y="263" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,526) scale(1,-1)">Failure keeps source and explanation</text>
+			<rect x="55" y="225" width="330" height="145" rx="12" ry="0" style="stroke: rgb(62%,71%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(87%,91%,87%); fill-rule: evenodd;"/>
+			<text x="73" y="338" style="font-family: Helvetica-Bold; font-size: 18px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,676) scale(1,-1)">06  Keep the proof</text>
+			<text x="73" y="307" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,614) scale(1,-1)">Source/edit/control + recipe/report</text>
+			<text x="73" y="285" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,570) scale(1,-1)">Embedded offline proof images</text>
+			<text x="73" y="263" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,526) scale(1,-1)">Owned workflow snapshot + file hashes</text>
+			<path d="M 385,510 L 435,510 Z" style="stroke: rgb(9%,23%,18%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="435 510, 426 515, 426 505" style="stroke: rgb(9%,23%,18%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,18%); fill-rule: evenodd;"/>
+			<path d="M 765,510 L 815,510 Z" style="stroke: rgb(9%,23%,18%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="815 510, 806 515, 806 505" style="stroke: rgb(9%,23%,18%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,18%); fill-rule: evenodd;"/>
+			<path d="M 980,437 L 980,370 Z" style="stroke: rgb(9%,23%,18%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="980 370, 975 379, 985 379" style="stroke: rgb(9%,23%,18%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,18%); fill-rule: evenodd;"/>
+			<path d="M 815,298 L 765,298 Z" style="stroke: rgb(9%,23%,18%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="765 298, 774 303, 774 293" style="stroke: rgb(9%,23%,18%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,18%); fill-rule: evenodd;"/>
+			<path d="M 435,298 L 385,298 Z" style="stroke: rgb(9%,23%,18%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="385 298, 394 303, 394 293" style="stroke: rgb(9%,23%,18%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,18%); fill-rule: evenodd;"/>
+			<text x="55" y="186" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,372) scale(1,-1)">NO SUPPORTED PROPOSAL: keep source; no distraction-free conclusion.</text>
+			<text x="55" y="155" style="font-family: Times-Roman; font-size: 13px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,310) scale(1,-1)">OWNER COOKIE  /  CSRF + ORIGIN CHECKS  /  EIGHT JOBS  /  24h EXPIRY OR EARLIER RESTART LOSS</text>
+			<text x="48" y="99" style="font-family: Times-Roman; font-size: 17px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,198) scale(1,-1)">“Why this next step?” explains the current route. It cannot approve an edit or accept it for use.</text>
+			<text x="48" y="64" style="font-family: Times-Roman; font-size: 14px;fill: rgb(9%,23%,18%); stroke:none;" transform="translate(0,128) scale(1,-1)">v12 runtime: 119 files. Teaching-pixel preservation is an engineering result; human benefit remains unmeasured.</text>
+		</g>
+	</g>
+</svg>

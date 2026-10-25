@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1200" height="800" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1200" height="800"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-800)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1200" height="800" style="stroke: rgb(95%,96%,93%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,93%); fill-rule: evenodd;"/>
+			<text x="62" y="736" style="font-family: Helvetica-Bold; font-size: 24px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,1472) scale(1,-1)">FRAME REVIEW</text>
+			<text x="62" y="642" style="font-family: Helvetica-Bold; font-size: 66px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,1284) scale(1,-1)">KEEP THE LESSON.</text>
+			<text x="62" y="568" style="font-family: Helvetica-Bold; font-size: 66px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,1136) scale(1,-1)">CALM THE BLINK.</text>
+			<text x="66" y="513" style="font-family: Helvetica; font-size: 27px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,1026) scale(1,-1)">Creator-reviewed local repair for a finished lesson.</text>
+			<rect x="62" y="205" width="510" height="255" rx="16" ry="0" style="stroke: rgb(86%,91%,86%); stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,91%,86%); fill-rule: evenodd;"/>
+			<text x="90" y="414" style="font-family: Helvetica-Bold; font-size: 24px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,828) scale(1,-1)">Reviewed local hold</text>
+			<text x="90" y="300" style="font-family: Helvetica-Bold; font-size: 100px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,600) scale(1,-1)">0</text>
+			<text x="90" y="249" style="font-family: Helvetica; font-size: 23px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,498) scale(1,-1)">changed teaching frames</text>
+			<rect x="630" y="205" width="510" height="255" rx="16" ry="0" style="stroke: rgb(93%,87%,81%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,87%,81%); fill-rule: evenodd;"/>
+			<text x="658" y="414" style="font-family: Helvetica-Bold; font-size: 24px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,828) scale(1,-1)">Whole-frame hold baseline</text>
+			<text x="658" y="300" style="font-family: Helvetica-Bold; font-size: 100px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,600) scale(1,-1)">90</text>
+			<text x="658" y="249" style="font-family: Helvetica; font-size: 23px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,498) scale(1,-1)">changed teaching frames</text>
+			<text x="62" y="153" style="font-family: Helvetica; font-size: 21px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,306) scale(1,-1)">Two selected real lessons; 97 / 96 held frames. Both edits remove selected blink activity.</text>
+			<text x="62" y="112" style="font-family: Helvetica; font-size: 21px;fill: rgb(31%,40%,34%); stroke:none;" transform="translate(0,224) scale(1,-1)">Exact encoded comparison; human benefit remains unmeasured.</text>
+			<text x="62" y="57" style="font-family: Helvetica-Bold; font-size: 19px;fill: rgb(9%,24%,18%); stroke:none;" transform="translate(0,114) scale(1,-1)">OpenCV 5 + AWS  /  Explicit creator approval  /  Recoverable original and proof</text>
+		</g>
+	</g>
+</svg>

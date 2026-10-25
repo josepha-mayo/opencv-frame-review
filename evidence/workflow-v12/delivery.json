@@ -1,0 +1,80 @@
+{
+  "verified_utc": "2026-10-25T08:16:06.700986+00:00",
+  "source_commits": {
+    "private": {
+      "branch": "master",
+      "commit": "428acffab28d40c7e6d66990075b57bb90872b82",
+      "parent": "91ff0fd27c0c5c2e112de2657c49fee2900f6818"
+    },
+    "public": {
+      "branch": "main",
+      "commit": "6e370981c53191b9823c2cc1cc467053fdc1c81d",
+      "parent": "a1c9fc349a89dca507101adc2a9c55d48f558e8e"
+    }
+  },
+  "package": {
+    "filename": "Frame-Review-Keep-the-Teaching-Judge-Package.zip",
+    "bytes": 32616554,
+    "sha256": "3c6c3cbad9a31fabebcafc91fa08de56598f71a78bdd78e601473ef6a5c3485a",
+    "source_commit": "6e370981c53191b9823c2cc1cc467053fdc1c81d",
+    "runtime_manifest_sha256": "87337c7b9caa164b741ede5f35d4fc471d6110ac4e985935c2651f6b883d51f1",
+    "runtime_files_verified": 119,
+    "report_sha256": "d4acc1cdc20f9a4c921a3ff781f724d3f8974a7f8852aa39dd62c44702168ce0",
+    "report_pages": 5,
+    "zip_integrity": true,
+    "handoff_paths": 0,
+    "verified_utc": "2026-10-25T07:59:27.796455+00:00"
+  },
+  "cloud": {
+    "checked_utc": "2026-10-25T07:49:09.395498+00:00",
+    "rollout_state": "COMPLETED",
+    "task_definition": "default-lesson-rescue:18",
+    "deployments": 1,
+    "desired": 1,
+    "running": 1,
+    "deployment": {
+      "build": "lesson-rescue-workflow-2026-10-25-v12",
+      "source_files_verified": 119,
+      "source_manifest_sha256": "87337c7b9caa164b741ede5f35d4fc471d6110ac4e985935c2651f6b883d51f1",
+      "hosting": "Amazon ECS",
+      "analysis": "OpenCV 5.0.0",
+      "media_runtime": "Pinned Debian FFmpeg 7.1.5",
+      "retention_hours": 24,
+      "workers": 1,
+      "max_jobs": 8
+    },
+    "complete": true,
+    "image_digest": "sha256:dd6f6b6cdb4e3cc7ca624bc7ab761465566f66361a3f2539910a18cade5be7e6",
+    "task_cpu": "1024",
+    "task_memory": "2048",
+    "application_task_role_present": false
+  },
+  "devpost": {
+    "submitted": true,
+    "steps": "5/5",
+    "current_filename_visible": true,
+    "testing_exact": true,
+    "description_exact": true,
+    "video_url": "https://www.youtube.com/watch?v=5oE3rA-aJNI",
+    "gallery_count": 15,
+    "rendered_comparison_loaded": true,
+    "source_commit": "6e370981c53191b9823c2cc1cc467053fdc1c81d",
+    "thumbnail_submission_rendered": {
+      "height": 222,
+      "loaded": true,
+      "src": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/005/681/024/datas/medium.png",
+      "width": 333
+    },
+    "thumbnail_public_og": {
+      "url": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/005/670/659/datas/medium.png"
+    },
+    "thumbnail_scope": "New cover uploaded HTTP200 and rendered in the existing hackathon submission. Public software-page og:image metadata still references the old cover; no claim that cached public metadata refreshed.",
+    "package_scope": "Local source archive hashes verified before upload; saved browser filename/instructions read back. No server archive re-download claim.",
+    "gallery_scope": "Four replacement images prepared; all15 originals/captions backed up. No gallery deletion or upload performed. Permanent-delete confirmation requested and not yet received."
+  },
+  "qualification": "14 Linux stages,137 backend/119 studio tests with one skip; two original-source preflight/native and current AWS API qualifications; live Brave Joomla explicit generation/all30 PNGs;375/890 fits.",
+  "experiment": "Pinned-runtime encoded whole-frame baseline passes intended native mapping. In each of two selected lessons it changes teaching pixels in90 held frames; local edit changes zero. Initial invalid-color metrics excluded and retained.",
+  "prize_target": "First Place Grand Prize $5000. No winning prediction or special-award eligibility assertion.",
+  "constraints": "No cron or PR. Frozen backend unchanged. Video unchanged pending user audio. Temporary CodeBuild role policy removed.",
+  "limits": "Selected source regressions, not new discovery/cohort recall. Human benefit unmeasured. Browser ZIP completion and general cold-start reliability remain unqualified."
+}
