@@ -1,0 +1,164 @@
+{
+  "complete": true,
+  "mobile375": {
+    "client": 360,
+    "images": [
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      }
+    ],
+    "inner": 375,
+    "media": 0,
+    "scripts": 0,
+    "scroll": 360
+  },
+  "layout890": {
+    "client": 875,
+    "hash": "#teaching",
+    "inner": 890,
+    "scroll": 875,
+    "teachingTop": -0.328125
+  },
+  "scope": "Actual HTML extracted from the complete AWS API-downloaded pack, rendered by Brave over a loopback static server. This is an artifact rendering test; not a browser ZIP Save As callback claim."
+}

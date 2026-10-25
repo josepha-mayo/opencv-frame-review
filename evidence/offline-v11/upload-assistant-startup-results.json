@@ -1,0 +1,70 @@
+{
+  "complete": false,
+  "source_name": "upload-assistant.ogv",
+  "source_sha256": "f3fb18ff88451ed8e44b3a4ac080474a0d108cc3b08af3d0f8e3013d65af2c61",
+  "start_seconds": 140.0,
+  "authored_defect": false,
+  "selection": "New original from the preselected 18-window wiki screen. A natural idle caret in the participant-number field during a French upload-wizard lesson. No authored defect. Inspect both source states. Declare the main interface and flanks, then independently require the nearby participant-number pixels to remain exact even inside the conservative RGB influence margin.",
+  "case": {
+    "id": "upload-assistant",
+    "filename": "upload-assistant.ogv",
+    "start": 140,
+    "bbox": [
+      194,
+      260,
+      2,
+      10
+    ],
+    "selection": "New original from the preselected 18-window wiki screen. A natural idle caret in the participant-number field during a French upload-wizard lesson. No authored defect. Inspect both source states. Declare the main interface and flanks, then independently require the nearby participant-number pixels to remain exact even inside the conservative RGB influence margin.",
+    "protected_regions": [
+      {
+        "label": "Upload instructions and file metadata",
+        "xywh": [
+          0,
+          0,
+          640,
+          256
+        ]
+      },
+      {
+        "label": "Form text before caret influence",
+        "xywh": [
+          0,
+          256,
+          190,
+          104
+        ]
+      },
+      {
+        "label": "Remaining form and controls",
+        "xywh": [
+          200,
+          256,
+          440,
+          104
+        ]
+      },
+      {
+        "label": "Below the selected field",
+        "xywh": [
+          190,
+          274,
+          10,
+          86
+        ]
+      }
+    ],
+    "additional_exact_rgb_regions": [
+      {
+        "label": "Complete participant digits before caret",
+        "xywh": [
+          180,
+          254,
+          14,
+          22
+        ]
+      }
+    ]
+  },
+  "production_startup_preflight_passed": true
+}

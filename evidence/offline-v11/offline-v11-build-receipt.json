@@ -1,0 +1,14 @@
+{
+  "parent_image_id": "sha256:a154dba16c8ad22a50a1ebcf6ac40f2cf9e00304f6d770db9027d479408a1917",
+  "parent_runtime_manifest_sha256": "20dfbb02970dcfb4d2a8fc0a8414dc900ace3cb16ea75130090cefc12217a8a0",
+  "source_manifest_sha256": "c92366d6d1a6753f0dc807fefe8a4adf8924ec5d4ce5b6e431ee744b366b6f88",
+  "changed_runtime_files": [
+    "studio/rescue_pack.py",
+    "studio/static/index.html",
+    "studio/tests/test_rescue_pack.py"
+  ],
+  "source_files": 117,
+  "build_method": "Application/example layer on exact qualified v10 parent; not a new cold dependency rebuild.",
+  "image": "opencv-creator:offline-v11",
+  "image_id": "sha256:a5764c521c41235519b1921ee8900fa509a1146880acc7e00e6e9c24cee34fdf"
+}

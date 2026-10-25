@@ -1,0 +1,199 @@
+{
+  "complete_download_verified": true,
+  "bytes": 1574294,
+  "sha256": "52f81382648d34250025d3636345d207fb927fb9ddaabf9b117fb2ecdb069864",
+  "members": 41,
+  "binding": {
+    "job_id": "9b02ed2ef616435b1f601d725dfb7f7f",
+    "source_manifest_sha256": "20dfbb02970dcfb4d2a8fc0a8414dc900ace3cb16ea75130090cefc12217a8a0",
+    "input_sha256": "33a58e2d4dd11a6bfb84cc656fab241a59ba0624162083aeb9bcbea628814fd3",
+    "recipe_sha256": "8bc4ba3bc3d45471b6b22ecf4cde895fff074f39e0029c82d5f2e68efeb6ad50",
+    "output_hashes": {
+      "control": "289500c326aa25cf2f73188a090f4673b911ce7da0b2ad896f176321203b9a05",
+      "edited": "366ee9f57dcc45a6f09abae3691ee7e77611f930904d5ea9200303ed9a38e085"
+    },
+    "sample_mapping": "observed-luma-source-chroma-v2",
+    "uploaded_original_included": false
+  },
+  "checks": {
+    "fresh_stationary_two_state_proposal": true,
+    "approved_plan_bound": true,
+    "native_control_exact": true,
+    "native_edit_matches_mapping": true,
+    "all_original_chroma_samples_exact": true,
+    "unchanged_control_rgb_exact": true,
+    "all_timestamps_exact": true,
+    "all_frames_outside_interval_exact": true,
+    "all_rgb_outside_influence_exact": true,
+    "all_rgb_outside_selected_box_exact": true,
+    "all_protected_teaching_rgb_exact": true,
+    "all_ordered_teaching_rgb_sequences_exact": true,
+    "audio_exact": true,
+    "source_and_detection_unchanged": true,
+    "selected_activity_reduced": true,
+    "encoded_boundary_rgb_not_worse": true,
+    "encoded_boundary_selected_mean_not_worse": true,
+    "whole_clip_activity_reduced": true,
+    "whole_clip_no_new_activity_events": true
+  },
+  "browser": {
+    "images": [
+      {
+        "alt": "Original static PNG crop \u00b7 Before edit \u00b7 Frame 60 \u00b7 2 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00b7 Before edit \u00b7 Frame 60 \u00b7 2 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00b7 Before edit \u00b7 Frame 60 \u00b7 2 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop \u00b7 Edit begins \u00b7 Frame 61 \u00b7 2.033333333333333 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00b7 Edit begins \u00b7 Frame 61 \u00b7 2.033333333333333 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00b7 Edit begins \u00b7 Frame 61 \u00b7 2.033333333333333 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop \u00b7 Final edited frame \u00b7 Frame 173 \u00b7 5.766666666666667 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00b7 Final edited frame \u00b7 Frame 173 \u00b7 5.766666666666667 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00b7 Final edited frame \u00b7 Frame 173 \u00b7 5.766666666666667 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop \u00b7 Original frames resume \u00b7 Frame 174 \u00b7 5.8 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop \u00b7 Original frames resume \u00b7 Frame 174 \u00b7 5.8 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop \u00b7 Original frames resume \u00b7 Frame 174 \u00b7 5.8 s \u00b7 crop [354, 314, 38, 42]",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and package explanation \u00b7 source \u00b7 frame 61",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and package explanation \u00b7 edited \u00b7 frame 61",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and package explanation \u00b7 source \u00b7 frame 67",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and package explanation \u00b7 edited \u00b7 frame 67",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and package explanation \u00b7 source \u00b7 frame 173",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and package explanation \u00b7 edited \u00b7 frame 173",
+        "loaded": true
+      },
+      {
+        "alt": "Live package progress readout \u00b7 source \u00b7 frame 61",
+        "loaded": true
+      },
+      {
+        "alt": "Live package progress readout \u00b7 edited \u00b7 frame 61",
+        "loaded": true
+      },
+      {
+        "alt": "Live package progress readout \u00b7 source \u00b7 frame 152",
+        "loaded": true
+      },
+      {
+        "alt": "Live package progress readout \u00b7 edited \u00b7 frame 152",
+        "loaded": true
+      },
+      {
+        "alt": "Live package progress readout \u00b7 source \u00b7 frame 173",
+        "loaded": true
+      },
+      {
+        "alt": "Live package progress readout \u00b7 edited \u00b7 frame 173",
+        "loaded": true
+      },
+      {
+        "alt": "Terminal lower margin \u00b7 source \u00b7 frame 61",
+        "loaded": false
+      },
+      {
+        "alt": "Terminal lower margin \u00b7 edited \u00b7 frame 61",
+        "loaded": false
+      },
+      {
+        "alt": "Terminal lower margin \u00b7 source \u00b7 frame 111",
+        "loaded": false
+      },
+      {
+        "alt": "Terminal lower margin \u00b7 edited \u00b7 frame 111",
+        "loaded": false
+      },
+      {
+        "alt": "Terminal lower margin \u00b7 source \u00b7 frame 173",
+        "loaded": false
+      },
+      {
+        "alt": "Terminal lower margin \u00b7 edited \u00b7 frame 173",
+        "loaded": false
+      }
+    ],
+    "links": [
+      {
+        "name": "Download verified rescue pack\u2193",
+        "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/rescue-pack.zip"
+      },
+      {
+        "name": "Original input\u2193",
+        "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/original.mp4"
+      },
+      {
+        "name": "Edited comparison\u2193",
+        "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/edited.mp4"
+      },
+      {
+        "name": "Unchanged re encode control\u2193",
+        "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/control.mp4"
+      },
+      {
+        "name": "Report JSON\u2193",
+        "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/report.json"
+      },
+      {
+        "name": "Recipe JSON\u2193",
+        "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/recipe.json"
+      },
+      {
+        "name": "Readable report\u2193",
+        "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/report.txt"
+      },
+      {
+        "name": "Natural sample provenance\u2193",
+        "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/samples/natural-gentoo-credit.json"
+      }
+    ],
+    "status": "Processing complete"
+  },
+  "scope": "Fresh natural Gentoo prepared-sample live Brave comparison and actual finalized ZIP. Current 24/30 browser proof PNGs loaded; no all-image or new-source claim."
+}

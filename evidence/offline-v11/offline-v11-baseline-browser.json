@@ -1,0 +1,159 @@
+{
+  "images": [
+    {
+      "alt": "Original static PNG crop · Before edit · Frame 60 · 2 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Control static PNG crop · Before edit · Frame 60 · 2 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Edited static PNG crop · Before edit · Frame 60 · 2 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Original static PNG crop · Edit begins · Frame 61 · 2.033333333333333 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Control static PNG crop · Edit begins · Frame 61 · 2.033333333333333 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Edited static PNG crop · Edit begins · Frame 61 · 2.033333333333333 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Original static PNG crop · Final edited frame · Frame 173 · 5.766666666666667 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Control static PNG crop · Final edited frame · Frame 173 · 5.766666666666667 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Edited static PNG crop · Final edited frame · Frame 173 · 5.766666666666667 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Original static PNG crop · Original frames resume · Frame 174 · 5.8 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Control static PNG crop · Original frames resume · Frame 174 · 5.8 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Edited static PNG crop · Original frames resume · Frame 174 · 5.8 s · crop [354, 314, 38, 42]",
+      "loaded": true
+    },
+    {
+      "alt": "Commands and package explanation · source · frame 61",
+      "loaded": true
+    },
+    {
+      "alt": "Commands and package explanation · edited · frame 61",
+      "loaded": true
+    },
+    {
+      "alt": "Commands and package explanation · source · frame 67",
+      "loaded": true
+    },
+    {
+      "alt": "Commands and package explanation · edited · frame 67",
+      "loaded": true
+    },
+    {
+      "alt": "Commands and package explanation · source · frame 173",
+      "loaded": true
+    },
+    {
+      "alt": "Commands and package explanation · edited · frame 173",
+      "loaded": true
+    },
+    {
+      "alt": "Live package progress readout · source · frame 61",
+      "loaded": true
+    },
+    {
+      "alt": "Live package progress readout · edited · frame 61",
+      "loaded": true
+    },
+    {
+      "alt": "Live package progress readout · source · frame 152",
+      "loaded": true
+    },
+    {
+      "alt": "Live package progress readout · edited · frame 152",
+      "loaded": true
+    },
+    {
+      "alt": "Live package progress readout · source · frame 173",
+      "loaded": true
+    },
+    {
+      "alt": "Live package progress readout · edited · frame 173",
+      "loaded": true
+    },
+    {
+      "alt": "Terminal lower margin · source · frame 61",
+      "loaded": true
+    },
+    {
+      "alt": "Terminal lower margin · edited · frame 61",
+      "loaded": true
+    },
+    {
+      "alt": "Terminal lower margin · source · frame 111",
+      "loaded": true
+    },
+    {
+      "alt": "Terminal lower margin · edited · frame 111",
+      "loaded": true
+    },
+    {
+      "alt": "Terminal lower margin · source · frame 173",
+      "loaded": true
+    },
+    {
+      "alt": "Terminal lower margin · edited · frame 173",
+      "loaded": true
+    }
+  ],
+  "links": [
+    {
+      "name": "Download verified rescue pack↓",
+      "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/rescue-pack.zip"
+    },
+    {
+      "name": "Original input↓",
+      "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/original.mp4"
+    },
+    {
+      "name": "Edited comparison↓",
+      "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/edited.mp4"
+    },
+    {
+      "name": "Unchanged re encode control↓",
+      "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/control.mp4"
+    },
+    {
+      "name": "Report JSON↓",
+      "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/report.json"
+    },
+    {
+      "name": "Recipe JSON↓",
+      "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/recipe.json"
+    },
+    {
+      "name": "Readable report↓",
+      "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/9b02ed2ef616435b1f601d725dfb7f7f/download/report.txt"
+    },
+    {
+      "name": "Natural sample provenance↓",
+      "url": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/samples/natural-gentoo-credit.json"
+    }
+  ],
+  "status": "Processing complete"
+}

@@ -1,0 +1,4 @@
+{
+  "status": "not_completed",
+  "scope": "Additional ordered-preflight launcher stopped before its case directory was created; WSL host invocation remained pending. Not counted as a passing test."
+}

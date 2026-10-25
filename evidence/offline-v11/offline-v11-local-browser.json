@@ -1,0 +1,183 @@
+{
+  "complete": false,
+  "pack_pending": true,
+  "mobile375": {
+    "client": 360,
+    "images": [
+      {
+        "alt": "Original static PNG crop · Before edit · Frame 113 · 3.7666666666666666 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop · Before edit · Frame 113 · 3.7666666666666666 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop · Before edit · Frame 113 · 3.7666666666666666 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop · Edit begins · Frame 114 · 3.8 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop · Edit begins · Frame 114 · 3.8 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop · Edit begins · Frame 114 · 3.8 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop · Final edited frame · Frame 209 · 6.966666666666667 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop · Final edited frame · Frame 209 · 6.966666666666667 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop · Final edited frame · Frame 209 · 6.966666666666667 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Original static PNG crop · Original frames resume · Frame 210 · 7 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Control static PNG crop · Original frames resume · Frame 210 · 7 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Edited static PNG crop · Original frames resume · Frame 210 · 7 s · crop [108, 324, 40, 36]",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and installation output · source · frame 114",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and installation output · edited · frame 114",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and installation output · source · frame 120",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and installation output · edited · frame 120",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and installation output · source · frame 209",
+        "loaded": true
+      },
+      {
+        "alt": "Commands and installation output · edited · frame 209",
+        "loaded": true
+      },
+      {
+        "alt": "Prompt before caret · source · frame 114",
+        "loaded": true
+      },
+      {
+        "alt": "Prompt before caret · edited · frame 114",
+        "loaded": true
+      },
+      {
+        "alt": "Prompt before caret · source · frame 204",
+        "loaded": true
+      },
+      {
+        "alt": "Prompt before caret · edited · frame 204",
+        "loaded": true
+      },
+      {
+        "alt": "Prompt before caret · source · frame 209",
+        "loaded": true
+      },
+      {
+        "alt": "Prompt before caret · edited · frame 209",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining prompt line · source · frame 114",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining prompt line · edited · frame 114",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining prompt line · source · frame 120",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining prompt line · edited · frame 120",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining prompt line · source · frame 209",
+        "loaded": true
+      },
+      {
+        "alt": "Remaining prompt line · edited · frame 209",
+        "loaded": true
+      }
+    ],
+    "inner": 375,
+    "links": [
+      {
+        "name": "Download verified rescue pack↓",
+        "url": "http://127.0.0.1:8900/api/jobs/80abfc3d1fc0b3642905bd9b4a2e9b90/rescue-pack.zip"
+      },
+      {
+        "name": "Original input↓",
+        "url": "http://127.0.0.1:8900/api/jobs/80abfc3d1fc0b3642905bd9b4a2e9b90/download/original.mp4"
+      },
+      {
+        "name": "Edited comparison↓",
+        "url": "http://127.0.0.1:8900/api/jobs/80abfc3d1fc0b3642905bd9b4a2e9b90/download/edited.mp4"
+      },
+      {
+        "name": "Unchanged re encode control↓",
+        "url": "http://127.0.0.1:8900/api/jobs/80abfc3d1fc0b3642905bd9b4a2e9b90/download/control.mp4"
+      },
+      {
+        "name": "Report JSON↓",
+        "url": "http://127.0.0.1:8900/api/jobs/80abfc3d1fc0b3642905bd9b4a2e9b90/download/report.json"
+      },
+      {
+        "name": "Recipe JSON↓",
+        "url": "http://127.0.0.1:8900/api/jobs/80abfc3d1fc0b3642905bd9b4a2e9b90/download/recipe.json"
+      },
+      {
+        "name": "Readable report↓",
+        "url": "http://127.0.0.1:8900/api/jobs/80abfc3d1fc0b3642905bd9b4a2e9b90/download/report.txt"
+      },
+      {
+        "name": "Natural sample provenance↓",
+        "url": "http://127.0.0.1:8900/api/samples/natural-joomla-credit.json"
+      }
+    ],
+    "packNote": "Keep the verified rescue pack before this job expires: source files, comparison, recipe, report, static proofs and a file-hash manifest in one ZIP. Open review.html for an offline proof page with every image embedded; it needs no server or video playback. Upload jobs include the untouched original; built-in examples include their prepared excerpt and provenance. Individual files remain below.",
+    "scroll": 360
+  },
+  "layout890": {
+    "client": 875,
+    "inner": 890,
+    "scroll": 875
+  },
+  "plan": {
+    "checked": false,
+    "client": 360,
+    "generateDisabled": true,
+    "images": [
+      true,
+      true
+    ],
+    "inner": 375,
+    "regions": "1. Commands and installation output · [0, 0, 640, 336]\nRemove\nEdit\n2. Prompt before caret · [0, 336, 120, 24]\nRemove\nEdit\n3. Remaining prompt line · [136, 336, 504, 24]\nRemove\nEdit",
+    "scroll": 360
+  }
+}

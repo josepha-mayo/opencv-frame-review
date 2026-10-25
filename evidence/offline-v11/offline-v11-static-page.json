@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "embedded_proof_images": 36,
+  "all_png_bytes_match_report": true,
+  "no_scripts_external_assets_or_media_elements": true,
+  "relative_artifact_links_present": true,
+  "html_sha256": "8c54e845edc86b14d2adb789d8d7e444ab28399f075a00f9de72b6ac98e937aa",
+  "html_bytes": 904086
+}

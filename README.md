@@ -1,6 +1,16 @@
 # Frame Review: Keep the Lesson
 
-Current v10: preserve every original color sample and require exact RGB outside the actual caret box. The newly qualified French upload lesson keeps adjacent participant digits exact; 11 selected original-source exports pass on this mapping. Guided Joomla protection, mobile overflow, original recovery filenames and atomic receipt fixes are included. [Current evidence and reproduction](docs/natural-v10/REPRODUCE.md). Earlier results below remain version-specific.
+**Current v11: keep the repair reviewable after the job expires.** The verified rescue pack now includes a self-contained `review.html` with every cut and teaching image embedded, measured gates and artifact links. No app, account, script or video playback is needed to inspect it. The vision/edit gates and creator approval remain unchanged. [Current report](docs/real-lessons-report.pdf) · [Current evidence, architecture and reproduction](docs/offline-v11/REPRODUCE.md).
+
+All 14 Linux stages pass (137 backend / 114 studio tests, one skip). Two selected untouched originals pass native checks and current AWS API upload/export/pack verification; media and PNG bytes match. Brave renders the saved French proof page with all 36 images at 375/890. API saving and browser rendering are distinct from current ZIP callbacks, which timed out. Startup preparation failures remain included; cold-start reliability is unresolved. Human benefit is unmeasured. The video waits for user audio.
+
+![Actual Brave view of the saved AWS proof page](docs/offline-v11/AWS-Offline-Proof-Teaching.png)
+
+French source: Benoit Rochon, Tutoriel de l'assistant d'import, CC BY 3.0 as listed; prepared/adapted source stills. Exact source URLs, license links and hashes are in the current reproduction document. No added defect or endorsement.
+
+## Historical version notes
+
+Historical v10 preserved every original color sample and required exact RGB outside the actual caret box. Eleven selected original-source exports passed on that runtime; [v10 evidence](docs/natural-v10/REPRODUCE.md) remains version-specific.
 
 
 Current v9 adds supported Ogg/Theora lesson intake and reversible two-corner teaching-area marking. All 14 stages, 137 backend tests and 106 studio tests pass (one platform skip). Ten new source recordings / 48 total windows are retained, including an explicitly exploratory pause search; one new Joomla natural-caret repair independently qualifies. The historical nine-source baseline stays separate. See [v9 reproduction](docs/natural-v9/REPRODUCE.md) and [current evidence](evidence/natural-v9/release-binding.json). No demo, narration or submission-video update.

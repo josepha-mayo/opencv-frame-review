@@ -1,0 +1,160 @@
+{
+  "mobile375": {
+    "client": 360,
+    "images": [
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      },
+      {
+        "embedded": true,
+        "loaded": true
+      }
+    ],
+    "inner": 375,
+    "media": 0,
+    "scripts": 0,
+    "scroll": 360
+  },
+  "layout890": {
+    "client": 875,
+    "inner": 890,
+    "scroll": 875
+  }
+}
