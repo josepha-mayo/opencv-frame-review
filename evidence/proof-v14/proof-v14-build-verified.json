@@ -1,0 +1,18 @@
+{
+  "source_manifest_sha256": "500522d7c9c0fd016d9372e44f16e4652fad8aceb6488ef74a286f191975eb51",
+  "runtime_files": 119,
+  "changed_runtime_files": [
+    "studio/static/app.js",
+    "studio/tests/test_studio_ui.py"
+  ],
+  "parent_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:3f6f17dac6caeaaa7409075b0b6ce903e06304fec8722a10e2c816dff42f1bf2",
+  "source_zip_sha256": "ebb69fb979ab0643aa08fd1f37b1405f97ea31b331016ba1dc992379f9896c3a",
+  "source_s3": "opencv-creator-replay-046675437218-20261016/proof-v14/500522d7c9c0fd016d9372e44f16e4652fad8aceb6488ef74a286f191975eb51/source.zip",
+  "evidence_s3": "opencv-creator-replay-046675437218-20261016/proof-v14/500522d7c9c0fd016d9372e44f16e4652fad8aceb6488ef74a286f191975eb51/qualification-evidence.zip",
+  "image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue:proof-v14-500522d7c9c0fd01",
+  "role_policy": "ProofV14Qualification",
+  "scope": "Application layer correcting the v13 browser loading regression; all 14 Linux stages and two original-source native/export checks passed. Not yet a live release.",
+  "complete": true,
+  "image_digest": "sha256:25baf0713cdcf4d077883ddff5c397141e8891bdcba12b036a19267bb58c0a36",
+  "pinned_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:25baf0713cdcf4d077883ddff5c397141e8891bdcba12b036a19267bb58c0a36"
+}

@@ -1,10 +1,12 @@
 # Frame Review: Keep the Lesson
 
-**Current v12: explain the next step, prove what keeps moving.** The live app now explains its evidence-driven route and includes an owned source-bound workflow snapshot in the rescue pack. In an independent encoded comparison on two selected real lessons, both local and whole-frame holds remove selected blink activity; the local edit changes zero declared teaching pixels, while the whole-frame baseline changes teaching pixels in 90 held frames in each case. These are engineering results, not measured human benefit.
+**Current v14: inspect the teaching text at full size.** Boundary and teaching PNGs now offer an owned full-size view after successful load/dimension checks. Failed or mismatched images withhold the link. This addresses review-card shrinkage; it does not increase source resolution or establish readability benefit.
 
-All 14 Linux stages pass in AWS CodeBuild (137 backend / 119 studio tests, one skip). Two untouched-original preflight/export qualifications and current AWS API/pack checks pass; media and proof PNG bytes match. Actual Brave review/generation/all30 PNGs and 375/890 workflow layouts pass. Browser ZIP completion remains unqualified; historical WSL/preparation failures and rejected ablation attempts remain visible. [Current evidence, architecture and reproduction](docs/workflow-v12/REPRODUCE.md).
+All 14 Linux stages, 137 backend / 121 studio tests (one skip), two untouched-original native/export checks and current live HTTPS API/pack checks pass. Actual desktop Brave generation with all 30 proof PNGs and full-size opening pass. Recorded-PNG contained 375/890px layouts are separate; physical-phone and native browser ZIP completion remain unqualified. Source/edit media and PNG bytes remain identical to v12 in both original-source cases. [Current qualification and reproduction](docs/proof-v14/REPRODUCE.md) · [Current report with retained historical pages](docs/proof-v14/Frame-Review-Full-Size-Proof-Report.pdf).
 
-The existing video waits for user audio. No cron or PR. No COOL or special-award eligibility claim.
+The [prospective human reading/preference pilot](human-study/) is open. The first volunteer request is [published on the competition discussion board](https://opencv26.devpost.com/forum_topics/45681-3-4-minute-lesson-clip-study-looking-for-adult-volunteers). Recruitment is not enrollment or measured benefit; consult the dated aggregate for actual responses. QA is excluded and creator responses are separate. The v12 report remains historical evidence for its encoded ablation and workflow release.
+
+Direct pushes, no cron. The demo waits for the creator's real audio. No COOL or special-award eligibility assertion.
 
 ## Historical version notes
 

@@ -1,0 +1,13 @@
+{
+  "complete": false,
+  "browser": "Brave",
+  "scope": "Actual v13 live regression; not a human participant response.",
+  "failed_check": "All18 hidden teaching images remained loading after opening the teaching details. Hidden lazy images cannot reach the onload callback that would reveal them.",
+  "observed": {
+    "open_first_teaching_section": true,
+    "teaching_images": 18,
+    "loaded_teaching_images": 0,
+    "visible_full_size_teaching_links": 0
+  },
+  "resolution": "V14 uses eager loading while withholding the images/links until dimension checks pass. Added native-loading regression; requalification required."
+}

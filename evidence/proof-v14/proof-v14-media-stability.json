@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "scope": "V14 native media and PNG bytes compared to v12. UI-only change; no new discovery or human result. Existing study stimuli unchanged.",
+  "matching_media_png_files": {
+    "upload-assistant": 40,
+    "joomla": 34
+  }
+}

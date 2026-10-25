@@ -668,11 +668,17 @@
         img.width = review.crop_xywh[2];
         img.height = review.crop_xywh[3];
         img.hidden = true;
+        const inspect = element("a", "Open full-size PNG in a new tab", "text-button proof-original-link");
+        inspect.href = localURL(asset.url);
+        inspect.target = "_blank";
+        inspect.rel = "noopener noreferrer";
+        inspect.hidden = true;
         const status = element("p", "Loading static PNG…", "boundary-image-status");
         function fail(message) {
           if (version !== boundaryVersion) return;
           states[position] = "failed";
           img.hidden = true;
+          inspect.hidden = true;
           status.textContent = message;
           status.hidden = false;
           figure.classList.add("boundary-crop-failed");
@@ -686,13 +692,14 @@
           }
           states[position] = "loaded";
           img.hidden = false;
+          inspect.hidden = false;
           status.hidden = true;
           figure.classList.remove("boundary-crop-failed");
           updateImageStatus();
         };
         img.onerror = () => fail("Static PNG unavailable. This image has not been displayed.");
         wrap.append(img, status);
-        figure.append(caption, wrap);
+        figure.append(caption, wrap, inspect);
         images.append(figure);
         img.src = localURL(asset.url);
         rowProvenance.images[key] = { filename: asset.filename, sha256: asset.sha256, url: localURL(asset.url) };
@@ -784,11 +791,14 @@
                 const asset=moment.images[role],figure=element("figure");
                 figure.append(element("figcaption",role==="source" ? "Prepared source" : "Encoded edit"));
                 const image=element("img"),status=element("p","Loading static teaching crop…","small muted");
-                image.alt=region.label+" · "+role+" · frame "+moment.frame;image.loading="lazy";
-                image.onload=()=>{const valid=image.naturalWidth===asset.width && image.naturalHeight===asset.height;image.hidden=!valid;status.textContent=valid ? "Hash-verified source-bound PNG" : "Teaching crop dimensions differ; image withheld.";};
-                image.onerror=()=>{image.hidden=true;status.textContent="Teaching crop unavailable; it has not been displayed.";};
-                figure.append(image,status);pair.append(figure);
-                try { image.src=localURL(asset.url); } catch(error) { image.hidden=true;status.textContent="Teaching crop URL refused."; }
+                const inspect=element("a","Open full-size PNG in a new tab","text-button proof-original-link");
+                inspect.target="_blank";inspect.rel="noopener noreferrer";inspect.hidden=true;image.hidden=true;
+                // Hidden proofs must fetch before their dimension check can reveal them.
+                image.alt=region.label+" · "+role+" · frame "+moment.frame;image.loading="eager";
+                image.onload=()=>{const valid=image.naturalWidth===asset.width && image.naturalHeight===asset.height;image.hidden=!valid;inspect.hidden=!valid;status.textContent=valid ? "Hash-verified source-bound PNG" : "Teaching crop dimensions differ; image withheld.";};
+                image.onerror=()=>{image.hidden=true;inspect.hidden=true;status.textContent="Teaching crop unavailable; it has not been displayed.";};
+                figure.append(image,status,inspect);pair.append(figure);
+                try { const url=localURL(asset.url);image.src=url;inspect.href=url; } catch(error) { image.hidden=true;inspect.hidden=true;status.textContent="Teaching crop URL refused."; }
               });details.append(pair);
             });card.append(details);
           }

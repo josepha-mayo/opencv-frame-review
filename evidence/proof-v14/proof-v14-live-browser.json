@@ -1,0 +1,203 @@
+{
+  "complete": true,
+  "browser": "Brave extension browser API",
+  "scope": "Actual live Joomla prepared-sample review, fresh plan, explicit QA generation, all30 static PNGs and full-size opening. Not human participation or acceptance for use.",
+  "facts": {
+    "proofs": [
+      {
+        "alt": "Original static PNG crop · Before edit · Frame 113 · 3.7666666666666666 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Control static PNG crop · Before edit · Frame 113 · 3.7666666666666666 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Edited static PNG crop · Before edit · Frame 113 · 3.7666666666666666 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Original static PNG crop · Edit begins · Frame 114 · 3.8 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Control static PNG crop · Edit begins · Frame 114 · 3.8 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Edited static PNG crop · Edit begins · Frame 114 · 3.8 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Original static PNG crop · Final edited frame · Frame 209 · 6.966666666666667 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Control static PNG crop · Final edited frame · Frame 209 · 6.966666666666667 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Edited static PNG crop · Final edited frame · Frame 209 · 6.966666666666667 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Original static PNG crop · Original frames resume · Frame 210 · 7 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Control static PNG crop · Original frames resume · Frame 210 · 7 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Edited static PNG crop · Original frames resume · Frame 210 · 7 s · crop [108, 324, 40, 36]",
+        "height": 36,
+        "loaded": true,
+        "width": 40
+      },
+      {
+        "alt": "Commands and installation output · source · frame 114",
+        "height": 336,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "alt": "Commands and installation output · edited · frame 114",
+        "height": 336,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "alt": "Commands and installation output · source · frame 120",
+        "height": 336,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "alt": "Commands and installation output · edited · frame 120",
+        "height": 336,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "alt": "Commands and installation output · source · frame 209",
+        "height": 336,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "alt": "Commands and installation output · edited · frame 209",
+        "height": 336,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "alt": "Prompt before caret · source · frame 114",
+        "height": 24,
+        "loaded": true,
+        "width": 120
+      },
+      {
+        "alt": "Prompt before caret · edited · frame 114",
+        "height": 24,
+        "loaded": true,
+        "width": 120
+      },
+      {
+        "alt": "Prompt before caret · source · frame 204",
+        "height": 24,
+        "loaded": true,
+        "width": 120
+      },
+      {
+        "alt": "Prompt before caret · edited · frame 204",
+        "height": 24,
+        "loaded": true,
+        "width": 120
+      },
+      {
+        "alt": "Prompt before caret · source · frame 209",
+        "height": 24,
+        "loaded": true,
+        "width": 120
+      },
+      {
+        "alt": "Prompt before caret · edited · frame 209",
+        "height": 24,
+        "loaded": true,
+        "width": 120
+      },
+      {
+        "alt": "Remaining prompt line · source · frame 114",
+        "height": 24,
+        "loaded": true,
+        "width": 504
+      },
+      {
+        "alt": "Remaining prompt line · edited · frame 114",
+        "height": 24,
+        "loaded": true,
+        "width": 504
+      },
+      {
+        "alt": "Remaining prompt line · source · frame 120",
+        "height": 24,
+        "loaded": true,
+        "width": 504
+      },
+      {
+        "alt": "Remaining prompt line · edited · frame 120",
+        "height": 24,
+        "loaded": true,
+        "width": 504
+      },
+      {
+        "alt": "Remaining prompt line · source · frame 209",
+        "height": 24,
+        "loaded": true,
+        "width": 504
+      },
+      {
+        "alt": "Remaining prompt line · edited · frame 209",
+        "height": 24,
+        "loaded": true,
+        "width": 504
+      }
+    ],
+    "readyLinks": 30,
+    "status": "Encoding and measurements are complete. Even passing numeric checks still requires creator review.",
+    "workflow": "/api/jobs/fc291c484000bb728fac9eebf77fc0a8/workflow.json"
+  },
+  "full_size_teaching_view": {
+    "actual_link_opened": true,
+    "width": 640,
+    "height": 336,
+    "loaded": true
+  },
+  "browser_zip_save": {
+    "qualified": false,
+    "reason": "Supported file-link download timed out; no saved path returned. Internal Downloads page blocked by browser URL security policy."
+  },
+  "physical_phone_qualified": false
+}

@@ -26,6 +26,34 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL
 
 
 class StudioEditor(unittest.TestCase):
+    def test_pending_teaching_proofs_fetch_before_becoming_visible(self):
+        self.run_js('''
+const xywh=[0,0,80,40],asset={url:'/api/jobs/job/review/teaching-source.png',width:80,height:40};
+api.setJob({id:'job',status:'complete',summary:{protected_content:{declared:true,frames:360,regions:[{label:'Commands',xywh,passed:true,measurements:{mean_rgb_code_error:0,p99_rgb_code_error:0,max_rgb_code_error:0}}]}},teaching_review:{regions:[{label:'Commands',xywh,moments:[{frame:114,roles:['hold begins'],images:{source:asset,edited:{...asset,url:'/api/jobs/job/review/teaching-edited.png'}}}]}]}});
+api.renderResults();
+const images=ui.highlights.querySelectorAll('img'),links=ui.highlights.querySelectorAll('a');
+assert.equal(images.length,2);assert.equal(links.length,2);
+assert.ok(images.every(i=>!(i.hidden&&i.loading==='lazy')),'Hidden lazy images cannot reach their onload visibility gate');
+assert.ok(links.every(a=>a.hidden));
+images[0].naturalWidth=80;images[0].naturalHeight=40;images[0].onload();
+assert.equal(images[0].hidden,false);assert.equal(links[0].hidden,false);
+images[1].naturalWidth=81;images[1].naturalHeight=40;images[1].onload();
+assert.equal(images[1].hidden,true);assert.equal(links[1].hidden,true);
+images[0].onerror();assert.equal(links[0].hidden,true);
+''')
+
+    def test_full_size_proof_links_require_loaded_matching_pngs(self):
+        self.run_js('''
+setReview(review());
+const links=ui.boundaryRows.querySelectorAll('a'),images=imgs();
+assert.equal(links.length,12);assert.ok(links.every(a=>a.hidden));
+images[0].naturalWidth=80;images[0].naturalHeight=40;images[0].onload();
+assert.equal(links[0].hidden,false);assert.equal(links[0].target,'_blank');
+assert.equal(links[0].rel,'noopener noreferrer');assert.equal(links[0].href,images[0].src);
+images[1].naturalWidth=81;images[1].naturalHeight=40;images[1].onload();
+assert.equal(links[1].hidden,true);images[0].onerror();assert.equal(links[0].hidden,true);
+''')
+
     def test_workflow_rendering_rejects_stale_binding_and_never_reuses_html(self):
         self.run_js('''
 const id='a'.repeat(32),trace={schema:'frame-review-workflow-v1',job_id:id,status:'review',next_action:'<img src=x onerror=bad()> Inspect both states.'};

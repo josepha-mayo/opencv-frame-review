@@ -1,0 +1,35 @@
+{
+  "complete": true,
+  "scope": "Recorded real PNG rendering harness in desktop Brave, with production render code and QA bootstrap. Not live encoding or human evidence.",
+  "all_thirty_pngs_loaded": true,
+  "full_size_command_png": {
+    "width": 640,
+    "height": 336,
+    "opened_by_actual_link": true
+  },
+  "responsive_contained_frames": {
+    "small": {
+      "scope": "Recorded PNG rendering only",
+      "width": 375,
+      "scroll": 360,
+      "client": 360,
+      "proof_images": 30,
+      "loaded": 30,
+      "ready_links": 30
+    },
+    "medium": {
+      "scope": "Recorded PNG rendering only",
+      "width": 890,
+      "scroll": 875,
+      "client": 875,
+      "proof_images": 30,
+      "loaded": 30,
+      "ready_links": 30
+    }
+  },
+  "browser_viewport_override": {
+    "qualified": false,
+    "reason": "375/890 requests did not change the top-level viewport, which remained1874px. Contained frames are reported separately."
+  },
+  "physical_phone_qualified": false
+}
