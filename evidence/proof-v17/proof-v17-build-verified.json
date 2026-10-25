@@ -1,0 +1,19 @@
+{
+  "source_manifest_sha256": "d630773c43d922c089e31004dfc5aa9db10b0b56f7b59bd72ff87f4a5c47eff7",
+  "runtime_files": 119,
+  "changed_runtime_files": [
+    "studio/static/app.js",
+    "studio/static/styles.css",
+    "studio/tests/test_studio_ui.py"
+  ],
+  "parent_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:78291f860a48f228425e8c75e4d3da1ec071598e42406a22ee8354c915cc5b3b",
+  "source_zip_sha256": "3f205f7bdac68eb38bf57b06c827b09db8327faafa68081aa5b9ff4f60f038bd",
+  "source_s3": "opencv-creator-replay-046675437218-20261016/proof-v17/d630773c43d922c089e31004dfc5aa9db10b0b56f7b59bd72ff87f4a5c47eff7/source.zip",
+  "evidence_s3": "opencv-creator-replay-046675437218-20261016/proof-v17/d630773c43d922c089e31004dfc5aa9db10b0b56f7b59bd72ff87f4a5c47eff7/qualification-evidence.zip",
+  "image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue:proof-v17-d630773c43d922c0",
+  "role_policy": "ProofV17Qualification",
+  "scope": "Fixed-scale teaching comparison; all 14 Linux stages and three original-source native/export checks passed. Not yet a live release.",
+  "complete": true,
+  "image_digest": "sha256:ef4d64875ea4159cc1848088c808dccd244a58e71e505d4f24aa33e72370a4d7",
+  "pinned_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:ef4d64875ea4159cc1848088c808dccd244a58e71e505d4f24aa33e72370a4d7"
+}

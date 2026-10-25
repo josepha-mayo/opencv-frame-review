@@ -1,14 +1,14 @@
 # Frame Review: Keep the Lesson
 
-**Current v15: understand the result before using it.** Fixed a shared renderer that hid scope notes on cards containing measurements. Audio preservation now requires every required check and identifies the prepared edit input. Full-size, dimension-gated teaching proofs remain available. The frozen repair engine is unchanged.
+**Inspect the same teaching frame without switching tabs.** Current V17 adds manual prepared-source/edit switching at100% or200%, pan buttons/arrow keys, and retained pan position. Teaching cards use the full row. Failed or changed images/results withhold the comparison. Magnification does not reconstruct text or recover original resolution.
 
-All 14 Linux stages, 137 backend/124 studio tests (one skip), three untouched-original native/export checks, current HTTPS API checks and actual desktop Brave checks pass. These are previously selected real-source regressions, not new lesson discoveries or human benefit. Native media/PNG bytes remain exact against v14 (40 French,34 Joomla,34 Gentoo). [Current qualification](docs/proof-v15/REPRODUCE.md) · [Six-page report with five retained historical pages](docs/proof-v15/Frame-Review-Measurement-Scope-Report.pdf).
+[Live app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/) · [Current four-page report](docs/real-lessons-report.pdf) · [Qualification and reproduction](docs/proof-v17/REPRODUCE.md).
 
-Actual Brave saved a45-member Gentoo original-upload pack on v14; every member and the untouched original verify. Current v15 browser/download receipts are separate. Recorded-PNG contained375/890px rendering is not physical-phone qualification.
+All14 Linux stages,137 backend/127 studio tests (one skip), three untouched-original native/export qualifications, fresh live HTTPS checks and actual desktop Brave comparison/download checks pass. These are regressions on previously selected sources. All108 native media/PNG members match v15. Frozen engine, boundary renderer and human-study stimuli are unchanged. The first viewer candidate's frozen-boundary contract failure is retained; it never deployed.
 
-The [prospective reading/preference pilot](human-study/) remains open. An interested Devpost commenter received an individual invitation; recruitment is not participation. Consult the dated aggregate for actual responses. QA is excluded; creator responses stay separate. [Volunteer discussion](https://opencv26.devpost.com/forum_topics/45681-3-4-minute-lesson-clip-study-looking-for-adult-volunteers).
+Recorded-PNG contained375/890px layout checks remain separate from physical-phone qualification. The [prospective reading/preference pilot](human-study/) remains open; consult its dated aggregate for actual human responses. QA is excluded and creator responses stay separate. [Volunteer discussion](https://opencv26.devpost.com/forum_topics/45681-3-4-minute-lesson-clip-study-looking-for-adult-volunteers).
 
-Direct pushes, no cron. The demo waits for the creator's real audio. No special-award eligibility assertion.
+Direct pushes; no cron. The demo waits for creator audio. No special-award eligibility assertion.
 
 ## Historical version notes
 

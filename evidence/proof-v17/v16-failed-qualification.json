@@ -1,0 +1,14 @@
+{
+  "complete": false,
+  "build": "v16",
+  "source_manifest_sha256": "6952140933fafba165685fcae86abbff101e3b07d65ac6ebda4348b8d3e98413",
+  "phase": "units",
+  "tests_run": 137,
+  "failures": 1,
+  "test": "BoundarySourceContracts.test_no_motion_switching_or_markup_injection",
+  "cause": "Frozen static-boundary test scans from BOUNDARY_VERSIONS to renderResults. New separate teaching helper was placed inside that scanned source section.",
+  "correction": "Relocate teaching helper before boundary constants; no boundary function, frozen test, media engine or threshold change. New candidate requires fresh qualification.",
+  "deployed": false,
+  "recorded_utc": "2026-10-25T23:11:01.406615+00:00",
+  "temporary_policy_removed": "ProofV16Qualification"
+}

@@ -1,0 +1,53 @@
+{
+  "complete": true,
+  "scope": "Corrected helper outside unchanged boundary section; recorded real PNG browser rendering, not live encoding or physical-phone evidence.",
+  "default_proofs": 30,
+  "responsive": [
+    {
+      "width": 375,
+      "client": 360,
+      "scroll": 360,
+      "before": {
+        "x": 64,
+        "y": 64
+      },
+      "after": {
+        "x": 64,
+        "y": 64
+      },
+      "closedImageCount": 0
+    },
+    {
+      "width": 890,
+      "client": 875,
+      "scroll": 875,
+      "before": {
+        "x": 64,
+        "y": 64
+      },
+      "after": {
+        "x": 64,
+        "y": 64
+      },
+      "closedImageCount": 0
+    }
+  ],
+  "verified_utc": "2026-10-25T23:12:31.661Z",
+  "desktop": {
+    "before": {
+      "x": 64,
+      "y": 64
+    },
+    "after": {
+      "x": 64,
+      "y": 64
+    },
+    "keyboard": {
+      "x": 128,
+      "y": 64
+    }
+  },
+  "runtime_js_sha256": "eb0ed80a54faa4ec6c48f8a69212ebd4e2d2c24697eb508c2ed5ac3e73932775",
+  "runtime_css_sha256": "343af826232009927564f84a1f5df705414cd8b5dc8ddb97cca260c1f1e141f7",
+  "frozen_boundary_section_unchanged": true
+}

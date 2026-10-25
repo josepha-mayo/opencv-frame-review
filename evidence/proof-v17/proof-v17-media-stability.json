@@ -1,0 +1,25 @@
+{
+  "complete": true,
+  "scope": "Native media and PNG equality against the three v15 original-upload qualifications. No new human observations.",
+  "cases": [
+    {
+      "case": "upload-assistant",
+      "same_media_and_png_bytes": 40,
+      "exact": true
+    },
+    {
+      "case": "joomla",
+      "same_media_and_png_bytes": 34,
+      "exact": true
+    },
+    {
+      "case": "gentoo",
+      "same_media_and_png_bytes": 34,
+      "exact": true
+    }
+  ],
+  "runtime_files_verified": 119,
+  "study_files_verified": 6,
+  "human_protocol_sha256": "d76d56bdf6a02a29fb4bc34c31d6faa00fb94ccbc20d95717184098dfe28d00c",
+  "human_media_sha256": "ea59f5643c6b7988a0cbc5be020689197e46142c30f49bd4051c00c5b34b1569"
+}

@@ -1,5 +1,5 @@
 {
-  "build": "lesson-rescue-measurement-scope-2026-10-25-v15",
+  "build": "lesson-rescue-teaching-comparison-2026-10-26-v17",
   "scope": "Studio, bounded preparation, frozen rapid-change engine, and separately versioned stationary blink detection/export. Source identity is separate from media/browser/cloud qualification.",
   "frozen_backend_commit": "fd861d0ce2cd50bec741327975d95ff5488254e2",
   "files": {
@@ -93,11 +93,11 @@
     "studio/rescue_pack.py": "0f737bb5d689375ca9aa2bdda7818278c46ac388497d96f545d87e11f2dd9dde",
     "studio/run.py": "69597c5c94e494a45ba40c4833df1fe8cebc03d2c182c4624d1a2b7b41f1ffd9",
     "studio/runtime-requirements.lock": "f6ef34a38b624856efb1f2e8028c5a35fb2e1563c48fba94be6338ae715b2f62",
-    "studio/static/app.js": "76ac4f7178d5a66dd36168ecd0db772a923a1dcdc5bf6018d370e72a3df3662d",
+    "studio/static/app.js": "eb0ed80a54faa4ec6c48f8a69212ebd4e2d2c24697eb508c2ed5ac3e73932775",
     "studio/static/index.html": "35ca7ab392f8c8c3df426fbbf12d69e9cfd875d8c36f6c2048186744a6ad1a7d",
     "studio/static/natural-gentoo.png": "994b9b1c1504e5a1afb4181f35588078c5dc63115a9281ed40337915f0dae9e5",
     "studio/static/natural-terminal.png": "3d7a55d50dc8f679dac789c82cb11d7bb4ddee9de1000f9634d008d7cc628861",
-    "studio/static/styles.css": "cb3c952788ec902323a78d6b22994ce8f056b5ff6a54920ac043532f5e6cd55a",
+    "studio/static/styles.css": "343af826232009927564f84a1f5df705414cd8b5dc8ddb97cca260c1f1e141f7",
     "studio/steady_boundaries.py": "a20dbb3cafed54ba0b875be7075c1f81a9ee1489cf75fd0c645221d0d7b12b1a",
     "studio/steady_detail.py": "5494c39f6985d679cbdea9d0cb1c679cbbf2da34e1595da3e26e9e440eafe8be",
     "studio/steady_export.py": "d5a7164946e35913b0b90da5290150f95990c5efd85581d67dd808b9a15dbcf1",
@@ -118,7 +118,7 @@
     "studio/tests/test_rescue_pack.py": "684a6ed5c4c2d9da473f928566c5608aae6d07a7ec51114129137d421f235359",
     "studio/tests/test_steady_boundaries.py": "bad43636acb2ca39214e445a009b9719f3246e13dc777d140bdb055e3f2e7171",
     "studio/tests/test_steady_detail.py": "43873588171ea9ff969f8c9ae10df1388f2cc08db9daaca63d4b6d351bcf4f01",
-    "studio/tests/test_studio_ui.py": "f7169ef2255fe8b7c742f0d6d31282c23a4da28a7ca72adc51845e0a2ac3370d",
+    "studio/tests/test_studio_ui.py": "6b08b9a09fc8147ea156f65ac6ec3e0aa405630cb1eceb536a80a6fc09e8951f",
     "studio/tests/test_teaching_motion.py": "b7de894ea6ca414414cefe49c810e16f7642550976744d09c7903add4d4bb4fe",
     "studio/tests/test_workflow_trace.py": "78d64328bee10b32f88569556fd932123569f363972ccefd71422bef0a5be5ed",
     "studio/workflow_trace.py": "6a954bb5a1d9a6320be49b42539a66760b79dd1e58744d00324efa93a95cbc3a"

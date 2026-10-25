@@ -8,7 +8,7 @@ STUDIO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(STUDIO.parent / 'opencv-ready/candidate/app/tests'))
 from test_boundary_ui_static import HARNESS, NODE
 
-EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCard, localURL, ui, byId,
+EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCard, teachingComparison, localURL, ui, byId,
   protectionValues, resetProtection, invalidateProtection, drawProtection,
   saveProtectedRegion, removeProtectedRegion, editProtectedRegion, cancelProtectedEdit, checkProtection, loadTeachingGuide,
   startAreaMarking, cancelAreaMarking, markAreaCorner, renderWorkflow,
@@ -26,6 +26,56 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCa
 
 
 class StudioEditor(unittest.TestCase):
+    def test_manual_same_frame_comparison_keeps_scale_and_pan_without_autoplay(self):
+        self.run_js('''
+const id='a'.repeat(32),region={label:'Commands',xywh:[0,0,640,336]};
+const asset=role=>({url:'/api/jobs/'+id+'/teaching/'+role+'.png',width:640,height:336});
+api.setJob({id,status:'complete',input_sha256:'b'.repeat(64)});
+const desk=api.teachingComparison(region,{frame:114,images:{source:asset('source'),edited:asset('edited')}});
+const buttons=desk.querySelectorAll('button'),panel=desk.querySelectorAll('section')[0];
+const viewport=desk.querySelectorAll('div').find(x=>x.className==='proof-desk-viewport');
+assert.equal(desk.querySelectorAll('img').length,0,'Opening is required before any comparison fetch');
+buttons[0].events.click();let image=desk.querySelectorAll('img')[0];
+assert.equal(image.hidden,true);assert.equal(image.style.width,'640px');
+image.naturalWidth=640;image.naturalHeight=336;image.onload();assert.equal(image.hidden,false);
+viewport.scrollWidth=1280;viewport.clientWidth=640;viewport.scrollHeight=672;viewport.clientHeight=420;
+let prevented=0;viewport.events.keydown({key:'ArrowRight',preventDefault(){prevented++;}});
+viewport.events.keydown({key:'ArrowDown',preventDefault(){prevented++;}});
+assert.equal(viewport.scrollLeft,64);assert.equal(viewport.scrollTop,64);assert.equal(prevented,2);
+viewport.scrollLeft=120;viewport.scrollTop=40;const oldImage=image;
+buttons[2].events.click();image=desk.querySelectorAll('img')[0];
+assert.notEqual(oldImage,image);assert.equal(image.hidden,true);oldImage.onload();assert.equal(image.hidden,true);
+image.naturalWidth=640;image.naturalHeight=336;image.onload();
+assert.equal(image.hidden,false);assert.equal(viewport.scrollLeft,120);assert.equal(viewport.scrollTop,40);
+assert.equal(image.style.width,'640px');assert.ok(image.alt.includes('Encoded edit'));assert.ok(image.alt.includes('frame 114'));
+buttons[4].events.click();image=desk.querySelectorAll('img')[0];assert.equal(image.style.width,'1280px');
+image.naturalWidth=640;image.naturalHeight=336;image.onload();assert.equal(viewport.scrollLeft,0);
+assert.ok(desk.textContent.includes('No text reconstruction'));assert.equal(buttons[4].attributes['aria-pressed'],'true');
+buttons.find(b=>b.textContent==='Close fixed-scale comparison').events.click();assert.equal(panel.hidden,true);assert.equal(desk.querySelectorAll('img').length,0);image.onload();assert.equal(panel.hidden,true);
+''')
+
+    def test_same_frame_comparison_withholds_wrong_geometry_failures_and_changed_jobs(self):
+        self.run_js('''
+const id='a'.repeat(32),region={label:'Progress',xywh:[0,326,364,18]};
+const images={source:{url:'/api/jobs/'+id+'/teaching/source.png',width:364,height:18},edited:{url:'/api/jobs/'+id+'/teaching/edited.png',width:364,height:18}};
+api.setJob({id,status:'complete',input_sha256:'b'.repeat(64)});
+const desk=api.teachingComparison(region,{frame:152,images}),buttons=desk.querySelectorAll('button');buttons[0].events.click();
+let image=desk.querySelectorAll('img')[0];image.naturalWidth=363;image.naturalHeight=18;image.onload();assert.equal(image.hidden,true);assert.ok(desk.textContent.includes('Loaded dimensions differ'));
+buttons[2].events.click();image=desk.querySelectorAll('img')[0];image.onerror();assert.equal(image.hidden,true);assert.ok(desk.textContent.includes('image unavailable'));
+buttons[1].events.click();image=desk.querySelectorAll('img')[0];api.setJob({id,status:'complete',input_sha256:'c'.repeat(64)});
+image.naturalWidth=364;image.naturalHeight=18;image.onload();assert.equal(image.hidden,true);assert.ok(desk.textContent.includes('Result changed'));
+buttons[2].events.click();assert.equal(desk.querySelectorAll('img').length,0);
+''')
+
+    def test_same_frame_comparison_refuses_unowned_urls_and_inconsistent_pair_sizes(self):
+        self.run_js('''
+const id='a'.repeat(32),region={label:'Text',xywh:[0,0,80,40]},good={url:'/api/jobs/'+id+'/teaching/source.png',width:80,height:40};
+for(const broken of [{...good,url:'https://other.test/x.png'},{...good,url:'/api/jobs/'+('f'.repeat(32))+'/teaching/source.png'},{...good,width:79},{...good,url:'/api/jobs/'+id+'/teaching/source.png?other=1'}]) {
+ api.setJob({id,status:'complete'});const desk=api.teachingComparison(region,{frame:12,images:{source:broken,edited:good}});
+ desk.querySelectorAll('button')[0].events.click();assert.equal(desk.querySelectorAll('img').length,0);assert.ok(desk.textContent.includes('image withheld'));
+}
+''')
+
     def test_measurements_never_suppress_their_scope_note(self):
         self.run_js('''
 const card=api.resultCard('Measured activity',[['Before / after',[5,0]]],'Does not measure attention or learning.');

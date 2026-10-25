@@ -547,6 +547,69 @@
     return card;
   }
 
+  let proofDeskSequence = 0;
+  function teachingComparison(region, moment) {
+    const group=element("div",null,"proof-desk"), open=element("button","Compare this frame at a fixed scale","button secondary");
+    const panel=element("section",null,"proof-desk-panel"), controls=element("div",null,"proof-desk-controls");
+    const viewport=element("div",null,"proof-desk-viewport"), status=element("p","Choose a version to inspect.","small");
+    const close=element("button","Close fixed-scale comparison","text-button"), id="proof-desk-"+(++proofDeskSequence);
+    const boundId=job?.id, boundInput=job?.input_sha256, boundPrediction=job?.prediction_sha256, epoch=boundaryVersion;
+    const labels={source:"Prepared source",edited:"Encoded edit"}, roleButtons={}, zoomButtons={}, panButtons=[];
+    let requestNumber=0, selected="source", zoom=1, displayed=false;
+    function current() { return job?.status==="complete" && job.id===boundId && job.input_sha256===boundInput && job.prediction_sha256===boundPrediction && boundaryVersion===epoch; }
+    function show(role, keepPosition=true) {
+      const version=++requestNumber, x=keepPosition ? viewport.scrollLeft||0 : 0, y=keepPosition ? viewport.scrollTop||0 : 0;
+      displayed=false;panButtons.forEach(button=>{button.disabled=true;});
+      viewport.replaceChildren();
+      if (!current() || !validJobId(boundId)) { status.textContent="Result changed; comparison withheld. Reopen the current result.";return; }
+      const asset=moment.images?.[role], other=moment.images?.[role==="source" ? "edited" : "source"];
+      const [width,height]=region.xywh.slice(2), url=localURL(asset?.url);
+      if (!Number.isSafeInteger(width) || !Number.isSafeInteger(height) || width<1 || width>640 || height<1 || height>360 ||
+          asset?.width!==width || asset?.height!==height || other?.width!==width || other?.height!==height ||
+          !url || !url.startsWith("/api/jobs/"+boundId+"/teaching/") || !url.endsWith(".png") || /[?#]/.test(url)) {
+        status.textContent="Comparison geometry or source binding differs; image withheld.";return;
+      }
+      selected=role;
+      Object.entries(roleButtons).forEach(([key,button])=>button.setAttribute("aria-pressed",String(key===role)));
+      Object.entries(zoomButtons).forEach(([key,button])=>button.setAttribute("aria-pressed",String(Number(key)===zoom)));
+      const image=element("img");image.hidden=true;image.loading="eager";
+      image.alt=labels[role]+" · "+region.label+" · frame "+moment.frame+" · "+zoom*100+"% magnification";
+      image.style.width=(width*zoom)+"px";
+      status.textContent="Loading "+labels[role].toLowerCase()+"; previous image withheld.";
+      image.onload=()=>{
+        if (version!==requestNumber) return;
+        if (!current()) { image.hidden=true;status.textContent="Result changed; comparison withheld.";return; }
+        const valid=image.naturalWidth===width && image.naturalHeight===height;image.hidden=!valid;displayed=valid;panButtons.forEach(button=>{button.disabled=!valid;});
+        status.textContent=valid ? labels[role]+" · frame "+moment.frame+" · "+width+" × "+height+" crop pixels · "+zoom*100+"%. Browser dimensions checked; server-bound PNG." : "Loaded dimensions differ; image withheld.";
+        if (valid) { viewport.scrollLeft=x;viewport.scrollTop=y; }
+      };
+      image.onerror=()=>{if(version===requestNumber){image.hidden=true;status.textContent="Comparison image unavailable; it has not been displayed.";}};
+      viewport.append(image);image.src=url;
+    }
+    open.type=close.type="button";open.setAttribute("aria-expanded","false");open.setAttribute("aria-controls",id);open.setAttribute("aria-label","Compare "+region.label+" · frame "+moment.frame+" at a fixed scale");
+    panel.id=id;panel.hidden=true;panel.setAttribute("aria-label","Fixed-scale teaching comparison");
+    panel.append(element("h4",region.label+" · same frame "+moment.frame));
+    panel.append(element("p","Switch manually between the same-time prepared source and edit. Both use the same scale and keep the same scroll position. Focus the crop and use arrow keys to pan. 100% uses one crop pixel per CSS pixel; 200% magnifies existing pixels. Preparation may have reduced detail. No text reconstruction or original-resolution recovery.","small muted"));
+    Object.entries(labels).forEach(([role,label])=>{const button=element("button",label,"button secondary");button.type="button";button.setAttribute("aria-label","Show "+label.toLowerCase()+" · "+region.label+" · frame "+moment.frame);button.setAttribute("aria-pressed","false");button.addEventListener("click",()=>show(role));roleButtons[role]=button;controls.append(button);});
+    [1,2].forEach(scale=>{const button=element("button",scale*100+"%","text-button");button.type="button";button.setAttribute("aria-label",scale*100+"% magnification · "+region.label+" · frame "+moment.frame);button.setAttribute("aria-pressed",String(scale===1));button.addEventListener("click",()=>{zoom=scale;show(selected,false);});zoomButtons[scale]=button;controls.append(button);});
+    function pan(key) {
+      if (!current() || panel.hidden || !displayed) return;
+      if (key==="ArrowLeft" || key==="ArrowRight") viewport.scrollLeft=Math.max(0,Math.min(viewport.scrollWidth-viewport.clientWidth,(viewport.scrollLeft||0)+(key==="ArrowRight" ? 64 : -64)));
+      else viewport.scrollTop=Math.max(0,Math.min(viewport.scrollHeight-viewport.clientHeight,(viewport.scrollTop||0)+(key==="ArrowDown" ? 64 : -64)));
+    }
+    [["left","←"],["right","→"],["up","↑"],["down","↓"]].forEach(([direction,arrow])=>{const button=element("button",arrow,"text-button");button.type="button";button.disabled=true;button.setAttribute("aria-label","Pan "+direction+" · "+region.label+" · frame "+moment.frame);button.addEventListener("click",()=>pan("Arrow"+direction[0].toUpperCase()+direction.slice(1)));panButtons.push(button);controls.append(button);});
+    status.setAttribute("role","status");status.setAttribute("aria-live","polite");viewport.tabIndex=0;viewport.setAttribute("aria-label","Scrollable static teaching crop");
+    viewport.addEventListener("keydown",event=>{
+      if (!current() || panel.hidden || !displayed || !["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(event.key)) return;
+      event.preventDefault();
+      pan(event.key);
+    });
+    panel.append(controls,status,viewport,close);group.append(open,panel);
+    open.addEventListener("click",()=>{panel.hidden=false;open.disabled=true;open.setAttribute("aria-expanded","true");zoom=1;show("source",false);});
+    close.addEventListener("click",()=>{++requestNumber;displayed=false;viewport.replaceChildren();panel.hidden=true;open.disabled=false;open.setAttribute("aria-expanded","false");open.focus?.();});
+    return group;
+  }
+
   const BOUNDARY_VERSIONS = [
     ["original", "Original", "Input"],
     ["control", "Control", "Unchanged re-encode"],
@@ -791,6 +854,7 @@
           }
           const proof=job.teaching_review?.regions?.[regionIndex];
           if (proof && proof.label===region.label && JSON.stringify(proof.xywh)===JSON.stringify(region.xywh)) {
+            card.classList.add("teaching-result-card");
             const details=element("details",null,"teaching-frame-proof");details.append(element("summary","Inspect preserved teaching frames · static PNGs"));
             proof.moments.forEach((moment)=>{
               details.append(element("p",moment.roles.join(" / ")+" · frame "+moment.frame,"small"));
@@ -807,7 +871,7 @@
                 image.onerror=()=>{image.hidden=true;inspect.hidden=true;status.textContent="Teaching crop unavailable; it has not been displayed.";};
                 figure.append(image,status,inspect);pair.append(figure);
                 try { const url=localURL(asset.url);image.src=url;inspect.href=url; } catch(error) { image.hidden=true;inspect.hidden=true;status.textContent="Teaching crop URL refused."; }
-              });details.append(pair);
+              });details.append(pair,teachingComparison(region,moment));
             });card.append(details);
           }
           if (!region.passed) card.classList.add("protected-failed");

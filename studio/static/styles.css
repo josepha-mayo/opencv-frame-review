@@ -43,3 +43,11 @@
 /* A long example name must not widen the mobile grid's intrinsic column. */
 .workspace-grid > .panel { min-width: 0; }
 #natural-example { width: 100%; max-width: 100%; min-width: 0; }
+.proof-desk { min-width: 0; max-width: 100%; margin: .75rem 0 1.5rem; }
+.teaching-result-card { grid-column: 1 / -1; min-width: 0; }
+.proof-desk-panel { min-width: 0; max-width: 100%; border: 1px solid var(--line); padding: 12px; margin-top: 12px; }
+.proof-desk-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 12px 0; }
+.proof-desk-controls [aria-pressed="true"] { outline: 2px solid var(--green); outline-offset: 2px; }
+.proof-desk-viewport { max-width: 100%; min-height: 100px; max-height: 420px; overflow: auto; border: 1px solid var(--line); background: #202420; }
+.proof-desk-viewport img { display: block; max-width: none; height: auto; image-rendering: pixelated; }
+.proof-desk-viewport img[hidden], .proof-desk-panel[hidden] { display: none; }
