@@ -1,0 +1,18 @@
+{
+  "source_manifest_sha256": "ae537d533bdf1305aabe983258cf83257632d4ace9f77b3e83d067cb8a5d8da5",
+  "runtime_files": 119,
+  "changed_runtime_files": [
+    "studio/static/app.js",
+    "studio/tests/test_studio_ui.py"
+  ],
+  "parent_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:25baf0713cdcf4d077883ddff5c397141e8891bdcba12b036a19267bb58c0a36",
+  "source_zip_sha256": "ec083c878eb91639e2ff051cbf8ee774f6bbc74046c010d26f94f924651731bc",
+  "source_s3": "opencv-creator-replay-046675437218-20261016/proof-v15/ae537d533bdf1305aabe983258cf83257632d4ace9f77b3e83d067cb8a5d8da5/source.zip",
+  "evidence_s3": "opencv-creator-replay-046675437218-20261016/proof-v15/ae537d533bdf1305aabe983258cf83257632d4ace9f77b3e83d067cb8a5d8da5/qualification-evidence.zip",
+  "image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue:proof-v15-ae537d533bdf1305",
+  "role_policy": "ProofV15Qualification",
+  "scope": "Measurement-card notes and audio provenance corrected; all 14 Linux stages and three original-source native/export checks passed. Not yet a live release.",
+  "complete": true,
+  "image_digest": "sha256:78291f860a48f228425e8c75e4d3da1ec071598e42406a22ee8354c915cc5b3b",
+  "pinned_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:78291f860a48f228425e8c75e4d3da1ec071598e42406a22ee8354c915cc5b3b"
+}

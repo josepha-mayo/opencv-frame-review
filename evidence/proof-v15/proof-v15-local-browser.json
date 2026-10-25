@@ -1,0 +1,35 @@
+{
+  "complete": true,
+  "scope": "Recorded real PNG rendering with production renderer and QA bootstrap in desktop Brave; no live encode or physical phone qualification.",
+  "responsive": [
+    {
+      "id": "small",
+      "measurements": {
+        "client": 360,
+        "loaded": 30,
+        "proof_images": 30,
+        "ready_links": 30,
+        "scope": "Recorded PNG rendering only",
+        "scroll": 360,
+        "width": 375
+      },
+      "scopeNote": true
+    },
+    {
+      "id": "medium",
+      "measurements": {
+        "client": 875,
+        "loaded": 30,
+        "proof_images": 30,
+        "ready_links": 30,
+        "scope": "Recorded PNG rendering only",
+        "scroll": 875,
+        "width": 890
+      },
+      "scopeNote": true
+    }
+  ],
+  "proof_images": 30,
+  "loaded": 30,
+  "verified_utc": "2026-10-25T16:08:30.845Z"
+}

@@ -1,12 +1,14 @@
 # Frame Review: Keep the Lesson
 
-**Current v14: inspect the teaching text at full size.** Boundary and teaching PNGs now offer an owned full-size view after successful load/dimension checks. Failed or mismatched images withhold the link. This addresses review-card shrinkage; it does not increase source resolution or establish readability benefit.
+**Current v15: understand the result before using it.** Fixed a shared renderer that hid scope notes on cards containing measurements. Audio preservation now requires every required check and identifies the prepared edit input. Full-size, dimension-gated teaching proofs remain available. The frozen repair engine is unchanged.
 
-All 14 Linux stages, 137 backend / 121 studio tests (one skip), two untouched-original native/export checks and current live HTTPS API/pack checks pass. Actual desktop Brave generation with all 30 proof PNGs and full-size opening pass. Recorded-PNG contained 375/890px layouts are separate; physical-phone and native browser ZIP completion remain unqualified. Source/edit media and PNG bytes remain identical to v12 in both original-source cases. [Current qualification and reproduction](docs/proof-v14/REPRODUCE.md) · [Current report with retained historical pages](docs/proof-v14/Frame-Review-Full-Size-Proof-Report.pdf).
+All 14 Linux stages, 137 backend/124 studio tests (one skip), three untouched-original native/export checks, current HTTPS API checks and actual desktop Brave checks pass. These are previously selected real-source regressions, not new lesson discoveries or human benefit. Native media/PNG bytes remain exact against v14 (40 French,34 Joomla,34 Gentoo). [Current qualification](docs/proof-v15/REPRODUCE.md) · [Six-page report with five retained historical pages](docs/proof-v15/Frame-Review-Measurement-Scope-Report.pdf).
 
-The [prospective human reading/preference pilot](human-study/) is open. The first volunteer request is [published on the competition discussion board](https://opencv26.devpost.com/forum_topics/45681-3-4-minute-lesson-clip-study-looking-for-adult-volunteers). Recruitment is not enrollment or measured benefit; consult the dated aggregate for actual responses. QA is excluded and creator responses are separate. The v12 report remains historical evidence for its encoded ablation and workflow release.
+Actual Brave saved a45-member Gentoo original-upload pack on v14; every member and the untouched original verify. Current v15 browser/download receipts are separate. Recorded-PNG contained375/890px rendering is not physical-phone qualification.
 
-Direct pushes, no cron. The demo waits for the creator's real audio. No COOL or special-award eligibility assertion.
+The [prospective reading/preference pilot](human-study/) remains open. An interested Devpost commenter received an individual invitation; recruitment is not participation. Consult the dated aggregate for actual responses. QA is excluded; creator responses stay separate. [Volunteer discussion](https://opencv26.devpost.com/forum_topics/45681-3-4-minute-lesson-clip-study-looking-for-adult-volunteers).
+
+Direct pushes, no cron. The demo waits for the creator's real audio. No special-award eligibility assertion.
 
 ## Historical version notes
 

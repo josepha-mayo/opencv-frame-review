@@ -8,7 +8,7 @@ STUDIO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(STUDIO.parent / 'opencv-ready/candidate/app/tests'))
 from test_boundary_ui_static import HARNESS, NODE
 
-EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL, ui, byId,
+EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCard, localURL, ui, byId,
   protectionValues, resetProtection, invalidateProtection, drawProtection,
   saveProtectedRegion, removeProtectedRegion, editProtectedRegion, cancelProtectedEdit, checkProtection, loadTeachingGuide,
   startAreaMarking, cancelAreaMarking, markAreaCorner, renderWorkflow,
@@ -26,6 +26,48 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL
 
 
 class StudioEditor(unittest.TestCase):
+    def test_measurements_never_suppress_their_scope_note(self):
+        self.run_js('''
+const card=api.resultCard('Measured activity',[['Before / after',[5,0]]],'Does not measure attention or learning.');
+assert.ok(card.textContent.includes('Before / after'));assert.ok(card.textContent.includes('Does not measure attention or learning.'));
+assert.equal(card.querySelectorAll('dl').length,1);assert.equal(card.querySelectorAll('p').length,1);
+const empty=api.resultCard('Unavailable',[]);assert.ok(empty.textContent.includes('Not reported by the server.'));
+const plain=api.resultCard('Measured',[['Count',3]]);assert.equal(plain.querySelectorAll('p').length,0);
+''')
+
+    def test_audio_claim_requires_every_check_and_distinguishes_input_provenance(self):
+        self.run_js('''
+const checks={stream_exact:true,packet_payload_timing_skip_exact:true,decoded_pcm_exact:true};
+const summary={checks:{audio_exact:true},audio_preservation:{present:true,checks:{control:{...checks},edited:{...checks}}}};
+for (const extra of [{},{preparation:{}},{sample_credit:{id:'joomla'}}]) {
+  api.setJob({id:'job',status:'complete',summary,...extra});api.renderResults();
+  const text=ui.highlights.textContent;
+  assert.ok(text.includes('Edit-input audio'));assert.ok(!text.includes('Original lesson audio'));
+  assert.ok(text.includes('unchanged in control and edit'));
+  if(extra.preparation)assert.ok(text.includes('not the uploaded original'));
+  if(extra.sample_credit)assert.ok(text.includes('not the original recording'));
+}
+for (const broken of [
+ {...summary,checks:{audio_exact:false}},
+ {...summary,audio_preservation:{...summary.audio_preservation,checks:{control:checks,edited:{...checks,decoded_pcm_exact:false}}}},
+ {...summary,audio_preservation:{present:true,checks:{}}}
+]) {
+  api.setJob({id:'job',status:'failed',summary:broken});api.renderResults();
+  assert.ok(ui.highlights.textContent.includes('Exact audio preservation not established'));
+  assert.ok(!ui.highlights.textContent.includes('unchanged in control and edit'));
+}
+''')
+
+    def test_silent_or_unknown_audio_is_not_presented_as_verified_narration(self):
+        self.run_js('''
+for (const present of [false,undefined]) {
+  api.setJob({id:'job',status:'complete',sample_credit:{id:'gentoo'},summary:{audio_preservation:{present}}});api.renderResults();
+  const text=ui.highlights.textContent;
+  assert.ok(!text.includes('unchanged in control and edit'));
+  assert.ok(text.includes(present===false ? 'No audio track to compare' : 'Audio presence not verified'));
+}
+''')
+
     def test_pending_teaching_proofs_fetch_before_becoming_visible(self):
         self.run_js('''
 const xywh=[0,0,80,40],asset={url:'/api/jobs/job/review/teaching-source.png',width:80,height:40};

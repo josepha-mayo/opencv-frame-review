@@ -535,14 +535,15 @@
     renderSelectedCandidate();
   }
 
-  function resultCard(title, values, missing) {
+  function resultCard(title, values, note) {
     const card = element("section", null, "result-card");
     card.append(element("h3", title));
     if (values.length) {
       const list = element("dl");
       values.forEach(([label, value]) => addFact(list, label, value));
       card.append(list);
-    } else card.append(element("p", missing || "Not reported by the server."));
+    }
+    if (note || !values.length) card.append(element("p", note || "Not reported by the server.", "small muted"));
     return card;
   }
 
@@ -742,7 +743,14 @@
       }
       if (summary.audio_preservation) {
         const a = summary.audio_preservation;
-        ui.highlights.append(resultCard(job.preparation ? "Prepared lesson audio" : "Original lesson audio", [["Track", a.present ? "AAC-LC mono / 48 kHz" : "No audio in source"], ["Verification", a.present ? (job.preparation ? "Prepared packet bytes, timestamps, skip metadata and decoded PCM unchanged by this edit" : "Original packet bytes, timestamps, skip metadata and decoded PCM unchanged") : "Silent source retained"]], job.preparation ? "Preparation converted the narration once. This edit copies and checks that prepared audio; it is not packet-identical to the uploaded original." : "Canonical development mux only. No stretching, trimming, resampling or audio encoding. Playback compatibility remains unverified."));
+        const audioKeys = ["stream_exact", "packet_payload_timing_skip_exact", "decoded_pcm_exact"];
+        const exact = a.present === true && summary.checks?.audio_exact === true &&
+          ["control", "edited"].every(role => audioKeys.every(key => a.checks?.[role]?.[key] === true));
+        const scope = job.preparation ? "Preparation converted the selected excerpt once. Exact audio checks compare against that prepared input, not the uploaded original." :
+          job.sample_credit ? "This built-in example is a prepared excerpt. Exact audio checks compare against that excerpt, not the original recording. See its source and preparation provenance." :
+          "Exact audio checks compare against the clip supplied to this edit. Playback compatibility remains unverified.";
+        ui.highlights.append(resultCard("Edit-input audio", [["Track", a.present === true ? "AAC-LC mono / 48 kHz" : a.present === false ? "Silent edit input" : "Audio presence not verified"],
+          ["Verification", a.present === false ? "No audio track to compare" : exact ? "Input packet bytes, timestamps, skip metadata and decoded PCM unchanged in control and edit" : "Exact audio preservation not established; inspect the report"]], scope));
       }
       const trigger = summary.selected_trigger_count;
       const outside = summary.outside_mask_error;

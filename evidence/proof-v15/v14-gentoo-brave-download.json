@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "scope": "Actual Brave downloadMedia returned a saved ZIP path; fresh on-disk file and every member verified. Current v14 runtime, original Gentoo upload. Not human preference or physical-phone evidence. Temporary duplicate browser output files removed after retaining the exact verified pack; original saved path is a historical receipt.",
+  "job_id": "637df6cbd7cac92da2ef256554a8db5c",
+  "source_manifest_sha256": "500522d7c9c0fd016d9372e44f16e4652fad8aceb6488ef74a286f191975eb51",
+  "archive_bytes": 20147245,
+  "archive_sha256": "d2039f2f17d42eb935adbcec096bf89168043c58fd5a2347e4c19814edb2828e",
+  "members": 45,
+  "all_member_hashes_exact": true,
+  "untouched_original_included": true,
+  "saved_report_bytes_match_pack": true,
+  "offline_page": {
+    "complete": true,
+    "embedded_proof_images": 30,
+    "all_png_bytes_match_report": true,
+    "no_scripts_external_assets_or_media_elements": true,
+    "relative_artifact_links_present": true,
+    "html_sha256": "c78381e6c6cf41f6b2c8849507ad27c2b57ede418da23fbae11ab029fd60b440",
+    "html_bytes": 1290538
+  },
+  "browser_saved_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\natural-v10\\frame-review-rescue-pack (1).zip",
+  "retained_evidence_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\proof-v14\\Gentoo-Brave-Rescue-Pack.zip",
+  "verified_utc": "2026-10-25T16:10:28.643850+00:00",
+  "temporary_browser_downloads_removed_after_verification": [
+    "frame-review-rescue-pack (1).zip",
+    "report.json"
+  ]
+}
