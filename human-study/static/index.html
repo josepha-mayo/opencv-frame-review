@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lesson clip comparison</title><link rel="stylesheet" href="/study.css"><script src="/study.js" defer></script></head>
+<body><main>
+<header><p class="eyebrow">VOLUNTARY READING PILOT</p><h1>Lesson clip comparison</h1><p>Watch two short versions of three lessons. Tell us what you can read and which presentation you prefer. We are testing the presentation, not you.</p></header>
+<p id="qa-banner" class="notice" hidden>Software quality-assurance session. All responses from this invitation are excluded from human results.</p>
+<p id="error" class="error" role="alert" hidden></p>
+<section id="intro" class="card"><h2>Before you begin</h2>
+<p>Allow about 3–4 minutes. There are no names, emails, microphones or camera recordings. The clips are silent in this study and play only when you press Play. You can pause, skip a clip or leave at any time.</p>
+<p>Versions are called A and B. Their mapping is revealed after your answers are locked. Please take part once, work independently and do not look up answers. A small invited pilot can inform reading preference and usability; it does not establish learning improvement.</p>
+<p>Anonymous structured answers may be summarized in a hackathon report. The app stores no IP address. Private raw records expire after 30 days; aggregate reports may remain. Keep your invitation to exclude your response from analysis.</p>
+<form id="join-form">
+<label>Invitation code<input id="invite" type="text" autocomplete="off" maxlength="32" required></label><button type="button" id="check-invite">Check invitation</button><p id="invite-status" role="status"></p>
+<label>Your relationship to this project<select id="role" required><option value="">Choose one</option><option value="independent">I am an independent volunteer</option><option value="team">I am the creator or part of the project team</option></select></label>
+<label>Do you make or teach screen-recorded lessons?<select id="experience" required><option value="">Choose one</option><option value="often">Often</option><option value="sometimes">Sometimes</option><option value="never">Never</option><option value="prefer_not_say">Prefer not to say</option></select></label>
+<label>Your device<select id="device" required><option value="">Choose one</option><option value="computer">Computer</option><option value="phone">Phone</option><option value="tablet">Tablet</option></select></label>
+<label class="check"><input id="consent" type="checkbox" required><span id="consent-label">I am 18 or older, am volunteering, have not completed this study before, and agree to the anonymous response use described above.</span></label>
+<button id="start" type="submit" disabled>Start the comparison</button></form>
+</section>
+<section id="trial" class="card" hidden aria-labelledby="trial-title"><p id="progress" class="eyebrow"></p><h2 id="trial-title"></h2><p id="task"></p>
+<p id="clip-label" class="notice"></p><video id="player" playsinline muted preload="none" aria-label="Study clip"></video>
+<div class="actions"><button id="play" type="button">Play clip</button><button id="pause" type="button">Pause</button><button id="replay-a" type="button" hidden>Rewatch A</button><button id="replay-b" type="button" hidden>Rewatch B</button></div><p id="playback-status" role="status" aria-live="polite"></p>
+<form id="reading-form" hidden><fieldset id="reading-options"><legend>Choose what you read</legend></fieldset><button type="submit">Lock this answer and watch B</button></form>
+<form id="preference-form" hidden>
+<fieldset><legend>Which would you prefer while reading this lesson?</legend><label class="check"><input name="preference" type="radio" value="A" required>A</label><label class="check"><input name="preference" type="radio" value="B">B</label><label class="check"><input name="preference" type="radio" value="same">No preference / no visible difference</label><label class="check"><input name="preference" type="radio" value="neither">Neither is usable for me</label></fieldset>
+<div class="ratings"><label>Distraction while reading A<select id="rating-a" required><option value="">Choose</option><option value="1">1 — minimal</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5 — high</option></select></label><label>Distraction while reading B<select id="rating-b" required><option value="">Choose</option><option value="1">1 — minimal</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5 — high</option></select></label></div>
+<label>Did a version hide information you needed?<select id="lost" required><option value="">Choose</option><option value="A">A</option><option value="B">B</option><option value="both">Both</option><option value="neither">Neither</option><option value="unsure">Not sure</option></select></label><button type="submit">Save this comparison</button></form>
+<details><summary>Skip this lesson</summary><label>Reason<select id="skip-reason"><option value="playback_error">Playback did not work</option><option value="unreadable">Text was unreadable on my device</option><option value="do_not_want_to_continue">I do not want to continue this lesson</option></select></label><button id="skip" type="button">Record a skip and continue</button></details>
+<details><summary>Source credit and license</summary><p id="credit"></p><a id="source-link" target="_blank" rel="noopener noreferrer">Source page</a> · <a id="license-link" target="_blank" rel="noopener noreferrer">License</a></details>
+</section>
+<section id="finish" class="card" hidden><h2>Ready to send your anonymous answers</h2><p>Negative responses, skips, ties and “neither” choices are useful too. There are no suggested answers.</p><p id="answer-count"></p><button id="submit-results" type="button">Submit anonymous responses</button></section>
+<section id="thanks" class="card" hidden><h2>Response received</h2><p id="receipt"></p><p id="debrief"></p></section>
+<details id="withdraw-area"><summary>Exclude my response from analysis</summary><p>Use the same invitation. This marks it excluded; it does not invent a replacement response. Private raw records expire after 30 days.</p><button id="withdraw" type="button">Exclude this invitation’s response</button><p id="withdraw-status" role="status"></p></details>
+<footer><p>Independent volunteers and project-team responses are reported separately. QA records never count as human participants.</p><p id="protocol-id"></p></footer>
+</main></body></html>

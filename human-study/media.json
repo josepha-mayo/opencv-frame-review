@@ -1,0 +1,77 @@
+{
+  "complete": true,
+  "schema": "reading-pilot-media-v1",
+  "cases": {
+    "upload-assistant": {
+      "source": {
+        "sha256": "5086b730dbe65ff29152feb4af76fc9f004baa8e1df7e6744bc73776516f8307",
+        "bytes": 162218,
+        "source_mp4_sha256": "93845b704ff338478ab0f6a300ea651dbce63906197069d757d1d142169e5380",
+        "native_samples_exact": true,
+        "all_teaching_rgb_digests_match_pinned_linux": true,
+        "frames": 360,
+        "duration_seconds": 12.0,
+        "audio_tracks": 0
+      },
+      "edited": {
+        "sha256": "ece596857504c6cb98b0f9f89e9e23e35f2bfb0498af81a054c3949c10225b56",
+        "bytes": 162076,
+        "source_mp4_sha256": "97310fcc314affbc74da4c3b3d5dd02b38c9878bf66cc8e39c1d8ccb1e656394",
+        "native_samples_exact": true,
+        "all_teaching_rgb_digests_match_pinned_linux": true,
+        "frames": 360,
+        "duration_seconds": 12.0,
+        "audio_tracks": 0
+      },
+      "matched_timestamp_sequences": true
+    },
+    "joomla": {
+      "source": {
+        "sha256": "860bf4fe26249acd942c7280ec592e59db24cea94a2ee6981eb02844dca80c96",
+        "bytes": 372303,
+        "source_mp4_sha256": "241896d9fe454ec8f036446e753c13c0942c5eadc74e728dac2c18a2cc34a377",
+        "native_samples_exact": true,
+        "all_teaching_rgb_digests_match_pinned_linux": true,
+        "frames": 360,
+        "duration_seconds": 12.0,
+        "audio_tracks": 0
+      },
+      "edited": {
+        "sha256": "b2c42ef4371d5386c8b70a6eeac545788644fd48df666bcaae2931e0d6af4001",
+        "bytes": 371940,
+        "source_mp4_sha256": "7a5202e860238ad055b1ad981a19806a1dc922396a556e2c0eebb726e96a506b",
+        "native_samples_exact": true,
+        "all_teaching_rgb_digests_match_pinned_linux": true,
+        "frames": 360,
+        "duration_seconds": 12.0,
+        "audio_tracks": 0
+      },
+      "matched_timestamp_sequences": true
+    },
+    "gentoo": {
+      "source": {
+        "sha256": "415f5df9160a444b8fa664e43c1b2888b99320eef7dbcbf2f3049ed74fef8f9d",
+        "bytes": 298015,
+        "source_mp4_sha256": "33a58e2d4dd11a6bfb84cc656fab241a59ba0624162083aeb9bcbea628814fd3",
+        "native_samples_exact": true,
+        "all_teaching_rgb_digests_match_pinned_linux": true,
+        "frames": 360,
+        "duration_seconds": 12.0,
+        "audio_tracks": 0
+      },
+      "edited": {
+        "sha256": "02653edab5242f3e97864d8ba2365d8886eb3a7396ade8e514e6297b65fbb3ed",
+        "bytes": 297941,
+        "source_mp4_sha256": "366ee9f57dcc45a6f09abae3691ee7e77611f930904d5ea9200303ed9a38e085",
+        "native_samples_exact": true,
+        "all_teaching_rgb_digests_match_pinned_linux": true,
+        "frames": 360,
+        "duration_seconds": 12.0,
+        "audio_tracks": 0
+      },
+      "matched_timestamp_sequences": true
+    }
+  },
+  "runtime_image": "sha256:dd6f6b6cdb4e3cc7ca624bc7ab761465566f66361a3f2539910a18cade5be7e6",
+  "scope": "Matched silent lossless VP9 viewing renditions, not new app output or human response. Container timestamps are quantized to milliseconds equally in both variants; native pictures and pinned-Linux teaching RGB digests must remain exact."
+}

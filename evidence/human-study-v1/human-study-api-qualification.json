@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "scope": "Synthetic QA integration fixtures only; never human responses. Human collection remains closed.",
+  "checks": {
+    "closed_health_binding": true,
+    "manual_playback_and_hashed_csp": true,
+    "cross_origin_refused": true,
+    "unknown_invite_refused": true,
+    "human_closed_before_data_collection": true,
+    "qa_explicitly_identified_and_answers_not_exposed": true,
+    "all_six_actual_private_media_ranges_playback_transport": true,
+    "s3_assets_not_public_without_signed_url": true,
+    "no_public_result_reader": true,
+    "tampered_session_refused": true,
+    "negative_qa_skip_record_saved": true,
+    "duplicate_cannot_overwrite_or_double_count": true,
+    "withdrawal_marker_written": true
+  },
+  "protocol_sha256": "d76d56bdf6a02a29fb4bc34c31d6faa00fb94ccbc20d95717184098dfe28d00c",
+  "media_sha256": "ea59f5643c6b7988a0cbc5be020689197e46142c30f49bd4051c00c5b34b1569",
+  "actual_human_responses_created": 0
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "lesson-reading-pilot-v1",
+  "title": "Lesson clip comparison",
+  "closes_utc": "2026-10-27T06:00:00Z",
+  "purpose": "An invited convenience pilot of visual reading preference and feasibility, not a test of learning efficacy, accessibility, safety or editing time saved.",
+  "initial_recruitment_target": "8-12 real adult volunteers, preferably people who watch or make screen-recorded lessons; capacity 96 invitations is not an achieved sample size.",
+  "allocation": "Cryptographically shuffled blocks of 12: six lesson-order permutations crossed with two A/B orientations. A is the first exposure. First-exposure reading answer is locked before B. Mapping is hidden in the participant UI and revealed after submission. No analyst blinding or population-random sampling claim.",
+  "primary_analysis": "Among all non-withdrawn, submitted independent-volunteer records before the fixed cutoff, count participant-level edited-majority, source-majority and no-majority preferences across the three cases. A majority requires that variant to be preferred in at least two of the three assigned cases. Same/neither/skipped contribute no vote. Include all-skip records as no-majority, identify missingness. Do not treat three clips as three independent participants. Report project-team responses separately.",
+  "secondary_analysis": "Report case-level A/B-decoded preferences, ties, neither choices, reading accuracy after the randomized first exposure, descriptive answer latency after playback, paired distraction ratings, perceived missing information, starts/completions/skips and playback failures. Preserve negative and inconclusive outcomes. No significance testing, claimed learning gain, general efficacy or measured editing-time saving.",
+  "quality_assurance": "Server-issued QA invitations write to qa-results and never enter human counts. One immutable submission per invitation. Invitations do not independently authenticate personhood; recruitment/self-report and duplicate limitations must be disclosed.",
+  "privacy": "No name, email, voice, camera recording or application-retained IP address. Structured anonymous answers, coarse device class, team relationship and lesson-making experience only. Private raw records expire through a prefix-scoped S3 lifecycle after 30 days; aggregate reports may be retained. A participant can exclude a response using the same invite. No public raw-results endpoint.",
+  "playback": "Existing source/edit clips only, no demo recording or new narration. Matched silent lossless VP9 study renditions must roundtrip every native sample and match pinned-Linux teaching digests. Manual playback, no autoplay. Browser-reported playback events are feasibility telemetry, not proof of attention. Record unreadable/unsupported skips rather than silently excluding them.",
+  "cases": [
+    {
+      "id": "upload-assistant",
+      "label": "Lesson 1: a form",
+      "question": "What participant number is entered in the form?",
+      "options": [{"id":"001","text":"001"},{"id":"011","text":"011"},{"id":"101","text":"101"},{"id":"unreadable","text":"I could not read it"}],
+      "correct": "001",
+      "ground_truth": "Visually checked in the hash-verified native source boundary-f00233-original.png. The extra all-frame participant-number RGB check is exact.",
+      "credit": "Benoit Rochon, Tutoriel de l'assistant d'import, CC BY 3.0 as listed. Seconds 140-152 prepared/adapted. No added defect or endorsement.",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tutoriel_de_l%27assistant_d%27import.ogv",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "duration_seconds": 12
+    },
+    {
+      "id": "joomla",
+      "label": "Lesson 2: installation commands",
+      "question": "Which configuration filename appears in the shown commands?",
+      "options": [{"id":"configuration.php","text":"configuration.php"},{"id":"settings.json","text":"settings.json"},{"id":"config.yaml","text":"config.yaml"},{"id":"unreadable","text":"I could not read it"}],
+      "correct": "configuration.php",
+      "ground_truth": "Visually checked in native teaching-r0-f00114-source.png: touch configuration.php and chown www-data configuration.php.",
+      "credit": "VolodyA! V Anarhist, Joomla Installation, Free Art License as listed. Seconds 60-72 prepared/adapted. No added defect or endorsement.",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Joomla_Installation.vorb.theo.ogv",
+      "license_url": "http://artlibre.org/licence/lal/en",
+      "duration_seconds": 12
+    },
+    {
+      "id": "gentoo",
+      "label": "Lesson 3: package installation",
+      "question": "Which package is named in the emerge command near the top?",
+      "options": [{"id":"gentoolkit","text":"gentoolkit"},{"id":"joomla","text":"joomla"},{"id":"gimp","text":"gimp"},{"id":"unreadable","text":"I could not read it"}],
+      "correct": "gentoolkit",
+      "ground_truth": "Visually checked in the attributed prepared Gentoo source: emerge --ask app-portage/gentoolkit.",
+      "credit": "Vitaly Zdanevich, Gentoo portage installing and using equery, CC0 as listed. Seconds 62-74 prepared/adapted. Silent source. No added defect or endorsement.",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Gentoo-portage-installing-and-using-of-equery.webm",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "duration_seconds": 12
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "browser": "Brave extension browser API",
+  "scope": "Software QA, excluded from human evidence",
+  "real_lesson_cases_played": 3,
+  "variants_played_to_end": 6,
+  "reading_answer_locked_before_B": true,
+  "completed_qa_response_saved": true,
+  "qa_exclusion_verified_by_authenticated_export": true,
+  "narrow_viewport": {
+    "width": 375,
+    "document_scroll_width": 360,
+    "video_width": 282
+  },
+  "medium_viewport": {
+    "width": 890,
+    "document_scroll_width": 875,
+    "video_width": 765
+  },
+  "responsive_limit": "Viewport emulation in desktop Brave; not physical phone or mobile-OS qualification. Small text readability remains a participant outcome.",
+  "browser_console_errors": 0,
+  "actual_human_responses_created": 0,
+  "receipt_screenshot_sha256": "cb786f7e7744f7339500ed988cf32277a19f66b55f9f3ab59bac1e5931bb44bf"
+}

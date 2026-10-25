@@ -1,0 +1,11 @@
+{
+  "schema": "reading-pilot-collector-build-v1",
+  "files": {
+    "study_server.py": "244a846b89fc04549b09f27ec203cee08f5f9c65d3e35486354ef8443ebe17af",
+    "protocol.json": "aea0a58b2674514c6908de3ee808f986849d50312fcbd084ced19e37314727a6",
+    "media.json": "fa5b8d9de859881d2006fd2dcb0ce43d4b580cdddc4b87b978adc21e5931d5be",
+    "static/index.html": "55aa5b2e5e0ede3ec8768586d53385b35ad3077a94a57bbcf91cdc26674df443",
+    "static/study.js": "926dc016f41f1b7c5099de74ca36568a4776ad96aeddab5d1b96006f17b00071",
+    "static/study.css": "922ae6ca816e7e508c9b9213768642b33f108113b4ada09c21db7448c016e845"
+  }
+}
