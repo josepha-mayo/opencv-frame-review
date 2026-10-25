@@ -1,0 +1,11 @@
+{
+  "submitted": true,
+  "current_filename_visible": true,
+  "testing_exact": true,
+  "description_exact": true,
+  "gallery_count": 15,
+  "video_url": "https://www.youtube.com/watch?v=5oE3rA-aJNI",
+  "source_commit": "9445ead31ee13871d0cff513603b4af66f487104",
+  "public_image_loaded": true,
+  "scope": "Saved browser read-back verifies filename, testing instructions and story. Local uploaded archive hash verified; no server archive re-download claim."
+}

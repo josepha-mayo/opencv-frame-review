@@ -1,0 +1,85 @@
+{
+  "verified_utc": "2026-10-25T06:30:49.472647+00:00",
+  "source_commits": {
+    "private": {
+      "branch": "master",
+      "commit": "8e913758c4b46727d2ccf5fdee75d08099cad78b",
+      "parent": "38fc941b76065e99556427c1090907bf1614d4da",
+      "tree": "d47224d8963bf28cf7834d707ea7e25aba5f126c"
+    },
+    "public": {
+      "branch": "main",
+      "commit": "9445ead31ee13871d0cff513603b4af66f487104",
+      "parent": "1d95caef27d9aa7a7ac9fecbcd546fff62b18368",
+      "tree": "fa730783ae02ac080099fdf054ef1a0df60ac690"
+    }
+  },
+  "cloud": {
+    "checked_utc": "2026-10-25T06:03:13.522219+00:00",
+    "rollout_state": "COMPLETED",
+    "task_definition": "default-lesson-rescue:17",
+    "deployments": 1,
+    "desired": 1,
+    "running": 1,
+    "deployment": {
+      "build": "lesson-rescue-offline-proof-2026-10-25-v11",
+      "source_files_verified": 117,
+      "source_manifest_sha256": "c92366d6d1a6753f0dc807fefe8a4adf8924ec5d4ce5b6e431ee744b366b6f88",
+      "hosting": "Amazon ECS",
+      "analysis": "OpenCV 5.0.0",
+      "media_runtime": "Pinned Debian FFmpeg 7.1.5",
+      "retention_hours": 24,
+      "workers": 1,
+      "max_jobs": 8
+    },
+    "complete": true,
+    "image_digest": "sha256:a5764c521c41235519b1921ee8900fa509a1146880acc7e00e6e9c24cee34fdf",
+    "task_cpu": "1024",
+    "task_memory": "2048",
+    "application_task_role_present": false
+  },
+  "devpost": {
+    "submitted": true,
+    "current_filename_visible": true,
+    "testing_exact": true,
+    "description_exact": true,
+    "gallery_count": 15,
+    "video_url": "https://www.youtube.com/watch?v=5oE3rA-aJNI",
+    "source_commit": "9445ead31ee13871d0cff513603b4af66f487104",
+    "public_image_loaded": true,
+    "scope": "Saved browser read-back verifies filename, testing instructions and story. Local uploaded archive hash verified; no server archive re-download claim."
+  },
+  "package": {
+    "filename": "Frame-Review-Portable-Proof-Judge-Package.zip",
+    "bytes": 32165118,
+    "sha256": "8f4271348a3ca7e35a6e81ff1a6688386b9911ebf381a9341d441e5ae7b96895",
+    "source_commit": "9445ead31ee13871d0cff513603b4af66f487104",
+    "runtime_manifest_sha256": "c92366d6d1a6753f0dc807fefe8a4adf8924ec5d4ce5b6e431ee744b366b6f88",
+    "runtime_files_verified": 117,
+    "report_sha256": "b7253aaefcbaef963bba6174d722b7ba77439ba78cab7d51f20f6165b92a8c09",
+    "report_pages": 5,
+    "zip_integrity": true,
+    "handoff_paths": 0,
+    "verified_utc": "2026-10-25T06:21:26.205470+00:00"
+  },
+  "verification": {
+    "https_original_upload_cases": 2,
+    "full_linux_gate_stages": 14,
+    "backend_tests": 137,
+    "studio_tests": 114,
+    "studio_skips": 1,
+    "artifact_browser_widths": [
+      375,
+      890
+    ],
+    "embedded_proof_images": 36
+  },
+  "cleanup": {
+    "removed_count": 160,
+    "removed_bytes": 467727860,
+    "net_bytes_freed": 429909748
+  },
+  "cron": "Existing automation remains PAUSED; no new automation.",
+  "video": "Existing video URL unchanged. Wait for user audio.",
+  "limits": "Two selected real-source regression repeats, not new lesson discoveries. Current browser ZIP completion callbacks timed out; API downloads and browser artifact rendering passed separately. Bounded native startup-preflight preparation failures and stopped launcher remain recorded; cold-start reliability unresolved. Human learning benefit unmeasured."
+}
