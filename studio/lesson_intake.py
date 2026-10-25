@@ -297,6 +297,12 @@ class LessonManager(backend.Manager):
             out['artifacts']['Natural sample provenance'] = '/api/samples/natural-'+example+'-credit.json'
         if out['status']=='complete' and out.get('summary',{}).get('sample_mapping')=='observed-luma-source-chroma-v2' and not out.get('frame_review_error') and not out.get('teaching_review_error'):
             out['artifacts']={'Download verified rescue pack':f'/api/jobs/{jid}/rescue-pack.zip',**out['artifacts']}
+        from workflow_trace import snapshot
+        try:
+            approval = backend.read_json(folder/'approval.json') if (folder/'approval.json').is_file() else None
+            out['workflow'] = snapshot(out, approval)
+        except (ValueError, KeyError, OSError) as error:
+            out['workflow_error'] = str(error)
         return out
 
 
@@ -336,6 +342,20 @@ class LessonHandler(backend.Handler):
     def do_GET(self):
         path = urllib.parse.urlsplit(self.path).path
         import re
+        workflow_match = re.fullmatch(r'/api/jobs/([0-9a-f]{32})/workflow.json', path)
+        if workflow_match:
+            try:
+                self.secure()
+                job = self.server.manager.view(workflow_match.group(1))
+                if 'workflow' not in job:
+                    raise ValueError('Source-bound workflow unavailable.')
+                data = json.dumps(job['workflow'], indent=2, allow_nan=False).encode()
+                self.send_response(200)
+                self.headers_safe('application/json',len(data),'vision-workflow.json')
+                self.wfile.write(data)
+                return
+            except (ValueError,KeyError,PermissionError,OSError) as error:
+                return self.handle_error(error)
         pack_match=re.fullmatch(r'/api/jobs/([0-9a-f]{32})/rescue-pack\.zip',path)
         if pack_match:
             acquired=False

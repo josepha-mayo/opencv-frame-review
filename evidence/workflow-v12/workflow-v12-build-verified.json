@@ -1,0 +1,24 @@
+{
+  "source_manifest_sha256": "87337c7b9caa164b741ede5f35d4fc471d6110ac4e985935c2651f6b883d51f1",
+  "runtime_files": 119,
+  "changed_runtime_files": [
+    "studio/lesson_intake.py",
+    "studio/rescue_pack.py",
+    "studio/static/app.js",
+    "studio/static/index.html",
+    "studio/tests/test_cloud.py",
+    "studio/tests/test_studio_ui.py",
+    "studio/tests/test_workflow_trace.py",
+    "studio/workflow_trace.py"
+  ],
+  "parent_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:a5764c521c41235519b1921ee8900fa509a1146880acc7e00e6e9c24cee34fdf",
+  "source_zip_sha256": "6d79ea6eb8f142b39cecd65a80e4087be14c87f6e0762a502729fea7daf38622",
+  "source_s3": "opencv-creator-replay-046675437218-20261016/workflow-v12/87337c7b9caa164b741ede5f35d4fc471d6110ac4e985935c2651f6b883d51f1/source.zip",
+  "evidence_s3": "opencv-creator-replay-046675437218-20261016/workflow-v12/87337c7b9caa164b741ede5f35d4fc471d6110ac4e985935c2651f6b883d51f1/qualification-evidence.zip",
+  "image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue:workflow-v12-87337c7b9caa164b",
+  "role_policy": "WorkflowV12Qualification",
+  "scope": "Application layer over qualified v11 parent. AWS CodeBuild qualification; no live deployment yet.",
+  "image_digest": "sha256:dd6f6b6cdb4e3cc7ca624bc7ab761465566f66361a3f2539910a18cade5be7e6",
+  "pinned_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:dd6f6b6cdb4e3cc7ca624bc7ab761465566f66361a3f2539910a18cade5be7e6",
+  "complete": true
+}

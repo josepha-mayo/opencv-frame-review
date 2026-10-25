@@ -1,5 +1,5 @@
 {
-  "build": "lesson-rescue-offline-proof-2026-10-25-v11",
+  "build": "lesson-rescue-workflow-2026-10-25-v12",
   "scope": "Studio, bounded preparation, frozen rapid-change engine, and separately versioned stationary blink detection/export. Source identity is separate from media/browser/cloud qualification.",
   "frozen_backend_commit": "fd861d0ce2cd50bec741327975d95ff5488254e2",
   "files": {
@@ -88,13 +88,13 @@
     "studio/fixtures/real-teacher.webm": "554bfe67be9ff2edd7a1c04283e9744a78c7b8ec171ebc569bb250144adc33aa",
     "studio/fixtures/REAL_LESSON_CREDIT.json": "ee5feeb143d16a49507555e3bef464bf0e0da5bd3367a214a31d955d8d6813b4",
     "studio/lesson_guides.py": "d09f774f614e6dc7c11ff8658d42cddaf33387165eb87da1e048fdef453bf751",
-    "studio/lesson_intake.py": "5a9f0a22c4cbfb78bfbe309961b6f465ec28587171254afc4c038ed05d5efc20",
+    "studio/lesson_intake.py": "7880d7d0ad0d1566dd451b35429bef7d9d5d8efb0478fbd753e33f506e873894",
     "studio/prepare_worker.py": "950337aea46c7d592085b8d5ee9f4016072c31fd2ccc83fff1ce2e3511337c1a",
-    "studio/rescue_pack.py": "b1cd42e43a756e978f73a1e971aea2047897ab19288daf85fedf27bb3dac7612",
+    "studio/rescue_pack.py": "0f737bb5d689375ca9aa2bdda7818278c46ac388497d96f545d87e11f2dd9dde",
     "studio/run.py": "69597c5c94e494a45ba40c4833df1fe8cebc03d2c182c4624d1a2b7b41f1ffd9",
     "studio/runtime-requirements.lock": "f6ef34a38b624856efb1f2e8028c5a35fb2e1563c48fba94be6338ae715b2f62",
-    "studio/static/app.js": "7c40d2e35df1e7be1eb6ca42a1e6dc02cdbf575ce562e6bf8c8e14c49249d295",
-    "studio/static/index.html": "1433c148f2812d1505ec9f1f9271745c8c6509cdab70172960ab05c3247093aa",
+    "studio/static/app.js": "b32ef63c997f0af8d8ad95afa8807a49a5aad43bb6587d9aaeda011418426be0",
+    "studio/static/index.html": "35ca7ab392f8c8c3df426fbbf12d69e9cfd875d8c36f6c2048186744a6ad1a7d",
     "studio/static/natural-gentoo.png": "994b9b1c1504e5a1afb4181f35588078c5dc63115a9281ed40337915f0dae9e5",
     "studio/static/natural-terminal.png": "3d7a55d50dc8f679dac789c82cb11d7bb4ddee9de1000f9634d008d7cc628861",
     "studio/static/styles.css": "cb3c952788ec902323a78d6b22994ce8f056b5ff6a54920ac043532f5e6cd55a",
@@ -110,7 +110,7 @@
     "studio/tests/integration_real_lessons.py": "a011c519465ccfba3accc4e4436a6ebd9d8ed1947dc430f89c26b8a604920043",
     "studio/tests/integration_silent_webm.py": "5a766c38253ad43685f9f2c3525a26c8226d6047dddc77f6297007f52ddf5a76",
     "studio/tests/integration_steady_detail.py": "21880ee877bac2471e0f65ec15eb4d9e184e1ffef1742d5ec90ebcd706497089",
-    "studio/tests/test_cloud.py": "d3d81ba63a7faeb196d82dbd0e40f60508d21ddf01d00166d1bfb01a0a765215",
+    "studio/tests/test_cloud.py": "5e95e6e46c4e2fa3e8cdd499b7c9ea175944149fb0081c34b78dc961693ca49c",
     "studio/tests/test_compatibility.py": "bf05ae18d50e6cc96e4e665e757e846746c455d96e25ee189ab4b1f1408ebae8",
     "studio/tests/test_launcher.py": "d3a0c0136cc6a466f0e3bebaec94db2b087f2b6cd61ff620ac710e23f987997c",
     "studio/tests/test_lesson_guides.py": "8417005ad4d54c6eead479d1508c75a87c1dea8cfbda9dc7b5455da80a75f67b",
@@ -118,7 +118,9 @@
     "studio/tests/test_rescue_pack.py": "684a6ed5c4c2d9da473f928566c5608aae6d07a7ec51114129137d421f235359",
     "studio/tests/test_steady_boundaries.py": "bad43636acb2ca39214e445a009b9719f3246e13dc777d140bdb055e3f2e7171",
     "studio/tests/test_steady_detail.py": "43873588171ea9ff969f8c9ae10df1388f2cc08db9daaca63d4b6d351bcf4f01",
-    "studio/tests/test_studio_ui.py": "828d78b3d451eea6a7688610e35c95bdaed592ba1131e3853ceacd9cc660274c",
-    "studio/tests/test_teaching_motion.py": "b7de894ea6ca414414cefe49c810e16f7642550976744d09c7903add4d4bb4fe"
+    "studio/tests/test_studio_ui.py": "03c5bee58c64fb4deebd58ddcdff54aede4ededf16c402676b6e9f6b88825f47",
+    "studio/tests/test_teaching_motion.py": "b7de894ea6ca414414cefe49c810e16f7642550976744d09c7903add4d4bb4fe",
+    "studio/tests/test_workflow_trace.py": "78d64328bee10b32f88569556fd932123569f363972ccefd71422bef0a5be5ed",
+    "studio/workflow_trace.py": "6a954bb5a1d9a6320be49b42539a66760b79dd1e58744d00324efa93a95cbc3a"
   }
 }

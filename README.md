@@ -1,12 +1,10 @@
 # Frame Review: Keep the Lesson
 
-**Current v11: keep the repair reviewable after the job expires.** The verified rescue pack now includes a self-contained `review.html` with every cut and teaching image embedded, measured gates and artifact links. No app, account, script or video playback is needed to inspect it. The vision/edit gates and creator approval remain unchanged. [Current report](docs/real-lessons-report.pdf) · [Current evidence, architecture and reproduction](docs/offline-v11/REPRODUCE.md).
+**Current v12: explain the next step, prove what keeps moving.** The live app now explains its evidence-driven route and includes an owned source-bound workflow snapshot in the rescue pack. In an independent encoded comparison on two selected real lessons, both local and whole-frame holds remove selected blink activity; the local edit changes zero declared teaching pixels, while the whole-frame baseline changes teaching pixels in 90 held frames in each case. These are engineering results, not measured human benefit.
 
-All 14 Linux stages pass (137 backend / 114 studio tests, one skip). Two selected untouched originals pass native checks and current AWS API upload/export/pack verification; media and PNG bytes match. Brave renders the saved French proof page with all 36 images at 375/890. API saving and browser rendering are distinct from current ZIP callbacks, which timed out. Startup preparation failures remain included; cold-start reliability is unresolved. Human benefit is unmeasured. The video waits for user audio.
+All 14 Linux stages pass in AWS CodeBuild (137 backend / 119 studio tests, one skip). Two untouched-original preflight/export qualifications and current AWS API/pack checks pass; media and proof PNG bytes match. Actual Brave review/generation/all30 PNGs and 375/890 workflow layouts pass. Browser ZIP completion remains unqualified; historical WSL/preparation failures and rejected ablation attempts remain visible. [Current evidence, architecture and reproduction](docs/workflow-v12/REPRODUCE.md).
 
-![Actual Brave view of the saved AWS proof page](docs/offline-v11/AWS-Offline-Proof-Teaching.png)
-
-French source: Benoit Rochon, Tutoriel de l'assistant d'import, CC BY 3.0 as listed; prepared/adapted source stills. Exact source URLs, license links and hashes are in the current reproduction document. No added defect or endorsement.
+The existing video waits for user audio. No cron or PR. No COOL or special-award eligibility claim.
 
 ## Historical version notes
 

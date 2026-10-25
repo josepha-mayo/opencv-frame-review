@@ -1,0 +1,5 @@
+{
+  "complete": true,
+  "policy_removed": "WorkflowV12Qualification",
+  "scope": "Removed the temporary scoped CodeBuild policy after all jobs completed; existing project policy and live app roles unchanged."
+}

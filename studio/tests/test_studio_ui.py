@@ -11,7 +11,7 @@ from test_boundary_ui_static import HARNESS, NODE
 EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL, ui, byId,
   protectionValues, resetProtection, invalidateProtection, drawProtection,
   saveProtectedRegion, removeProtectedRegion, editProtectedRegion, cancelProtectedEdit, checkProtection, loadTeachingGuide,
-  startAreaMarking, cancelAreaMarking, markAreaCorner,
+  startAreaMarking, cancelAreaMarking, markAreaCorner, renderWorkflow,
   plan() { return protectionPlan; },
   setBusy(value) { busy = value; updateControls(); },
   setUncertain(value) { stateUncertain = value; updateControls(); },
@@ -26,6 +26,20 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, localURL
 
 
 class StudioEditor(unittest.TestCase):
+    def test_workflow_rendering_rejects_stale_binding_and_never_reuses_html(self):
+        self.run_js('''
+const id='a'.repeat(32),trace={schema:'frame-review-workflow-v1',job_id:id,status:'review',next_action:'<img src=x onerror=bad()> Inspect both states.'};
+api.setJob({id,status:'review',workflow:trace});api.renderWorkflow();
+assert.equal(ids.get('workflow-area').hidden,false);
+assert.equal(ids.get('workflow-next').textContent,trace.next_action);
+assert.equal(ids.get('workflow-download').href,'/api/jobs/'+id+'/workflow.json');
+assert.equal(ui.reviewed.checked,false);assert.equal(api.plan(),null);
+api.setJob({id,status:'failed',workflow:trace});api.renderWorkflow();
+assert.equal(ids.get('workflow-area').hidden,true);
+api.setJob({id,status:'review',workflow_error:'tampered'});api.renderWorkflow();
+assert.equal(ids.get('workflow-download').hidden,true);
+''')
+
     def test_marking_cancel_keeps_saved_box_and_draft_without_reusing_consent(self):
         self.run_js('''
 save('Equation',[10,10,80,25]);api.editProtectedRegion(0);draft('Equation detail',[10,10,90,25]);

@@ -1,0 +1,12 @@
+{
+  "complete": false,
+  "scope": "Independent Windows FFmpeg 9 encoded video-only ablation of previously selected v11 saved media. Not an app output, new source discovery, teacher trial or runtime qualification. Decoder teaching digests must match pinned Linux results before comparison.",
+  "ffmpeg_version": "ffmpeg version 9.0-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+  "cases": [
+    {
+      "case": "upload-assistant",
+      "complete": false
+    }
+  ],
+  "failure": "Pinned-Linux teaching digest assertion failed for Windows FFmpeg 9 decoded French prepared source, Upload instructions and file metadata. No cross-decoder equivalence or ablation result accepted."
+}

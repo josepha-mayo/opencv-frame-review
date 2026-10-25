@@ -18,6 +18,20 @@ from common import write_json
 
 
 class CloudHTTP(unittest.TestCase):
+    def test_workflow_download_is_owned_and_records_no_automatic_acceptance(self):
+        owner='b'*64
+        jid,_=self.seed(owner,status='review')
+        url='/api/jobs/'+jid+'/workflow.json'
+        for cookie in ('','creator_session='+'c'*64):
+            self.assertEqual(self.request(url,headers={'Cookie':cookie})[0],404)
+        status,headers,body=self.request(url,headers={'Cookie':'creator_session='+owner})
+        self.assertEqual(status,200)
+        trace=json.loads(body)
+        self.assertEqual(trace['route'],'keep_source')
+        self.assertFalse(trace['human_control']['source_bound_generation_approval'])
+        self.assertEqual(trace['human_control']['creator_acceptance_for_use'],'not_recorded')
+        self.assertIn('vision-workflow.json',headers['Content-Disposition'])
+
     def test_rescue_pack_enforces_owner_state_and_single_pack_bound(self):
         owner='b'*64;jid,_=self.seed(owner,status='review');url='/api/jobs/'+jid+'/rescue-pack.zip'
         for cookie in ('','creator_session='+'c'*64):

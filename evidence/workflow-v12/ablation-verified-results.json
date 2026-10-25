@@ -1,0 +1,79 @@
+{
+  "complete": true,
+  "scope": "Independent encoded video-only ablation on selected saved media. Not an app output, new source discovery, teacher trial or runtime qualification. Decoder teaching digests must match pinned Linux results before comparison.",
+  "ffmpeg_version": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "cases": [
+    {
+      "case": "upload-assistant",
+      "complete": true,
+      "baseline_native_samples_exact": true,
+      "source_pack_sha256": "411da3c6c1d1b5e7e872c621b25b9ec899c0709d14aeb59acddc95e8217ce1a1",
+      "prepared_sha256": "93845b704ff338478ab0f6a300ea651dbce63906197069d757d1d142169e5380",
+      "edited_sha256": "97310fcc314affbc74da4c3b3d5dd02b38c9878bf66cc8e39c1d8ccb1e656394",
+      "counterfactual_sha256": "b829ff2ec0da661c5ec8af31ce10b8b9fd34b9580f6d04b391ace03d7fd74068",
+      "source_and_local_all_teaching_digests_match_pinned_linux": true,
+      "hold_frames": 97,
+      "reference_frame": 233,
+      "activity_definition": "Adjacent selected-mean RGB changes >=8 codes; not semantic events.",
+      "results": [
+        {
+          "method": "Keep source",
+          "inside_hold_activity": 5,
+          "whole_excerpt_activity": 8,
+          "held_teaching_frames_changed_from_source": 0,
+          "held_teaching_rgb_samples_changed_from_source": 0
+        },
+        {
+          "method": "Reviewed local hold",
+          "inside_hold_activity": 0,
+          "whole_excerpt_activity": 2,
+          "held_teaching_frames_changed_from_source": 0,
+          "held_teaching_rgb_samples_changed_from_source": 0
+        },
+        {
+          "method": "Whole-frame hold counterfactual",
+          "inside_hold_activity": 0,
+          "whole_excerpt_activity": 2,
+          "held_teaching_frames_changed_from_source": 90,
+          "held_teaching_rgb_samples_changed_from_source": 15789209
+        }
+      ]
+    },
+    {
+      "case": "joomla",
+      "complete": true,
+      "baseline_native_samples_exact": true,
+      "source_pack_sha256": "6e75ee906056a0125808f3b488506f75c41ce0592ae4827db77997d66edda2c9",
+      "prepared_sha256": "241896d9fe454ec8f036446e753c13c0942c5eadc74e728dac2c18a2cc34a377",
+      "edited_sha256": "7a5202e860238ad055b1ad981a19806a1dc922396a556e2c0eebb726e96a506b",
+      "counterfactual_sha256": "019dd6379a49716e1e643c36ea757b333bd0b97e8955e29bad0107d2d29056a4",
+      "source_and_local_all_teaching_digests_match_pinned_linux": true,
+      "hold_frames": 96,
+      "reference_frame": 174,
+      "activity_definition": "Adjacent selected-mean RGB changes >=8 codes; not semantic events.",
+      "results": [
+        {
+          "method": "Keep source",
+          "inside_hold_activity": 4,
+          "whole_excerpt_activity": 16,
+          "held_teaching_frames_changed_from_source": 0,
+          "held_teaching_rgb_samples_changed_from_source": 0
+        },
+        {
+          "method": "Reviewed local hold",
+          "inside_hold_activity": 0,
+          "whole_excerpt_activity": 10,
+          "held_teaching_frames_changed_from_source": 0,
+          "held_teaching_rgb_samples_changed_from_source": 0
+        },
+        {
+          "method": "Whole-frame hold counterfactual",
+          "inside_hold_activity": 0,
+          "whole_excerpt_activity": 10,
+          "held_teaching_frames_changed_from_source": 90,
+          "held_teaching_rgb_samples_changed_from_source": 1407708
+        }
+      ]
+    }
+  ]
+}

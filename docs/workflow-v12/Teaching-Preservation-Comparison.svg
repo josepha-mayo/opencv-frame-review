@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="500" height="155" preserveAspectRatio="xMinYMin meet" viewBox="0 0 500 155" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="500" height="155"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-155)" style="clip-path: url(#clip)">
+		<g transform="">
+			<g transform="">
+				<g transform="">
+					<rect x="120.0" y="53.0" width="315.0" height="16.0" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(70%,44%,25%); fill-rule: evenodd;"/>
+					<rect x="120.0" y="93.0" width="315.0" height="16.0" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1; fill: rgb(70%,44%,25%); fill-rule: evenodd;"/>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,120,45)">
+							<text x="-2.5" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,120,85)">
+							<text x="-2.5" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,435,61)">
+							<text x="-5.0" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">90</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,435,101)">
+							<text x="-5.0" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">90</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 120,33 L 120,113 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 120,33 L 115,33 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 120,73 L 115,73 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 120,113 L 115,113 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,115,53)">
+							<text x="-57.49000000000001" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">French upload</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,115,93)">
+							<text x="-55.84" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">Joomla install</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 120,33 L 470,33 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 120,33 L 120,28 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 190,33 L 190,28 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 260,33 L 260,28 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 330,33 L 330,28 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 400,33 L 400,28 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 470,33 L 470,28 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,120,28)">
+							<text x="-2.5" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,190,28)">
+							<text x="-5.0" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,260,28)">
+							<text x="-5.0" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">40</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,330,28)">
+							<text x="-5.0" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">60</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,400,28)">
+							<text x="-5.0" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">80</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,470,28)">
+							<text x="-7.5" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">100</text>
+						</g>
+					</g>
+				</g>
+			</g>
+			<text x="120" y="137" style="font-family: Times-Roman; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,274) scale(1,-1)">Changed teaching frames inside the held interval</text>
+			<text x="120" y="119" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,238) scale(1,-1)">Local repair: 0 in each case. Whole-frame hold: 90 in each.</text>
+			<text x="120" y="10" style="font-family: Times-Roman; font-size: 8px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,20) scale(1,-1)">Any declared teaching RGB sample differs from its same-time prepared source.</text>
+		</g>
+	</g>
+</svg>

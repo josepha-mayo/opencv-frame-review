@@ -838,8 +838,22 @@
     ui.artifactsArea.hidden = ui.artifacts.children.length === 0;
   }
 
+  function renderWorkflow() {
+    const area=byId("workflow-area"), next=byId("workflow-next"), data=byId("workflow-data"), link=byId("workflow-download");
+    area.hidden=true;data.textContent="";link.removeAttribute("href");
+    if (!job) return;
+    if (job.workflow_error) {
+      area.hidden=false;next.textContent="Workflow snapshot unavailable. Inspect the job status and report before continuing.";link.hidden=true;return;
+    }
+    const trace=job.workflow;
+    if (!trace || trace.schema!=="frame-review-workflow-v1" || trace.job_id!==job.id || trace.status!==job.status || typeof trace.next_action!=="string" || !validJobId(job.id)) return;
+    area.hidden=false;next.textContent=trace.next_action;data.textContent=JSON.stringify(trace,null,2);
+    link.hidden=false;link.href=localURL("/api/jobs/"+job.id+"/workflow.json");
+  }
+
   function renderJob() {
     if (!job) return;
+    renderWorkflow();
     ui.empty.hidden = true;
     ui.jobArea.hidden = false;
     ui.jobFile.textContent = job.input_name || "Selected clip";
