@@ -1,5 +1,5 @@
 {
-  "build": "lesson-rescue-readable-timestamps-2026-10-26-v21",
+  "build": "lesson-rescue-checked-pack-2026-10-26-v22",
   "scope": "Studio, bounded preparation, frozen rapid-change engine, and separately versioned stationary blink detection/export. Source identity is separate from media/browser/cloud qualification.",
   "frozen_backend_commit": "fd861d0ce2cd50bec741327975d95ff5488254e2",
   "files": {
@@ -79,7 +79,7 @@
     "studio/fixtures/natural-jupyter.mp4": "946e90e2071c51e22c103c29abf863d3f463f3df53da81985ea1e897734f51c5",
     "studio/fixtures/natural-npm.mp4": "0a2170e2a8b2b1b8512dedf1dabb8f6249c9cda147ad4ad0af58e57b6cba9ede",
     "studio/fixtures/natural-terminal.mp4": "683df17ddcec4eacd180e740308792d6c58ff77f482a4439c268584229762a45",
-    "studio/fixtures/NATURAL_GENTOO_CREDIT.json": "abab632a689590aed7d05b9aba2105123c31bd020d3de1578245c518579767ff",
+    "studio/fixtures/NATURAL_GENTOO_CREDIT.json": "58c6b469da80a6091fa4b91525a772aa56a9aeb208a94acb630924c758e1d9a4",
     "studio/fixtures/NATURAL_JOOMLA_CREDIT.json": "a6c70bfe113badf2fef4505a354344dc56d37ac918988e650c216f539e72b3c1",
     "studio/fixtures/NATURAL_JUPYTER_CREDIT.json": "bec2ac99550a074403810471dea42f42886cf49c829af108361400fc5f2696d3",
     "studio/fixtures/NATURAL_NPM_CREDIT.json": "5c6e45053bc9305f932df6031411ae4ace1badc8f6d2e96c86068c3a1959c153",
@@ -93,8 +93,8 @@
     "studio/rescue_pack.py": "0f737bb5d689375ca9aa2bdda7818278c46ac388497d96f545d87e11f2dd9dde",
     "studio/run.py": "69597c5c94e494a45ba40c4833df1fe8cebc03d2c182c4624d1a2b7b41f1ffd9",
     "studio/runtime-requirements.lock": "f6ef34a38b624856efb1f2e8028c5a35fb2e1563c48fba94be6338ae715b2f62",
-    "studio/static/app.js": "285b0233afe2fa1f8330acaae8b00ddb0d9eed344aa72cefc53106c56f7210aa",
-    "studio/static/index.html": "118c3c5174a3621523f39a2d154bccdd783023fb3c396020f91e75fde2412b5f",
+    "studio/static/app.js": "a63c9130b3e67e4d77b048eb404960ba03786789072cd08ce9bc361a78615b46",
+    "studio/static/index.html": "75f7fbe6d05ae8af264c4e09cb58c1239aa648d189ffdf161831f06cef9de6e9",
     "studio/static/natural-gentoo.png": "994b9b1c1504e5a1afb4181f35588078c5dc63115a9281ed40337915f0dae9e5",
     "studio/static/natural-terminal.png": "3d7a55d50dc8f679dac789c82cb11d7bb4ddee9de1000f9634d008d7cc628861",
     "studio/static/styles.css": "6d31cc491a8675a1e1d8fe93c8a71b458f10a8d9a0e89aa405782b06b9f7c3fa",
@@ -118,7 +118,7 @@
     "studio/tests/test_rescue_pack.py": "684a6ed5c4c2d9da473f928566c5608aae6d07a7ec51114129137d421f235359",
     "studio/tests/test_steady_boundaries.py": "bad43636acb2ca39214e445a009b9719f3246e13dc777d140bdb055e3f2e7171",
     "studio/tests/test_steady_detail.py": "43873588171ea9ff969f8c9ae10df1388f2cc08db9daaca63d4b6d351bcf4f01",
-    "studio/tests/test_studio_ui.py": "d600f9efaa65d2574d5aa211e357d6864112ac4537ae61de410102653b8a04d9",
+    "studio/tests/test_studio_ui.py": "70a3c91bb21293ba74ce139e9401fa8e02e28409784edf9c0d92db53ac6fec54",
     "studio/tests/test_teaching_motion.py": "b7de894ea6ca414414cefe49c810e16f7642550976744d09c7903add4d4bb4fe",
     "studio/tests/test_workflow_trace.py": "78d64328bee10b32f88569556fd932123569f363972ccefd71422bef0a5be5ed",
     "studio/workflow_trace.py": "6a954bb5a1d9a6320be49b42539a66760b79dd1e58744d00324efa93a95cbc3a"

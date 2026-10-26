@@ -1,0 +1,20 @@
+{
+  "source_manifest_sha256": "104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210",
+  "runtime_files": 119,
+  "changed_runtime_files": [
+    "studio/fixtures/NATURAL_GENTOO_CREDIT.json",
+    "studio/static/app.js",
+    "studio/static/index.html",
+    "studio/tests/test_studio_ui.py"
+  ],
+  "parent_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:809ceb28752d750bac4db5da85ecced55fc0c0822b5f59d256b7ca6d77acb2bf",
+  "source_zip_sha256": "d4aaca68052193fa834b62f456075c18cc857b6f140c1a160c3aec05c4fb1931",
+  "source_s3": "opencv-creator-replay-046675437218-20261016/proof-v22/104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210/source.zip",
+  "evidence_s3": "opencv-creator-replay-046675437218-20261016/proof-v22/104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210/qualification-evidence.zip",
+  "image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue:proof-v22-104e5c0fd19b5bd2",
+  "role_policy": "ProofV22Qualification",
+  "scope": "Checked pack transfer; all 14 Linux stages, three original-source regressions and the real failed/shorter-excerpt native flow passed. Not yet a live release.",
+  "complete": true,
+  "image_digest": "sha256:5863c7ed997b4a241dd3abb5964095c83e4e2953beae793c77ce9a7af095c145",
+  "pinned_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:5863c7ed997b4a241dd3abb5964095c83e4e2953beae793c77ce9a7af095c145"
+}

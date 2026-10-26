@@ -1,5 +1,9 @@
 """Executable DOM tests. No browser, media, playback, or creator-benefit claim."""
 from pathlib import Path
+import hashlib
+import io
+import json
+import zipfile
 import subprocess
 import sys
 import unittest
@@ -8,7 +12,7 @@ STUDIO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(STUDIO.parent / 'opencv-ready/candidate/app/tests'))
 from test_boundary_ui_static import HARNESS, NODE
 
-EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCard, teachingComparison, failureExcerpt, renderFailureHelp, setupShorterExcerpt, parseLessonTimestamp, renderExcerptRange, useLessonTimestamp, localURL, ui, byId,
+EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCard, teachingComparison, failureExcerpt, renderFailureHelp, setupShorterExcerpt, parseLessonTimestamp, renderExcerptRange, useLessonTimestamp, verifyRescuePack, renderPackTransfer, clearPackTransfer, prepareCheckedPack, localURL, ui, byId,
   protectionValues, resetProtection, invalidateProtection, drawProtection,
   saveProtectedRegion, removeProtectedRegion, editProtectedRegion, cancelProtectedEdit, checkProtection, loadTeachingGuide,
   startAreaMarking, cancelAreaMarking, markAreaCorner, renderWorkflow,
@@ -26,6 +30,55 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCa
 
 
 class StudioEditor(unittest.TestCase):
+    @staticmethod
+    def pack_fixture():
+        binding={'job_id':'a'*32,'input_sha256':'b'*64,'recipe_sha256':'c'*64}
+        members={'README.txt':b'Keep the original.','review.html':b'<!doctype html><title>static proof</title>'}
+        manifest={'schema':'lesson-rescue-pack-v1','binding':binding,'files':{n:{'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()}for n,b in members.items()}}
+        stream=io.BytesIO()
+        with zipfile.ZipFile(stream,'w',compression=zipfile.ZIP_STORED)as z:
+            for n,b in [*members.items(),('manifest.json',json.dumps(manifest).encode())]:z.writestr(n,b)
+        return list(stream.getvalue()),{'id':binding['job_id'],'input_sha256':binding['input_sha256'],'recipe_sha256':binding['recipe_sha256']}
+
+    def test_checked_pack_verifies_every_byte_and_source_binding_before_any_save(self):
+        raw,expected=self.pack_fixture()
+        self.run_js('''
+context.Uint8Array=Uint8Array;context.DataView=DataView;context.TextDecoder=TextDecoder;context.crypto=require('node:crypto').webcrypto;
+const raw=new Uint8Array('''+json.dumps(raw)+'''),expected='''+json.dumps(expected)+''';
+let progress=[];let checked=await api.verifyRescuePack(raw,expected,(n,total)=>progress.push([n,total]));
+assert.equal(checked.files,2);assert.equal(checked.bytes,raw.length);assert.equal(checked.sha256,require('node:crypto').createHash('sha256').update(raw).digest('hex'));assert.deepEqual(progress,[[1,2],[2,2]]);
+for(const key of ['id','input_sha256','recipe_sha256'])await assert.rejects(api.verifyRescuePack(raw,{...expected,[key]:'f'.repeat(64)}));
+const changed=raw.slice();changed[40]^=1;await assert.rejects(api.verifyRescuePack(changed,expected));
+await assert.rejects(api.verifyRescuePack(raw.subarray(0,raw.length-1),expected));
+const duplicate=raw.slice();new DataView(duplicate.buffer).setUint16(duplicate.length-12,65,true);await assert.rejects(api.verifyRescuePack(duplicate,expected));
+assert.equal(ids.has('pack-save'),false);
+''')
+
+    def test_pack_transfer_refuses_http_failure_and_discards_changed_job(self):
+        self.run_js('''
+api.setJob({id:'a'.repeat(32),status:'complete',input_sha256:'b'.repeat(64),workflow:{human_control:{recipe_sha256:'c'.repeat(64)}}});api.setBusy(false);
+context.AbortController=AbortController;context.window.setTimeout=()=>1;context.window.clearTimeout=()=>{};
+context.fetch=async()=>({ok:false,headers:{get:()=>null}});
+api.renderPackTransfer('/api/jobs/'+'a'.repeat(32)+'/rescue-pack.zip');await api.prepareCheckedPack();
+assert.equal(ids.get('pack-save').hidden,true);assert.equal(ids.get('pack-save').attributes.href,undefined);assert.ok(ids.get('pack-status').textContent.includes('unavailable'));
+api.setJob(null);api.renderPackTransfer(null);assert.equal(ids.get('pack-transfer').hidden,true);assert.equal(ids.get('pack-save').hidden,true);
+const find=context.document.getElementById;context.document.getElementById=id=>id==='pack-transfer'?null:find(id);api.renderPackTransfer(null);
+''')
+
+    def test_complete_pack_transfer_prepares_save_but_truncated_transfer_does_not(self):
+        raw,expected=self.pack_fixture()
+        self.run_js('''
+context.Uint8Array=Uint8Array;context.DataView=DataView;context.TextDecoder=TextDecoder;context.crypto=require('node:crypto').webcrypto;context.AbortController=AbortController;context.Blob=Blob;
+context.window.setTimeout=()=>1;context.window.clearTimeout=()=>{};
+const raw=new Uint8Array('''+json.dumps(raw)+'''),expected='''+json.dumps(expected)+''';
+const job={...expected,status:'complete',workflow:{human_control:{recipe_sha256:expected.recipe_sha256}}};
+function transfer(short){let done=false;context.fetch=async()=>({ok:true,headers:{get:key=>key==='Content-Length'?String(raw.length):'application/zip'},body:{getReader:()=>({read:async()=>done?{done:true}:(done=true,{done:false,value:short?raw.subarray(0,raw.length-1):raw}),cancel:async()=>{}})}});}
+api.setJob(job);api.setBusy(false);api.renderPackTransfer('/api/jobs/'+expected.id+'/rescue-pack.zip');transfer(false);await api.prepareCheckedPack();
+assert.equal(ids.get('pack-save').hidden,false);assert.ok(ids.get('pack-save').href.startsWith('blob:'));assert.ok(ids.get('pack-status').textContent.includes('All 2 file hashes'));assert.ok(ids.get('pack-status').textContent.includes('not saved a file yet'));
+transfer(true);await api.prepareCheckedPack();assert.equal(ids.get('pack-save').hidden,true);assert.ok(ids.get('pack-status').textContent.includes('stopped early'));
+api.clearPackTransfer();
+''')
+
     def test_lesson_timestamp_accepts_timecodes_and_refuses_ambiguous_or_out_of_range_inputs(self):
         self.run_js('''
 for(const [text,value]of [['1:35',95],['02:56.4',176.4],['95.2',95.2],['10:00',600],['0',0],[' 0:04 ',4]])assert.equal(api.parseLessonTimestamp(text),value);

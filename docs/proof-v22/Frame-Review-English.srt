@@ -1,0 +1,214 @@
+1
+00:00:01,000 --> 00:00:05,400
+Hi, I'm Joseph, and this is Frame Review: Keep the
+Lesson.
+
+2
+00:00:06,000 --> 00:00:10,000
+You've finished recording a lesson. The explanation
+is good,
+
+3
+00:00:10,000 --> 00:00:14,500
+but an idle caret keeps blinking beside something
+your viewer needs to read.
+
+4
+00:00:15,300 --> 00:00:20,100
+You only have the recording, not the editable
+project. Holding the whole frame
+
+5
+00:00:20,100 --> 00:00:26,400
+could stop the distraction, but also freeze useful
+progress, typing or interface changes.
+
+6
+00:00:27,000 --> 00:00:30,300
+Frame Review asks a more specific question:
+
+7
+00:00:30,300 --> 00:00:35,000
+can we hold this detail while preserving what the
+lesson must keep doing?
+
+8
+00:00:35,300 --> 00:00:40,700
+Here's a real Gentoo package-management tutorial. No
+defect was added.
+
+9
+00:00:41,300 --> 00:00:47,300
+The package-progress readout changes while the
+nearby caret blinks.
+
+10
+00:00:47,900 --> 00:00:54,500
+I can start with the prepared example, or upload the
+original and enter one minute, two seconds.
+
+11
+00:00:55,000 --> 00:01:01,200
+The app shows the complete excerpt range before I
+explicitly analyze it.
+
+12
+00:01:01,800 --> 00:01:06,000
+OpenCV proposes a supported detail and interval.
+
+13
+00:01:06,400 --> 00:01:14,000
+I inspect both observed states, then mark the
+commands and progress readout as teaching content to
+preserve.
+
+14
+00:01:14,900 --> 00:01:20,900
+I check a fresh plan and explicitly generate a
+comparison. Nothing is approved automatically.
+
+15
+00:01:21,500 --> 00:01:24,500
+The important result is what stays unchanged.
+
+16
+00:01:25,100 --> 00:01:29,900
+Every declared teaching frame must keep its exact
+decoded RGB values
+
+17
+00:01:29,900 --> 00:01:35,000
+and original position on the prepared timeline.
+
+18
+00:01:35,600 --> 00:01:39,500
+The app also checks the entry, return and clip-loop
+boundaries.
+
+19
+00:01:40,000 --> 00:01:47,000
+This example is silent; when audio is present, the
+gate checks the prepared audio too.
+
+20
+00:01:47,000 --> 00:01:52,000
+I can inspect source and edit at the same frame and
+scale,
+
+21
+00:01:52,400 --> 00:02:00,000
+enlarge the teaching detail, and keep the original,
+report, recipe and static proofs in a downloadable
+pack.
+
+22
+00:02:00,600 --> 00:02:05,000
+Its offline review page works without a server or
+video player.
+
+23
+00:02:05,300 --> 00:02:07,200
+Why make the repair local?
+
+24
+00:02:07,400 --> 00:02:12,000
+In a controlled comparison on one selected French
+lesson,
+
+25
+00:02:12,000 --> 00:02:16,200
+holding the whole frame changed ninety of ninety-
+seven teaching frames.
+
+26
+00:02:16,200 --> 00:02:20,200
+The local repair changed none of the declared
+teaching frames.
+
+27
+00:02:20,700 --> 00:02:26,500
+Across three selected twelve-second real lessons,
+whole-excerpt pixel-change events
+
+28
+00:02:26,500 --> 00:02:32,800
+in the chosen regions fell from thirty-seven to
+twenty-one, including the cut points.
+
+29
+00:02:33,200 --> 00:02:39,400
+Teaching-frame sequences stayed exact. These are
+engineering measurements, not better attention or
+learning.
+
+30
+00:02:39,500 --> 00:02:44,100
+OpenCV five supplies the temporal and component
+analysis.
+
+31
+00:02:44,100 --> 00:02:47,900
+FFmpeg prepares and encodes the clips.
+
+32
+00:02:48,200 --> 00:02:54,800
+AWS ECS runs the media worker, with a pinned
+container qualified through CodeBuild.
+
+33
+00:02:55,300 --> 00:02:58,500
+All fourteen Linux verification stages pass.
+
+34
+00:02:59,100 --> 00:03:05,400
+The source, report and deployment evidence are
+available with the entry.
+
+35
+00:03:05,900 --> 00:03:10,400
+Failures matter too. A complex Docker lesson hits
+the region limit.
+
+36
+00:03:10,400 --> 00:03:15,400
+The app keeps its source links and offers an
+explicit four-second retry.
+
+37
+00:03:15,700 --> 00:03:19,800
+That retry finds no supported proposal, so I leave
+it unchanged.
+
+38
+00:03:21,100 --> 00:03:25,900
+Seventy exploratory windows produced no additional
+qualified repairs.
+
+39
+00:03:26,300 --> 00:03:28,200
+The current detector remains narrow.
+
+40
+00:03:29,100 --> 00:03:35,700
+The viewer pilot has no completed valid responses
+yet, so human benefit remains unproven.
+
+41
+00:03:36,300 --> 00:03:44,500
+Current editing is limited to short prepared
+excerpts, and Brave download completion remains
+unverified.
+
+42
+00:03:45,300 --> 00:03:50,500
+The goal is practical: give a creator with only a
+recording a precise repair they can inspect,
+
+43
+00:03:50,500 --> 00:03:58,700
+with the original recoverable and the explanation
+preserved. That's Frame Review.
+
+44
+00:03:59,300 --> 00:04:01,700
+Keep the lesson moving. Thank you.

@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "source_audio_sha256": "fd34e932169904bc2cd1db0347c016dc7df0d2848b64d170cd45bef7966bac9a",
+  "normalized_wav_sha256": "abaa0dc2413e53637cf302f103c6a3a37946a92703ed7d8ceaea0935a230bd8d",
+  "source_duration_seconds": 242.1,
+  "audio_speed": 1.0,
+  "processing": "Two-pass loudness normalization only; no synthetic voice, pitch change or time stretch. Original Ogg retained.",
+  "first_pass_loudness": {
+    "input_i": "-22.92",
+    "input_tp": "-1.53",
+    "input_lra": "5.50",
+    "input_thresh": "-33.75",
+    "output_i": "-16.58",
+    "output_tp": "-1.50",
+    "output_lra": "4.10",
+    "output_thresh": "-27.33",
+    "normalization_type": "dynamic",
+    "target_offset": "0.58"
+  },
+  "caption_cues": 44,
+  "caption_scope": "English captions lightly edited for clarity against supplied script and local ASR timing; not a verbatim transcript or word-level forced alignment."
+}

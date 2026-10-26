@@ -1,0 +1,180 @@
+{
+  "complete": true,
+  "scope": "Same untouched jEdit original at95s; two explicit native HTTP uploads, duration12 and4 seconds. Not a UI click, human benefit or automatically repeated action. Retain every outcome.",
+  "original_sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+  "cases": [
+    {
+      "duration_seconds": 12,
+      "job": {
+        "id": "fc367be577de8ae17bdd1e9e0be92b15",
+        "status": "failed",
+        "input_name": "jedit-tamil.webm",
+        "created_utc": "2026-10-26T15:37:05.235002+00:00",
+        "preparing_lesson": false,
+        "error": "More than 16 regions; this review interface cannot admit the clip.",
+        "candidates": [],
+        "artifacts": {
+          "Prepared lesson clip": "/api/jobs/fc367be577de8ae17bdd1e9e0be92b15/intake/prepared",
+          "Uploaded original": "/api/jobs/fc367be577de8ae17bdd1e9e0be92b15/intake/upload",
+          "Preparation receipt": "/api/jobs/fc367be577de8ae17bdd1e9e0be92b15/intake/receipt",
+          "Lesson decision record": "/api/jobs/fc367be577de8ae17bdd1e9e0be92b15/intake/decision"
+        },
+        "preparation": {
+          "schema": "lesson-preparation-v1",
+          "uploaded_sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+          "prepared_sha256": "90b71dbe4806415df4abc612b894e5d893da8401580142ff69918ea20dc622c1",
+          "uploaded_bytes": 34271402,
+          "preview_sha256": "e74afbe085b6f38f5ded764a26866d6ea2860d38b4201ff9eecbaa9741878f97",
+          "start_seconds": 95.0,
+          "duration_seconds": 12.0,
+          "frames": 360,
+          "source": {
+            "video_codec": "vp8",
+            "width": 968,
+            "height": 696,
+            "duration_seconds": 283.924,
+            "frame_rate": "30/1",
+            "chroma_location": "unspecified",
+            "audio_codec": "vorbis",
+            "audio_channels": 2,
+            "omitted_metadata": []
+          },
+          "prepared": {
+            "width": 640,
+            "height": 360,
+            "fps": 30,
+            "color": "limited BT.709 SDR",
+            "chroma_location": "left",
+            "audio": "AAC-LC mono 48 kHz"
+          },
+          "changes": [
+            "Selected excerpt only",
+            "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+            "30 fps conversion and H.264 encoding",
+            "SDR conversion; untagged color interpreted by FFmpeg",
+            "Audio resampled/downmixed and AAC encoded once"
+          ],
+          "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+          "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+        },
+        "workflow": {
+          "schema": "frame-review-workflow-v1",
+          "job_id": "fc367be577de8ae17bdd1e9e0be92b15",
+          "status": "failed",
+          "kind": "Deterministic vision workflow; no language model or autonomous creator acceptance.",
+          "scope": "Current evidence snapshot, not a chronological event log, agent reasoning transcript or independent media verification. Existing server gates alone authorize actions.",
+          "input_sha256": null,
+          "prediction_sha256": null,
+          "observation": {
+            "supported_proposals": 0,
+            "candidate_ids": [],
+            "meaning": "OpenCV proposals are measured activity, not semantic distraction labels."
+          },
+          "human_control": {
+            "source_bound_generation_approval": false,
+            "creator_acceptance_for_use": "not_recorded",
+            "recipe_sha256": null
+          },
+          "selected_proposal": null,
+          "verification": {
+            "reported_checks": {},
+            "failed_checks": [],
+            "proof_errors": [],
+            "failure_reason": "More than 16 regions; this review interface cannot admit the clip."
+          },
+          "route": "withhold_recommendation",
+          "next_action": "A complete, source-bound comparison is unavailable. Keep the source; inspect the failure before trying another plan.",
+          "impact_scope": "No measured teacher preference, learning, attention, accessibility or time saved."
+        }
+      },
+      "original_and_prepared_recovered_exact": true,
+      "edited_output_withheld": true,
+      "approval_never_granted": true
+    },
+    {
+      "duration_seconds": 4,
+      "job": {
+        "id": "d72838912d9d75e0fb73f55dd8c3364f",
+        "status": "review",
+        "input_name": "jedit-tamil.webm",
+        "created_utc": "2026-10-26T15:37:10.175271+00:00",
+        "preparing_lesson": false,
+        "candidates": [],
+        "input_sha256": "cf33fba18fdd8f7d2af36996c216ed1464251c89dbbd2e8a1ff5c2e875891337",
+        "prediction_sha256": "402dade4a5dd3a77053387c569a1e96144b9d95bb7726297037b935adafc8159",
+        "message": "This limited profile found no candidate. No safety or compliance conclusion follows.",
+        "artifacts": {},
+        "preparation": {
+          "schema": "lesson-preparation-v1",
+          "uploaded_sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+          "prepared_sha256": "cf33fba18fdd8f7d2af36996c216ed1464251c89dbbd2e8a1ff5c2e875891337",
+          "uploaded_bytes": 34271402,
+          "preview_sha256": "e74afbe085b6f38f5ded764a26866d6ea2860d38b4201ff9eecbaa9741878f97",
+          "start_seconds": 95.0,
+          "duration_seconds": 4.0,
+          "frames": 120,
+          "source": {
+            "video_codec": "vp8",
+            "width": 968,
+            "height": 696,
+            "duration_seconds": 283.924,
+            "frame_rate": "30/1",
+            "chroma_location": "unspecified",
+            "audio_codec": "vorbis",
+            "audio_channels": 2,
+            "omitted_metadata": []
+          },
+          "prepared": {
+            "width": 640,
+            "height": 360,
+            "fps": 30,
+            "color": "limited BT.709 SDR",
+            "chroma_location": "left",
+            "audio": "AAC-LC mono 48 kHz"
+          },
+          "changes": [
+            "Selected excerpt only",
+            "Aspect-preserving resize and letterbox to 640 \u00d7 360",
+            "30 fps conversion and H.264 encoding",
+            "SDR conversion; untagged color interpreted by FFmpeg",
+            "Audio resampled/downmixed and AAC encoded once"
+          ],
+          "preservation_reference": "prepared_sha256; exact edit checks do not compare against uploaded original",
+          "notice": "Preparation changes picture and audio. Keep the uploaded original. No edit is approved by preparation."
+        },
+        "workflow": {
+          "schema": "frame-review-workflow-v1",
+          "job_id": "d72838912d9d75e0fb73f55dd8c3364f",
+          "status": "review",
+          "kind": "Deterministic vision workflow; no language model or autonomous creator acceptance.",
+          "scope": "Current evidence snapshot, not a chronological event log, agent reasoning transcript or independent media verification. Existing server gates alone authorize actions.",
+          "input_sha256": "cf33fba18fdd8f7d2af36996c216ed1464251c89dbbd2e8a1ff5c2e875891337",
+          "prediction_sha256": "402dade4a5dd3a77053387c569a1e96144b9d95bb7726297037b935adafc8159",
+          "observation": {
+            "supported_proposals": 0,
+            "candidate_ids": [],
+            "meaning": "OpenCV proposals are measured activity, not semantic distraction labels."
+          },
+          "human_control": {
+            "source_bound_generation_approval": false,
+            "creator_acceptance_for_use": "not_recorded",
+            "recipe_sha256": null
+          },
+          "selected_proposal": null,
+          "verification": {
+            "reported_checks": {},
+            "failed_checks": [],
+            "proof_errors": [],
+            "failure_reason": null
+          },
+          "route": "keep_source",
+          "next_action": "No supported proposal. Keep the lesson unchanged; this does not mean distraction-free.",
+          "impact_scope": "No measured teacher preference, learning, attention, accessibility or time saved."
+        }
+      },
+      "original_and_prepared_recovered_exact": true,
+      "edited_output_withheld": true,
+      "approval_never_granted": true
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "complete": true,
+  "scope": "Actual Brave 375x812 responsive viewport, not physical phone",
+  "job": "e4f4d22e09ee1ab4af8aa87459f4b178",
+  "observed": {
+    "height": 812,
+    "images": [
+      {
+        "height": 326,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "height": 326,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "height": 326,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "height": 326,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "height": 326,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "height": 326,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "height": 18,
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "height": 18,
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "height": 18,
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "height": 18,
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "height": 18,
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "height": 18,
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "height": 18,
+        "loaded": true,
+        "width": 364
+      },
+      {
+        "height": 16,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "height": 16,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "height": 16,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "height": 16,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "height": 16,
+        "loaded": true,
+        "width": 640
+      },
+      {
+        "height": 16,
+        "loaded": true,
+        "width": 640
+      }
+    ],
+    "scrollWidth": 360,
+    "width": 375
+  }
+}

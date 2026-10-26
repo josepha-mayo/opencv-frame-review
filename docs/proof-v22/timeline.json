@@ -1,0 +1,97 @@
+{
+  "source_audio_seconds": 242.1,
+  "final_seconds": 244.1,
+  "audio_speed": 1.0,
+  "chapters": [
+    {
+      "scene": "title",
+      "start": 0.0,
+      "end": 6.0
+    },
+    {
+      "scene": "problem",
+      "start": 6.0,
+      "end": 35.3
+    },
+    {
+      "scene": "real-source",
+      "start": 35.3,
+      "end": 47.9
+    },
+    {
+      "scene": "timestamp",
+      "start": 47.9,
+      "end": 61.8
+    },
+    {
+      "scene": "states",
+      "start": 61.8,
+      "end": 74.8
+    },
+    {
+      "scene": "plan",
+      "start": 74.8,
+      "end": 81.5
+    },
+    {
+      "scene": "preservation",
+      "start": 81.5,
+      "end": 107.0
+    },
+    {
+      "scene": "inspect",
+      "start": 107.0,
+      "end": 116.0
+    },
+    {
+      "scene": "pack",
+      "start": 116.0,
+      "end": 120.6
+    },
+    {
+      "scene": "offline",
+      "start": 120.6,
+      "end": 125.3
+    },
+    {
+      "scene": "counterfactual",
+      "start": 125.3,
+      "end": 140.7
+    },
+    {
+      "scene": "results",
+      "start": 140.7,
+      "end": 160.0
+    },
+    {
+      "scene": "architecture",
+      "start": 160.0,
+      "end": 179.0
+    },
+    {
+      "scene": "cloud-proof",
+      "start": 179.0,
+      "end": 185.9
+    },
+    {
+      "scene": "recovery",
+      "start": 185.9,
+      "end": 201.1
+    },
+    {
+      "scene": "negative-screen",
+      "start": 201.1,
+      "end": 209.0
+    },
+    {
+      "scene": "limits",
+      "start": 209.0,
+      "end": 225.3
+    },
+    {
+      "scene": "close",
+      "start": 225.3,
+      "end": 244.1
+    }
+  ]
+}

@@ -1,18 +1,18 @@
 # Frame Review: Keep the Lesson
 
-**Calm the blink. Keep the changing explanation.** For a creator with a finished recording and no editable project, OpenCV proposes a bounded local hold, the creator names teaching areas to preserve, and the encoded result must keep their exact RGB timelines, prepared audio and timing. Every edit needs a fresh reviewed plan and explicit consent. The original stays recoverable.
+**Calm the blink. Keep the changing explanation.** For a creator with a finished recording and no editable project, OpenCV proposes one bounded local hold. The creator declares teaching areas and reviews a fresh plan; the encoded result must preserve their exact RGB timelines, prepared audio and timing. Keep the recoverable original.
 
-V21 makes selecting the moment easier: enter **1:02** to fill 62 seconds, inspect **1:02-1:14**, then explicitly Analyze. Enter never uploads. Invalid times preserve the range. Desktop and 375px start/length fields stay aligned; explicit four-second retry keeps the selected file and clears edit consent.
+V22 checks the complete ZIP transfer and every manifest-file hash **before a separate Save checked ZIP action**. It fixes the Gentoo guide to cover the complete 364-pixel progress readout. Use **1:02** to choose seconds 62-74, inspect both observed states and explicitly generate. No automatic creator acceptance.
 
-[Live app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/) | [Current four-page report](docs/real-lessons-report.pdf) | [Reproduction and all limitations](docs/proof-v21/REPRODUCE.md) | [Judging map](docs/proof-v21/judging-map.md)
+[Live app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/) | [Creator-narrated demo](https://youtu.be/N21Xu2So_Os) | [Four-page report](docs/real-lessons-report.pdf) | [Reproduction and limitations](docs/proof-v22/REPRODUCE.md)
 
-Three selected real originals retain every declared teaching RGB frame while whole-excerpt selected-region events fall **37 to 21 across 36 seconds**, including cut points. This decoded-code proxy is not human benefit or detector recall. [Results figure](docs/proof-v21/selected-real-results.pdf). The expanded **70-window** natural screen retains every outcome, with **zero newly useful repairs qualified**; overlap/shared creators limit independence.
+Three selected real original lessons retain every declared teaching RGB frame while whole-excerpt selected-region events fall **37 to 21 across 36 seconds**, including cut points. This is an engineering proxy, not human benefit or recall. The retained **70-window** exploratory screen qualifies **zero additional useful repairs**. Windows overlap and share creators.
 
-All 14 Linux stages, 137 backend / 136 studio tests (one skip), 73 focused UI/compatibility tests, three native and current HTTPS API regressions pass. All 51/45/45 pack-member hashes verify; 108 media/PNG bytes match V19. Current Brave completes original Gentoo generation and real SMW 12-second refusal -> explicit four-second review -> Leave unchanged. **Brave pack-save attempts timed out**; browser download completion remains unqualified. Actual 375px layout is not a physical-phone test.
+All 14 pinned Linux stages, 137 backend / 139 studio tests (one skip), 76 focused UI/compatibility checks and three native plus HTTPS API original-source regressions pass. All 51/45/45 pack-member hashes verify; 108 media/PNG members match V19/V21. Actual Brave verifies 44 manifest-file hashes in the original-source pack, and 42 in a prepared repeat. Same-frame teaching crop 152 loads at 200%; a 375x812 responsive viewport has no page overflow. **Brave disk-save completion remains unqualified**. API bytes and browser-memory transfer are separate evidence.
 
-The [prospective human pilot](human-study/) has one invitation start and **zero completed valid human responses** in the dated aggregate, QA excluded. [Devpost volunteer discussion](https://opencv26.devpost.com/forum_topics/45681-3-4-minute-lesson-clip-study-looking-for-adult-volunteers). No learning, attention, preference, accessibility or time-saving result is established.
+The prospective [human pilot](human-study/) has **zero valid completed human responses** in its dated aggregate; QA excluded. No learning, attention, preference, accessibility or time-saving effect is established. Negative media, boundary, source-staging and truncated-transfer evidence stays in the source. Frozen study bytes are unchanged.
 
-Same-image clean activation frees ephemeral QA slots; final identity/health and prior full qualification are separate receipts. Direct default-branch pushes; no cron. New demo waits for creator audio.
+The 4:04 demo uses Joseph's own voice at original speed, actual app/lesson evidence and labelled historical comparisons. Direct default-branch pushes; no cron. Final same-image activation frees QA job allowance; identity/health checks are separate from earlier full qualification on that exact image.
 
 ## Historical version notes
 

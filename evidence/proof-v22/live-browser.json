@@ -1,0 +1,80 @@
+{
+  "complete": true,
+  "scope": "Completed observations, with disk-save gate explicitly unresolved; actual Brave original upload and prepared-sample generation, static teaching inspection and client ZIP transfer verification. Not every browser gate passed.",
+  "source_manifest_sha256": "104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210",
+  "observed": {
+    "consent": false,
+    "guide": "1. Commands and package explanation \u00c2\u00b7 [0, 0, 640, 326]RemoveEdit2. Live package progress readout \u00c2\u00b7 [0, 326, 364, 18]RemoveEdit3. Terminal lower margin \u00c2\u00b7 [0, 344, 640, 16]RemoveEdit",
+    "images": [
+      {
+        "complete": true,
+        "height": 360,
+        "id": "candidate-overlay",
+        "src": "/api/jobs/dc3d41d724b3f1de78e68f2180d4a969/steady/steady-0-reference.png",
+        "width": 640
+      },
+      {
+        "complete": true,
+        "height": 360,
+        "id": "steady-alternate",
+        "src": "/api/jobs/dc3d41d724b3f1de78e68f2180d4a969/steady/steady-0-alternate.png",
+        "width": 640
+      },
+      {
+        "complete": true,
+        "height": 360,
+        "id": "preparation-preview",
+        "src": "/api/jobs/dc3d41d724b3f1de78e68f2180d4a969/intake/preview",
+        "width": 640
+      }
+    ]
+  },
+  "plan": {
+    "consent": false,
+    "text": "Hold the observed brightness state from frame 86 steady inside this interval. Detected region: [370, 330, 6, 10]; detected interval: frames 61\u00e2\u20ac\u201c173. Check every frame of: Commands and package explanation, Live package progress readout, Terminal lower margin. Generate only after reviewing this plan. The encoded result can still be refused.",
+    "visible": true
+  },
+  "explicit_generation_consent": true,
+  "job_id": "dc3d41d724b3f1de78e68f2180d4a969",
+  "generated_complete": true,
+  "pack_transfer": {
+    "box": {
+      "bottom": 719.234375,
+      "height": 285.234375,
+      "left": 408.5,
+      "right": 1450.5,
+      "top": 434,
+      "width": 1042,
+      "x": 408.5,
+      "y": 434
+    },
+    "save_href_kind": "blob",
+    "save_visible": true,
+    "status": "Complete ZIP received. All 44 file hashes match its manifest (plus manifest.json). 19.2 MiB. SHA-256: 5b501770e0b278c525c95d1b8ed607745ebc7cc84551dffa69b5997aa85563c6. Use Save checked ZIP, then confirm the saved file in your browser. This has not saved a file yet.",
+    "viewport": [
+      1874,
+      952
+    ]
+  },
+  "browser_disk_save_passed": false,
+  "download_gate_passed": false,
+  "save_attempt_receipt": "proof-v22-checked-save-attempt.json",
+  "prepared_sample": {
+    "job_id": "e4f4d22e09ee1ab4af8aa87459f4b178",
+    "generated": true,
+    "teaching_guide_width": 364,
+    "fixed_frame": 152,
+    "magnification_percent": 200,
+    "encoded_image_loaded": true,
+    "client_manifest_files_verified": 42,
+    "zip_sha256": "9eb5fb6183d723e26a45d74860932d1df1ca4ab1f411a79754326e745f30c207"
+  },
+  "portable_page": {
+    "scope": "Actual current API pack review.html served locally for screenshot capture; no browser file save claimed",
+    "embedded_images": 30,
+    "loaded": 30,
+    "horizontal_overflow": false
+  },
+  "mobile_receipt": "proof-v22-mobile-browser.json",
+  "checked_utc": "2026-10-26T19:36:13.995302+00:00"
+}

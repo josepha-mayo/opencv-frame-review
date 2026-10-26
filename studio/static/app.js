@@ -965,6 +965,7 @@
 
     const packNote = byId("rescue-pack-note");
     if (packNote) packNote.hidden = !hasArtifacts || !artifacts["Download verified rescue pack"];
+    renderPackTransfer(hasArtifacts ? artifacts["Download verified rescue pack"] : null);
     if (hasArtifacts) {
       Object.entries(artifacts).forEach(([label, value]) => {
         const url = localURL(value);
@@ -983,6 +984,81 @@
     ui.artifactsArea.hidden = ui.artifacts.children.length === 0;
   }
 
+  const PACK_LIMIT = 112 * 1024 * 1024 + 128 * 1024;
+  let packTransfer = null;
+  function clearPackTransfer() {
+    if (packTransfer?.controller) packTransfer.controller.abort();
+    if (packTransfer?.blobURL) URL.revokeObjectURL(packTransfer.blobURL);
+    packTransfer=null;
+    const save=byId("pack-save");if(save){save.hidden=true;save.removeAttribute("href");}
+  }
+  function renderPackTransfer(path) {
+    const area=byId("pack-transfer");if(!area)return;
+    const valid=job?.status==="complete" && validJobId(job.id) && path==="/api/jobs/"+job.id+"/rescue-pack.zip";
+    const key=valid?job.id+":"+job.input_sha256:null;
+    if(packTransfer?.key!==key){clearPackTransfer();if(key)packTransfer={key,path};byId("pack-status").textContent="No transfer started. Checking a pack never approves an edit.";}
+    area.hidden=!valid;
+    byId("pack-prepare").disabled=!!packTransfer?.controller;
+    byId("pack-cancel").hidden=!packTransfer?.controller;
+  }
+  async function packDigest(bytes) {
+    return Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256",bytes)),b=>b.toString(16).padStart(2,"0")).join("");
+  }
+  async function verifyRescuePack(bytes,expected,progress=()=>{}) {
+    const bad=()=>{throw new Error("Pack structure or file hashes did not verify. Use the individual artifacts or try a fresh transfer.");};
+    if(!(bytes instanceof Uint8Array)||bytes.length<22||bytes.length>PACK_LIMIT)bad();
+    const view=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength),end=bytes.length-22;
+    const u16=p=>view.getUint16(p,true),u32=p=>view.getUint32(p,true);
+    if(u32(end)!==0x06054b50||u16(end+4)||u16(end+6)||u16(end+20))bad();
+    const count=u16(end+10),central=u32(end+16),size=u32(end+12);
+    if(count<2||count>64||u16(end+8)!==count||central+size!==end)bad();
+    const decoder=new TextDecoder("utf-8",{fatal:true}),entries=new Map();let pos=central,offset=0;
+    for(let i=0;i<count;i++){
+      if(pos+46>end||u32(pos)!==0x02014b50||u16(pos+8)!==0||u16(pos+10)!==0)bad();
+      const length=u32(pos+24),nameLength=u16(pos+28),extra=u16(pos+30),comment=u16(pos+32),local=u32(pos+42);
+      if(u32(pos+20)!==length||u16(pos+34)!==0||pos+46+nameLength+extra+comment>end||local!==offset||local+30>central)bad();
+      const name=decoder.decode(bytes.subarray(pos+46,pos+46+nameLength));
+      if(!/^[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/.test(name)||entries.has(name)||u32(local)!==0x04034b50||u16(local+6)||u16(local+8)||u32(local+18)!==length||u32(local+22)!==length)bad();
+      const n=u16(local+26),x=u16(local+28),start=local+30+n+x;
+      if(n!==nameLength||decoder.decode(bytes.subarray(local+30,local+30+n))!==name||start+length>central)bad();
+      entries.set(name,bytes.subarray(start,start+length));offset=start+length;pos+=46+nameLength+extra+comment;
+    }
+    if(pos!==end||offset!==central||!entries.has("manifest.json")||entries.get("manifest.json").length>128*1024)bad();
+    const manifest=JSON.parse(decoder.decode(entries.get("manifest.json"))),binding=manifest.binding;
+    if(manifest.schema!=="lesson-rescue-pack-v1"||!binding||binding.job_id!==expected.id||binding.input_sha256!==expected.input_sha256||binding.recipe_sha256!==expected.recipe_sha256||!manifest.files||Array.isArray(manifest.files))bad();
+    const names=Object.keys(manifest.files);if(names.length!==count-1||names.includes("manifest.json"))bad();
+    for(let i=0;i<names.length;i++){
+      const name=names[i],file=entries.get(name),meta=manifest.files[name];
+      if(!file||!meta||!Number.isSafeInteger(meta.bytes)||file.length!==meta.bytes||!/^[0-9a-f]{64}$/.test(meta.sha256)||await packDigest(file)!==meta.sha256)bad();
+      progress(i+1,names.length);
+    }
+    return {files:names.length,bytes:bytes.length,sha256:await packDigest(bytes)};
+  }
+  async function prepareCheckedPack() {
+    const active=packTransfer,feedback=byId("pack-status"),save=byId("pack-save");
+    if(!active||active.controller||!job||job.status!=="complete"||stateUncertain||busy)return;
+    const expected={id:job.id,input_sha256:job.input_sha256,recipe_sha256:job.workflow?.human_control?.recipe_sha256};
+    if(!/^[0-9a-f]{64}$/.test(expected.input_sha256)||!/^[0-9a-f]{64}$/.test(expected.recipe_sha256)){feedback.textContent="The source-bound recipe is unavailable. Use individual artifacts.";return;}
+    if(active.blobURL){URL.revokeObjectURL(active.blobURL);delete active.blobURL;}save.hidden=true;save.removeAttribute("href");
+    const controller=new AbortController();active.controller=controller;renderPackTransfer(active.path);
+    let timer=window.setTimeout(()=>controller.abort(),120000),reader;
+    try {
+      feedback.textContent="Preparing the source-bound ZIP. Keep this tab open; no edit is being approved.";
+      const response=await fetch(localURL(active.path),{credentials:"same-origin",signal:controller.signal});
+      const total=Number(response.headers.get("Content-Length"));
+      if(!response.ok||response.headers.get("Content-Type")?.split(";",1)[0]!=="application/zip"||!Number.isSafeInteger(total)||total<22||total>PACK_LIMIT||!response.body)throw new Error("Complete bounded ZIP unavailable. Try the direct download or individual artifacts.");
+      const bytes=new Uint8Array(total);let received=0;reader=response.body.getReader();
+      for(;;){const result=await reader.read();if(result.done)break;if(!(result.value instanceof Uint8Array)||received+result.value.length>total)throw new Error("Transfer size changed; no save was prepared.");bytes.set(result.value,received);received+=result.value.length;feedback.textContent="Receiving pack: "+(received/1048576).toFixed(1)+" / "+(total/1048576).toFixed(1)+" MiB.";}
+      if(received!==total)throw new Error("The transfer stopped early. No save was prepared; retry or use individual artifacts.");
+      const checked=await verifyRescuePack(bytes,expected,(n,total)=>{if(packTransfer===active)feedback.textContent="Checking file hashes: "+n+" / "+total+".";});
+      if(packTransfer!==active||controller.signal.aborted)throw new Error("Transfer cancelled. No save was prepared.");
+      active.blobURL=URL.createObjectURL(new Blob([bytes],{type:"application/zip"}));save.href=active.blobURL;save.hidden=false;
+      feedback.textContent="Complete ZIP received. All "+checked.files+" file hashes match its manifest (plus manifest.json). "+(checked.bytes/1048576).toFixed(1)+" MiB. SHA-256: "+checked.sha256+". Use Save checked ZIP, then confirm the saved file in your browser. This has not saved a file yet.";
+    } catch(error) {
+      if(reader)try{await reader.cancel();}catch(_){}
+      if(packTransfer===active){save.hidden=true;save.removeAttribute("href");feedback.textContent=controller.signal.aborted?"Transfer cancelled or timed out. No save was prepared. You can retry or use the individual artifacts.":String(error.message||error);}
+    } finally {window.clearTimeout(timer);if(packTransfer===active){delete active.controller;renderPackTransfer(active.path);}}
+  }
   function renderWorkflow() {
     const area=byId("workflow-area"), next=byId("workflow-next"), data=byId("workflow-data"), link=byId("workflow-download");
     area.hidden=true;data.textContent="";link.removeAttribute("href");
@@ -1203,6 +1279,9 @@
   });
   ui.retry.addEventListener("click", refreshJob);
   byId("timestamp-use")?.addEventListener("click",useLessonTimestamp);
+  byId("pack-prepare")?.addEventListener("click",prepareCheckedPack);
+  byId("pack-cancel")?.addEventListener("click",()=>packTransfer?.controller?.abort());
+  window.addEventListener("pagehide",clearPackTransfer);
   byId("lesson-timestamp")?.addEventListener("keydown",event=>{if (event.key==="Enter") {event.preventDefault();useLessonTimestamp();}});
   [prepareLesson,clipStart,clipDuration].forEach(field=>field.addEventListener("input",renderExcerptRange));
   renderExcerptRange();

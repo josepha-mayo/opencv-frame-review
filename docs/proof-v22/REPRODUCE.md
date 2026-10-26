@@ -1,0 +1,35 @@
+# V22: check the complete evidence pack before saving
+
+The creator now sees complete-transfer progress and SHA-256 verification of every manifest file before a separate Save checked ZIP action. The ZIP must be bounded, complete and bound to the current job, input and reviewed recipe. Strict stored-ZIP parsing refuses traversal, duplicate paths, inconsistent local/central sizes, encrypted or unsupported records, invalid counts and corrupt content. Cancellation and timeouts withhold the save link. The manifest does not independently authenticate the server. Transfer completion is explicitly different from a file saved to disk. The existing direct/individual links remain available.
+
+The Gentoo guide now includes the full 364-pixel live progress readout. No manual width correction is required. Loading suggested areas still neither approves nor checks a plan. All actual approval and media gates remain. No detector, encoder, threshold, CSP, boundary renderer or frozen human-study bytes changed.
+
+## Current qualification and unresolved gates
+
+All 14 pinned Linux stages pass: 137 backend tests, 139 studio tests (one platform skip), 76 focused UI/compatibility checks. The French, Joomla and Gentoo untouched originals pass native and fresh HTTPS upload, reviewed-plan, explicit-generation and complete artifact checks. All 51/45/45 pack members verify; the 108 media/PNG members match V19/V21 byte-for-byte. Empty/stale plans and unowned requests still refuse. Native jEdit 95s refuses a 12-second window, then a separate four-second analysis correctly reaches zero-proposal review and preserves source bytes; that is a recovery of review, not a repair.
+
+Actual current AWS/Brave untouched Gentoo original: 1:02 -> 62 seconds, explicit Analyze, both source states, default 364-wide guide, fresh plan with consent initially false, explicit generation. A full 19.2 MiB pack is received with 44 file hashes checked client-side plus manifest.json. Save checked ZIP times out in the documented browser helper. No disk-save completion or all-browser-gates pass is claimed.
+
+A separate current prepared Gentoo browser run generates with the default guide, opens progress frame 152 at 100/200% and switches manually to its same-time encoded crop. All 19 displayed teaching image instances load; its checked pack verifies 42 file hashes. The 375x812 responsive viewport has no horizontal page overflow; this is not a physical-phone test. The current API pack portable review.html loads all 30 embedded images when served locally for capture. It is not a browser disk-save test. Historical V21 SMW four-second and V19 jEdit browser recovery scopes stay dated in their original evidence directories.
+
+The initial Joomla HTTPS read is truncated after 10,792,936 bytes. Its receipt is retained; a new owned job subsequently passes complete read/member checks on its first bounded recovery attempt, as does Gentoo. A premature CodeBuild launch before source staging completes fails before media checks; the staged-source retry passes without expanding ListBucket permissions. Both failures remain explicit.
+
+Same-image final activation clears ephemeral QA jobs only after evidence is preserved. Its identity/health receipt is separate from full qualification performed on that same image. The separate human study is untouched. No PR or cron is used.
+
+## What was measured
+
+Three previously selected 12-second real excerpts: whole-excerpt selected-ROI mean RGB steps >=8 codes fall 37 -> 21 including cut points (French 8 -> 2, Joomla 16 -> 10, Gentoo 13 -> 9). Declared teaching RGB sequences stay exact. These are decoded-code engineering proxies, not semantic progress ticks, human attention, learning or detector recall. The historical French V12 diagnostic whole-frame hold changes 90/97 declared teaching frames; local hold changes zero. The older Joomla result is 90/96 versus zero. Neither whole-frame diagnostic is an app-accepted output.
+
+The retained 70-window exploratory screen qualifies zero additional useful repairs. Windows overlap and share creators; it is not an independent held-out trial. All failures and intended instructional changes remain. One invitation start and zero completed valid human responses are recorded in the dated aggregate; two QA records are excluded. Human benefit is unproven. The frozen prospective pilot closes October 27 at 06:00 UTC / 07:00 Lagos, separate from competition deadline 06:45 UTC / 07:45 Lagos.
+
+## Reproduce and inspect
+
+Use the pinned image/manifest in the current build receipt. Run the included original-source qualifier with credited originals and starts 140/60/62 seconds, and retained case JSON. The Gentoo adjusted case matches the now-default guide. Run the failure-recovery qualifier against the credited jEdit original at 95s. Historical original fetch/provenance scripts remain under docs/proof-v21. Run Python with UTF-8 mode on Windows for frozen static tests; the production qualification runs on pinned Linux. Never treat a Windows failure from the wrong text encoding as a native gate result.
+
+Browser reproduction: Try the real package-progress lesson -> inspect both states -> Load this example's teaching areas -> check fresh plan -> explicit consent -> Generate comparison -> open progress static frames -> compare frame 152 at fixed scale -> Receive and check pack. Only after the complete checked status use Save checked ZIP and independently verify a genuinely saved file. Keep transfer and disk-save gates separate.
+
+The new 244.1-second creator-narrated demo uses Joseph's provided continuous voice at original speed, with loudness normalization. Actual app screenshots, source-derived playback outside the static app, measured diagrams and clearly labelled historical counterfactual/recovery replace synthetic narration. The V21 SMW screenshot is cropped to our recovery card, excluding its lesson pixels. Captions are lightly edited for clarity. Presentation FFmpeg rendering is separate from media qualification. Video hashes, timeline and source credits are retained; original WhatsApp voice and full movie are excluded from source archives.
+
+The technical report alias is export-ignored to keep the required ZIP below 35 MB; docs/real-lessons-report.pdf remains the identical canonical report. The alias remains in Git. All frozen runtime and study files remain included.
+
+Eleven additional pure Node checks exercise the exact shipped ZIP verifier against a real current Gentoo API pack: 44 valid hashes pass, and changed payload, truncation, wrong job/source/recipe, unsafe path, encryption, compression, member-count and short-archive cases refuse. This is separate from browser stream/cancel and disk-save evidence. Run `node docs/proof-v22/check-pack-client-v22.mjs studio/static/app.js /path/to/gentoo-pack.zip /path/to/receipt.json` from the public source root.

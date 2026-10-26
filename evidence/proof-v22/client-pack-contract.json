@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "scope": "Pure Node tests of exact shipped ZIP verification helper; not browser download, stream cancellation, disk-save or human evidence.",
+  "tests": [
+    "Real Gentoo API pack: all 44 hashes pass",
+    "wrong id refused",
+    "wrong input_sha256 refused",
+    "wrong recipe_sha256 refused",
+    "truncated transfer refused",
+    "modified file payload refused",
+    "encrypted local entry refused",
+    "unsupported compressed entry refused",
+    "unsafe absolute path refused",
+    "too many members refused",
+    "too short archive refused"
+  ],
+  "checks": 11,
+  "client_sha256": "a63c9130b3e67e4d77b048eb404960ba03786789072cd08ce9bc361a78615b46",
+  "valid_pack": {
+    "files": 44,
+    "bytes": 20147246,
+    "sha256": "0ea87e1a0238fbc80e1e3fbe78b305be8b1a482e2d9e5466699406ef3704a39a"
+  }
+}

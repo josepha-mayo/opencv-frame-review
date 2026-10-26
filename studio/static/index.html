@@ -194,7 +194,17 @@
         </details>
       </section>
       <div id="result-highlights" class="result-highlights"></div>
-      <div id="artifacts-area" hidden><h3>Download artifacts</h3><p id="rescue-pack-note" hidden>Keep the verified rescue pack before this job expires: source files, comparison, recipe, report, static proofs and a file-hash manifest in one ZIP. Open review.html for an offline proof page with every image embedded; it needs no server or video playback. Upload jobs include the untouched original; built-in examples include their prepared excerpt and provenance. Individual files remain below.</p><ul id="artifact-list" class="artifact-list"></ul></div>
+      <div id="artifacts-area" hidden><h3>Download artifacts</h3><p id="rescue-pack-note" hidden>Keep the verified rescue pack before this job expires: source files, comparison, recipe, report, static proofs and a file-hash manifest in one ZIP. Open review.html for an offline proof page with every image embedded; it needs no server or video playback. Upload jobs include the untouched original; built-in examples include their prepared excerpt and provenance. Individual files remain below.</p>
+        <aside id="pack-transfer" class="plan-summary" hidden aria-labelledby="pack-transfer-title">
+          <h4 id="pack-transfer-title">Check the pack before saving</h4>
+          <p class="small">Receive the complete ZIP and check every file against its included hash manifest. This uses browser memory; the direct download below remains available.</p>
+          <button id="pack-prepare" type="button" class="button secondary">Receive and check pack</button>
+          <button id="pack-cancel" type="button" class="text-button" hidden>Cancel transfer</button>
+          <p id="pack-status" class="small" role="status" aria-live="polite">No transfer started. Checking a pack never approves an edit.</p>
+          <a id="pack-save" class="button secondary" download="frame-review-rescue-pack.zip" hidden>Save checked ZIP</a>
+          <p class="small muted">File hashes are checked against this pack's manifest; they do not independently authenticate the server. Save still uses your browser's download controls. A prepared link does not mean the file was saved.</p>
+        </aside>
+        <ul id="artifact-list" class="artifact-list"></ul></div>
       <details id="result-report-details" class="report-details"><summary>Summary JSON</summary><pre id="raw-report"></pre></details>
     </section>
 

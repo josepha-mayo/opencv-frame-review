@@ -1,0 +1,76 @@
+{
+  "schema": "lesson-reading-summary-v1",
+  "protocol_sha256": "d76d56bdf6a02a29fb4bc34c31d6faa00fb94ccbc20d95717184098dfe28d00c",
+  "media_sha256": "ea59f5643c6b7988a0cbc5be020689197e46142c30f49bd4051c00c5b34b1569",
+  "cutoff_utc": "2026-10-27T06:00:00Z",
+  "human_invites_started": 1,
+  "valid_human_submissions": 0,
+  "qa_records_excluded": 2,
+  "other_exclusions": {},
+  "groups": {
+    "independent": {
+      "submitted_people": 0,
+      "participant_majority": {},
+      "case_preferences_descriptive_not_independent_people": {
+        "upload-assistant": {},
+        "joomla": {},
+        "gentoo": {}
+      },
+      "participant_mean_source_minus_edit_distraction": {
+        "n": 0,
+        "median": null,
+        "values": []
+      },
+      "reading_first_exposure": {
+        "source": {},
+        "edited": {}
+      },
+      "answer_latency_ms_descriptive": {
+        "source": {
+          "n": 0,
+          "median": null
+        },
+        "edited": {
+          "n": 0,
+          "median": null
+        }
+      },
+      "perceived_information_loss": {},
+      "skips": {}
+    },
+    "team": {
+      "submitted_people": 0,
+      "participant_majority": {},
+      "case_preferences_descriptive_not_independent_people": {
+        "upload-assistant": {},
+        "joomla": {},
+        "gentoo": {}
+      },
+      "participant_mean_source_minus_edit_distraction": {
+        "n": 0,
+        "median": null,
+        "values": []
+      },
+      "reading_first_exposure": {
+        "source": {},
+        "edited": {}
+      },
+      "answer_latency_ms_descriptive": {
+        "source": {
+          "n": 0,
+          "median": null
+        },
+        "edited": {
+          "n": 0,
+          "median": null
+        }
+      },
+      "perceived_information_loss": {},
+      "skips": {}
+    }
+  },
+  "interpretation": "Invited self-reported convenience pilot. Descriptive preference/reading-feasibility observations only; no significance test, population inference, learning gain, attention authentication, accessibility/safety certification or measured editing-time saving. Zero human responses means no measured human outcome.",
+  "snapshot_utc": "20261026T194736Z",
+  "snapshot_manifest_sha256": "84f26cd62844f1052e3c0e3f8784da71a892fe15066e451faf31809ad76a1090",
+  "collection_status": "Interim snapshot; fixed cutoff has not necessarily elapsed."
+}

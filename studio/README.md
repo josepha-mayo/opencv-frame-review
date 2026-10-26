@@ -1,8 +1,8 @@
 # Frame Review studio
 
-V21 accepts readable lesson timestamps and shows the complete selected range. Use timestamp/Enter fills the start without uploading or approving. Inspect prepared detail, both states and teaching areas; check a fresh plan and explicitly generate. A region-limit failure keeps original/prepared links and offers explicit four-second setup; analyze separately. No proposal can correctly mean Leave unchanged.
+V22 verifies complete bounded ZIP transfer and all manifest file hashes before a separate save action; actual Brave disk-save remains unqualified. Default Gentoo guide protects the full 364-pixel readout. Review both states, name teaching areas, check a fresh plan and explicitly generate.
 
-[Current reproduction](../docs/proof-v21/REPRODUCE.md) | [Four-page report](../docs/real-lessons-report.pdf). Full native/HTTPS checks pass; current Brave generation/recovery and desktop/375px layout verify. Brave pack saves timed out and stay open. Same-image final activation has separate identity/health scope. Human benefit unmeasured. New video waits for creator audio; no cron.
+[Current reproduction](../docs/proof-v22/REPRODUCE.md) | [Report](../docs/real-lessons-report.pdf) | [Creator demo](https://youtu.be/N21Xu2So_Os). Native/API checks pass; engineering proxies do not establish human benefit. Frozen study remains unchanged; no cron.
 
 ## Historical studio notes
 

@@ -1,0 +1,41 @@
+{
+  "complete": true,
+  "scope": "Creator-provided continuous narration at original speed, loudness-normalized; actual AWS/Brave screenshots, exact measured video masters played outside static UI, labelled diagrams/results and historical counterfactual. Presentation re-encoding is not media qualification.",
+  "narration_sha256": "fd34e932169904bc2cd1db0347c016dc7df0d2848b64d170cd45bef7966bac9a",
+  "source_manifest_sha256": "104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210",
+  "video_sha256": "dda3d8bd0bfe37de54318512095927f4a4f44193058664f4438c4e500d720bf9",
+  "bytes": 8301292,
+  "format": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "duration": "244.100000"
+      },
+      {
+        "codec_name": "aac",
+        "r_frame_rate": "0/0",
+        "duration": "244.100000"
+      }
+    ],
+    "format": {
+      "duration": "244.100000",
+      "size": "8301292"
+    }
+  },
+  "scene_count": 18,
+  "asset_hashes": {
+    "outputs\\final-demo-v22\\gentoo-prepared-lesson.mp4": "33a58e2d4dd11a6bfb84cc656fab241a59ba0624162083aeb9bcbea628814fd3",
+    "outputs\\final-demo-v22\\gentoo-edited.mp4": "366ee9f57dcc45a6f09abae3691ee7e77611f930904d5ea9200303ed9a38e085",
+    "outputs\\workflow-v12\\ablation\\upload-assistant\\prepared-lesson.mp4": "93845b704ff338478ab0f6a300ea651dbce63906197069d757d1d142169e5380",
+    "outputs\\workflow-v12\\ablation\\upload-assistant\\edited.mp4": "97310fcc314affbc74da4c3b3d5dd02b38c9878bf66cc8e39c1d8ccb1e656394",
+    "outputs\\workflow-v12\\ablation\\upload-assistant\\COUNTERFACTUAL-whole-frame-hold-video-only.mp4": "d70625753c4f3204bfca69e26c3bbd0aa65282201511685d369d6325403096f5"
+  },
+  "rendered_utc": "2026-10-26T19:39:01.873977+00:00",
+  "full_av_decode_passed": true,
+  "qc_frames": 18
+}

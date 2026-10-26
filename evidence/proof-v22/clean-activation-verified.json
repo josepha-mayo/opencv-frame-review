@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "checked_utc": "2026-10-26T19:47:04.536042+00:00",
+  "deployment_id": "ecs-svc/8560239436099422207",
+  "expected_deployment_id": "ecs-svc/8560239436099422207",
+  "state": "COMPLETED",
+  "deployments": 1,
+  "running": 1,
+  "scope": "Final same-image activation identity and health only. Full native/media/HTTP/browser qualification ran on this exact image before this reset of ephemeral QA jobs. Separate human-study service is untouched.",
+  "health": {
+    "status": "ready"
+  },
+  "deployment": {
+    "build": "lesson-rescue-checked-pack-2026-10-26-v22",
+    "source_files_verified": 119,
+    "source_manifest_sha256": "104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210",
+    "hosting": "Amazon ECS",
+    "analysis": "OpenCV 5.0.0",
+    "media_runtime": "Pinned Debian FFmpeg 7.1.5",
+    "retention_hours": 24,
+    "workers": 1,
+    "max_jobs": 8
+  },
+  "task_definition": "default-lesson-rescue:27",
+  "task_arn": "arn:aws:ecs:us-east-1:046675437218:task/default/f0c15844e9e1493a81809e0ba67612df",
+  "image_digest": "sha256:5863c7ed997b4a241dd3abb5964095c83e4e2953beae793c77ce9a7af095c145",
+  "application_task_role_present": false
+}

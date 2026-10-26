@@ -1,0 +1,24 @@
+{
+  "checked_utc": "2026-10-26T15:49:23.741447+00:00",
+  "complete": true,
+  "rollout_state": "COMPLETED",
+  "deployments": 1,
+  "desired": 1,
+  "running": 1,
+  "deployment": {
+    "build": "lesson-rescue-checked-pack-2026-10-26-v22",
+    "source_files_verified": 119,
+    "source_manifest_sha256": "104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210",
+    "hosting": "Amazon ECS",
+    "analysis": "OpenCV 5.0.0",
+    "media_runtime": "Pinned Debian FFmpeg 7.1.5",
+    "retention_hours": 24,
+    "workers": 1,
+    "max_jobs": 8
+  },
+  "task_definition": "default-lesson-rescue:27",
+  "image_digest": "sha256:5863c7ed997b4a241dd3abb5964095c83e4e2953beae793c77ce9a7af095c145",
+  "task_cpu": "1024",
+  "task_memory": "2048",
+  "application_task_role_present": false
+}

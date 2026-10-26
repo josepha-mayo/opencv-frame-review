@@ -1,0 +1,217 @@
+{
+  "start": {
+    "build": {
+      "id": "opencv-creator-replay-20261016-build:759ef75b-ada0-4801-9cb2-bdcfceddd262",
+      "arn": "arn:aws:codebuild:us-east-1:046675437218:build/opencv-creator-replay-20261016-build:759ef75b-ada0-4801-9cb2-bdcfceddd262",
+      "buildNumber": 24,
+      "startTime": "2026-10-26T16:28:40.728000+01:00",
+      "currentPhase": "QUEUED",
+      "buildStatus": "IN_PROGRESS",
+      "projectName": "opencv-creator-replay-20261016-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-26T16:28:40.728000+01:00",
+          "endTime": "2026-10-26T16:28:40.874000+01:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "startTime": "2026-10-26T16:28:40.874000+01:00"
+        }
+      ],
+      "source": {
+        "type": "S3",
+        "location": "opencv-creator-replay-046675437218-20261016/proof-v22/104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210/source.zip",
+        "buildspec": "buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [],
+      "secondarySourceVersions": [],
+      "artifacts": {
+        "location": ""
+      },
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:7.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "IMAGE_REPO_NAME",
+            "value": "opencv-creator-replay-20261016",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_TAG",
+            "value": "owned-qp18-v1",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "ECR_REGISTRY",
+            "value": "046675437218.dkr.ecr.us-east-1.amazonaws.com",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::046675437218:role/opencv-creator-replay-20261016-build",
+      "logs": {
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-1:046675437218:log-group:null:log-stream:null",
+        "cloudWatchLogs": {
+          "status": "ENABLED",
+          "groupName": "/aws/codebuild/opencv-creator-replay-20261016-build",
+          "streamName": "owned-replay"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 40,
+      "queuedTimeoutInMinutes": 5,
+      "buildComplete": false,
+      "initiator": "root",
+      "encryptionKey": "arn:aws:kms:us-east-1:046675437218:alias/aws/s3"
+    }
+  },
+  "status": {
+    "builds": [
+      {
+        "id": "opencv-creator-replay-20261016-build:759ef75b-ada0-4801-9cb2-bdcfceddd262",
+        "arn": "arn:aws:codebuild:us-east-1:046675437218:build/opencv-creator-replay-20261016-build:759ef75b-ada0-4801-9cb2-bdcfceddd262",
+        "buildNumber": 24,
+        "startTime": "2026-10-26T16:28:40.728000+01:00",
+        "endTime": "2026-10-26T16:28:52.736000+01:00",
+        "currentPhase": "COMPLETED",
+        "buildStatus": "FAILED",
+        "projectName": "opencv-creator-replay-20261016-build",
+        "phases": [
+          {
+            "phaseType": "SUBMITTED",
+            "phaseStatus": "SUCCEEDED",
+            "startTime": "2026-10-26T16:28:40.728000+01:00",
+            "endTime": "2026-10-26T16:28:40.874000+01:00",
+            "durationInSeconds": 0
+          },
+          {
+            "phaseType": "QUEUED",
+            "phaseStatus": "SUCCEEDED",
+            "startTime": "2026-10-26T16:28:40.874000+01:00",
+            "endTime": "2026-10-26T16:28:41.566000+01:00",
+            "durationInSeconds": 0
+          },
+          {
+            "phaseType": "PROVISIONING",
+            "phaseStatus": "SUCCEEDED",
+            "startTime": "2026-10-26T16:28:41.566000+01:00",
+            "endTime": "2026-10-26T16:28:48.916000+01:00",
+            "durationInSeconds": 7,
+            "contexts": [
+              {
+                "statusCode": "",
+                "message": ""
+              }
+            ]
+          },
+          {
+            "phaseType": "DOWNLOAD_SOURCE",
+            "phaseStatus": "FAILED",
+            "startTime": "2026-10-26T16:28:48.916000+01:00",
+            "endTime": "2026-10-26T16:28:52.299000+01:00",
+            "durationInSeconds": 3,
+            "contexts": [
+              {
+                "statusCode": "CLIENT_ERROR",
+                "message": "error while downloading key proof-v22/104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210/source.zip, error: AccessDenied: User: arn:aws:sts::046675437218:assumed-role/opencv-creator-replay-20261016-build/AWSCodeBuild-759ef75b-ada0-4801-9cb2-bdcfceddd262 is not authorized to perform: s3:ListBucket on resource: \"arn:aws:s3:::opencv-creator-replay-046675437218-20261016\" because no identity-based policy allows the s3:ListBucket action\n\tstatus code: 403, request id: H6RZW0AC4EW09WKA, host id: w0nJzRZPQvOQeE2sS7CC2ahX526DaVb5la6cXaYHJGNEAhPV/Ut9uBDDIgN8t+s3qymoTNcydNU= for primary source"
+              }
+            ]
+          },
+          {
+            "phaseType": "FINALIZING",
+            "phaseStatus": "SUCCEEDED",
+            "startTime": "2026-10-26T16:28:52.299000+01:00",
+            "endTime": "2026-10-26T16:28:52.736000+01:00",
+            "durationInSeconds": 0,
+            "contexts": [
+              {
+                "statusCode": "",
+                "message": ""
+              }
+            ]
+          },
+          {
+            "phaseType": "COMPLETED",
+            "startTime": "2026-10-26T16:28:52.736000+01:00"
+          }
+        ],
+        "source": {
+          "type": "S3",
+          "location": "opencv-creator-replay-046675437218-20261016/proof-v22/104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210/source.zip",
+          "buildspec": "buildspec.yml",
+          "insecureSsl": false
+        },
+        "secondarySources": [],
+        "secondarySourceVersions": [],
+        "artifacts": {
+          "location": ""
+        },
+        "cache": {
+          "type": "NO_CACHE"
+        },
+        "environment": {
+          "type": "LINUX_CONTAINER",
+          "image": "aws/codebuild/standard:7.0",
+          "computeType": "BUILD_GENERAL1_SMALL",
+          "environmentVariables": [
+            {
+              "name": "IMAGE_REPO_NAME",
+              "value": "opencv-creator-replay-20261016",
+              "type": "PLAINTEXT"
+            },
+            {
+              "name": "IMAGE_TAG",
+              "value": "owned-qp18-v1",
+              "type": "PLAINTEXT"
+            },
+            {
+              "name": "ECR_REGISTRY",
+              "value": "046675437218.dkr.ecr.us-east-1.amazonaws.com",
+              "type": "PLAINTEXT"
+            }
+          ],
+          "privilegedMode": true,
+          "imagePullCredentialsType": "CODEBUILD"
+        },
+        "serviceRole": "arn:aws:iam::046675437218:role/opencv-creator-replay-20261016-build",
+        "logs": {
+          "groupName": "/aws/codebuild/opencv-creator-replay-20261016-build",
+          "streamName": "owned-replay/759ef75b-ada0-4801-9cb2-bdcfceddd262",
+          "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Faws$252Fcodebuild$252Fopencv-creator-replay-20261016-build/log-events/owned-replay$252F759ef75b-ada0-4801-9cb2-bdcfceddd262",
+          "cloudWatchLogsArn": "arn:aws:logs:us-east-1:046675437218:log-group:/aws/codebuild/opencv-creator-replay-20261016-build:log-stream:owned-replay/759ef75b-ada0-4801-9cb2-bdcfceddd262",
+          "cloudWatchLogs": {
+            "status": "ENABLED",
+            "groupName": "/aws/codebuild/opencv-creator-replay-20261016-build",
+            "streamName": "owned-replay"
+          },
+          "s3Logs": {
+            "status": "DISABLED",
+            "encryptionDisabled": false
+          }
+        },
+        "timeoutInMinutes": 40,
+        "queuedTimeoutInMinutes": 5,
+        "buildComplete": true,
+        "initiator": "root",
+        "encryptionKey": "arn:aws:kms:us-east-1:046675437218:alias/aws/s3"
+      }
+    ],
+    "buildsNotFound": []
+  },
+  "cause": "Build launched before staging process completed. No media qualification ran. Waited for completed upload and verified object/policy before retry."
+}

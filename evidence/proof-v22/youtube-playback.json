@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "scope": "Rendered watch page in the in-app browser; authenticated session. Published dialog and Unlisted badge establish visibility; no anonymous-user test.",
+  "observed": {
+    "title": "",
+    "video": [
+      {
+        "currentTime": 17.11909,
+        "duration": 244.121,
+        "height": 240,
+        "muted": false,
+        "paused": false,
+        "readyState": 4,
+        "width": 426
+      }
+    ]
+  },
+  "captions_rendered": true
+}
