@@ -1,6 +1,6 @@
 # Frame Review studio
 
-V22 verifies complete bounded ZIP transfer and all manifest file hashes before a separate save action; actual current prepared-pack Brave disk save verifies all 42 file hashes despite an observer timeout; the larger original-pack save remains unqualified. Default Gentoo guide protects the full 364-pixel readout. Review both states, name teaching areas, check a fresh plan and explicitly generate.
+V22 verifies complete bounded ZIP transfer and all manifest file hashes before a separate save action; actual current prepared/original Brave disk saves verify all 42/44 file hashes despite observer timeouts; the original upload and native media bytes verify too. These are selected Gentoo workflows, not all browsers. Default Gentoo guide protects the full 364-pixel readout. Review both states, name teaching areas, check a fresh plan and explicitly generate.
 
 [Current reproduction](../docs/proof-v22/REPRODUCE.md) | [Report](../docs/real-lessons-report.pdf) | [Creator demo](https://youtu.be/N21Xu2So_Os). Native/API checks pass; engineering proxies do not establish human benefit. Frozen study remains unchanged; no cron.
 

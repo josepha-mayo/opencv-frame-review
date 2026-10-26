@@ -1,6 +1,6 @@
 {
   "complete": true,
-  "scope": "Completed actual browser observations, with prepared-pack filesystem save verified and original-pack save unresolved. Native, API, browser and human evidence remain separate.",
+  "scope": "Completed actual original/prepared Brave workflows and genuinely saved files; observer timeouts retained. One selected lesson, not all browsers or human benefit.",
   "source_manifest_sha256": "104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210",
   "observed": {
     "consent": false,
@@ -77,6 +77,7 @@
   },
   "mobile_receipt": "proof-v22-mobile-browser.json",
   "checked_utc": "2026-10-26T19:36:13.995302+00:00",
-  "download_gate_scope": "Current prepared-sample 2.7 MiB checked-Blob save only; untouched-original 19.2 MiB save remains unqualified",
-  "prepared_pack_saved_file_receipt": "proof-v22-browser-file-verified.json"
+  "download_gate_scope": "Both current 2.7 MiB prepared sample and 19.2 MiB untouched-original packs genuinely saved in Brave and independently verified",
+  "prepared_pack_saved_file_receipt": "proof-v22-browser-file-verified.json",
+  "original_pack_saved_file_receipt": "proof-v22-original-browser-file-verified.json"
 }

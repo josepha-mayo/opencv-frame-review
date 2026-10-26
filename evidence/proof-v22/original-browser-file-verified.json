@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "scope": "Actual current AWS/Brave untouched Gentoo original upload -> timestamp 1:02 -> explicit analysis -> both source states -> default 364-pixel guide -> fresh reviewed plan and explicit generation -> client full ZIP/44-file verification -> Save checked ZIP -> genuine completed Downloads file -> independent ZIP/member/original/native-media verification. One selected case, not all sources/browsers or human benefit.",
+  "job_id": "fddacfef9a6883a257d5f99505f1a4f5",
+  "source_manifest_sha256": "104e5c0fd19b5bd26eef5f1fac78ed70a488edab1062eff09c2e14761dd5c210",
+  "bytes": 20147245,
+  "sha256": "4cfab46939c12a0531fcc7ff4e9e1b5731d8c0aada09b78d91c6ec85a7e64fef",
+  "file_hashes_verified": 44,
+  "members": 45,
+  "native_media_png_members_byte_identical": 33,
+  "uploaded_original_bytes": 17268947,
+  "uploaded_original_sha256": "28b6582333d38df21ac89e7511b506bbee9e1d211ad5809a4e729fde5a564eb1",
+  "download_observer_passed": false,
+  "filesystem_save_passed": true,
+  "preserved_relative_file": "outputs/proof-v22/Brave-V22-Original-Rescue-Pack.zip",
+  "download_modified_utc": "2026-10-26T20:11:40.181971+00:00",
+  "observed_utc": "2026-10-26T20:12:27.013899+00:00",
+  "ephemeral_demo_jobs_created_after_clean_activation": 1
+}
