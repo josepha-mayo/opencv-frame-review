@@ -1,0 +1,41 @@
+{
+  "id": "joomla-install-reading-pause",
+  "filename": "joomla-install.ogv",
+  "start": 60,
+  "bbox": [
+    124,
+    340,
+    8,
+    12
+  ],
+  "selection": "Exploratory pause-search positive, after three fixed windows in this same source had no proposals. Untouched Joomla installation demonstration, no authored defect. Inspect actual kept/alternate static frames: root prompt caret during a pause. Protect command/output above and lower prompt flanks. Not a held-out or human-benefit result. v10 original-source regression and restored original media suffix; not a new source.",
+  "protected_regions": [
+    {
+      "label": "Commands and installation output",
+      "xywh": [
+        0,
+        0,
+        640,
+        336
+      ]
+    },
+    {
+      "label": "Prompt before caret",
+      "xywh": [
+        0,
+        336,
+        120,
+        24
+      ]
+    },
+    {
+      "label": "Remaining prompt line",
+      "xywh": [
+        136,
+        336,
+        504,
+        24
+      ]
+    }
+  ]
+}

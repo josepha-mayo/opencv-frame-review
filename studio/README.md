@@ -1,8 +1,8 @@
 # Frame Review studio
 
-Current V19 keeps the original recoverable after a sixteen-region analysis refusal and offers an explicit four-second setup. Inspect the range and press Analyze separately; setup sends no request or approval. Both real jEdit failed ranges now reach review with no proposals, and stay unchanged. Edits still require creator teaching areas, a fresh checked plan and explicit consent.
+V21 accepts readable lesson timestamps and shows the complete selected range. Use timestamp/Enter fills the start without uploading or approving. Inspect prepared detail, both states and teaching areas; check a fresh plan and explicitly generate. A region-limit failure keeps original/prepared links and offers explicit four-second setup; analyze separately. No proposal can correctly mean Leave unchanged.
 
-[Current reproduction](../docs/proof-v19/REPRODUCE.md) · [Current report](../docs/real-lessons-report.pdf). All 14 Linux stages and same-image real browser/HTTP/native recovery checks pass. Final clean activation has separate identity/health scope. No human benefit measured; video waits for creator audio. No cron.
+[Current reproduction](../docs/proof-v21/REPRODUCE.md) | [Four-page report](../docs/real-lessons-report.pdf). Full native/HTTPS checks pass; current Brave generation/recovery and desktop/375px layout verify. Brave pack saves timed out and stay open. Same-image final activation has separate identity/health scope. Human benefit unmeasured. New video waits for creator audio; no cron.
 
 ## Historical studio notes
 

@@ -1,0 +1,102 @@
+{
+  "hackathon": {
+    "id": 30984,
+    "slug": "opencv26",
+    "title": "OpenCV AI Competition 2026, powered by AWS"
+  },
+  "data": {
+    "prizes": [
+      {
+        "name": "First Place Grand Prize",
+        "type": "cash",
+        "type_raw": "cash",
+        "amount": {
+          "value": 5000,
+          "currency": "$",
+          "display": "$5,000"
+        },
+        "winners": 1,
+        "position": 1,
+        "participation": false,
+        "description": ""
+      },
+      {
+        "name": "Second Place",
+        "type": "cash",
+        "type_raw": "cash",
+        "amount": {
+          "value": 3000,
+          "currency": "$",
+          "display": "$3,000"
+        },
+        "winners": 1,
+        "position": 2,
+        "participation": false,
+        "description": ""
+      },
+      {
+        "name": "Third Place",
+        "type": "cash",
+        "type_raw": "cash",
+        "amount": {
+          "value": 2000,
+          "currency": "$",
+          "display": "$2,000"
+        },
+        "winners": 1,
+        "position": 3,
+        "participation": false,
+        "description": ""
+      },
+      {
+        "name": "Best Use of COOL Award",
+        "type": "cash",
+        "type_raw": "cash",
+        "amount": {
+          "value": 1000,
+          "currency": "$",
+          "display": "$1,000"
+        },
+        "winners": 1,
+        "position": 4,
+        "participation": false,
+        "description": ""
+      },
+      {
+        "name": "Agentic Vision Award",
+        "type": "cash",
+        "type_raw": "cash",
+        "amount": {
+          "value": 1000,
+          "currency": "$",
+          "display": "$1,000"
+        },
+        "winners": 1,
+        "position": 5,
+        "participation": false,
+        "description": ""
+      },
+      {
+        "name": "Compute Grant for AWS",
+        "type": "cash",
+        "type_raw": "cash",
+        "amount": {
+          "value": 150,
+          "currency": "$",
+          "display": "$150"
+        },
+        "winners": 55,
+        "position": 6,
+        "participation": false,
+        "description": ""
+      }
+    ],
+    "total_value": {
+      "value": 20250,
+      "currency": "$",
+      "display": "$20,250"
+    }
+  },
+  "data_completeness": "complete",
+  "fetched_at": "2026-10-26T10:47:33Z"
+}

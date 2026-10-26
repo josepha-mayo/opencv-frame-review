@@ -1,16 +1,18 @@
 # Frame Review: Keep the Lesson
 
-**Keep your recording when analysis hits a limit.** V19 adds a recovery card for the sixteen-region refusal: download the retained original/prepared excerpt and set up a four-second range without losing the selected file. Setup never uploads, analyzes or approves an edit; the creator explicitly analyzes again. Fixed-frame teaching comparison, 100%/200% inspection and V18 pan retention remain.
+**Calm the blink. Keep the changing explanation.** For a creator with a finished recording and no editable project, OpenCV proposes a bounded local hold, the creator names teaching areas to preserve, and the encoded result must keep their exact RGB timelines, prepared audio and timing. Every edit needs a fresh reviewed plan and explicit consent. The original stays recoverable.
 
-[Live app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/) · [Current four-page report](docs/real-lessons-report.pdf) · [Evidence and reproduction](docs/proof-v19/REPRODUCE.md).
+V21 makes selecting the moment easier: enter **1:02** to fill 62 seconds, inspect **1:02-1:14**, then explicitly Analyze. Enter never uploads. Invalid times preserve the range. Desktop and 375px start/length fields stay aligned; explicit four-second retry keeps the selected file and clears edit consent.
 
-Both real jEdit failures at 95/176 seconds complete the actual browser 12-second refusal → four-second retry → review with zero proposals. Original/prepared downloads verify; no edit approval or newly repaired lesson is claimed. The card fits an actual 375px browser viewport. No physical-phone or fresh Brave qualification. All 14 Linux stages, 137 backend/132 studio tests (one skip), three native and current HTTPS regressions pass. The 108 media/PNG regression members match V18; frozen engine, boundary renderer and study files are unchanged.
+[Live app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/) | [Current four-page report](docs/real-lessons-report.pdf) | [Reproduction and all limitations](docs/proof-v21/REPRODUCE.md) | [Judging map](docs/proof-v21/judging-map.md)
 
-Fourteen new fixed Sed/Lynx windows reach review with zero proposals and exact source recovery. Combined exploratory evidence retains 56 windows across seven new lesson titles and one repeated bootcamp source, including negative/refused cases. Overlap, shared creators and sequential selection limit independence. No new useful repair or human benefit is demonstrated.
+Three selected real originals retain every declared teaching RGB frame while whole-excerpt selected-region events fall **37 to 21 across 36 seconds**, including cut points. This decoded-code proxy is not human benefit or detector recall. [Results figure](docs/proof-v21/selected-real-results.pdf). The expanded **70-window** natural screen retains every outcome, with **zero newly useful repairs qualified**; overlap/shared creators limit independence.
 
-The prospective [reading/preference pilot](human-study/) still has zero valid humans in its dated aggregate, with QA excluded and team responses separate. [Devpost volunteer discussion](https://opencv26.devpost.com/forum_topics/45681-3-4-minute-lesson-clip-study-looking-for-adult-volunteers).
+All 14 Linux stages, 137 backend / 136 studio tests (one skip), 73 focused UI/compatibility tests, three native and current HTTPS API regressions pass. All 51/45/45 pack-member hashes verify; 108 media/PNG bytes match V19. Current Brave completes original Gentoo generation and real SMW 12-second refusal -> explicit four-second review -> Leave unchanged. **Brave pack-save attempts timed out**; browser download completion remains unqualified. Actual 375px layout is not a physical-phone test.
 
-After preserving QA evidence, the identical image is activated cleanly; final identity/health and earlier same-image full qualification have separate receipts. Direct default-branch pushes; no cron. The demo waits for creator audio.
+The [prospective human pilot](human-study/) has one invitation start and **zero completed valid human responses** in the dated aggregate, QA excluded. [Devpost volunteer discussion](https://opencv26.devpost.com/forum_topics/45681-3-4-minute-lesson-clip-study-looking-for-adult-volunteers). No learning, attention, preference, accessibility or time-saving result is established.
+
+Same-image clean activation frees ephemeral QA slots; final identity/health and prior full qualification are separate receipts. Direct default-branch pushes; no cron. New demo waits for creator audio.
 
 ## Historical version notes
 

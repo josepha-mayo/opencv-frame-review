@@ -1,0 +1,47 @@
+{
+  "complete": true,
+  "scope": "Descriptive engineering aggregate of three previously selected original-source native regressions. Whole-excerpt selected-ROI mean RGB changes >=8 codes, including entry/return. Not detection recall, human learning, attention, preference or time saved.",
+  "runtime_manifest_sha256": "6fadcf5afb5e2a6a0945db0cc42338e68a2f242f7e672b25507e8fd738d22786",
+  "cases": [
+    {
+      "case": "upload-assistant",
+      "label": "French form",
+      "duration_seconds": 12,
+      "source": 8,
+      "edited": 2,
+      "all_declared_teaching_rgb_frames_exact": true,
+      "prepared_audio_timing_and_boundaries_pass": true,
+      "source_sha256": "f3fb18ff88451ed8e44b3a4ac080474a0d108cc3b08af3d0f8e3013d65af2c61",
+      "result_json_sha256": "cb47b2627a4155333fa99827ec71b2e98f7a49211363c5e1d71ef4a5d97d7dc9"
+    },
+    {
+      "case": "joomla",
+      "label": "Joomla setup",
+      "duration_seconds": 12,
+      "source": 16,
+      "edited": 10,
+      "all_declared_teaching_rgb_frames_exact": true,
+      "prepared_audio_timing_and_boundaries_pass": true,
+      "source_sha256": "dcf4e35db5ada861d44ef0313083710c8397313885bc38afc901d8472475f83a",
+      "result_json_sha256": "7e23967601c8378e8462878d7f7eabc3aad74a4f202c091b04f1ef58078d1e1b"
+    },
+    {
+      "case": "gentoo",
+      "label": "Gentoo packages",
+      "duration_seconds": 12,
+      "source": 13,
+      "edited": 9,
+      "all_declared_teaching_rgb_frames_exact": true,
+      "prepared_audio_timing_and_boundaries_pass": true,
+      "source_sha256": "28b6582333d38df21ac89e7511b506bbee9e1d211ad5809a4e729fde5a564eb1",
+      "result_json_sha256": "5ccf78fe2bd178a3094107b3fa9e33fb9e370eb7ffb5da2d7235f16dac846f00"
+    }
+  ],
+  "selected_seconds": 36,
+  "source_events": 37,
+  "edited_events": 21,
+  "fewer_events": 16,
+  "relative_event_reduction": 0.43243243243243246,
+  "selection_limit": "Chosen development cases; expanded70-window exploratory screens have zero newly useful repairs qualified. Overlapping windows/shared creators are not independent people.",
+  "figure_sha256": "fa2e0bf0f3480d2261ee5c84692aa75bc6f93f1a85fd370916b3b93833cb4976"
+}

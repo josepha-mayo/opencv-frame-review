@@ -1,0 +1,9 @@
+{
+  "released": false,
+  "scope": "Optional original-source local preview experiment, not a delivered feature.",
+  "focused_ui_tests": "40 pass after correcting decimal subtraction",
+  "browser": "In-app-browser failed to preview both original Gentoo VP9 gbrp and jEdit VP8 lessons; fallback remained usable. No media-playback qualification.",
+  "compatibility": "Two frozen static-only UI checks reject video elements. No frozen test or backend changed.",
+  "other_local_attempt": "Full Windows suite was run before manifest freeze; failures include changed source hashes, Windows cp1252 decoding and missing Linux resource module. It is not a Linux media qualification.",
+  "decision": "Preserve negative experiment outside tracked release; retain the static review contract and build timestamp-entry usability instead."
+}

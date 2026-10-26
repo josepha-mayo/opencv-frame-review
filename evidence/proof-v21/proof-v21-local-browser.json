@@ -1,0 +1,70 @@
+{
+  "complete": true,
+  "scope": "Actual Brave desktop and375px labelled local QA of production timestamp helpers and corrected layout; not AWS media or human response.",
+  "desktop": {
+    "client": 1859,
+    "fields": [
+      {
+        "height": 37.828125,
+        "id": "lesson-timestamp",
+        "value": "1:35",
+        "width": 372.390625,
+        "x": 408.5,
+        "y": 456.75
+      },
+      {
+        "height": 37.828125,
+        "id": "clip-start",
+        "value": "95",
+        "width": 180.1875,
+        "x": 408.5,
+        "y": 624.625
+      },
+      {
+        "height": 37.828125,
+        "id": "clip-duration",
+        "value": "12",
+        "width": 180.203125,
+        "x": 600.6875,
+        "y": 624.625
+      }
+    ],
+    "range": "Selected range: 1:35–1:47 (12 seconds). Inspect this moment in your source, then explicitly Analyze selected file.",
+    "scroll": 1859,
+    "viewport": 1874
+  },
+  "mobile": {
+    "client": 360,
+    "consent": false,
+    "empty": true,
+    "fields": [
+      {
+        "height": 37.828125,
+        "id": "lesson-timestamp",
+        "value": "1:35",
+        "width": 286,
+        "x": 37,
+        "y": 336.421875
+      },
+      {
+        "height": 37.828125,
+        "id": "clip-start",
+        "value": "95",
+        "width": 137,
+        "x": 37,
+        "y": 504.296875
+      },
+      {
+        "height": 37.828125,
+        "id": "clip-duration",
+        "value": "12",
+        "width": 137,
+        "x": 186,
+        "y": 504.296875
+      }
+    ],
+    "range": "Selected range: 1:35–1:47 (12 seconds). Inspect this moment in your source, then explicitly Analyze selected file.",
+    "scroll": 360,
+    "viewport": 375
+  }
+}

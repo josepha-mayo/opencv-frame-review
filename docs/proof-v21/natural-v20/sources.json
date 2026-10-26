@@ -1,0 +1,34 @@
+[
+  {
+    "id": "smw-docker",
+    "filename": "smw-docker.webm",
+    "title": "SMW DOCKER.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:SMW_DOCKER.webm",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/SMW_DOCKER.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "bytes": 11660891,
+    "sha256": "ff369519b1a388761bfb925e9dc3b56dc49ac69c3cb851bc49aa07ada63af3a1",
+    "commons_sha1": "7e278e3100584e6792085d28bad5089404030dc4",
+    "artist": "Otautz",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "rights_scope": "Official Commons metadata as listed; not independent rights clearance or endorsement. No added defect.",
+    "fetched_utc": "2026-10-26T10:49:41.170028+00:00"
+  },
+  {
+    "id": "bbb-tutorial",
+    "filename": "bbb-tutorial.webm",
+    "title": "BigBlueButton Tutorial.webm",
+    "page": "https://commons.wikimedia.org/wiki/File:BigBlueButton_Tutorial.webm",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/BigBlueButton_Tutorial.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "bytes": 8962984,
+    "sha256": "05e4da34b644dcb27ec969d9ee45c6d5be5ca9011a2df0e9b2ef2e25850ed06e",
+    "commons_sha1": "db871f62126b78d8338463072ec892a01128f006",
+    "artist": "KENNETH FRANCIS RODRIGUES -",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "credit": "YouTube: BIG BLUE BUTTON TUTORIAL \u2013 View/save archived versions on archive.org",
+    "rights_scope": "Official Commons metadata as listed; not independent rights clearance or endorsement. No added defect.",
+    "fetched_utc": "2026-10-26T10:49:44.653182+00:00"
+  }
+]

@@ -8,7 +8,7 @@ STUDIO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(STUDIO.parent / 'opencv-ready/candidate/app/tests'))
 from test_boundary_ui_static import HARNESS, NODE
 
-EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCard, teachingComparison, failureExcerpt, renderFailureHelp, setupShorterExcerpt, localURL, ui, byId,
+EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCard, teachingComparison, failureExcerpt, renderFailureHelp, setupShorterExcerpt, parseLessonTimestamp, renderExcerptRange, useLessonTimestamp, localURL, ui, byId,
   protectionValues, resetProtection, invalidateProtection, drawProtection,
   saveProtectedRegion, removeProtectedRegion, editProtectedRegion, cancelProtectedEdit, checkProtection, loadTeachingGuide,
   startAreaMarking, cancelAreaMarking, markAreaCorner, renderWorkflow,
@@ -26,6 +26,36 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCa
 
 
 class StudioEditor(unittest.TestCase):
+    def test_lesson_timestamp_accepts_timecodes_and_refuses_ambiguous_or_out_of_range_inputs(self):
+        self.run_js('''
+for(const [text,value]of [['1:35',95],['02:56.4',176.4],['95.2',95.2],['10:00',600],['0',0],[' 0:04 ',4]])assert.equal(api.parseLessonTimestamp(text),value);
+for(const text of ['',null,'1:60','1:2','10:00.1','601','-1','1e2','1:35.22','https://player/95','0x10','Infinity'])assert.equal(api.parseLessonTimestamp(text),null,text);
+''')
+
+    def test_timestamp_setup_keeps_selected_file_and_never_uploads_or_grants_consent(self):
+        self.run_js('''
+api.setJob(null);api.setBusy(false);const file={name:'lesson.webm',size:100};ui.file.files=[file];
+ids.get('lesson-timestamp').value='1:35';ids.get('clip-duration').value='4';ui.reviewed.checked=true;
+api.useLessonTimestamp();assert.equal(ids.get('clip-start').value,'95');assert.equal(ids.get('clip-duration').value,'4');assert.equal(ui.file.files[0],file);
+assert.equal(ui.reviewed.checked,false);assert.equal(api.plan(),null);assert.ok(ids.get('excerpt-range').textContent.includes('1:35–1:39'));assert.ok(ids.get('timestamp-feedback').textContent.includes('Nothing was uploaded or approved'));
+let prevented=0;ids.get('lesson-timestamp').value='2:56';ids.get('lesson-timestamp').events.keydown({key:'Enter',preventDefault(){prevented++;}});assert.equal(prevented,1);assert.equal(ids.get('clip-start').value,'176');
+''')
+
+    def test_timestamp_error_busy_and_uncertain_states_keep_existing_range(self):
+        self.run_js('''
+api.setJob(null);api.setBusy(false);ids.get('clip-start').value='95';ids.get('lesson-timestamp').value='1:60';api.useLessonTimestamp();assert.equal(ids.get('clip-start').value,'95');assert.ok(ids.get('timestamp-feedback').textContent.includes('Nothing was changed'));
+ids.get('lesson-timestamp').value='2:56';api.setBusy(true);api.useLessonTimestamp();assert.equal(ids.get('clip-start').value,'95');api.setBusy(false);api.setUncertain(true);api.useLessonTimestamp();assert.equal(ids.get('clip-start').value,'95');
+api.setUncertain(false);api.setJob({id:'a'.repeat(32),status:'analyzing'});api.setBusy(false);api.useLessonTimestamp();assert.equal(ids.get('clip-start').value,'95');
+''')
+
+    def test_range_reacts_to_manual_inputs_and_canonical_mode_without_old_html_controls(self):
+        self.run_js('''
+ids.get('prepare-lesson').checked=true;ids.get('clip-start').value='95.2';ids.get('clip-duration').value='4';api.renderExcerptRange();assert.ok(ids.get('excerpt-range').textContent.includes('1:35.2–1:39.2'));
+ids.get('clip-start').value='';api.renderExcerptRange();assert.ok(ids.get('excerpt-range').textContent.includes('Choose a valid'));
+ids.get('prepare-lesson').checked=false;api.renderExcerptRange();assert.ok(ids.get('excerpt-range').textContent.includes('Excerpt settings are not used'));
+const find=context.document.getElementById;context.document.getElementById=id=>['lesson-timestamp','timestamp-use','excerpt-range','timestamp-feedback'].includes(id)?null:find(id);api.renderExcerptRange();api.useLessonTimestamp();api.setBusy(true);
+''')
+
     def test_old_cached_html_without_recovery_card_does_not_break_existing_controls(self):
         self.run_js('''
 const find=context.document.getElementById;

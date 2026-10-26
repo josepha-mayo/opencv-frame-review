@@ -1,0 +1,20 @@
+{
+  "source_manifest_sha256": "6fadcf5afb5e2a6a0945db0cc42338e68a2f242f7e672b25507e8fd738d22786",
+  "runtime_files": 119,
+  "changed_runtime_files": [
+    "studio/static/app.js",
+    "studio/static/index.html",
+    "studio/static/styles.css",
+    "studio/tests/test_studio_ui.py"
+  ],
+  "parent_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:44ef5b4a4cebfb2ee94eaa97961fd26893de6b63542d8061d654389aaaf9574d",
+  "source_zip_sha256": "ec00ec3c06ea52805d0b48fecfb8c9b9050fc82893dff07ca77e49aeef11f83b",
+  "source_s3": "opencv-creator-replay-046675437218-20261016/proof-v21/6fadcf5afb5e2a6a0945db0cc42338e68a2f242f7e672b25507e8fd738d22786/source.zip",
+  "evidence_s3": "opencv-creator-replay-046675437218-20261016/proof-v21/6fadcf5afb5e2a6a0945db0cc42338e68a2f242f7e672b25507e8fd738d22786/qualification-evidence.zip",
+  "image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue:proof-v21-6fadcf5afb5e2a6a",
+  "role_policy": "ProofV21Qualification",
+  "scope": "Readable lesson timestamps; all14 Linux stages, three original-source regressions and the real failed/shorter-excerpt native flow passed. Not yet a live release.",
+  "complete": true,
+  "image_digest": "sha256:809ceb28752d750bac4db5da85ecced55fc0c0822b5f59d256b7ca6d77acb2bf",
+  "pinned_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:809ceb28752d750bac4db5da85ecced55fc0c0822b5f59d256b7ca6d77acb2bf"
+}

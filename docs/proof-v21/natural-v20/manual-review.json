@@ -1,0 +1,17 @@
+{
+  "scope": "Agent inspection of actual contact sheets from the fixed original-source screen. Not a human study, semantic ground truth, or encoded repair qualification.",
+  "candidate_windows": 3,
+  "candidate_count": 9,
+  "reviews": [
+    {"source": "bbb-tutorial", "start_seconds": 180, "candidates": 1, "observation": "The proposed rectangle covers the Actions plus-button/menu interaction being demonstrated. The surrounding clip changes to presentation upload. Preserve this instruction; no repair justified by these frames."},
+    {"source": "smw-docker", "start_seconds": 137, "candidates": 7, "observation": "Rectangles cover source editing, page rendering, navigation and interface text while the lesson transitions between template code and its result. No proposal is called an incidental distraction or qualified repair."},
+    {"source": "smw-docker", "start_seconds": 64, "candidates": 1, "observation": "Small rectangle lies on the MediaWiki logo edge during page/install changes. Contact sheets do not establish a periodic decoration or a useful edit. Keep it unqualified; uncertainty is retained."}
+  ],
+  "region_cap_refusals": 5,
+  "review_outcomes": 9,
+  "review_cases_with_exact_source_prepared_recovery": 9,
+  "failed_cases_source_recovery_tested_in_this_screen": 0,
+  "new_useful_repairs_qualified": 0,
+  "authored_defects": 0,
+  "runtime_scope": "Pinned V19 image. V20 changes timestamp interface and its tests; analysis/encoder are unchanged."
+}

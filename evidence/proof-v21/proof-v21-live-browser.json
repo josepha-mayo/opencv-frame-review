@@ -1,0 +1,232 @@
+{
+  "complete": true,
+  "scope": "Completed actual V21 AWS/Brave timestamp, original-source generation, natural SMW failure to explicit four-second no-proposal recovery, and 375px layout QA. Brave rescue-pack save attempts timed out and are not qualified. Complete means these observations were recorded, not all browser checks passed. No human participant or creator acceptance for use.",
+  "source_manifest_sha256": "6fadcf5afb5e2a6a0945db0cc42338e68a2f242f7e672b25507e8fd738d22786",
+  "invalid": {
+    "empty": true,
+    "feedback": "Use m:ss (such as 1:35), m:ss.s, or seconds from 0 to 600. Seconds after a colon must be 00–59. Nothing was changed.",
+    "start": "0"
+  },
+  "positive": {
+    "beforeAnalyze": {
+      "consent": false,
+      "empty": true,
+      "fields": [
+        {
+          "id": "clip-start",
+          "width": 180.1875,
+          "x": 408.5,
+          "y": 625.046875
+        },
+        {
+          "id": "clip-duration",
+          "width": 180.203125,
+          "x": 600.6875,
+          "y": 625.046875
+        }
+      ],
+      "file": "C:\\fakepath\\gentoo-equery.webm",
+      "length": "12",
+      "range": "Selected range: 1:02–1:14 (12 seconds). Inspect this moment in your source, then explicitly Analyze selected file.",
+      "start": "62"
+    },
+    "job_id": "a23c573e0c95cffe627a7e19b71229f2",
+    "checkedPlan": {
+      "areas": "1. Commands and package explanation · [0, 0, 640, 326]RemoveEdit2. Live package progress readout · [0, 326, 360, 18]RemoveEdit3. Terminal lower margin · [0, 344, 640, 16]RemoveEdit",
+      "consent": false,
+      "images": [
+        {
+          "complete": true,
+          "height": 360,
+          "id": "candidate-overlay",
+          "src": "/api/jobs/a23c573e0c95cffe627a7e19b71229f2/steady/steady-0-reference.png",
+          "width": 640
+        },
+        {
+          "complete": true,
+          "height": 360,
+          "id": "steady-alternate",
+          "src": "/api/jobs/a23c573e0c95cffe627a7e19b71229f2/steady/steady-0-alternate.png",
+          "width": 640
+        },
+        {
+          "complete": true,
+          "height": 360,
+          "id": "preparation-preview",
+          "src": "/api/jobs/a23c573e0c95cffe627a7e19b71229f2/intake/preview",
+          "width": 640
+        }
+      ],
+      "plan": "",
+      "preparation": "Teaching detail check: 1366 × 768 source → 640 × 360 review. Check the smallest label before editing; resizing can make teaching detail unreadable. Prepared excerpt: 62–74 seconds. Picture and audio were converted once. All exact edit checks compare against this prepared clip, not the uploaded original. Keep both sources and the preparation receipt."
+    },
+    "freshPlan": {
+      "areas": "1. Commands and package explanation · [0, 0, 640, 326]RemoveEdit2. Live package progress readout · [0, 326, 364, 18]RemoveEdit3. Terminal lower margin · [0, 344, 640, 16]RemoveEdit",
+      "consent": false,
+      "plan": "Hold the observed brightness state from frame 86 steady inside this interval. Detected region: [370, 330, 6, 10]; detected interval: frames 61–173. Check every frame of: Commands and package explanation, Live package progress readout, Terminal lower margin. Generate only after reviewing this plan. The encoded result can still be refused.",
+      "planVisible": true
+    },
+    "explicitQaConsent": true,
+    "generated_comparison_observed": true,
+    "browser_download_status": "Brave helper timed out and old tab handles became unavailable; no saved file was observed. Not claimed complete."
+  },
+  "recovery": [
+    {
+      "source": "SMW DOCKER.webm",
+      "start": 18,
+      "length": 12,
+      "result": "More than 16 regions; this review interface cannot admit the clip.",
+      "job_id": "9e110babdd07802bbdf90bb9072e02b7",
+      "before_retry": {
+        "consent": false,
+        "file": "C:\\fakepath\\smw-docker.webm",
+        "length": "12",
+        "retained": [
+          {
+            "href": "/api/jobs/9e110babdd07802bbdf90bb9072e02b7/intake/upload",
+            "text": "Download retained original"
+          },
+          {
+            "href": "/api/jobs/9e110babdd07802bbdf90bb9072e02b7/intake/prepared",
+            "text": "Download prepared excerpt"
+          }
+        ],
+        "start": "18"
+      },
+      "after_setup": {
+        "consent": false,
+        "file": "C:\\fakepath\\smw-docker.webm",
+        "length": "4",
+        "retained": [
+          {
+            "href": "/api/jobs/9e110babdd07802bbdf90bb9072e02b7/intake/upload",
+            "text": "Download retained original"
+          },
+          {
+            "href": "/api/jobs/9e110babdd07802bbdf90bb9072e02b7/intake/prepared",
+            "text": "Download prepared excerpt"
+          }
+        ],
+        "start": "18",
+        "status": "This job could not be completed. See the details below."
+      },
+      "explicitRetry": true,
+      "retry_job_id": "257b8098e65ce42411368cefa01681a6",
+      "retry_status": "Review needed; zero supported proposals",
+      "left_unchanged": true,
+      "edit_approval": false,
+      "browser_saved_source_bytes_verified": false
+    }
+  ],
+  "prepared_sample": {
+    "scope": "Separate fresh Brave workflow on the identical hash-bound prepared Gentoo sample, not the original-upload pack.",
+    "checked_plan": {
+      "consent": false,
+      "plan": "Hold the observed brightness state from frame 86 steady inside this interval. Detected region: [370, 330, 6, 10]; detected interval: frames 61–173. Check every frame of: Commands and package explanation, Live package progress readout, Terminal lower margin. Generate only after reviewing this plan. The encoded result can still be refused.",
+      "sourceImages": [
+        {
+          "complete": true,
+          "id": "candidate-overlay",
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/steady/steady-0-reference.png",
+          "width": 640
+        },
+        {
+          "complete": true,
+          "id": "steady-alternate",
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/steady/steady-0-alternate.png",
+          "width": 640
+        }
+      ],
+      "visible": true
+    },
+    "explicitQaConsent": true,
+    "job_id": "591fb3802bacd52b526dd3b146a3a905",
+    "generated": {
+      "images": [
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00060-original.png",
+          "width": 38
+        },
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00060-control.png",
+          "width": 38
+        },
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00060-edited.png",
+          "width": 38
+        },
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00061-original.png",
+          "width": 38
+        },
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00061-control.png",
+          "width": 38
+        },
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00061-edited.png",
+          "width": 38
+        },
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00173-original.png",
+          "width": 38
+        },
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00173-control.png",
+          "width": 38
+        },
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00173-edited.png",
+          "width": 38
+        },
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00174-original.png",
+          "width": 38
+        },
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00174-control.png",
+          "width": 38
+        },
+        {
+          "complete": true,
+          "src": "/api/jobs/591fb3802bacd52b526dd3b146a3a905/review/boundary-f00174-edited.png",
+          "width": 38
+        }
+      ],
+      "links": [
+        {
+          "href": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/591fb3802bacd52b526dd3b146a3a905/rescue-pack.zip",
+          "text": "Download verified rescue pack↓"
+        }
+      ],
+      "status": "Encoding and measurements are complete. Even passing numeric checks still requires creator review."
+    },
+    "download_error": "Error: Error: Timed out after 45000ms waiting for download.\nlocator.downloadMedia failed for selector internal:role=link[name=\"Download verified rescue pack\"i]\nLocator diagnostics: {\"kind\":\"action_failed\",\"action\":\"downloadMedia\",\"locator\":\"internal:role=link[name=\\\"Download verified rescue pack\\\"i]\",\"matchCount\":1,\"matches\":[{\"ariaLabel\":null,\"disabled\":false,\"role\":null,\"tag\":\"a\",\"text\":\"Download verified rescue pack↓\",\"type\":null,\"visible\":true}],\"visibleCount\":1,\"truncated\":false}"
+  },
+  "mobile_recovery": {
+    "client": 360,
+    "range": "Selected range: 0:18–0:22 (4 seconds). Inspect this moment in your source, then explicitly Analyze selected file.",
+    "scroll": 360,
+    "width": 375
+  },
+  "download_gate_passed": false,
+  "checked_utc": "2026-10-26T12:18:41.891Z",
+  "final_timestamp_mobile": {
+    "client": 360,
+    "consent": false,
+    "range": "Selected range: 1:02–1:14 (12 seconds). Inspect this moment in your source, then explicitly Analyze selected file.",
+    "scroll": 360,
+    "width": 375
+  }
+}

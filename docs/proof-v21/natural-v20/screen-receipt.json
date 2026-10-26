@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "build_status": "SUCCEEDED",
+  "cases": 14,
+  "candidate_windows": 3,
+  "candidates": 9,
+  "new_source_count": 2,
+  "previously_tested_source_count": 0,
+  "overlap_note": "SMW Docker and BigBlueButton Tutorial titles were absent from prior source manifests. Listed authors Otautz and Kenneth Francis Rodrigues; creator independence is not independently verified and this is not held-out recall. Fixed exploratory windows selected before viewing these originals; every outcome retained.",
+  "useful_repairs_qualified": 0,
+  "temporary_policy_removed": true,
+  "evidence_sha256": "d19e1f311856efbb40765c6788d3a9ee158404184b704a7a2caec103a72f4c84",
+  "checked_utc": "2026-10-26T10:57:07.551243+00:00"
+}

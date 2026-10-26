@@ -99,6 +99,32 @@
   const preparationNotice = byId("preparation-notice"), preparationPreview = byId("preparation-preview");
   const realDemo = byId("real-demo-button");
   const realChallenge = byId("real-challenge-button");
+  function parseLessonTimestamp(value) {
+    if (typeof value!=="string") return null;
+    const text=value.trim();let tenths;
+    if (/^\d{1,3}(?:\.\d)?$/.test(text)) tenths=Math.round(Number(text)*10);
+    else {const match=/^(\d{1,2}):([0-5]\d)(?:\.(\d))?$/.exec(text);if (!match) return null;tenths=Number(match[1])*600+Number(match[2])*10+Number(match[3]||0);}
+    return tenths<=6000?tenths/10:null;
+  }
+  function lessonTime(seconds) {
+    const tenths=Math.round(seconds*10),whole=Math.floor(tenths/10);
+    return Math.floor(whole/60)+":"+String(whole%60).padStart(2,"0")+(tenths%10?"."+tenths%10:"");
+  }
+  function renderExcerptRange() {
+    const area=byId("excerpt-range");if (!area) return;
+    const start=Number(clipStart.value),length=Number(clipDuration.value);
+    const valid=clipStart.value!==""&&clipDuration.value!==""&&Number.isFinite(start)&&start>=0&&start<=600&&Math.abs(start*10-Math.round(start*10))<.000001&&Number.isFinite(length)&&length>=1&&length<=12&&Math.abs(length*10-Math.round(length*10))<.000001;
+    area.textContent=!prepareLesson.checked?"Canonical input: the entire selected clip is analyzed. Excerpt settings are not used.":valid?"Selected range: "+lessonTime(start)+"–"+lessonTime(start+length)+" ("+length+" seconds). Inspect this moment in your source, then explicitly Analyze selected file.":"Choose a valid start and 1–12-second length before analyzing.";
+  }
+  function useLessonTimestamp() {
+    const field=byId("lesson-timestamp"),feedback=byId("timestamp-feedback");
+    if (!field || !feedback || busy || refreshInFlight || stateUncertain || ui.file.disabled) return;
+    const start=parseLessonTimestamp(field.value);
+    if (start===null) {feedback.textContent="Use m:ss (such as 1:35), m:ss.s, or seconds from 0 to 600. Seconds after a colon must be 00–59. Nothing was changed.";return;}
+    resetProtection(null);ui.reviewed.checked=false;prepareLesson.checked=true;clipStart.value=String(start);
+    feedback.textContent="Start set to "+lessonTime(start)+" ("+start+" seconds). Check the length below. Nothing was uploaded or approved.";
+    renderExcerptRange();updateControls();clipStart.focus?.();
+  }
   const naturalDemo = byId("natural-demo-button");
   const naturalExample = byId("natural-example");
   const teachingGuide = byId("teaching-guide"), teachingGuideLoad = byId("teaching-guide-load");
@@ -222,6 +248,7 @@
     recovery.retry.disabled = recovering || !token;
     recovery.dismiss.disabled = recovering;
     ui.file.disabled = busy || !token || locked;
+    for (const id of ["lesson-timestamp","timestamp-use"]) {const field=byId(id);if (field) field.disabled=ui.file.disabled || refreshInFlight || stateUncertain;}
     ui.demo.disabled = busy || !token || locked;
     naturalDemo.disabled = busy || !token || locked;
     naturalExample.disabled = naturalDemo.disabled;
@@ -577,6 +604,7 @@
     if (!spec?.canShorten || busy || refreshInFlight || stateUncertain || recovering || recoveryId || !token) return;
     resetProtection(null);ui.reviewed.checked=false;
     prepareLesson.checked=true;clipStart.value=String(spec.start);clipDuration.value="4";
+    renderExcerptRange();
     byId("excerpt-help-feedback").textContent="4-second range set. Choose the same original file and click Analyze selected file. The previous source links remain available until you start another job. Nothing was uploaded or approved.";
     updateControls();ui.file.focus?.();
   }
@@ -1174,6 +1202,10 @@
     if (!ui.cancel.disabled) decision("cancel", {});
   });
   ui.retry.addEventListener("click", refreshJob);
+  byId("timestamp-use")?.addEventListener("click",useLessonTimestamp);
+  byId("lesson-timestamp")?.addEventListener("keydown",event=>{if (event.key==="Enter") {event.preventDefault();useLessonTimestamp();}});
+  [prepareLesson,clipStart,clipDuration].forEach(field=>field.addEventListener("input",renderExcerptRange));
+  renderExcerptRange();
   byId("excerpt-help-set")?.addEventListener("click",setupShorterExcerpt);
   recovery.retry.addEventListener("click", restoreJob);
   recovery.dismiss.addEventListener("click", forgetRecovery);

@@ -1,0 +1,25 @@
+{
+  "fields": [
+    {
+      "height": 30.796875,
+      "id": "clip-start",
+      "value": "62",
+      "width": 94,
+      "x": 512.265625,
+      "y": 585.5625
+    },
+    {
+      "height": 30.796875,
+      "id": "clip-duration",
+      "value": "12",
+      "width": 87,
+      "x": 408.5,
+      "y": 616.359375
+    }
+  ],
+  "gridDisplay": "block",
+  "misaligned": true,
+  "scope": "Already-loaded V20 AWS page before reload; desktop timestamp-field wrapping reproduced. No new analysis or edit.",
+  "timestampLabelClass": "small",
+  "viewport": 1874
+}

@@ -51,3 +51,7 @@
 .proof-desk-viewport { max-width: 100%; min-height: 100px; max-height: 420px; overflow: auto; border: 1px solid var(--line); background: #202420; }
 .proof-desk-viewport img { display: block; max-width: none; height: auto; image-rendering: pixelated; }
 .proof-desk-viewport img[hidden], .proof-desk-panel[hidden] { display: none; }
+.timestamp-label { display: block; font-size: .8rem; font-weight: 650; margin: 16px 0 10px; }
+.timestamp-label input, .protection-inputs input { display: block; width: 100%; min-width: 0; padding: 8px; margin-top: 5px; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
+.protection-inputs { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin: 16px 0 10px; }
+.protection-inputs label { display: block; min-width: 0; font-size: .8rem; }
