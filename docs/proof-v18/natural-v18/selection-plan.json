@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-26T00:22:10.661052+00:00",
+  "sources": [
+    {
+      "id": "inkscape-interface",
+      "title": "Inkscape Tutorial - Wikigraphists Bootcamp Day 1-V.2.webm"
+    },
+    {
+      "id": "inkscape-symbol",
+      "title": "Inkscape- making a biohazard symbol.webm"
+    }
+  ],
+  "rule": "Seven fixed 12-second windows per original, starts floor(min(duration-12,600)*q) for q=.10,.25,.35,.50,.65,.75,.90. Record all outcomes, never add a defect; proposals require human inspection before calling a useful repair.",
+  "scope": "Two drawing lessons, exploratory source expansion beyond terminal/wiki recordings. Not representative recall or human benefit.",
+  "runtime_manifest_sha256": "d630773c43d922c089e31004dfc5aa9db10b0b56f7b59bd72ff87f4a5c47eff7"
+}

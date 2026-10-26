@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "build_status": "SUCCEEDED",
+  "cases": 14,
+  "candidate_windows": 1,
+  "candidates": 4,
+  "new_source_count": 1,
+  "previously_tested_source_count": 1,
+  "overlap_note": "Inkscape bootcamp V.2 original SHA matches v9 inkcape-bootcamp. These seven checks are repeated-source windows, not new lesson discovery. Symbol tutorial was not found in prior source manifests. The immutable initial plan and all outcomes are retained.",
+  "useful_repairs_qualified": 0,
+  "temporary_policy_removed": true,
+  "evidence_sha256": "3a0435b2c4b2ae8987eac789bea405fecef9b2df19a6f630bd1a6b54efcd2214",
+  "checked_utc": "2026-10-26T01:29:22.563301+01:00",
+  "outcomes": {
+    "review": 14
+  },
+  "cases_with_exact_source_recovery": 14
+}

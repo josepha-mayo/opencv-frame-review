@@ -1,0 +1,108 @@
+{
+  "complete": true,
+  "scope": "Both retained jEdit analysis refusals from the fixed-window screen: preserve the sixteen-region guard, verify visible failed status and original/prepared recovery, and withhold edited download. Not useful repairs.",
+  "cases": [
+    {
+      "start_seconds": 95,
+      "job_id": "54ae283f1d625981b506de819cb37b40",
+      "complete": true,
+      "status": "failed",
+      "error": "More than 16 regions; this review interface cannot admit the clip.",
+      "workflow": {
+        "schema": "frame-review-workflow-v1",
+        "job_id": "54ae283f1d625981b506de819cb37b40",
+        "status": "failed",
+        "kind": "Deterministic vision workflow; no language model or autonomous creator acceptance.",
+        "scope": "Current evidence snapshot, not a chronological event log, agent reasoning transcript or independent media verification. Existing server gates alone authorize actions.",
+        "input_sha256": null,
+        "prediction_sha256": null,
+        "observation": {
+          "supported_proposals": 0,
+          "candidate_ids": [],
+          "meaning": "OpenCV proposals are measured activity, not semantic distraction labels."
+        },
+        "human_control": {
+          "source_bound_generation_approval": false,
+          "creator_acceptance_for_use": "not_recorded",
+          "recipe_sha256": null
+        },
+        "selected_proposal": null,
+        "verification": {
+          "reported_checks": {},
+          "failed_checks": [],
+          "proof_errors": [],
+          "failure_reason": "More than 16 regions; this review interface cannot admit the clip."
+        },
+        "route": "withhold_recommendation",
+        "next_action": "A complete, source-bound comparison is unavailable. Keep the source; inspect the failure before trying another plan.",
+        "impact_scope": "No measured teacher preference, learning, attention, accessibility or time saved."
+      },
+      "artifacts": {
+        "Prepared lesson clip": "/api/jobs/54ae283f1d625981b506de819cb37b40/intake/prepared",
+        "Uploaded original": "/api/jobs/54ae283f1d625981b506de819cb37b40/intake/upload",
+        "Preparation receipt": "/api/jobs/54ae283f1d625981b506de819cb37b40/intake/receipt",
+        "Lesson decision record": "/api/jobs/54ae283f1d625981b506de819cb37b40/intake/decision"
+      },
+      "original_and_prepared_recovered_exact": true,
+      "edited_export_withheld": true,
+      "approval_never_granted": true
+    },
+    {
+      "start_seconds": 176,
+      "job_id": "232c03f96e1711217da4d0ce50af1cf0",
+      "complete": true,
+      "status": "failed",
+      "error": "More than 16 regions; this review interface cannot admit the clip.",
+      "workflow": {
+        "schema": "frame-review-workflow-v1",
+        "job_id": "232c03f96e1711217da4d0ce50af1cf0",
+        "status": "failed",
+        "kind": "Deterministic vision workflow; no language model or autonomous creator acceptance.",
+        "scope": "Current evidence snapshot, not a chronological event log, agent reasoning transcript or independent media verification. Existing server gates alone authorize actions.",
+        "input_sha256": null,
+        "prediction_sha256": null,
+        "observation": {
+          "supported_proposals": 0,
+          "candidate_ids": [],
+          "meaning": "OpenCV proposals are measured activity, not semantic distraction labels."
+        },
+        "human_control": {
+          "source_bound_generation_approval": false,
+          "creator_acceptance_for_use": "not_recorded",
+          "recipe_sha256": null
+        },
+        "selected_proposal": null,
+        "verification": {
+          "reported_checks": {},
+          "failed_checks": [],
+          "proof_errors": [],
+          "failure_reason": "More than 16 regions; this review interface cannot admit the clip."
+        },
+        "route": "withhold_recommendation",
+        "next_action": "A complete, source-bound comparison is unavailable. Keep the source; inspect the failure before trying another plan.",
+        "impact_scope": "No measured teacher preference, learning, attention, accessibility or time saved."
+      },
+      "artifacts": {
+        "Prepared lesson clip": "/api/jobs/232c03f96e1711217da4d0ce50af1cf0/intake/prepared",
+        "Uploaded original": "/api/jobs/232c03f96e1711217da4d0ce50af1cf0/intake/upload",
+        "Preparation receipt": "/api/jobs/232c03f96e1711217da4d0ce50af1cf0/intake/receipt",
+        "Lesson decision record": "/api/jobs/232c03f96e1711217da4d0ce50af1cf0/intake/decision"
+      },
+      "original_and_prepared_recovered_exact": true,
+      "edited_export_withheld": true,
+      "approval_never_granted": true
+    }
+  ],
+  "deployment": {
+    "build": "lesson-rescue-teaching-pan-2026-10-26-v18",
+    "source_files_verified": 119,
+    "source_manifest_sha256": "4af4ce21231c400e1111c42386a898a29b648e46fbcfafe97021b9983f65d935",
+    "hosting": "Amazon ECS",
+    "analysis": "OpenCV 5.0.0",
+    "media_runtime": "Pinned Debian FFmpeg 7.1.5",
+    "retention_hours": 24,
+    "workers": 1,
+    "max_jobs": 8
+  },
+  "verified_utc": "2026-10-26T00:50:46.646631+00:00"
+}

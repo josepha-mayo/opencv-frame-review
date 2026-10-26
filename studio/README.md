@@ -1,4 +1,10 @@
-# Frame Review: Keep the Lesson
+# Frame Review studio
+
+Current V18 fixes teaching-comparison pan retention during overlapping image loads. Use the real Joomla sample, inspect source states, load and review teaching areas, check a plan, then explicitly generate. Open a teaching-frame comparison at 100%/200% and pan. Download and extract the rescue pack before expiry; generation does not record acceptance for use.
+
+[Current reproduction](../docs/proof-v18/REPRODUCE.md) · [Current report](../docs/real-lessons-report.pdf). All 14 Linux stages and current HTTP/in-app-browser checks pass; natural-source negative outcomes and retained cap refusals are documented separately. No human benefit measured. No cron or demo/voice changes.
+
+## Historical studio notes
 
 Current v9: Ogg/Theora/Skeleton intake, reversible corner marking and 106 studio tests. See the repository v9 reproduction and release-binding evidence; historical v8/v7 results below keep their original scope.
 

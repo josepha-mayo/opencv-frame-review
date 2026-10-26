@@ -1,0 +1,44 @@
+F
+======================================================================
+FAIL: test_rapid_version_switch_retains_last_visible_pan_during_image_load (test_studio_ui.StudioEditor.test_rapid_version_switch_retains_last_visible_pan_during_image_load)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\JosephMayo\Documents\Codex\2026-10-22\https-github-com-josepha-mayo-opencv\work\opencv-creator\studio\tests\test_studio_ui.py", line 30, in test_rapid_version_switch_retains_last_visible_pan_during_image_load
+            self.run_js('''
+            ~~~~~~~~~~~^^^^
+    const id='a'.repeat(32),region={label:'Commands',xywh:[0,0,640,336]};
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<16 lines>...
+    assert.equal(viewport.scrollLeft,0);assert.equal(viewport.scrollTop,0);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ''')
+    ^^^^
+  File "C:\Users\JosephMayo\Documents\Codex\2026-10-22\https-github-com-josepha-mayo-opencv\work\opencv-creator\studio\tests\test_studio_ui.py", line 312, in run_js
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+0 !== 128
+
+    at [eval]:108:8
+    at [eval]:113:3
+    at runScriptInThisContext (node:internal/vm:219:10)
+    at node:internal/process/execution:451:12
+    at [eval]-wrapper:6:24
+    at runScriptInContext (node:internal/process/execution:449:60)
+    at evalFunction (node:internal/process/execution:283:30)
+    at evalTypeScript (node:internal/process/execution:295:3)
+    at node:internal/main/eval_string:71:3 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 0,
+  expected: 128,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.096s
+
+FAILED (failures=1)

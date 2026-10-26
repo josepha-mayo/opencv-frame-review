@@ -26,6 +26,28 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCa
 
 
 class StudioEditor(unittest.TestCase):
+    def test_rapid_version_switch_retains_last_visible_pan_during_image_load(self):
+        self.run_js('''
+const id='a'.repeat(32),region={label:'Commands',xywh:[0,0,640,336]};
+const asset=role=>({url:'/api/jobs/'+id+'/teaching/'+role+'.png',width:640,height:336});
+api.setJob({id,status:'complete',input_sha256:'b'.repeat(64)});
+const desk=api.teachingComparison(region,{frame:114,images:{source:asset('source'),edited:asset('edited')}});
+const buttons=desk.querySelectorAll('button'),viewport=desk.querySelectorAll('div').find(x=>x.className==='proof-desk-viewport');
+buttons[0].events.click();let image=desk.querySelectorAll('img')[0];
+image.naturalWidth=640;image.naturalHeight=336;image.onload();
+viewport.scrollLeft=128;viewport.scrollTop=64;
+buttons[2].events.click();const pending=desk.querySelectorAll('img')[0];
+// Hidden replacement has no layout: real browsers clamp the empty viewport.
+viewport.scrollLeft=0;viewport.scrollTop=0;
+buttons[1].events.click();image=desk.querySelectorAll('img')[0];
+pending.naturalWidth=640;pending.naturalHeight=336;pending.onload();assert.equal(image.hidden,true);
+image.naturalWidth=640;image.naturalHeight=336;image.onload();
+assert.equal(viewport.scrollLeft,128);assert.equal(viewport.scrollTop,64);
+buttons.find(b=>b.textContent==='Close fixed-scale comparison').events.click();buttons[0].events.click();
+image=desk.querySelectorAll('img')[0];image.naturalWidth=640;image.naturalHeight=336;image.onload();
+assert.equal(viewport.scrollLeft,0);assert.equal(viewport.scrollTop,0);
+''')
+
     def test_manual_same_frame_comparison_keeps_scale_and_pan_without_autoplay(self):
         self.run_js('''
 const id='a'.repeat(32),region={label:'Commands',xywh:[0,0,640,336]};

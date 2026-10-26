@@ -1,14 +1,16 @@
 # Frame Review: Keep the Lesson
 
-**Inspect the same teaching frame without switching tabs.** Current V17 adds manual prepared-source/edit switching at100% or200%, pan buttons/arrow keys, and retained pan position. Teaching cards use the full row. Failed or changed images/results withhold the comparison. Magnification does not reconstruct text or recover original resolution.
+**Keep your place while comparing the teaching detail.** Current V18 fixes rapid source/edit switches during image loading: the last inspected pan survives an empty viewport. Fixed frame at 100%/200% magnification, keyboard/button pan, independent panels and close/reopen remain. Magnification does not reconstruct text or recover source resolution.
 
-[Live app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/) · [Current four-page report](docs/real-lessons-report.pdf) · [Qualification and reproduction](docs/proof-v17/REPRODUCE.md).
+[Live app](https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/) · [Current four-page report](docs/real-lessons-report.pdf) · [Current evidence and reproduction](docs/proof-v18/REPRODUCE.md).
 
-All14 Linux stages,137 backend/127 studio tests (one skip), three untouched-original native/export qualifications, fresh live HTTPS checks and actual desktop Brave comparison/download checks pass. These are regressions on previously selected sources. All108 native media/PNG members match v15. Frozen engine, boundary renderer and human-study stimuli are unchanged. The first viewer candidate's frozen-boundary contract failure is retained; it never deployed.
+All 14 Linux stages, 137 backend / 128 studio tests (one skip), three original-source regressions, fresh live HTTPS and actual in-app-browser workflow/download checks pass. A controlled delayed-PNG browser test reproduces the old pan loss and verifies the fix. Actual 375px browser viewports contain image scrolling; physical-phone qualification stays open. Brave was unavailable for this release. All 108 native media/PNG members match V17. Frozen engine and study files stay unchanged.
 
-Recorded-PNG contained375/890px layout checks remain separate from physical-phone qualification. The [prospective reading/preference pilot](human-study/) remains open; consult its dated aggregate for actual human responses. QA is excluded and creator responses stay separate. [Volunteer discussion](https://opencv26.devpost.com/forum_topics/45681-3-4-minute-lesson-clip-study-looking-for-adult-volunteers).
+Expanded exploratory screening retains 42 windows across five newly selected lessons and one repeated bootcamp source. Zero newly useful repairs qualify. Eight proposals concern teaching changes; two jEdit windows hit the 16-region guard. The other 40 recover source/prepared files exactly; both failures are separately repeated live and recoverable. Live protected drawing plans are refused. See every outcome, author/listed license and the repeated-source correction in current evidence.
 
-Direct pushes; no cron. The demo waits for creator audio. No special-award eligibility assertion.
+The prospective [reading/preference pilot](human-study/) has zero valid humans in its dated aggregate; QA is excluded and team responses stay separate. [Devpost volunteer discussion](https://opencv26.devpost.com/forum_topics/45681-3-4-minute-lesson-clip-study-looking-for-adult-volunteers). No demonstrated human benefit or special-award eligibility claim.
+
+Direct default-branch pushes; no cron. The demo waits for creator audio.
 
 ## Historical version notes
 

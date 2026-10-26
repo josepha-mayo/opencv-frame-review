@@ -1,0 +1,26 @@
+{
+  "reviewed_utc": "2026-10-26T00:39:17.9633209Z",
+  "source": "inkscape-symbol",
+  "start_seconds": 181,
+  "method": "Visual inspection of unedited prepared frames 0,120,240,359 with proposal boxes, plus proposal metadata. Engineering review, not a participant response.",
+  "decision": "Leave unchanged",
+  "candidates": [
+    {
+      "meaning": "The crescent geometry is being scaled/transformed, which is the subject of this drawing instruction.",
+      "ids": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "meaning": "Status-bar text changes with the selection/tool operation. It is interface feedback associated with the instruction.",
+      "ids": [
+        "2",
+        "3"
+      ]
+    }
+  ],
+  "added_defect": false,
+  "useful_repair_claimed": false,
+  "pending": "Repeat on live V18 and check that protecting drawing/interface content refuses these overlapping plans."
+}

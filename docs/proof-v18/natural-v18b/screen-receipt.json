@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "build_status": "SUCCEEDED",
+  "cases": 14,
+  "candidate_windows": 3,
+  "candidates": 4,
+  "new_source_count": 2,
+  "previously_tested_source_count": 0,
+  "overlap_note": "Commit and Audacity source titles were absent from prior source manifests. Same GitHub course authorship is not an independent creator sample. Exploratory follow-up selected after the drawing screen; not representative recall. All outcomes retained.",
+  "useful_repairs_qualified": 0,
+  "temporary_policy_removed": true,
+  "evidence_sha256": "d3e920f78efbb75a8ab69e1ba6cc6865c0887162b1c83321ebf0df3601fb569a",
+  "checked_utc": "2026-10-26T01:39:27.755211+01:00",
+  "outcomes": {
+    "review": 14
+  },
+  "cases_with_exact_source_recovery": 14
+}

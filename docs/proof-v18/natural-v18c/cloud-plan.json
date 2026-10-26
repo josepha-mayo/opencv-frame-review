@@ -1,0 +1,7 @@
+{
+  "source_s3": "opencv-creator-replay-046675437218-20261016/natural-v18c/c6837cd04f2ec22bd1f342902201561a89b0964004275d3eea02caf2cefa36fa/source.zip",
+  "evidence_s3": "opencv-creator-replay-046675437218-20261016/natural-v18c/c6837cd04f2ec22bd1f342902201561a89b0964004275d3eea02caf2cefa36fa/evidence.zip",
+  "image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:ef4d64875ea4159cc1848088c808dccd244a58e71e505d4f24aa33e72370a4d7",
+  "role_policy": "NaturalV18cScreen",
+  "zip_sha256": "7624ff848d187929857f1cc48e38dec9053ee671641f202b348c40b7b81e3f32"
+}

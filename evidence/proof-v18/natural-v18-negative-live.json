@@ -1,0 +1,132 @@
+{
+  "complete": true,
+  "scope": "Previously screened symbol drawing lesson at181s. Agent visual inspection identifies all four rapid-change candidates as lesson shape/status changes to keep; this tests protected-area refusal and source recovery, not a useful repair or detector accuracy.",
+  "authored_defect": false,
+  "cases": [
+    {
+      "candidate": {
+        "id": "0",
+        "bbox": [
+          321,
+          105,
+          25,
+          62
+        ],
+        "interval_frames": [
+          16,
+          358
+        ],
+        "interval_seconds": [
+          0.5333333333333333,
+          11.933333333333334
+        ],
+        "pixels": 395,
+        "preview_frame": 40,
+        "recipe_sha256": "06b49b02deabf79b29a0eb3784785b24e57c7c500df96636c3b4518108114bd1",
+        "overlay_url": "/api/jobs/d7044c6b2630ef00c314c31133c640a4/preview/0.png"
+      },
+      "plan_status": 400,
+      "response": {
+        "error": "A protected rectangle overlaps the proposed edit. Choose another candidate or leave the original unchanged."
+      }
+    },
+    {
+      "candidate": {
+        "id": "1",
+        "bbox": [
+          239,
+          106,
+          24,
+          61
+        ],
+        "interval_frames": [
+          16,
+          358
+        ],
+        "interval_seconds": [
+          0.5333333333333333,
+          11.933333333333334
+        ],
+        "pixels": 389,
+        "preview_frame": 40,
+        "recipe_sha256": "89220b201136c3ca37cceafb430a75dc34c1158bce1e667be6f11904ffe699ca",
+        "overlay_url": "/api/jobs/d7044c6b2630ef00c314c31133c640a4/preview/1.png"
+      },
+      "plan_status": 400,
+      "response": {
+        "error": "A protected rectangle overlaps the proposed edit. Choose another candidate or leave the original unchanged."
+      }
+    },
+    {
+      "candidate": {
+        "id": "2",
+        "bbox": [
+          130,
+          352,
+          83,
+          6
+        ],
+        "interval_frames": [
+          8,
+          358
+        ],
+        "interval_seconds": [
+          0.26666666666666666,
+          11.933333333333334
+        ],
+        "pixels": 289,
+        "preview_frame": 30,
+        "recipe_sha256": "ecb2a3f1201302adbc871265a4355504b54ab064f4073162fabb4efc299204d6",
+        "overlay_url": "/api/jobs/d7044c6b2630ef00c314c31133c640a4/preview/2.png"
+      },
+      "plan_status": 400,
+      "response": {
+        "error": "A protected rectangle overlaps the proposed edit. Choose another candidate or leave the original unchanged."
+      }
+    },
+    {
+      "candidate": {
+        "id": "3",
+        "bbox": [
+          212,
+          352,
+          76,
+          6
+        ],
+        "interval_frames": [
+          8,
+          352
+        ],
+        "interval_seconds": [
+          0.26666666666666666,
+          11.733333333333333
+        ],
+        "pixels": 280,
+        "preview_frame": 36,
+        "recipe_sha256": "fa307d12154b30f68b2d5b3f4be5d056894cbe092e0fcfa41a6e092d6cdc085e",
+        "overlay_url": "/api/jobs/d7044c6b2630ef00c314c31133c640a4/preview/3.png"
+      },
+      "plan_status": 400,
+      "response": {
+        "error": "A protected rectangle overlaps the proposed edit. Choose another candidate or leave the original unchanged."
+      }
+    }
+  ],
+  "deployment": {
+    "build": "lesson-rescue-teaching-pan-2026-10-26-v18",
+    "source_files_verified": 119,
+    "source_manifest_sha256": "4af4ce21231c400e1111c42386a898a29b648e46fbcfafe97021b9983f65d935",
+    "hosting": "Amazon ECS",
+    "analysis": "OpenCV 5.0.0",
+    "media_runtime": "Pinned Debian FFmpeg 7.1.5",
+    "retention_hours": 24,
+    "workers": 1,
+    "max_jobs": 8
+  },
+  "original_sha256": "61166ad0da32deb3f73979600002cd124916886609ac6485bd3ccec8fda8b6ad",
+  "job_id": "d7044c6b2630ef00c314c31133c640a4",
+  "original_and_prepared_recovered_exact": true,
+  "edited_export_withheld": true,
+  "approval_never_granted": true,
+  "verified_utc": "2026-10-26T01:48:40.326144+01:00"
+}

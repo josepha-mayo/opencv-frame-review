@@ -555,10 +555,12 @@
     const close=element("button","Close fixed-scale comparison","text-button"), id="proof-desk-"+(++proofDeskSequence);
     const boundId=job?.id, boundInput=job?.input_sha256, boundPrediction=job?.prediction_sha256, epoch=boundaryVersion;
     const labels={source:"Prepared source",edited:"Encoded edit"}, roleButtons={}, zoomButtons={}, panButtons=[];
-    let requestNumber=0, selected="source", zoom=1, displayed=false;
+    let requestNumber=0, selected="source", zoom=1, displayed=false, savedX=0, savedY=0;
     function current() { return job?.status==="complete" && job.id===boundId && job.input_sha256===boundInput && job.prediction_sha256===boundPrediction && boundaryVersion===epoch; }
     function show(role, keepPosition=true) {
-      const version=++requestNumber, x=keepPosition ? viewport.scrollLeft||0 : 0, y=keepPosition ? viewport.scrollTop||0 : 0;
+      if (!keepPosition) { savedX=0;savedY=0; }
+      else if (displayed) { savedX=viewport.scrollLeft||0;savedY=viewport.scrollTop||0; }
+      const version=++requestNumber, x=savedX, y=savedY;
       displayed=false;panButtons.forEach(button=>{button.disabled=true;});
       viewport.replaceChildren();
       if (!current() || !validJobId(boundId)) { status.textContent="Result changed; comparison withheld. Reopen the current result.";return; }

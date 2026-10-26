@@ -1,0 +1,29 @@
+{
+  "reviewed_utc": "2026-10-26T00:44:14.9458731Z",
+  "source": "git-commit",
+  "method": "Visual inspection of prepared frames 0,120,240,359 with proposal boxes and proposal metadata; engineering review only.",
+  "cases": [
+    {
+      "candidate": "0",
+      "meaning": "Presenter mouth movement and a title/scene cut; not an incidental stationary blink.",
+      "decision": "Leave unchanged",
+      "start_seconds": 20
+    },
+    {
+      "candidate": "0",
+      "meaning": "Presenter hand gesture before a cut to terminal typing.",
+      "decision": "Leave unchanged",
+      "start_seconds": 71
+    },
+    {
+      "candidates": [
+        "0",
+        "1"
+      ],
+      "decision": "Leave unchanged",
+      "start_seconds": 152,
+      "meaning": "Code editor and interface content changes across an editing operation and scene cuts."
+    }
+  ],
+  "useful_repair_claimed": false
+}

@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-26T00:40:39.225437+00:00",
+  "sources": [
+    {
+      "id": "nano-tamil",
+      "title": "Editor-nano-usage-instructions-TamilLanguage.webm"
+    },
+    {
+      "id": "jedit-tamil",
+      "title": "Jedit-textEditor-introduction-Tamil.webm"
+    }
+  ],
+  "rule": "Seven fixed 12-second windows per original, starts floor(min(duration-12,600)*q) for q=.10,.25,.35,.50,.65,.75,.90. Record all outcomes, never add a defect; proposals require human inspection before calling a useful repair.",
+  "scope": "Two named text-editor lessons selected after the drawing/Git/audio cohorts to look for natural reading pauses. Same-language/course sources are not independent creator evidence; exploratory selection. Not representative recall or human benefit.",
+  "runtime_manifest_sha256": "d630773c43d922c089e31004dfc5aa9db10b0b56f7b59bd72ff87f4a5c47eff7"
+}

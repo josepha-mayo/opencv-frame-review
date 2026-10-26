@@ -1,5 +1,5 @@
 {
-  "build": "lesson-rescue-teaching-comparison-2026-10-26-v17",
+  "build": "lesson-rescue-teaching-pan-2026-10-26-v18",
   "scope": "Studio, bounded preparation, frozen rapid-change engine, and separately versioned stationary blink detection/export. Source identity is separate from media/browser/cloud qualification.",
   "frozen_backend_commit": "fd861d0ce2cd50bec741327975d95ff5488254e2",
   "files": {
@@ -93,7 +93,7 @@
     "studio/rescue_pack.py": "0f737bb5d689375ca9aa2bdda7818278c46ac388497d96f545d87e11f2dd9dde",
     "studio/run.py": "69597c5c94e494a45ba40c4833df1fe8cebc03d2c182c4624d1a2b7b41f1ffd9",
     "studio/runtime-requirements.lock": "f6ef34a38b624856efb1f2e8028c5a35fb2e1563c48fba94be6338ae715b2f62",
-    "studio/static/app.js": "eb0ed80a54faa4ec6c48f8a69212ebd4e2d2c24697eb508c2ed5ac3e73932775",
+    "studio/static/app.js": "a2d447f747b94fcbc88cc98184a208961cae027004a6b5f1290e847d88ed9018",
     "studio/static/index.html": "35ca7ab392f8c8c3df426fbbf12d69e9cfd875d8c36f6c2048186744a6ad1a7d",
     "studio/static/natural-gentoo.png": "994b9b1c1504e5a1afb4181f35588078c5dc63115a9281ed40337915f0dae9e5",
     "studio/static/natural-terminal.png": "3d7a55d50dc8f679dac789c82cb11d7bb4ddee9de1000f9634d008d7cc628861",
@@ -118,7 +118,7 @@
     "studio/tests/test_rescue_pack.py": "684a6ed5c4c2d9da473f928566c5608aae6d07a7ec51114129137d421f235359",
     "studio/tests/test_steady_boundaries.py": "bad43636acb2ca39214e445a009b9719f3246e13dc777d140bdb055e3f2e7171",
     "studio/tests/test_steady_detail.py": "43873588171ea9ff969f8c9ae10df1388f2cc08db9daaca63d4b6d351bcf4f01",
-    "studio/tests/test_studio_ui.py": "6b08b9a09fc8147ea156f65ac6ec3e0aa405630cb1eceb536a80a6fc09e8951f",
+    "studio/tests/test_studio_ui.py": "e3a7e632f7f0da2714318e489c82c47edad272fb3e5a2e109d7848d794ecdb70",
     "studio/tests/test_teaching_motion.py": "b7de894ea6ca414414cefe49c810e16f7642550976744d09c7903add4d4bb4fe",
     "studio/tests/test_workflow_trace.py": "78d64328bee10b32f88569556fd932123569f363972ccefd71422bef0a5be5ed",
     "studio/workflow_trace.py": "6a954bb5a1d9a6320be49b42539a66760b79dd1e58744d00324efa93a95cbc3a"
