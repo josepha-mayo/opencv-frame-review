@@ -217,6 +217,8 @@
 
   function updateControls() {
     const locked = recovering || Boolean(recoveryId) || Boolean(job && !TERMINAL.has(job.status));
+    const excerptButton=byId("excerpt-help-set");
+    if (excerptButton) excerptButton.disabled=busy || refreshInFlight || stateUncertain || locked || !token || !failureExcerpt()?.canShorten;
     recovery.retry.disabled = recovering || !token;
     recovery.dismiss.disabled = recovering;
     ui.file.disabled = busy || !token || locked;
@@ -547,6 +549,37 @@
     return card;
   }
 
+  const REGION_LIMIT_ERROR="More than 16 regions; this review interface cannot admit the clip.";
+  function failureExcerpt() {
+    const p=job?.preparation;
+    if (job?.status!=="failed" || job.error!==REGION_LIMIT_ERROR || !validJobId(job.id) || !p ||
+        typeof p.uploaded_sha256!=="string" || !/^[a-f0-9]{64}$/.test(p.uploaded_sha256) ||
+        !Number.isFinite(p.start_seconds) || p.start_seconds<0 || p.start_seconds>600 ||
+        !Number.isFinite(p.duration_seconds) || p.duration_seconds<1 || p.duration_seconds>12) return null;
+    return {start:p.start_seconds,duration:p.duration_seconds,canShorten:p.duration_seconds>4};
+  }
+  function renderFailureHelp() {
+    const area=byId("excerpt-help"),spec=failureExcerpt();if (!area) return;area.hidden=true;
+    byId("excerpt-help-feedback").textContent="";
+    for (const id of ["excerpt-help-original","excerpt-help-prepared"]) {byId(id).removeAttribute("href");byId(id).hidden=true;}
+    if (!spec) return;
+    area.hidden=false;
+    const end=Number((spec.start+spec.duration).toFixed(1));
+    byId("excerpt-help-range").textContent="Previous prepared range: "+spec.start+"–"+end+" seconds. "+(spec.canShorten ? "Set up "+spec.start+"–"+Number((spec.start+4).toFixed(1))+" seconds, then inspect it in a new analysis." : "This excerpt is already short. Choose a different quiet moment manually.");
+    byId("excerpt-help-set").hidden=!spec.canShorten;
+    for (const [id,label,suffix] of [["excerpt-help-original","Uploaded original","upload"],["excerpt-help-prepared","Prepared lesson clip","prepared"]]) {
+      const url=localURL(job.artifacts?.[label]),expected="/api/jobs/"+job.id+"/intake/"+suffix;
+      if (url===expected) {byId(id).href=url;byId(id).hidden=false;}
+    }
+  }
+  function setupShorterExcerpt() {
+    const spec=failureExcerpt();
+    if (!spec?.canShorten || busy || refreshInFlight || stateUncertain || recovering || recoveryId || !token) return;
+    resetProtection(null);ui.reviewed.checked=false;
+    prepareLesson.checked=true;clipStart.value=String(spec.start);clipDuration.value="4";
+    byId("excerpt-help-feedback").textContent="4-second range set. Choose the same original file and click Analyze selected file. The previous source links remain available until you start another job. Nothing was uploaded or approved.";
+    updateControls();ui.file.focus?.();
+  }
   let proofDeskSequence = 0;
   function teachingComparison(region, moment) {
     const group=element("div",null,"proof-desk"), open=element("button","Compare this frame at a fixed scale","button secondary");
@@ -956,6 +989,7 @@
       byId("preparation-fullsize").href = preparationPreview.src;
     }
     showError(ui.error, job.error ? pretty(job.error) : "");
+    renderFailureHelp();
     ui.retry.hidden = true;
     ui.reviewActions.hidden = job.status !== "review";
     ui.cancel.hidden = !ACTIVE.has(job.status);
@@ -1140,6 +1174,7 @@
     if (!ui.cancel.disabled) decision("cancel", {});
   });
   ui.retry.addEventListener("click", refreshJob);
+  byId("excerpt-help-set")?.addEventListener("click",setupShorterExcerpt);
   recovery.retry.addEventListener("click", restoreJob);
   recovery.dismiss.addEventListener("click", forgetRecovery);
   window.addEventListener("pagehide", stopPolling);

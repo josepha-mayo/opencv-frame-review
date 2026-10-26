@@ -1,8 +1,8 @@
 # Frame Review studio
 
-Current V18 fixes teaching-comparison pan retention during overlapping image loads. Use the real Joomla sample, inspect source states, load and review teaching areas, check a plan, then explicitly generate. Open a teaching-frame comparison at 100%/200% and pan. Download and extract the rescue pack before expiry; generation does not record acceptance for use.
+Current V19 keeps the original recoverable after a sixteen-region analysis refusal and offers an explicit four-second setup. Inspect the range and press Analyze separately; setup sends no request or approval. Both real jEdit failed ranges now reach review with no proposals, and stay unchanged. Edits still require creator teaching areas, a fresh checked plan and explicit consent.
 
-[Current reproduction](../docs/proof-v18/REPRODUCE.md) · [Current report](../docs/real-lessons-report.pdf). All 14 Linux stages and current HTTP/in-app-browser checks pass; natural-source negative outcomes and retained cap refusals are documented separately. No human benefit measured. No cron or demo/voice changes.
+[Current reproduction](../docs/proof-v19/REPRODUCE.md) · [Current report](../docs/real-lessons-report.pdf). All 14 Linux stages and same-image real browser/HTTP/native recovery checks pass. Final clean activation has separate identity/health scope. No human benefit measured; video waits for creator audio. No cron.
 
 ## Historical studio notes
 

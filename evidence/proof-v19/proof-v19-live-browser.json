@@ -1,0 +1,275 @@
+{
+  "complete": true,
+  "scope": "Actual V19 AWS in-app-browser real jEdit uploads, region-limit recovery card, source downloads and separately requested four-second analyses. QA only; not a human response, new useful repair or creator acceptance.",
+  "source_manifest_sha256": "65436e94f8a550315076bfec4fd0d452483e433c971fe068aa5fdc1eed5a9acf",
+  "cases": [
+    {
+      "start_seconds": 95,
+      "failed_view": {
+        "consent": false,
+        "duration": "12",
+        "error": "More than 16 regions; this review interface cannot admit the clip.",
+        "file": "C:\\fakepath\\jedit-tamil.webm",
+        "original": "/api/jobs/ca276d2a7e57813a597fa22c6e64c035/intake/upload",
+        "prepared": "/api/jobs/ca276d2a7e57813a597fa22c6e64c035/intake/prepared",
+        "range": "Previous prepared range: 95\u2013107 seconds. Set up 95\u201399 seconds, then inspect it in a new analysis.",
+        "start": "95"
+      },
+      "files": [
+        {
+          "kind": "original",
+          "duration_seconds": 12,
+          "path": "C:\\Users\\JosephMayo\\Downloads\\uploaded-original.webm",
+          "downloadedAt": "2026-10-26T09:04:26.027Z",
+          "verified": true,
+          "retained_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\proof-v19\\browser-recovery\\jedit-original.webm",
+          "sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+          "bytes": 34271402,
+          "temporary_download_removed_after_verification": true
+        },
+        {
+          "kind": "prepared",
+          "duration_seconds": 12,
+          "path": "C:\\Users\\JosephMayo\\Downloads\\prepared-lesson (1).mp4",
+          "verified": true,
+          "retained_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\proof-v19\\browser-recovery\\95-12-prepared.mp4",
+          "sha256": "90b71dbe4806415df4abc612b894e5d893da8401580142ff69918ea20dc622c1",
+          "bytes": 379302,
+          "temporary_download_removed_after_verification": true
+        },
+        {
+          "kind": "receipt",
+          "duration_seconds": 12,
+          "path": "C:\\Users\\JosephMayo\\Downloads\\preparation.json",
+          "verified": true,
+          "retained_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\proof-v19\\browser-recovery\\95-12-receipt.json",
+          "sha256": "d17db4d12eca2fdf08abd4c012a6b3494ed0c0e1d979eadae86890725e70896b",
+          "bytes": 1333,
+          "temporary_download_removed_after_verification": true
+        },
+        {
+          "kind": "prepared",
+          "duration_seconds": 4,
+          "path": "C:\\Users\\JosephMayo\\Downloads\\original.mp4",
+          "verified": true,
+          "retained_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\proof-v19\\browser-recovery\\95-4-prepared.mp4",
+          "sha256": "cf33fba18fdd8f7d2af36996c216ed1464251c89dbbd2e8a1ff5c2e875891337",
+          "bytes": 92622,
+          "temporary_download_removed_after_verification": true
+        },
+        {
+          "kind": "receipt",
+          "duration_seconds": 4,
+          "path": "C:\\Users\\JosephMayo\\Downloads\\preparation.json",
+          "verified": true,
+          "retained_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\proof-v19\\browser-recovery\\95-4-receipt.json",
+          "sha256": "1c0191e3806d469c85c2a7b03209452421cea788f63c48cea197b0c73815e899",
+          "bytes": 1332,
+          "temporary_download_removed_after_verification": true
+        }
+      ],
+      "setup": {
+        "analyzeDisabled": false,
+        "consent": false,
+        "duration": "4",
+        "error": "More than 16 regions; this review interface cannot admit the clip.",
+        "feedback": "4-second range set. Choose the same original file and click Analyze selected file. The previous source links remain available until you start another job. Nothing was uploaded or approved.",
+        "file": "C:\\fakepath\\jedit-tamil.webm",
+        "original": "/api/jobs/ca276d2a7e57813a597fa22c6e64c035/intake/upload",
+        "start": "95"
+      },
+      "download_checks": {
+        "4": {
+          "receipt_sha256": "1c0191e3806d469c85c2a7b03209452421cea788f63c48cea197b0c73815e899",
+          "original_sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+          "prepared_sha256": "cf33fba18fdd8f7d2af36996c216ed1464251c89dbbd2e8a1ff5c2e875891337",
+          "downloaded_prepared_matches": true,
+          "baseline_scope": "Current V19 native preparation",
+          "prepared_matches_baseline": true,
+          "original_upload_identity_exact": true
+        },
+        "12": {
+          "receipt_sha256": "d17db4d12eca2fdf08abd4c012a6b3494ed0c0e1d979eadae86890725e70896b",
+          "original_sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+          "prepared_sha256": "90b71dbe4806415df4abc612b894e5d893da8401580142ff69918ea20dc622c1",
+          "downloaded_prepared_matches": true,
+          "baseline_scope": "Current V19 native preparation",
+          "prepared_matches_baseline": true,
+          "original_upload_identity_exact": true
+        }
+      },
+      "retry": {
+        "consent": false,
+        "helpHidden": true,
+        "message": "No supported rapid-change or stationary-blink proposal in this excerpt. Notifications, moving cursors and many other distractions remain outside these checks. It does not establish that the lesson is distraction-free. Leave it unchanged and download the lesson decision record.",
+        "preparation": "Teaching detail check: 968 \u00d7 696 source \u2192 640 \u00d7 360 review. Check the smallest label before editing; resizing can make teaching detail unreadable. Prepared excerpt: 95\u201399 seconds. Picture and audio were converted once. All exact edit checks compare against this prepared clip, not the uploaded original. Keep both sources and the preparation receipt.",
+        "preview": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/e53606ed0f4fb0ecf787318f0b2d6264/intake/preview"
+      }
+    },
+    {
+      "start_seconds": 176,
+      "failed_view": {
+        "consent": false,
+        "duration": "12",
+        "error": "More than 16 regions; this review interface cannot admit the clip.",
+        "file": "C:\\fakepath\\jedit-tamil.webm",
+        "original": "/api/jobs/ec19b11646a6ff2042f6133d41408282/intake/upload",
+        "prepared": "/api/jobs/ec19b11646a6ff2042f6133d41408282/intake/prepared",
+        "range": "Previous prepared range: 176\u2013188 seconds. Set up 176\u2013180 seconds, then inspect it in a new analysis.",
+        "start": "176"
+      },
+      "files": [
+        {
+          "kind": "original",
+          "duration_seconds": 12,
+          "path": "C:\\Users\\JosephMayo\\Downloads\\uploaded-original.webm",
+          "verified": true,
+          "retained_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\proof-v19\\browser-recovery\\jedit-original.webm",
+          "sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+          "bytes": 34271402,
+          "temporary_download_removed_after_verification": true
+        },
+        {
+          "kind": "prepared",
+          "duration_seconds": 12,
+          "path": "C:\\Users\\JosephMayo\\Downloads\\prepared-lesson (1).mp4",
+          "verified": true,
+          "retained_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\proof-v19\\browser-recovery\\176-12-prepared.mp4",
+          "sha256": "01a107f5d481ba81043aeafdf2fc93b2206e73d15e511548fa5850709f33c173",
+          "bytes": 565759,
+          "temporary_download_removed_after_verification": true
+        },
+        {
+          "kind": "receipt",
+          "duration_seconds": 12,
+          "path": "C:\\Users\\JosephMayo\\Downloads\\preparation.json",
+          "verified": true,
+          "retained_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\proof-v19\\browser-recovery\\176-12-receipt.json",
+          "sha256": "f40a73897c4738efa07c6e3a65b8a88fe4a7d3b6480a123b9ffe186e9f928363",
+          "bytes": 1334,
+          "temporary_download_removed_after_verification": true
+        },
+        {
+          "kind": "prepared",
+          "duration_seconds": 4,
+          "path": "C:\\Users\\JosephMayo\\Downloads\\original.mp4",
+          "verified": true,
+          "retained_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\proof-v19\\browser-recovery\\176-4-prepared.mp4",
+          "sha256": "aba613078818fdc8da9b2369efd868c5dcb2befe76960c2ffb90345a948daedd",
+          "bytes": 142742,
+          "temporary_download_removed_after_verification": true
+        },
+        {
+          "kind": "receipt",
+          "duration_seconds": 4,
+          "path": "C:\\Users\\JosephMayo\\Downloads\\preparation.json",
+          "verified": true,
+          "retained_path": "C:\\Users\\JosephMayo\\Documents\\Codex\\2026-10-22\\https-github-com-josepha-mayo-opencv\\outputs\\proof-v19\\browser-recovery\\176-4-receipt.json",
+          "sha256": "7e7ade48c4e90b98eeb74e7e379127037b81cb511fe4591cf662165ab0eb9e43",
+          "bytes": 1333,
+          "temporary_download_removed_after_verification": true
+        }
+      ],
+      "setup": {
+        "analyzeDisabled": false,
+        "consent": false,
+        "duration": "4",
+        "error": "More than 16 regions; this review interface cannot admit the clip.",
+        "feedback": "4-second range set. Choose the same original file and click Analyze selected file. The previous source links remain available until you start another job. Nothing was uploaded or approved.",
+        "file": "C:\\fakepath\\jedit-tamil.webm",
+        "original": "/api/jobs/ec19b11646a6ff2042f6133d41408282/intake/upload",
+        "start": "176"
+      },
+      "download_checks": {
+        "12": {
+          "receipt_sha256": "f40a73897c4738efa07c6e3a65b8a88fe4a7d3b6480a123b9ffe186e9f928363",
+          "original_sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+          "prepared_sha256": "01a107f5d481ba81043aeafdf2fc93b2206e73d15e511548fa5850709f33c173",
+          "downloaded_prepared_matches": true,
+          "baseline_scope": "Prior V18 live preparation only if recorded; otherwise no independent native baseline",
+          "prepared_matches_baseline": false,
+          "original_upload_identity_exact": true
+        },
+        "4": {
+          "receipt_sha256": "7e7ade48c4e90b98eeb74e7e379127037b81cb511fe4591cf662165ab0eb9e43",
+          "original_sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+          "prepared_sha256": "aba613078818fdc8da9b2369efd868c5dcb2befe76960c2ffb90345a948daedd",
+          "downloaded_prepared_matches": true,
+          "baseline_scope": null,
+          "prepared_matches_baseline": false,
+          "original_upload_identity_exact": true
+        }
+      },
+      "retry": {
+        "consent": false,
+        "helpHidden": true,
+        "message": "No supported rapid-change or stationary-blink proposal in this excerpt. Notifications, moving cursors and many other distractions remain outside these checks. It does not establish that the lesson is distraction-free. Leave it unchanged and download the lesson decision record.",
+        "preparation": "Teaching detail check: 968 \u00d7 696 source \u2192 640 \u00d7 360 review. Check the smallest label before editing; resizing can make teaching detail unreadable. Prepared excerpt: 176\u2013180 seconds. Picture and audio were converted once. All exact edit checks compare against this prepared clip, not the uploaded original. Keep both sources and the preparation receipt.",
+        "preview": "https://le-d72c965de52749b08fd72a2513bccce1.ecs.us-east-1.on.aws/api/jobs/e1ce9f0a417a41116e997f97c287beb9/intake/preview"
+      }
+    }
+  ],
+  "narrow_viewport": {
+    "client": 360,
+    "scroll": 360,
+    "viewport": 375
+  },
+  "verified_utc": "2026-10-26T09:14:26.501318+00:00",
+  "all_four_job_ids_distinct": true,
+  "downloaded_container_checks": {
+    "scope": "Windows ffprobe independently counts frames/geometry; this is not a native RGB equality or playback qualification.",
+    "files": [
+      {
+        "start": 95,
+        "duration": 12,
+        "probe": {
+          "codec_name": "h264",
+          "width": 640,
+          "height": 360,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "360"
+        },
+        "sha256": "90b71dbe4806415df4abc612b894e5d893da8401580142ff69918ea20dc622c1"
+      },
+      {
+        "start": 95,
+        "duration": 4,
+        "probe": {
+          "codec_name": "h264",
+          "width": 640,
+          "height": 360,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "120"
+        },
+        "sha256": "cf33fba18fdd8f7d2af36996c216ed1464251c89dbbd2e8a1ff5c2e875891337"
+      },
+      {
+        "start": 176,
+        "duration": 12,
+        "probe": {
+          "codec_name": "h264",
+          "width": 640,
+          "height": 360,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "360"
+        },
+        "sha256": "01a107f5d481ba81043aeafdf2fc93b2206e73d15e511548fa5850709f33c173"
+      },
+      {
+        "start": 176,
+        "duration": 4,
+        "probe": {
+          "codec_name": "h264",
+          "width": 640,
+          "height": 360,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "120"
+        },
+        "sha256": "aba613078818fdc8da9b2369efd868c5dcb2befe76960c2ffb90345a948daedd"
+      }
+    ]
+  },
+  "browser_files_verified": true,
+  "edited_outputs_generated": 0,
+  "human_responses": 0
+}

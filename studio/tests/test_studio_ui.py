@@ -8,7 +8,7 @@ STUDIO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(STUDIO.parent / 'opencv-ready/candidate/app/tests'))
 from test_boundary_ui_static import HARNESS, NODE
 
-EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCard, teachingComparison, localURL, ui, byId,
+EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCard, teachingComparison, failureExcerpt, renderFailureHelp, setupShorterExcerpt, localURL, ui, byId,
   protectionValues, resetProtection, invalidateProtection, drawProtection,
   saveProtectedRegion, removeProtectedRegion, editProtectedRegion, cancelProtectedEdit, checkProtection, loadTeachingGuide,
   startAreaMarking, cancelAreaMarking, markAreaCorner, renderWorkflow,
@@ -26,6 +26,49 @@ EXPOSE = '''boundaryReviewProblem, renderBoundaryReview, renderResults, resultCa
 
 
 class StudioEditor(unittest.TestCase):
+    def test_old_cached_html_without_recovery_card_does_not_break_existing_controls(self):
+        self.run_js('''
+const find=context.document.getElementById;
+context.document.getElementById=id=>id==='excerpt-help'||id==='excerpt-help-set'?null:find(id);
+api.renderFailureHelp();api.setBusy(true);assert.equal(ui.approve.disabled,true);
+api.setBusy(false);
+''')
+
+    def test_region_limit_help_sets_a_shorter_range_without_repeating_upload_or_approval(self):
+        self.run_js('''
+const id='a'.repeat(32),original={id,status:'failed',error:'More than 16 regions; this review interface cannot admit the clip.',preparation:{uploaded_sha256:'b'.repeat(64),start_seconds:95,duration_seconds:12},artifacts:{'Uploaded original':'/api/jobs/'+id+'/intake/upload','Prepared lesson clip':'/api/jobs/'+id+'/intake/prepared'}};
+api.setJob(original);api.renderFailureHelp();
+assert.equal(api.byId('excerpt-help').hidden,false);
+assert.equal(api.byId('excerpt-help-original').href,original.artifacts['Uploaded original']);
+assert.equal(api.byId('excerpt-help-prepared').href,original.artifacts['Prepared lesson clip']);
+ui.reviewed.checked=true;const before=JSON.stringify(original);
+api.setupShorterExcerpt();
+assert.equal(api.byId('clip-start').value,'95');assert.equal(api.byId('clip-duration').value,'4');
+assert.equal(api.byId('prepare-lesson').checked,true);assert.equal(ui.reviewed.checked,false);assert.equal(api.plan(),null);
+assert.equal(JSON.stringify(original),before);assert.equal(ui.approve.disabled,true);
+assert.ok(api.byId('excerpt-help-feedback').textContent.includes('Nothing was uploaded or approved'));
+''')
+
+    def test_region_limit_help_rejects_bad_ranges_unowned_links_and_unrelated_failures(self):
+        self.run_js('''
+const id='a'.repeat(32),base={id,status:'failed',error:'More than 16 regions; this review interface cannot admit the clip.',preparation:{uploaded_sha256:'b'.repeat(64),start_seconds:95,duration_seconds:12}};
+for(const value of [{...base,error:'Network issue'},{...base,status:'review'},{...base,preparation:null},{...base,preparation:{...base.preparation,start_seconds:-1}},{...base,preparation:{...base.preparation,start_seconds:NaN}},{...base,preparation:{...base.preparation,duration_seconds:13}},{...base,preparation:{...base.preparation,uploaded_sha256:'bad'}}]) {
+ api.setJob(value);api.renderFailureHelp();assert.equal(api.byId('excerpt-help').hidden,true);
+}
+api.setJob({...base,artifacts:{'Uploaded original':'/api/jobs/'+('f'.repeat(32))+'/intake/upload','Prepared lesson clip':'https://other.test/prepared'}});api.renderFailureHelp();
+assert.equal(api.byId('excerpt-help-original').hidden,true);assert.equal(api.byId('excerpt-help-prepared').hidden,true);
+''')
+
+    def test_short_excerpt_and_locked_states_never_trigger_a_repeated_job(self):
+        self.run_js('''
+const base={id:'a'.repeat(32),status:'failed',error:'More than 16 regions; this review interface cannot admit the clip.',preparation:{uploaded_sha256:'b'.repeat(64),start_seconds:176,duration_seconds:4}};
+api.setJob(base);api.renderFailureHelp();assert.equal(api.byId('excerpt-help-set').hidden,true);
+api.byId('clip-duration').value='9';api.setupShorterExcerpt();assert.equal(api.byId('clip-duration').value,'9');
+api.setJob({...base,preparation:{...base.preparation,duration_seconds:12}});api.renderFailureHelp();
+api.setBusy(true);api.setupShorterExcerpt();assert.equal(api.byId('clip-duration').value,'9');
+api.setBusy(false);api.setUncertain(true);api.setupShorterExcerpt();assert.equal(api.byId('clip-duration').value,'9');
+''')
+
     def test_rapid_version_switch_retains_last_visible_pan_during_image_load(self):
         self.run_js('''
 const id='a'.repeat(32),region={label:'Commands',xywh:[0,0,640,336]};

@@ -1,0 +1,50 @@
+{
+  "complete": true,
+  "scope": "Actual browser-saved originals/prepared clips/receipts. Matching a server receipt is not independent server authentication. The95s prepared files match current native qualification;176s files are checked against their server receipts without an independent native baseline.",
+  "cases": [
+    {
+      "start": 95,
+      "duration": 12,
+      "receipt_sha256": "d17db4d12eca2fdf08abd4c012a6b3494ed0c0e1d979eadae86890725e70896b",
+      "original_sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+      "prepared_sha256": "90b71dbe4806415df4abc612b894e5d893da8401580142ff69918ea20dc622c1",
+      "downloaded_prepared_matches": true,
+      "baseline_scope": "Current V19 native preparation",
+      "prepared_matches_baseline": true,
+      "original_upload_identity_exact": true
+    },
+    {
+      "start": 95,
+      "duration": 4,
+      "receipt_sha256": "1c0191e3806d469c85c2a7b03209452421cea788f63c48cea197b0c73815e899",
+      "original_sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+      "prepared_sha256": "cf33fba18fdd8f7d2af36996c216ed1464251c89dbbd2e8a1ff5c2e875891337",
+      "downloaded_prepared_matches": true,
+      "baseline_scope": "Current V19 native preparation",
+      "prepared_matches_baseline": true,
+      "original_upload_identity_exact": true
+    },
+    {
+      "start": 176,
+      "duration": 12,
+      "receipt_sha256": "f40a73897c4738efa07c6e3a65b8a88fe4a7d3b6480a123b9ffe186e9f928363",
+      "original_sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+      "prepared_sha256": "01a107f5d481ba81043aeafdf2fc93b2206e73d15e511548fa5850709f33c173",
+      "downloaded_prepared_matches": true,
+      "baseline_scope": "Prior V18 live preparation only if recorded; otherwise no independent native baseline",
+      "prepared_matches_baseline": false,
+      "original_upload_identity_exact": true
+    },
+    {
+      "start": 176,
+      "duration": 4,
+      "receipt_sha256": "7e7ade48c4e90b98eeb74e7e379127037b81cb511fe4591cf662165ab0eb9e43",
+      "original_sha256": "3b95b4b889b9defb647bfada96bf6701a4cba242665b3d12a11305bc19a8c0b5",
+      "prepared_sha256": "aba613078818fdc8da9b2369efd868c5dcb2befe76960c2ffb90345a948daedd",
+      "downloaded_prepared_matches": true,
+      "baseline_scope": null,
+      "prepared_matches_baseline": false,
+      "original_upload_identity_exact": true
+    }
+  ]
+}

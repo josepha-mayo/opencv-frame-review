@@ -1,0 +1,19 @@
+{
+  "source_manifest_sha256": "65436e94f8a550315076bfec4fd0d452483e433c971fe068aa5fdc1eed5a9acf",
+  "runtime_files": 119,
+  "changed_runtime_files": [
+    "studio/static/app.js",
+    "studio/static/index.html",
+    "studio/tests/test_studio_ui.py"
+  ],
+  "parent_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:be521868598227ed376f47fb095115abcb0502050222fc2e429d74c65633ecca",
+  "source_zip_sha256": "e37489ef6fedee20723e69229e255bd55118846d6d117ba5c0569cbdf0fc333e",
+  "source_s3": "opencv-creator-replay-046675437218-20261016/proof-v19/65436e94f8a550315076bfec4fd0d452483e433c971fe068aa5fdc1eed5a9acf/source.zip",
+  "evidence_s3": "opencv-creator-replay-046675437218-20261016/proof-v19/65436e94f8a550315076bfec4fd0d452483e433c971fe068aa5fdc1eed5a9acf/qualification-evidence.zip",
+  "image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue:proof-v19-65436e94f8a55031",
+  "role_policy": "ProofV19Qualification",
+  "scope": "Failure-recovery card; all14 Linux stages, three original-source regressions and the real failed/shorter-excerpt native flow passed. Not yet a live release.",
+  "complete": true,
+  "image_digest": "sha256:1bc659b090cbbb7c9ddf1ed90080b10cf234556028f9eca356e04021feb362c4",
+  "pinned_image": "046675437218.dkr.ecr.us-east-1.amazonaws.com/opencv-lesson-rescue@sha256:1bc659b090cbbb7c9ddf1ed90080b10cf234556028f9eca356e04021feb362c4"
+}

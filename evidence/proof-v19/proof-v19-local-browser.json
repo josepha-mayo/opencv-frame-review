@@ -1,0 +1,26 @@
+{
+  "complete": true,
+  "scope": "In-app browser, labelled recorded-real-failure metadata QA; recovery links are not served locally. Not an upload, encoded repair, recovery download or human-benefit observation.",
+  "before": {
+    "duration": "12",
+    "error": "More than 16 regions; this review interface cannot admit the clip.",
+    "original": "/api/jobs/54ae283f1d625981b506de819cb37b40/intake/upload",
+    "start": "0"
+  },
+  "after": {
+    "analyzeDisabled": true,
+    "consent": false,
+    "duration": "4",
+    "error": "More than 16 regions; this review interface cannot admit the clip.",
+    "feedback": "4-second range set. Choose the same original file and click Analyze selected file. The previous source links remain available until you start another job. Nothing was uploaded or approved.",
+    "file": "",
+    "original": "/api/jobs/54ae283f1d625981b506de819cb37b40/intake/upload",
+    "prepare": true,
+    "start": "95"
+  },
+  "narrow": {
+    "client": 360,
+    "scroll": 360,
+    "viewport": 375
+  }
+}

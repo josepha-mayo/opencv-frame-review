@@ -1,0 +1,76 @@
+{
+  "build": "lesson-rescue-failure-recovery-2026-10-26-v19",
+  "complete": true,
+  "stages": [
+    {
+      "stage": "units",
+      "returncode": 0,
+      "log": "units.log"
+    },
+    {
+      "stage": "duration",
+      "returncode": 0,
+      "log": "duration.log"
+    },
+    {
+      "stage": "duration-refusals",
+      "returncode": 0,
+      "log": "duration-refusals.log"
+    },
+    {
+      "stage": "original-audio",
+      "returncode": 0,
+      "log": "original-audio.log"
+    },
+    {
+      "stage": "original-silent",
+      "returncode": 0,
+      "log": "original-silent.log"
+    },
+    {
+      "stage": "audio-refusals",
+      "returncode": 0,
+      "log": "audio-refusals.log"
+    },
+    {
+      "stage": "pixel-refusals",
+      "returncode": 0,
+      "log": "pixel-refusals.log"
+    },
+    {
+      "stage": "lesson",
+      "returncode": 0,
+      "log": "lesson.log"
+    },
+    {
+      "stage": "real-lessons",
+      "returncode": 0,
+      "log": "real-lessons.log"
+    },
+    {
+      "stage": "silent-webm",
+      "returncode": 0,
+      "log": "silent-webm.log"
+    },
+    {
+      "stage": "natural-steady",
+      "returncode": 0,
+      "log": "natural-steady.log"
+    },
+    {
+      "stage": "natural-examples",
+      "returncode": 0,
+      "log": "natural-examples.log"
+    },
+    {
+      "stage": "boundary-refusals",
+      "returncode": 0,
+      "log": "boundary-refusals.log"
+    },
+    {
+      "stage": "studio-ui",
+      "returncode": 0,
+      "log": "studio-ui.log"
+    }
+  ]
+}

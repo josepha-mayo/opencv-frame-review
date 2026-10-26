@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "build_status": "SUCCEEDED",
+  "cases": 14,
+  "candidate_windows": 0,
+  "candidates": 0,
+  "new_source_count": 2,
+  "previously_tested_source_count": 0,
+  "overlap_note": "Sed and Lynx lesson titles were absent from prior source manifests. Same Info-farmer/Tamil-course provenance as earlier samples; not independent creators or held-out recall. Fixed exploratory windows selected before viewing these originals; every outcome retained.",
+  "useful_repairs_qualified": 0,
+  "temporary_policy_removed": true,
+  "evidence_sha256": "3b30e49eadd6c9385871a1448824327adff44e01bdafa07eee679bbab902497e",
+  "checked_utc": "2026-10-26T06:35:40.300410+00:00"
+}
